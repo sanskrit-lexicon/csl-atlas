@@ -230,7 +230,7 @@ attested in at least five of seven Cologne dictionaries, with per-dictionary
 record counts, first source lines, and grammar tokens.
 
 - **Version:** dataset 1.0.0, repo release `v0.20.0`
-- **DOI (this version):** [`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487)
+- **DOI (this version):** [`10.5281/zenodo.23613057`](https://doi.org/10.5281/zenodo.23613057)
 - **DOI (concept, all versions):** [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691)
 - **Licence:** CC BY-SA 4.0
 - **OntoLex profile:** [`docs/ONTOLEX_PROFILE_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ONTOLEX_PROFILE_CORE_DOSSIER.md)
@@ -244,11 +244,11 @@ human-reviewed rows; see the data statement for the full limitations.
 
 ## How to cite
 
-Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.20.0: [`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487)).
+Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.21.0: [`10.5281/zenodo.23613057`](https://doi.org/10.5281/zenodo.23613057)).
 
 Cite the atlas via its archival Zenodo DOI:
 
-> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.20.0). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.21419691>
+> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.21.0). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.23613057>
 
 When citing a specific dataset rather than the repository, use that dataset's own provenance envelope (`sourcePath`, `generatedBy`, `generatedAt`) so the exact source records and build step are recoverable. The meaning of each per-claim evidence label is defined in [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md), and its equivalent in W3C PROV-O and TEI `@cert` / `@resp` — with the explicit list of what has no equivalent — in [`docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md).
 

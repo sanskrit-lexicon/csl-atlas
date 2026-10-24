@@ -1,6 +1,6 @@
 # PD knowledge index — parity report, 24-10-2026
 
-_Created: 24-10-2026 · Scope: the Poona Dictionary's knowledge surface — public page, canon ledger, atlas chapter, gate — and what remains before it can be called research-grade · Status: 7 of 10 checks pass, three open with named owners._
+_Created: 24-10-2026 · Scope: the Poona Dictionary's knowledge surface — public page, canon ledger, atlas chapter, gate — and what remains before it can be called research-grade · Status: 8 of 10 checks pass, two open with named owners._
 
 **What this report is.** On 24-10-2026 the PD knowledge page was a private working document with a
 gated number set, five silent canon denominators, no human-verified claim, and no place in the
@@ -61,7 +61,7 @@ artefact.
 | # | Check | State | Closes with |
 |---|---|---|---|
 | 1 | Public page resolves | **pass** | — |
-| 2 | A DOI for the data | **open** | a release cut after §5, or a standalone deposit |
+| 2 | A DOI for the data | **pass** | [`10.5281/zenodo.23613057`](https://doi.org/10.5281/zenodo.23613057) (release v0.21.0) |
 | 3 | Every section evidence-labelled | **pass** | 13 / 13 |
 | 4 | At least one human-`reviewed` claim | **open** | 200-row double-coded κ study, second coder human |
 | 5 | Canon ledger with labelled bases | **pass** | `--check` green |
@@ -71,13 +71,16 @@ artefact.
 | 9 | Mirror in sync | **pass** | 24-10-2026 |
 | 10 | A published report | **pass** | this file |
 
-**Score: 7 / 10.** The three open rows are the honest part of the report, not an appendix.
+**Score: 8 / 10.** The two open rows are the honest part of the report, not an appendix.
 
-## 5. The DOI — why it is open
+## 5. The DOI — minted after the report
+
+**Resolved, 24-10-2026 08:19Z.** Release v0.21.0 was cut after the ledger and the chapter merged and minted **[10.5281/zenodo.23613057](https://doi.org/10.5281/zenodo.23613057)** (version 0.21.0; concept DOI [10.5281/zenodo.21419691](https://doi.org/10.5281/zenodo.21419691)). Checklist row 2 is now pass, and the score above reads 8/10.
+
+The three facts below are why the DOI could not be minted *first*, and they remain the reasons the order matters:
 
 The repository's Zenodo machinery mints a DOI **per tagged release** (concept DOI
-`10.5281/zenodo.21419691`; the v0.20.0 version DOI is `10.5281/zenodo.23536487`). Three facts make a
-deposit today wrong rather than merely inconvenient:
+`10.5281/zenodo.21419691`; the v0.20.0 version DOI is `10.5281/zenodo.23536487`). Three facts made a deposit *before* the merge wrong or premature:
 
 1. **Ordering.** A release cut now would not contain the canon ledger or the PD chapter, both still
    in open pull requests. A DOI that resolves to a tree without the artifacts it is cited for is
@@ -88,9 +91,12 @@ deposit today wrong rather than merely inconvenient:
 3. **Version drift.** `CITATION.cff` says 0.20.0 while `package.json` says 0.18.0 — a release would
    have to settle which is true first.
 
-**Next step, in order:** merge the ledger and chapter pull requests → cut one csl-atlas release →
-the version DOI becomes the page's citation. A standalone PD dataset deposit is the alternative, and
-it needs the licence question answered first.
+**What happened:** the ledger and the chapter merged (24-10-2026), one release was cut, and the
+version DOI was minted — items 1 (ordering) and 3 (version drift) are closed by that order, not argued
+away. **Item 2 is not closed:** v0.21.0 ships under the repository's existing CC BY-SA 4.0, and whether the
+siglum-level PD join tables are a derivative of the CC BY-NC-SA 3.0 machine text remains an open
+rights question. A standalone PD dataset deposit is still the alternative if that question needs its
+own licence rather than the atlas's.
 
 ## 6. What this programme does not claim
 
