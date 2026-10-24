@@ -49,6 +49,11 @@ choose the second dictionary by the job you are doing:
     <strong>Then PWG/PWK</strong>
     <small>Use the Petersburg dictionaries when MW compresses citations, variants, or nested structure.</small>
   </a>
+  <a class="decision-card" href="dicts/pd">
+    <span>Historical depth</span>
+    <strong>Then PD</strong>
+    <small>Use the Poona Dictionary when you need the chronological citation depth that the finished dictionaries compress away — letter a- only, and unfinished.</small>
+  </a>
   <a class="decision-card" href="dicts/vcp">
     <span>Sanskrit frame</span>
     <strong>Then VCP/SKD</strong>
