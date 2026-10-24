@@ -1,0 +1,827 @@
+{
+  "id": "mw-defgen-eval-sample",
+  "seed": 730,
+  "n": 500,
+  "target_per_cell": 56,
+  "cells": {
+    "high/mono": 56,
+    "high/poly2_4": 56,
+    "high/poly5p": 56,
+    "low/mono": 52,
+    "low/poly2_4": 56,
+    "low/poly5p": 56,
+    "mid/mono": 56,
+    "mid/poly2_4": 56,
+    "mid/poly5p": 56
+  },
+  "skipped_lt_min_attest": 157,
+  "skip_log": [
+    {
+      "slp1": "uzRAgama",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "unmayUKa",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "stamBIBU",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "samatiyA",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "attikA",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "goruta",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "Kanitf",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "cikitsAkalikA",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "dundu",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "tawAGAta",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "nayanavizaya",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "aByudgama",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "anugarjita",
+      "cell": "low/mono",
+      "n_attest": 0
+    },
+    {
+      "slp1": "sunirUpita",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "yaTAparADam",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "kuWArI",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "leRqa",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "visraMsin",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "upakroSana",
+      "cell": "low/mono",
+      "n_attest": 0
+    },
+    {
+      "slp1": "paYcArcis",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "sUrasUta",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "pratiDvAna",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "SeKarIBU",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "anAgatavat",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "yogacUrRa",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "samaDikatara",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "asnehya",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "AlApavat",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "nigaqana",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "upanagara",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "asaMBAzA",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "anukzaRam",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "udaYjali",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "upAlamBana",
+      "cell": "low/mono",
+      "n_attest": 0
+    },
+    {
+      "slp1": "kaRwakaBuj",
+      "cell": "low/mono",
+      "n_attest": 0
+    },
+    {
+      "slp1": "harasaKa",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "aDarmatas",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "BUtanAyikA",
+      "cell": "low/mono",
+      "n_attest": 0
+    },
+    {
+      "slp1": "garuqAgraja",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "gaRarAtra",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "aRutara",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "janAcAra",
+      "cell": "low/mono",
+      "n_attest": 0
+    },
+    {
+      "slp1": "caraRAnati",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "niraBimAna",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "kesaravat",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "vAsayazwi",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "jalajantu",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "pawahatA",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "amarasarit",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "cAwupawu",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "karpUrasaras",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "Danuryazwi",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "tArakita",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "karpaRa",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "samaDiSI",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "duravasTA",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "jalajAsana",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "aNgarAja",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "avijYatA",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "adfzwapuruza",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "banDupAla",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "avaDIraRA",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "daRqapraRAma",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "sodarI",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "kriyAviSezaRa",
+      "cell": "low/mono",
+      "n_attest": 0
+    },
+    {
+      "slp1": "trizWa",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "SukraSizya",
+      "cell": "low/mono",
+      "n_attest": 2
+    },
+    {
+      "slp1": "AtapavAraRa",
+      "cell": "low/mono",
+      "n_attest": 1
+    },
+    {
+      "slp1": "kuqmalita",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "nAgalatA",
+      "cell": "low/poly2_4",
+      "n_attest": 0
+    },
+    {
+      "slp1": "goSIrzaka",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "jitAri",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "durvipAka",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "BinnavarRa",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "vAvadUka",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "prAptarUpa",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "nirUpaka",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "uttAnaSaya",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "pariDvaMsin",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "siMhakesara",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "Darmapura",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "ozaDipati",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "maRikarRikA",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "mahAboDi",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "triSira",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "aBraMliha",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "Ahika",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "Danuzkara",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "kiMkzaRa",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "rAzwraka",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "aSikzita",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "sArva",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "mudira",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "upaveSin",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "anavagraha",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "kararuD",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "nibiqita",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "yAdaHpati",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "suvacana",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "udarcis",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "vIwikA",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "SarAru",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "saMhUti",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "fkTa",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "udbanDa",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "guRana",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "sulakzaRA",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "upanetf",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "coritaka",
+      "cell": "low/poly2_4",
+      "n_attest": 0
+    },
+    {
+      "slp1": "arDacandraka",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "DarmasaMhitA",
+      "cell": "low/poly2_4",
+      "n_attest": 0
+    },
+    {
+      "slp1": "saMvAsin",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "pakzAnta",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "mozaRa",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "SravaRapaTa",
+      "cell": "low/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "apakftya",
+      "cell": "low/poly2_4",
+      "n_attest": 1
+    },
+    {
+      "slp1": "grasta",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "vizRugupta",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "uzma",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "vellita",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "upAhita",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "madotkawa",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "jAlikA",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "tEtila",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "hArya",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "fjIza",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "suzIma",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "vAcaspatya",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "kamana",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "SiKaRqaka",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "manTA",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "pratizWa",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "Satakowi",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "niSAnta",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "vAna",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "mAla",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "viyat",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "SAsti",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "AnadDa",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "kuwwaka",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "uttAla",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "racana",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "lalana",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "sTeya",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "Sasta",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "Ana",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "parivartaka",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "ravaRa",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "anIkasTa",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "nirasta",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "samBAvya",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "subudDi",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "kandala",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "suyaSas",
+      "cell": "low/poly5p",
+      "n_attest": 1
+    },
+    {
+      "slp1": "Asatti",
+      "cell": "low/poly5p",
+      "n_attest": 2
+    },
+    {
+      "slp1": "amatra",
+      "cell": "mid/poly2_4",
+      "n_attest": 2
+    },
+    {
+      "slp1": "romaharzaRa",
+      "cell": "mid/poly5p",
+      "n_attest": 2
+    }
+  ],
+  "inputs": {
+    "a3_mw_en_tm": "SanskritLexicography/RussianTranslation/src/mw_en_tm.json (187,506 glosses)",
+    "e26_lemma_frequency": "kosha data-v0.1.0 release asset lemma_frequency.tsv (83,277 lemmas)",
+    "c15_dcs_cdsl_xref": "csl-apidev/simple-search/dcs_xref/dcs_cdsl_xref.tsv (in_cdsl=1 only)",
+    "dcs": "VisualDCS/src/DCS-data-2026/dcs_full.sqlite (DCS 2026, Hellwig, CC BY 4.0)"
+  },
+  "inputs_sha256": {
+    "a3_mw_en_tm": "34a0794c999ae504b6519101a89da01875e1ceed03db3448d52064ba2b3e60b4",
+    "e26_lemma_frequency": "3d54e4dbf4fc90c75fdd10b7ab538ddde548718b703c935cadb4c22e43314d07",
+    "c15_dcs_cdsl_xref": "208a62862b852077acc67f4aaacc2e581eaf0fe93ac1b8340cd93d6151974a3c",
+    "dcs": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc"
+  },
+  "inputs_sha256_note": "Recomputed locally 11-07-2026 under H752; byte-identical to the digests independently recorded by the parked rival H730 lane (h730-defgen-eval-fable-lane, deleted after salvage) — both lanes consumed identical inputs.",
+  "filters": {
+    "sentence_tokens": [
+      4,
+      40
+    ],
+    "max_per_work": 2,
+    "min_attest": 3,
+    "max_attest": 5
+  }
+}
