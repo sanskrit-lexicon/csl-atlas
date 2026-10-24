@@ -1,0 +1,55 @@
+{
+  "caveats": [
+    "Only 246 of the 271 DCS text directories appear in the VisualDCS token dump.",
+    "A DCS text without a Dharmamitra date is skipped; the row therefore records the earliest DATABLE attestation, which can only push the DCS side later, never earlier.",
+    "PD first-citation resolution covers 31,217 of 104,950 unique headwords; the unresolved majority is dominated by post-classical commentaries and the Padmapurāṇa, which the Dharmamitra snapshot does not date.",
+    "Both dates are model posterior medians; the lag is an offset between two estimates, not an interval between two historical events."
+  ],
+  "counts": {
+    "dcs_texts_in_token_dump": 246,
+    "dcs_texts_with_dharmamitra_date": 132,
+    "dcs_tokens_scanned": 4174702,
+    "joined_lemmas": 2458,
+    "pd_entries_scanned": 107620,
+    "pd_headwords_with_dated_first_citation": 30865,
+    "pd_unique_headwords": 104950
+  },
+  "distribution": {
+    "max_years": 2014,
+    "mean_years": -102.61,
+    "median_years": 0.0,
+    "min_years": -2232.0,
+    "n": 2458,
+    "non_tie_median_years": -190.0,
+    "non_tie_n": 994,
+    "non_tie_q1_years": -706.25,
+    "non_tie_q3_years": 121.25,
+    "q1_years": 0.0,
+    "q3_years": 0.0,
+    "share_dcs_earlier": 0.155,
+    "share_dcs_earlier_non_tie": 0.3833,
+    "share_pd_earlier": 0.2494,
+    "share_tie": 0.5956
+  },
+  "generatedBy": "scripts/pd_dcs_earliest_lag.py",
+  "handoff": "H6944",
+  "inputs": {
+    "0.csv": "bf0f687ba1bc8272b2bcd709f092c70364709c4b063d178f6fb30529d9291107",
+    "dharmamitra-chronology.json": "e8ad4988651b179a3e63d8a61928e6f240758c7dfa6d22d81e3b7a4d7df201e5",
+    "dictionary.csv": "95172e5a626ada6322ec67173657b834b7f2bbe1db71250b8b2551c07feb60cd",
+    "pd.txt": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442"
+  },
+  "join_loss": {
+    "pd_entry_no_known_siglum": 1567,
+    "pd_first_siglum_undated": 72518,
+    "pd_headword_in_dcs_without_datable_attestation": 1156,
+    "pd_headword_not_in_dcs_inventory": 27251
+  },
+  "method": "PD first citation: the first known source siglum in the entry body, resolved to a Dharmamitra chronology work (source-date-anchor first, then the DCS crosswalk, then the printed AOB title). DCS earliest: the earliest Dharmamitra-dated DCS text in the VisualDCS token dump that contains the lemma. Both dates are posterior medians from the same Dharmamitra model snapshot, not historical dates.",
+  "pd_date_sources": {
+    "aob-title": 136,
+    "dcs-crosswalk": 2306,
+    "siglum-alias": 16
+  },
+  "schemaVersion": "1.0.0"
+}

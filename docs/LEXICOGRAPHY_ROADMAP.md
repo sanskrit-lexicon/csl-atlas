@@ -1,5 +1,9 @@
 # CSL Atlas Lexicography Research Roadmap
 
+> **Wave-2 verdict 22-10-2026 (H7126):** retained in place — supporting research-agenda spec; the unminted prose IS the agenda, delivery order governed by `ROADMAP_2026_2027.md` (truth-pass 27-08-2026, H3002); all execution handoffs referenced are terminal (drain report bucket C, live_eng=0).
+
+
+
 > Supporting specification. The governing delivery order is
 > [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 

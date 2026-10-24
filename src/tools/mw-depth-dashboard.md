@@ -39,6 +39,7 @@ const t = (key) => {
 ```js
 import * as Plot from "npm:@observablehq/plot";
 import { slp1ToIast } from "../lib/lookup-normalize.js";
+import { csvDownloadButton } from "../lib/csv-download.js";
 ```
 
 ```js
@@ -87,20 +88,62 @@ display(Inputs.table(summary.types.map(t => ({
 }));
 ```
 
+```js
+display(csvDownloadButton(summary.types, "mw-depth-article-types.csv"));
+```
+
 ## ${t("phase1.mw-depth.compound-depth")}
 
-How many `<k2>` segments a record's headword has (1 = no compound marker).
+How many **joints** a record's `<k2>` has (1 = no compound marker). A joint is an
+internal division, **not** a member (immediate-constituent) depth: the
+[Dharmamitra probe](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md)
+found 47.3 % of valid markup-3 rows parse as two members.
+
+Two labelled series are published:
+
+- **Strict joints** — em dash only; **8,638** records at 3+.
+- **Loose joints** — em dash, hyphen or plus; **30,703** records at 3+.
+
+```js
+const depthSeries = ["strict", "loose"].flatMap(id => {
+  const series = depth.compoundDepthSeries[id];
+  return series.distribution.map(d => ({ series: series.label, value: d.value, count: d.count }));
+});
+```
 
 ```js
 display(Plot.plot({
-  height: 300,
+  height: 340,
+  fx: { label: null },
   x: { label: t("phase1.mw-depth.segments-k2"), tickFormat: "d" },
   y: { label: "records", grid: true, type: "log" },
+  color: { legend: true, domain: ["strict", "loose"].map(id => depth.compoundDepthSeries[id].label) },
   marks: [
-    Plot.barY(depth.compoundSegmentDistribution, { x: "value", y: "count", fill: "var(--theme-foreground-focus)" }),
+    Plot.barY(depthSeries, { fx: "series", x: "value", y: "count", fill: "series" }),
     Plot.ruleY([1])
   ]
 }));
+```
+
+```js
+const depthSeriesRows = ["strict", "loose"].flatMap(id => {
+  const series = depth.compoundDepthSeries[id];
+  return series.distribution.map(d => ({
+    series: series.label,
+    joints: d.value,
+    records: d.count
+  }));
+});
+display(Inputs.table(depthSeriesRows, {
+  columns: ["series", "joints", "records"],
+  header: { series: "Series", joints: "Joints", records: "Records" },
+  sort: "records",
+  reverse: true
+}));
+```
+
+```js
+display(csvDownloadButton(depthSeriesRows, "mw-depth-joint-series.csv"));
 ```
 
 ## ${t("phase1.mw-depth.strongest-overlaps")}
@@ -108,11 +151,16 @@ display(Plot.plot({
 Pairs of types that most often co-occur in the same record.
 
 ```js
-display(Inputs.table(overlaps.overlaps.slice(0, 20).map(o => ({ "type A": o.a, "type B": o.b, records: o.count })), {
+const overlapRows = overlaps.overlaps.slice(0, 20).map(o => ({ "type A": o.a, "type B": o.b, records: o.count }));
+display(Inputs.table(overlapRows, {
   columns: ["type A", "type B", "records"],
   sort: "records",
   reverse: true
 }));
+```
+
+```js
+display(csvDownloadButton(overlapRows, "mw-depth-type-overlaps.csv"));
 ```
 
 ---

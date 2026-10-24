@@ -24,7 +24,11 @@ from collections import Counter, defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))  # csl-atlas
 sys.path.insert(0, os.path.join(ROOT, "scripts", "lib"))
-from dataset_meta import license_fields, generated_at_for_payload, read_json_if_exists  # noqa: E402
+from dataset_meta import (  # noqa: E402
+    generated_at_for_payload,
+    license_fields,
+    read_json_if_exists,
+)
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -166,22 +170,22 @@ def main():
                    "roots controls the homonymy that m7's 'compatible' rate could only tolerate."),
         "perFeature": per_feature,
         "interpretation": [
-            f"gaṇa: modal class bhvādi is {per_feature['gana']['baseRate']['modalClassSharePct']}% of "
+            (f"gaṇa: modal class bhvādi is {per_feature['gana']['baseRate']['modalClassSharePct']}% of "
             "opinions, so raw agreement needs chance-correction; the pairwise κ "
             f"(mean {per_feature['gana']['summary'].get('meanKappa')}, "
             f"range {per_feature['gana']['summary'].get('minKappa')}–{per_feature['gana']['summary'].get('maxKappa')}) "
-            "is substantial-to-almost-perfect, so the convergence is real, not a base-rate coincidence.",
-            "The weakest pair on every feature involves SHS, consistent with its known thin feature "
-            "coverage (paper §6); excluding SHS the agreement is uniformly almost-perfect.",
-            "Because κ is computed on the homonym-free subset, it is also the homonym-controlled "
-            "agreement the paper's §4.4 could previously only report as a tolerant upper bound.",
+            "is substantial-to-almost-perfect, so the convergence is real, not a base-rate coincidence."),
+            ("The weakest pair on every feature involves SHS, consistent with its known thin feature "
+            "coverage (paper §6); excluding SHS the agreement is uniformly almost-perfect."),
+            ("Because κ is computed on the homonym-free subset, it is also the homonym-controlled "
+            "agreement the paper's §4.4 could previously only report as a tolerant upper bound."),
         ],
         "limitations": [
-            "Restricting to single-label roots drops genuinely multi-class (homonymous) roots; κ therefore "
+            ("Restricting to single-label roots drops genuinely multi-class (homonymous) roots; κ therefore "
             "describes the unambiguous core, and the true agreement over ALL roots lies between the "
-            "unanimous rate (conservative) and the compatible rate (generous).",
-            "κ inherits every upstream caveat of the m4 decode (single-source anubandha key; YAT bare-stem "
-            "undercount; SKD/SHS lower coverage).",
+            "unanimous rate (conservative) and the compatible rate (generous)."),
+            ("κ inherits every upstream caveat of the m4 decode (single-source anubandha key; YAT bare-stem "
+            "undercount; SKD/SHS lower coverage)."),
             "Pairwise κ pools roots that are not independent across pairs (the same root enters several pairs).",
         ],
         "boundary": ["Derived from committed atlas dictionary evidence only; no source/corpus read, no public page, no human decision."],

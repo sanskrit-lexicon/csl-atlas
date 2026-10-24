@@ -12,6 +12,7 @@ const VALIDATORS = [
   "validate-correction-feed.mjs",
   "validate-heritage-witness.mjs",
   "validate-ghost-stock.mjs",
+  "validate-plan-deviation.mjs",
   "validate-kosa-chapters.mjs",
   "validate-heap-sat.mjs",
   "validate-period-signatures.mjs",
@@ -43,7 +44,11 @@ export function verify() {
   run(process.execPath, ["--test"]);
   run("python", ["-m", "unittest", "scripts.test_validate_review_decisions"]);
   run("python", ["-m", "unittest", "scripts.test_merge_review_pool_decisions"]);
-  run("python", ["-m", "unittest", "scripts.lexico.test_review_pool_kappa"]);
+  run("python", ["-m", "unittest", "scripts.lexico.test_lexico_review_pool_kappa"]);
+  // H7096: the PD generators' --check parity gates. A hand edit to a
+  // generated data/pd file (the #598 failure mode) must go RED here, not
+  // sit unnoticed until someone runs the gate by hand.
+  run("python", [path.join("scripts", "pd_regen_gate.py")]);
   for (const validator of VALIDATORS) run(process.execPath, [path.join("scripts", validator)]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);

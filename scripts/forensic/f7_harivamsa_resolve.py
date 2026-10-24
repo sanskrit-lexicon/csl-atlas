@@ -41,15 +41,23 @@ Run from repo root (after f7_harivamsa_harvest.py):
     python scripts/forensic/f7_harivamsa_resolve.py
 Deps: ../sanskrit-util/py on sys.path (sibling repo, as with ../csl-orig).
 """
-import sys, os, re, json, csv, bisect, random, statistics
-from collections import defaultdict, Counter
+import bisect
+import csv
+import json
+import os
+import random
+import re
+import statistics
+import sys
+from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
 sys.path.insert(0, os.path.abspath("scripts/L0"))
 sys.path.insert(0, os.path.abspath("../sanskrit-util/py"))
-from parse_cslorig import iter_entries, CSL_ORIG
+from parse_cslorig import CSL_ORIG, iter_entries
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _corpus_pin
 from sanskrit_util import slp1_simplify

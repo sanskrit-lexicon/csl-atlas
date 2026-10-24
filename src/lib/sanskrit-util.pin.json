@@ -1,0 +1,8 @@
+{
+  "file": "src/lib/sanskrit-util.js",
+  "canonical": "sanskrit-util/js/index.mjs",
+  "algorithm": "sha256",
+  "sha256": "b6875ad6fd5762d1caac000d436800ba91dd6b0ecf67b6852e8fe73b540a216f",
+  "updated": "2026-10-18",
+  "policy": "Checked unconditionally in CI. Recompute in the same commit as any re-vendor (python3 - <<'EOF' ... sha256 of LF-normalised content)."
+}

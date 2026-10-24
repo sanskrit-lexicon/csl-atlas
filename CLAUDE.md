@@ -1,6 +1,16 @@
 # CLAUDE.md
 
-_Created: 03-07-2026 · Last updated: 24-09-2026_
+_Created: 03-07-2026 · Last updated: 09-10-2026 (H5885 truth refresh: sanskrit-util v0.12.0 re-vendor, paper-priv guard, DOI, lint-zero)_
+
+Recent state (09-10-2026): `v0.19.11` released; vendored
+`sanskrit-util` re-pinned to **v0.12.0** (#542 — H3975 medial-anusvāra
+`form_key` fold); `ci: paper-priv-guard` blocks manuscript-shape files
+outside the allowlist and the P1–P6 manuscripts were removed
+(STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY, MG 06-10); nightly
+bughunt findings reports are committed (latest #541); the mechanical lint
+sweep took UP031/ISC004/I001 to 0 in scope (#534); the atlas concept DOI
+`10.5281/zenodo.21419691` is pinned in `CITATION.cff`, the README citation
+block, and A50 data-availability (#528).
 
 `csl-atlas` is the public **dictionary-evidence** microsite for the Cologne
 Digital Sanskrit Dictionaries — a static Observable Framework site for
@@ -73,6 +83,16 @@ publishes `dist/` to GitHub Pages.
   `tests/forensic/test_f12_a50_claim_ledger.py`, `build-four-axis-independence`, and the
   tradition review-sheet count in `scripts/test_validate_review_decisions.py`; then the
   A50 figures and the claim ledger §P. CI red on any of these = a step skipped.
+- **PD quotation-level unit (H6949).** `data/pd/pd_quotations_by_entry.tsv`,
+  `pd_quotations_vs_pwg.tsv` and `pd_quotations_summary.json` are generated, not hand-kept:
+  `python scripts/pd_quotation_units.py --pd <staged pd.txt>` then
+  `python scripts/pd_quotations_vs_pwg.py --pd <pd.txt> --pwg ../csl-orig/v02/pwg/pwg.txt`.
+  The rule lives in `scripts/lib/quotation_units.py` and **both** dictionaries import it —
+  that identity is the whole reason the PD/PWG comparison is like-for-like, so a change to
+  the rule regenerates both artifacts in the same PR. The counts in
+  `reports/PD_QUOTATION_UNIT_2026-10-18.md` and the `data/pd/README.md` row must move with
+  them. `tests/forensic/test_quotation_units.py` holds the rule with **hand-derived**
+  expectations — never regenerate those pins from the script they check.
 
 ## Do not touch
 
@@ -109,5 +129,13 @@ Danger facts:
 [Uprava DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md)
 (org-private) and the generated block of
 [AGENTS.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/AGENTS.md).
+
+## Repo guards
+
+The shared main tree is guarded: `.githooks/pre-commit` blocks main-tree commits
+(escape `ALLOW_MAIN_TREE_COMMIT=1`, solo only) and `.githooks/post-checkout`
+auto-reverts a foreign branch-switch back to `main` (shared-tree branch-switch guard,
+03-10-2026, PR #532; escape `ALLOW_MAIN_TREE_CHECKOUT=1`). Work in a session-unique
+worktree; `core.hooksPath=.githooks`.
 
 _Dr. Mārcis Gasūns_

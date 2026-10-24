@@ -7,7 +7,10 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { generatedAtForPayload, generatedAtNow, licenseFields, readJsonIfExists } from "./dataset-meta.mjs";
+
+const MODULE_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 
 export const SCHEMA_VERSION = "1.0.0";
 
@@ -97,6 +100,99 @@ export const RESEED_REFUSAL_EXIT = 2;
 export const RESEED_DANGER_SENTENCE =
   "--reseed blanks the human review overlay back to the machine seed";
 
+// ── Protected paths (H6980) ────────────────────────────────────────────────
+//
+// The lock used to know one output path because it knew one generator. H6980
+// moves the list out of the code: the guard refuses by PATH against the shared
+// registry (canonical in kosha, vendored here), so a new generator that writes
+// a human-reviewed file cannot slip past just because its script name is new.
+
+/** Registry path, relative to the repo root. */
+export const PROTECTED_PATHS_REGISTRY = path.join("data", "manifest", "protected_paths.tsv");
+
+/** Only used when the registry file is absent — the H2890 review report. */
+export const PROTECTED_PATH_FALLBACK = Object.freeze([
+  "src/data/review/r2-checkpoint-review.json"
+]);
+
+/** Repo slug for registry rows, read from package.json (stable in worktrees). */
+export function repoName(root = MODULE_ROOT) {
+  try {
+    const pkg = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
+    if (pkg.name) return pkg.name;
+  } catch {
+    // fall through to the directory name
+  }
+  return path.basename(root);
+}
+
+function normaliseTarget(target, root = MODULE_ROOT) {
+  const absolute = path.isAbsolute(target) ? target : path.resolve(root, target);
+  return path.relative(root, absolute).split(path.sep).join("/");
+}
+
+function globToRegExp(glob) {
+  let source = "^";
+  for (let i = 0; i < glob.length; i += 1) {
+    const char = glob[i];
+    if (char === "*") {
+      if (glob[i + 1] === "*") {
+        source += ".*";
+        i += 1;
+      } else {
+        source += "[^/]*";
+      }
+    } else if (char === "?") {
+      source += "[^/]";
+    } else {
+      source += char.replace(/[.+^${}()|[\]\\]/g, "\\$&");
+    }
+  }
+  return new RegExp(`${source}$`);
+}
+
+/**
+ * This repo's protected globs, or null when the registry is missing/malformed.
+ * A missing registry is not consent: callers fall back to the H2890 path.
+ */
+export function loadProtectedPaths({
+  root = MODULE_ROOT,
+  registry = path.join(root, PROTECTED_PATHS_REGISTRY),
+  repo = repoName(root)
+} = {}) {
+  if (!registry || !fs.existsSync(registry)) return null;
+  const lines = fs.readFileSync(registry, "utf8")
+    .split(/\r?\n/)
+    .filter(line => line.trim() && !line.trimStart().startsWith("#"));
+  if (!lines.length) return null;
+  const header = lines.shift().split("\t");
+  const index = Object.fromEntries(header.map((name, i) => [name, i]));
+  if (!["repo", "path_glob", "reason", "owner", "since"].every(field => field in index)) {
+    return null;
+  }
+  const paths = [];
+  for (const line of lines) {
+    const cols = line.split("\t");
+    if ((cols[index.repo] || "").trim() !== repo) continue;
+    const glob = (cols[index.path_glob] || "").trim().replaceAll("\\", "/");
+    if (glob) paths.push(glob);
+  }
+  return paths;
+}
+
+/** True when `target` matches a registry glob for this repo. */
+export function isProtectedPath(target, {
+  root = MODULE_ROOT,
+  registry = path.join(root, PROTECTED_PATHS_REGISTRY),
+  repo = repoName(root)
+} = {}) {
+  if (!target) return false;
+  const normalised = normaliseTarget(target, root);
+  const paths = loadProtectedPaths({ root, registry, repo });
+  if (paths === null) return PROTECTED_PATH_FALLBACK.includes(normalised);
+  return paths.some(glob => globToRegExp(glob).test(normalised));
+}
+
 /** True only for the exact string "1" — a half-set hatch is not consent. */
 export function reseedIsHatched(env = process.env) {
   return env[OVERLAY_WIPE_HATCH] === "1";
@@ -109,6 +205,9 @@ export function reseedRefusalMessage({ script, outputPath }) {
     "",
     RESEED_DANGER_SENTENCE,
     `  ${target}`,
+    "",
+    `Protected paths come from ${PROTECTED_PATHS_REGISTRY.split(path.sep).join("/")},`,
+    "not from the script name (H6980).",
     "",
     "Nothing was written. A plain rebuild is always allowed and preserves every",
     "human decision:",
@@ -136,9 +235,12 @@ export function refuseReseedWithoutHatch({
   outputPath,
   env = process.env,
   exit = code => process.exit(code),
-  log = message => console.error(message)
+  log = message => console.error(message),
+  root = MODULE_ROOT,
+  registry = path.join(root, PROTECTED_PATHS_REGISTRY)
 } = {}) {
   if (reseedIsHatched(env)) return false;
+  if (outputPath && !isProtectedPath(outputPath, { root, registry })) return false;
   log(reseedRefusalMessage({ script, outputPath }));
   exit(RESEED_REFUSAL_EXIT);
   return true;

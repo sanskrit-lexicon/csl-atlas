@@ -1,0 +1,86 @@
+{
+  "generated_by": "H6932 scripts/pd_aob_declared_entries.py (DeepSeek v4.1 Flash, deepseek/deepseek-flash)",
+  "method": "projection of the committed H6720/H6960 entry inventory; no OCR re-parse. One row per entry with junk=no; title is the first comma-separated segment of title_tail; year is the first 1830-2029 token.",
+  "inputs": {
+    "entries": {
+      "path": "data/pd/pd_aob_entries.tsv",
+      "sha256": "178ce4bd6c1598abebd8abd334246702e038e0eae22e6a4e3b136c965ac22934",
+      "rows": 1444
+    },
+    "works": {
+      "path": "data/pd/pd_aob_declared_works.tsv",
+      "sha256": "686f75d2601ae51537a792541d4d4e6fcf11e90816668afcb9a69b12428385e1",
+      "rows": 1112
+    },
+    "metrics": {
+      "path": "data/pd/pd_dcs_metrics.json",
+      "sha256": "02ebee08936418e882b6e92e2ffb40888e80ea88c793ae1b27503537d2959416"
+    }
+  },
+  "counts": {
+    "entries_parsed": 1444,
+    "entries_usable": 1437,
+    "entries_junk": 7,
+    "entries_wellformed_usable": 1379,
+    "entries_without_title_or_year": 4,
+    "entries_without_title_or_year_ids": [
+      "AOB-0059",
+      "AOB-0280",
+      "AOB-1054",
+      "AOB-1324"
+    ]
+  },
+  "edition_to_work_collapse": {
+    "source": "data/pd/pd_aob_declared_works.tsv",
+    "works": 1112,
+    "edition_rows": 1118,
+    "is": "published clean-subset collapse (H6707/H6720), not the inventory-derived canon; kept beside the table for comparison"
+  },
+  "denominator": {
+    "n_covered_dcs_titles": 118,
+    "landed_point": {
+      "n": 1437,
+      "pct": 8.21
+    },
+    "ruled_central_estimate": {
+      "n": 1476,
+      "pct": 7.99,
+      "display": 8.0
+    },
+    "band_provenance": [
+      1419,
+      1517
+    ],
+    "candidates": {
+      "1437_landed_usable_entries": {
+        "n": 1437,
+        "pct": 8.21
+      },
+      "1444_landed_parsed_entries": {
+        "n": 1444,
+        "pct": 8.17
+      },
+      "1464_print_census": {
+        "n": 1464,
+        "pct": 8.06
+      },
+      "1469_entry_rows_header_corrected": {
+        "n": 1469,
+        "pct": 8.03
+      },
+      "1476_structural_entry_lines": {
+        "n": 1476,
+        "pct": 7.99
+      },
+      "1517_reparse_raw": {
+        "n": 1517,
+        "pct": 7.78
+      }
+    },
+    "choice": "OPEN -- both the landed point (1437) and the ruled central estimate (1476) are reproducible; MG re-rules the quoted denominator. The 7.8-8.3 % band brackets both."
+  },
+  "artifacts": {
+    "entries_tsv": "data/pd/pd_aob_declared_entries.tsv",
+    "entries_json": "data/pd/pd_aob_declared_entries.json"
+  }
+}

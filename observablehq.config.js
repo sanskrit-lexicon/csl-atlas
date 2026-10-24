@@ -89,6 +89,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/review-source-siglum": "Review queue: source sigla cited by only one tagged Cologne dictionary — genuinely unique, or the same source under different aliases.",
   "/tools/sense-divergence": "Cross-dict entry-coverage divergence: which Sanskrit headwords each Cologne dictionary treats very differently from its peers.",
   "/tools/h4-review": "H4 semantic-field review: per dictionary and Amarakośa field, whether an apparent coverage anomaly is real or an artifact.",
+  "/tools/benchmark": "Atlas benchmark v2: three frozen held-out tasks, double-keyed gold coverage, rule and trivial baselines, chance-corrected agreement, and an honest insufficiency report.",
   "/tools/cross-dict": "Cross-dictionary comparison: nine Cologne dictionaries on a format-robust common-block vocabulary, showing citation density and structure.",
   "/tools/dictionary-coverage": "All-dictionary coverage: the nine-chapter comparison extended to every CDSL v02 dictionary with a main source file.",
   "/tools/matrix-explorer": "Matrix explorer: an 18×14 block-by-article-type heatmap of Monier-Williams, with per-cell counts and filtering.",
@@ -226,7 +227,8 @@ export default {
         { name: "Alignment confidence", path: "/tools/review-alignment" },
         { name: "Source-siglum aliases", path: "/tools/review-source-siglum" },
         { name: "Cross-dict divergence", path: "/tools/sense-divergence" },
-        { name: "H4 semantic fields", path: "/tools/h4-review" }
+        { name: "H4 semantic fields", path: "/tools/h4-review" },
+        { name: "Benchmark v2", path: "/tools/benchmark" }
       ]
     },
     {

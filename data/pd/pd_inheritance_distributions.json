@@ -1,0 +1,1122 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "scripts/pd_inheritance_probe.py (H6948)",
+  "generatedAt": "2026-10-18",
+  "seed": 20261018,
+  "bootstraps": 2000,
+  "inputs": {
+    "pd": {
+      "path": "txt/pd.txt",
+      "bytes": 55122076,
+      "sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442"
+    },
+    "pwg": {
+      "path": "/Users/mac/Documents/GitHub/csl-orig/v02/pwg/pwg.txt",
+      "bytes": 54634244,
+      "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166"
+    },
+    "mw": {
+      "path": "/Users/mac/Documents/GitHub/csl-orig/v02/mw/mw.txt",
+      "bytes": 50163993,
+      "sha256": "555ecf5aadaaf21e5965d6b3b419f428fc9ab9237f563627001ceca468d0cff8"
+    },
+    "sigla": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_siglum_families.tsv",
+    "dcs": "/Users/mac/Documents/GitHub/csl-atlas/data/dcs/dcs_lemma_summary.json",
+    "records_capped_by_limit": null
+  },
+  "sampling": {
+    "frame": "all PD letter-a headwords (distinct slp1_form_key) also present in the target dictionary's letter-a headwords",
+    "strata": "marked x PD entry-size class (0 / 1-10 / 11-50 / 51-200 / 200+ chars)",
+    "sample": "min(2000, stratum size) per stratum, seeded random.Random(20261018)",
+    "null": "each sampled PD headword re-paired with a target entry of the same PD size class, never its own form_key",
+    "per_headword_tsv": "data/pd/pd_inheritance_metrics.tsv (sampled rows, all fields)",
+    "population_aggregates": "the macro and mappable_share blocks are full-population, not sampled"
+  },
+  "marks": {
+    "entries": 107630,
+    "broad_entries_with_any_dictionary_source": 2269,
+    "broad_share": 0.021081482857939236,
+    "strict_entries_all_segments_sources": 1729,
+    "strict_share": 0.016064294341726286,
+    "broad_marks_by_source": {
+      "DBHS": 880,
+      "MW": 548,
+      "APTE": 526,
+      "PW": 485,
+      "NT": 145,
+      "VIŚVA": 126,
+      "VĀC": 7
+    },
+    "strict_marks_by_source": {
+      "DBHS": 844,
+      "PW": 377,
+      "APTE": 330,
+      "MW": 288,
+      "VIŚVA": 90,
+      "NT": 71,
+      "VĀC": 7
+    },
+    "broad_marks_total": 2717,
+    "strict_marks_total": 2007,
+    "h6942_reference": {
+      "entries": 107630,
+      "entries_with_mark": 1801,
+      "marks": 1956,
+      "by_source": {
+        "DBHS": 852,
+        "PW": 399,
+        "APTE": 264,
+        "MW": 245,
+        "VIŚVA": 101,
+        "NT": 84,
+        "VĀC": 11
+      },
+      "note": "H6942 counted a narrower convention (1,801 / 1,956). The broad channel here also counts gloss-prefixed source brackets (`[infamous, MW., APTE]`); strict is the source-only bracket."
+    },
+    "within_pd_profile": {
+      "unmarked": {
+        "n": 105351,
+        "citations_per_entry_mean": 2.6280908581788496,
+        "citations_per_entry_median": 1,
+        "zero_citation_share": 0.012937703486440565,
+        "entry_chars_mean": 453.1399512107147,
+        "entry_chars_median": 266
+      },
+      "marked_broad": {
+        "n": 2269,
+        "citations_per_entry_mean": 7.4914059056853235,
+        "citations_per_entry_median": 1,
+        "zero_citation_share": 0.3080652269722345,
+        "entry_chars_mean": 1180.4116350815336,
+        "entry_chars_median": 258
+      },
+      "marked_strict": {
+        "n": 1729,
+        "citations_per_entry_mean": 5.565066512434933,
+        "citations_per_entry_median": 1,
+        "zero_citation_share": 0.37189126662810873,
+        "entry_chars_mean": 836.7148640832852,
+        "entry_chars_median": 229
+      },
+      "note": "no abbreviation mapping involved: this is PD against itself. A marked entry that were a taken-over entry should carry fewer of PD's own citations and be shorter if the borrowing were wholesale."
+    }
+  },
+  "macro": {
+    "pd_letter_a_entries": 107630,
+    "pd_distinct_headwords": 104773,
+    "pwg_letter_a_distinct": 9483,
+    "mw_letter_a_distinct": 18430,
+    "pd_and_pwg": 4086,
+    "pd_and_mw": 7267,
+    "pd_and_both": 3534,
+    "pd_only_vs_pwg_mw": 96954,
+    "pwg_only_within_pd_frame": 5397,
+    "mw_only_within_pd_frame": 11163,
+    "pd_only_share": 0.9253719946932893,
+    "pd_only_with_dcs_lemma": 1623,
+    "pd_only_dcs_attested_share": 0.016739897270870722,
+    "pd_only_dcs_freqband": {
+      "absent": 95331,
+      "1": 938,
+      "2": 633,
+      "3": 51,
+      "4": 1
+    },
+    "shared_with_targets": 7819,
+    "shared_dcs_attested": 3149,
+    "shared_dcs_attested_share": 0.4027369228801637,
+    "citation_practice": {
+      "pd_distinct_citations_per_entry_mean": 2.7306262776435606,
+      "pd_entries_with_zero_citations_share": 0.019158227260057604,
+      "pwg_distinct_citations_per_entry_mean": 1.8279707495429616,
+      "mw_distinct_citations_per_entry_mean": 0.43358763693270735,
+      "note": "PD cites more DISTINCT works per shared headword than either target, so a strict-subset test is biased against PD wherever its mapped set is the larger one; target_coverage (how much of the target's citation set PD reproduces) is reported alongside as the direction-correct companion. Medians per shared headword are filled in after sampling.",
+      "pd_citations_per_shared_headword_median": {
+        "PWG": 5.0,
+        "MW": 3.0
+      },
+      "target_citations_per_shared_headword_median": {
+        "PWG": 1.0,
+        "MW": 0.0
+      }
+    },
+    "dcs_lemma_table_present": true
+  },
+  "mappable_share": {
+    "PWG": {
+      "shared_keys": 72,
+      "pd_citation_mass_covered": 9125,
+      "pd_citation_mass_total": 293870,
+      "share": 0.03105114506414401,
+      "target_vocab_keys": 616
+    },
+    "MW": {
+      "shared_keys": 55,
+      "pd_citation_mass_covered": 11839,
+      "pd_citation_mass_total": 293870,
+      "share": 0.04028652125089325,
+      "target_vocab_keys": 293
+    }
+  },
+  "calibration": {
+    "PWG": {
+      "sampled": {
+        "n": 3050,
+        "cit_jaccard_mean": 0.12414032150748641,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.09672131147540984,
+        "gloss_jaccard_mean": 0.018534205742051245,
+        "gloss_jaccard_median": 0.0,
+        "mapped_entries": 1098,
+        "mapped_share": 0.36,
+        "target_coverage_mean": 0.15651153400333728,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.2686703096539162,
+        "cit_jaccard_applicable_mean": 0.3448342264096845
+      },
+      "marked": {
+        "n": 652,
+        "cit_jaccard_mean": 0.10749615713189332,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.07515337423312883,
+        "gloss_jaccard_mean": 0.026088184184682638,
+        "gloss_jaccard_median": 0.0,
+        "mapped_entries": 237,
+        "mapped_share": 0.36349693251533743,
+        "target_coverage_mean": 0.1453652984711267,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.20675105485232068,
+        "cit_jaccard_applicable_mean": 0.2957278246835209
+      },
+      "unmarked": {
+        "n": 2398,
+        "cit_jaccard_mean": 0.1286657573593991,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.10258548790658882,
+        "gloss_jaccard_mean": 0.016480330035380825,
+        "gloss_jaccard_median": 0.0,
+        "mapped_entries": 861,
+        "mapped_share": 0.35904920767306087,
+        "target_coverage_mean": 0.15954212014470565,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.2857142857142857,
+        "cit_jaccard_applicable_mean": 0.35835131956775734
+      },
+      "marked_strict": {
+        "n": 441,
+        "cit_jaccard_mean": 0.09449233998553726,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.06575963718820861,
+        "gloss_jaccard_mean": 0.0333779655971177,
+        "gloss_jaccard_median": 0.0,
+        "mapped_entries": 138,
+        "mapped_share": 0.3129251700680272,
+        "target_coverage_mean": 0.1274889320807688,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.21014492753623187,
+        "cit_jaccard_applicable_mean": 0.3019646516929126
+      },
+      "marked_named_source": {
+        "n": 273,
+        "cit_jaccard_mean": 0.07331170559192537,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.05128205128205128,
+        "gloss_jaccard_mean": 0.03852644952648986,
+        "gloss_jaccard_median": 0.0,
+        "mapped_entries": 63,
+        "mapped_share": 0.23076923076923078,
+        "target_coverage_mean": 0.09573812430955288,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.2222222222222222,
+        "cit_jaccard_applicable_mean": 0.31768405756500995
+      },
+      "named_source_token": "PW",
+      "null_shuffled": {
+        "n": 3050,
+        "cit_jaccard_mean": 0.010916445067843332,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.009836065573770493,
+        "gloss_jaccard_mean": 0.0004738903698662871,
+        "gloss_jaccard_median": 0.0,
+        "mapped_entries": 1098,
+        "mapped_share": 0.36,
+        "target_coverage_mean": 0.018567028599815485,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.0273224043715847,
+        "cit_jaccard_applicable_mean": 0.030323458521787035
+      },
+      "delta_subset_marked_minus_unmarked": {
+        "point": -0.07896323086196502,
+        "ci95": [
+          -0.1393140152016348,
+          -0.020508975433334797
+        ],
+        "n_a": 237,
+        "n_b": 861
+      },
+      "delta_subset_named_minus_unmarked": {
+        "point": -0.06349206349206349,
+        "ci95": [
+          -0.1664730933023616,
+          0.0441347270615563
+        ],
+        "n_a": 63,
+        "n_b": 861
+      },
+      "delta_cit_jaccard_marked_minus_unmarked": {
+        "point": -0.02116960022750579,
+        "ci95": [
+          -0.04437245981245398,
+          0.0036611222063087367
+        ],
+        "n_a": 652,
+        "n_b": 2398
+      },
+      "delta_gloss_marked_minus_unmarked": {
+        "point": 0.009607854149301813,
+        "ci95": [
+          0.004218268864177924,
+          0.015164605939546391
+        ],
+        "n_a": 652,
+        "n_b": 2398
+      },
+      "delta_gloss_named_minus_unmarked": {
+        "point": 0.02204611949110904,
+        "ci95": [
+          0.012893780722310101,
+          0.032401119957716204
+        ],
+        "n_a": 273,
+        "n_b": 2398
+      },
+      "delta_gloss_vs_null": {
+        "point": 0.018060315372184957,
+        "ci95": [
+          0.01610120470717236,
+          0.01991503112618557
+        ],
+        "n_a": 3050,
+        "n_b": 3050
+      },
+      "delta_cit_vs_null": {
+        "point": 0.11322387643964307,
+        "ci95": [
+          0.1024245782878859,
+          0.12401730426971506
+        ],
+        "n_a": 3050,
+        "n_b": 3050
+      },
+      "delta_coverage_marked_minus_unmarked": {
+        "point": -0.014176821673578949,
+        "ci95": [
+          -0.04248310651230772,
+          0.015488365994859143
+        ],
+        "n_a": 652,
+        "n_b": 2398
+      },
+      "delta_coverage_named_minus_unmarked": {
+        "point": -0.06380399583515277,
+        "ci95": [
+          -0.09827706774120452,
+          -0.026954496977134867
+        ],
+        "n_a": 273,
+        "n_b": 2398
+      },
+      "delta_coverage_vs_null": {
+        "point": 0.1379445054035218,
+        "ci95": [
+          0.12498904829232697,
+          0.15092180770049624
+        ],
+        "n_a": 3050,
+        "n_b": 3050
+      },
+      "size_stratified": {
+        "cit_subset": {
+          "weighted_delta": -0.029677419354838697,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.2,
+              "unmarked_mean": 0.2296774193548387,
+              "delta": -0.029677419354838697,
+              "n_marked": 235,
+              "n_unmarked": 775
+            }
+          }
+        },
+        "cit_jaccard": {
+          "weighted_delta": -0.014772541948599813,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.13755049383837262,
+              "unmarked_mean": 0.11885357640725287,
+              "delta": 0.018696917431119744,
+              "n_marked": 495,
+              "n_unmarked": 2000
+            },
+            "51-200": {
+              "marked_mean": 0.012738853503184714,
+              "unmarked_mean": 0.17797319932998326,
+              "delta": -0.16523434582679855,
+              "n_marked": 157,
+              "n_unmarked": 398
+            }
+          }
+        },
+        "gloss_jaccard": {
+          "weighted_delta": 0.00760815276727066,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.019028883632756344,
+              "unmarked_mean": 0.01362677920024098,
+              "delta": 0.005402104432515363,
+              "n_marked": 495,
+              "n_unmarked": 2000
+            },
+            "51-200": {
+              "marked_mean": 0.048345214587252806,
+              "unmarked_mean": 0.03081978146824437,
+              "delta": 0.017525433119008435,
+              "n_marked": 157,
+              "n_unmarked": 398
+            }
+          }
+        },
+        "target_coverage": {
+          "weighted_delta": -0.00446997318721817,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.1874306557639891,
+              "unmarked_mean": 0.1536243353868354,
+              "delta": 0.0338063203771537,
+              "n_marked": 495,
+              "n_unmarked": 2000
+            },
+            "51-200": {
+              "marked_mean": 0.012738853503184714,
+              "unmarked_mean": 0.18927973199329984,
+              "delta": -0.17654087849011513,
+              "n_marked": 157,
+              "n_unmarked": 398
+            }
+          }
+        }
+      }
+    },
+    "MW": {
+      "sampled": {
+        "n": 3816,
+        "cit_jaccard_mean": 0.10062298739578614,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.08438155136268344,
+        "gloss_jaccard_mean": 0.2015573623750641,
+        "gloss_jaccard_median": 0.14285714285714285,
+        "mapped_entries": 1292,
+        "mapped_share": 0.3385744234800839,
+        "target_coverage_mean": 0.13286600279524807,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.24922600619195046,
+        "cit_jaccard_applicable_mean": 0.2971960680358513
+      },
+      "marked": {
+        "n": 1020,
+        "cit_jaccard_mean": 0.0660869304986952,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.049019607843137254,
+        "gloss_jaccard_mean": 0.21114880709930006,
+        "gloss_jaccard_median": 0.15789473684210525,
+        "mapped_entries": 333,
+        "mapped_share": 0.3264705882352941,
+        "target_coverage_mean": 0.10318627450980392,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.15015015015015015,
+        "cit_jaccard_applicable_mean": 0.20242843576176908
+      },
+      "unmarked": {
+        "n": 2796,
+        "cit_jaccard_mean": 0.11322197810931717,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.09728183118741059,
+        "gloss_jaccard_mean": 0.19805833747566473,
+        "gloss_jaccard_median": 0.14285714285714285,
+        "mapped_entries": 959,
+        "mapped_share": 0.34298998569384836,
+        "target_coverage_mean": 0.14369337148307104,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.28362877997914493,
+        "cit_jaccard_applicable_mean": 0.3301028683979675
+      },
+      "marked_strict": {
+        "n": 646,
+        "cit_jaccard_mean": 0.058661973561354365,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.04489164086687306,
+        "gloss_jaccard_mean": 0.23962098523015482,
+        "gloss_jaccard_median": 0.18181818181818182,
+        "mapped_entries": 189,
+        "mapped_share": 0.29256965944272445,
+        "target_coverage_mean": 0.0837203302373581,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.15343915343915343,
+        "cit_jaccard_applicable_mean": 0.20050600487108425
+      },
+      "marked_named_source": {
+        "n": 489,
+        "cit_jaccard_mean": 0.05550443081117928,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.03885480572597137,
+        "gloss_jaccard_mean": 0.26217869614846445,
+        "gloss_jaccard_median": 0.2,
+        "mapped_entries": 124,
+        "mapped_share": 0.25357873210633947,
+        "target_coverage_mean": 0.08742331288343558,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.1532258064516129,
+        "cit_jaccard_applicable_mean": 0.21888440860215053
+      },
+      "named_source_token": "MW",
+      "null_shuffled": {
+        "n": 3816,
+        "cit_jaccard_mean": 0.00921941513529564,
+        "cit_jaccard_median": 0.0,
+        "subset_rate": 0.00759958071278826,
+        "gloss_jaccard_mean": 0.0035764232363922257,
+        "gloss_jaccard_median": 0.0,
+        "mapped_entries": 1292,
+        "mapped_share": 0.3385744234800839,
+        "target_coverage_mean": 0.0143256464011181,
+        "target_coverage_median": 0.0,
+        "subset_rate_applicable": 0.02244582043343653,
+        "cit_jaccard_applicable_mean": 0.027230099192173497
+      },
+      "delta_subset_marked_minus_unmarked": {
+        "point": -0.13347862982899478,
+        "ci95": [
+          -0.17960713581151538,
+          -0.08259354244755707
+        ],
+        "n_a": 333,
+        "n_b": 959
+      },
+      "delta_subset_named_minus_unmarked": {
+        "point": -0.13040297352753202,
+        "ci95": [
+          -0.19651686905042215,
+          -0.05726731474318006
+        ],
+        "n_a": 124,
+        "n_b": 959
+      },
+      "delta_cit_jaccard_marked_minus_unmarked": {
+        "point": -0.04713504761062197,
+        "ci95": [
+          -0.06424125583618137,
+          -0.030076092173416086
+        ],
+        "n_a": 1020,
+        "n_b": 2796
+      },
+      "delta_gloss_marked_minus_unmarked": {
+        "point": 0.013090469623635331,
+        "ci95": [
+          -0.0007096605768414088,
+          0.026691936952662004
+        ],
+        "n_a": 1020,
+        "n_b": 2796
+      },
+      "delta_gloss_named_minus_unmarked": {
+        "point": 0.06412035867279972,
+        "ci95": [
+          0.0434156854558968,
+          0.08520528507065403
+        ],
+        "n_a": 489,
+        "n_b": 2796
+      },
+      "delta_gloss_vs_null": {
+        "point": 0.19798093913867187,
+        "ci95": [
+          0.19208961022419044,
+          0.2043184793806532
+        ],
+        "n_a": 3816,
+        "n_b": 3816
+      },
+      "delta_cit_vs_null": {
+        "point": 0.09140357226049049,
+        "ci95": [
+          0.08289844763901368,
+          0.10041970317127549
+        ],
+        "n_a": 3816,
+        "n_b": 3816
+      },
+      "delta_coverage_marked_minus_unmarked": {
+        "point": -0.040507096973267126,
+        "ci95": [
+          -0.06286677045639429,
+          -0.0180871132430082
+        ],
+        "n_a": 1020,
+        "n_b": 2796
+      },
+      "delta_coverage_named_minus_unmarked": {
+        "point": -0.056270058599635464,
+        "ci95": [
+          -0.08349409468975544,
+          -0.02759968228055855
+        ],
+        "n_a": 489,
+        "n_b": 2796
+      },
+      "delta_coverage_vs_null": {
+        "point": 0.11854035639412998,
+        "ci95": [
+          0.1079053109713487,
+          0.12987421383647801
+        ],
+        "n_a": 3816,
+        "n_b": 3816
+      },
+      "size_stratified": {
+        "cit_subset": {
+          "weighted_delta": -0.07266562364660994,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.14153846153846153,
+              "unmarked_mean": 0.1802252816020025,
+              "delta": -0.03868682006354096,
+              "n_marked": 325,
+              "n_unmarked": 799
+            },
+            "51-200": {
+              "marked_mean": 0.5,
+              "unmarked_mean": 0.8,
+              "delta": -0.30000000000000004,
+              "n_marked": 8,
+              "n_unmarked": 160
+            }
+          }
+        },
+        "cit_jaccard": {
+          "weighted_delta": -0.048170738063871586,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.08299564019459307,
+              "unmarked_mean": 0.09336765873015873,
+              "delta": -0.010372018535565658,
+              "n_marked": 764,
+              "n_unmarked": 2000
+            },
+            "51-200": {
+              "marked_mean": 0.015625,
+              "unmarked_mean": 0.163107202680067,
+              "delta": -0.147482202680067,
+              "n_marked": 256,
+              "n_unmarked": 796
+            }
+          }
+        },
+        "gloss_jaccard": {
+          "weighted_delta": 0.019170935866553863,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.159130225921229,
+              "unmarked_mean": 0.16769973674891026,
+              "delta": -0.00856951082768126,
+              "n_marked": 764,
+              "n_unmarked": 2000
+            },
+            "51-200": {
+              "marked_mean": 0.3663917603026059,
+              "unmarked_mean": 0.27433622874891717,
+              "delta": 0.09205553155368873,
+              "n_marked": 256,
+              "n_unmarked": 796
+            }
+          }
+        },
+        "target_coverage": {
+          "weighted_delta": -0.04305250806596635,
+          "by_class": {
+            "200+": {
+              "marked_mean": 0.1325261780104712,
+              "unmarked_mean": 0.13288333333333333,
+              "delta": -0.0003571553228621238,
+              "n_marked": 764,
+              "n_unmarked": 2000
+            },
+            "51-200": {
+              "marked_mean": 0.015625,
+              "unmarked_mean": 0.1708542713567839,
+              "delta": -0.1552292713567839,
+              "n_marked": 256,
+              "n_unmarked": 796
+            }
+          }
+        }
+      }
+    }
+  },
+  "distributions": {
+    "PWG": {
+      "citation_jaccard_mapped": {
+        "n": 3050,
+        "mean": 0.12414032150748641,
+        "mean_ci95": [
+          0.11408915243654877,
+          0.13417018016270668
+        ],
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.5
+      },
+      "citation_subset_rate_applicable": {
+        "n": 1098,
+        "mean": 0.2686703096539162,
+        "mean_ci95": [
+          0.24225865209471767,
+          0.29508196721311475
+        ],
+        "p10": 0,
+        "p25": 0,
+        "p50": 0,
+        "p75": 1,
+        "p90": 1
+      },
+      "gloss_jaccard": {
+        "n": 3050,
+        "mean": 0.018534205742051245,
+        "mean_ci95": [
+          0.016674098725651076,
+          0.020436387937310663
+        ],
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.06666666666666667
+      },
+      "target_citation_coverage": {
+        "n": 3050,
+        "mean": 0.15651153400333728,
+        "mean_ci95": [
+          0.14460179529031988,
+          0.16821686237260008
+        ],
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 1.0
+      },
+      "by_marks": {
+        "marked": {
+          "citation_jaccard_mapped": {
+            "n": 652,
+            "mean": 0.10749615713189332,
+            "mean_ci95": [
+              0.08900647111920118,
+              0.1276978389708451
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.5
+          },
+          "citation_subset_rate_applicable": {
+            "n": 237,
+            "mean": 0.20675105485232068,
+            "mean_ci95": [
+              0.15611814345991562,
+              0.2616033755274262
+            ],
+            "p10": 0,
+            "p25": 0,
+            "p50": 0,
+            "p75": 0,
+            "p90": 1
+          },
+          "gloss_jaccard": {
+            "n": 652,
+            "mean": 0.026088184184682638,
+            "mean_ci95": [
+              0.02131042647930366,
+              0.0314818700684615
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.01948051948051948,
+            "p90": 0.08333333333333333
+          },
+          "target_citation_coverage": {
+            "n": 652,
+            "mean": 0.1453652984711267,
+            "mean_ci95": [
+              0.12190938747687213,
+              0.1694146216768916
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 1.0
+          }
+        },
+        "unmarked": {
+          "citation_jaccard_mapped": {
+            "n": 2398,
+            "mean": 0.1286657573593991,
+            "mean_ci95": [
+              0.11664787580133702,
+              0.1403041849590444
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.5
+          },
+          "citation_subset_rate_applicable": {
+            "n": 861,
+            "mean": 0.2857142857142857,
+            "mean_ci95": [
+              0.25667828106852497,
+              0.3170731707317073
+            ],
+            "p10": 0,
+            "p25": 0,
+            "p50": 0,
+            "p75": 1,
+            "p90": 1
+          },
+          "gloss_jaccard": {
+            "n": 2398,
+            "mean": 0.016480330035380825,
+            "mean_ci95": [
+              0.014423646269281089,
+              0.018542961523178234
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0625
+          },
+          "target_citation_coverage": {
+            "n": 2398,
+            "mean": 0.15954212014470565,
+            "mean_ci95": [
+              0.14635470867747766,
+              0.17271883894069048
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 1.0
+          }
+        },
+        "marked_named_source": {
+          "citation_jaccard_mapped": {
+            "n": 273,
+            "mean": 0.07331170559192537,
+            "mean_ci95": [
+              0.04872455586741301,
+              0.10023213965521657
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.25
+          },
+          "citation_subset_rate_applicable": {
+            "n": 63,
+            "mean": 0.2222222222222222,
+            "mean_ci95": [
+              0.12698412698412698,
+              0.3333333333333333
+            ],
+            "p10": 0,
+            "p25": 0,
+            "p50": 0,
+            "p75": 0,
+            "p90": 1
+          },
+          "gloss_jaccard": {
+            "n": 273,
+            "mean": 0.03852644952648986,
+            "mean_ci95": [
+              0.029600862065327676,
+              0.04847229232355753
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.05,
+            "p90": 0.14285714285714285
+          },
+          "target_citation_coverage": {
+            "n": 273,
+            "mean": 0.09573812430955288,
+            "mean_ci95": [
+              0.06549217977789407,
+              0.1287138787138787
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.42857142857142855
+          }
+        }
+      }
+    },
+    "MW": {
+      "citation_jaccard_mapped": {
+        "n": 3816,
+        "mean": 0.10062298739578614,
+        "mean_ci95": [
+          0.09208292217333097,
+          0.10900466002667261
+        ],
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.5
+      },
+      "citation_subset_rate_applicable": {
+        "n": 1292,
+        "mean": 0.24922600619195046,
+        "mean_ci95": [
+          0.22523219814241485,
+          0.27321981424148606
+        ],
+        "p10": 0,
+        "p25": 0,
+        "p50": 0,
+        "p75": 0,
+        "p90": 1
+      },
+      "gloss_jaccard": {
+        "n": 3816,
+        "mean": 0.2015573623750641,
+        "mean_ci95": [
+          0.19592430618295686,
+          0.20761757993813096
+        ],
+        "p10": 0.0,
+        "p25": 0.0625,
+        "p50": 0.14285714285714285,
+        "p75": 0.2857142857142857,
+        "p90": 0.5
+      },
+      "target_citation_coverage": {
+        "n": 3816,
+        "mean": 0.13286600279524807,
+        "mean_ci95": [
+          0.12282058001397624,
+          0.1434748427672956
+        ],
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 1.0
+      },
+      "by_marks": {
+        "marked": {
+          "citation_jaccard_mapped": {
+            "n": 1020,
+            "mean": 0.0660869304986952,
+            "mean_ci95": [
+              0.05353602552131964,
+              0.08008986928104575
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.16666666666666666
+          },
+          "citation_subset_rate_applicable": {
+            "n": 333,
+            "mean": 0.15015015015015015,
+            "mean_ci95": [
+              0.11411411411411411,
+              0.1891891891891892
+            ],
+            "p10": 0,
+            "p25": 0,
+            "p50": 0,
+            "p75": 0,
+            "p90": 1
+          },
+          "gloss_jaccard": {
+            "n": 1020,
+            "mean": 0.21114880709930006,
+            "mean_ci95": [
+              0.19929898940436527,
+              0.22318969079008258
+            ],
+            "p10": 0.0,
+            "p25": 0.07692307692307693,
+            "p50": 0.15789473684210525,
+            "p75": 0.2857142857142857,
+            "p90": 0.5
+          },
+          "target_citation_coverage": {
+            "n": 1020,
+            "mean": 0.10318627450980392,
+            "mean_ci95": [
+              0.08594771241830065,
+              0.12197712418300653
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.5
+          }
+        },
+        "unmarked": {
+          "citation_jaccard_mapped": {
+            "n": 2796,
+            "mean": 0.11322197810931717,
+            "mean_ci95": [
+              0.10254572859186593,
+              0.12431052296932125
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.5
+          },
+          "citation_subset_rate_applicable": {
+            "n": 959,
+            "mean": 0.28362877997914493,
+            "mean_ci95": [
+              0.25547445255474455,
+              0.31386861313868614
+            ],
+            "p10": 0,
+            "p25": 0,
+            "p50": 0,
+            "p75": 1,
+            "p90": 1
+          },
+          "gloss_jaccard": {
+            "n": 2796,
+            "mean": 0.19805833747566473,
+            "mean_ci95": [
+              0.19166157477279558,
+              0.20475294513571204
+            ],
+            "p10": 0.0,
+            "p25": 0.05747126436781609,
+            "p50": 0.14285714285714285,
+            "p75": 0.2857142857142857,
+            "p90": 0.5
+          },
+          "target_citation_coverage": {
+            "n": 2796,
+            "mean": 0.14369337148307104,
+            "mean_ci95": [
+              0.13096089651883644,
+              0.15710538865045304
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 1.0
+          }
+        },
+        "marked_named_source": {
+          "citation_jaccard_mapped": {
+            "n": 489,
+            "mean": 0.05550443081117928,
+            "mean_ci95": [
+              0.03907634628493524,
+              0.07472733469665985
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0
+          },
+          "citation_subset_rate_applicable": {
+            "n": 124,
+            "mean": 0.1532258064516129,
+            "mean_ci95": [
+              0.0967741935483871,
+              0.21774193548387097
+            ],
+            "p10": 0,
+            "p25": 0,
+            "p50": 0,
+            "p75": 0,
+            "p90": 1
+          },
+          "gloss_jaccard": {
+            "n": 489,
+            "mean": 0.26217869614846445,
+            "mean_ci95": [
+              0.24230402309428756,
+              0.2818186592526964
+            ],
+            "p10": 0.0,
+            "p25": 0.1,
+            "p50": 0.2,
+            "p75": 0.4,
+            "p90": 0.6
+          },
+          "target_citation_coverage": {
+            "n": 489,
+            "mean": 0.08742331288343558,
+            "mean_ci95": [
+              0.06339468302658487,
+              0.11349693251533742
+            ],
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    }
+  },
+  "verdict": {
+    "D1_citation_subsumption_lift": {
+      "PWG": false,
+      "MW": false
+    },
+    "D1_named_source_citation_subsumption_lift": {
+      "PWG": false,
+      "MW": false
+    },
+    "D2_gloss_overlap_lift_PD_MW_only": {
+      "MW": false
+    },
+    "D2_named_source_gloss_overlap_lift": {
+      "MW": true
+    },
+    "bracket_proxy_survives": false,
+    "rule": "D1: delta subset rate >= 10 pp with the 95 % bootstrap CI lower bound > 0, computed on the entries whose mapped citation set is non-empty; D2: delta gloss Jaccard >= 0.02 with CI lower bound > 0, PD-MW only (PD-PWG is a language-mismatch control). Bracket proxy survives iff both hold for at least one target dictionary."
+  }
+}

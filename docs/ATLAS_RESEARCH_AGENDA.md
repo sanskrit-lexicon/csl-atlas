@@ -3,7 +3,7 @@
 > Supporting specification. The governing delivery order is
 > [`ROADMAP_2026_2027.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ROADMAP_2026_2027.md).
 
-_Created: 07-07-2026 · Last updated: 05-09-2026_
+_Created: 07-07-2026 · Last updated: 10-10-2026_
 
 **What this is.** The general csl-atlas research agenda: a design memo + build spec answering
 five owner questions — new hypotheses, new/improved visualisations, non-Cologne data reuse,
@@ -573,5 +573,36 @@ Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_coverag
   `nochange/`, not `ortho_drift/`. All other claimed counts verified exact: union
   323,422 · crosswalk 185,803 · dcs_cdsl_xref 15,902 · lemma_frequency 83,277 · citation
   graph 1,701 edges / 912 nodes / 11 dicts. **No cited asset remained unverifiable.**
+
+## 8. ACL-uplift execution agenda (adopted 10-10-2026)
+
+**What this is.** MG ruling 10-10-2026 («да»): the atlas paper queue (A01–A06 + A68) is
+executed under the org's `acl-uplift` discipline — one item per session, never the whole
+memo; `/dh-memo`-style agendas author, the skill executes. The scoreboard is the
+committed standing-rules lint
+([`Uprava/tools/lint_atlas_papers_standing_rules.py`](https://github.com/gasyoun/Uprava/blob/main/tools/lint_atlas_papers_standing_rules.py),
+H5339): **dataset DOI · κ next to every reviewed-claim marker · exact build commit**.
+Live verdict at adoption: 0/6 DOI · 0/6 build-commit · κ vacuously green (no draft marked
+any claim). Three contracts ride with every item: the two-gates principle (research
+metrics are reported *alongside* the existing hard gates — `validate-tradition-tags.mjs`
+and friends stay green, never relaxed); every citation live-verified before entering a
+draft; the DOI column means **dataset** DOIs, so a literature citation deliberately uses
+its anthology URL, never `doi.org` (gaming the lint is the exact defect class this
+agenda exists to remove). Ranked items:
+
+| # | Item | Shape | Target | Status |
+|---|---|---|---|---|
+| U1 | Chance-corrected κ attached to A04's agreement claims: `[reviewed]` markers (machine-reviewed channel named), pairwise κ figures, build commit `f29e06a2`, Artstein & Poesio 2008 citation | field-standard metrics | [`Uprava/papers/A04`](https://github.com/gasyoun/Uprava/blob/main/papers/A04/paper_indigenous_microstructure.md) | ✅ 10-10-2026 — [H6386](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6386-GLM_Uprava_acl-uplift-a04-kappa_10.10.26.md) |
+| U2 | Same discipline on A02/P2: attach the R2 checkpoint agreement figures + markers | field-standard metrics | `Uprava/papers/A02` | queued |
+| U3 | Stamp exact build commits into the remaining five drafts | field-standard metrics | `Uprava/papers/A0X` | queued |
+| U4 | Review-pool α becomes a real measurement: recruit annotators, cross-family (DeepSeek) second annotator blind to pass provenance, honest human×model / model×model channel labels; Wave-2's 61-row human residue as the seed set | annotator validity | [`REVIEW_POOL_KAPPA_REPORT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_POOL_KAPPA_REPORT.md) | queued — human dependency (recruitment) |
+| U5 | Benchmark-fit reporting: PH5 orthography in Bollmann-2019 conventions (accuracy/CER); PH3/PH4/PH6 joins in Krishnan–Kulkarni–Huet error-typology; ELEXIS MWSA relation vocabulary for sense-alignment worklists (the [DH memo](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DH_IMPROVEMENT_MEMO.md) §4 commitment) | benchmark fit | §4 crosswalk consumers | queued |
+| U6 | Data statements (Bender & Friedman) per released atlas dataset — Trust Blocks + license/maintenance lines; DOIs via `/data-release` only after the v1.0.0 gates (ORCID PR [#473](https://github.com/sanskrit-lexicon/csl-atlas/pull/473) pending merge, Zenodo connection) | companion artifact | atlas released datasets | queued — gated on v1.0.0 |
+| U7 | A68 venue / front-matter / voice | reframe | `Uprava/papers/A68` | **@DECIDE — MG** |
+
+**Non-goals for this lane.** Re-mining aclanthology.org for a fresh survey (the §4
+crosswalk is the standing prior art — the H281 reuse rule); PH1–PH8 hypothesis builds
+(Wave-4 research, a different lane); any DOI mint before the v1.0.0 gates clear;
+literature DOIs entered to flip the lint's DOI column.
 
 _Dr. Mārcis Gasūns_

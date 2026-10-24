@@ -1,0 +1,15 @@
+measure_id	label	value	unit	base_id	covered_works	pct_of_base	source_file	source_field	provenance	note
+aob_r1_lines	AOB entry-like printed lines, header rows still counted	1476	rows		118	7.99	pd_aob_row_test_1473.json	printed_row_census.r1_entry_like_lines_uncorrected	observed	structural count; the paper's denominator
+aob_header_corrected	AOB entry rows, the 7 repeated column-header rows removed	1469	rows		118	8.03	pd_aob_row_test_1473.json	printed_row_census.entry_rows_header_corrected	observed	the printed list's own row count
+aob_print_census	Print census of AOB entry rows (press-attributed)	1464	rows		118	8.06	pd_aob_declared_canon_audit.json	recorded_numbers.print_census	press	external count; same producer, older snapshot
+aob_pass1	Pass-1 loose entry parse (not reproducible)	1419	rows		118	8.32	pd_aob_declared_canon_audit.json	recorded_numbers.pass1_loose_entries	recorded	kept only so the retracted 1,419 cannot be requoted as current
+aob_reparse	Committed re-parse, raw entries (upper bound)	1517	rows		118	7.78	pd_aob_declared_canon_audit.json	recorded_numbers.reparse_raw_entries	derived	upper bound of the band; never a headline
+aob_usable_inventory	Usable edition-level inventory rows	1437	rows		118	8.21	pd_dcs_metrics.json	n_declared_aob_rows_edition_level	observed	the H6932 edition-level inventory; the paper's §5.2.1 imprint dates are counted on the clean subset, not on this row
+aob_clean_subset_editions	Published clean-subset edition rows — a FLOOR, never a denominator	1118	rows		118	10.55	pd_aob_declared_canon_audit.json	metric_title_level_declared_pct_at.published_tsv_edition_rows	derived	DROPS the Mahābhārata and Rāmāyaṇa: QUOTING THIS IS A DEFECT
+index_all_rows	Index of Works, every printed row (pp. LXXXIX–CXXVII)	2031	rows		118	5.81	pd_index_works_summary.json	row_total_full	observed	vision transcription, 39 pages; the estate's work authority (Q5)
+index_with_siglum	Index rows that print an AOB siglum	1622	rows	index_all_rows	118	7.27	pd_index_works_summary.json	siglum_reconciliation.with_siglum	derived	joinable layer
+index_blank_siglum	Index rows with no siglum printed	409	rows	index_all_rows	None	20.14	pd_index_works_summary.json	blank_siglum	observed	20.1 % of the Index; classed, not dropped; 50-row adjudication is ladder unit M2
+index_in_aob	Index sigla that find an AOB row (both + AOB-only)	981	sigla	index_with_siglum	None	60.48	pd_index_works_siglum_delta.tsv	status: in_both + in_aob_only	derived	the direct siglum join the Index pilot predicted
+index_not_in_aob	Index sigla with no AOB row (families-only + neither)	641	sigla	index_with_siglum	None	39.52	pd_index_works_siglum_delta.tsv	status: in_families_only + index_only	derived	AOB inventory gap or OCR break; not yet classed
+aob_only_sigla	AOB sigla the Index never prints	497	sigla		None		pd_index_works_siglum_delta.tsv	status: aob_only	observed	a second join gap, in the opposite direction
+canon_divergence	Index rows minus AOB header-corrected rows	562	rows	aob_header_corrected	None	38.26	(derived)	index_all_rows - aob_header_corrected	derived	the two printed canon counts differ by this much

@@ -110,6 +110,7 @@ Reader-facing:
 - [Boundary rules](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/BOUNDARY_RULES.md) — what belongs in the dictionary atlas, and what must move elsewhere
 - [Dictionary user guide](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_USER_GUIDE.md) — which dictionary to use and how to read an entry
 - [Review pool student guide (RU)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_POOL_STUDENT_GUIDE.ru.md) — how a student keys the R2, H4 and xref review packets by reading the source line, with worked examples
+- [Label-reading guide (RU, computed)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/A72_LABEL_READING_GUIDE.ru.md) — optional review-pool onboarding: what `m./f./n./mfn.`, `P./A./U.`, `c.` and the single-letter title class mean per dictionary, every row generated from the abbreviation census payload; misread-feedback rows route back to the E3 register
 - [Community review pool v1 — design](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_POOL_V1_DESIGN.md) — how the three blocked packets get two independent keys each: pseudonymous annotator identity, the assignment rule, the submission path, adjudication, and the κ report shape
 - [Reader lookup explainer](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/READER_LOOKUP_EXPLAINER.md) — what a lookup result means and what it does not prove
 - [Evidence labels](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md) — what the certainty labels mean
@@ -222,13 +223,32 @@ Source data: [CDSL csl-orig](https://github.com/sanskrit-lexicon/csl-orig), `mw.
 
 ---
 
+## Cite this dataset
+
+The **core dossier** is the atlas's first citable dataset: 28,524 lemmas
+attested in at least five of seven Cologne dictionaries, with per-dictionary
+record counts, first source lines, and grammar tokens.
+
+- **Version:** dataset 1.0.0, repo release `v0.20.0`
+- **DOI (this version):** [`10.5281/zenodo.23613057`](https://doi.org/10.5281/zenodo.23613057)
+- **DOI (concept, all versions):** [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691)
+- **Licence:** CC BY-SA 4.0
+- **OntoLex profile:** [`docs/ONTOLEX_PROFILE_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ONTOLEX_PROFILE_CORE_DOSSIER.md)
+- **Data statement:** [`docs/DATA_STATEMENT_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DATA_STATEMENT_CORE_DOSSIER.md)
+- **Provenance:** [`src/data/dicts/core-dossier/.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/src/data/dicts/core-dossier/.source.json)
+- **Release record:** [`docs/RELEASE_CANDIDATE_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/RELEASE_CANDIDATE_CORE_DOSSIER.md)
+
+Cite the **version DOI** for this dataset; the concept DOI always resolves to
+the latest tagged release. The dataset is machine-built and has no
+human-reviewed rows; see the data statement for the full limitations.
+
 ## How to cite
 
-Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; version 0.19.10: [`10.5281/zenodo.22948318`](https://doi.org/10.5281/zenodo.22948318)).
+Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.21.0: [`10.5281/zenodo.23613057`](https://doi.org/10.5281/zenodo.23613057)).
 
 Cite the atlas via its archival Zenodo DOI:
 
-> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.19.11). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.21419691>
+> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.21.0). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.23613057>
 
 When citing a specific dataset rather than the repository, use that dataset's own provenance envelope (`sourcePath`, `generatedBy`, `generatedAt`) so the exact source records and build step are recoverable. The meaning of each per-claim evidence label is defined in [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md), and its equivalent in W3C PROV-O and TEI `@cert` / `@resp` — with the explicit list of what has no equivalent — in [`docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md).
 

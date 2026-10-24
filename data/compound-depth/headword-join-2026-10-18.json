@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-18",
+  "generatedBy": "python3 scripts/build-compound-depth-evidence.py",
+  "question": "Q11: deterministic MW/PWG headword join of the 2,121 markup-3 rows read as 2",
+  "rows": 2121,
+  "matched": 2101,
+  "matchRate": 0.9906,
+  "matchRateCi95": [
+    0.9855,
+    0.9939
+  ],
+  "bySource": {
+    "both": 1856,
+    "mw": 245,
+    "none": 20
+  },
+  "residuals": [
+    {
+      "surface": "BUyo'kzaratara",
+      "k2": "BUyo—'kzara—tara",
+      "firstTwo": "BUyo'kzara"
+    },
+    {
+      "surface": "anyonyasparDin",
+      "k2": "anyonya—spar—Din",
+      "firstTwo": "anyonyaspar"
+    },
+    {
+      "surface": "indrajidvijayin",
+      "k2": "indra—jid—vijayin",
+      "firstTwo": "indrajid"
+    },
+    {
+      "surface": "jIvantiSUlAMkf",
+      "k2": "jIvanti—SUlAM—kf",
+      "firstTwo": "jIvantiSUlAM"
+    },
+    {
+      "surface": "kiMcitprARa",
+      "k2": "kiM—cit—prARa",
+      "firstTwo": "kiMcit"
+    },
+    {
+      "surface": "netratAMyA",
+      "k2": "netra—tAM—yA",
+      "firstTwo": "netratAM"
+    },
+    {
+      "surface": "paYcaviDa; paYcaviDa",
+      "k2": "pa/Yca—viDa; paYca/—viDa",
+      "firstTwo": "paYcaviDa; paYca"
+    },
+    {
+      "surface": "paro'kzatA",
+      "k2": "paro—'kza—tA",
+      "firstTwo": "paro'kza"
+    },
+    {
+      "surface": "pratiSAKavat",
+      "k2": "prati—SAKa—vat",
+      "firstTwo": "pratiSAKa"
+    },
+    {
+      "surface": "pratidantyanIkam",
+      "k2": "prati—danty—anIkam",
+      "firstTwo": "pratidanty"
+    },
+    {
+      "surface": "rudravadgaRa",
+      "k2": "rudra/—vad—gaRa",
+      "firstTwo": "rudravad"
+    },
+    {
+      "surface": "sTAlIpAka; sTAlIpAka",
+      "k2": "sTAlI—pAka/; sTA/lI—pAka",
+      "firstTwo": "sTAlIpAka; sTAlI"
+    },
+    {
+      "surface": "sahasranAmaBAzya",
+      "k2": "sahasra—nAma—BAzya",
+      "firstTwo": "sahasranAma"
+    },
+    {
+      "surface": "sahasranAmasarayu",
+      "k2": "sahasra—nAma—sarayu",
+      "firstTwo": "sahasranAma"
+    },
+    {
+      "surface": "sahasranAmavivaraRa",
+      "k2": "sahasra—nAma—vivaraRa",
+      "firstTwo": "sahasranAma"
+    },
+    {
+      "surface": "suhotf; suhotf",
+      "k2": "su—ho/tf; su/—hotf",
+      "firstTwo": "suhotf; su"
+    },
+    {
+      "surface": "svayaMkfta; svayaMkfta",
+      "k2": "svayaM—kfta/; svaya/M—kfta",
+      "firstTwo": "svayaMkfta; svayaM"
+    },
+    {
+      "surface": "tapasvikanyA",
+      "k2": "ta/pas—vi—kanyA",
+      "firstTwo": "tapasvi"
+    },
+    {
+      "surface": "tapasvikanyakA",
+      "k2": "tapas—vi—kanyakA",
+      "firstTwo": "tapasvi"
+    },
+    {
+      "surface": "yaTAkAmam; yaTAkAmam",
+      "k2": "yaTA—kA/mam; yaTA—kAma/m",
+      "firstTwo": "yaTAkAmam; yaTA"
+    }
+  ],
+  "tsv": {
+    "path": "data/compound-depth/headword-join-2026-10-18.tsv",
+    "sha256": "e6d02e7b3b529cb3c260d185663192cfd1dacba9cfe0d4e4d9e8dfb73361d6a8"
+  },
+  "inputs": {
+    "snapshot": "data/compound-depth/typography-probe-2026-10-17.json",
+    "mw": "/tmp/h6963/csl-orig/v02/mw/mw.txt",
+    "pwg": "/tmp/h6963/csl-orig/v02/pwg/pwg.txt",
+    "mwHeadwords": 194083,
+    "pwgHeadwords": 106082
+  },
+  "method": "plain SLP1 concatenation of the first two em-dash members (no sandhi rewrite); a hit means the lexicalised pair is an independent dictionary headword. Sorted by (k2, surface)."
+}

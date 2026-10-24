@@ -1,0 +1,814 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "npm run verify-citation-passage-links",
+  "checkedAt": "2026-10-19T14:52:54.978Z",
+  "method": "HTTP HEAD (one-byte ranged GET fallback) per URL + per-verse anchor presence in the fetched GRETIL edition page.",
+  "summary": {
+    "checked": 100,
+    "http200": 100,
+    "anchorVerified": 100,
+    "ok": 100
+  },
+  "results": [
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.040.05",
+      "gretilId": "RV_4.040.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.106.06",
+      "gretilId": "RV_10.106.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.112.06",
+      "gretilId": "RV_1.112.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.126.06",
+      "gretilId": "RV_1.126.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.140.03",
+      "gretilId": "RV_1.140.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.018.08",
+      "gretilId": "RV_10.018.08",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.094.11",
+      "gretilId": "RV_10.094.11",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.106.07",
+      "gretilId": "RV_10.106.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.053.09",
+      "gretilId": "RV_1.053.09",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.127.07",
+      "gretilId": "RV_1.127.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.005.14",
+      "gretilId": "RV_4.005.14",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_5.033.09",
+      "gretilId": "RV_5.033.09",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_5.044.05",
+      "gretilId": "RV_5.044.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_6.044.07",
+      "gretilId": "RV_6.044.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_7.006.03",
+      "gretilId": "RV_7.006.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.101.12",
+      "gretilId": "RV_10.101.12",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.106.08",
+      "gretilId": "RV_10.106.08",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.130.05",
+      "gretilId": "RV_10.130.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.146.02",
+      "gretilId": "RV_10.146.02",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.126.04",
+      "gretilId": "RV_1.126.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.174.04",
+      "gretilId": "RV_1.174.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.179.04",
+      "gretilId": "RV_1.179.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.001.10",
+      "gretilId": "RV_2.001.10",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.013.08",
+      "gretilId": "RV_2.013.08",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.031.05",
+      "gretilId": "RV_2.031.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.033.06",
+      "gretilId": "RV_2.033.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_3.062.10",
+      "gretilId": "RV_3.062.10",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.004.02",
+      "gretilId": "RV_4.004.02",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.024.04",
+      "gretilId": "RV_4.024.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.024.09",
+      "gretilId": "RV_4.024.09",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.040.02",
+      "gretilId": "RV_4.040.02",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_5.034.06",
+      "gretilId": "RV_5.034.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_5.044.06",
+      "gretilId": "RV_5.044.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_5.052.12",
+      "gretilId": "RV_5.052.12",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_6.025.04",
+      "gretilId": "RV_6.025.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_7.018.07",
+      "gretilId": "RV_7.018.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_7.050.01",
+      "gretilId": "RV_7.050.01",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_7.071.01",
+      "gretilId": "RV_7.071.01",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_7.104.22",
+      "gretilId": "RV_7.104.22",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_8.001.02",
+      "gretilId": "RV_8.001.02",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_8.070.10",
+      "gretilId": "RV_8.070.10",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.028.10",
+      "gretilId": "RV_10.028.10",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_10.106.05",
+      "gretilId": "RV_10.106.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.031.11",
+      "gretilId": "RV_1.031.11",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.033.15",
+      "gretilId": "RV_1.033.15",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.083.05",
+      "gretilId": "RV_1.083.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.085.03",
+      "gretilId": "RV_1.085.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.105.17",
+      "gretilId": "RV_1.105.17",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.112.10",
+      "gretilId": "RV_1.112.10",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.116.03",
+      "gretilId": "RV_1.116.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.120.05",
+      "gretilId": "RV_1.120.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.123.01",
+      "gretilId": "RV_1.123.01",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.124.07",
+      "gretilId": "RV_1.124.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.126.07",
+      "gretilId": "RV_1.126.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.127.03",
+      "gretilId": "RV_1.127.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.127.06",
+      "gretilId": "RV_1.127.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.129.05",
+      "gretilId": "RV_1.129.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.129.07",
+      "gretilId": "RV_1.129.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.129.08",
+      "gretilId": "RV_1.129.08",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.130.04",
+      "gretilId": "RV_1.130.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.132.02",
+      "gretilId": "RV_1.132.02",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.132.06",
+      "gretilId": "RV_1.132.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.133.06",
+      "gretilId": "RV_1.133.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.134.05",
+      "gretilId": "RV_1.134.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.138.01",
+      "gretilId": "RV_1.138.01",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.140.06",
+      "gretilId": "RV_1.140.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.141.07",
+      "gretilId": "RV_1.141.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.158.05",
+      "gretilId": "RV_1.158.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.162.05",
+      "gretilId": "RV_1.162.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.162.06",
+      "gretilId": "RV_1.162.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.162.13",
+      "gretilId": "RV_1.162.13",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.163.10",
+      "gretilId": "RV_1.163.10",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.164.04",
+      "gretilId": "RV_1.164.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.164.48",
+      "gretilId": "RV_1.164.48",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.165.05",
+      "gretilId": "RV_1.165.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.167.08",
+      "gretilId": "RV_1.167.08",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.168.03",
+      "gretilId": "RV_1.168.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.174.08",
+      "gretilId": "RV_1.174.08",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.187.08",
+      "gretilId": "RV_1.187.08",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_1.191.03",
+      "gretilId": "RV_1.191.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.004.07",
+      "gretilId": "RV_2.004.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.021.03",
+      "gretilId": "RV_2.021.03",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.023.01",
+      "gretilId": "RV_2.023.01",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.023.06",
+      "gretilId": "RV_2.023.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.023.16",
+      "gretilId": "RV_2.023.16",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.030.04",
+      "gretilId": "RV_2.030.04",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.034.01",
+      "gretilId": "RV_2.034.01",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.034.09",
+      "gretilId": "RV_2.034.09",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.034.10",
+      "gretilId": "RV_2.034.10",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.041.16",
+      "gretilId": "RV_2.041.16",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_2.042.01",
+      "gretilId": "RV_2.042.01",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_3.001.12",
+      "gretilId": "RV_3.001.12",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_3.006.07",
+      "gretilId": "RV_3.006.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_3.030.17",
+      "gretilId": "RV_3.030.17",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_3.033.13",
+      "gretilId": "RV_3.033.13",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_3.053.24",
+      "gretilId": "RV_3.053.24",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.002.07",
+      "gretilId": "RV_4.002.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.005.05",
+      "gretilId": "RV_4.005.05",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.021.06",
+      "gretilId": "RV_4.021.06",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_Rgveda-edAufrecht.htm#RV_4.021.07",
+      "gretilId": "RV_4.021.07",
+      "httpStatus": 200,
+      "anchorVerified": true,
+      "method": "HEAD",
+      "ok": true
+    }
+  ]
+}

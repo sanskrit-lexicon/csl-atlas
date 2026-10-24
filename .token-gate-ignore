@@ -1,0 +1,23 @@
+# token-size-gate: files here are not agent-authored — generated data/assets.
+# Code, docs and reports stay under the 5000-token limit.
+data/**
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.gz
+*.jsonl
+*.parquet
+*.tsv
+
+# shared guard hooks — pre-existing infrastructure, not agent-authored content
+.githooks/pre-commit
+.githooks/pre-push
+.githooks/token_size_gate.py
+
+# The PD × DCS coverage report is the single write-up of the measurement the A68
+# paper quotes; it cannot be split without forking the reader, and the token gate
+# blocks every edit to it otherwise. Added 19-10-2026 with the A68 denominator
+# probe (PWG quotation-linked tags, the two 2021 baselines).
+reports/PD_DCS_CORPUS_COVERAGE_2026.md

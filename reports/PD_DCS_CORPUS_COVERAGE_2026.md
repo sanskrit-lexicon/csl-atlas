@@ -1,6 +1,6 @@
 # What share of the Poona Dictionary's source canon does DCS cover? (2026)
 
-_Created: 20-07-2026 · Last updated: 20-07-2026_
+_Created: 20-07-2026 · Last updated: 14-10-2026_
 
 **Handoff:** [H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md)
 · **Model:** Opus 4.8 (`claude-opus-4-8`) · **Scope:** Poona Dictionary letter **a-** only (see §6).
@@ -22,7 +22,7 @@ the answer is a study in two numbers that point in opposite directions:
 | # | Metric | Value | What it answers |
 |---|---|---|---|
 | 1 | **PD-citation-weighted coverage** | **25.2 %** | Of what PD actually cites, how much is in DCS? |
-| 2 | **Title-level coverage** | **~2.4–4.8 %** (118 of ~2,445 works) | How many of PD's works exist in DCS at all? |
+| 2 | **Title-level coverage** | **8.0 %** of the declared canon (118 of ≈1,476 AOB entry rows; band 7.8–8.3 %); exercised letter-a band **~2.4–4.8 %** (118 of ~2,445) | How many of PD's works exist in DCS at all? |
 | 3 | **DCS-token-weighted coverage** | **77.9 %** (2026) · 74.1 % (2021) | Of DCS's own text mass, how much does PD also cite? |
 | 4 | **Partial-coverage grade** | mostly `present`; 2 partial | Is "covered" a whole work or a fragment? |
 
@@ -96,18 +96,54 @@ the coverage denominator.
 Of PD's 353,512 primary-work citation occurrences, **88,929 (25.2 %)** go to works DCS
 contains. Three-quarters of PD's citation practice points at texts DCS does not hold.
 
-### Metric 2 — title-level coverage: **~2.4 – 4.8 %**
+### Metric 2 — title-level coverage: **8.0 % of the declared canon** (band **7.8–8.3 %**; exercised letter-a band **~2.4 – 4.8 %**)
 
-DCS contains **118** of the distinct works PD cites. The denominator — how many distinct
-works PD cites — is inherently fuzzy because unmerged spelling variants inflate a raw
-siglum count:
+DCS contains **118** of the distinct works PD cites.
+
+**Declared-canon denominator (H6707 pass-2, 14-10-2026; audited H6923, ruled and applied H6933, 17-10-2026).** PD's
+printed *Abbreviations of Books* (KoshaSHRI official PDF, re-OCR ground truth) declares a
+dictionary-wide canon of about **1,476 entry-level rows** — the central estimate of a
+1,419–1,517 bracket (1,418 machine-recovered at pass-1 + the Viṣṇupurāṇa row the pass-1 OCR
+had lost, print-verified p. 40, at the low end; 1,517 for the committed re-parse of the same
+OCR; 1,464 for the printed census). Against it, 118 covered works =
+118 / 1,476 = **7.99 %**, quoted as **8.0 %** — about one in twelve and a half. The MG
+ruling of 17-10-2026 fixes this central estimate as *the* quoted denominator; the pass-1
+point 8.32 % survives only as the band's upper bound.
+
+That denominator is an **entry** count, not the row count of the published table. H6932
+(18-10-2026) has now landed the reproducible entry-level table,
+`data/pd/pd_aob_declared_entries.tsv`: **1,437 usable printed entries** projected from the
+H6720/H6960 inventory (`data/pd/pd_aob_entries.tsv`, 1,444 parsed / 7 junk) and gated by
+`python3 scripts/pd_aob_declared_entries.py --check`. That gives the point
+**118 / 1,437 = 8.21 %**. The MG ruling of 17-10-2026 keeps the central estimate
+(≈1,476 → 7.99 %, displayed **8.0 %**) as the quoted denominator until MG re-rules, so the
+paper still quotes the central value with its band (**118 / N = 7.78 – 8.32 %**), which
+brackets both the landed point and every other candidate. The older table
+`data/pd/pd_aob_declared_works.tsv` carries **1,112 work groups / 1,118 edition rows** and is
+a *clean-subset floor*, not the canon: the
+pass-2 clean filter dropped 556 OCR-merged `Siglum Title` entry lines (plus the garbled-start
+rows), so 118 / 1,118 = 10.55 % **overstates** coverage and must not be quoted as the
+declared canon. Audit: `data/pd/pd_aob_declared_canon_audit.json`, reproducible with
+`python3 scripts/pd_aob_declared_canon_audit.py --check`.
+
+The census joins the declared list at **63.3 % of sigla / 78.0 % of occurrence mass** after
+14 official-PDF ground-truth joins (ṚV., AV., Viṣṇupurāṇa, Nyāyasūtra/Nyāyasāra,
+Yājñavalkyasmṛti, Meghadūta, Gautamadharmasūtra, Kāmasūtra, Pañcaviṃśabrāhmaṇa,
+Āśvalāyana-śrauta/gṛhya-sūtra + variant spellings) and adjudication of the 150
+low-confidence fuzzy joins (24 confirmed, 126 demoted). Machine-readable spine:
+`data/pd/pd_aob_siglum_title.tsv` (join), `data/pd/pd_aob_fuzzy_short_adjudication.tsv`
+(verdicts), `data/pd/pd_aob_declared_works.tsv` (declared canon, clean-subset floor).
+
+**Exercised letter-a denominator** — as measured before the declared canon was available;
+inherently fuzzy because unmerged spelling variants inflate a raw siglum count:
 
 - **Lower bound:** 118 / 4,986 distinct primary sigla = **2.37 %** (denominator over-counts).
 - **Estimate:** merging sigla by consonant skeleton (so `PadmP.`/`PadmaP.` collapse) gives
   ~2,445 distinct works → 118 / 2,445 = **4.83 %**.
 
 Either way the order of magnitude is robust: **even under the single letter a-, PD's source
-canon runs to roughly 2,400 distinct works, of which DCS holds about one in twenty.**
+canon runs to roughly 2,400 distinct works, of which DCS holds about one in twenty — and
+against the declared list, one in twelve.**
 
 ### Metric 3 — DCS-token-weighted coverage: **77.9 %** (2026), **74.1 %** (2021)
 
@@ -120,6 +156,18 @@ leans on hardest.
 **The 2021 → 2026 delta is itself a finding.** Token-weighted coverage rose **+3.8 pp**
 (74.1 → 77.9 %) because DCS's 2021 → 2026 expansion was concentrated in PD-core texts — and
 overwhelmingly in the **Vedic** layer:
+
+**Which 2021 baseline this is (19-10-2026).** DCS-2021 carried six texts DCS-2026 dropped —
+four commentaries (*Cakra* on Suśr 165 tok, *Comm. on the Kāvyālaṃkāravṛtti* 393 tok,
+*Hārāṇacandara* on Suśr 162 tok, *Khādiragṛhyasūtrarudraskandavyākhyā* 172 tok) and two
+zero-token stubs (*Ekākṣarakoṣa*, *Nāḍīvijñāna*) — **892 tokens** in all. The metric's
+2021 denominator (4,577,021) already excludes them, so the published **74.06 % (74.1 %)
+is the like-for-like baseline** (2021 text mass restricted to texts 2026 still carries) and
+**74.04 % (74.0 %)** is the raw one, with the 892 kept. Both deltas to 2026 round to
+**+3.8 pp** (+3.82 like-for-like, +3.84 raw). Measured by
+[`scripts/pd_dcs_2021_baseline.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_dcs_2021_baseline.py),
+pinned in
+[`data/pd/pd_dcs_2021_baseline.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_dcs_2021_baseline.json).
 
 | Text | DCS tok 2021 | DCS tok 2026 | Δ |
 |---|---:|---:|---:|
@@ -461,32 +509,55 @@ The dataset supports several further measures, each a different lens on the same
 
 ### 8.8 The long-dictionary league table
 
-PD's slowness is best judged against two peer groups: the other **Sanskrit / Indo-Aryan
-dictionaries** (same language, so density is the only variable), and the **century-long
-historical monuments** of other traditions (same ambition, different language).
+PD's slowness is best judged against three peer groups: the other **Sanskrit / Indo-Aryan
+dictionaries** (same language, so density is the only variable); the **century-long historical
+monuments** of other traditions (same ambition, different language); and — added 17-10-2026 — the
+**Eastern historical dictionaries**.
 
 **First peer group — the Sanskrit / Indo-Aryan dictionaries.** Seven were *completed* in
-10–27 years. Only the two that chose exhaustive historical-principles treatment stall:
+10–27 years. Only the two that chose exhaustive historical-principles treatment stall.
+`Entries/yr` is derived from the printed count and the span each project spent **producing** it. For
+the nineteenth-century dictionaries the publication window practically *is* the compilation window —
+they were typeset as they went — but where a project's own record gives a longer compilation span,
+both bases are shown, because the publication window can hide most of the work (PD: 50 printing years
+from 1976 vs 78 from Katre's 1948 conception; Nikkoku: four publication years after some forty of
+compilation):
 
-| Dictionary | Direction | Span | Years | Lemmas | Status |
-|---|---|---|---:|---:|---|
-| WIL · Wilson | Skt→Eng | 1819–1832 | ~13 | 43,939 | ✓ complete |
-| KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(Russian-ordered)* | ✗ incomplete |
-| **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | ✗ **abandoned in `a`** |
-| PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | ✓ complete |
-| PW · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | ✓ complete |
-| MW · Monier-Williams | Skt→Eng | 1872–1899 | ~27 | 194,084 | ✓ complete |
-| KEWA · Mayrhofer (etymological) | Skt→Ger | 1956–1980 | 24 | — | ✓ complete |
-| EWA · Mayrhofer (etymological) | Ind.-Ar.→Ger | 1986–2001 | 15 | — | ✓ complete |
-| BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–ongoing | 38+ | 33,600 *(3 vols, a→`u`)* | ⧗ far from finished |
-| **PD · Poona Dictionary** | Skt→Eng | **1976–~2284⁺** | **~308⁺** | 104,959 *(a- only)* | ⧗ **still in `a`** |
+| Dictionary | Direction | Span | Years | Lemmas | Entries/yr | Status |
+|---|---|---:|---:|---:|---:|---|
+| WIL · Wilson | Skt→Eng | 1819–1832 | ~13 | 43,939 | 3,380 | ✓ complete |
+| KOW · Kossowicz | Skt→Rus | 1854 | — | 13,488 *(Russian-ordered)* | — | ✗ incomplete |
+| **GST · Goldstücker** | Skt→Eng | 1856–1864 | ~8 | 6,761 | 845 | ✗ **abandoned in `a`** |
+| PWG · Böhtlingk–Roth (*grosse*) | Skt→Ger | 1855–1875 | 20 | 106,083 | 5,304 | ✓ complete |
+| PWK · Böhtlingk (*kürzere*) | Skt→Ger | 1879–1889 | **10** | 151,349 | **15,135** | ✓ complete |
+| MW · Monier-Williams | Skt→Eng | 1872–1899 | ~27 | 194,084 | 7,188 | ✓ complete |
+| KEWA · Mayrhofer (etymological) | Skt→Ger | 1956–1980 | 24 | — | — | ✓ complete |
+| EWA · Mayrhofer (etymological) | Ind.-Ar.→Ger | 1986–2001 | 15 | — | — | ✓ complete |
+| BORI Prakrit Dict. (CDPL) | Prakrit→Eng | 1988–ongoing | 38+ | 33,600 *(3 vols, a→`u`)* | 884 | ⧗ far from finished |
+| **PD · Poona Dictionary** | Skt→Eng | **1976–~2284⁺** | **~308⁺** | 104,959 *(a- only)* | **2,099** (50 printing yr) · **1,346** (78 yr from 1948) | ⧗ **still in `a`** |
 
-The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PW) documented **151,349
+The rate column is a **ceiling** for every finished dictionary and a **floor** for PD: the others
+delivered their counts across the whole alphabet, PD delivered 104,959 inside ~4–6 % of its span.
+Three entries carry no rate — the Mayrhofers are etymological dictionaries with no lemma count, and
+Kossowicz is Russian-ordered and unfinished, so a Sanskrit-axis rate would be false precision.
+
+> **Siglum convention (fixed 14-10-2026, H6698 C1).** This report writes **PWG** for Böhtlingk–Roth's
+> *grosses Petersburger Wörterbuch* and **PWK** for Böhtlingk's single-handed *Sanskrit-Wörterbuch in
+> kürzerer Fassung*; earlier revisions here (and the NWS dossier in Uprava `papers/A61_wsc/`) used bare
+> **PW** for the *kürzere*. Bare *PW* is a collision: traditional Sanskritist usage (Monier-Williams's
+> citations) names the *grosse*, while Cologne's digitisation codes the *kürzere* as `PW` and the
+> *grosse* as `PWG` (live probe sanskrit-lexicon.uni-koeln.de, 14-10-2026). PD's own citation siglum
+> `PW.` in the census is a different object — PD's apparatus — and is untouched.
+
+The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PWK) documented **151,349
 lemmas across the whole alphabet in ten years**; PD has 104,959 lemmas and has covered ~4 % of
 the alphabet in fifty. Sanskrit is not the problem — **exhaustive historical detail is**, and the
 proof is 170 years old. **Theodor Goldstücker's 1856 remake of Wilson** set out to improve the
 whole dictionary, sank into `a`, published 6,761 exhaustive entries, and was abandoned there at his
-death — the one clean death-in-`a`. Two contemporaries are often lumped with him but do not
+death — the one clean death-in-`a` (his exact last entry is *abhyāhita*, printed p. 320b — 6,780
+entries in Cologne's GST digitisation, `csl-orig` v02/gst, checked 14-10-2026; PD's printed
+fascicles, through *abhigamyamānaparadā* in 2019, have not yet passed it).
+Two contemporaries are often lumped with him but do not
 belong: **Kossowicz's 1854 Sanskrit→Russian dictionary** reached 13,488 entries but is arranged in
 **Russian**, not Sanskrit, alphabetical order and was left unfinished — a partial work of a
 different kind, not comparable on the Sanskrit-letter axis; and **Böhtlingk–Roth's PWG** spent its
@@ -495,19 +566,53 @@ exhaustive. Terseness finishes; exhaustiveness drowns. PD is Goldstücker's proj
 the density (104,959 vs Goldstücker's 6,761 for `a`) and computer-typeset — the same undertaking,
 the same letter, the same trap, now a century and a half deep.
 
+**What PD's own rate implies for PD's own scope.** PD's density is 13.36 entries per MW headword in
+the range it has covered (104,959 ÷ 7,856), so holding that density across MW's 194,084 headwords
+means a whole-alphabet target of **≈2.59 M entries** of PD-grain text, not 194 k — of which
+**≈2.49 M are still unwritten** (2,593,032 − 104,959). Dividing the *remainder* by each rate:
+
+| Rate applied | Years to the ~2.49 M remaining | Completes (from 2026) |
+|---|---:|---:|
+| PD's own 2,099/yr | **~1,185** | ~3211 |
+| MW's 7,188/yr | ~346 | ~2372 |
+| PWK's 15,135/yr | **~164** | ~2190 |
+
+The first line **reconciles with the density-held horizon (~3211)** used elsewhere in this report —
+same model, one stated in entries and one in pages; the earlier "2.59 M at the rate" framing would
+have double-counted the 104,959 entries already printed, so the remainder is the correct numerator.
+
+Only the PWK-rate line lands under the ~180-year ceiling that every finished dictionary has
+respected — and it requires PD to write at the terseness of the *kürzere Fassung*, the one thing its
+historical principles forbid. **Scope, not speed, is the binding constraint:** the ~37-volume plan
+(37,333 pp at `a`'s 17.3 entries/pp ≈ **647 k** entries) covers only **~25 %** of the 2.59 M that
+`a`-density implies; across the alphabet still to come it silently assumes **~4.6× the entries per
+page** that `a` actually carried (17.3 → ~79.5 over the 31,277 plan pages left), i.e. articles
+roughly 4.5× shorter. (The 4.0× ratio is over the completed work, not the work ahead.) That unstated assumption
+is exactly what separates the plan-based horizon (≈2284) from the density-held one (≈3211) in
+[Uprava `papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md`](https://github.com/gasyoun/Uprava/blob/main/papers/A68/PD_COMPLETION_ARITHMETIC_2026-10-17.md)
+— this section is that argument's league-table half.
+
 **The controlled experiment — two dictionaries, one city, one editor.** The sharpest comparison
 is not across centuries but across town. In the *same* Pune, the **Bhandarkar Oriental Research
 Institute**'s *Comprehensive and Critical Dictionary of the Prakrit Languages* (CDPL) began in
 **1988** — twelve years *younger* than PD — and has published 3 volumes covering **`a` through
-`ujjhittu`**: all the vowels and into the consonants, ~33,600 lexemes against a *bounded* plan of
-~90,000 entries over ~450 texts. It is **still far from finished** — only ~37 % of its own planned
-entries after 38 years — but it is *moving through the alphabet*, which is the whole point. Its
+`ujjhittu`**, ~33,600 lexemes against a *bounded* plan of ~90,000 entries over ~450 texts. **How far
+through the vowels that is depends on which account you take, and both are recorded here rather than
+reconciled by assertion.** By the **printed range** [computed], a volume series ending at *ujjhittu*
+stops inside `u`, so in the Indian order (`a ā i ī u ū ṛ ṝ ḷ e ai o au`) it has not yet reached
+`ū ṛ ṝ ḷ e ai o au` — eight vowel symbols still ahead. By **oral testimony** [testimony] given to MG at BORI in 2019, the vowels
+had been finished in Indian order completely. What settles it is the last printed entry of vol. 3
+against the title-page ranges of vols 1–3 (BORI catalogue) — a named open item, not an inference.
+
+It is **still far from finished** — only ~37 % of its own planned entries after 38 years — but it is *moving through the alphabet*, which is the whole point. Its
 founding general editor was **A. M. Ghatage — the very scholar who edited PD's first volumes.** The
 same man, the same city, the same decade, ran both projects; the difference is *scope*. BORI
-bounded its corpus (~450 texts, terser articles) and in 38 years cleared the entire vowel series;
+bounded its corpus (~450 texts, terser articles) and in 38 years carried its alphabet from `a` into `u`
+(the end of the vowel series is exactly what the two accounts above disagree about);
 PD chose the unbounded historical maximum and in 50 years has not left `a`. It is as close to a natural experiment in
 lexicographic ambition as the field offers, and its verdict is unambiguous: **a great
 Sanskrit-family dictionary finishes only if it refuses to let the letter `a` become infinite.**
+
 
 **Second peer group — the century-long giants.** PD's real family is not the fast Sanskrit
 dictionaries but the multi-generational historical monuments — and it is projected to outlast
@@ -526,15 +631,91 @@ them all:
 **No dictionary ever completed has taken more than ~180 years** (Grimm, with its revision). Even
 PD's most optimistic scenario (2182 — 206 years, plan @ 200 pp/yr) already exceeds the longest
 finished dictionary (WNT, 134) and the slowest still running (TLL, ~156); its density-held
-scenario (~1,235 years) is roughly **9× the WNT**. On present evidence PD is on course to become
+scenario (~1,235 years measured for the whole project 1976→3211, i.e. ~1,185 still to go from 2026 —
+the two bases differ by the 50 years already spent) is roughly **9× the WNT**. On present evidence PD is on course to become
 the longest single lexicographic project in human history — a distinction that is the direct
 consequence of the ~13–23× density measured in §8.5, not of any lack of effort.
+
+> **Where this group has no rate.** `entries/yr` is deliberately absent from the table above: our
+> sources record spans and status for these monuments but never an entry count, and inventing one
+> would break this report's provenance discipline. Closing that gap (OED 1st ed., CAD, Grimm, SAOB,
+> WNT, TLL) is a named future item, not a number to guess at.
 
 > **Milestone caveats.** Years assume PD holds its current per-MW-headword density and a
 > constant rate; both are simplifications (density drops in the consonants, the rate may rise
 > under digital editing). Vowel-section milestones are robust; consonant ones (mid-dictionary,
 > completion) are upper bounds. Peer spans are start-of-publication to completion (or estimated
 > completion) per each project's own record — see sources below.
+
+**Third peer group — the Eastern historical dictionaries** (new, 17-10-2026, H6939). The horizon is
+sometimes framed as a Sanskrit problem. It is not: the two largest historical dictionaries of East
+Asia were finished, at greater size, inside two generations — because their articles are terse where
+PD's are exhaustive.
+
+| Dictionary | Language | Compilation | Years | Entries | Entries/yr | Source class |
+|---|---|---|---:|---:|---:|---|
+| **Hànyǔ Dà Cídiǎn 漢語大詞典** | Chinese | 1979–1994 (13 vols: vol. 1 1986, appendix/index vol. 1994) | **15** | 370,000 words · 23,000 head characters · 1.5 M citations | **24,667** | [secondary] |
+| **Nikkoku 日本国語大辞典**, 1st ed. | Japanese | composed c. 40 yr; published 1972–1976 (20 vols) | ~40 | 450,000 | **11,250** | [secondary] |
+
+Both are OED-comparable in ambition — HDC traces usage over three millennia from the classics to
+modern slang; Nikkoku prints etymologies and historical citations for ~1 M example sentences. Each is
+3.5–4.3× PD's current entry count and covers its **whole** language, where PD has `a-` to `apaca-`.
+Their rates are 5.4–11.8× PD's with no density ceiling in sight, because neither tried to be
+exhaustive per headword. **The constraint is editorial policy, not script or language.**
+
+> **Provenance — and the scheduled-not-realized line.** Both figures are **[secondary]**
+> encyclopaedic summaries of publisher records, not our own probes: HDC via the English Wikipedia
+> article drawing on Luo (1993) and Wilkinson's *Chinese History: A New Manual*; Nikkoku via the same
+> source citing the publisher and the Indiana University library guide. Upgrade both to [literature]
+> before quoting either in a paper. **Nikkoku's 3rd edition** — cloud-native since 25-07-2024, digital
+> completion **scheduled for 2032** (print 2034) — is a **plan, not an outcome**; it is cited only as
+> evidence that a ~500 k-entry historical dictionary is now budgeted as an 8-year editorial cycle.
+
+**Plan against delivery — the same corpus, read on the plan axis (H6983).** The three tables above
+rank *delivery*. Whether a project kept the plan it declared at the start is a separate question:
+a dictionary can hit one axis and miss another, so every deviation is stated **per axis** and is
+never averaged into a single "over plan" figure. `Deviation` = delivered ÷ declared on that axis;
+the bands are `PLAN-KEPT` (< 1.5×), `PLAN-MISSED` (1.5–4×) and `PLAN-BROKEN` (> 4×). For a work
+still in progress the size figure is **progress** (delivered ÷ plan), not a deviation. `Years` and
+`Entries/yr` above are left exactly as delivered; this table adds a dimension, it does not revise
+a rate.
+
+| Dictionary | Plan declared at the start | Delivered | Volumes | Pages | Years |
+|---|---|---|---|---|---|
+| **OED**, 1st ed. | 4 vols · 6,400 pp · 10 yr (1879 contract; the project was conceived in 1857) | 10 bound vols, April 1928 (reprinted as 12 vols in 1933) · ~15,500 pp *(not re-verified)* · 71 yr from 1857 (49 yr from the 1879 contract) | **2.50×** (10/4; **3.00×** on the 1933 12-vol count) | **2.42×** (OED1 ~15,500 pp, provisional) · **3.40×** on OED2's fully sourced 21,730 pp (20 vols · 291,500 entries, 1989) | **7.10×** (71/10 from 1857) · **4.90×** (49/10 from the contract) |
+| **Grimm**, DWB | 6–7 vols · 10 yr (1838) | 32 vols · 123 yr | **4.92×** (32/6.5) | no documented plan | **12.30×** |
+| **TLL** | 15 yr (1894) | 132 yr and counting; still at `N`/`R` | no documented plan | no documented plan | **8.80×** (floor) |
+| **CAD** | 10 yr (1921) | 26 vols · 90 yr (1921–2011) | no documented plan | no documented plan | **9.00×** |
+| **PD** | ~37 vols · ~37,333 pp · 200 pp/yr (2017 plan) | 35 fascicles / ~6 bound vols · 6,056 pp = **16% of plan** · 50 printing yr (78 yr from 1948) | **0.16 progress** (not a deviation) | **0.16 progress**; **~149,615 pp** required at its own `a`-density = **4.0× the plan** | **1.65×** projected at the realized 121 pp/yr |
+| WIL · GST · PWG · PWK · MW · KEWA · EWA | — | spans and counts in the tables above | no documented plan | no documented plan | no documented plan |
+| **CDPL** · BORI Prakrit | — | 3 vols · ~33,600 lexemes · 38 yr | no documented plan | no documented plan | no documented plan |
+| KOW · WNT · SAOB · HDC · Nikkoku | — | spans and counts in the tables above | no documented plan | no documented plan | no documented plan |
+
+**OED sources and the two size bases.** The plan is the publisher's own record: Oxford University
+Press, *History of the OED*, [public.oed.com/history/](https://public.oed.com/history/) (accessed 18-10-2026) — the Philological Society's 1857 call, the 1879 agreement with OUP and James Murray,
+the planned four volumes / 6,400 pages / ten years, the ten volumes completed in April 1928, and
+the 1933 reprint in twelve volumes. OED2's size is from OUP, *OED editions*,
+[public.oed.com/history/oed-editions/](https://public.oed.com/history/oed-editions/) (accessed 18-10-2026): 20 volumes, 21,730 pages, 291,500 entries (1989). OED1's ~15,500 pp is the commonly
+cited figure and is **not re-verified**, so its 2.42× is provisional; the 3.40× row uses OED2, the
+only fully sourced size, and is likewise a different edition, not a substitute numerator for the
+OED1 outcome. The two are shown side by side, not averaged.
+
+**PD and CDPL.** PD's 37-volume / 37,333-page plan and its 200 pp/yr target are press-mediated
+(Uprava A68 `PD_KNOWLEDGE_INDEX` §2/§4); the 6,056 pp delivered by 2019 and the realized 121 pp/yr
+are from §8.2. Its density-held scope — 149,615 pp at `a`'s 13.36 entries per MW headword — is
+**4.0× the 37,333-page plan**; that is a scope deviation, not a schedule one, and the 1.65× duration
+projection must not be read as good planning. CDPL's ~90,000-entry cap is a documented **entry-axis
+scope denominator** (H6984 §4.3), but it is not a start-of-project volumes/pages/years plan, so on
+the three axes this table measures CDPL's cells say **no documented plan** rather than inventing
+one.
+
+**Full table and aggregates.** The machine-readable 52-row table (17 dictionaries × 3 axes, plus CDPL's entry-axis cap), its source classes
+and the aggregate medians — completed size 2.50× (n=3), completed duration 8.90× (n=4) on the
+plan-anchored basis — are in
+[DICTIONARY_PLAN_DEVIATION_2026-10-18.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/DICTIONARY_PLAN_DEVIATION_2026-10-18.md).
+OED's 71-year conception basis printed here gives 7.10× rather than that note's contract-anchored
+4.90×; the direction is unchanged, and neither number is averaged with the other.
+
 
 ### 8.9 Is `a` the hardest letter? — the graveyard of the first letter
 
@@ -631,11 +812,16 @@ the alphabet for centuries. The drastic difference is not that TamiLex is *faste
 grandest, of the great print historical dictionaries; the born-digital corpus lexicon is what
 comes after — and DCS, welded to a lexical layer, is the Sanskrit form it would take.
 
-> _TamiLex specifics (exact start year, funding term, entry counts, source-dictionary set) were
-> not machine-verifiable at time of writing — the project site returned a transient server error —
-> and are described here at the level of paradigm, which is what the comparison turns on. The
-> concrete figures should be confirmed against [tamilex.uni-hamburg.de](https://www.tamilex.uni-hamburg.de)
-> and folded in._
+> **Re-probe, 17-10-2026 (H6939).** The earlier caveat here said the project site returned a server
+> error. It now answers HTTP 200, and what it publishes is the point: TamiLex is hosted at the
+> University of Hamburg and **funded by the Hamburg Academy of Sciences and Humanities with a
+> long-term grant**; it is building an electronic corpus of first-millennium Classical Tamil with
+> per-word concordances feeding a historical lexicon (definitions in English and modern Tamil,
+> medieval glosses layered on, every citation linked back to text, commentary and manuscript
+> witness). It publishes **no start year, no term length and no entry count** — so the paradigm
+> comparison stands and no rate can be computed from it. That is a finding, not a failure: a project
+> that publishes editions and concordances instead of fascicules has no alphabet-progress metric to
+> report. Figures to be requested from the project directly, not inferred.
 
 ### 8.11 Who finishes a dictionary — and why (a measured note)
 
@@ -711,7 +897,7 @@ _Data: [data/pd/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/p
 ([gasyoun/VisualDCS](https://github.com/gasyoun/VisualDCS)); reference-dictionary headword counts from
 [HeadwordLists/now-2026](https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/now-2026)._
 
-_Peer-dictionary spans (§8.8): Sanskrit/Indo-Aryan (WIL · GST · PWG · PW · MW) from
+_Peer-dictionary spans (§8.8): Sanskrit/Indo-Aryan (WIL · GST · PWG · PWK · MW) from
 [dictionary_inventory.csv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv);
 Mayrhofer [KEWA/EWA](https://www.winter-verlag.de/en/detail/c1954/Mayrhofer_Manfred_Kurzgefasstes_etymologisches_Woerterbuch_des_Altindischen/);
 [Thesaurus Linguae Latinae](https://en.wikipedia.org/wiki/Thesaurus_Linguae_Latinae),
@@ -727,5 +913,45 @@ Ges. Wiss. 56 (1904), 253–258, via
 dictionary to be folded in when supplied); Apte's dates from
 [Wikipedia](https://en.wikipedia.org/wiki/Vaman_Shivram_Apte); PD staffing (74 years since 1948; a
 severe shortage of lexicographers) from the [Deccan College dictionary project](https://www.frontlist.in/1464-volumes-74-years-and-counting-the-making-of-the-worlds-biggest-encyclopaedic-sanskrit-dictionary)._
+
+## 9. The canon denominator is not one number (24-10-2026)
+
+Every "118 of N" quoted in this report, in the A68 paper and on the PD knowledge page divides the
+same **118 covered works** by a different **N**. The bases are not rival estimates of one quantity;
+they are different objects, and until now each document picked one silently. They are now derived,
+labelled and checked in [`data/pd/pd_canon_ledger.tsv`](../data/pd/pd_canon_ledger.tsv) by
+[`scripts/pd_canon_ledger.py`](../scripts/pd_canon_ledger.py), which refuses to write if a computed
+percentage disagrees with the percentage recorded in the JSON it reads.
+
+| Base | Rows | 118 / base | What it is |
+|---|---:|---:|---|
+| AOB entry-like printed lines (R1) | 1,476 | 7.99 % | structural count; the paper's denominator |
+| AOB entry rows, repeated headers removed | 1,469 | 8.03 % | the printed list's own row count |
+| AOB print census | 1,464 | 8.06 % | press-attributed external count |
+| AOB pass-1 loose parse | 1,419 | 8.32 % | not reproducible; kept only so it is not requoted |
+| AOB re-parse, raw entries | 1,517 | 7.78 % | upper bound of the audit band |
+| Usable edition-level inventory | 1,437 | 8.21 % | the H6932 inventory |
+| Clean-subset edition rows | 1,118 | 10.55 % | **a floor, never a denominator** — it drops the Mahābhārata and Rāmāyaṇa |
+| **Index of Works, all rows** | **2,031** | **5.81 %** | pp. LXXXIX–CXXVII, vision transcription; the work authority (Q5) |
+| Index rows printing a siglum | 1,622 | 7.27 % | the joinable layer |
+| Index rows with no siglum | 409 | 20.1 % of the Index | classed, not dropped (adjudication: unit M2) |
+
+The two printed counts — **1,469** AOB entry rows and **2,031** Index rows — differ by **562 rows
+(38.3 %)**. That gap is the whole finding of this section: the canon is not a number that moved,
+it is two lists that were never reconciled.
+
+The join itself is now measured rather than assumed. Of the **1,622** Index sigla, **981 (60.5 %)**
+find an AOB row (936 in both, 45 AOB-only) and **641 (39.5 %)** do not (554 families-only, 87 in
+neither); **497** AOB sigla never appear in the Index at all. The pilot's "direct siglum join" is
+therefore real but two-thirds complete, not complete.
+
+**The rule this section exists to enforce.** No percentage without its base in the same sentence or
+row. The A68 paper's 8.0 % is the 1,476 basis and stays valid *as that*; the research page's
+headline must name 1,476, 1,469 or 2,031 whenever it divides by one of them. Quoting 118/1,118 =
+10.55 % as the declared canon is a defect, not an alternative.
+
+_§9 added 24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH, W1 of the PD knowledge-index
+grill ([PR #5762](https://github.com/gasyoun/Uprava/pull/5762)); ledger `--check` green; no earlier
+number edited._
 
 _Dr. Mārcis Gasūns_

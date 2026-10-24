@@ -1,75 +1,78 @@
-dict	letter_slp1	letter_iast	n_sampled	dash_truth_pct	splitter_pct	splitter_ci	calib_precision	calib_recall
-MW	a	a/ā	23590	83.1	n/a (model unavailable)			
-MW	i	i/ī	1214	63.1	n/a (model unavailable)			
-MW	u	u/ū	5775	79.5	n/a (model unavailable)			
-MW	f	ṛ/ṝ	545	68.8	n/a (model unavailable)			
-MW	x	ḷ	5	40.0	n/a (model unavailable)			
-MW	e	e	938	69.6	n/a (model unavailable)			
-MW	E	ai	220	15.9	n/a (model unavailable)			
-MW	o	o	176	43.2	n/a (model unavailable)			
-MW	O	au	426	8.9	n/a (model unavailable)			
-MW	k	k	13330	56.4	n/a (model unavailable)			
-MW	K	kh	1064	46.2	n/a (model unavailable)			
-MW	g	g	4966	63.4	n/a (model unavailable)			
-MW	G	gh	726	51.0	n/a (model unavailable)			
-MW	N	ṅ	3	33.3	n/a (model unavailable)			
-MW	c	c	3535	58.1	n/a (model unavailable)			
-MW	C	ch	533	46.9	n/a (model unavailable)			
-MW	j	j	3308	57.9	n/a (model unavailable)			
-MW	J	jh	156	19.2	n/a (model unavailable)			
-MW	Y	ñ	2	50.0	n/a (model unavailable)			
-MW	w	ṭ	117	28.2	n/a (model unavailable)			
-MW	W	ṭh	17	41.2	n/a (model unavailable)			
-MW	q	ḍ	124	17.7	n/a (model unavailable)			
-MW	Q	ḍh	39	20.5	n/a (model unavailable)			
-MW	R	ṇ	3	33.3	n/a (model unavailable)			
-MW	t	t	5517	62.8	n/a (model unavailable)			
-MW	T	th	23	30.4	n/a (model unavailable)			
-MW	d	d	7939	71.9	n/a (model unavailable)			
-MW	D	dh	2402	61.0	n/a (model unavailable)			
-MW	n	n	8550	82.0	n/a (model unavailable)			
-MW	p	p	21483	78.0	n/a (model unavailable)			
-MW	P	ph	546	54.8	n/a (model unavailable)			
-MW	b	b	4101	73.5	n/a (model unavailable)			
-MW	B	bh	4681	67.0	n/a (model unavailable)			
-MW	m	m	11374	67.5	n/a (model unavailable)			
-MW	y	y	3301	67.2	n/a (model unavailable)			
-MW	r	r	5452	67.3	n/a (model unavailable)			
-MW	l	l	2727	56.5	n/a (model unavailable)			
-MW	v	v	19141	75.5	n/a (model unavailable)			
-MW	S	ś	10371	65.9	n/a (model unavailable)			
-MW	z	ṣ	643	77.3	n/a (model unavailable)			
-MW	s	s	25687	77.9	n/a (model unavailable)			
-MW	h	h	3739	63.2	n/a (model unavailable)			
-GRA	a	a/ā	1768	53.1	n/a (model unavailable)			
-GRA	i	i/ī	178	28.7	n/a (model unavailable)			
-GRA	u	u/ū	315	28.6	n/a (model unavailable)			
-GRA	f	ṛ/ṝ	146	45.2	n/a (model unavailable)			
-GRA	e	e	61	31.1	n/a (model unavailable)			
-GRA	E	ai	3	0.0	n/a (model unavailable)			
-GRA	o	o	33	6.1	n/a (model unavailable)			
-GRA	O	au	10	0.0	n/a (model unavailable)			
-GRA	k	k	486	19.5	n/a (model unavailable)			
-GRA	K	kh	38	18.4	n/a (model unavailable)			
-GRA	g	g	261	41.4	n/a (model unavailable)			
-GRA	G	gh	60	48.3	n/a (model unavailable)			
-GRA	c	c	173	29.5	n/a (model unavailable)			
-GRA	C	ch	18	11.1	n/a (model unavailable)			
-GRA	j	j	248	19.4	n/a (model unavailable)			
-GRA	t	t	455	32.3	n/a (model unavailable)			
-GRA	d	d	638	38.9	n/a (model unavailable)			
-GRA	D	dh	172	25.0	n/a (model unavailable)			
-GRA	n	n	389	23.9	n/a (model unavailable)			
-GRA	p	p	1014	31.0	n/a (model unavailable)			
-GRA	P	ph	14	0.0	n/a (model unavailable)			
-GRA	b	b	154	39.6	n/a (model unavailable)			
-GRA	B	bh	213	25.4	n/a (model unavailable)			
-GRA	m	m	531	27.9	n/a (model unavailable)			
-GRA	y	y	231	26.0	n/a (model unavailable)			
-GRA	r	r	325	25.2	n/a (model unavailable)			
-GRA	l	l	25	8.0	n/a (model unavailable)			
-GRA	v	v	1052	32.6	n/a (model unavailable)			
-GRA	S	ś	529	25.0	n/a (model unavailable)			
-GRA	z	ṣ	9	55.6	n/a (model unavailable)			
-GRA	s	s	1633	51.9	n/a (model unavailable)			
-GRA	h	h	256	41.4	n/a (model unavailable)			
+dict	letter_slp1	letter_iast	n_sampled	dash_truth_pct	splitter_pct	splitter_ci	calib_precision	calib_recall	calib_f1	calib_n	calib_tp	calib_fp	calib_fn	calib_tn	calib_precision_strict	calib_recall_strict	calib_f1_strict	calib_n_strict	calib_tp_strict	calib_fp_strict	calib_fn_strict	calib_tn_strict
+MW	a	a/ā	25	84.0	36.0	[20.2,55.5]	0.889	0.381	0.533	25	8	1	13	3	0.000			8	0	5	0	3
+MW	i	i/ī	25	52.0	48.0	[30.0,66.5]	0.750	0.692	0.720	25	9	3	4	9	0.000			13	0	9	0	4
+MW	u	u/ū	25	84.0	24.0	[11.5,43.4]	0.833	0.238	0.370	25	5	1	16	3	0.000			9	0	5	0	4
+MW	f	ṛ/ṝ	25	76.0	36.0	[20.2,55.5]	0.778	0.368	0.500	25	7	2	12	4	0.000			19	0	7	0	12
+MW	x	ḷ	5	40.0	40.0	[11.8,76.9]	1.000	1.000	1.000	5	2	0	0	3	0.000			2	0	2	0	0
+MW	e	e	25	72.0	60.0	[40.7,76.6]	0.667	0.556	0.606	25	10	5	8	2	0.000			17	0	9	0	8
+MW	E	ai	25	20.0	16.0	[6.4,34.7]	0.750	0.600	0.667	25	3	1	2	19	0.000			4	0	2	0	2
+MW	o	o	22	50.0	45.5	[26.9,65.3]	0.600	0.545	0.571	22	6	4	5	7	0.000			8	0	5	0	3
+MW	O	au	24	4.2	0.0	[0.0,13.8]		0.000		24	0	0	1	23				0	0	0	0	0
+MW	k	k	25	60.0	28.0	[14.3,47.6]	1.000	0.467	0.636	25	7	0	8	10	0.000			14	0	7	0	7
+MW	K	kh	25	40.0	20.0	[8.9,39.1]	0.600	0.300	0.400	25	3	2	7	13	0.000			10	0	3	0	7
+MW	g	g	25	68.0	56.0	[37.1,73.3]	0.929	0.765	0.839	25	13	1	4	7	0.000	0.000		17	0	13	1	3
+MW	G	gh	25	48.0	52.0	[33.5,70.0]	0.846	0.917	0.880	25	11	2	1	11	0.000			12	0	11	0	1
+MW	N	ṅ	3	33.3	0.0	[0.0,56.2]		0.000		3	0	0	1	2				1	0	0	0	1
+MW	c	c	25	40.0	36.0	[20.2,55.5]	0.444	0.400	0.421	25	4	5	6	10	0.000			10	0	4	0	6
+MW	C	ch	25	32.0	36.0	[20.2,55.5]	0.778	0.875	0.824	25	7	2	1	15	0.143	1.000	0.250	8	1	6	0	1
+MW	j	j	25	64.0	48.0	[30.0,66.5]	0.750	0.562	0.643	25	9	3	7	6	0.111	1.000	0.200	16	1	8	0	7
+MW	J	jh	23	17.4	26.1	[12.5,46.5]	0.333	0.500	0.400	23	2	4	2	15	0.000			3	0	1	0	2
+MW	Y	ñ	2	50.0	0.0	[0.0,65.8]		0.000		2	0	0	1	1				1	0	0	0	1
+MW	w	ṭ	24	20.8	25.0	[12.0,44.9]	0.333	0.400	0.364	24	2	4	3	15	0.000			3	0	1	0	2
+MW	W	ṭh	17	41.2	35.3	[17.3,58.7]	0.833	0.714	0.769	17	5	1	2	9	0.000			3	0	1	0	2
+MW	q	ḍ	25	8.0	8.0	[2.2,25.0]	0.500	0.500	0.500	25	1	1	1	22	0.000			2	0	1	0	1
+MW	Q	ḍh	20	15.0	10.0	[2.8,30.1]	0.500	0.333	0.400	20	1	1	2	16				2	0	0	0	2
+MW	R	ṇ	3	33.3	0.0	[0.0,56.2]		0.000		3	0	0	1	2				1	0	0	0	1
+MW	t	t	25	68.0	28.0	[14.3,47.6]	1.000	0.412	0.583	25	7	0	10	8	0.286	0.667	0.400	16	2	5	1	8
+MW	T	th	23	30.4	26.1	[12.5,46.5]	0.167	0.143	0.154	23	1	5	6	11				5	0	0	0	5
+MW	d	d	25	76.0	40.0	[23.4,59.3]	0.900	0.474	0.621	25	9	1	10	5	0.286	0.667	0.400	16	2	5	1	8
+MW	D	dh	25	56.0	32.0	[17.2,51.6]	0.875	0.500	0.636	25	7	1	7	10	0.000			14	0	7	0	7
+MW	n	n	25	84.0	28.0	[14.3,47.6]	1.000	0.333	0.500	25	7	0	14	4	0.200	1.000	0.333	12	1	4	0	7
+MW	p	p	25	84.0	44.0	[26.7,62.9]	0.909	0.476	0.625	25	10	1	11	3	0.100	1.000	0.182	14	1	9	0	4
+MW	P	ph	25	48.0	36.0	[20.2,55.5]	0.889	0.667	0.762	25	8	1	4	12	0.125	1.000	0.222	12	1	7	0	4
+MW	b	b	25	80.0	72.0	[52.4,85.7]	0.944	0.850	0.895	25	17	1	3	4	0.062	1.000	0.118	19	1	15	0	3
+MW	B	bh	25	52.0	24.0	[11.5,43.4]	0.833	0.385	0.526	25	5	1	8	11	0.000	0.000		12	0	5	1	6
+MW	m	m	25	64.0	36.0	[20.2,55.5]	0.667	0.375	0.480	25	6	3	10	6	0.000			16	0	6	0	10
+MW	y	y	25	72.0	48.0	[30.0,66.5]	0.833	0.556	0.667	25	10	2	8	5	0.333	1.000	0.500	17	3	6	0	8
+MW	r	r	25	64.0	56.0	[37.1,73.3]	0.786	0.688	0.733	25	11	3	5	6	0.000			15	0	11	0	4
+MW	l	l	25	56.0	48.0	[30.0,66.5]	0.750	0.643	0.692	25	9	3	5	8	0.000			14	0	9	0	5
+MW	v	v	25	76.0	36.0	[20.2,55.5]	1.000	0.474	0.643	25	9	0	10	6	0.000			15	0	7	0	8
+MW	S	ś	25	72.0	44.0	[26.7,62.9]	0.818	0.500	0.621	25	9	2	9	5	0.125	1.000	0.222	17	1	7	0	9
+MW	z	ṣ	25	64.0	52.0	[33.5,70.0]	0.846	0.688	0.759	25	11	2	5	7	0.182	1.000	0.308	16	2	9	0	5
+MW	s	s	25	72.0	56.0	[37.1,73.3]	0.714	0.556	0.625	25	10	4	8	3	0.200	0.667	0.308	13	2	8	1	2
+MW	h	h	25	56.0	52.0	[33.5,70.0]	0.923	0.857	0.889	25	12	1	2	10	0.250	1.000	0.400	14	3	9	0	2
+GRA	a	a/ā	25	60.0	52.0	[33.5,70.0]	0.615	0.533	0.571	25	8	5	7	5
+GRA	i	i/ī	23	17.4	17.4	[7.0,37.1]	0.500	0.500	0.500	23	2	2	2	17
+GRA	u	u/ū	25	20.0	36.0	[20.2,55.5]	0.444	0.800	0.571	25	4	5	1	15
+GRA	f	ṛ/ṝ	25	44.0	56.0	[37.1,73.3]	0.571	0.727	0.640	25	8	6	3	8
+GRA	e	e	21	23.8	52.4	[32.4,71.7]	0.364	0.800	0.500	21	4	7	1	9
+GRA	E	ai	3	0.0	33.3	[6.1,79.2]	0.000			3	0	1	0	2
+GRA	o	o	17	5.9	64.7	[41.3,82.7]	0.091	1.000	0.167	17	1	10	0	6
+GRA	O	au	10	0.0	20.0	[5.7,51.0]	0.000			10	0	2	0	8
+GRA	k	k	25	4.0	32.0	[17.2,51.6]	0.000	0.000		25	0	8	1	16
+GRA	K	kh	19	15.8	42.1	[23.1,63.7]	0.250	0.667	0.364	19	2	6	1	10
+GRA	g	g	24	29.2	29.2	[14.9,49.2]	0.429	0.429	0.429	24	3	4	4	13
+GRA	G	gh	20	50.0	60.0	[38.7,78.1]	0.667	0.800	0.727	20	8	4	2	6
+GRA	c	c	25	16.0	32.0	[17.2,51.6]	0.250	0.500	0.333	25	2	6	2	15
+GRA	C	ch	18	11.1	33.3	[16.3,56.3]	0.167	0.500	0.250	18	1	5	1	11
+GRA	j	j	25	12.0	44.0	[26.7,62.9]	0.273	1.000	0.429	25	3	8	0	14
+GRA	t	t	24	41.7	50.0	[31.4,68.6]	0.750	0.900	0.818	24	9	3	1	11
+GRA	d	d	25	44.0	32.0	[17.2,51.6]	0.500	0.364	0.421	25	4	4	7	10
+GRA	D	dh	25	12.0	28.0	[14.3,47.6]	0.286	0.667	0.400	25	2	5	1	17
+GRA	n	n	25	32.0	40.0	[23.4,59.3]	0.400	0.500	0.444	25	4	6	4	11
+GRA	p	p	25	28.0	16.0	[6.4,34.7]	0.500	0.286	0.364	25	2	2	5	16
+GRA	P	ph	14	0.0	28.6	[11.7,54.6]	0.000			14	0	4	0	10
+GRA	b	b	22	45.5	22.7	[10.1,43.4]	0.800	0.400	0.533	22	4	1	6	11
+GRA	B	bh	24	25.0	25.0	[12.0,44.9]	0.500	0.500	0.500	24	3	3	3	15
+GRA	m	m	25	24.0	32.0	[17.2,51.6]	0.375	0.500	0.429	25	3	5	3	14
+GRA	y	y	24	20.8	45.8	[27.9,64.9]	0.364	0.800	0.500	24	4	7	1	12
+GRA	r	r	25	24.0	52.0	[33.5,70.0]	0.308	0.667	0.421	25	4	9	2	10
+GRA	l	l	25	8.0	40.0	[23.4,59.3]	0.200	1.000	0.333	25	2	8	0	15
+GRA	v	v	25	32.0	32.0	[17.2,51.6]	0.500	0.500	0.500	25	4	4	4	13
+GRA	S	ś	25	16.0	40.0	[23.4,59.3]	0.300	0.750	0.429	25	3	7	1	14
+GRA	z	ṣ	9	55.6	55.6	[26.7,81.1]	0.800	0.800	0.800	9	4	1	1	3
+GRA	s	s	25	52.0	40.0	[23.4,59.3]	0.700	0.538	0.609	25	7	3	6	9
+GRA	h	h	24	37.5	45.8	[27.9,64.9]	0.364	0.444	0.400	24	4	7	5	8
+GRA_CALIBRATION_loose			696	26.4	38.4		0.408	0.592	0.483	696	109	158	75	354
+MW_CALIBRATION_loose			941	54.8	36.9		0.787	0.529	0.633	941	273	74	243	351
+MW_CALIBRATION_strict			440	5.9	56.8		0.084	0.808	0.152	440	21	229	5	185

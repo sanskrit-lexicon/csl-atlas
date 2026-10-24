@@ -1,6 +1,6 @@
 # `<ls>` cross-dictionary citation graph
 
-_Created: 06-07-2026 · Last updated: 24-09-2026_
+_Created: 06-07-2026 · Last updated: 19-10-2026_
 
 **What this is.** A **citation-frequency graph** over the Cologne dictionaries: which
 classical Sanskrit texts each dictionary quotes (via its `<ls>` source-citation tags) and
@@ -25,7 +25,15 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
 | [`ls_citation_unresolved_top.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_unresolved_top.tsv) | top unresolved raw keys per dict — the QA worklist for extending coverage |
 | [`ls_citation_nontext_filtered.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_nontext_filtered.tsv) | audit trail of `<ls>` markers filtered as non-bibliographic (grammatical/editorial) — MW only |
 | [`ls_citation_graph.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/ls_citation_graph.source.json) | provenance sidecar written on every run — csl-atlas / `csl-orig` / `csl-guides` revisions with dirty flags, abbreviations-key SHA-256, builder SHA-256, SHA-256 of each output (the revision binding of the committed TSVs) |
-| [`build_ls_citation_graph.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/build_ls_citation_graph.py) | the builder (reproduce below) |
+| [`source-to-entries.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/source-to-entries.json) | passage-level index (H7100) — canonical source label → the MW `<L>` records that cite it, with source-line pointers; 209 canonical labels cover 213,906 of MW's 320,828 citations |
+| [`citation-passage-links.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/citation-passage-links.json) | 100-link pilot from MW's explicit Ṛgveda verse loci to per-verse GRETIL anchors, with the latest verification result per link |
+| [`citation-passage-link-verification.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/citation-passage-link-verification.json) | non-deterministic provenance snapshot from `npm run check-citation-links` (HTTP 200 + anchor presence) |
+| [`passage_pilot.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/passage_pilot.tsv) / [`passage_pilot.csv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/passage_pilot.csv) | the 100-row pilot: `dict · L · canonical_text · raw_locus · dcs_id · dcs_url · gretil_url · vedaweb_url · status · evidence` |
+| [`passage_pilot_checks.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/passage_pilot_checks.tsv) | per-link check log: `gretil_url · status · final_url · checked_at · anchor_verified` |
+| [`source-to-entries.source.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/source-to-entries.source.json) | provenance sidecar: `csl-orig` revision, abbreviation-table hash, output SHA-256s |
+| [`mw-source-abbreviations.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/mw-source-abbreviations.tsv) | vendored MWS `mwauthorities/tooltip.txt` table (`code · abbreviation · expansion_iast · type`) — the MW works key that `csl-guides` does not carry |
+| [`build_ls_citation_graph.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/citations/build_ls_citation_graph.py) | the frequency-graph builder (reproduce below) |
+| [`../scripts/build-citation-passage-index.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/build-citation-passage-index.mjs) | the passage-index builder (`npm run build-citation-passage-index`) |
 
 ## Method
 
@@ -125,8 +133,55 @@ node forms are folded. See [Method](#method) and [Change log](#change-log).
   discarded. Locus→scan-URL resolution already exists in
   [`ls_resolver.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/ls_resolver.py).
 
+## Passage-level index (H7100)
+
+The frequency graph above answers *which text* each dictionary cites. `source-to-entries.json`
+adds the **entry axis** for MW: every `<L>` record is parsed, its `<ls>` citations are reduced to
+a base abbreviation (including the MW pattern `<ls n="RV.">ix, 62, 25</ls>`, where the siglum sits
+in the attribute and the text is locus-only), expanded through the vendored MWS `tooltip.txt`
+table, and fold-matched to
+a committed `canonical_text` node (or one of its `variant_forms`). An abbreviation is never
+fuzzy-matched or guessed: the raw label is kept under `unresolved` with its MWS expansion when no
+node matches, and editorial markers (`L.`, `ib.`, `W.`, `MW.`, `Cat.`, …) are reported under
+`nontext` rather than presented as works.
+
+The pilot in `citation-passage-links.json` covers the explicit RV loci (`RV. v, 86, 5` →
+maṇḍala 5, hymn 86, verse 5). Each locus maps to GRETIL's Aufrecht RV edition at the per-verse
+anchor `RV_<maṇḍala>.<hymn:3>.<verse:2>`. The 100 most-cited distinct verse loci were checked for
+**HTTP 200 and anchor presence**; the snapshot is `citation-passage-link-verification.json`. `source-to-entries.source.json` records the `csl-orig`
+revision, its `v02/mw/mw.txt` dirty state and SHA-256, the abbreviation-table hash, and every
+output hash — so a build from a dirty sibling is visibly bound to the exact bytes used, not
+silently attributed to the clean revision.
+DCS is a link-out target only and is **not** ingested; its interactive browser challenge means a
+machine HTTP check cannot establish a stable DCS passage URL, so GRETIL is the verified target.
+A verified anchor proves the passage exists, not that MW's quotation is accurate — human
+spot-checks remain required. The residual is explicit: among the accessible GRETIL
+transformations only the Ṛgveda and Rāmāyaṇa pages expose per-verse anchors (the MBh parvan
+pages and the Manu page do not), and this pilot is Ṛgveda-only so that one edition carries all
+100 checks; Rāmāyaṇa anchors (`R_<kāṇḍa>.<sarga:3>.<verse:3>`) are available for a follow-on.
+DCS is recorded as `no-stable-url` for every row, never guessed.
+
+This is not a re-measurement of H6949: that unit counts PD quotations and their siglum+locus;
+this table maps MW entries to sources and links existing loci. No PD quotation data is read or
+recomputed here.
+
+Reproduce:
+
+```sh
+npm run build-source-to-entries           # deterministic, reads ../csl-orig/v02/mw/mw.txt
+npm run check-citation-links              # network: HTTP 200 + anchor presence
+npm run build-source-to-entries           # merge the verification snapshot
+node --test test/citation-passage-index.test.mjs
+```
+
 ## Change log
 
+- **19-10-2026 (H7100):** MW passage-level citation index. `source-to-entries.json` maps 209
+  canonical source labels to 213,906 MW citations / their `<L>` records; `citation-passage-links.json`
+  links the 100 most-cited distinct RV verse loci to GRETIL per-verse anchors, all verified
+  HTTP 200 with anchors present. `mw-source-abbreviations.tsv` vendors the MWS works key that
+  `csl-guides` lacks. citation-tracer is no longer a placeholder; `/tools/source` and
+  `/tools/dictionary-dossier` gain a "Cited at" panel. Tests: `test/citation-passage-index.test.mjs`.
 - **24-09-2026 (v3, re-freeze at a recorded revision, [H5407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5407-Fable_csl-atlas_a50-citation-graph-refreeze-recorded-revision-alias-fold_24.09.26.md)):**
   `CANON_ALIAS` extended with the 37 eye-checked transliteration-variant pairs of the H5295
   fold table (with a chain guard: an alias target is never itself an alias key); TSVs rebuilt

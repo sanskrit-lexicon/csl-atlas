@@ -1,0 +1,138 @@
+{
+ "dataset": "pd_attestation_decomposition",
+ "handoff": "H7095",
+ "generated_by": "python scripts/pd_attestation_decomposition.py",
+ "generated_on": "2026-10-19",
+ "population": {
+  "shared_lemmas": 4093,
+  "pd_entries_scanned": 104959,
+  "pwg_entries_scanned": 106082,
+  "unit": "H6949 quotation unit: attestation = locus = a PD siglum+locus (plus semicolon continuations) or a PWG <ls> tag"
+ },
+ "conventions": {
+  "pd_works": "A68 §4.2 class `primary` in data/pd/pd_siglum_families.tsv; trailing commentary qualifiers stripped to the base siglum",
+  "pwg_works": "distinct sigla of <ls> tags counted as loci (n attribute joined to payload; prefix before the first digit)",
+  "raw": "no variant merging; an upper bound on PD breadth",
+  "fold": "diacritic/case/punctuation skeleton (fold_siglum); approximates A68 §5.2's skeleton-merged work count and is the headline convention"
+ },
+ "reconciliation": {
+  "shared_lemmas": 4093,
+  "pd_attestations": 157480,
+  "pwg_attestations": 18423,
+  "pd_quotations": 97413,
+  "pwg_quotations": 10225,
+  "pd_loci": 157480,
+  "pwg_loci": 18423,
+  "attestations_equal_loci_pd": true,
+  "attestations_equal_loci_pwg": true,
+  "attestation_ratio": 8.548,
+  "targets": {
+   "pd_attestations": 157480,
+   "pwg_attestations": 18423,
+   "pd_quotations": 97413,
+   "pwg_quotations": 10225,
+   "shared_lemmas": 4093
+  },
+  "within_tolerance": true
+ },
+ "aggregate": {
+  "raw": {
+   "pd_distinct_works_union": 3186,
+   "pwg_distinct_works_union": 675,
+   "pd_distinct_sum_over_lemmas": 80652,
+   "pwg_distinct_sum_over_lemmas": 10769,
+   "pd_loci": 157480,
+   "pwg_loci": 18423,
+   "pd_loci_per_work": 49.4288,
+   "pwg_loci_per_work": 27.2933,
+   "breadth_ratio": 4.72,
+   "depth_ratio": 1.811,
+   "breadth_x_depth": 8.548011
+  },
+  "fold": {
+   "pd_distinct_works_union": 2409,
+   "pwg_distinct_works_union": 644,
+   "pd_distinct_sum_over_lemmas": 80065,
+   "pwg_distinct_sum_over_lemmas": 10767,
+   "pd_loci": 157480,
+   "pwg_loci": 18423,
+   "pd_loci_per_work": 65.3715,
+   "pwg_loci_per_work": 28.6071,
+   "breadth_ratio": 3.7407,
+   "depth_ratio": 2.2851,
+   "breadth_x_depth": 8.548011
+  }
+ },
+ "per_lemma_medians": {
+  "raw": {
+   "breadth_ratio": {
+    "n": 3603,
+    "median": 3.75,
+    "p25": 1.0,
+    "p75": 8.1429
+   },
+   "depth_ratio": {
+    "n": 3396,
+    "median": 1.1429,
+    "p25": 1.0,
+    "p75": 1.5
+   },
+   "attestation_ratio": {
+    "n": 3603,
+    "median": 4.0,
+    "p25": 2.0,
+    "p75": 9.75
+   }
+  },
+  "fold": {
+   "breadth_ratio": {
+    "n": 3603,
+    "median": 3.75,
+    "p25": 1.0,
+    "p75": 8.125
+   },
+   "depth_ratio": {
+    "n": 3396,
+    "median": 1.1481,
+    "p25": 1.0,
+    "p75": 1.5
+   },
+   "attestation_ratio": {
+    "n": 3603,
+    "median": 4.0,
+    "p25": 2.0,
+    "p75": 9.75
+   }
+  }
+ },
+ "below_parity": {
+  "n": 340,
+  "pct_of_shared": 8.31,
+  "zero_pd_attestations": 191,
+  "zero_pd_pwg_attestations": 313,
+  "near_parity": 149,
+  "delta_histogram": {
+   "1": 104,
+   "2": 27,
+   "3": 2,
+   "4": 5,
+   "5": 4,
+   "6": 1,
+   "7": 2,
+   "8": 1,
+   "10": 1,
+   "13": 1,
+   "16": 1
+  },
+  "delta_le_2": 131,
+  "pwg_zero_attestation_lemmas": 490
+ },
+ "gold_rows": {
+  "path": "tests/forensic/h7095_pd_attestation_decomposition_gold.tsv",
+  "n": 20
+ },
+ "inputs": {
+  "pd_sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+  "pwg_sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166"
+ }
+}
