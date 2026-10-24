@@ -1,8 +1,8 @@
 {
   "title": "csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon",
-  "description": "An interactive companion to the Cologne Digital Sanskrit Lexicon (CDSL): comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters plus an all-dictionary coverage layer for every local CDSL v02 source dictionary. Every public claim carries an explicit evidence label (observed / derived / inferred / reviewed) and every dataset is reproducible from committed JSON plus the csl-orig source dictionaries. Release 0.20.0 publishes the core dossier (28,524 lemmas attested in at least five dictionaries) with an OntoLex-Lemon application profile and a data statement.",
+  "description": "An interactive companion to the Cologne Digital Sanskrit Lexicon (CDSL): comparative microstructural analysis of ten dictionary chapters — nine complete dictionaries plus the unfinished Poona Dictionary (35 fascicle-volumes, 6,056 pp, still inside letter a-) plus an all-dictionary coverage layer for every local CDSL v02 source dictionary. Every public claim carries an explicit evidence label (observed / derived / inferred / reviewed) and every dataset is reproducible from committed JSON plus the csl-orig source dictionaries. Release 0.20.0 publishes the core dossier (28,524 lemmas attested in at least five dictionaries) with an OntoLex-Lemon application profile and a data statement.",
   "upload_type": "software",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "license": "CC-BY-SA-4.0",
   "access_right": "open",
   "creators": [
@@ -27,7 +27,9 @@
     "FAIR data",
     "evidence-graded data",
     "OntoLex-Lemon",
-    "core dossier"
+    "core dossier",
+    "Poona Dictionary",
+    "canon coverage"
   ],
   "related_identifiers": [
     {
