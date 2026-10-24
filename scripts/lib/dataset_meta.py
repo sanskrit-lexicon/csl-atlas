@@ -20,10 +20,21 @@ from datetime import datetime, timezone
 DATASET_LICENSE = "CC-BY-SA-4.0"
 DATASET_LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/"
 
+# Matrix row 12 (docs/DATASET_LICENCE_MATRIX.md): the JSON Schemas under
+# data/schema/ contain no dictionary content — the one genuinely clean
+# family, which may carry the permissive attribution-only licence.
+SCHEMA_LICENSE = "CC-BY-4.0"
+SCHEMA_LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
+
 
 def license_fields():
     """The licence fields every dataset envelope carries, in canonical order."""
     return {"license": DATASET_LICENSE, "licenseUrl": DATASET_LICENSE_URL}
+
+
+def schema_license_fields():
+    """Same, for the clean data/schema/ family (matrix row 12)."""
+    return {"license": SCHEMA_LICENSE, "licenseUrl": SCHEMA_LICENSE_URL}
 
 
 def generated_at_now():

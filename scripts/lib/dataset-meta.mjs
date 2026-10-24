@@ -13,9 +13,20 @@
 export const DATASET_LICENSE = "CC-BY-SA-4.0";
 export const DATASET_LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/";
 
+// Matrix row 12 (docs/DATASET_LICENCE_MATRIX.md): the JSON Schemas under
+// data/schema/ contain no dictionary content — the one genuinely clean
+// family, which may carry the permissive attribution-only licence.
+export const SCHEMA_LICENSE = "CC-BY-4.0";
+export const SCHEMA_LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/";
+
 /** The licence fields every dataset envelope carries, in canonical order. */
 export function licenseFields() {
   return { license: DATASET_LICENSE, licenseUrl: DATASET_LICENSE_URL };
+}
+
+/** Same, for the clean data/schema/ family (matrix row 12). */
+export function schemaLicenseFields() {
+  return { license: SCHEMA_LICENSE, licenseUrl: SCHEMA_LICENSE_URL };
 }
 
 export function generatedAtNow() {

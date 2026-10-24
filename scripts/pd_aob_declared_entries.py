@@ -41,6 +41,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+from dataset_meta import license_fields  # noqa: E402  (H5303: envelope licence)
+
 ROOT = Path(__file__).resolve().parent.parent
 ENTRIES_IN = ROOT / "data/pd/pd_aob_entries.tsv"
 WORKS_IN = ROOT / "data/pd/pd_aob_declared_works.tsv"
@@ -154,6 +157,7 @@ def measure():
     pct = {k: round(100.0 * n_covered / n, 2) for k, n in candidates.items()}
 
     return projected, {
+        **license_fields(),
         "generated_by": "H6932 scripts/pd_aob_declared_entries.py "
                         "(DeepSeek v4.1 Flash, deepseek/deepseek-flash)",
         "method": "projection of the committed H6720/H6960 entry inventory; "

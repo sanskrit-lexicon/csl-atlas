@@ -74,6 +74,9 @@ import sys
 import unicodedata
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+from dataset_meta import license_fields  # noqa: E402  (H5303: envelope licence)
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 
@@ -802,6 +805,7 @@ def measure(aob_path, families_path, join_path, witnesses=None):
         })
 
     summary = {
+        **license_fields(),
         "generated_by": "H6720/H6960 scripts/pd_aob_sigla_reconciliation.py "
                         "(DeepSeek v4.1 Flash, deepseek-flash)",
         "measured_on": "2026-10-18",
