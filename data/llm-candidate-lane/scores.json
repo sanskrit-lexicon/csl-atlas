@@ -147,6 +147,61 @@
         "accuracy": 0.216
       }
     ],
+    "agreement": {
+      "modelVsGoldKappa": -0.1017,
+      "modelVsGoldN": 500,
+      "observedAgreement": 0.216,
+      "expectedAgreement": 0.2884,
+      "alpha": null,
+      "alphaReason": "not computable: Krippendorff alpha needs two independent human rater columns; the frozen sample carries one gold label per row (see report §Limitations).",
+      "humanInterRater": {
+        "available": false,
+        "reason": "one gold label per row; the second independent human label required by H7101 is not in the frozen sample"
+      }
+    },
+    "bootstrap": {
+      "method": "paired percentile bootstrap over evaluated rows",
+      "iterations": 2000,
+      "seed": "H7101-2026-10-19",
+      "intervals": {
+        "coverage": {
+          "level": 0.95,
+          "low": 1,
+          "high": 1,
+          "n": 2000
+        },
+        "selectiveAccuracy": {
+          "level": 0.95,
+          "low": 0.18,
+          "high": 0.252,
+          "n": 2000
+        },
+        "accuracyAll": {
+          "level": 0.95,
+          "low": 0.18,
+          "high": 0.252,
+          "n": 2000
+        },
+        "macroF1AbstainZero": {
+          "level": 0.95,
+          "low": 0.0977,
+          "high": 0.169,
+          "n": 2000
+        },
+        "targetErrorF1": {
+          "level": 0.95,
+          "low": 0.3018,
+          "high": 0.4131,
+          "n": 2000
+        },
+        "anyCorrectionF1": {
+          "level": 0.95,
+          "low": 0.9119,
+          "high": 0.9451,
+          "n": 2000
+        }
+      }
+    },
     "path": "data/llm-candidate-lane/outputs/rule-baseline.jsonl",
     "sha256": "dca2bc074387aae8bda6d540cf28fb0e0e1c448d8896895f6b0f52269b3edc1a",
     "recordCount": 500,
@@ -276,6 +331,56 @@
       "fn": 0
     },
     "confidenceBins": [],
+    "agreement": {
+      "modelVsGoldKappa": null,
+      "modelVsGoldN": 0,
+      "observedAgreement": null,
+      "expectedAgreement": null,
+      "alpha": null,
+      "alphaReason": "not computable: Krippendorff alpha needs two independent human rater columns; the frozen sample carries one gold label per row (see report §Limitations).",
+      "humanInterRater": {
+        "available": false,
+        "reason": "one gold label per row; the second independent human label required by H7101 is not in the frozen sample"
+      }
+    },
+    "bootstrap": {
+      "method": "paired percentile bootstrap over evaluated rows",
+      "iterations": 2000,
+      "seed": "H7101-2026-10-19",
+      "intervals": {
+        "coverage": {
+          "level": 0.95,
+          "low": 0,
+          "high": 0,
+          "n": 2000
+        },
+        "selectiveAccuracy": null,
+        "accuracyAll": {
+          "level": 0.95,
+          "low": 0,
+          "high": 0,
+          "n": 2000
+        },
+        "macroF1AbstainZero": {
+          "level": 0.95,
+          "low": 0,
+          "high": 0,
+          "n": 2000
+        },
+        "targetErrorF1": {
+          "level": 0.95,
+          "low": 0,
+          "high": 0,
+          "n": 2000
+        },
+        "anyCorrectionF1": {
+          "level": 0.95,
+          "low": 0,
+          "high": 0,
+          "n": 2000
+        }
+      }
+    },
     "path": "data/llm-candidate-lane/outputs/llm-abstain.jsonl",
     "sha256": "f7160ac73c4a65537e1095334d75261cac8703783c8a1914259b8dd7103857ba",
     "recordCount": 500,
@@ -414,7 +519,62 @@
             "correct": 96,
             "accuracy": 0.24
           }
-        ]
+        ],
+        "agreement": {
+          "modelVsGoldKappa": -0.0766,
+          "modelVsGoldN": 400,
+          "observedAgreement": 0.24,
+          "expectedAgreement": 0.2941,
+          "alpha": null,
+          "alphaReason": "not computable: Krippendorff alpha needs two independent human rater columns; the frozen sample carries one gold label per row (see report §Limitations).",
+          "humanInterRater": {
+            "available": false,
+            "reason": "one gold label per row; the second independent human label required by H7101 is not in the frozen sample"
+          }
+        },
+        "bootstrap": {
+          "method": "paired percentile bootstrap over evaluated rows",
+          "iterations": 2000,
+          "seed": "H7101-2026-10-19",
+          "intervals": {
+            "coverage": {
+              "level": 0.95,
+              "low": 1,
+              "high": 1,
+              "n": 2000
+            },
+            "selectiveAccuracy": {
+              "level": 0.95,
+              "low": 0.2,
+              "high": 0.285,
+              "n": 2000
+            },
+            "accuracyAll": {
+              "level": 0.95,
+              "low": 0.2,
+              "high": 0.285,
+              "n": 2000
+            },
+            "macroF1AbstainZero": {
+              "level": 0.95,
+              "low": 0.0994,
+              "high": 0.1717,
+              "n": 2000
+            },
+            "targetErrorF1": {
+              "level": 0.95,
+              "low": 0.3155,
+              "high": 0.4311,
+              "n": 2000
+            },
+            "anyCorrectionF1": {
+              "level": 0.95,
+              "low": 1,
+              "high": 1,
+              "n": 2000
+            }
+          }
+        }
       },
       "llm": {
         "total": 400,
@@ -528,7 +688,57 @@
           "fp": 0,
           "fn": 0
         },
-        "confidenceBins": []
+        "confidenceBins": [],
+        "agreement": {
+          "modelVsGoldKappa": null,
+          "modelVsGoldN": 0,
+          "observedAgreement": null,
+          "expectedAgreement": null,
+          "alpha": null,
+          "alphaReason": "not computable: Krippendorff alpha needs two independent human rater columns; the frozen sample carries one gold label per row (see report §Limitations).",
+          "humanInterRater": {
+            "available": false,
+            "reason": "one gold label per row; the second independent human label required by H7101 is not in the frozen sample"
+          }
+        },
+        "bootstrap": {
+          "method": "paired percentile bootstrap over evaluated rows",
+          "iterations": 2000,
+          "seed": "H7101-2026-10-19",
+          "intervals": {
+            "coverage": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "selectiveAccuracy": null,
+            "accuracyAll": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "macroF1AbstainZero": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "targetErrorF1": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "anyCorrectionF1": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            }
+          }
+        }
       }
     },
     "review-queue": {
@@ -652,7 +862,62 @@
             "correct": 12,
             "accuracy": 0.12
           }
-        ]
+        ],
+        "agreement": {
+          "modelVsGoldKappa": 0.0014,
+          "modelVsGoldN": 100,
+          "observedAgreement": 0.12,
+          "expectedAgreement": 0.1188,
+          "alpha": null,
+          "alphaReason": "not computable: Krippendorff alpha needs two independent human rater columns; the frozen sample carries one gold label per row (see report §Limitations).",
+          "humanInterRater": {
+            "available": false,
+            "reason": "one gold label per row; the second independent human label required by H7101 is not in the frozen sample"
+          }
+        },
+        "bootstrap": {
+          "method": "paired percentile bootstrap over evaluated rows",
+          "iterations": 2000,
+          "seed": "H7101-2026-10-19",
+          "intervals": {
+            "coverage": {
+              "level": 0.95,
+              "low": 1,
+              "high": 1,
+              "n": 2000
+            },
+            "selectiveAccuracy": {
+              "level": 0.95,
+              "low": 0.06,
+              "high": 0.19,
+              "n": 2000
+            },
+            "accuracyAll": {
+              "level": 0.95,
+              "low": 0.06,
+              "high": 0.19,
+              "n": 2000
+            },
+            "macroF1AbstainZero": {
+              "level": 0.95,
+              "low": 0.0226,
+              "high": 0.0644,
+              "n": 2000
+            },
+            "targetErrorF1": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0.2581,
+              "n": 2000
+            },
+            "anyCorrectionF1": {
+              "level": 0.95,
+              "low": 0.4,
+              "high": 0.6111,
+              "n": 2000
+            }
+          }
+        }
       },
       "llm": {
         "total": 100,
@@ -766,14 +1031,75 @@
           "fp": 0,
           "fn": 0
         },
-        "confidenceBins": []
+        "confidenceBins": [],
+        "agreement": {
+          "modelVsGoldKappa": null,
+          "modelVsGoldN": 0,
+          "observedAgreement": null,
+          "expectedAgreement": null,
+          "alpha": null,
+          "alphaReason": "not computable: Krippendorff alpha needs two independent human rater columns; the frozen sample carries one gold label per row (see report §Limitations).",
+          "humanInterRater": {
+            "available": false,
+            "reason": "one gold label per row; the second independent human label required by H7101 is not in the frozen sample"
+          }
+        },
+        "bootstrap": {
+          "method": "paired percentile bootstrap over evaluated rows",
+          "iterations": 2000,
+          "seed": "H7101-2026-10-19",
+          "intervals": {
+            "coverage": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "selectiveAccuracy": null,
+            "accuracyAll": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "macroF1AbstainZero": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "targetErrorF1": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            },
+            "anyCorrectionF1": {
+              "level": 0.95,
+              "low": 0,
+              "high": 0,
+              "n": 2000
+            }
+          }
+        }
       }
     }
   },
   "comparison": {
     "verdict": "NO-GO",
     "status": "not-run",
-    "reason": "The LLM lane produced no predictions (coverage 0); no evidence of gain over the rule baseline. Do not expand or promote."
+    "reason": "The LLM lane produced no predictions (coverage 0); no evidence of gain over the rule baseline. Do not expand or promote.",
+    "pairedBootstrap": {
+      "metric": "macroF1AbstainZero",
+      "delta": -0.1284,
+      "level": 0.95,
+      "low": -0.169,
+      "high": -0.0977,
+      "excludesZero": true,
+      "positive": false,
+      "iterations": 2000,
+      "seed": "H7101-2026-10-19"
+    }
   },
   "stoppingRule": {
     "maxPromptTries": 6,

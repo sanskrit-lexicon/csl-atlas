@@ -24,6 +24,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { generatedAtNow, licenseFields, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 export const LANE_DIR = path.join("data", "llm-candidate-lane");
@@ -765,6 +766,6 @@ function main() {
   console.log(`llm outputs: ${LLM_OUTPUT_PATH} (runStatus=not-run-no-credentials)`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   main();
 }

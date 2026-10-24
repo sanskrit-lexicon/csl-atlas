@@ -90,6 +90,31 @@ floor, not a tuned target. On the 100-row human-adjudicated H5 subset it scores
 macro-F1 0.0432 and all-row accuracy 0.120, so the human-adjudication stratum is
 harder than the weak-label stratum, not easier.
 
+### Agreement and uncertainty
+
+`score-llm-candidate-lane.mjs` now reports a paired, seeded percentile
+bootstrap (2 000 resamples, seed `H7101-2026-10-19`) and Cohen's κ between each
+lane's non-abstained predictions and the gold label. Both lanes are resampled
+with the same indices, so the intervals are comparable.
+
+| Lane | Accuracy (all) | 95 % CI | Macro-F1 (abstain=0) | 95 % CI | Target-error F1 | 95 % CI | Binary any-correction F1 | 95 % CI | κ vs gold |
+|---|---:|---|---:|---|---:|---|---:|---|---:|
+| Rule baseline | 0.2160 | 0.1800–0.2520 | 0.1284 | 0.0977–0.1690 | 0.3589 | 0.3018–0.4131 | 0.9293 | 0.9119–0.9451 | −0.1017 (n=500) |
+| LLM lane (500 abstentions) | 0.0000 | 0.0000–0.0000 | 0.0000 | 0.0000–0.0000 | 0.0000 | 0.0000–0.0000 | 0.0000 | 0.0000–0.0000 | undefined (n=0) |
+
+The baseline κ is **negative**: on the five-label task it agrees with the gold
+less often than chance would (observed 0.216 vs expected 0.288). Its high
+any-correction F1 measures only that it almost never abstains and almost always
+says "a correction happened", which is true for 434 of 500 rows.
+
+Krippendorff α is **not reported**: computing it requires two independent human
+rater columns, and the frozen sample carries one gold label per row (weak diff
+label for the 400 correction-loci rows, human `reviewedValue` for the 100 H5
+rows). `scores.json` records this as a named null (`agreement.alphaReason`), not
+as a number. κ above is model-vs-gold agreement, not inter-human agreement, and
+must not be read as an annotation-quality statistic.
+
+
 ## Span provenance schema
 
 `provenance.schema.json` records, for each candidate:
@@ -106,19 +131,72 @@ null`). The schema forbids a human-review status on a machine candidate.
 
 ```bash
 npm run build-llm-candidate-lane
-npm run score-llm-candidate-lane
+npm run score-llm-candidate            # alias of score-llm-candidate-lane
+npm run validate-llm-candidate-lane
 node --test test/llm-candidate-lane.test.mjs
 
 # Credentialed run (the only path that may replace the abstain outputs):
 H7101_LLM_API_KEY=... H7101_LLM_MODEL=... \
   npm run run-llm-candidate-lane -- --out data/llm-candidate-lane/outputs/llm-run.jsonl
-npm run score-llm-candidate-lane -- --llm data/llm-candidate-lane/outputs/llm-run.jsonl
+npm run score-llm-candidate -- --llm data/llm-candidate-lane/outputs/llm-run.jsonl
 ```
 
 The tests lock the 500-row count, composition, no-gold-leak prompt rendering,
-six-variant cap, machine-candidate provenance, and abstention semantics.
+six-variant cap, machine-candidate provenance, abstention semantics, seeded-CI
+determinism, κ reporting, and the refusal to validate a schema keyword the
+checker cannot enforce (13 tests).
+
+The `build-llm-candidate-lane`, `run-llm-candidate-lane` and
+`score-llm-candidate-lane` npm entries were added by #604 but removed by the
+H7100 fix (#613) as a package.json merge side-effect; the 24-10-2026 pass
+restored them and added the handoff's exact `score-llm-candidate` /
+`run-llm-candidate-eval` aliases. The `import.meta.url === file://${argv[1]}`
+main-guard in both scripts also silently skipped `main()` on Windows; it now
+uses `pathToFileURL`, so `npm run score-llm-candidate` actually reproduces the
+tables above instead of printing nothing.
+
+## Limitations
+
+1. **One gold key, not two.** H7101 asks for two independent human labels and
+   adjudication per row. The frozen sample has one label per row. Krippendorff α
+   is therefore a named null, and the 400 correction-loci labels are weak diff
+   labels over human corrections, not a fresh editorial judgement.
+2. **The LLM lane is unrun, not scored.** All 500 LLM rows are explicit
+   abstentions (`runStatus: not-run-no-credentials`). The NO-GO is a NO-GO on
+   evidence, not a measured loss; a credentialed run is the only way to change
+   it, and it must use the frozen sample and P6.
+3. **The baseline is worse than chance on the five-label task** (κ −0.1017).
+   Its binary any-correction F1 0.9293 is largely the base rate (434/500 rows
+   need correction), so "beats the baseline" is a low bar that still requires a
+   positive paired lower bound.
+4. **The two strata are not interchangeable.** 400 rows are weak-label
+   correction loci; 100 are human-adjudicated H5 queue rows with different
+   semantics. Per-source scores are reported separately and no pooled number
+   should be read as a single task's precision.
+5. **Spend and call caps are untested.** The €5 / 500-call limits are enforced
+   by the runner's design, not by an executed run in this unit.
+
+## Handoff-spec path mapping
+
+H7101 named its deliverables before the lane's JSONL layout was chosen. The
+landed names below are canonical; the spec names are kept here so a later
+reader can reconcile the two without hunting.
+
+| H7101 spec path | Landed path |
+|---|---|
+| `data/llm_candidate/eval_sample.tsv` | `data/llm-candidate-lane/sample-500.jsonl` |
+| `data/llm_candidate/outputs.jsonl` | `data/llm-candidate-lane/outputs/llm-abstain.jsonl` (+ `rule-baseline.jsonl`) |
+| `data/schema/llm-candidate.schema.json` | `data/llm-candidate-lane/provenance.schema.json` |
+| `scripts/run-llm-candidate-eval.mjs` | `scripts/run-llm-candidate-lane.mjs` (`npm run run-llm-candidate-eval`) |
+| `scripts/score-llm-candidate.mjs` | `scripts/score-llm-candidate-lane.mjs` (`npm run score-llm-candidate`) |
+| `reports/LLM_CANDIDATE_LANE_2026.md` | `docs/H7101_LLM_CANDIDATE_LANE_REPORT.md` |
+| `docs/LLM_CANDIDATE_POLICY.md` | `docs/LLM_CANDIDATE_POLICY.md` (added 24-10-2026) |
+
+No TSV mirror was added: the sample is schema-bearing JSONL, and a second
+serialisation would be a second source of truth for the same 500 rows.
 
 ## Boundary
+
 
 - Atlas consumes correction events; `csl-corrections` owns them.
 - Candidate generation only; no auto-promotion, no review-status mutation.
