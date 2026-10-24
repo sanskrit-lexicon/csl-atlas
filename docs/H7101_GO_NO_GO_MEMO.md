@@ -22,6 +22,11 @@ corpus, or promoting any candidate row.
    human correction events, not a fresh second adjudication. Even a positive
    LLM score would need human adjudication of the candidate rows before any
    promotion.
+5. The baseline itself is weak evidence of difficulty: κ vs gold is −0.1017
+   (worse than chance on the five-label task), macro-F1 95 % CI 0.0977–0.1690.
+   Krippendorff α is not computable — the sample has one gold label per row and
+   the second independent human key required by H7101 does not exist yet. This
+   gap is a named residual, not a silent substitution.
 
 ## What is allowed next
 
@@ -29,8 +34,13 @@ A **single credentialed evaluation run** on the already-frozen
 `data/llm-candidate-lane/sample-500.jsonl` using prompt P6 and the recorded
 model revision. That run may only replace the abstain outputs; it may not
 change the sample, add prompt variants after seeing scores, or mutate review
-statuses. If its macro-F1 does not beat 0.1284, the lane stays NO-GO and the
-null is final for this design.
+statuses. It is scored by `npm run score-llm-candidate`, which now emits paired
+bootstrap CIs and model-vs-gold κ.
+
+The lane flips only if the LLM's macro-F1 beats 0.1284 **and** the paired
+bootstrap 95 % CI of the difference excludes zero. Beating a −0.10-κ baseline
+by a hair is not a GO: the baseline is a floor, and a two-point gain over a
+floor this low is not evidence of a usable triage signal.
 
 ## Stopping rule
 
