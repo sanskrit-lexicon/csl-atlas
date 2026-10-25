@@ -818,10 +818,19 @@ comes after — and DCS, welded to a lexical layer, is the Sanskrit form it woul
 > long-term grant**; it is building an electronic corpus of first-millennium Classical Tamil with
 > per-word concordances feeding a historical lexicon (definitions in English and modern Tamil,
 > medieval glosses layered on, every citation linked back to text, commentary and manuscript
-> witness). It publishes **no start year, no term length and no entry count** — so the paradigm
-> comparison stands and no rate can be computed from it. That is a finding, not a failure: a project
-> that publishes editions and concordances instead of fascicules has no alphabet-progress metric to
-> report. Figures to be requested from the project directly, not inferred.
+> witness). It publishes **no entry count** anywhere, so no rate can be computed from it. On the
+> term the project site is silent but its funder is not: the Academy's project page gives the
+> duration as **01.01.2023 to 31.12.2046**, a 24-year commitment in the Academies' Programme carried
+> half by the Federal Government and half by the Free and Hanseatic City of Hamburg
+> ([project page](https://www.awhamburg.de/en/research/long-term-projects/translate-to-en-tamilex.html)),
+> and the 9-12-2022 launch release puts the grant at **€11 million**, with a Hamburg core of one
+> informatics, two postdoc and one doctoral post
+> ([UHH press release](https://www.uni-hamburg.de/newsroom/presse/2022/pm73.html)).
+> **Corrected 25-10-2026:** this paragraph's earlier "no start year, no term length" holds for the
+> project site only; the funder publishes both. No entry count is published by either. That is a
+> finding, not a failure: a project that publishes editions and concordances instead of fascicules
+> has no alphabet-progress metric to report. Figures to be requested from the project directly, not
+> inferred.
 
 ### 8.11 Who finishes a dictionary — and why (a measured note)
 
@@ -877,8 +886,10 @@ information ecology, not a lesser one. Beyond it, Indian scholars produced *fini
 encyclopaedias — **Apte**, and the two great 19th-century Sanskrit-to-Sanskrit works
 **Śabdakalpadruma (SKD)** and **Vācaspatyam (VCP)**, both completed by single pandits and both in
 this study's own dataset. It is the modern *institutional* Indian projects that go harder: the
-BORI Prakrit dictionary is **far from finished**, the Madras **Tamil Lexicon is now being wholly
-remade in Hamburg** (it becomes TamiLex, §8.10), and among the modern bilingual efforts Apte
+BORI Prakrit dictionary is **far from finished**, the Madras **Tamil Lexicon's successor is
+being built in Hamburg** (TamiLex, §8.10, is a new historical dictionary that cross-references the
+Madras lexicon rather than reprinting it — corrected 25-10-2026), and among the modern bilingual
+efforts Apte
 largely stands alone as a completion.
 
 **The measured verdict.** The great dictionaries came from wherever **bounded scope met a
