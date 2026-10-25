@@ -19,7 +19,10 @@ const VALIDATORS = [
   "validate-four-axis-independence.mjs",
   "validate-l0-gqd.mjs",
   "validate-learner-index.mjs",
-  "validate-review-reports.mjs"
+  "validate-review-reports.mjs",
+  // H7101: the candidate-lane provenance contract (machine-candidate only,
+  // no reviewed status, every row validated against the committed schema).
+  "validate-llm-candidate-lane.mjs"
 ];
 
 function run(command, args) {
