@@ -144,7 +144,22 @@ npm run score-llm-candidate -- --llm data/llm-candidate-lane/outputs/llm-run.jso
 The tests lock the 500-row count, composition, no-gold-leak prompt rendering,
 six-variant cap, machine-candidate provenance, abstention semantics, seeded-CI
 determinism, κ reporting, and the refusal to validate a schema keyword the
-checker cannot enforce (13 tests).
+checker cannot enforce (14 tests). `validate-llm-candidate-lane.mjs` is part of
+the `npm run verify` chain since 25-10-2026, so the provenance contract is
+enforced on every PR and on every push to `main` — not only when someone
+remembers to run it by hand.
+
+### Verification receipt — 25-10-2026
+
+Fresh clone of `main` (`e8e5771`), portable Node v20.19.0, Windows:
+
+| Check | Command | Result |
+|---|---|---|
+| Lane tests | `node --test test/llm-candidate-lane.test.mjs` | 14 pass / 0 fail |
+| Schema + provenance gate | `node scripts/validate-llm-candidate-lane.mjs` | `status: OK`, 500 sample rows, 2 output files valid, 0 violations |
+| Scorer reproduction | `npm run score-llm-candidate` | rewrites `data/llm-candidate-lane/scores.json` byte-identically (`git status` clean; only the preserved `generatedAt`) |
+| Generator determinism | `npm run build-llm-candidate-lane` | sample, prompts, both output files and scores unchanged (`git status` clean) |
+| Verdict | — | NO-GO, unchanged; `llm.coverage = 0`, 500 explicit abstentions |
 
 The `build-llm-candidate-lane`, `run-llm-candidate-lane` and
 `score-llm-candidate-lane` npm entries were added by #604 but removed by the
