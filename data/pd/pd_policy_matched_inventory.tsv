@@ -1,0 +1,12 @@
+row_kind	scope	family	headwords	headwords_zero_attestation	headwords_at_most_one	share_of_scope_pct	median_attestations	mean_attestations	attestation_mass	note
+family_share	pd_only	simplex	16672	282	11391	16.53	1.0	2.24	37298	
+family_share	pd_only	derivative	12313	78	8015	12.21	1.0	2.58	31809	
+family_share	pd_only	compound	69703	796	45097	69.1	1.0	2.71	189101	
+family_share	pd_only	unclassified	2178	19	1533	2.16	1.0	1.93	4202	
+family_share	pd_only	all	100866	1175	66036	100.0	1.0	2.6	262410	
+family_share	shared	simplex	773	100	207	18.89	5.0	59.81	46236	
+family_share	shared	derivative	357	10	45	8.72	9.0	34.39	12276	
+family_share	shared	compound	2929	151	443	71.56	8.0	33.35	97674	
+family_share	shared	unclassified	34	3	8	0.83	4.5	38.06	1294	
+family_share	shared	all	4093	264	703	100.0	8.0	38.48	157480	
+inventory_contrast	pd_vs_pwg_span	all	104959							23.2x inventory contrast: lemmatisation-choice ratio, not a citation measure and not a per-headword claim

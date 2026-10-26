@@ -1,6 +1,6 @@
 # PD × DCS corpus-coverage dataset
 
-_Created: 20-07-2026 · Last updated: 18-10-2026_
+_Created: 20-07-2026 · Last updated: 26-10-2026_
 
 What share of the **Poona Dictionary**'s cited source canon does the **Digital Corpus of
 Sanskrit** hold? This directory is the first measurement — data, metrics, and crosswalk.
@@ -60,11 +60,30 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_volume_homogeneity.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.tsv) | 35 | H6947 per-fascicle-volume entry size, chars, blocks, quotations and dictionary-source marking share |
 | [pd_volume_homogeneity_bound.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity_bound.tsv) | 8 | H6947 the same measures for the 8 bound volumes |
 | [pd_volume_homogeneity.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.json) | — | H6947 totals, H6942/H6949 canaries, source decomposition, conversion diagnostics |
+| [pd_policy_matched_class.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_class.tsv) | 104,950 | H7297 frozen per-headword class from the H7110 rule (`simplex` / `derivative` / `compound` / `unclassified`) with the printed analysis for the 4,093 shared lemmas — the join unit of the policy-matched table; rebuild with `--build --pd <pd.txt>` |
+| [pd_policy_matched_density.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_density.tsv) | 6 | H7297 the policy-matched comparison: one row per stratum (simplex, derivative, compound, unclassified) with its PD/PWG denominators, ratio, bootstrap CI, median and below-parity count, plus the **standardised pooled** and **raw** rows side by side |
+| [pd_policy_matched_inventory.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_inventory.tsv) | 11 | H7297 PD-only inventory policy — headwords, zero/≤1-attestation counts, median, mean and attestation mass by class for PD-only against the shared set; the 23.2× contrast is labelled `inventory_contrast` and is **not** a citation measure |
+| [pd_policy_matched_density.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_density.json) | — | H7297 envelope: homograph policy, class rule and source hash, strata, the standardised/pd-mix/raw/simplex-only estimators, bootstrap settings, the frozen below-parity membership hash, inventory policy and canaries |
 
 | [page_economics.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/page_economics.tsv) | 3 | H7109 PD / PWG / OED page economics — pages, entries, lines, characters, per-page rates, columns, page size, each row naming its own source and page basis; regenerate with `python3 scripts/pd_page_economics.py --pd <pd.txt> --pwg ../csl-orig/v02/pwg/pwg.txt` |
 | [oed_page_sample.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/oed_page_sample.json) | 4 pages | H7109 the OED sample measured on page images — edition statement (1933 corrected re-issue of OED1 1928, vol. IV F–G), printed page and leaf IDs, columns, printed lines per column, visual entry counts, characters per column from the page's own OCR layer |
 | [pd_family_composition.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_family_composition.tsv) | 11 | H7110 family composition — per family: `pd_headwords`, `pwg_headwords`, classified count, compound/derivative/simplex counts and shares, one example per class (SLP1 `k1`) |
 | [pd_family_composition.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_family_composition.json) | — | H7110 envelope: the classification rule and suffix set, source SHA-256s, the 103,127 population reconciliation (102,747 analyses + 380 CORRECTIONS blocks), the whole-alphabet split, five examples per class per family, the privative recount under both rules, the density recompute, and the >15 pp ledger |
+
+## Policy-matched density (H7297)
+
+The raw 8.55× attestation / 9.53× quotation multiple over the 4,093 shared lemmas is not an
+artefact of the shared set's family mix. Stratified by the H7110 class of each lemma, PD is
+denser **inside every stratum** — 7.53× simplex, 8.56× derivative, 9.13× compound — and the
+equal-weight standardised pool is **8.41×** (95 % CI 7.68–9.27, stratified lemma bootstrap),
+against the unchanged raw **8.55×**. The 340 below-parity lemmas are frozen by membership
+hash (simplex 110, derivative 17, compound 209, unclassified 4). PD-only headwords are a
+separate, inventory-policy result: 100,866 extra headwords carrying a median of **one**
+attestation each, so the **23.2×** headword-inventory contrast is a lemmatisation-choice
+ratio and never a citation measure or a typical per-headword claim. Builder
+[`scripts/pd_policy_matched_density.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_policy_matched_density.py)
+(`--check` needs no source text); write-up
+[reports/PD_POLICY_MATCHED_DENSITY_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_POLICY_MATCHED_DENSITY_2026.md).
 
 ## Family composition (H7110)
 
