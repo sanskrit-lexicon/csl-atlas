@@ -480,7 +480,7 @@ def build(population, strata, boot, inv, classes, pd_sha):
         classification=OrderedDict(
             rule="scripts/lib/pd_family_rule.py (H7110): one analysis member => "
                  "simplex; last member in the 15-suffix set => derivative; else compound",
-            source_sha256=pd_sha or (pinned_class or {}).get("pd_sha256"),
+            source_sha256=pd_sha,
             universe=PINS["class_universe"], population=PINS["class_population"],
             classified=PINS["class_classified"],
             shared_classified=sum(1 for r in population if classes.get(r["k1"]) in FAMILIES),
