@@ -1,0 +1,178 @@
+{
+ "schema_version": "1.0",
+ "generated_by": "scripts/pd_shared_work_registry.py",
+ "handoff": "H7296",
+ "identity_rule": {
+  "index_claim_key": "folded printed siglum + folded printed Devanagari title (IAST fallback when the Devanagari cell is blank)",
+  "cross_source_join": "exact folded-siglum equality, refused when the fold names more than one work in the Index or in the AOB declared canon",
+  "no_fuzzy_matching": true,
+  "work_id": "PDW- + sha256(canonical seed)[:10]; seed priority Index > AOB > PWG bib > PW bib > harvested",
+  "labels": "verbatim source cells only; never generated"
+ },
+ "inputs": [
+  {
+   "path": "data/pd/pd_index_works.tsv",
+   "sha256": "44ef8d2aa6fb184919e1c0eb90d6ec26971ac8c80eb596535a28849e72e383fb",
+   "rows": 2031
+  },
+  {
+   "path": "data/pd/pd_aob_declared_works.tsv",
+   "sha256": "686f75d2601ae51537a792541d4d4e6fcf11e90816668afcb9a69b12428385e1",
+   "rows": 1112
+  },
+  {
+   "path": "data/pd/pd_siglum_families.tsv",
+   "sha256": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871",
+   "rows": 5106
+  },
+  {
+   "path": "data/pd/pd_aob_sigla_reconciliation.tsv",
+   "sha256": "ffaca8a29a8ab61330e5aeb326b09a86a7687733cb158a75356ec19794fbb1ae",
+   "rows": 2955
+  },
+  {
+   "path": "data/pd/pd_pwgbib_sigla.tsv",
+   "sha256": "a56732bde7a666832f4527fd1f65994e598991fb0fb7bb378b744a03e26b4b3d",
+   "rows": 2601
+  },
+  {
+   "path": "data/pd/pd_pwbib_sigla.tsv",
+   "sha256": "5aba81881090246dc7fae435395c4674ac1c876ece5600ec6f6a0a8ed52661fc",
+   "rows": 776
+  }
+ ],
+ "counts": {
+  "index_rows": 2031,
+  "index_blank_abbreviation_cells": 409,
+  "index_vision_rows": 1597,
+  "index_vision_low_rows": 434,
+  "aob_declared_works": 1112,
+  "aob_editions": 1118,
+  "pwgbib_sigla": 2601,
+  "pwbib_sigla": 776,
+  "works": 1923,
+  "unresolved_registry_rows": 416,
+  "edition_map_rows": 6072,
+  "shared_siglum_folds": 57,
+  "bib_sigla_out_of_pd_scope": {
+   "pwg_no_title": 2371,
+   "pwg_ambiguous": 114,
+   "pw_no_title": 538,
+   "pw_ambiguous": 114,
+   "pw": 1
+  },
+  "harvest_sigla_out_of_pd_scope": 2542
+ },
+ "works_by_label_kind": {
+  "index_title_iast": 1561,
+  "aob_declared_sample_title": 361,
+  "": 1
+ },
+ "unresolved_classes": {
+  "aob_join_aob_fragment_or_garble": 7,
+  "aob_join_aob_never_cited": 149,
+  "aob_join_aob_never_cited_near_miss": 78,
+  "aob_join_join_miss_siglum_equal": 9,
+  "blank_abbreviation_cell": 409,
+  "shared_siglum": 230,
+  "structural_siglum": 7
+ },
+ "validation": {
+  "state": "unvalidated_pending_double_annotation",
+  "kappa": null,
+  "kappa_status": "not_measured_no_double_annotation",
+  "adjudicated_rows": 0,
+  "sample_roles": {
+   "vision_low": 115,
+   "seeded_ordinary_control": 1,
+   "blank_cell": 409
+  },
+  "blank_cells": 409,
+  "vision_low_rows": 434,
+  "seeded_ordinary_control": "XCIII:4"
+ },
+ "canaries": {
+  "mahabha_homograph": {
+   "epic_siglum": "MahāBhā.",
+   "epic_work_id": "PDW-17d11a8946",
+   "grammar_siglum": "MahāBh.",
+   "grammar_work_id": "PDW-1413815235",
+   "distinct": true,
+   "merged": false
+  },
+  "near_homograph": {
+   "pairs": 142,
+   "skeleton_collisions": 32,
+   "merged": 0,
+   "distinct": true
+  },
+  "repeated_editions": {
+   "works": 6,
+   "rows": 12,
+   "all_one_work": true,
+   "examples": [
+    {
+     "work_id": "PDW-0de6e1c215",
+     "editions": 2,
+     "sigla": [
+      "AvadhiU"
+     ],
+     "one_work": true
+    },
+    {
+     "work_id": "PDW-3f2534f3d3",
+     "editions": 2,
+     "sigla": [
+      "MaitreU",
+      "MaitriU"
+     ],
+     "one_work": true
+    },
+    {
+     "work_id": "PDW-df2dd81ed2",
+     "editions": 2,
+     "sigla": [
+      "PranU.1",
+      "PranU.2"
+     ],
+     "one_work": true
+    }
+   ]
+  },
+  "commentary_inherited_siglum": {
+   "siglum": "AmaKoUd.",
+   "found": true,
+   "relation": "commentary_on",
+   "own_work_id": "PDW-32c4ac0411",
+   "base_work_id": "PDW-1d47aa1973",
+   "is_relation_not_merge": true,
+   "base_candidates": 1
+  },
+  "blank_and_vision_low_preserved": {
+   "index_rows": 2031,
+   "blank_cells": 409,
+   "vision_low_rows": 434,
+   "blank_expected": 409,
+   "vision_low_expected": 434,
+   "pass": true
+  },
+  "validation_contract": {
+   "kappa": null,
+   "kappa_status": "not_measured_no_double_annotation",
+   "adjudicated_rows": 0,
+   "control_row": "XCIII:4",
+   "all_unvalidated": true
+  },
+  "all_pass": true
+ },
+ "preliminary_figures": {
+  "figures": [
+   "3.11%",
+   "4.03%",
+   "breadth/depth headline bands"
+  ],
+  "status": "preliminary_until_rerun",
+  "rerun_in_this_unit": false,
+  "note": "This unit builds identity only; it does not rerun coverage, breadth/depth or effective-coverage claims."
+ }
+}

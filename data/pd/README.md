@@ -1,6 +1,6 @@
 # PD × DCS corpus-coverage dataset
 
-_Created: 20-07-2026 · Last updated: 18-10-2026_
+_Created: 20-07-2026 · Last updated: 26-10-2026_
 
 What share of the **Poona Dictionary**'s cited source canon does the **Digital Corpus of
 Sanskrit** hold? This directory is the first measurement — data, metrics, and crosswalk.
@@ -204,5 +204,26 @@ the Cologne archive is the canonical copy. DCS token counts =
   same producer (Deccan College), different time slice (a 1975-vintage corpus count) and a different
   object (texts excerpted, not books quoted). Test: [pd_aob_row_test_1473.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_row_test_1473.json)
   ([`scripts/pd_aob_row_test_1473.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_aob_row_test_1473.py), `--check` green).
+
+## Shared work-and-edition identity registry (H7296, Q3)
+
+The identity layer over the Index, the AOB canon and the PW / PWG bibliographies:
+2,031 Index rows → **1,923 work identities** (`PDW-…`), 6,072 edition-map records,
+416 explicit unresolved rows (409 printed blank abbreviation cells + 7 structural
+sigla), 57 siglum folds shared by more than one work and **never merged**.
+
+| File | What it is |
+|---|---|
+| [pd_work_registry.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry.tsv) | works + unresolved identity rows; per-record provenance and `unresolved_class` |
+| [pd_work_edition_map.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_edition_map.tsv) | every Index row, AOB edition, bibliography siglum, harvest attestation and `commentary_on` relation |
+| [pd_work_registry.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry.json) | the same registry, machine-readable |
+| [pd_work_registry_diagnostics.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry_diagnostics.json) | pinned input sha256, counts, canaries, validation contract |
+
+Builder: `python3 scripts/pd_shared_work_registry.py --check`; pins:
+`python3 -m pytest tests/forensic/test_pd_shared_work_registry.py -q`. All records
+stay `unvalidated_pending_double_annotation` — no kappa and no adjudication are
+claimed. The 3.11 % / 4.03 % and breadth/depth figures remain **preliminary until
+rerun**; this layer does not recompute them. Write-up:
+[reports/PD_SHARED_WORK_REGISTRY_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SHARED_WORK_REGISTRY_2026.md).
 
 _Dr. Mārcis Gasūns_
