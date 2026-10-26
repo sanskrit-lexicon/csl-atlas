@@ -1,4 +1,6 @@
 {
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "generated_by": "H6932 scripts/pd_aob_declared_entries.py (DeepSeek v4.1 Flash, deepseek/deepseek-flash)",
   "method": "projection of the committed H6720/H6960 entry inventory; no OCR re-parse. One row per entry with junk=no; title is the first comma-separated segment of title_tail; year is the first 1830-2029 token.",
   "inputs": {
@@ -14,7 +16,7 @@
     },
     "metrics": {
       "path": "data/pd/pd_dcs_metrics.json",
-      "sha256": "02ebee08936418e882b6e92e2ffb40888e80ea88c793ae1b27503537d2959416"
+      "sha256": "260593574cea35626f91a37e9be9778ce503f515343bd9bdc2c547f845b2edc0"
     }
   },
   "counts": {

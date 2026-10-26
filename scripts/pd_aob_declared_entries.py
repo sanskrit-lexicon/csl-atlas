@@ -41,6 +41,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lib"))
+from dataset_meta import license_fields  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 ENTRIES_IN = ROOT / "data/pd/pd_aob_entries.tsv"
 WORKS_IN = ROOT / "data/pd/pd_aob_declared_works.tsv"
@@ -235,6 +238,9 @@ def main(argv=None) -> int:
         return selftest()
 
     rows, summary = measure()
+    # H5303: the JSON envelope declares the matrix licence (first keys,
+    # matching the licenseFields() envelope order every dataset carries).
+    summary = {**license_fields(), **summary}
     tsv = render_tsv(rows)
     js = json.dumps(summary, ensure_ascii=False, indent=2) + "\n"
 

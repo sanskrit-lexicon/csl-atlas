@@ -1,4 +1,6 @@
 {
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "question": "Does MW cf. inherit PWG Vgl.? (LEXICOGRAPHY_ROADMAP §3.1)",
   "method": "Normalize both ends of every m3 edge (strip compound marker °/-, SLP1 accents, stray hyphens), dedupe per dict, then intersect edge sets restricted to source lemmas both dicts cross-reference. Overlap is a FLOOR (messy targets fail to match).",
   "verdict_mw_pwg": "PARTIAL overlap — a shared cross-reference CORE (MW 22% / PWG 9% of cross-refs on lemmas both treat, well above chance) plus large independent expansion in each tradition; NOT wholesale inheritance",

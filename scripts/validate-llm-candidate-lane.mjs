@@ -32,7 +32,10 @@ const EDIT_TYPES = Object.freeze([
   "no-correction"
 ]);
 
-const ANNOTATION_KEYWORDS = new Set(["$schema", "$id", "title", "description", "$comment", "examples", "default"]);
+const ANNOTATION_KEYWORDS = new Set(["$schema", "$id", "title", "description", "$comment", "examples", "default",
+  // H5303: the licence stamp rides on every envelope, including the schemas
+  // themselves (dataset-meta licenseFields()); annotation-only metadata.
+  "license", "licenseUrl"]);
 const ASSERTION_KEYWORDS = new Set([
   "type",
   "required",
