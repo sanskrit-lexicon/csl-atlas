@@ -1,0 +1,2833 @@
+{
+  "hid": "H7275",
+  "layer": "2 — frozen print-only sample",
+  "generated_by": "scripts/pd_two_layer_validation.py --manifest",
+  "status": "STOP_NO_PRINT_ACCESS",
+  "status_reason": "no page images of ledger rows 9.1-35 are available in the estate or over the read-only archive routes reachable from this box; entry identities cannot be observed, so the slots stay empty and no machine-text row is substituted.",
+  "frozen_before_measurement": true,
+  "seed_text": "H7275 print-only sample v1 | 26-10-2026 | ledger rows 9.1-35",
+  "seed": 12015586107804668026,
+  "quota_total": 300,
+  "allocation_rule": "per period 100 slots; within a period proportional to printed page count (largest remainder, ties by ledger id); pages ranked by sha256(seed_text|ledger_id|page); one slot per selected page at the fractional offset below, top to bottom",
+  "entry_rule": "at a slot take the first entry that BEGINS at or after the page point; if none begins on that page, take the first entry beginning on the next page; record its headword, printed page and the first citation tail",
+  "periods": [
+    {
+      "period": "2009-2011",
+      "year_lo": 2009,
+      "year_hi": 2011,
+      "quota": 100,
+      "rows": [
+        {
+          "ledger_id": "9.1",
+          "year": 2009,
+          "pp_lo": 4329,
+          "pp_hi": 4488,
+          "pages": 160,
+          "slots": 34
+        },
+        {
+          "ledger_id": "9.2",
+          "year": 2010,
+          "pp_lo": 4489,
+          "pp_hi": 4648,
+          "pages": 160,
+          "slots": 33
+        },
+        {
+          "ledger_id": "9.3",
+          "year": 2011,
+          "pp_lo": 4649,
+          "pp_hi": 4808,
+          "pages": 160,
+          "slots": 33
+        }
+      ]
+    },
+    {
+      "period": "2012-2016",
+      "year_lo": 2012,
+      "year_hi": 2016,
+      "quota": 100,
+      "rows": [
+        {
+          "ledger_id": "10.1",
+          "year": 2012,
+          "pp_lo": 4809,
+          "pp_hi": 5008,
+          "pages": 200,
+          "slots": 23
+        },
+        {
+          "ledger_id": "29",
+          "year": 2013,
+          "pp_lo": 5009,
+          "pp_hi": 5208,
+          "pages": 200,
+          "slots": 22
+        },
+        {
+          "ledger_id": "30",
+          "year": 2014,
+          "pp_lo": 5209,
+          "pp_hi": 5408,
+          "pages": 200,
+          "slots": 22
+        },
+        {
+          "ledger_id": "31",
+          "year": 2015,
+          "pp_lo": 5409,
+          "pp_hi": 5608,
+          "pages": 200,
+          "slots": 22
+        },
+        {
+          "ledger_id": "32",
+          "year": 2016,
+          "pp_lo": 5609,
+          "pp_hi": 5708,
+          "pages": 100,
+          "slots": 11
+        }
+      ]
+    },
+    {
+      "period": "2018-2019",
+      "year_lo": 2018,
+      "year_hi": 2019,
+      "quota": 100,
+      "rows": [
+        {
+          "ledger_id": "33",
+          "year": 2018,
+          "pp_lo": 5609,
+          "pp_hi": 5708,
+          "pages": 100,
+          "slots": 22
+        },
+        {
+          "ledger_id": "34",
+          "year": 2018,
+          "pp_lo": 5709,
+          "pp_hi": 5880,
+          "pages": 172,
+          "slots": 39
+        },
+        {
+          "ledger_id": "35",
+          "year": 2019,
+          "pp_lo": 5881,
+          "pp_hi": 6056,
+          "pages": 176,
+          "slots": 39
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4331,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 2,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4335,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 3,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4336,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 4,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4337,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 5,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4341,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 6,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4344,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 7,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4345,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 8,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4354,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 9,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4356,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 10,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4357,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 11,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4361,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 12,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4370,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 13,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4371,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 14,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4376,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 15,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4377,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 16,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4384,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 17,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4387,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 18,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4395,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 19,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4399,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 20,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4401,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 21,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4402,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 22,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4406,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 23,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4414,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 24,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4417,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 25,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4419,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 26,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4421,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 27,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4427,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 28,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4434,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 29,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4453,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 30,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4454,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 31,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4455,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 32,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4464,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 33,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4475,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 34,
+      "period": "2009-2011",
+      "ledger_id": "9.1",
+      "year": 2009,
+      "page": 4477,
+      "offset": 0.3117,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 35,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4499,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 36,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4508,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 37,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4514,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 38,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4515,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 39,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4517,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 40,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4519,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 41,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4520,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 42,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4534,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 43,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4538,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 44,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4545,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 45,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4546,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 46,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4550,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 47,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4551,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 48,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4558,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 49,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4559,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 50,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4564,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 51,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4567,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 52,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4572,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 53,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4574,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 54,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4590,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 55,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4594,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 56,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4596,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 57,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4600,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 58,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4607,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 59,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4609,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 60,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4611,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 61,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4619,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 62,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4620,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 63,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4637,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 64,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4639,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 65,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4640,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 66,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4645,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 67,
+      "period": "2009-2011",
+      "ledger_id": "9.2",
+      "year": 2010,
+      "page": 4646,
+      "offset": 0.6045,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 68,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4650,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 69,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4656,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 70,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4658,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 71,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4663,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 72,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4666,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 73,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4681,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 74,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4682,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 75,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4703,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 76,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4710,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 77,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4711,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 78,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4716,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 79,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4717,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 80,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4719,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 81,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4720,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 82,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4723,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 83,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4726,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 84,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4730,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 85,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4739,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 86,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4747,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 87,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4751,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 88,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4760,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 89,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4764,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 90,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4767,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 91,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4771,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 92,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4788,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 93,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4789,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 94,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4793,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 95,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4794,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 96,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4797,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 97,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4801,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 98,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4802,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 99,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4806,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 100,
+      "period": "2009-2011",
+      "ledger_id": "9.3",
+      "year": 2011,
+      "page": 4808,
+      "offset": 0.5561,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 101,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4809,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 102,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4820,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 103,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4822,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 104,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4846,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 105,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4849,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 106,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4852,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 107,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4857,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 108,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4860,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 109,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4862,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 110,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4863,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 111,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4867,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 112,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4879,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 113,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4880,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 114,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4894,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 115,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4898,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 116,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4899,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 117,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4904,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 118,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4908,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 119,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4911,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 120,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4915,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 121,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4923,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 122,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4925,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 123,
+      "period": "2012-2016",
+      "ledger_id": "10.1",
+      "year": 2012,
+      "page": 4987,
+      "offset": 0.3967,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 124,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5009,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 125,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5013,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 126,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5021,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 127,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5024,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 128,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5028,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 129,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5038,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 130,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5071,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 131,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5078,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 132,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5086,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 133,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5088,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 134,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5093,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 135,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5097,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 136,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5101,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 137,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5107,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 138,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5116,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 139,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5125,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 140,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5163,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 141,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5166,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 142,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5170,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 143,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5180,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 144,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5184,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 145,
+      "period": "2012-2016",
+      "ledger_id": "29",
+      "year": 2013,
+      "page": 5190,
+      "offset": 0.1403,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 146,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5218,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 147,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5232,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 148,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5237,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 149,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5243,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 150,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5256,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 151,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5268,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 152,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5283,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 153,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5287,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 154,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5294,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 155,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5301,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 156,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5321,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 157,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5326,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 158,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5343,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 159,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5357,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 160,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5361,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 161,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5370,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 162,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5372,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 163,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5377,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 164,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5379,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 165,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5386,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 166,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5391,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 167,
+      "period": "2012-2016",
+      "ledger_id": "30",
+      "year": 2014,
+      "page": 5401,
+      "offset": 0.8281,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 168,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5417,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 169,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5426,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 170,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5439,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 171,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5441,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 172,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5449,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 173,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5490,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 174,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5500,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 175,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5505,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 176,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5514,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 177,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5525,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 178,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5526,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 179,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5529,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 180,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5531,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 181,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5541,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 182,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5550,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 183,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5564,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 184,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5571,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 185,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5580,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 186,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5583,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 187,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5593,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 188,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5595,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 189,
+      "period": "2012-2016",
+      "ledger_id": "31",
+      "year": 2015,
+      "page": 5600,
+      "offset": 0.7727,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 190,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5609,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 191,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5638,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 192,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5639,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 193,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5647,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 194,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5657,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 195,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5668,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 196,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5675,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 197,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5677,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 198,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5680,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 199,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5699,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 200,
+      "period": "2012-2016",
+      "ledger_id": "32",
+      "year": 2016,
+      "page": 5708,
+      "offset": 0.506,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 201,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5610,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 202,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5611,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 203,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5618,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 204,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5620,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 205,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5625,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 206,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5627,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 207,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5630,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 208,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5635,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 209,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5636,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 210,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5639,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 211,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5644,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 212,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5650,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 213,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5671,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 214,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5672,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 215,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5674,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 216,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5677,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 217,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5693,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 218,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5695,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 219,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5696,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 220,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5700,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 221,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5701,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 222,
+      "period": "2018-2019",
+      "ledger_id": "33",
+      "year": 2018,
+      "page": 5707,
+      "offset": 0.3467,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 223,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5710,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 224,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5713,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 225,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5716,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 226,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5718,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 227,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5720,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 228,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5721,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 229,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5726,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 230,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5742,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 231,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5749,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 232,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5758,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 233,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5770,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 234,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5778,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 235,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5781,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 236,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5782,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 237,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5784,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 238,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5786,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 239,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5793,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 240,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5798,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 241,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5811,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 242,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5813,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 243,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5815,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 244,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5817,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 245,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5821,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 246,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5823,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 247,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5824,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 248,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5828,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 249,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5831,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 250,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5834,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 251,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5843,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 252,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5845,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 253,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5846,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 254,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5851,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 255,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5852,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 256,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5853,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 257,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5860,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 258,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5864,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 259,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5869,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 260,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5872,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 261,
+      "period": "2018-2019",
+      "ledger_id": "34",
+      "year": 2018,
+      "page": 5878,
+      "offset": 0.7602,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 262,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5883,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 263,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5884,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 264,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5885,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 265,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5887,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 266,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5897,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 267,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5905,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 268,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5914,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 269,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5920,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 270,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5932,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 271,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5940,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 272,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5948,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 273,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5962,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 274,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5967,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 275,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5972,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 276,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5978,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 277,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5979,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 278,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5980,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 279,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5981,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 280,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5985,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 281,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5987,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 282,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5988,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 283,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5990,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 284,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5992,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 285,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5994,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 286,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5995,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 287,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5996,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 288,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 5998,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 289,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6000,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 290,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6001,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 291,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6005,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 292,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6008,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 293,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6018,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 294,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6022,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 295,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6027,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 296,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6031,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 297,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6034,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 298,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6046,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 299,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6047,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    },
+    {
+      "slot": 300,
+      "period": "2018-2019",
+      "ledger_id": "35",
+      "year": 2019,
+      "page": 6053,
+      "offset": 0.2482,
+      "rule": "first entry beginning at or after this page point; else first entry beginning on the next page"
+    }
+  ],
+  "slots_tsv": "data/pd/pd_print_only_sample_slots.tsv",
+  "pins": {
+    "ledger_sha256": "dd97efb611533657921bfe4ce05d8447d5530a89799cf224bd9a39a411dc302c"
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "hid": "H7275",
+  "generated_by": "scripts/pd_two_layer_validation.py",
+  "layer": "1 — internal stability of the letter-a coverage headline",
+  "sources": {
+    "pd": {
+      "path_basename": "pd.txt",
+      "bytes": 55122076,
+      "sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442"
+    },
+    "ledger": {
+      "path": "data/pd/pd_publication_ledger.tsv",
+      "sha256": "dd97efb611533657921bfe4ce05d8447d5530a89799cf224bd9a39a411dc302c"
+    },
+    "siglum_families": {
+      "path": "data/pd/pd_siglum_families.tsv",
+      "sha256": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871"
+    }
+  },
+  "pins": {
+    "h1336_primary": 353512,
+    "h1336_covered": 88929,
+    "h1336_pct": 25.16,
+    "h6949_loci": 384217,
+    "h6949_continuation": 35673,
+    "h6949_attestations": 419890
+  },
+  "recount": {
+    "entries": 107630,
+    "loci": 384217,
+    "continuation_loci": 35673,
+    "attestations": 419890,
+    "structural_loci": 21331,
+    "secondary_loci": 4921,
+    "primary_loci": 348430,
+    "covered_loci": 88363,
+    "coverage_pct": 25.36,
+    "unmapped_tokens": 9535,
+    "unmapped_examples": [
+      [
+        "comm.",
+        5221
+      ],
+      [
+        "cf.",
+        906
+      ],
+      [
+        "iA.",
+        738
+      ],
+      [
+        "iB.",
+        663
+      ],
+      [
+        "pass.",
+        257
+      ],
+      [
+        "e.",
+        229
+      ],
+      [
+        "etc.",
+        138
+      ],
+      [
+        "pw.",
+        114
+      ],
+      [
+        "p.",
+        85
+      ],
+      [
+        "sg.",
+        72
+      ],
+      [
+        "pl.",
+        67
+      ],
+      [
+        "du.",
+        43
+      ],
+      [
+        "github.",
+        39
+      ],
+      [
+        "w.",
+        34
+      ],
+      [
+        "māṇḍP.",
+        32
+      ],
+      [
+        "r.",
+        32
+      ],
+      [
+        "nt.",
+        26
+      ],
+      [
+        "caus.",
+        18
+      ],
+      [
+        "yur.",
+        17
+      ],
+      [
+        "add.",
+        15
+      ]
+    ],
+    "note": "the H6949 unit reproduces its own pins exactly (384,217 loci + 35,673 continuation = 419,890 attestations).  Coverage is computed over MAPPED primary sigla only; the 9.5 k residual tokens are abbreviations such as comm./cf./e. and a short tail of OCR variants, excluded and reported rather than coerced."
+  },
+  "canaries": {
+    "loci_match_h6949": true,
+    "continuation_match_h6949": true,
+    "attestations_match_h6949": true,
+    "coverage_within_0_5pp_of_h1336": true
+  },
+  "stability": {
+    "pooled_pct": 25.36,
+    "min_fascicle_pct": 16.91,
+    "max_fascicle_pct": 36.9,
+    "full_range_pp": 19.98,
+    "fascicles_outside_2pp": 12,
+    "measured_fascicles": 24,
+    "leave_one_fascicle_out_min": 24.88,
+    "leave_one_fascicle_out_max": 25.61,
+    "work_bootstrap_ci_lo": 19.15,
+    "work_bootstrap_ci_hi": 31.52,
+    "work_bootstrap_reps": 5000,
+    "work_bootstrap_seed": 7275,
+    "top20_work_share_of_primary_pct": 17.23,
+    "top20_work_coverage_pct": 54.08,
+    "verdict_rule": "stable: every measured fascicle's coverage lies within ±2.0 pp of the pooled value; partially stable: the full range is ≤ 8.0 pp but at least one fascicle lies outside ±2.0 pp; not stable: the full range exceeds 8.0 pp.  Reported beside the work-level bootstrap CI and the leave-one-fascicle-out range, which are descriptive and do not change the label.",
+    "verdict": "not stable"
+  },
+  "per_fascicle": [
+    {
+      "ledger_id": "1.1",
+      "year": 1976,
+      "primary": 18485,
+      "covered": 4328,
+      "coverage_pct": 23.41
+    },
+    {
+      "ledger_id": "1.2",
+      "year": 1977,
+      "primary": 24366,
+      "covered": 6316,
+      "coverage_pct": 25.92
+    },
+    {
+      "ledger_id": "1.3",
+      "year": 1978,
+      "primary": 18120,
+      "covered": 3970,
+      "coverage_pct": 21.91
+    },
+    {
+      "ledger_id": "2.1",
+      "year": 1979,
+      "primary": 22795,
+      "covered": 5269,
+      "coverage_pct": 23.11
+    },
+    {
+      "ledger_id": "2.2",
+      "year": 1980,
+      "primary": 21095,
+      "covered": 5288,
+      "coverage_pct": 25.07
+    },
+    {
+      "ledger_id": "2.3",
+      "year": 1981,
+      "primary": 21862,
+      "covered": 5403,
+      "coverage_pct": 24.71
+    },
+    {
+      "ledger_id": "3.1",
+      "year": 1982,
+      "primary": 14009,
+      "covered": 3019,
+      "coverage_pct": 21.55
+    },
+    {
+      "ledger_id": "3.2",
+      "year": 1988,
+      "primary": 12521,
+      "covered": 3038,
+      "coverage_pct": 24.26
+    },
+    {
+      "ledger_id": "3.3",
+      "year": 1989,
+      "primary": 11817,
+      "covered": 2877,
+      "coverage_pct": 24.35
+    },
+    {
+      "ledger_id": "4.1",
+      "year": 1990,
+      "primary": 11458,
+      "covered": 2452,
+      "coverage_pct": 21.4
+    },
+    {
+      "ledger_id": "4.2",
+      "year": 1991,
+      "primary": 12018,
+      "covered": 3003,
+      "coverage_pct": 24.99
+    },
+    {
+      "ledger_id": "4.3",
+      "year": 1992,
+      "primary": 11906,
+      "covered": 2954,
+      "coverage_pct": 24.81
+    },
+    {
+      "ledger_id": "5.1",
+      "year": 1994,
+      "primary": 11749,
+      "covered": 2713,
+      "coverage_pct": 23.09
+    },
+    {
+      "ledger_id": "5.2",
+      "year": 1994,
+      "primary": 7851,
+      "covered": 2324,
+      "coverage_pct": 29.6
+    },
+    {
+      "ledger_id": "5.3",
+      "year": 1997,
+      "primary": 15738,
+      "covered": 3955,
+      "coverage_pct": 25.13
+    },
+    {
+      "ledger_id": "6.1",
+      "year": 1998,
+      "primary": 12125,
+      "covered": 3094,
+      "coverage_pct": 25.52
+    },
+    {
+      "ledger_id": "6.2",
+      "year": 2002,
+      "primary": 11812,
+      "covered": 3665,
+      "coverage_pct": 31.03
+    },
+    {
+      "ledger_id": "6.3",
+      "year": 2003,
+      "primary": 12845,
+      "covered": 3918,
+      "coverage_pct": 30.5
+    },
+    {
+      "ledger_id": "7.1",
+      "year": 2003,
+      "primary": 11153,
+      "covered": 2068,
+      "coverage_pct": 18.54
+    },
+    {
+      "ledger_id": "7.2",
+      "year": 2004,
+      "primary": 14769,
+      "covered": 5095,
+      "coverage_pct": 34.5
+    },
+    {
+      "ledger_id": "7.3",
+      "year": 2005,
+      "primary": 13740,
+      "covered": 3632,
+      "coverage_pct": 26.43
+    },
+    {
+      "ledger_id": "8.1",
+      "year": 2006,
+      "primary": 12479,
+      "covered": 3209,
+      "coverage_pct": 25.72
+    },
+    {
+      "ledger_id": "8.2",
+      "year": 2007,
+      "primary": 9897,
+      "covered": 1674,
+      "coverage_pct": 16.91
+    },
+    {
+      "ledger_id": "8.3",
+      "year": 2008,
+      "primary": 13820,
+      "covered": 5099,
+      "coverage_pct": 36.9
+    }
+  ],
+  "layer2": {
+    "status": "STOP_NO_PRINT_ACCESS",
+    "manifest": "data/pd/pd_print_only_sample_manifest.json",
+    "note": "the manifest is generated from the ledger alone, before any measurement; no entry identity is claimed and no machine-text row is substituted (H7275 mission, layer 2).",
+    "verdict_rule": "assessed only if the 300 print-only slots resolve to entries on page images; otherwise STOP_NO_PRINT_ACCESS and no verdict.",
+    "verdict": "not assessed — STOP_NO_PRINT_ACCESS"
+  }
+}

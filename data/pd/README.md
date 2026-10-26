@@ -77,6 +77,20 @@ prefix rule, 9,452 once accented privatives like *á-cyuta* are counted, which m
 without-privatives density multiple 21.3× → 21.1×). Full write-up:
 [reports/PD_FAMILY_COMPOSITION_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_FAMILY_COMPOSITION_2026.md).
 
+## Two-layer validation (H7275)
+
+The 25.2 % headline is **not stable as a fascicle-level constant**: across the 24
+measured fascicles it ranges 16.9–36.9 % (12 of 24 outside ±2 pp), while
+leave-one-fascicle-out stays at 24.9–25.6 % and a work-level bootstrap gives
+19.2–31.5 %. The recomputed pooled value is 88,363 / 348,430 = 25.36 % over mapped
+primary sigla (the pinned H1336 point is 25.16 %). The 11 print-only ledger rows
+(2009–2019) are unmeasured: a 300-slot sample is frozen from the ledger alone and
+recorded as **STOP_NO_PRINT_ACCESS**, not substituted with machine-text rows.
+Tables: `pd_two_layer_fascicle.tsv`, `pd_two_layer_class.tsv`,
+`pd_two_layer_stability.json`, `pd_print_only_sample_manifest.json`; builder
+[`scripts/pd_two_layer_validation.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_two_layer_validation.py);
+write-up [reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md).
+
 ## Silent inheritance (H6948)
 
 The bracket mark is PD's only machine-visible trace of inheritance, so `1.67 %` needed a
