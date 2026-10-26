@@ -71,6 +71,10 @@ GATES = (
      (PD_TXT, PWG_TXT),
      "PD/PWG attestation decomposition",
      ("--pd", PD_TXT, "--pwg", PWG_TXT)),
+    ("pd_shared_work_registry.py",
+     (),
+     "PD shared work-and-edition identity registry",
+     ()),
 )
 
 
