@@ -1,6 +1,6 @@
 # PD × DCS corpus-coverage dataset
 
-_Created: 20-07-2026 · Last updated: 26-10-2026_
+_Created: 20-07-2026 · Last updated: 27-10-2026_
 
 What share of the **Poona Dictionary**'s cited source canon does the **Digital Corpus of
 Sanskrit** hold? This directory is the first measurement — data, metrics, and crosswalk.
@@ -109,6 +109,25 @@ Tables: `pd_two_layer_fascicle.tsv`, `pd_two_layer_class.tsv`,
 `pd_two_layer_stability.json`, `pd_print_only_sample_manifest.json`; builder
 [`scripts/pd_two_layer_validation.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_two_layer_validation.py);
 write-up [reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md).
+
+## KoshaSHRI staleness audit (H7300)
+
+Three panels, four separate verdicts, against the KoshaSHRI portal (Deccan
+College, all rights reserved — public per-volume JSON metadata only). Cologne's
+digital PD is **stale by 11 volumes / 1,728 pages / 2009–2019** against the
+print record (ends vol 24, 2008, p. 4328; print reaches vol 35, 2019, p. 6056);
+the portal metadata is current through 2019 (snapshot 27-10-2026, 33/35 volume
+ids answer — the 12/14 gap is C7's, unchanged). The v7/v8 bracketed-source-mark
+print control (4 scan pages, 20 marks) finds **no conversion loss and no
+editorial divergence**; the 2009–2019 fidelity panel is **STOP_NO_PRINT_ACCESS**.
+Tables: `pd_koshashri_markup_comparison.tsv`, `pd_koshashri_content_coverage.tsv`,
+`pd_koshashri_staleness_verdicts.json`, `pd_koshashri_canaries.tsv` (five pins),
+`pd_v78_bracket_mark_control.tsv`, snapshots `pd_koshashri_volume_snapshot_2026-10-27.json`
++ `pd_cologne_tag_census_2026-10-27.json`, rights note
+`pd_koshashri_rights_provenance.md`; builder
+[`scripts/pd_koshashri_staleness_audit.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_koshashri_staleness_audit.py) (`--check`);
+tests `tests/forensic/test_pd_koshashri_staleness_audit.py`; write-up
+[reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md).
 
 ## Silent inheritance (H6948)
 

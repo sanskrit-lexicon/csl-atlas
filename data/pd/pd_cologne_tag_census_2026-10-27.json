@@ -1,0 +1,41 @@
+{
+ "handoff": "H7300",
+ "probe_date": "2026-10-27",
+ "source": "https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/downloads/pdtxt.zip",
+ "zip_bytes": 19018957,
+ "txt_bytes": 55122076,
+ "tag_counts": {
+  "<L>": 107630,
+  "<LEND>": 107630,
+  "<pc>": 107630,
+  "<k1>": 107630,
+  "<k2>": 107630,
+  "<h>": 1543,
+  "<div n=\"lb\">": 440003,
+  "<ls>": 0,
+  "<ab>": 0,
+  "<info>": 0,
+  "<body>": 0,
+  "<tail>": 0
+ },
+ "bracketed_lexicon_siglum_marks_scan_vols_7_8": {
+  "marks": 141,
+  "entries": 135,
+  "sigla_set": [
+   "APTE",
+   "APTE.",
+   "DBHS",
+   "DBHS.",
+   "MW",
+   "MW.",
+   "PW",
+   "PW.",
+   "VIŚVA.",
+   "pw",
+   "pw.",
+   "ŚabdaKaDru."
+  ]
+ },
+ "max_pc_anchor": "8-4327a",
+ "note": "reproduces the 25-10-2026 audit census exactly; <ls>/<ab>/<info>/<body>/<tail> are absent from PDScan"
+}
