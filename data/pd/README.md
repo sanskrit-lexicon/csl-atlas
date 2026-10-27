@@ -1,6 +1,6 @@
 # PD × DCS corpus-coverage dataset
 
-_Created: 20-07-2026 · Last updated: 18-10-2026_
+_Created: 20-07-2026 · Last updated: 27-10-2026_
 
 What share of the **Poona Dictionary**'s cited source canon does the **Digital Corpus of
 Sanskrit** hold? This directory is the first measurement — data, metrics, and crosswalk.
@@ -60,11 +60,30 @@ Vedic core (+3.8 pp token-weighted coverage; Śatapathabrāhmaṇa grew 3,718→
 | [pd_volume_homogeneity.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.tsv) | 35 | H6947 per-fascicle-volume entry size, chars, blocks, quotations and dictionary-source marking share |
 | [pd_volume_homogeneity_bound.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity_bound.tsv) | 8 | H6947 the same measures for the 8 bound volumes |
 | [pd_volume_homogeneity.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_volume_homogeneity.json) | — | H6947 totals, H6942/H6949 canaries, source decomposition, conversion diagnostics |
+| [pd_policy_matched_class.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_class.tsv) | 104,950 | H7297 frozen per-headword class from the H7110 rule (`simplex` / `derivative` / `compound` / `unclassified`) with the printed analysis for the 4,093 shared lemmas — the join unit of the policy-matched table; rebuild with `--build --pd <pd.txt>` |
+| [pd_policy_matched_density.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_density.tsv) | 6 | H7297 the policy-matched comparison: one row per stratum (simplex, derivative, compound, unclassified) with its PD/PWG denominators, ratio, bootstrap CI, median and below-parity count, plus the **standardised pooled** and **raw** rows side by side |
+| [pd_policy_matched_inventory.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_inventory.tsv) | 11 | H7297 PD-only inventory policy — headwords, zero/≤1-attestation counts, median, mean and attestation mass by class for PD-only against the shared set; the 23.2× contrast is labelled `inventory_contrast` and is **not** a citation measure |
+| [pd_policy_matched_density.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_policy_matched_density.json) | — | H7297 envelope: homograph policy, class rule and source hash, strata, the standardised/pd-mix/raw/simplex-only estimators, bootstrap settings, the frozen below-parity membership hash, inventory policy and canaries |
 
 | [page_economics.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/page_economics.tsv) | 3 | H7109 PD / PWG / OED page economics — pages, entries, lines, characters, per-page rates, columns, page size, each row naming its own source and page basis; regenerate with `python3 scripts/pd_page_economics.py --pd <pd.txt> --pwg ../csl-orig/v02/pwg/pwg.txt` |
 | [oed_page_sample.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/oed_page_sample.json) | 4 pages | H7109 the OED sample measured on page images — edition statement (1933 corrected re-issue of OED1 1928, vol. IV F–G), printed page and leaf IDs, columns, printed lines per column, visual entry counts, characters per column from the page's own OCR layer |
 | [pd_family_composition.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_family_composition.tsv) | 11 | H7110 family composition — per family: `pd_headwords`, `pwg_headwords`, classified count, compound/derivative/simplex counts and shares, one example per class (SLP1 `k1`) |
 | [pd_family_composition.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_family_composition.json) | — | H7110 envelope: the classification rule and suffix set, source SHA-256s, the 103,127 population reconciliation (102,747 analyses + 380 CORRECTIONS blocks), the whole-alphabet split, five examples per class per family, the privative recount under both rules, the density recompute, and the >15 pp ledger |
+
+## Policy-matched density (H7297)
+
+The raw 8.55× attestation / 9.53× quotation multiple over the 4,093 shared lemmas is not an
+artefact of the shared set's family mix. Stratified by the H7110 class of each lemma, PD is
+denser **inside every stratum** — 7.53× simplex, 8.56× derivative, 9.13× compound — and the
+equal-weight standardised pool is **8.41×** (95 % CI 7.68–9.27, stratified lemma bootstrap),
+against the unchanged raw **8.55×**. The 340 below-parity lemmas are frozen by membership
+hash (simplex 110, derivative 17, compound 209, unclassified 4). PD-only headwords are a
+separate, inventory-policy result: 100,866 extra headwords carrying a median of **one**
+attestation each, so the **23.2×** headword-inventory contrast is a lemmatisation-choice
+ratio and never a citation measure or a typical per-headword claim. Builder
+[`scripts/pd_policy_matched_density.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_policy_matched_density.py)
+(`--check` needs no source text); write-up
+[reports/PD_POLICY_MATCHED_DENSITY_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_POLICY_MATCHED_DENSITY_2026.md).
 
 ## Family composition (H7110)
 
@@ -76,6 +95,39 @@ compounds, 29.4 % simplex) is a table-worthy exception; the privative *a‑* and
 prefix rule, 9,452 once accented privatives like *á-cyuta* are counted, which moves the
 without-privatives density multiple 21.3× → 21.1×). Full write-up:
 [reports/PD_FAMILY_COMPOSITION_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_FAMILY_COMPOSITION_2026.md).
+
+## Two-layer validation (H7275)
+
+The 25.2 % headline is **not stable as a fascicle-level constant**: across the 24
+measured fascicles it ranges 16.9–36.9 % (12 of 24 outside ±2 pp), while
+leave-one-fascicle-out stays at 24.9–25.6 % and a work-level bootstrap gives
+19.2–31.5 %. The recomputed pooled value is 88,363 / 348,430 = 25.36 % over mapped
+primary sigla (the pinned H1336 point is 25.16 %). The 11 print-only ledger rows
+(2009–2019) are unmeasured: a 300-slot sample is frozen from the ledger alone and
+recorded as **STOP_NO_PRINT_ACCESS**, not substituted with machine-text rows.
+Tables: `pd_two_layer_fascicle.tsv`, `pd_two_layer_class.tsv`,
+`pd_two_layer_stability.json`, `pd_print_only_sample_manifest.json`; builder
+[`scripts/pd_two_layer_validation.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_two_layer_validation.py);
+write-up [reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md).
+
+## KoshaSHRI staleness audit (H7300)
+
+Three panels, four separate verdicts, against the KoshaSHRI portal (Deccan
+College, all rights reserved — public per-volume JSON metadata only). Cologne's
+digital PD is **stale by 11 volumes / 1,728 pages / 2009–2019** against the
+print record (ends vol 24, 2008, p. 4328; print reaches vol 35, 2019, p. 6056);
+the portal metadata is current through 2019 (snapshot 27-10-2026, 33/35 volume
+ids answer — the 12/14 gap is C7's, unchanged). The v7/v8 bracketed-source-mark
+print control (4 scan pages, 20 marks) finds **no conversion loss and no
+editorial divergence**; the 2009–2019 fidelity panel is **STOP_NO_PRINT_ACCESS**.
+Tables: `pd_koshashri_markup_comparison.tsv`, `pd_koshashri_content_coverage.tsv`,
+`pd_koshashri_staleness_verdicts.json`, `pd_koshashri_canaries.tsv` (five pins),
+`pd_v78_bracket_mark_control.tsv`, snapshots `pd_koshashri_volume_snapshot_2026-10-27.json`
++ `pd_cologne_tag_census_2026-10-27.json`, rights note
+`pd_koshashri_rights_provenance.md`; builder
+[`scripts/pd_koshashri_staleness_audit.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_koshashri_staleness_audit.py) (`--check`);
+tests `tests/forensic/test_pd_koshashri_staleness_audit.py`; write-up
+[reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md).
 
 ## Silent inheritance (H6948)
 
@@ -190,5 +242,26 @@ the Cologne archive is the canonical copy. DCS token counts =
   same producer (Deccan College), different time slice (a 1975-vintage corpus count) and a different
   object (texts excerpted, not books quoted). Test: [pd_aob_row_test_1473.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_row_test_1473.json)
   ([`scripts/pd_aob_row_test_1473.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_aob_row_test_1473.py), `--check` green).
+
+## Shared work-and-edition identity registry (H7296, Q3)
+
+The identity layer over the Index, the AOB canon and the PW / PWG bibliographies:
+2,031 Index rows → **1,923 work identities** (`PDW-…`), 6,072 edition-map records,
+416 explicit unresolved rows (409 printed blank abbreviation cells + 7 structural
+sigla), 57 siglum folds shared by more than one work and **never merged**.
+
+| File | What it is |
+|---|---|
+| [pd_work_registry.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry.tsv) | works + unresolved identity rows; per-record provenance and `unresolved_class` |
+| [pd_work_edition_map.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_edition_map.tsv) | every Index row, AOB edition, bibliography siglum, harvest attestation and `commentary_on` relation |
+| [pd_work_registry.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry.json) | the same registry, machine-readable |
+| [pd_work_registry_diagnostics.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry_diagnostics.json) | pinned input sha256, counts, canaries, validation contract |
+
+Builder: `python3 scripts/pd_shared_work_registry.py --check`; pins:
+`python3 -m pytest tests/forensic/test_pd_shared_work_registry.py -q`. All records
+stay `unvalidated_pending_double_annotation` — no kappa and no adjudication are
+claimed. The 3.11 % / 4.03 % and breadth/depth figures remain **preliminary until
+rerun**; this layer does not recompute them. Write-up:
+[reports/PD_SHARED_WORK_REGISTRY_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SHARED_WORK_REGISTRY_2026.md).
 
 _Dr. Mārcis Gasūns_

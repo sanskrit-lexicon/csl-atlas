@@ -1,0 +1,7 @@
+row_kind	stratum	weight	lemmas	lemmas_with_pwg_attestation	pd_attestations	pwg_attestations	attestation_ratio	attestation_ratio_lo	attestation_ratio_hi	pd_quotations	pwg_quotations	quotation_ratio	median_attestation_ratio	below_parity_lemmas	below_parity_pct
+stratum	simplex	0.3333	773	624	46236	6144	7.5254	6.217	9.0942	27566	3279	8.4068	3.0	110	14.23
+stratum	derivative	0.3333	357	314	12276	1434	8.5607	6.9481	10.6453	8086	840	9.6262	5.0	17	4.76
+stratum	compound	0.3333	2929	2635	97674	10699	9.1293	8.6357	9.6516	60851	5999	10.1435	4.5	209	7.14
+stratum	unclassified		34	30	1294	146	8.863			910	107	8.5047	3.0	4	11.76
+pooled	pooled_standardised_equal_weight	1.0	4093	3603	157480	18423	8.4051	7.6798	9.2733	97413	10225			340	8.31
+pooled	pooled_raw_ratio_of_sums		4093	3603	157480	18423	8.548	7.9929	9.1546	97413	10225	9.5269	4.0	340	8.31

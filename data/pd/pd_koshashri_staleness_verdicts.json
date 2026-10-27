@@ -1,0 +1,82 @@
+{
+ "handoff": "H7300",
+ "generated": "2026-10-27",
+ "panels": {
+  "A_markup_capability": {
+   "artifact": "data/pd/pd_koshashri_markup_comparison.tsv",
+   "cologne_L_records": 107630,
+   "cologne_absent_tags": {
+    "<ls>": 0,
+    "<ab>": 0,
+    "<info>": 0
+   },
+   "koshashri_volume_json_ok": 33,
+   "koshashri_volume_json_error": 2
+  },
+  "B_dated_content_coverage": {
+   "artifact": "data/pd/pd_koshashri_content_coverage.tsv",
+   "print_record_volumes": 35,
+   "print_record_year_span": [
+    1976,
+    2019
+   ],
+   "print_record_final_page": 6056,
+   "cologne_digital_pages": 4330,
+   "cologne_digital_volumes": 24,
+   "cologne_digital_ends": "vol 24, 2008, p. 4328",
+   "pune_only_volumes": 11,
+   "pune_only_pages": 1728,
+   "pune_only_pages_naive_sum": 1816,
+   "pune_only_year_span": "2009-2019",
+   "source_anomalies": [
+    "ledger rows 32 and 33 share the identical page range 5609-5708 (years 2016 and 2018) — 100 pages double-listed",
+    "volume 6: portal year 1980 vs ledger year 1981 (row 2.3)",
+    "volume id 12: portal JSON answers an error page; pages 2287-2446 and year 1992 taken from the committed H7275 ledger, unverified against the portal",
+    "volume id 14: portal JSON answers an error page; pages 2607-2689 and year 1994 taken from the committed H7275 ledger, unverified against the portal",
+    "volume 32: portal year 2016 vs ledger year 2015 (row 31)",
+    "volume 32: portal range 5521-5608 vs ledger row 31 5409-5608",
+    "volume 33: portal year 2017 vs ledger year 2016 (row 32)"
+   ]
+  },
+  "C_print_fidelity_v78_control": {
+   "artifact": "data/pd/pd_v78_bracket_mark_control.tsv",
+   "pages_sampled": [
+    "7-3485a",
+    "7-3485b",
+    "7-3549a",
+    "7-3559a",
+    "8-4168a"
+   ],
+   "marks_checked": 20,
+   "consistent": 20,
+   "print_only_marks_missing_from_machine": 0,
+   "absent_from_both": 0
+  },
+  "C_print_fidelity_2009_2019": {
+   "verdict": "STOP_NO_PRINT_ACCESS",
+   "reason": "no page images of ledger rows 9.1-35 (2009-2019) are reachable in the estate (H7275 layer-2 precedent, 26-10-2026); KoshaSHRI entry preview is login-walled and no permission is held"
+  }
+ },
+ "verdicts": {
+  "schema_staleness": "COLOGNE_FLAT_RECORD_SCHEMA (no <ls>/<ab>/<info>; sigla plain text) vs PUNE_STRUCTURED_DB (typed per-volume JSON); Pune's entry-level schema is UNKNOWN_NOT_PUBLICLY_OBSERVABLE — login-walled, never probed past the gate",
+  "content_coverage": "COLOGNE_DIGITAL_STALE: ends vol 24 (2008, p. 4328); the print record reaches vol 35 (2019, p. 6056); Pune-only tail = 11 volumes / 1728 pages / 2009-2019; KoshaSHRI portal metadata current through 2019 as of 2026-10-27",
+  "conversion_loss": "NOT_DETECTED_IN_V78_SAMPLE: 20/20 bracketed source marks on 4 print pages of vols 7-8 present in both print and machine text; 0 print-only marks; sample is not the dictionary",
+  "editorial_change": "NO_POSITIVE_CLAIM: tags alone prove nothing; in the v7/v8 print-checked sample no divergence was seen (20 marks, incl. bare-vs-bracketed DBHS. variation matching print); for the 2009-2019 tail: STOP_NO_PRINT_ACCESS"
+ },
+ "unknowns": [
+  "KoshaSHRI entry-level markup/schema (login-walled, unprobed).",
+  "KoshaSHRI volume ids 12 and 14 (portal error pages; ledger fallback used, unverified against the portal).",
+  "Whether a KoshaSHRI bulk export exists at all (none observed in navigation; absence not proven).",
+  "Same-print-page fidelity for the 2009-2019 print record (STOP_NO_PRINT_ACCESS).",
+  "Whether the portal's 2009-2019 entry text differs editorially from the 2009-2019 print fascicles."
+ ],
+ "rights": "KoshaSHRI: all rights reserved — public per-volume JSON metadata only, no entry text fetched or committed, no circumvention. Cologne PDScan: CC BY-NC-SA 3.0 — derived counts only, no bulk text committed. Scan PDFs fetched for visual control were not committed.",
+ "probes": {
+  "volume_snapshot": "data/pd/pd_koshashri_volume_snapshot_2026-10-27.json",
+  "cologne_census": "data/pd/pd_cologne_tag_census_2026-10-27.json",
+  "prior_audits": [
+   "Uprava papers/A68/sweeps/2026-10-14-C7-koshashri-cologne-audit.md",
+   "Uprava papers/A68/sweeps/2026-10-25-PD-two-digitisations-html-markup.md"
+  ]
+ }
+}
