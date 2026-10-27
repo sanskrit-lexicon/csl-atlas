@@ -47,6 +47,9 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(HERE, "scripts", "lib"))
+from dataset_meta import license_fields  # noqa: E402
+
 DATA = os.path.join(HERE, "data", "pd")
 
 FAMILIES = os.path.join(DATA, "pd_siglum_families.tsv")
@@ -169,6 +172,10 @@ def build():
             "annotation": "none (no text layer for this book)",
         },
     }
+
+    # H5303 (G6): the JSON envelope declares the matrix licence (first keys,
+    # matching the licenseFields() envelope order every dataset carries).
+    summary = {**license_fields(), **summary}
 
     header = ["siglum", "work", "pd_cites", "lane", "expected_pd_citation_gain",
               "dcs_status", "gretil_status", "wisdomlib_portal", "wisdomlib_estate",
