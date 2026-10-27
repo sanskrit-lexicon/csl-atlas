@@ -52,6 +52,8 @@ import sys
 import unicodedata
 
 ROOT_DEFAULT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "lib"))
+from dataset_meta import license_fields  # noqa: E402
 
 INDEX = "data/pd/pd_index_works.tsv"
 AOB_WORKS = "data/pd/pd_aob_declared_works.tsv"
@@ -771,12 +773,13 @@ def build(root):
                                                   registry_rows + unresolved_registry),
         "data/pd/pd_work_edition_map.tsv": write_tsv(MAP_FIELDS, map_rows),
         "data/pd/pd_work_registry.json": json.dumps({
+            **license_fields(),
             "schema_version": "1.0", "handoff": "H7296",
             "works": registry_rows, "unresolved": unresolved_registry,
             "counts": diagnostics["counts"],
         }, ensure_ascii=False, indent=1) + "\n",
         "data/pd/pd_work_registry_diagnostics.json": json.dumps(
-            diagnostics, ensure_ascii=False, indent=1) + "\n",
+            {**license_fields(), **diagnostics}, ensure_ascii=False, indent=1) + "\n",
     }
     return payload, diagnostics
 

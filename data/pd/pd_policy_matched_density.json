@@ -1,4 +1,6 @@
 {
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "handoff": "H7297",
   "builder": "scripts/pd_policy_matched_density.py",
   "question": "Does PD's 8.55x attestation multiple survive a policy-matched (simplex / derivative / compound) comparison?",

@@ -13,6 +13,9 @@ import json
 import os
 import sys
 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "scripts", "lib")))
+from dataset_meta import license_fields  # noqa: E402
+
 from part01 import *  # noqa: F401,F403
 from part01 import (COVERAGE_HEADER, DATA, LEDGER, MARKUP_HEADER, ROOT,
                     build_coverage_panel, build_markup_panel, load_control,
@@ -235,7 +238,7 @@ def build_all():
     return {
         OUT_MARKUP: render_tsv(MARKUP_HEADER, markup),
         OUT_COVERAGE: render_tsv(COVERAGE_HEADER, coverage),
-        OUT_VERDICTS: json.dumps(verdicts, ensure_ascii=False, indent=1,
+        OUT_VERDICTS: json.dumps({**license_fields(), **verdicts}, ensure_ascii=False, indent=1,
                                  sort_keys=False) + "\n",
         OUT_CANARIES: render_tsv(CANARY_HEADER, canaries),
     }

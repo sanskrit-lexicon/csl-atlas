@@ -51,13 +51,14 @@ Applied state (post-[H5303](https://github.com/gasyoun/Uprava/blob/main/handoffs
 `python scripts/validate_dataset_licences.py` gates this (wired into
 `npm run verify`), `python scripts/audit_dataset_licence_keys.py` reports it:
 
-- **185** JSON envelopes under `data/` (excluding `*.source.json` provenance
+- **193** JSON envelopes under `data/` (excluding `*.source.json` provenance
   sidecars and the one non-envelope top-level array, `data/L0/dim_schema.json`,
   which cannot carry top-level keys).
-- **185** declare a top-level `license` key — every envelope, backfilled 26-10-2026
-  by `scripts/backfill_dataset_licences.py` (byte-preserving splice, mirrored
+- **193** declare a top-level `license` key — every envelope, backfilled
+  26-10-2026 by `scripts/backfill_dataset_licences.py` (byte-preserving splice, mirrored
   `licenseFields()` from `scripts/lib/dataset-meta.mjs`) with the proposed
-  column below: `CC-BY-SA-4.0` everywhere, except the 5 files of
+  column below; the 8 pd envelopes landed on main after the branch was cut are
+  stamped through the same generator in this pass `CC-BY-SA-4.0` everywhere, except the 5 files of
   [`data/schema/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/schema)
   at the row-12 value `CC-BY-4.0`; `data/etymology-oracle.json` already declared
   at mint time.
