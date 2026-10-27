@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-10-27",
+  "generated_by": "H7298 pd_dcs_residue_status_queue.py (Kimi K3.1 Pro, kimi-code-plan-global/k3.1-pro)",
+  "inputs": {
+    "pd_residue_source_status.tsv": "d02b42d26f56ba7fba7ea2753337a3cbd6d3ba4be2a442e519a85134c6a524f3",
+    "pd_siglum_families.tsv": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871"
+  },
+  "lanes": {
+    "acquire-digitise": {
+      "expected_pd_citation_gain": 9229,
+      "pd_cites": 9229,
+      "works": 6
+    },
+    "fragment-completion": {
+      "expected_pd_citation_gain": 5348,
+      "pd_cites": 8683,
+      "works": 6
+    },
+    "ingest-annotate": {
+      "expected_pd_citation_gain": 10262,
+      "pd_cites": 10262,
+      "works": 9
+    },
+    "unverified": {
+      "expected_pd_citation_gain": 9685,
+      "pd_cites": 9685,
+      "works": 24
+    }
+  },
+  "rows": 45,
+  "skandapurana_verdict": {
+    "annotation": "none (no text layer for this book)",
+    "dcs": "covered-fragment: SkPuR 113,333 tok + SkPu 16,479 tok (dcs_text_inventory.tsv, 27-10-2026)",
+    "edition_identity": "INCONCLUSIVE — no book-page meta in store; live probe CF-blocked (HTTP 403, 27-10-2026)",
+    "pd_cites": 3335,
+    "rights": "derived layers CC BY 4.0 (LICENSE-DATA; Zenodo 10.5281/zenodo.22117833); underlying print edition unverified",
+    "wisdomlib_estate": "link-index only (sitemap.txt 40 B marker; no chapter bodies; CF-blocked per store stats.json 23-07-2026)",
+    "wisdomlib_portal": "skanda-purana-sanskrit, 95,556 chapters in manifest (books.json, 27-10-2026)"
+  }
+}
