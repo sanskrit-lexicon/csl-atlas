@@ -1,0 +1,219 @@
+{
+  "handoff": "H7297",
+  "builder": "scripts/pd_policy_matched_density.py",
+  "question": "Does PD's 8.55x attestation multiple survive a policy-matched (simplex / derivative / compound) comparison?",
+  "homograph_policy": {
+    "rule": "one row per identical k1 string on both sides; every homograph entry of that k1 is summed on each side; no regrouping",
+    "check": "no shared k1 carries a digit or '#' marker; pd_entries and pwg_entries are >= 1 for all 4,093 rows",
+    "entries_per_lemma_pd_max": 15,
+    "entries_per_lemma_pwg_max": 9
+  },
+  "population": {
+    "shared_lemmas": 4093,
+    "scope": "PD letter-a published fascicules vs PWG, H6949 unit"
+  },
+  "raw_ledger_retained": {
+    "source": "data/pd/pd_attestation_decomposition.tsv (H7095) and data/pd/pd_quotations_vs_pwg.tsv (H6949), read-only",
+    "pd_attestations": 157480,
+    "pwg_attestations": 18423,
+    "pd_quotations": 97413,
+    "pwg_quotations": 10225,
+    "attestation_ratio": 8.548,
+    "quotation_ratio": 9.5269,
+    "median_attestation_ratio": 4.0,
+    "below_parity_lemmas": 340,
+    "note": "unchanged by this pass; the policy-matched table sits beside it"
+  },
+  "classification": {
+    "rule": "scripts/lib/pd_family_rule.py (H7110): one analysis member => simplex; last member in the 15-suffix set => derivative; else compound",
+    "source_sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+    "universe": 104950,
+    "population": 103127,
+    "classified": 102747,
+    "shared_classified": 4059
+  },
+  "strata": {
+    "simplex": {
+      "lemmas": 773,
+      "lemmas_with_pwg_attestation": 624,
+      "pd_attestations": 46236,
+      "pwg_attestations": 6144,
+      "attestation_ratio": 7.5254,
+      "quotation_ratio": 8.4068,
+      "median_attestation_ratio": 3.0,
+      "below_parity_lemmas": 110,
+      "bootstrap_95": [
+        6.217,
+        9.0942
+      ]
+    },
+    "derivative": {
+      "lemmas": 357,
+      "lemmas_with_pwg_attestation": 314,
+      "pd_attestations": 12276,
+      "pwg_attestations": 1434,
+      "attestation_ratio": 8.5607,
+      "quotation_ratio": 9.6262,
+      "median_attestation_ratio": 5.0,
+      "below_parity_lemmas": 17,
+      "bootstrap_95": [
+        6.9481,
+        10.6453
+      ]
+    },
+    "compound": {
+      "lemmas": 2929,
+      "lemmas_with_pwg_attestation": 2635,
+      "pd_attestations": 97674,
+      "pwg_attestations": 10699,
+      "attestation_ratio": 9.1293,
+      "quotation_ratio": 10.1435,
+      "median_attestation_ratio": 4.5,
+      "below_parity_lemmas": 209,
+      "bootstrap_95": [
+        8.6357,
+        9.6516
+      ]
+    },
+    "unclassified": {
+      "lemmas": 34,
+      "lemmas_with_pwg_attestation": 30,
+      "pd_attestations": 1294,
+      "pwg_attestations": 146,
+      "attestation_ratio": 8.863,
+      "quotation_ratio": 8.5047,
+      "median_attestation_ratio": 3.0,
+      "below_parity_lemmas": 4,
+      "bootstrap_95": null
+    }
+  },
+  "pooled": {
+    "standardised_equal_weight": {
+      "value": 8.4051,
+      "weights": "1/3 per policy class (simplex, derivative, compound)",
+      "bootstrap_95": [
+        7.6798,
+        9.2733
+      ],
+      "rationale": "PWG prints no analysis parenthesis, so its own class mix is not measurable; equal weights are the only policy-neutral standard computable on both sides"
+    },
+    "pd_mix_weighted_mean_of_ratios": {
+      "value": 8.7738,
+      "note": "weights = shared-lemma class shares; a mean of stratum ratios, not the raw ratio of sums (8.5480)"
+    },
+    "raw_ratio_of_sums": {
+      "value": 8.548,
+      "bootstrap_95": [
+        7.9929,
+        9.1546
+      ]
+    },
+    "simplex_only": {
+      "value": 7.5254,
+      "note": "most policy-matched subset; PWG's own lemmatisation is closest to simplex"
+    }
+  },
+  "bootstrap": {
+    "reps": 2000,
+    "seed": 7297,
+    "method": "stratified lemma bootstrap, ratio of sums per stratum, percentile interval (nearest rank)"
+  },
+  "below_parity": {
+    "definition": "pd_attestations < pwg_attestations (includes the lemmas with zero PD attestations and a defined PWG ratio)",
+    "n": 340,
+    "zero_pd": 191,
+    "by_stratum": {
+      "simplex": 110,
+      "derivative": 17,
+      "compound": 209,
+      "unclassified": 4
+    },
+    "membership_sha256": "e454ffb557beda394b79e97c1548cf621e1405ef6f8a171856afbba9b17000df",
+    "examples_first": [
+      "aDAmArgava",
+      "aDImanTa",
+      "aDaHpuzpa",
+      "aDamArDa",
+      "aDarastAt",
+      "aDijyotizam",
+      "aDikArapuruza",
+      "aDimuktika",
+      "aDivAhana",
+      "aDvADipa"
+    ],
+    "examples_last": [
+      "atyAla",
+      "atyAroha",
+      "atyamlaparRa",
+      "atyantaSaMkarI",
+      "atyarDa",
+      "atyayika",
+      "atyuccagAmin",
+      "awata",
+      "awaviSiKara",
+      "awwahAseSvaratIrTa"
+    ]
+  },
+  "inventory_policy": {
+    "threshold_attestations": 1,
+    "definition": "a PD-only headword is thin when its entry carries at most 1 attestation(s)",
+    "pd_only_headwords": 100866,
+    "shared_headwords": 4093,
+    "pd_only_at_most_one": 66036,
+    "pd_only_zero": 1175,
+    "pd_only_attestation_mass": 262410,
+    "inventory_contrast": {
+      "value": 23.2,
+      "rule": "PD unique key1 / PWG lines to the apaca frontier",
+      "label": "lemmatisation-choice (inventory) ratio, NOT a citation measure and NOT a per-headword claim",
+      "detail": {
+        "pd_lemmas": 104959,
+        "pwg_in_span": 4519,
+        "pwg_total": 106082,
+        "span_frontier": "apaca",
+        "multiple": 23.2
+      }
+    }
+  },
+  "canaries": {
+    "akAmatas": {
+      "family": "derivative",
+      "pd_quotations": 31,
+      "pwg_quotations": 2,
+      "pd_attestations": 75,
+      "pwg_attestations": 6,
+      "attestation_ratio": 12.5
+    },
+    "compound_stratum": {
+      "lemmas": 2929,
+      "pd_attestations": 97674,
+      "pwg_attestations": 10699,
+      "attestation_ratio": 9.1293
+    },
+    "below_parity_lemmas": 340,
+    "below_parity_sha256": "e454ffb557beda394b79e97c1548cf621e1405ef6f8a171856afbba9b17000df",
+    "raw_ledger": {
+      "shared_lemmas": 4093,
+      "pd_attestations": 157480,
+      "pwg_attestations": 18423,
+      "pd_quotations": 97413,
+      "pwg_quotations": 10225,
+      "below_parity_lemmas": 340,
+      "median_attestation_ratio": 4.0
+    }
+  },
+  "inputs": {
+    "data/pd/pd_attestation_decomposition.tsv": "872e2890006ead930f08eeb797d011709d51b65917795d4fed4e0dff35a8c61c",
+    "data/pd/pd_quotations_vs_pwg.tsv": "67edbe03dc81dbfd1e5bbcf3e5181507f5e04ab2604b3201685d631aad018779",
+    "data/pd/pd_quotations_by_entry.tsv": "c67f15137838e78c08cb076065b968435b2ceb19c3b3d3d21d55c5b3386b93a7",
+    "data/pd/pd_policy_matched_class.tsv": "b6ea5eacd9cd8dd28c04a137c39a981325b59d9067b97fc55dadaf78bcd522f7"
+  },
+  "verdict": {
+    "policy_matched_ratio": 8.4051,
+    "range_across_policies": [
+      7.5254,
+      9.1293
+    ],
+    "reading": "the raw 8.55x is not an artefact of the shared lemmas' family mix: every stratum sits at 7.5-9.1x and the standardised pool is 8.41x; the 23x inventory contrast is a lemmatisation-policy ratio, and the extra PD-only headwords are mostly thin entries"
+  }
+}
