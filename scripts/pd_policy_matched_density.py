@@ -51,6 +51,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 sys.path.insert(0, os.path.join(ROOT, "scripts", "lib"))
+from dataset_meta import license_fields  # noqa: E402
 import pd_family_rule as family_rule  # noqa: E402
 
 DATA = os.path.join(ROOT, "data", "pd")
@@ -589,7 +590,7 @@ def build(population, strata, boot, inv, classes, pd_sha):
 
 # ------------------------------------------------------------------- outputs
 def render_json(payload):
-    return json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=False) + "\n"
+    return json.dumps({**license_fields(), **payload}, indent=2, ensure_ascii=False, sort_keys=False) + "\n"
 
 
 def render_inventory(inv):

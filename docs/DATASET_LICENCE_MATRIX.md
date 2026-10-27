@@ -47,16 +47,28 @@ citable deposit would still be curated work.
 
 ## Coverage today
 
-`python scripts/audit_dataset_licence_keys.py` (added by this pass, 24-09-2026):
+Applied state (post-[H5303](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5303-OxAlpha_csl-atlas_dataset-licence-field-backfill-validator_23.09.26.md)):
+`python scripts/validate_dataset_licences.py` gates this (wired into
+`npm run verify`), `python scripts/audit_dataset_licence_keys.py` reports it:
 
-- **130** JSON files under `data/` (excluding `*.source.json` provenance sidecars).
-- **21** declare a top-level `license`/`licence` key — all of them `CC-BY-SA-4.0`,
-  concentrated in [`data/lexico/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/lexico) (17),
-  [`data/obs/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/obs) (3) and
-  `data/etymology-oracle.json` (1).
-- **109** declare nothing. The mint-time figure (18 of 172, 21-09-2026) counted the sidecars
-  as well; the ratio is the same story either way — **~84% of data JSON is licence-silent**,
-  and no CSV/TSV/Newick file carries a licence statement at all (that is 57 further files).
+- **193** JSON envelopes under `data/` (excluding `*.source.json` provenance
+  sidecars and the one non-envelope top-level array, `data/L0/dim_schema.json`,
+  which cannot carry top-level keys).
+- **193** declare a top-level `license` key — every envelope, backfilled
+  26-10-2026 by `scripts/backfill_dataset_licences.py` (byte-preserving splice, mirrored
+  `licenseFields()` from `scripts/lib/dataset-meta.mjs`) with the proposed
+  column below; the 8 pd envelopes landed on main after the branch was cut are
+  stamped through the same generator in this pass `CC-BY-SA-4.0` everywhere, except the 5 files of
+  [`data/schema/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/schema)
+  at the row-12 value `CC-BY-4.0`; `data/etymology-oracle.json` already declared
+  at mint time.
+- **0** undeclared. The mint-time figure (18 of 172, 21-09-2026) and the
+  H5302 figure (21 of 130, 24-09-2026) counted the sidecars differently; the
+  same story is now closed — no data JSON is licence-silent.
+  CSV/TSV/Newick files do not carry a licence statement (57 further files);
+  families added after this matrix (`compound-depth`, `dharmamitra`, `eval`,
+  `llm-candidate-lane`, `manifest`, `review`, `abbrev` parts) carry the
+  repo-default row-14 value `CC-BY-SA-4.0`.
 
 The gap is a *metadata* gap, not a rights gap: the repo `LICENSE` covers the tree. What is
 missing is the per-file self-description a consumer of one downloaded JSON needs.

@@ -17,17 +17,25 @@ KEYS = ("license", "licence")
 
 def main() -> int:
     total = 0
+    non_envelope = 0
     declared = []
     undeclared_families = {}
     for path in sorted(DATA.rglob("*.json")):
         if path.name.endswith(".source.json"):
             continue
-        total += 1
-        family = path.relative_to(DATA).parts[0] if len(path.relative_to(DATA).parts) > 1 else "(root)"
+        rel = str(path.relative_to(ROOT)).replace("\\", "/")
         try:
             obj = json.loads(path.read_text(encoding="utf-8"))
         except (ValueError, OSError):
             obj = None
+        if not isinstance(obj, dict):
+            # a bare top-level array is not an envelope: it cannot carry
+            # top-level keys, so it is counted separately, not gated
+            non_envelope += 1
+            print(f"non-envelope (top-level array): {rel}")
+            continue
+        total += 1
+        family = path.relative_to(DATA).parts[0] if len(path.relative_to(DATA).parts) > 1 else "(root)"
         value = None
         if isinstance(obj, dict):
             for key in KEYS:
@@ -35,11 +43,11 @@ def main() -> int:
                     value = obj[key]
                     break
         if value:
-            declared.append((str(path.relative_to(ROOT)).replace("\\", "/"), value))
+            declared.append((rel, value))
         else:
             undeclared_families[family] = undeclared_families.get(family, 0) + 1
 
-    print(f"data/**.json (excluding .source.json sidecars): {total}")
+    print(f"data/**.json envelopes (excluding .source.json sidecars): {total}")
     print(f"declaring a top-level licence key: {len(declared)}")
     for rel, value in declared:
         print(f"  {rel} -> {value}")

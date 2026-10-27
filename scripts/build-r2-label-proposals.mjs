@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const PACKETS_PATH = path.resolve(process.cwd(), "data", "lexico", "r2_review_packets.json");
@@ -489,6 +490,7 @@ export function buildPayload(packetsPayload) {
   }
 
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "r2-label-proposals",
     claim: "R2 review packet diagnostics have machine-readable parser-label proposals plus a 10-row human checkpoint.",

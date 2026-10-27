@@ -42,6 +42,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts", "lib"))
 
 import pd_family_rule as family_rule  # noqa: E402
 import quotation_units  # noqa: E402
+from dataset_meta import license_fields  # noqa: E402
 from pd_quotation_units import citation_tail  # noqa: E402
 
 LEDGER = os.path.join(ROOT, "data", "pd", "pd_publication_ledger.tsv")
@@ -488,7 +489,7 @@ def render_class(rows: list[list[str]]) -> str:
 
 
 def render_json(obj) -> str:
-    return json.dumps(obj, ensure_ascii=False, indent=2) + "\n"
+    return json.dumps({**license_fields(), **obj}, ensure_ascii=False, indent=2) + "\n"
 
 
 def write(path: str, text: str) -> None:

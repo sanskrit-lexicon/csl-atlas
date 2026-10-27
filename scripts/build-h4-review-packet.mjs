@@ -10,7 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseCsv } from "./build-h5-anomaly-review.mjs";
-import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
+import { generatedAtForPayload, readJsonIfExists, licenseFields } from "./lib/dataset-meta.mjs";
 import { dictExists, iterateDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { slp1_form_key } from "../src/lib/sanskrit-util.js";
@@ -724,6 +724,7 @@ export function buildPayload(
   const agentReviewed = sampleRows.filter(row => row.reviewStatus === "reviewed-ok").length;
   const stillNeedsReview = sampleRows.filter(row => row.reviewStatus === "needs-review").length;
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "h4-semantic-field-review-packet",
     claim: "H4-FIELD-FAMILY: AMAR field profiles differ by dictionary family, not only by gross coverage.",
