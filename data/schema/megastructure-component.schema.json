@@ -19,6 +19,14 @@
     "misfits"
   ],
   "properties": {
+    "license": {
+      "type": "string",
+      "const": "CC-BY-SA-4.0"
+    },
+    "licenseUrl": {
+      "type": "string",
+      "const": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
     "schemaVersion": {
       "type": "string",
       "const": "1.0.0"
