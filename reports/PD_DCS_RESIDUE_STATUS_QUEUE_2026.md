@@ -75,11 +75,10 @@ from the DCS fragment mass — the queue row carries `expected_pd_citation_gain 
 
 ## 5. Risks / explicit unknowns
 
-- **"Q11's status-aware DCS residue programme"**: no artefact literally named Q11 was
+- The mint-time **"Q11"** label was ambiguous: no artefact literally named Q11 was
   found (A68 grill Q11 is the Mahābhārata-signal ruling; PD_OUTLOOK Q11 is staffing).
-  Nearest anchors used: `iscls.tex` §6 residue agenda + C5/C6 sweeps. Recorded as an
-  explicit unknown; the operational content (status-aware extension of H6722) is
-  unaffected.
+  Resolved 28-10-2026 by naming the actual anchors in H7298: `iscls.tex` §6 residue
+  agenda + C5/C6 sweeps. The operational content is unchanged.
 - GRETIL verdicts are as of 14-10-2026 and name-level; no fresh re-probe (network
   hygiene, H6722's own caveat).
 - Wisdomlib portal state is as of the 2026 scrape manifest; live verification is
@@ -89,6 +88,6 @@ from the DCS fragment mass — the queue row carries `expected_pd_citation_gain 
   present→absent (H6722 §5 risk carried forward).
 - `unverified` rows can move lanes only after a GRETIL cross; NaiṣC./BṛSaṃ. already
   have estate link indexes, which makes them the cheapest first re-cross candidates.
-- MSI store drift: canonical path changed (`D:\` → `E:\`); the
-  `wisdomlib-sanskrit-layers` registry row and H6073's "dead MSI" note are stale in
-  that respect (box is alive; store intact on E:).
+- MSI store drift resolved 28-10-2026: the `wisdomlib-sanskrit-layers` registry row
+  and H6073 now name the live store at `E:\Tools\wisdomlib-scrape` (former `D:\`
+  path gone). Chapter-body acquisition remains CF-blocked.
