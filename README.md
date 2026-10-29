@@ -245,11 +245,11 @@ human-reviewed rows; see the data statement for the full limitations.
 
 ## How to cite
 
-Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.21.0: [`10.5281/zenodo.23613057`](https://doi.org/10.5281/zenodo.23613057)).
+Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.21.1: [`10.5281/zenodo.23778292`](https://doi.org/10.5281/zenodo.23778292)).
 
 Cite the atlas via its archival Zenodo DOI:
 
-> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.21.0). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.23613057>
+> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.21.1). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.23778292>
 
 When citing a specific dataset rather than the repository, use that dataset's own provenance envelope (`sourcePath`, `generatedBy`, `generatedAt`) so the exact source records and build step are recoverable. The meaning of each per-claim evidence label is defined in [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md), and its equivalent in W3C PROV-O and TEI `@cert` / `@resp` — with the explicit list of what has no equivalent — in [`docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md).
 
