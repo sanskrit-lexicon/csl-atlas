@@ -33,3 +33,15 @@ _Created: 27-10-2026 · Handoff: H7300 · Executor: Kimi Work (Kimi)_
 
 `scripts/pd_koshashri_staleness_audit.py` (build / `--check`) plus the exact
 curl surface in `reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md` §Repro.
+
+## H7316 addendum — one fixture, 29-10-2026
+
+A separate public single-entry GET (`/search/vocable/<uuid>`) supplied the
+`agni` response for the fixture export. No login, POST, socket subscription or
+bulk crawl was used. The full 2,768,644-byte response remains a restricted
+local input and is **not committed**. Only H7316's one entry and its 1,400
+citation-reference rows are committed, with per-row provenance and
+`unvalidated_pending_double_annotation`; this is not a bulk publication or an
+independent-witness claim. The response's malformed source strings and all
+unresolved works are preserved rather than silently normalized. See
+`reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md`.
