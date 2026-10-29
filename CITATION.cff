@@ -14,6 +14,9 @@ abstract: >-
 type: software
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.23778292"
+    description: The version DOI for release v0.21.1 (PD licence-envelope parity)
+  - type: doi
     value: "10.5281/zenodo.23613057"
     description: The version DOI for release v0.21.0 (PD knowledge-index parity)
   - type: doi
