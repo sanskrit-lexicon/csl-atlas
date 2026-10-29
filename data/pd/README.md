@@ -1,6 +1,6 @@
 # PD × DCS corpus-coverage dataset
 
-_Created: 20-07-2026 · Last updated: 27-10-2026_
+_Created: 20-07-2026 · Last updated: 29-10-2026_
 
 What share of the **Poona Dictionary**'s cited source canon does the **Digital Corpus of
 Sanskrit** hold? This directory is the first measurement — data, metrics, and crosswalk.
@@ -131,6 +131,22 @@ Tables: `pd_koshashri_markup_comparison.tsv`, `pd_koshashri_content_coverage.tsv
 [`scripts/pd_koshashri_staleness_audit.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_koshashri_staleness_audit.py) (`--check`);
 tests `tests/forensic/test_pd_koshashri_staleness_audit.py`; write-up
 [reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md).
+
+## KoshaSHRI fixture export (H7316)
+
+One `agni` entry and **1,400 citation-reference rows** from the restricted
+local response, with stable entry/sense/citation IDs, raw quotations, sigla,
+locus arrays/schemes, raw work dates and per-row provenance. The first meaning
+preserves **242 citation texts → 248 reference rows**; all 29 meanings, one
+nested vocable, the volume object and the `<s<small>` defect are retained.
+Only `ṚV.` resolves through H7296 (`PDW-ecd09ac913`); other works stay
+unresolved. Files: `pd_koshashri_entries.tsv`, `pd_koshashri_citations.tsv`;
+adapter `scripts/pd_koshashri_vocable.py`; deterministic builder
+[`scripts/pd_koshashri_fixture_export.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_koshashri_fixture_export.py)
+(`--check`, no network); five pins in
+`tests/forensic/test_pd_koshashri_fixture_export.py`; write-up
+[reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md).
+The full response is all-rights-reserved and is not committed.
 
 ## Silent inheritance (H6948)
 
