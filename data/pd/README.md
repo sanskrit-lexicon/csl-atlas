@@ -265,9 +265,10 @@ the Cologne archive is the canonical copy. DCS token counts =
 ## Shared work-and-edition identity registry (H7296, Q3)
 
 The identity layer over the Index, the AOB canon and the PW / PWG bibliographies:
-2,031 Index rows → **1,923 work identities** (`PDW-…`), 6,072 edition-map records,
-416 explicit unresolved rows (409 printed blank abbreviation cells + 7 structural
-sigla), 57 siglum folds shared by more than one work and **never merged**.
+2,031 Index rows → **1,867 work identities** (`PDW-…`), 6,069 edition-map records,
+418 explicit unresolved rows (409 printed blank abbreviation cells + 7 structural
+sigla + 2 OCR non-work fragments). After Y0Q, 55 of 57 shared folds are resolved
+and 2 partial; 228 of 230 `shared_siglum` records are adjudicated, 2 remain.
 
 | File | What it is |
 |---|---|
@@ -275,11 +276,12 @@ sigla), 57 siglum folds shared by more than one work and **never merged**.
 | [pd_work_edition_map.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_edition_map.tsv) | every Index row, AOB edition, bibliography siglum, harvest attestation and `commentary_on` relation |
 | [pd_work_registry.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry.json) | the same registry, machine-readable |
 | [pd_work_registry_diagnostics.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_work_registry_diagnostics.json) | pinned input sha256, counts, canaries, validation contract |
+| [pd_shared_siglum_adjudications.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_shared_siglum_adjudications.tsv) | Y0Q claim-level overlay: splits, alias groups, evidence and the two unresolved claims |
 
 Builder: `python3 scripts/pd_shared_work_registry.py --check`; pins:
 `python3 -m pytest tests/forensic/test_pd_shared_work_registry.py -q`. All records
-stay `unvalidated_pending_double_annotation` — no kappa and no adjudication are
-claimed. The 3.11 % / 4.03 % and breadth/depth figures remain **preliminary until
+stay `unvalidated_pending_double_annotation` — no kappa or double-annotation
+agreement is claimed; Y0Q is a single-annotator identity review. The 3.11 % / 4.03 % and breadth/depth figures remain **preliminary until
 rerun**; this layer does not recompute them. Write-up:
 [reports/PD_SHARED_WORK_REGISTRY_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SHARED_WORK_REGISTRY_2026.md).
 

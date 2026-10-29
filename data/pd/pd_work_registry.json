@@ -121,7 +121,7 @@
    "siglum_folds": "ekana",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIII:11"
   },
   {
@@ -245,26 +245,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:anangaranga;data/pd/pd_index_works.tsv:LXXXIX:34;data/pd/pd_siglum_families.tsv:AnaṅgaRa.;data/pd/pd_siglum_families.tsv:AnaṅgaRā."
   },
   {
-   "registry_id": "PDW-0122d20f07",
-   "work_id": "PDW-0122d20f07",
-   "identity_status": "resolved",
-   "label": "praśastapādabhāṣya",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CIX:11",
-   "label_variants": "praśastapādabhāṣya",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "padarthasam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIX:11"
-  },
-  {
    "registry_id": "PDW-013375e2a8",
    "work_id": "PDW-013375e2a8",
    "identity_status": "resolved",
@@ -321,7 +301,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXVII:4"
   },
   {
@@ -341,7 +321,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVIII:2"
   },
   {
@@ -1072,17 +1052,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXVI:28",
    "label_variants": "rugviniścaya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "rugvi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVI:28"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXVI:28;data/pd/pd_index_works.tsv:CXVI:34"
   },
   {
    "registry_id": "PDW-081f9378a3",
@@ -1361,7 +1341,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIII:25"
   },
   {
@@ -1405,6 +1385,26 @@
    "provenance": "data/pd/pd_index_works.tsv:XCIX:38;data/pd/pd_siglum_families.tsv:JnānDī.;data/pd/pd_siglum_families.tsv:JñanDī.;data/pd/pd_siglum_families.tsv:JñānDī."
   },
   {
+   "registry_id": "PDW-0a305523ef",
+   "work_id": "PDW-0a305523ef",
+   "identity_status": "resolved",
+   "label": "liṅgānuśāsana",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXVII:32",
+   "label_variants": "liṅgānuśāsana",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "linganu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXVII:32"
+  },
+  {
    "registry_id": "PDW-0a477aab0a",
    "work_id": "PDW-0a477aab0a",
    "identity_status": "resolved",
@@ -1421,7 +1421,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXVII:33"
   },
   {
@@ -1701,7 +1701,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCII:36"
   },
   {
@@ -2025,26 +2025,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:varttikakatyayana;data/pd/pd_siglum_families.tsv:Vār."
   },
   {
-   "registry_id": "PDW-0d7e1fb2dd",
-   "work_id": "PDW-0d7e1fb2dd",
-   "identity_status": "resolved",
-   "label": "Bhattikavya Ravanavadha BS( P)S. 57",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:bhattikavyaravanavadhabsps57",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "bhatti",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:bhattikavyaravanavadhabsps57"
-  },
-  {
    "registry_id": "PDW-0dc803b1eb",
    "work_id": "PDW-0dc803b1eb",
    "identity_status": "resolved",
@@ -2081,8 +2061,28 @@
    "siglum_folds": "avadhiu",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:avadhiitopanisad"
+  },
+  {
+   "registry_id": "PDW-0e45d28ca5",
+   "work_id": "PDW-0e45d28ca5",
+   "identity_status": "resolved",
+   "label": "tantrasāra",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:C:42",
+   "label_variants": "tantrasāra",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "tantrsa",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:C:42"
   },
   {
    "registry_id": "PDW-0e50c15da9",
@@ -2323,6 +2323,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CV:33;data/pd/pd_siglum_families.tsv:NyāyMañ.;data/pd/pd_siglum_families.tsv:NyāyMāñ."
+  },
+  {
+   "registry_id": "PDW-0fd422cab3",
+   "work_id": "PDW-0fd422cab3",
+   "identity_status": "resolved",
+   "label": "liṅgānuśāsana",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXVII:33",
+   "label_variants": "liṅgānuśāsana",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "linganu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXVII:33"
   },
   {
    "registry_id": "PDW-0fed3e4759",
@@ -2961,7 +2981,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCII:19"
   },
   {
@@ -3065,26 +3085,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:amaracandrayati;data/pd/pd_siglum_families.tsv:KāvyKaVr.;data/pd/pd_siglum_families.tsv:KāvyKaVṛ."
   },
   {
-   "registry_id": "PDW-146719674d",
-   "work_id": "PDW-146719674d",
-   "identity_status": "resolved",
-   "label": "hiraṇyakeśiśrautasūtra",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXVII:45",
-   "label_variants": "hiraṇyakeśiśrautasūtra",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "1",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "hirss",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXVII:45"
-  },
-  {
    "registry_id": "PDW-1473cd8810",
    "work_id": "PDW-1473cd8810",
    "identity_status": "resolved",
@@ -3121,7 +3121,7 @@
    "siglum_folds": "navarama",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIII:47"
   },
   {
@@ -3152,17 +3152,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CIV:29",
    "label_variants": "nārāyaṇātharvaśiraupaniṣad",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "narayu",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIV:29"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:narayarnopanisadnarayanatharvasiraupanisad;data/pd/pd_index_works.tsv:CIV:29;data/pd/pd_index_works.tsv:CIV:32"
   },
   {
    "registry_id": "PDW-14b207cdb5",
@@ -3221,7 +3221,7 @@
    "siglum_folds": "aryasi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCII:1"
   },
   {
@@ -3243,26 +3243,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXII:37;data/pd/pd_siglum_families.tsv:ŚivaL.;data/pd/pd_siglum_families.tsv:ŚivāL."
-  },
-  {
-   "registry_id": "PDW-15388a0330",
-   "work_id": "PDW-15388a0330",
-   "identity_status": "resolved",
-   "label": "śabdasaṃgraha",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXI:30",
-   "label_variants": "śabdasaṃgraha",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "agani",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXI:30"
   },
   {
    "registry_id": "PDW-156627c74b",
@@ -3305,26 +3285,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:bhattacandrikaonsankarkabhaskara;data/pd/pd_index_works.tsv:CXI:16;data/pd/pd_siglum_families.tsv:BhāttCan.;data/pd/pd_siglum_families.tsv:BhāṭṭCan.;data/pd/pd_siglum_families.tsv:BhāṭṭCaṇ."
   },
   {
-   "registry_id": "PDW-15741c3905",
-   "work_id": "PDW-15741c3905",
-   "identity_status": "resolved",
-   "label": "Manasollasa",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:manasollasa",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "manaso",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:manasollasa"
-  },
-  {
    "registry_id": "PDW-15ba8c8b55",
    "work_id": "PDW-15ba8c8b55",
    "identity_status": "resolved",
@@ -3361,7 +3321,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:LXXXIX:23"
   },
   {
@@ -3701,7 +3661,7 @@
    "siglum_folds": "tantrabi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXII:34"
   },
   {
@@ -3901,7 +3861,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCV:51"
   },
   {
@@ -4061,7 +4021,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXIV:29"
   },
   {
@@ -4475,14 +4435,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "tantrra",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:C:36"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:tantraratna;data/pd/pd_index_works.tsv:C:36"
   },
   {
    "registry_id": "PDW-1c8d790ed4",
@@ -4612,17 +4572,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XC:26",
    "label_variants": "amarakośa",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "6",
+   "n_dictionary_sigla": "8",
    "siglum_folds": "ak;amak;bhanud;raman;rayam;saras",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XC:26;data/pd/pd_pwgbib_sigla.tsv:13;data/pd/pd_pwgbib_sigla.tsv:300;data/pd/pd_pwgbib_sigla.tsv:301;data/pd/pd_pwgbib_sigla.tsv:325;data/pd/pd_pwgbib_sigla.tsv:41"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:amarakosaornaimalinganusasana;data/pd/pd_index_works.tsv:CIV:20;data/pd/pd_index_works.tsv:XC:26;data/pd/pd_pwgbib_sigla.tsv:13;data/pd/pd_pwgbib_sigla.tsv:300;data/pd/pd_pwgbib_sigla.tsv:301;data/pd/pd_pwgbib_sigla.tsv:325;data/pd/pd_pwgbib_sigla.tsv:41"
   },
   {
    "registry_id": "PDW-1d9b65c2e1",
@@ -4872,37 +4832,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CVI:38",
    "label_variants": "padārthadharmasaṃgraha",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "padarthasam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CVI:38"
-  },
-  {
-   "registry_id": "PDW-1ffe06258e",
-   "work_id": "PDW-1ffe06258e",
-   "identity_status": "resolved",
-   "label": "rāghavapāṇḍavīya",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXV:42",
-   "label_variants": "rāghavapāṇḍavīya",
    "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "raghpan",
+   "n_dictionary_sigla": "2",
+   "siglum_folds": "padarthasam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXV:42;data/pd/pd_index_works.tsv:CXV:43"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIX:11;data/pd/pd_index_works.tsv:CVI:38"
   },
   {
    "registry_id": "PDW-202a6ffcc6",
@@ -5105,26 +5045,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CXIX:37;data/pd/pd_siglum_families.tsv:ViṣṇuTaNi."
   },
   {
-   "registry_id": "PDW-211865cbfd",
-   "work_id": "PDW-211865cbfd",
-   "identity_status": "resolved",
-   "label": "nintasiddhafijana",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:nintasiddhafijana",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "siddhasi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:nintasiddhafijana"
-  },
-  {
    "registry_id": "PDW-2145d160d0",
    "work_id": "PDW-2145d160d0",
    "identity_status": "resolved",
@@ -5221,7 +5141,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCII:16"
   },
   {
@@ -5325,46 +5245,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:sahityasara;data/pd/pd_index_works.tsv:CXXV:22;data/pd/pd_siglum_families.tsv:SāhiSā.;data/pd/pd_siglum_families.tsv:SāhiŚā.;data/pd/pd_siglum_families.tsv:SāhīSā.;data/pd/pd_siglum_families.tsv:ŚāhiSā."
   },
   {
-   "registry_id": "PDW-2296a3e4ca",
-   "work_id": "PDW-2296a3e4ca",
-   "identity_status": "resolved",
-   "label": "Tantrarajatantra",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:tantrarajatantra",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "tantrra",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:tantrarajatantra"
-  },
-  {
-   "registry_id": "PDW-22c2eb60db",
-   "work_id": "PDW-22c2eb60db",
-   "identity_status": "resolved",
-   "label": "Siddl hantasiromani",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:siddlhantasiromani",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "siddhasi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:siddlhantasiromani"
-  },
-  {
    "registry_id": "PDW-22db2fd539",
    "work_id": "PDW-22db2fd539",
    "identity_status": "resolved",
@@ -5381,7 +5261,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVII:52"
   },
   {
@@ -5392,17 +5272,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXVII:23",
    "label_variants": "lalitāsahasranāmabhāṣya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "lalitasabh",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVII:23"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:lalitaesahasranimabhasgyasaubhagyabhaskaracflalitasapagelineonsloka;data/pd/pd_index_works.tsv:CXVII:23;data/pd/pd_index_works.tsv:CXXVI:36"
   },
   {
    "registry_id": "PDW-22ef90b322",
@@ -5441,7 +5321,7 @@
    "siglum_folds": "ekana",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIII:13"
   },
   {
@@ -5683,26 +5563,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVII:54;data/pd/pd_siglum_families.tsv:PuraPraSaṃ.;data/pd/pd_siglum_families.tsv:PurāPraSaṃ.;data/pd/pd_siglum_families.tsv:PurāPraSāṃ.;data/pd/pd_siglum_families.tsv:PurāPraŚaṃ.;data/pd/pd_siglum_families.tsv:PurāPrāSaṃ.;data/pd/pd_siglum_families.tsv:PūraPraSaṃ.;data/pd/pd_siglum_families.tsv:PūrāPraSaṃ."
-  },
-  {
-   "registry_id": "PDW-252c2400d7",
-   "work_id": "PDW-252c2400d7",
-   "identity_status": "resolved",
-   "label": "nyāyasudhā",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CV:43",
-   "label_variants": "nyāyasudhā",
-   "n_index_rows": "2",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "nyaysu",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CV:43;data/pd/pd_index_works.tsv:CV:44"
   },
   {
    "registry_id": "PDW-253c60ffb0",
@@ -6041,7 +5901,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:LXXXIX:19"
   },
   {
@@ -6241,7 +6101,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXX:40"
   },
   {
@@ -6283,6 +6143,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:neminirvana;data/pd/pd_index_works.tsv:CV:11;data/pd/pd_siglum_families.tsv:NemiNir.;data/pd/pd_siglum_families.tsv:NemīNir."
+  },
+  {
+   "registry_id": "PDW-284a210f00",
+   "work_id": "PDW-284a210f00",
+   "identity_status": "resolved",
+   "label": "rāghavapāṇḍavīya",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXV:42",
+   "label_variants": "rāghavapāṇḍavīya",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "raghpan",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXV:42"
   },
   {
    "registry_id": "PDW-28533e177e",
@@ -6612,17 +6492,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCV:19",
    "label_variants": "kāśikāvivaraṇapañjikā",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "nyas",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCV:19"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CV:49;data/pd/pd_index_works.tsv:XCV:19"
   },
   {
    "registry_id": "PDW-2a8bcabe12",
@@ -6672,17 +6552,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCIII:29",
    "label_variants": "kaṭhopaniṣad",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "3",
+   "n_dictionary_sigla": "4",
    "siglum_folds": "kathop;kathu",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCIII:29;data/pd/pd_pwbib_sigla.tsv:392;data/pd/pd_pwgbib_sigla.tsv:180"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:XCIII:29;data/pd/pd_index_works.tsv:XCIV:24;data/pd/pd_pwbib_sigla.tsv:392;data/pd/pd_pwgbib_sigla.tsv:180"
   },
   {
    "registry_id": "PDW-2add92822e",
@@ -6695,14 +6575,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "tantrra",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:C:38"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:tantrarajatantra;data/pd/pd_index_works.tsv:C:38"
   },
   {
    "registry_id": "PDW-2aee6886a9",
@@ -6763,26 +6643,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:manubhavarthacandrikae;data/pd/pd_siglum_families.tsv:ManuBhāvaCan.;data/pd/pd_siglum_families.tsv:ManuBhāvāCan."
-  },
-  {
-   "registry_id": "PDW-2b0a3080f5",
-   "work_id": "PDW-2b0a3080f5",
-   "identity_status": "resolved",
-   "label": "Laghucandriké on Advaitasiddhi",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:laghucandrikeonadvaitasiddhi",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "lacandr",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:laghucandrikeonadvaitasiddhi"
   },
   {
    "registry_id": "PDW-2b8afb76c3",
@@ -6861,7 +6721,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXIV:17"
   },
   {
@@ -7072,57 +6932,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CIX:51",
    "label_variants": "bṛhajjātaka",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "2",
-   "siglum_folds": "brhajja;varah.brh",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIX:51;data/pd/pd_pwbib_sigla.tsv:282"
-  },
-  {
-   "registry_id": "PDW-2dad1ba58b",
-   "work_id": "PDW-2dad1ba58b",
-   "identity_status": "resolved",
-   "label": "nāmaliṅgānuśāsana",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CIV:20",
-   "label_variants": "nāmaliṅgānuśāsana",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "amak",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIV:20"
-  },
-  {
-   "registry_id": "PDW-2dbb6b1b7a",
-   "work_id": "PDW-2dbb6b1b7a",
-   "identity_status": "resolved",
-   "label": "Kalavili asa",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:kalaviliasa",
-   "label_variants": "",
-   "n_index_rows": "0",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "kalavi",
+   "n_dictionary_sigla": "5",
+   "siglum_folds": "brhajja;horas;varah.brh",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:kalaviliasa"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:brhajjaitakahoragastrawarahamihira;data/pd/pd_index_works.tsv:CIX:51;data/pd/pd_index_works.tsv:CXXVII:52;data/pd/pd_pwbib_sigla.tsv:282;data/pd/pd_pwgbib_sigla.tsv:147"
   },
   {
    "registry_id": "PDW-2dd4e08ce8",
@@ -7312,17 +7132,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CIII:11",
    "label_variants": "dvisaṃdhānakāvya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "raghpan",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIII:11"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIII:11;data/pd/pd_index_works.tsv:CXV:43"
   },
   {
    "registry_id": "PDW-2f9b783d7d",
@@ -7401,28 +7221,8 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CX:28"
-  },
-  {
-   "registry_id": "PDW-307e2e9a46",
-   "work_id": "PDW-307e2e9a46",
-   "identity_status": "resolved",
-   "label": "śākaṭāyanadhātupāṭha",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXI:33",
-   "label_variants": "śākaṭāyanadhātupāṭha",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "dhatupa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXI:33"
   },
   {
    "registry_id": "PDW-309714d8c1",
@@ -7541,7 +7341,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CI:29"
   },
   {
@@ -7681,7 +7481,7 @@
    "siglum_folds": "ksudra",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVI:29"
   },
   {
@@ -7721,7 +7521,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXVII:34"
   },
   {
@@ -7743,26 +7543,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXX:4"
-  },
-  {
-   "registry_id": "PDW-3234b97538",
-   "work_id": "PDW-3234b97538",
-   "identity_status": "resolved",
-   "label": "Paramasamhita",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:paramasamhita",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "paras",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:paramasamhita"
   },
   {
    "registry_id": "PDW-323b447fa2",
@@ -7841,7 +7621,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXI:29"
   },
   {
@@ -7903,26 +7683,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XC:25"
-  },
-  {
-   "registry_id": "PDW-3397fa9734",
-   "work_id": "PDW-3397fa9734",
-   "identity_status": "resolved",
-   "label": "yogasūtravṛtti",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXV:8",
-   "label_variants": "yogasūtravṛtti",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "yogsuvr",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXV:8"
   },
   {
    "registry_id": "PDW-33e926d71e",
@@ -8232,17 +7992,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CIV:13",
    "label_variants": "nānārthaśabdakośa",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "medik",
+   "n_dictionary_sigla": "5",
+   "siglum_folds": "med;med.avy;medik",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIV:13"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIV:13;data/pd/pd_index_works.tsv:CXIV:26;data/pd/pd_pwbib_sigla.tsv:190;data/pd/pd_pwbib_sigla.tsv:191;data/pd/pd_pwgbib_sigla.tsv:248"
   },
   {
    "registry_id": "PDW-35cdfd9eb9",
@@ -8261,7 +8021,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXVI:24"
   },
   {
@@ -8323,26 +8083,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXX:3"
-  },
-  {
-   "registry_id": "PDW-3661021621",
-   "work_id": "PDW-3661021621",
-   "identity_status": "resolved",
-   "label": "Lalitaésahasranimabhasgya (Saubhagyabhaskara cf. LalitaSa. — Page. Line on Sloka",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:lalitaesahasranimabhasgyasaubhagyabhaskaracflalitasapagelineonsloka",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "lalitasabh",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:lalitaesahasranimabhasgyasaubhagyabhaskaracflalitasapagelineonsloka"
   },
   {
    "registry_id": "PDW-3685c84528",
@@ -8475,14 +8215,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "bhavpra",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXI:34"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:88;data/pd/pd_index_works.tsv:CXI:34"
   },
   {
    "registry_id": "PDW-37782bf995",
@@ -8741,7 +8481,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCII:38"
   },
   {
@@ -8881,7 +8621,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVII:55"
   },
   {
@@ -9132,17 +8872,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCVII:11",
    "label_variants": "gītā (bhagavadgītā)",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "bhaggi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCVII:11"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:bhagavadgita;data/pd/pd_index_works.tsv:CXI:3;data/pd/pd_index_works.tsv:XCVII:11"
   },
   {
    "registry_id": "PDW-3cdbb30a57",
@@ -9355,14 +9095,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "paras",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CVI:54"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:paramasamhita;data/pd/pd_index_works.tsv:CVI:54"
   },
   {
    "registry_id": "PDW-3f0aea2932",
@@ -9625,26 +9365,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:bhramaradita"
   },
   {
-   "registry_id": "PDW-41506fd823",
-   "work_id": "PDW-41506fd823",
-   "identity_status": "resolved",
-   "label": "bauddhadhikkāra",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CX:21",
-   "label_variants": "bauddhadhikkāra",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "atmatavi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CX:21"
-  },
-  {
    "registry_id": "PDW-4164cc8395",
    "work_id": "PDW-4164cc8395",
    "identity_status": "resolved",
@@ -9661,7 +9381,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIX:50"
   },
   {
@@ -9821,7 +9541,7 @@
    "siglum_folds": "nyaysa",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:nyayasiiitra"
   },
   {
@@ -9945,26 +9665,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:ragavik00118;data/pd/pd_index_works.tsv:CXV:39;data/pd/pd_siglum_families.tsv:RāgVi."
   },
   {
-   "registry_id": "PDW-43ac4869ce",
-   "work_id": "PDW-43ac4869ce",
-   "identity_status": "resolved",
-   "label": "Pramanavarttikabhasya — or Varttikalankara",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:pramanavarttikabhasyaorvarttikalankara",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "pramavabh",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:pramanavarttikabhasyaorvarttikalankara"
-  },
-  {
    "registry_id": "PDW-43b3e08b8c",
    "work_id": "PDW-43b3e08b8c",
    "identity_status": "resolved",
@@ -10003,26 +9703,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:dhanvantariyanighantu;data/pd/pd_index_works.tsv:CIII:15;data/pd/pd_siglum_families.tsv:DhanvNi."
-  },
-  {
-   "registry_id": "PDW-43e0516355",
-   "work_id": "PDW-43e0516355",
-   "identity_status": "resolved",
-   "label": "vasiṣṭhasmṛti",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXVIII:12",
-   "label_variants": "vasiṣṭhasmṛti",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "vasids",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVIII:12"
   },
   {
    "registry_id": "PDW-43f3f14830",
@@ -10161,7 +9841,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCI:33"
   },
   {
@@ -10183,26 +9863,6 @@
    "sample_role": "none",
    "unresolved_class": "aob_join_aob_never_cited_near_miss",
    "provenance": "data/pd/pd_aob_declared_works.tsv:pauskarrasarhhita"
-  },
-  {
-   "registry_id": "PDW-44dc750f11",
-   "work_id": "PDW-44dc750f11",
-   "identity_status": "resolved",
-   "label": "śatakatrayī",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXI:19",
-   "label_variants": "śatakatrayī",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "sattrayi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXI:19"
   },
   {
    "registry_id": "PDW-45028e90a8",
@@ -10521,7 +10181,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXVII:6"
   },
   {
@@ -10581,7 +10241,7 @@
    "siglum_folds": "bhatti",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:bhattadiipikaonmimasikhandadeva"
   },
   {
@@ -10743,6 +10403,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:avalokaondasridhanika;data/pd/pd_index_works.tsv:XCI:3;data/pd/pd_siglum_families.tsv:AvaLo.;data/pd/pd_siglum_families.tsv:Avalo."
+  },
+  {
+   "registry_id": "PDW-49783a120c",
+   "work_id": "PDW-49783a120c",
+   "identity_status": "resolved",
+   "label": "liṅgānuśāsana",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXVII:36",
+   "label_variants": "liṅgānuśāsana",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "linganu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXVII:36"
   },
   {
    "registry_id": "PDW-49b284e745",
@@ -11032,17 +10712,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCVIII:30",
    "label_variants": "cāndradhātupāṭha",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "dhatupa",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCVIII:30"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIII:20;data/pd/pd_index_works.tsv:XCVIII:30"
   },
   {
    "registry_id": "PDW-4cecd66752",
@@ -11223,26 +10903,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CII:19;data/pd/pd_siglum_families.tsv:DaśāVaC.;data/pd/pd_siglum_families.tsv:DaśāvaC.;data/pd/pd_siglum_families.tsv:DāśāvaC."
-  },
-  {
-   "registry_id": "PDW-4e4fba078e",
-   "work_id": "PDW-4e4fba078e",
-   "identity_status": "resolved",
-   "label": "Durgapr. asad and Kashinath Pandurang Parab.",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:durgaprasadandkashinathpandurangparab",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "pt",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:durgaprasadandkashinathpandurangparab"
   },
   {
    "registry_id": "PDW-4e59e1f65c",
@@ -11481,7 +11141,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXI:49"
   },
   {
@@ -11985,26 +11645,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CXXI:14;data/pd/pd_siglum_families.tsv:SaṅkaDigVi.;data/pd/pd_siglum_families.tsv:ŚankaDigVi.;data/pd/pd_siglum_families.tsv:ŚaṅKaDigVi.;data/pd/pd_siglum_families.tsv:ŚaṅkaDigVi.;data/pd/pd_siglum_families.tsv:ŚaṅkaDigVī.;data/pd/pd_siglum_families.tsv:ŚaṅkaDīgVi.;data/pd/pd_siglum_families.tsv:ŚāṅkaDigVi."
   },
   {
-   "registry_id": "PDW-53aaefefd1",
-   "work_id": "PDW-53aaefefd1",
-   "identity_status": "resolved",
-   "label": "śaunakīyā caturadhyāyikā",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXIII:10",
-   "label_variants": "śaunakīyā caturadhyāyikā",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "catura",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXIII:10"
-  },
-  {
    "registry_id": "PDW-53ba04bb4f",
    "work_id": "PDW-53ba04bb4f",
    "identity_status": "resolved",
@@ -12052,17 +11692,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXI:6",
    "label_variants": "bhaṭṭikāvya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "bhatti",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXI:6"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:bhattikavyaravanavadhabsps57;data/pd/pd_index_works.tsv:CXI:6;data/pd/pd_index_works.tsv:CXVI:22"
   },
   {
    "registry_id": "PDW-53e48ef665",
@@ -12495,14 +12135,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "6",
+   "n_dictionary_sigla": "7",
    "siglum_folds": "ganit;siddh;siddh.sir;siddhantasir;siddhasi;sir",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXV:36;data/pd/pd_pwbib_sigla.tsv:252;data/pd/pd_pwbib_sigla.tsv:91;data/pd/pd_pwgbib_sigla.tsv:332;data/pd/pd_pwgbib_sigla.tsv:333"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:siddlhantasiromani;data/pd/pd_index_works.tsv:CXXV:36;data/pd/pd_pwbib_sigla.tsv:252;data/pd/pd_pwbib_sigla.tsv:91;data/pd/pd_pwgbib_sigla.tsv:332;data/pd/pd_pwgbib_sigla.tsv:333"
   },
   {
    "registry_id": "PDW-55f5d76ad9",
@@ -12605,26 +12245,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:manavagrhyasiitra;data/pd/pd_index_works.tsv:CXIII:33;data/pd/pd_pwbib_sigla.tsv:183;data/pd/pd_pwbib_sigla.tsv:469;data/pd/pd_siglum_families.tsv:MānGS."
   },
   {
-   "registry_id": "PDW-569461bd4a",
-   "work_id": "PDW-569461bd4a",
-   "identity_status": "resolved",
-   "label": "Nanarth larnavasamksepa or Rajarajiya",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:nanarthlarnavasamksepaorrajarajiya",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "nanarthasam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:nanarthlarnavasamksepaorrajarajiya"
-  },
-  {
    "registry_id": "PDW-56b522fb6f",
    "work_id": "PDW-56b522fb6f",
    "identity_status": "resolved",
@@ -12715,14 +12335,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "kalavi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCIV:3"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:kalaviliasa;data/pd/pd_index_works.tsv:XCIV:3"
   },
   {
    "registry_id": "PDW-570890325d",
@@ -12761,7 +12381,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:LXXXIX:7"
   },
   {
@@ -13203,26 +12823,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCII:2;data/pd/pd_siglum_families.tsv:ĀryāŚ."
-  },
-  {
-   "registry_id": "PDW-5abe521e9f",
-   "work_id": "PDW-5abe521e9f",
-   "identity_status": "resolved",
-   "label": "Paragarigiksa",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:paragarigiksa",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "parasi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:paragarigiksa"
   },
   {
    "registry_id": "PDW-5acba56cca",
@@ -13692,17 +13292,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCI:20",
    "label_variants": "ātmatattvaviveka",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "atmatavi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCI:20"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CX:21;data/pd/pd_index_works.tsv:XCI:20"
   },
   {
    "registry_id": "PDW-5e2226a4c8",
@@ -13985,26 +13585,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:ramacaypastava;data/pd/pd_index_works.tsv:CXVI:8;data/pd/pd_siglum_families.tsv:RāmCāSta."
   },
   {
-   "registry_id": "PDW-5fe7763d9f",
-   "work_id": "PDW-5fe7763d9f",
-   "identity_status": "resolved",
-   "label": "Durgapr asida and Wasudev Laxman Sastri: Pan — isikar. se te IY Sn RA",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:durgaprasidaandwasudevlaxmansastripanisikarseteiysnra",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "pt",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:durgaprasidaandwasudevlaxmansastripanisikarseteiysnra"
-  },
-  {
    "registry_id": "PDW-5ff0be0b61",
    "work_id": "PDW-5ff0be0b61",
    "identity_status": "resolved",
@@ -14021,7 +13601,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXV:53"
   },
   {
@@ -14125,26 +13705,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CVI:51;data/pd/pd_siglum_families.tsv:PadyaVe."
   },
   {
-   "registry_id": "PDW-6106421570",
-   "work_id": "PDW-6106421570",
-   "identity_status": "resolved",
-   "label": "horāśāstra",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXVII:52",
-   "label_variants": "horāśāstra",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "2",
-   "siglum_folds": "brhajja;horas",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXVII:52;data/pd/pd_pwgbib_sigla.tsv:147"
-  },
-  {
    "registry_id": "PDW-614f08e2dd",
    "work_id": "PDW-614f08e2dd",
    "identity_status": "resolved",
@@ -14203,6 +13763,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CII:46;data/pd/pd_siglum_families.tsv:DeviPañ.;data/pd/pd_siglum_families.tsv:DevīPañ."
+  },
+  {
+   "registry_id": "PDW-618990b372",
+   "work_id": "PDW-618990b372",
+   "identity_status": "resolved",
+   "label": "liṅgānuśāsana",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXVII:35",
+   "label_variants": "liṅgānuśāsana",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "2",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "2",
+   "siglum_folds": "linganu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:salinganusgasana;data/pd/pd_index_works.tsv:CXVII:35"
   },
   {
    "registry_id": "PDW-619cab0f11",
@@ -14323,46 +13903,6 @@
    "sample_role": "none",
    "unresolved_class": "aob_join_aob_never_cited_near_miss",
    "provenance": "data/pd/pd_aob_declared_works.tsv:gangavatarana"
-  },
-  {
-   "registry_id": "PDW-624f1d2547",
-   "work_id": "PDW-624f1d2547",
-   "identity_status": "resolved",
-   "label": "( 88",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:88",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "bhavpra",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:88"
-  },
-  {
-   "registry_id": "PDW-6257b6d74c",
-   "work_id": "PDW-6257b6d74c",
-   "identity_status": "resolved",
-   "label": "vārtikālaṃkāra",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXVIII:29",
-   "label_variants": "vārtikālaṃkāra",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "pramavabh",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVIII:29"
   },
   {
    "registry_id": "PDW-62654ebfbc",
@@ -14781,7 +14321,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXVI:26"
   },
   {
@@ -14841,7 +14381,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXVII:46"
   },
   {
@@ -14961,7 +14501,7 @@
    "siglum_folds": "navarama",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIII:46"
   },
   {
@@ -15161,7 +14701,7 @@
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIX:49"
   },
   {
@@ -15341,7 +14881,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCII:30"
   },
   {
@@ -15421,7 +14961,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVIII:6"
   },
   {
@@ -15685,26 +15225,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:bhavanibhujanga;data/pd/pd_index_works.tsv:CXI:11;data/pd/pd_siglum_families.tsv:BhavāBhu."
   },
   {
-   "registry_id": "PDW-6c300182f2",
-   "work_id": "PDW-6c300182f2",
-   "identity_status": "resolved",
-   "label": "liṅgānuśāsana",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXVII:31",
-   "label_variants": "liṅgānuśāsana",
-   "n_index_rows": "7",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "linganu",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVII:31;data/pd/pd_index_works.tsv:CXVII:32;data/pd/pd_index_works.tsv:CXVII:33;data/pd/pd_index_works.tsv:CXVII:34;data/pd/pd_index_works.tsv:CXVII:35;data/pd/pd_index_works.tsv:CXVII:36;data/pd/pd_index_works.tsv:CXVII:37"
-  },
-  {
    "registry_id": "PDW-6c38534e89",
    "work_id": "PDW-6c38534e89",
    "identity_status": "resolved",
@@ -15805,26 +15325,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:bhagavadajjukiya;data/pd/pd_index_works.tsv:CXI:1;data/pd/pd_siglum_families.tsv:BhagAjju."
   },
   {
-   "registry_id": "PDW-6ca915ac0b",
-   "work_id": "PDW-6ca915ac0b",
-   "identity_status": "resolved",
-   "label": "śāśvatakośa",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXII:8",
-   "label_variants": "śāśvatakośa",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "1",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "anekasa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXII:8"
-  },
-  {
    "registry_id": "PDW-6cc70c33e2",
    "work_id": "PDW-6cc70c33e2",
    "identity_status": "resolved",
@@ -15843,26 +15343,6 @@
    "sample_role": "none",
    "unresolved_class": "aob_join_aob_never_cited",
    "provenance": "data/pd/pd_aob_declared_works.tsv:satpadistotra;data/pd/pd_index_works.tsv:CXXIII:36"
-  },
-  {
-   "registry_id": "PDW-6cdb7f6a51",
-   "work_id": "PDW-6cdb7f6a51",
-   "identity_status": "resolved",
-   "label": "Sadrasanighantu or Abhidhanaratnamala",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:sadrasanighantuorabhidhanaratnamala",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "sadrasani",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:sadrasanighantuorabhidhanaratnamala"
   },
   {
    "registry_id": "PDW-6d35b68174",
@@ -16025,26 +15505,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CVII:42;data/pd/pd_siglum_families.tsv:PārthaPa."
   },
   {
-   "registry_id": "PDW-6da143a398",
-   "work_id": "PDW-6da143a398",
-   "identity_status": "resolved",
-   "label": "nārāyaṇopaniṣad",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CIV:32",
-   "label_variants": "nārāyaṇopaniṣad",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "narayu",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIV:32"
-  },
-  {
    "registry_id": "PDW-6db77f3074",
    "work_id": "PDW-6db77f3074",
    "identity_status": "resolved",
@@ -16061,7 +15521,7 @@
    "siglum_folds": "harivam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXVII:29"
   },
   {
@@ -16285,6 +15745,26 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:dagapriakarana"
   },
   {
+   "registry_id": "PDW-6f27f84a09",
+   "work_id": "PDW-6f27f84a09",
+   "identity_status": "resolved",
+   "label": "dhātupāṭha",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CIII:21",
+   "label_variants": "dhātupāṭha",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "dhatupa",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIII:21"
+  },
+  {
    "registry_id": "PDW-6f403cbadc",
    "work_id": "PDW-6f403cbadc",
    "identity_status": "resolved",
@@ -16321,7 +15801,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXVIII:6"
   },
   {
@@ -16505,26 +15985,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:bharadvajapitrmedha;data/pd/pd_index_works.tsv:CXI:25;data/pd/pd_siglum_families.tsv:BhārPiMe."
   },
   {
-   "registry_id": "PDW-71aede2a14",
-   "work_id": "PDW-71aede2a14",
-   "identity_status": "resolved",
-   "label": "rogaviniścaya",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXVI:34",
-   "label_variants": "rogaviniścaya",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "rugvi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVI:34"
-  },
-  {
    "registry_id": "PDW-71b15f8e3b",
    "work_id": "PDW-71b15f8e3b",
    "identity_status": "resolved",
@@ -16572,17 +16032,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXVIII:10",
    "label_variants": "vasiṣṭhadharmaśāstra",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "vasids",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVIII:10"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:vasisthadharmasastra;data/pd/pd_index_works.tsv:CXVIII:10;data/pd/pd_index_works.tsv:CXVIII:12"
   },
   {
    "registry_id": "PDW-71e7cb9690",
@@ -16601,7 +16061,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIX:43"
   },
   {
@@ -16741,7 +16201,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXX:7"
   },
   {
@@ -16955,14 +16415,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "siddhasi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXV:38"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:nintasiddhafijana;data/pd/pd_index_works.tsv:CXXV:38"
   },
   {
    "registry_id": "PDW-74b0e651d3",
@@ -17565,26 +17025,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:manameyodaya;data/pd/pd_index_works.tsv:CXIII:32;data/pd/pd_siglum_families.tsv:MānaMe."
   },
   {
-   "registry_id": "PDW-780eafc8a3",
-   "work_id": "PDW-780eafc8a3",
-   "identity_status": "resolved",
-   "label": "Narayar nopanisad=Narayanatharvasiraupanisad",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:narayarnopanisadnarayanatharvasiraupanisad",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "narayu",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:narayarnopanisadnarayanatharvasiraupanisad"
-  },
-  {
    "registry_id": "PDW-781b4f428f",
    "work_id": "PDW-781b4f428f",
    "identity_status": "resolved",
@@ -17641,7 +17081,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXII:51"
   },
   {
@@ -17965,26 +17405,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:kausitakagrhyasiitra;data/pd/pd_index_works.tsv:XCVI:22;data/pd/pd_siglum_families.tsv:KausiGS.;data/pd/pd_siglum_families.tsv:KausīGS.;data/pd/pd_siglum_families.tsv:KauśiGS.;data/pd/pd_siglum_families.tsv:KauśīGS.;data/pd/pd_siglum_families.tsv:KauṣiGS.;data/pd/pd_siglum_families.tsv:KauṣīGS."
   },
   {
-   "registry_id": "PDW-7a2daafa7d",
-   "work_id": "PDW-7a2daafa7d",
-   "identity_status": "resolved",
-   "label": "Tantraratna",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:tantraratna",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "tantrra",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:tantraratna"
-  },
-  {
    "registry_id": "PDW-7a3852223e",
    "work_id": "PDW-7a3852223e",
    "identity_status": "resolved",
@@ -18261,7 +17681,7 @@
    "siglum_folds": "kalavi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIV:44"
   },
   {
@@ -18441,7 +17861,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:LXXXIX:37"
   },
   {
@@ -18461,7 +17881,7 @@
    "siglum_folds": "ekana",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIII:12"
   },
   {
@@ -18483,26 +17903,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XC:12;data/pd/pd_siglum_families.tsv:AbhidhKoBh.;data/pd/pd_siglum_families.tsv:AbhidhKobh."
-  },
-  {
-   "registry_id": "PDW-7da43c14a2",
-   "work_id": "PDW-7da43c14a2",
-   "identity_status": "resolved",
-   "label": "Agastyanighantu or Sabdasarngraha",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:agastyanighantuorsabdasarngraha",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "agani",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:agastyanighantuorsabdasarngraha"
   },
   {
    "registry_id": "PDW-7df1b42272",
@@ -18583,26 +17983,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVIII:43;data/pd/pd_pwbib_sigla.tsv:220;data/pd/pd_pwgbib_sigla.tsv:282;data/pd/pd_pwgbib_sigla.tsv:283;data/pd/pd_pwgbib_sigla.tsv:284;data/pd/pd_siglum_families.tsv:PraboCan."
-  },
-  {
-   "registry_id": "PDW-7e18e94a41",
-   "work_id": "PDW-7e18e94a41",
-   "identity_status": "resolved",
-   "label": "bhagavadgītā",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXI:3",
-   "label_variants": "bhagavadgītā",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "bhaggi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXI:3"
   },
   {
    "registry_id": "PDW-7e1e0da0a5",
@@ -18783,26 +18163,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXII:53;data/pd/pd_index_works.tsv:CXXIII:1;data/pd/pd_siglum_families.tsv:SṛṅgāMañ.;data/pd/pd_siglum_families.tsv:ŚrṅgāMañ.;data/pd/pd_siglum_families.tsv:ŚṛngāMañ.;data/pd/pd_siglum_families.tsv:ŚṛṅgāMañ.;data/pd/pd_siglum_families.tsv:ŚṛṅgāMaṅ.;data/pd/pd_siglum_families.tsv:ŚṛṅgāMāñ."
-  },
-  {
-   "registry_id": "PDW-7f74d2d081",
-   "work_id": "PDW-7f74d2d081",
-   "identity_status": "resolved",
-   "label": "dhātupāṭha",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CIII:20",
-   "label_variants": "dhātupāṭha",
-   "n_index_rows": "5",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "dhatupa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIII:20;data/pd/pd_index_works.tsv:CIII:21;data/pd/pd_index_works.tsv:CIII:22;data/pd/pd_index_works.tsv:CIII:23;data/pd/pd_index_works.tsv:CIII:24"
   },
   {
    "registry_id": "PDW-7f74e69d6d",
@@ -19101,7 +18461,7 @@
    "siglum_folds": "srngati",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXII:49"
   },
   {
@@ -19345,26 +18705,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:upadhiikhandana;data/pd/pd_index_works.tsv:XCII:53;data/pd/pd_siglum_families.tsv:UpādhiKha."
   },
   {
-   "registry_id": "PDW-83e126f993",
-   "work_id": "PDW-83e126f993",
-   "identity_status": "resolved",
-   "label": "Srigopal lacampi",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:srigopallacampi",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "srigopaca",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "aob_join_aob_never_cited;shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:srigopallacampi"
-  },
-  {
    "registry_id": "PDW-83f3266b60",
    "work_id": "PDW-83f3266b60",
    "identity_status": "resolved",
@@ -19461,7 +18801,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVIII:15"
   },
   {
@@ -19483,6 +18823,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:amrtalaharipanditarajajagannatha;data/pd/pd_index_works.tsv:XC:31;data/pd/pd_siglum_families.tsv:AmṛL."
+  },
+  {
+   "registry_id": "PDW-846ad6f68e",
+   "work_id": "PDW-846ad6f68e",
+   "identity_status": "resolved",
+   "label": "nyāyasudhā",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CV:43",
+   "label_variants": "nyāyasudhā",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "nyaysu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CV:43"
   },
   {
    "registry_id": "PDW-8476d6c362",
@@ -19641,7 +19001,7 @@
    "siglum_folds": "venisam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXX:9"
   },
   {
@@ -19775,14 +19135,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "yogsa",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXV:6"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:yogasareasangraha;data/pd/pd_index_works.tsv:CXV:6"
   },
   {
    "registry_id": "PDW-863abd99ca",
@@ -19863,26 +19223,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:dhirtavitasamvada"
-  },
-  {
-   "registry_id": "PDW-86b02e6b81",
-   "work_id": "PDW-86b02e6b81",
-   "identity_status": "resolved",
-   "label": "bhāratacampū",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXI:21",
-   "label_variants": "bhāratacampū",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "bharcam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXI:21"
   },
   {
    "registry_id": "PDW-86b614eea2",
@@ -19985,26 +19325,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CXII:48;data/pd/pd_pwgbib_sigla.tsv:237;data/pd/pd_siglum_families.tsv:MalliC.;data/pd/pd_siglum_families.tsv:MallīC.;data/pd/pd_siglum_families.tsv:MālliC."
   },
   {
-   "registry_id": "PDW-87d470990a",
-   "work_id": "PDW-87d470990a",
-   "identity_status": "resolved",
-   "label": "kāṭhakopaniṣad",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:XCIV:24",
-   "label_variants": "kāṭhakopaniṣad",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "kathu",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCIV:24"
-  },
-  {
    "registry_id": "PDW-87df943b24",
    "work_id": "PDW-87df943b24",
    "identity_status": "resolved",
@@ -20081,7 +19401,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XC:34"
   },
   {
@@ -20112,17 +19432,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCVIII:22",
    "label_variants": "campūbhārata",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "bharcam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCVIII:22"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXI:21;data/pd/pd_index_works.tsv:XCVIII:22"
   },
   {
    "registry_id": "PDW-886a528c35",
@@ -20152,17 +19472,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXXI:24",
    "label_variants": "śabdadvadhakośa",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "sabdabhepra",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXI:24"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXXI:24;data/pd/pd_index_works.tsv:CXXI:25"
   },
   {
    "registry_id": "PDW-888952e413",
@@ -20221,7 +19541,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIV:44"
   },
   {
@@ -20305,26 +19625,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:laghuvisnusmrti;data/pd/pd_index_works.tsv:CXVII:8;data/pd/pd_siglum_families.tsv:LaVisṇuSm.;data/pd/pd_siglum_families.tsv:LaViṣṇuSm."
   },
   {
-   "registry_id": "PDW-893f693235",
-   "work_id": "PDW-893f693235",
-   "identity_status": "resolved",
-   "label": "rāvaṇavadha",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXVI:22",
-   "label_variants": "rāvaṇavadha",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "bhatti",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVI:22"
-  },
-  {
    "registry_id": "PDW-894bdf39e2",
    "work_id": "PDW-894bdf39e2",
    "identity_status": "resolved",
@@ -20383,26 +19683,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXV:22;data/pd/pd_siglum_families.tsv:RasGaṅ.;data/pd/pd_siglum_families.tsv:RasGāṅ."
-  },
-  {
-   "registry_id": "PDW-89effec34e",
-   "work_id": "PDW-89effec34e",
-   "identity_status": "resolved",
-   "label": "ṣaḍrasanighaṇṭu",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXIII:40",
-   "label_variants": "ṣaḍrasanighaṇṭu",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "sadrasani",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXIII:40"
   },
   {
    "registry_id": "PDW-89f31587b7",
@@ -20512,17 +19792,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXXIII:52",
    "label_variants": "saṃkṣepasamarāditya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "samarasam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXIII:52"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:samaradityasarnksepaorsamksepasamaraditya;data/pd/pd_index_works.tsv:CXXIII:52;data/pd/pd_index_works.tsv:CXXIV:23"
   },
   {
    "registry_id": "PDW-8aefba4447",
@@ -20665,26 +19945,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CIV:4;data/pd/pd_siglum_families.tsv:NāṭaLaRaK."
   },
   {
-   "registry_id": "PDW-8d1804e31a",
-   "work_id": "PDW-8d1804e31a",
-   "identity_status": "resolved",
-   "label": "medinīkośa",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXIV:26",
-   "label_variants": "medinīkośa",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "4",
-   "siglum_folds": "med;med.avy;medik",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXIV:26;data/pd/pd_pwbib_sigla.tsv:190;data/pd/pd_pwbib_sigla.tsv:191;data/pd/pd_pwgbib_sigla.tsv:248"
-  },
-  {
    "registry_id": "PDW-8d3bf0a044",
    "work_id": "PDW-8d3bf0a044",
    "identity_status": "resolved",
@@ -20801,7 +20061,7 @@
    "siglum_folds": "bhavpra",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXI:33"
   },
   {
@@ -20925,26 +20185,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:svahasudhakara;data/pd/pd_index_works.tsv:CXXVII:12;data/pd/pd_siglum_families.tsv:SvāhāSu."
   },
   {
-   "registry_id": "PDW-8e481abc11",
-   "work_id": "PDW-8e481abc11",
-   "identity_status": "resolved",
-   "label": "skandayoga",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXVI:42",
-   "label_variants": "skandayoga",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "1",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "avpari",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXVI:42"
-  },
-  {
    "registry_id": "PDW-8e4c3521c7",
    "work_id": "PDW-8e4c3521c7",
    "identity_status": "resolved",
@@ -21023,26 +20263,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:sahityadarpana;data/pd/pd_index_works.tsv:CXXV:19;data/pd/pd_siglum_families.tsv:SahiDa.;data/pd/pd_siglum_families.tsv:SāhiDa.;data/pd/pd_siglum_families.tsv:SāhiDā.;data/pd/pd_siglum_families.tsv:Sāhida.;data/pd/pd_siglum_families.tsv:SāhīDa.;data/pd/pd_siglum_families.tsv:ŚāhiDa."
-  },
-  {
-   "registry_id": "PDW-8ee0bbc178",
-   "work_id": "PDW-8ee0bbc178",
-   "identity_status": "resolved",
-   "label": "samarādityasaṃkṣepa",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXIV:23",
-   "label_variants": "samarādityasaṃkṣepa",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "samarasam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXIV:23"
   },
   {
    "registry_id": "PDW-8efec398d6",
@@ -21265,6 +20485,26 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:padmapiurana;data/pd/pd_index_works.tsv:CVI:47;data/pd/pd_index_works.tsv:CVI:48;data/pd/pd_pwgbib_sigla.tsv:988;data/pd/pd_siglum_families.tsv:PadmP.;data/pd/pd_siglum_families.tsv:PādmP."
   },
   {
+   "registry_id": "PDW-9070d0b9e1",
+   "work_id": "PDW-9070d0b9e1",
+   "identity_status": "resolved",
+   "label": "nyāyasudhā",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CV:44",
+   "label_variants": "nyāyasudhā",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "nyaysu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CV:44"
+  },
+  {
    "registry_id": "PDW-9086b0f2de",
    "work_id": "PDW-9086b0f2de",
    "identity_status": "resolved",
@@ -21283,26 +20523,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:warahadrautasiitra;data/pd/pd_index_works.tsv:CXVIII:27;data/pd/pd_siglum_families.tsv:VāraŚS.;data/pd/pd_siglum_families.tsv:VārāŚS."
-  },
-  {
-   "registry_id": "PDW-90c163f353",
-   "work_id": "PDW-90c163f353",
-   "identity_status": "resolved",
-   "label": "Harivaméa",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:harivamea",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "harivam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:harivamea"
   },
   {
    "registry_id": "PDW-90cd173d5e",
@@ -21341,7 +20561,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXIV:24"
   },
   {
@@ -21805,26 +21025,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CXVII:47;data/pd/pd_siglum_families.tsv:VakroJi.;data/pd/pd_siglum_families.tsv:VakroJī.;data/pd/pd_siglum_families.tsv:Vakrojī."
   },
   {
-   "registry_id": "PDW-9409e3ee32",
-   "work_id": "PDW-9409e3ee32",
-   "identity_status": "resolved",
-   "label": "bhāṣāpariccheda",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXI:41",
-   "label_variants": "bhāṣāpariccheda",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "4",
-   "siglum_folds": "bhasap;bhasapa;bhasapar",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXI:41;data/pd/pd_pwbib_sigla.tsv:33;data/pd/pd_pwgbib_sigla.tsv:44;data/pd/pd_pwgbib_sigla.tsv:581"
-  },
-  {
    "registry_id": "PDW-944c73b315",
    "work_id": "PDW-944c73b315",
    "identity_status": "resolved",
@@ -21841,7 +21041,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CII:23"
   },
   {
@@ -21912,17 +21112,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCVII:29",
    "label_variants": "gopālacampū",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "srigopaca",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCVII:29"
+   "unresolved_class": "aob_join_aob_never_cited",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:srigopallacampi;data/pd/pd_index_works.tsv:CXXIII:20;data/pd/pd_index_works.tsv:XCVII:29"
   },
   {
    "registry_id": "PDW-94d09e94a8",
@@ -21941,7 +21141,7 @@
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXIII:25"
   },
   {
@@ -21963,26 +21163,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:brhaddharmapurana;data/pd/pd_index_works.tsv:CX:12;data/pd/pd_siglum_families.tsv:BṛDharmaP."
-  },
-  {
-   "registry_id": "PDW-950c3dd045",
-   "work_id": "PDW-950c3dd045",
-   "identity_status": "resolved",
-   "label": "Amarakosa or Na imalinganusasana",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:amarakosaornaimalinganusasana",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "amak",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:amarakosaornaimalinganusasana"
   },
   {
    "registry_id": "PDW-9537dc7408",
@@ -22161,7 +21341,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIII:1"
   },
   {
@@ -22181,7 +21361,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVII:53"
   },
   {
@@ -22215,34 +21395,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "4",
+   "n_dictionary_sigla": "5",
    "siglum_folds": "hariv;hariv.langl;harivam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXVII:28;data/pd/pd_pwbib_sigla.tsv:111;data/pd/pd_pwbib_sigla.tsv:335;data/pd/pd_pwgbib_sigla.tsv:139"
-  },
-  {
-   "registry_id": "PDW-9728843420",
-   "work_id": "PDW-9728843420",
-   "identity_status": "resolved",
-   "label": "Anekarthasamuc caya or Sagvatakoga",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:anekarthasamuccayaorsagvatakoga",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "anekasa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:anekarthasamuccayaorsagvatakoga"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:harivamea;data/pd/pd_index_works.tsv:CXXVII:28;data/pd/pd_pwbib_sigla.tsv:111;data/pd/pd_pwbib_sigla.tsv:335;data/pd/pd_pwgbib_sigla.tsv:139"
   },
   {
    "registry_id": "PDW-9749b6ed92",
@@ -22323,26 +21483,6 @@
    "sample_role": "none",
    "unresolved_class": "aob_join_aob_never_cited_near_miss",
    "provenance": "data/pd/pd_aob_declared_works.tsv:chandauhsiitra"
-  },
-  {
-   "registry_id": "PDW-97da56207b",
-   "work_id": "PDW-97da56207b",
-   "identity_status": "resolved",
-   "label": "Samaradityasarnksepa or Samksepasamaraditya",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:samaradityasarnksepaorsamksepasamaraditya",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "samarasam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:samaradityasarnksepaorsamksepasamaraditya"
   },
   {
    "registry_id": "PDW-97e6e5b4b1",
@@ -22501,7 +21641,7 @@
    "siglum_folds": "srngati",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXII:48"
   },
   {
@@ -23001,7 +22141,7 @@
    "siglum_folds": "tantrsa",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:C:40"
   },
   {
@@ -23161,7 +22301,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVI:45"
   },
   {
@@ -23181,7 +22321,7 @@
    "siglum_folds": "aryasi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXIII:17"
   },
   {
@@ -23303,26 +22443,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CV:31;data/pd/pd_siglum_families.tsv:NyayMa.;data/pd/pd_siglum_families.tsv:NyāyMa.;data/pd/pd_siglum_families.tsv:NyāyMā."
-  },
-  {
-   "registry_id": "PDW-9e8275b488",
-   "work_id": "PDW-9e8275b488",
-   "identity_status": "resolved",
-   "label": "tantrasāra",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:C:41",
-   "label_variants": "tantrasāra",
-   "n_index_rows": "2",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "2",
-   "siglum_folds": "tantras;tantrsa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:C:41;data/pd/pd_index_works.tsv:C:42;data/pd/pd_pwgbib_sigla.tsv:350"
   },
   {
    "registry_id": "PDW-9eb3ee8586",
@@ -23712,17 +22832,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCIX:40",
    "label_variants": "jyotiṣavedāṅga",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "jyotive",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCIX:40"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXX:16;data/pd/pd_index_works.tsv:XCIX:40"
   },
   {
    "registry_id": "PDW-a0df519fc0",
@@ -23865,26 +22985,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:jabaladarganopanisad;data/pd/pd_index_works.tsv:XCIX:18;data/pd/pd_siglum_families.tsv:JabālaDaU.;data/pd/pd_siglum_families.tsv:JābālaDaU."
   },
   {
-   "registry_id": "PDW-a22f429f5e",
-   "work_id": "PDW-a22f429f5e",
-   "identity_status": "resolved",
-   "label": "mānasollāsa",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXIII:36",
-   "label_variants": "mānasollāsa",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "manaso",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXIII:36"
-  },
-  {
    "registry_id": "PDW-a275c8a29c",
    "work_id": "PDW-a275c8a29c",
    "identity_status": "resolved",
@@ -23943,6 +23043,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:sambhitopanisadbrahmana"
+  },
+  {
+   "registry_id": "PDW-a2a24146cb",
+   "work_id": "PDW-a2a24146cb",
+   "identity_status": "resolved",
+   "label": "vetālapañcaviṃśati",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXX:10",
+   "label_variants": "vetālapañcaviṃśati",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "vetapan",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXX:10"
   },
   {
    "registry_id": "PDW-a2ab943bcd",
@@ -24101,7 +23221,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CI:7"
   },
   {
@@ -24201,7 +23321,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CI:24"
   },
   {
@@ -24492,17 +23612,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCVII:44",
    "label_variants": "gauḍabrahmānandī",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "lacandr",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCVII:44"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:laghucandrikeonadvaitasiddhi;data/pd/pd_index_works.tsv:CXVI:48;data/pd/pd_index_works.tsv:XCVII:44"
   },
   {
    "registry_id": "PDW-a5ce018999",
@@ -24541,7 +23661,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVII:56"
   },
   {
@@ -24561,7 +23681,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVII:49"
   },
   {
@@ -24661,7 +23781,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXVII:6"
   },
   {
@@ -24681,7 +23801,7 @@
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXVIII:5"
   },
   {
@@ -24703,26 +23823,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:LXXXIX:42;data/pd/pd_siglum_families.tsv:AneKāNā.;data/pd/pd_siglum_families.tsv:AnekāNā."
-  },
-  {
-   "registry_id": "PDW-a6f86666ea",
-   "work_id": "PDW-a6f86666ea",
-   "identity_status": "resolved",
-   "label": "Dhatupatha",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:dhatupatha",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "dhatupa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:dhatupatha"
   },
   {
    "registry_id": "PDW-a7054f7b5b",
@@ -24881,7 +23981,7 @@
    "siglum_folds": "hem.yog;yogas;yogsa",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXV:4;data/pd/pd_pwbib_sigla.tsv:116;data/pd/pd_pwgbib_sigla.tsv:280"
   },
   {
@@ -25241,7 +24341,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCI:54"
   },
   {
@@ -25261,7 +24361,7 @@
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIX:48"
   },
   {
@@ -25372,17 +24472,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:LXXXIX:46",
    "label_variants": "anekārthasamuccaya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_index_vision_low": "1",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "2",
+   "n_dictionary_sigla": "4",
    "siglum_folds": "anekasa;sasvata",
    "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:LXXXIX:46;data/pd/pd_pwbib_sigla.tsv:445"
+   "sample_role": "vision_low",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:anekarthasamuccayaorsagvatakoga;data/pd/pd_index_works.tsv:CXXII:8;data/pd/pd_index_works.tsv:LXXXIX:46;data/pd/pd_pwbib_sigla.tsv:445"
   },
   {
    "registry_id": "PDW-aa134dc422",
@@ -25625,6 +24725,26 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:carudaitta;data/pd/pd_index_works.tsv:XCVIII:36;data/pd/pd_siglum_families.tsv:Cārud."
   },
   {
+   "registry_id": "PDW-adc1472a37",
+   "work_id": "PDW-adc1472a37",
+   "identity_status": "resolved",
+   "label": "liṅgānuśāsana",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXVII:37",
+   "label_variants": "liṅgānuśāsana",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "linganu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXVII:37"
+  },
+  {
    "registry_id": "PDW-ae2308bc68",
    "work_id": "PDW-ae2308bc68",
    "identity_status": "resolved",
@@ -25703,6 +24823,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:herambopanisad;data/pd/pd_index_works.tsv:CXXVII:48;data/pd/pd_siglum_families.tsv:HerU."
+  },
+  {
+   "registry_id": "PDW-ae9ba9c946",
+   "work_id": "PDW-ae9ba9c946",
+   "identity_status": "resolved",
+   "label": "tantrasāra",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:C:41",
+   "label_variants": "tantrasāra",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "tantrsa",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:C:41"
   },
   {
    "registry_id": "PDW-aec8c66204",
@@ -25845,26 +24985,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:minaksipaficaratna"
   },
   {
-   "registry_id": "PDW-af67106881",
-   "work_id": "PDW-af67106881",
-   "identity_status": "resolved",
-   "label": "Bhagava dgita",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:bhagavadgita",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "bhaggi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:bhagavadgita"
-  },
-  {
    "registry_id": "PDW-af7f993fdb",
    "work_id": "PDW-af7f993fdb",
    "identity_status": "resolved",
@@ -25901,7 +25021,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXVI:50"
   },
   {
@@ -25981,7 +25101,7 @@
    "siglum_folds": "nyaya-s;nyaysu",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CV:45;data/pd/pd_pwgbib_sigla.tsv:270"
   },
   {
@@ -26001,7 +25121,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVII:50"
   },
   {
@@ -26021,7 +25141,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXIV:14"
   },
   {
@@ -26141,7 +25261,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVI:16"
   },
   {
@@ -26461,7 +25581,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIII:34"
   },
   {
@@ -26681,28 +25801,8 @@
    "siglum_folds": "paras",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVII:32"
-  },
-  {
-   "registry_id": "PDW-b4eb3a766d",
-   "work_id": "PDW-b4eb3a766d",
-   "identity_status": "resolved",
-   "label": "Nyayasa ra",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:nyayasara",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "nyaysa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:nyayasara"
   },
   {
    "registry_id": "PDW-b4eb9a648f",
@@ -26781,7 +25881,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXV:46"
   },
   {
@@ -26881,7 +25981,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:LXXXIX:26"
   },
   {
@@ -27021,7 +26121,7 @@
    "siglum_folds": "parasi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:paranandasitra"
   },
   {
@@ -27041,7 +26141,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCV:31"
   },
   {
@@ -27512,17 +26612,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CIV:15",
    "label_variants": "nānārthārṇavasaṃkṣepa",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "nanarthasam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIV:15"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:nanarthlarnavasamksepaorrajarajiya;data/pd/pd_index_works.tsv:CIV:15;data/pd/pd_index_works.tsv:CXVI:1"
   },
   {
    "registry_id": "PDW-ba7b50754d",
@@ -27981,7 +27081,7 @@
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVIII:17"
   },
   {
@@ -28092,17 +27192,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XC:17",
    "label_variants": "abhidhātaratnamālā",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "sadrasani",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XC:17"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:sadrasanighantuorabhidhanaratnamala;data/pd/pd_index_works.tsv:CXXIII:40;data/pd/pd_index_works.tsv:XC:17"
   },
   {
    "registry_id": "PDW-bd201d91ec",
@@ -28123,26 +27223,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXIX:29;data/pd/pd_siglum_families.tsv:VIŚVALOK.;data/pd/pd_siglum_families.tsv:VIŚVALoK.;data/pd/pd_siglum_families.tsv:VisvaLoK.;data/pd/pd_siglum_families.tsv:ViśvaLoK.;data/pd/pd_siglum_families.tsv:ViśvaLok.;data/pd/pd_siglum_families.tsv:VīśvaLoK."
-  },
-  {
-   "registry_id": "PDW-bd8010af3c",
-   "work_id": "PDW-bd8010af3c",
-   "identity_status": "resolved",
-   "label": "laghucandrikā",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXVI:48",
-   "label_variants": "laghucandrikā",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "lacandr",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVI:48"
   },
   {
    "registry_id": "PDW-bd88a01f15",
@@ -28472,17 +27552,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CVII:17",
    "label_variants": "pariśiṣṭaparvan",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "2",
+   "n_dictionary_sigla": "4",
    "siglum_folds": "hem.par;paripar",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CVII:17;data/pd/pd_pwbib_sigla.tsv:337"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:parisisttaparvanorsthaviravalicarita;data/pd/pd_index_works.tsv:CVII:17;data/pd/pd_index_works.tsv:CXXVI:48;data/pd/pd_pwbib_sigla.tsv:337"
   },
   {
    "registry_id": "PDW-bf9ba84878",
@@ -28503,26 +27583,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:ahirbudhnyasamhita;data/pd/pd_index_works.tsv:XCI:15;data/pd/pd_siglum_families.tsv:AhirBuS.;data/pd/pd_siglum_families.tsv:AhirbuS."
-  },
-  {
-   "registry_id": "PDW-bfa384807f",
-   "work_id": "PDW-bfa384807f",
-   "identity_status": "resolved",
-   "label": "śabdabhedaprakāśa",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXI:25",
-   "label_variants": "śabdabhedaprakāśa",
-   "n_index_rows": "2",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "sabdabhepra",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXI:25;data/pd/pd_index_works.tsv:CXXI:26"
   },
   {
    "registry_id": "PDW-bfea969129",
@@ -28583,26 +27643,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:LXXXIX:43;data/pd/pd_siglum_families.tsv:AnekāNi."
-  },
-  {
-   "registry_id": "PDW-c03328b5bc",
-   "work_id": "PDW-c03328b5bc",
-   "identity_status": "resolved",
-   "label": "Hiranyakesgigrautasiitra SatyasadhaSs ASS. 53",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:hiranyakesgigrautasiitrasatyasadhassass53",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "hirss",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:hiranyakesgigrautasiitrasatyasadhassass53"
   },
   {
    "registry_id": "PDW-c05fa0823e",
@@ -29225,6 +28265,26 @@
    "provenance": "data/pd/pd_index_works.tsv:XCI:11;data/pd/pd_siglum_families.tsv:AstāSaṃ.;data/pd/pd_siglum_families.tsv:AsṭāSaṃ.;data/pd/pd_siglum_families.tsv:AṣtāSam.;data/pd/pd_siglum_families.tsv:AṣtāSaṃ.;data/pd/pd_siglum_families.tsv:AṣṭaSaṃ.;data/pd/pd_siglum_families.tsv:AṣṭāSam.;data/pd/pd_siglum_families.tsv:AṣṭāSaṃ.;data/pd/pd_siglum_families.tsv:AṣṭāSāṃ.;data/pd/pd_siglum_families.tsv:Aṣṭāsaṃ."
   },
   {
+   "registry_id": "PDW-c354ecc702",
+   "work_id": "PDW-c354ecc702",
+   "identity_status": "resolved",
+   "label": "śabdabhedaprakāśa",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXXI:26",
+   "label_variants": "śabdabhedaprakāśa",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "sabdabhepra",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXXI:26"
+  },
+  {
    "registry_id": "PDW-c377b4cbe6",
    "work_id": "PDW-c377b4cbe6",
    "identity_status": "resolved",
@@ -29275,14 +28335,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "parasi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CVII:40"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:paragarigiksa;data/pd/pd_index_works.tsv:CVII:40"
   },
   {
    "registry_id": "PDW-c4dfb6a209",
@@ -29401,7 +28461,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVII:39"
   },
   {
@@ -29861,7 +28921,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXIV:26"
   },
   {
@@ -29961,7 +29021,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXII:14"
   },
   {
@@ -30081,7 +29141,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVI:6"
   },
   {
@@ -30172,17 +29232,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CVIII:39",
    "label_variants": "pradīpa",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "yogsuvr",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CVIII:39"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CVIII:39;data/pd/pd_index_works.tsv:CXV:8"
   },
   {
    "registry_id": "PDW-c9f40bceb5",
@@ -30372,17 +29432,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XC:22",
    "label_variants": "abhilaṣitārthacintāmaṇi",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "manaso",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XC:22"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:manasollasa;data/pd/pd_index_works.tsv:CXIII:36;data/pd/pd_index_works.tsv:XC:22"
   },
   {
    "registry_id": "PDW-cac266d61f",
@@ -30461,7 +29521,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVI:12"
   },
   {
@@ -30592,37 +29652,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:LXXXIX:4",
    "label_variants": "agastyanighaṇṭu",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "agani",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:LXXXIX:4"
-  },
-  {
-   "registry_id": "PDW-cbe47da20d",
-   "work_id": "PDW-cbe47da20d",
-   "identity_status": "resolved",
-   "label": "Satakatrayi Bhartrharisubhasitasarngraha",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:satakatrayibhartrharisubhasitasarngraha",
-   "label_variants": "",
-   "n_index_rows": "0",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "sattrayi",
+   "n_dictionary_sigla": "3",
+   "siglum_folds": "agani",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:satakatrayibhartrharisubhasitasarngraha"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:agastyanighantuorsabdasarngraha;data/pd/pd_index_works.tsv:CXXI:30;data/pd/pd_index_works.tsv:LXXXIX:4"
   },
   {
    "registry_id": "PDW-cc0d91a0c1",
@@ -30761,7 +29801,7 @@
    "siglum_folds": "venisam",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXX:8"
   },
   {
@@ -30803,26 +29843,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:nyayabindu;data/pd/pd_index_works.tsv:CV:27;data/pd/pd_siglum_families.tsv:NyāyBi."
-  },
-  {
-   "registry_id": "PDW-ce04dbd60c",
-   "work_id": "PDW-ce04dbd60c",
-   "identity_status": "resolved",
-   "label": "Yogasare asangraha",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:yogasareasangraha",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "yogsa",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:yogasareasangraha"
   },
   {
    "registry_id": "PDW-ce0a052cfc",
@@ -31145,26 +30165,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:lingopanisad;data/pd/pd_index_works.tsv:CXVII:40;data/pd/pd_siglum_families.tsv:LiṅgU."
   },
   {
-   "registry_id": "PDW-d0dc2db8d7",
-   "work_id": "PDW-d0dc2db8d7",
-   "identity_status": "resolved",
-   "label": "Vasistha dharmasastra",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:vasisthadharmasastra",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "vasids",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:vasisthadharmasastra"
-  },
-  {
    "registry_id": "PDW-d0ebed8e98",
    "work_id": "PDW-d0ebed8e98",
    "identity_status": "resolved",
@@ -31201,7 +30201,7 @@
    "siglum_folds": "tantrabi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXII:33"
   },
   {
@@ -31392,17 +30392,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXI:9",
    "label_variants": "bhartṛharisubhāṣitasaṃgraha",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "sattrayi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXI:9"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:satakatrayibhartrharisubhasitasarngraha;data/pd/pd_index_works.tsv:CXI:9;data/pd/pd_index_works.tsv:CXXI:19"
   },
   {
    "registry_id": "PDW-d1c2ee6eda",
@@ -31545,26 +30545,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CXI:22;data/pd/pd_siglum_families.tsv:BhārBhāDi.;data/pd/pd_siglum_families.tsv:BhārBhāDī."
   },
   {
-   "registry_id": "PDW-d2644fd606",
-   "work_id": "PDW-d2644fd606",
-   "identity_status": "resolved",
-   "label": "Tantrabhidhana",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:tantrabhidhana",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "tantrabhi",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:tantrabhidhana"
-  },
-  {
    "registry_id": "PDW-d277528f7c",
    "work_id": "PDW-d277528f7c",
    "identity_status": "resolved",
@@ -31575,14 +30555,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "1",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:C:44"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:tantrabhidhana;data/pd/pd_index_works.tsv:C:44"
   },
   {
    "registry_id": "PDW-d2b3b4fd7c",
@@ -31692,17 +30672,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CXXIV:9",
    "label_variants": "satyāṣāḍhaśrautasūtra",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_index_vision_low": "1",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "hirss",
    "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXIV:9"
+   "sample_role": "vision_low",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:hiranyakesgigrautasiitrasatyasadhassass53;data/pd/pd_index_works.tsv:CXXIV:9;data/pd/pd_index_works.tsv:CXXVII:45"
   },
   {
    "registry_id": "PDW-d3be6f4b6d",
@@ -31712,17 +30692,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CIX:7",
    "label_variants": "pramāṇavārtikabhāṣya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "3",
    "siglum_folds": "pramavabh",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIX:7"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:pramanavarttikabhasyaorvarttikalankara;data/pd/pd_index_works.tsv:CIX:7;data/pd/pd_index_works.tsv:CXVIII:29"
   },
   {
    "registry_id": "PDW-d3c6fdc488",
@@ -32281,7 +31261,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXIII:15"
   },
   {
@@ -32423,26 +31403,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXXV:44;data/pd/pd_siglum_families.tsv:SindūPra."
-  },
-  {
-   "registry_id": "PDW-d9d3ca921e",
-   "work_id": "PDW-d9d3ca921e",
-   "identity_status": "resolved",
-   "label": "śrīgopālacampū",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXIII:20",
-   "label_variants": "śrīgopālacampū",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "srigopaca",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXIII:20"
   },
   {
    "registry_id": "PDW-d9ddb5ac24",
@@ -32645,26 +31605,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:dipakalika;data/pd/pd_index_works.tsv:CII:26;data/pd/pd_siglum_families.tsv:DipKa.;data/pd/pd_siglum_families.tsv:DīpKa.;data/pd/pd_siglum_families.tsv:DīpKā.;data/pd/pd_siglum_families.tsv:Dīpka."
   },
   {
-   "registry_id": "PDW-dae2798847",
-   "work_id": "PDW-dae2798847",
-   "identity_status": "resolved",
-   "label": "vetālapañcaviṃśati",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXX:10",
-   "label_variants": "vetālapañcaviṃśati",
-   "n_index_rows": "2",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "3",
-   "siglum_folds": "vet;vetapan",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXX:10;data/pd/pd_index_works.tsv:CXX:11;data/pd/pd_pwbib_sigla.tsv:292;data/pd/pd_pwgbib_sigla.tsv:384"
-  },
-  {
    "registry_id": "PDW-dae3511797",
    "work_id": "PDW-dae3511797",
    "identity_status": "resolved",
@@ -32723,6 +31663,26 @@
    "sample_role": "none",
    "unresolved_class": "aob_join_aob_never_cited_near_miss",
    "provenance": "data/pd/pd_aob_declared_works.tsv:bhibrahmasitrabhasya"
+  },
+  {
+   "registry_id": "PDW-db32b6f3ef",
+   "work_id": "PDW-db32b6f3ef",
+   "identity_status": "resolved",
+   "label": "vetālapañcaviṃśati",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXX:11",
+   "label_variants": "vetālapañcaviṃśati",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "vetapan",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXX:11"
   },
   {
    "registry_id": "PDW-db4769c75f",
@@ -33265,6 +32225,26 @@
    "provenance": "data/pd/pd_index_works.tsv:XCV:18;data/pd/pd_siglum_families.tsv:Kāsi.;data/pd/pd_siglum_families.tsv:KāŚi.;data/pd/pd_siglum_families.tsv:Kāśi.;data/pd/pd_siglum_families.tsv:Kāśī."
   },
   {
+   "registry_id": "PDW-df102f0056",
+   "work_id": "PDW-df102f0056",
+   "identity_status": "resolved",
+   "label": "dhātupāṭha",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CIII:24",
+   "label_variants": "dhātupāṭha",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "dhatupa",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIII:24"
+  },
+  {
    "registry_id": "PDW-df114adcbf",
    "work_id": "PDW-df114adcbf",
    "identity_status": "resolved",
@@ -33303,26 +32283,6 @@
    "sample_role": "none",
    "unresolved_class": "aob_join_aob_never_cited_near_miss",
    "provenance": "data/pd/pd_aob_declared_works.tsv:pranavopanisad1"
-  },
-  {
-   "registry_id": "PDW-df4dae38fe",
-   "work_id": "PDW-df4dae38fe",
-   "identity_status": "resolved",
-   "label": "nyāsa",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CV:49",
-   "label_variants": "nyāsa",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "nyas",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CV:49"
   },
   {
    "registry_id": "PDW-df7f169063",
@@ -33405,6 +32365,26 @@
    "provenance": "data/pd/pd_index_works.tsv:CXII:54;data/pd/pd_siglum_families.tsv:MahNirVāT.;data/pd/pd_siglum_families.tsv:MahNirvāT.;data/pd/pd_siglum_families.tsv:MahNīrvāT."
   },
   {
+   "registry_id": "PDW-e03867235a",
+   "work_id": "PDW-e03867235a",
+   "identity_status": "resolved",
+   "label": "dhātupāṭha",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CIII:23",
+   "label_variants": "dhātupāṭha",
+   "n_index_rows": "2",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "2",
+   "siglum_folds": "dhatupa",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIII:23;data/pd/pd_index_works.tsv:CXXI:33"
+  },
+  {
    "registry_id": "PDW-e0393ce7f8",
    "work_id": "PDW-e0393ce7f8",
    "identity_status": "resolved",
@@ -33441,7 +32421,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXIX:2"
   },
   {
@@ -33541,7 +32521,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXIV:33"
   },
   {
@@ -33892,17 +32872,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:XCIV:42",
    "label_variants": "kārikāvalī",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "bhasapa",
+   "n_dictionary_sigla": "5",
+   "siglum_folds": "bhasap;bhasapa;bhasapar",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCIV:42"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXI:41;data/pd/pd_index_works.tsv:XCIV:42;data/pd/pd_pwbib_sigla.tsv:33;data/pd/pd_pwgbib_sigla.tsv:44;data/pd/pd_pwgbib_sigla.tsv:581"
   },
   {
    "registry_id": "PDW-e2dd75eaaa",
@@ -33995,14 +32975,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "ksudra",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:XCVI:30"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:ksudrasitra;data/pd/pd_index_works.tsv:XCVI:30"
   },
   {
    "registry_id": "PDW-e369c5c321",
@@ -34021,7 +33001,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVII:42"
   },
   {
@@ -34321,7 +33301,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXI:48"
   },
   {
@@ -34785,26 +33765,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CXIV:18;data/pd/pd_siglum_families.tsv:MṛgendraT.;data/pd/pd_siglum_families.tsv:MṛgendraṬ."
   },
   {
-   "registry_id": "PDW-e81d98eb58",
-   "work_id": "PDW-e81d98eb58",
-   "identity_status": "resolved",
-   "label": "Parisist taparvan or Sthaviravalicarita",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:parisisttaparvanorsthaviravalicarita",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "paripar",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:parisisttaparvanorsthaviravalicarita"
-  },
-  {
    "registry_id": "PDW-e83475b626",
    "work_id": "PDW-e83475b626",
    "identity_status": "resolved",
@@ -34961,7 +33921,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCI:7"
   },
   {
@@ -35081,7 +34041,7 @@
    "siglum_folds": "vetapan",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXX:12"
   },
   {
@@ -35143,26 +34103,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:prabandlhakoga;data/pd/pd_index_works.tsv:CVIII:41;data/pd/pd_siglum_families.tsv:PrabaK."
-  },
-  {
-   "registry_id": "PDW-ea3b7be68c",
-   "work_id": "PDW-ea3b7be68c",
-   "identity_status": "resolved",
-   "label": "saubhāgyabhāskara",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXVI:36",
-   "label_variants": "saubhāgyabhāskara",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "lalitasabh",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXVI:36"
   },
   {
    "registry_id": "PDW-ea3e2fe5a5",
@@ -35405,26 +34345,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:garbhopanisad;data/pd/pd_index_works.tsv:XCVII:2;data/pd/pd_siglum_families.tsv:GarbhU."
   },
   {
-   "registry_id": "PDW-ebdd533f82",
-   "work_id": "PDW-ebdd533f82",
-   "identity_status": "resolved",
-   "label": "Brhajjaitaka Horagastra Warahamihira",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:brhajjaitakahoragastrawarahamihira",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "brhajja",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:brhajjaitakahoragastrawarahamihira"
-  },
-  {
    "registry_id": "PDW-ec1edefcd2",
    "work_id": "PDW-ec1edefcd2",
    "identity_status": "resolved",
@@ -35521,7 +34441,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIX:32"
   },
   {
@@ -35743,26 +34663,6 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:devalasm;data/pd/pd_index_works.tsv:CII:44;data/pd/pd_siglum_families.tsv:DevaSm."
-  },
-  {
-   "registry_id": "PDW-edd68ff394",
-   "work_id": "PDW-edd68ff394",
-   "identity_status": "resolved",
-   "label": "sthavirāvalīcarita",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXXVI:48",
-   "label_variants": "sthavirāvalīcarita",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "paripar",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXXVI:48"
   },
   {
    "registry_id": "PDW-edea9609e4",
@@ -36025,26 +34925,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:mayamata;data/pd/pd_index_works.tsv:CXII:43;data/pd/pd_siglum_families.tsv:MayaMa.;data/pd/pd_siglum_families.tsv:MayaMā."
   },
   {
-   "registry_id": "PDW-ee79cd5795",
-   "work_id": "PDW-ee79cd5795",
-   "identity_status": "resolved",
-   "label": "(Sa.) Linganusgasana",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:salinganusgasana",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "2",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "linganu",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:salinganusgasana"
-  },
-  {
    "registry_id": "PDW-eebdae3ee1",
    "work_id": "PDW-eebdae3ee1",
    "identity_status": "resolved",
@@ -36161,7 +35041,7 @@
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCIII:10"
   },
   {
@@ -36285,6 +35165,26 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:siddknaifitasoropanisad"
   },
   {
+   "registry_id": "PDW-f14f31f7a2",
+   "work_id": "PDW-f14f31f7a2",
+   "identity_status": "resolved",
+   "label": "liṅgānuśāsana",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXVII:31",
+   "label_variants": "liṅgānuśāsana",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "linganu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXVII:31"
+  },
+  {
    "registry_id": "PDW-f1858667bf",
    "work_id": "PDW-f1858667bf",
    "identity_status": "resolved",
@@ -36372,17 +35272,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:CIII:27",
    "label_variants": "dhūrtakalpa",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
-   "n_index_vision_low": "0",
+   "n_index_vision_low": "1",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CIII:27"
+   "sample_role": "vision_low",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CIII:27;data/pd/pd_index_works.tsv:CXXVI:42"
   },
   {
    "registry_id": "PDW-f23c69bda7",
@@ -37165,26 +36065,6 @@
    "provenance": "data/pd/pd_index_works.tsv:CIII:1;data/pd/pd_siglum_families.tsv:Deśopa."
   },
   {
-   "registry_id": "PDW-f7aae73f68",
-   "work_id": "PDW-f7aae73f68",
-   "identity_status": "resolved",
-   "label": "rājarājīya",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXVI:1",
-   "label_variants": "rājarājīya",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "nanarthasam",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXVI:1"
-  },
-  {
    "registry_id": "PDW-f7deb46d19",
    "work_id": "PDW-f7deb46d19",
    "identity_status": "resolved",
@@ -37201,7 +36081,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "vision_low",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCVII:8"
   },
   {
@@ -37323,6 +36203,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_aob_declared_works.tsv:damartuka;data/pd/pd_index_works.tsv:XCIX:46;data/pd/pd_siglum_families.tsv:Damaru.;data/pd/pd_siglum_families.tsv:Ḍamaru.;data/pd/pd_siglum_families.tsv:Ḍamarū."
+  },
+  {
+   "registry_id": "PDW-f8c42959bf",
+   "work_id": "PDW-f8c42959bf",
+   "identity_status": "resolved",
+   "label": "dhātupāṭha",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CIII:22",
+   "label_variants": "dhātupāṭha",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "1",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "2",
+   "siglum_folds": "dhatupa",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:dhatupatha;data/pd/pd_index_works.tsv:CIII:22"
   },
   {
    "registry_id": "PDW-f8d7b4461a",
@@ -37565,26 +36465,6 @@
    "provenance": "data/pd/pd_aob_declared_works.tsv:sahkarsanopanisadmb;data/pd/pd_index_works.tsv:CXXIII:48;data/pd/pd_siglum_families.tsv:SaṅkarU."
   },
   {
-   "registry_id": "PDW-fab510d1bc",
-   "work_id": "PDW-fab510d1bc",
-   "identity_status": "resolved",
-   "label": "Ksudrasitra",
-   "label_kind": "aob_declared_sample_title",
-   "label_source": "data/pd/pd_aob_declared_works.tsv:ksudrasitra",
-   "label_variants": "",
-   "n_index_rows": "0",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "1",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "ksudra",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_aob_declared_works.tsv:ksudrasitra"
-  },
-  {
    "registry_id": "PDW-faf91e0e87",
    "work_id": "PDW-faf91e0e87",
    "identity_status": "resolved",
@@ -37635,14 +36515,14 @@
    "n_index_rows": "1",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
-   "n_aob_editions": "0",
+   "n_aob_editions": "1",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "nyaysa",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CV:40"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:nyayasara;data/pd/pd_index_works.tsv:CV:40"
   },
   {
    "registry_id": "PDW-fb2f5220d2",
@@ -37721,7 +36601,7 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CIII:33"
   },
   {
@@ -37732,17 +36612,17 @@
    "label_kind": "index_title_iast",
    "label_source": "data/pd/pd_index_works.tsv:LXXXIX:20",
    "label_variants": "atharvavedaprātiśākhya",
-   "n_index_rows": "1",
+   "n_index_rows": "2",
    "n_index_blank": "0",
    "n_index_vision_low": "0",
    "n_aob_editions": "0",
    "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
+   "n_dictionary_sigla": "2",
    "siglum_folds": "catura",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:LXXXIX:20"
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXXIII:10;data/pd/pd_index_works.tsv:LXXXIX:20"
   },
   {
    "registry_id": "PDW-fb9e833f3d",
@@ -37801,7 +36681,7 @@
    "siglum_folds": "tantrabhi",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CXIV:12"
   },
   {
@@ -38081,28 +36961,8 @@
    "siglum_folds": "avpari",
    "validation_state": "unvalidated_pending_double_annotation",
    "sample_role": "none",
-   "unresolved_class": "shared_siglum",
+   "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:CVII:16"
-  },
-  {
-   "registry_id": "PDW-fd8eeae149",
-   "work_id": "PDW-fd8eeae149",
-   "identity_status": "resolved",
-   "label": "vedāṅgajyotiṣa",
-   "label_kind": "index_title_iast",
-   "label_source": "data/pd/pd_index_works.tsv:CXX:16",
-   "label_variants": "vedāṅgajyotiṣa",
-   "n_index_rows": "1",
-   "n_index_blank": "0",
-   "n_index_vision_low": "0",
-   "n_aob_editions": "0",
-   "n_harvest_sigla": "0",
-   "n_dictionary_sigla": "1",
-   "siglum_folds": "jyotive",
-   "validation_state": "unvalidated_pending_double_annotation",
-   "sample_role": "none",
-   "unresolved_class": "shared_siglum",
-   "provenance": "data/pd/pd_index_works.tsv:CXX:16"
   },
   {
    "registry_id": "PDW-fd98778b3d",
@@ -38163,6 +37023,26 @@
    "sample_role": "none",
    "unresolved_class": "",
    "provenance": "data/pd/pd_index_works.tsv:XCI:26"
+  },
+  {
+   "registry_id": "PDW-fdec7a291b",
+   "work_id": "PDW-fdec7a291b",
+   "identity_status": "resolved",
+   "label": "liṅgānuśāsana",
+   "label_kind": "index_title_iast",
+   "label_source": "data/pd/pd_index_works.tsv:CXVII:34",
+   "label_variants": "liṅgānuśāsana",
+   "n_index_rows": "1",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "0",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "linganu",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "",
+   "provenance": "data/pd/pd_index_works.tsv:CXVII:34"
   },
   {
    "registry_id": "PDW-fe026e7aa7",
@@ -42187,6 +41067,26 @@
    "provenance": "data/pd/pd_index_works.tsv:C:2"
   },
   {
+   "registry_id": "UNRES-76ee776837",
+   "work_id": "",
+   "identity_status": "unresolved",
+   "label": "Durgapr asida and Wasudev Laxman Sastri: Pan — isikar. se te IY Sn RA",
+   "label_kind": "aob_declared_sample_title",
+   "label_source": "data/pd/pd_aob_declared_works.tsv:durgaprasidaandwasudevlaxmansastripanisikarseteiysnra",
+   "label_variants": "",
+   "n_index_rows": "0",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "1",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "pt",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "aob_ocr_non_work",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:durgaprasidaandwasudevlaxmansastripanisikarseteiysnra"
+  },
+  {
    "registry_id": "UNRES-77037b4975",
    "work_id": "",
    "identity_status": "unresolved",
@@ -45027,6 +43927,26 @@
    "provenance": "data/pd/pd_index_works.tsv:CVI:35"
   },
   {
+   "registry_id": "UNRES-c80f618d32",
+   "work_id": "",
+   "identity_status": "unresolved",
+   "label": "Durgapr. asad and Kashinath Pandurang Parab.",
+   "label_kind": "aob_declared_sample_title",
+   "label_source": "data/pd/pd_aob_declared_works.tsv:durgaprasadandkashinathpandurangparab",
+   "label_variants": "",
+   "n_index_rows": "0",
+   "n_index_blank": "0",
+   "n_index_vision_low": "0",
+   "n_aob_editions": "1",
+   "n_harvest_sigla": "0",
+   "n_dictionary_sigla": "1",
+   "siglum_folds": "pt",
+   "validation_state": "unvalidated_pending_double_annotation",
+   "sample_role": "none",
+   "unresolved_class": "aob_ocr_non_work",
+   "provenance": "data/pd/pd_aob_declared_works.tsv:durgaprasadandkashinathpandurangparab"
+  },
+  {
    "registry_id": "UNRES-c841cb6ae6",
    "work_id": "",
    "identity_status": "unresolved",
@@ -46796,15 +45716,18 @@
   "aob_editions": 1118,
   "pwgbib_sigla": 2601,
   "pwbib_sigla": 776,
-  "works": 1923,
-  "unresolved_registry_rows": 416,
-  "edition_map_rows": 6072,
+  "works": 1867,
+  "unresolved_registry_rows": 418,
+  "edition_map_rows": 6069,
   "shared_siglum_folds": 57,
+  "shared_siglum_folds_resolved": 55,
+  "shared_siglum_folds_partial": 2,
+  "shared_siglum_records_remaining": 2,
   "bib_sigla_out_of_pd_scope": {
    "pwg_no_title": 2371,
-   "pwg_ambiguous": 114,
+   "pwg_ambiguous": 116,
    "pw_no_title": 538,
-   "pw_ambiguous": 114,
+   "pw_ambiguous": 115,
    "pw": 1
   },
   "harvest_sigla_out_of_pd_scope": 2542
