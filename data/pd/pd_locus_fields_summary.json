@@ -1,0 +1,276 @@
+{
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "dataset": "pd_locus_fields_c2",
+ "handoff": "H7458",
+ "generated_by": "python3.13 scripts/pd_locus_fields.py",
+ "generated_on": "2026-10-29",
+ "protocol": {
+  "population": "all 107,630 PDScan 2020 entries and all H6949 quotation tails",
+  "pair_rule": "a candidate siglum immediately followed by a numeric or roman-numeral locus",
+  "discourse_rule": "lowercase tokens are excluded unless independently present in pd_siglum_families.tsv",
+  "continuation_rule": "a bare numeric semicolon continuation inherits the preceding candidate siglum, as in C1",
+  "roman_rule": "roman numerals consumed by a locus are not counted again as sigla",
+  "line_wrap_rule": "a hyphenated siglum wrap is joined only when the result exists in pd_siglum_families.tsv",
+  "page_rule": "Page markers are metadata, never continuation loci; qualifiers split by them are not new sigla",
+  "verification": "deterministic typographic validation and full-population reconciliation; no human review claim",
+  "frozen_baseline": "H6949 and C1 artifacts and aggregates are not rewritten"
+ },
+ "evidenceLevels": {
+  "locus_fields": "derived",
+  "coverage_aggregates": "derived",
+  "human_review": "none"
+ },
+ "totals": {
+  "entries": 107630,
+  "quotations": 302442,
+  "siglum_loci": 384217,
+  "continuation_loci": 35673,
+  "attestations": 419890,
+  "entries_with_h6949_attestations": 105944,
+  "entries_with_h6949_attestations_pct": 98.4335,
+  "verified_pairs": 391444,
+  "siglum_pairs": 356478,
+  "continuation_pairs": 34966,
+  "verified_pairs_pct_of_h6949_attestations": 93.2254,
+  "entries_with_verified_pair": 105177,
+  "entries_with_verified_pair_pct": 97.7209,
+  "entries_without_verified_pair": 2453,
+  "rejected_marker_occurrences": 28446,
+  "unassigned_continuations": 53
+ },
+ "reconciliation": {
+  "siglum_loci_accounted": 384217,
+  "siglum_loci_unaccounted": 0,
+  "continuation_loci_accounted": 35673,
+  "continuation_loci_unaccounted": 0,
+  "all_markers_accounted": true
+ },
+ "rejections_by_reason": {
+  "continuation_without_locus": 310,
+  "discourse_not_siglum": 8926,
+  "marker_consumed_by_locus": 7841,
+  "page_marker_only_continuation": 344,
+  "page_separated_qualifier": 47,
+  "siglum_without_locus": 10925,
+  "unassigned_continuation": 53
+ },
+ "top_rejections": [
+  {
+   "siglum": "__LOCUS_TOKEN__",
+   "reason": "marker_consumed_by_locus",
+   "occurrences": 7841,
+   "entries": 2888,
+   "examples": "TaiS. V. v. 1. 6 | YaśasCam. i. 53. 3  (comm.) | TaiS.  V. vii. 2. 2"
+  },
+  {
+   "siglum": "comm.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 5159,
+   "entries": 4329,
+   "examples": "comm. | comm. | comm."
+  },
+  {
+   "siglum": "Ed.",
+   "reason": "siglum_without_locus",
+   "occurrences": 1815,
+   "entries": 1405,
+   "examples": "Ed. | Ed. | Ed."
+  },
+  {
+   "siglum": "ŚrutaPra.",
+   "reason": "siglum_without_locus",
+   "occurrences": 1307,
+   "entries": 1222,
+   "examples": "ŚrutaPra. | ŚrutaPra. | ŚrutaPra."
+  },
+  {
+   "siglum": "KāśiVṛ.",
+   "reason": "siglum_without_locus",
+   "occurrences": 1069,
+   "entries": 924,
+   "examples": "KāśiVṛ. | KāśiVṛ. | KāśiVṛ."
+  },
+  {
+   "siglum": "cf.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 906,
+   "entries": 867,
+   "examples": "cf. | cf. | cf."
+  },
+  {
+   "siglum": "PadMañ.",
+   "reason": "siglum_without_locus",
+   "occurrences": 780,
+   "entries": 721,
+   "examples": "PadMañ. | PadMañ. | PadMañ."
+  },
+  {
+   "siglum": "iA.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 738,
+   "entries": 679,
+   "examples": "iA. | iA. | iA."
+  },
+  {
+   "siglum": "DBHS.",
+   "reason": "siglum_without_locus",
+   "occurrences": 680,
+   "entries": 640,
+   "examples": "DBHS. | DBHS. | DBHS."
+  },
+  {
+   "siglum": "iB.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 663,
+   "entries": 609,
+   "examples": "iB. | iB. | iB."
+  },
+  {
+   "siglum": "MW.",
+   "reason": "siglum_without_locus",
+   "occurrences": 564,
+   "entries": 533,
+   "examples": "MW. | MW. | MW."
+  },
+  {
+   "siglum": "Sāy.",
+   "reason": "siglum_without_locus",
+   "occurrences": 532,
+   "entries": 375,
+   "examples": "Sāy. | Sāy. | Sāy."
+  },
+  {
+   "siglum": "__PAGE_NUMBER__",
+   "reason": "page_marker_only_continuation",
+   "occurrences": 344,
+   "entries": 323,
+   "examples": "(with  ) [Page1-0003b+ 64] | [Page1-0006b+ 64] | [Page1-0037b+ 64]"
+  },
+  {
+   "siglum": "__CONTINUATION__",
+   "reason": "continuation_without_locus",
+   "occurrences": 310,
+   "entries": 266,
+   "examples": "it stands for all its 18 varieties | GaṇRa 1. 9 (24) | IṣtaSi 8. 1"
+  },
+  {
+   "siglum": "Inst.",
+   "reason": "siglum_without_locus",
+   "occurrences": 281,
+   "entries": 220,
+   "examples": "Inst. | Inst. | Inst."
+  },
+  {
+   "siglum": "pass.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 257,
+   "entries": 104,
+   "examples": "pass. | pass. | pass."
+  },
+  {
+   "siglum": "e.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 229,
+   "entries": 193,
+   "examples": "e. | e. | e."
+  },
+  {
+   "siglum": "Loc.",
+   "reason": "siglum_without_locus",
+   "occurrences": 205,
+   "entries": 117,
+   "examples": "Loc. | Loc. | Loc."
+  },
+  {
+   "siglum": "VIŚVA.",
+   "reason": "siglum_without_locus",
+   "occurrences": 174,
+   "entries": 169,
+   "examples": "VIŚVA. | VIŚVA. | VIŚVA."
+  },
+  {
+   "siglum": "Śaṅ.",
+   "reason": "siglum_without_locus",
+   "occurrences": 172,
+   "entries": 150,
+   "examples": "Śaṅ. | Śaṅ. | Śaṅ."
+  },
+  {
+   "siglum": "PW.",
+   "reason": "siglum_without_locus",
+   "occurrences": 169,
+   "entries": 161,
+   "examples": "PW. | PW. | PW."
+  },
+  {
+   "siglum": "BhārBhāDī.",
+   "reason": "siglum_without_locus",
+   "occurrences": 145,
+   "entries": 133,
+   "examples": "BhārBhāDī. | BhārBhāDī. | Bhār-  BhāDī."
+  },
+  {
+   "siglum": "etc.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 138,
+   "entries": 108,
+   "examples": "etc. | etc. | etc."
+  },
+  {
+   "siglum": "pw.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 112,
+   "entries": 111,
+   "examples": "pw. | pw. | pw."
+  },
+  {
+   "siglum": "Abl.",
+   "reason": "siglum_without_locus",
+   "occurrences": 111,
+   "entries": 71,
+   "examples": "Abl. | Abl. | Abl."
+  },
+  {
+   "siglum": "F.",
+   "reason": "siglum_without_locus",
+   "occurrences": 96,
+   "entries": 88,
+   "examples": "F. | F. | F."
+  },
+  {
+   "siglum": "p.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 85,
+   "entries": 82,
+   "examples": "p. | p. | p."
+  },
+  {
+   "siglum": "N.",
+   "reason": "siglum_without_locus",
+   "occurrences": 83,
+   "entries": 79,
+   "examples": "N. | N. | N."
+  },
+  {
+   "siglum": "sg.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 72,
+   "entries": 20,
+   "examples": "sg. | sg. | sg."
+  },
+  {
+   "siglum": "pl.",
+   "reason": "discourse_not_siglum",
+   "occurrences": 67,
+   "entries": 24,
+   "examples": "pl. | pl. | pl."
+  }
+ ],
+ "inputs": {
+  "pd_txt_sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+  "pd_quotations_by_entry_sha256": "c67f15137838e78c08cb076065b968435b2ceb19c3b3d3d21d55c5b3386b93a7",
+  "pd_siglum_families_sha256": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871"
+ },
+ "scope_caveat": "published letter-a PD machine text only, up to ~apaca- (1976–2009 fascicles)"
+}

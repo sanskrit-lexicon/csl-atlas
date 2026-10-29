@@ -305,6 +305,25 @@ Builder: `python3.13 scripts/pd_edition_availability.py --pd <pd.txt>`; check:
 `python3.13 scripts/pd_edition_availability.py --check --pd <pd.txt>`; controls:
 `python3.13 -m pytest tests/forensic/test_pd_edition_availability.py -q`. Write-up:
 [reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md).
+
+## Locus fields verified and extended (C2, 29-10-2026)
+
+H7458 materializes H6949's citation markers into **391,444 well-formed `(siglum, locus)`
+pairs** and measures **105,177 / 107,630 entries = 97.72 %** with at least one pair. The
+older 105,944 / 98.43 % raw-marker coverage stays visible beside it. All 28,446 remaining
+markers reconcile to named diagnostic classes; H6949 and C1 artifacts are unchanged.
+
+| File | What it is |
+|---|---|
+| [pd_locus_fields.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_locus_fields.tsv) | 391,444 direct and inherited-continuation pairs with entry/quotation provenance and raw citations |
+| [pd_locus_coverage_by_entry.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_locus_coverage_by_entry.tsv) | all 107,630 entries with frozen H6949 counts, C2 pair counts and coverage status |
+| [pd_locus_rejections.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_locus_rejections.tsv) | discourse, unlocated, roman-locus, page-marker and unresolved-continuation diagnostics with examples |
+| [pd_locus_fields_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_locus_fields_summary.json) | protocol, headline measures, exact class reconciliation and input hashes |
+
+Builder/check: `python3.13 scripts/pd_locus_fields.py --pd <pd.txt>` and the same command
+with `--check`; controls: `python -m pytest tests/forensic/test_pd_locus_fields.py -q`.
+Write-up: [reports/PD_LOCUS_FIELDS_C2_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md).
+
 ## Method-ladder M1/M2 annotation packets (29-10-2026)
 
 | File | What it is |
