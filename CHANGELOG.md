@@ -7,6 +7,21 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.21.4] - 2026-10-30
+
+# PD M1/M2 annotation packets — 29-10-2026
+- **M2 complete:** frozen stratified 50-row blank-siglum packet, all rows checked against 26 printed page images: 46 dependent commentaries, 2 cross-references, 2 unmarked works, 0 uncertain. Frame and per-record decisions are separate artifacts.
+- **M1 annotator B complete:** frozen 200-row siglum→work frame (100 ordinary, 40 shared-siglum, 40 `vision-low`, 20 AOB-join) and an independent printed-page reading pass: 194 confirmed, 5 `wrong_work`, 1 `wrong_siglum`, 0 ambiguous. These are B decisions, not gold and not registry edits.
+- **Reliability fence:** annotator A is absent, so `kappa: null` and `adjudicated_rows: 0`; no agent-coded-twice κ is claimed. The κ calculator refuses missing, partial, or ID-mismatched passes.
+- **Checks:** `python3 scripts/pd_blank_siglum_adjudication.py --check --complete` and `python3 scripts/pd_siglum_work_m1.py --check --complete` green; `python3 scripts/pd_shared_work_registry.py --check` green (registry unchanged); `/opt/homebrew/bin/python3.13 -m pytest tests/forensic/test_pd_method_ladder_annotations.py -q -p no:cacheprovider` → 4 passed.
+# PD locus fields verified and extended (H7458/C2)
+- Materialized **391,444** well-formed `(siglum, locus)` pairs (356,478 direct + 34,966
+  continuations) across **105,177 / 107,630 entries = 97.72 %**. Added
+  `pd_locus_fields.tsv`, `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,
+  `pd_locus_fields_summary.json`, builder/checker, 14 hand-derived controls, C2 report and
+  dataset/agent registration. All 28,446 remaining H6949 markers reconcile to named diagnostic classes;
+  53 continuations stay unassigned. H6949/C1 artifacts and aggregates are unchanged.
+  Independent Codex Sol (`gpt-5.6-sol`) verification: PASS; PR #666.
 ## [0.21.3] - 2026-10-29
 
 # PD KoshaSHRI fixture dataset registration (H7316)
