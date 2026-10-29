@@ -1,6 +1,6 @@
 # PD knowledge index — parity report, 24-10-2026
 
-_Created: 24-10-2026 · Scope: the Poona Dictionary's knowledge surface — public page, canon ledger, atlas chapter, gate — and what remains before it can be called research-grade · Status: 8 of 10 checks pass, two open with named owners._
+_Created: 24-10-2026 · Updated: 29-10-2026 · Scope: the Poona Dictionary's knowledge surface — public page, canon ledger, atlas chapter, gate — and what remains before it can be called research-grade · Status: 9 of 10 checks pass, one open with a named owner._
 
 **What this report is.** On 24-10-2026 the PD knowledge page was a private working document with a
 gated number set, five silent canon denominators, no human-verified claim, and no place in the
@@ -15,6 +15,7 @@ dictionary atlas. This report records the programme that changed that, the numbe
 | Canon ledger | [`pd_canon_ledger.tsv`](../data/pd/pd_canon_ledger.tsv) + [§9](PD_DCS_CORPUS_COVERAGE_2026.md) of the coverage report | the two printed counts differ by **562 rows (38.3 %)**; Index→AOB join **981 / 1,622 = 60.5 %** | this repository |
 | Public page | [`PD_KNOWLEDGE.md`](https://github.com/sanskrit-lexicon/PD/blob/main/PD_KNOWLEDGE.md) | 13 / 13 sections labelled; **0** links into private repositories; **0** handoff IDs | PD repository |
 | Atlas chapter | [`src/dicts/pd.md`](../src/dicts/pd.md) | **23.2×** denser than PWG on the covered span; median **4.0×** attestations on the 4,093 shared lemmas | this repository |
+| C1 availability | [`PD_EDITION_AVAILABILITY_C1_2026-10-29.md`](PD_EDITION_AVAILABILITY_C1_2026-10-29.md) | **189,400 / 419,890 = 45.11 %** work-level lower bound; **23,173 = 5.52 %** AOB-exact; unresolved mass kept explicit | this repository |
 | This report | here | — | this repository |
 
 The gate's `MISSING-OWNER` class exists because the two failures need different repairs: *"no spec
@@ -66,16 +67,16 @@ artefact.
 | 4 | At least one human-`reviewed` claim | **open** | 200-row double-coded κ study, second coder human |
 | 5 | Canon ledger with labelled bases | **pass** | `--check` green |
 | 6 | PD is an atlas chapter | **pass** | `npm run build` exit 0 |
-| 7 | Edition availability by citation mass | **open** | the campaign ladder's first unit |
+| 7 | Edition availability by citation mass | **pass** | [C1 report](PD_EDITION_AVAILABILITY_C1_2026-10-29.md): 45.11 % work-level lower bound, 5.52 % AOB-exact |
 | 8 | Every number gated | **pass** | 489 / 489 |
 | 9 | Mirror in sync | **pass** | 24-10-2026 |
 | 10 | A published report | **pass** | this file |
 
-**Score: 8 / 10.** The two open rows are the honest part of the report, not an appendix.
+**Score: 9 / 10.** The remaining open row is the honest part of the report, not an appendix.
 
 ## 5. The DOI — minted after the report
 
-**Resolved, 24-10-2026 08:19Z.** Release v0.21.0 was cut after the ledger and the chapter merged and minted **[10.5281/zenodo.23613057](https://doi.org/10.5281/zenodo.23613057)** (version 0.21.0; concept DOI [10.5281/zenodo.21419691](https://doi.org/10.5281/zenodo.21419691)). Checklist row 2 is now pass, and the score above reads 8/10.
+**Resolved, 24-10-2026 08:19Z.** Release v0.21.0 was cut after the ledger and the chapter merged and minted **[10.5281/zenodo.23613057](https://doi.org/10.5281/zenodo.23613057)** (version 0.21.0; concept DOI [10.5281/zenodo.21419691](https://doi.org/10.5281/zenodo.21419691)). Checklist row 2 became pass, bringing the score at that point to 8/10.
 
 The three facts below are why the DOI could not be minted *first*, and they remain the reasons the order matters:
 
@@ -104,9 +105,10 @@ stands for these tables. The rights question is recorded, not reopened.
   checklist's row 4 is the gap that a referee would press hardest on.
 - **No κ.** The 398,359-occurrence instrument still has no inter-annotator control; it is named on
   the public page rather than implied away.
-- **No availability number.** What share of PD's 419,890 attestations sit on a machine-readable
-  edition is still unmeasured; it is the campaign ladder's first unit, because it is the number that
-  would make the citation apparatus usable rather than merely counted.
+- **No final absence census.** C1 establishes a reproducible lower bound: 45.11 % of all
+  419,890 attestations have a verified work-level machine-readable text, and 5.52 % have an
+  AOB-exact one. The unresolved 54.89 % is not evidence of absence; partial witnesses and OCR
+  quality are reported separately rather than promoted to full, quotation-grade coverage.
 - **No browser verification of the chapter's charts.** `npm run build` proves syntax and data
   resolution; it does not prove every mark draws.
 
@@ -114,6 +116,7 @@ stands for these tables. The rights question is recorded, not reopened.
 
 ```sh
 python3 scripts/pd_canon_ledger.py --check     # 14 rows, 0 drift; asserts 118/N against recorded values
+python3.13 scripts/pd_edition_availability.py --check --pd /path/to/pd.txt
 npm run build                                  # exit 0; dist/dicts/pd.html emitted
 ```
 
@@ -126,8 +129,8 @@ all present in `data/pd/`.
 - `reports/PD_DCS_CORPUS_COVERAGE_2026.md` §8.5 / §9 — the density yardsticks and the canon rule.
 - `reports/PD_VOLUME_HOMOGENEITY_2026-10-18.md` — entry size and marking across 24 measured volumes.
 - `data/pd/pd_quotations_vs_pwg.tsv` — 4,093 shared lemmas, one quotation rule on both sides.
+- [`PD_EDITION_AVAILABILITY_C1_2026-10-29.md`](PD_EDITION_AVAILABILITY_C1_2026-10-29.md) — C1 protocol, availability measures, exact-edition table and unresolved residue.
 - [`PD_KNOWLEDGE.md`](https://github.com/sanskrit-lexicon/PD/blob/main/PD_KNOWLEDGE.md) — the public
   knowledge page this programme exists to make citable.
 
-_24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH; no earlier number edited, two open rows
-left open on purpose (κ and edition availability); the DOI and the chapter closed after first publication._
+_24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH; the DOI and the chapter closed after first publication. Updated 29-10-2026 by Kimi Work: C1 closed the availability row at 9/10; human κ remains open._
