@@ -278,6 +278,8 @@ def build(pd_path):
     available_mass = mass(lambda r: r["availability"] in AVAILABLE)
     exact_mass = mass(lambda r: r["availability"] in AVAILABLE and r["edition_identity"] == "aob_exact")
     summary = {
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "dataset": "pd_edition_availability_c1",
         "generated_by": "python scripts/pd_edition_availability.py",
         "generated_on": "2026-10-29",
