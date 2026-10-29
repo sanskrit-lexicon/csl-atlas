@@ -303,5 +303,22 @@ Builder: `python3.13 scripts/pd_edition_availability.py --pd <pd.txt>`; check:
 `python3.13 scripts/pd_edition_availability.py --check --pd <pd.txt>`; controls:
 `python3.13 -m pytest tests/forensic/test_pd_edition_availability.py -q`. Write-up:
 [reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md).
+## Method-ladder M1/M2 annotation packets (29-10-2026)
+
+| File | What it is |
+|---|---|
+| [pd_siglum_work_m1_frame.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_siglum_work_m1_frame.tsv) | M1 frozen 200-row stratified siglum→work frame; 100 ordinary, 40 shared-siglum, 40 `vision-low`, 20 AOB-join |
+| [pd_siglum_work_m1_annotator_b.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_siglum_work_m1_annotator_b.tsv) | M1 independent annotator-B reading pass, 200/200 rows; 194 confirmed, 5 `wrong_work`, 1 `wrong_siglum`; **not gold** |
+| [pd_siglum_work_m1_status.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_siglum_work_m1_status.json) | M1 quotas, B provenance and reliability status: annotator A and κ remain `null` |
+| [pd_blank_siglum_adjudication.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_blank_siglum_adjudication.tsv) | M2 frozen 50-row stratified blank-siglum frame with page-image URLs |
+| [pd_blank_siglum_decisions.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_blank_siglum_decisions.tsv) | M2 per-record adjudication: 46 dependent commentaries, 2 cross-references, 2 unmarked works; no uncertain rows |
+
+M1 builder/check: `python3 scripts/pd_siglum_work_m1.py --check --complete`; κ is
+computed only by `--kappa A B` on two genuine, complete reading passes. M2:
+`python3 scripts/pd_blank_siglum_adjudication.py --check --complete`. Reports:
+[PD_SIGLUM_WORK_M1_ANNOTATOR_B_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SIGLUM_WORK_M1_ANNOTATOR_B_2026-10-29.md)
+and
+[PD_BLANK_SIGLUM_M2_ADJUDICATION_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_BLANK_SIGLUM_M2_ADJUDICATION_2026-10-29.md).
+Neither packet rewrites the registry or claims a completed κ study.
 
 _Dr. Mārcis Gasūns_
