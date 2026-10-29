@@ -138,3 +138,72 @@ def test_changed_unresolved_cell_fails_check():
         proc = run_check(tmp)
         assert proc.returncode == 1
         assert "CHECK FAIL" in proc.stderr
+
+
+def test_shared_siglum_adjudication_counts_and_residue():
+    d = diagnostics()["shared_siglum_adjudication"]
+    assert d["baseline_shared_siglum_folds"] == 57
+    assert d["baseline_shared_siglum_registry_records"] == 230
+    assert d["folds_resolved"] == 55
+    assert d["folds_partial"] == 2
+    assert d["registry_records_adjudicated"] == 228
+    assert d["registry_records_remaining"] == 2
+    assert d["unresolved_claims"] == [
+        "AOB:1962",
+        "AOB:aryasiddhantamahasiddhanta148",
+    ]
+    assert d["split_index_rows"] == 22
+    assert d["alias_groups"] == 50
+    assert d["rejected_non_work_aob_claims"] == 2
+    assert d["ordinary_fold_join_blocked_for_all_shared_folds"] is True
+    remaining = [r for r in registry_rows()
+                 if "shared_siglum" in r["unresolved_class"].split(";")]
+    assert len(remaining) == 2
+    assert {r["provenance"] for r in remaining} == {
+        "data/pd/pd_aob_declared_works.tsv:1962",
+        "data/pd/pd_aob_declared_works.tsv:aryasiddhantamahasiddhanta148",
+    }
+
+
+def test_shared_siglum_aliases_splits_and_quarantine():
+    rows = registry_rows()
+    sudha = [r for r in rows if r["label"] == "nyāyasudhā"]
+    assert len(sudha) == 2
+    assert len({r["work_id"] for r in sudha}) == 2
+    pari = [r for r in rows if r["label"] in ("dhūrtakalpa", "skandayoga")]
+    assert len(pari) == 1
+    assert pari[0]["label"] in ("dhūrtakalpa", "skandayoga")
+    quarantine = [r for r in rows if r["unresolved_class"] == "aob_ocr_non_work"]
+    assert len(quarantine) == 2
+    assert all(not r["work_id"] for r in quarantine)
+
+    claim_work = {}
+    by_work_fold = {}
+    overlay = read_tsv("pd_shared_siglum_adjudications.tsv")
+    shared_folds = {row["siglum_fold"] for row in overlay}
+    for r in map_rows():
+        if r["source"] == "pd_index_works":
+            key = "IDX:" + r["source_locator"]
+        elif r["source"] == "pd_aob_declared_works":
+            key = "AOB:" + r["source_locator"].rsplit(":", 1)[0]
+        else:
+            continue
+        claim_work.setdefault(key, set()).add(r["work_id"])
+        if r["work_id"] and r["siglum_fold"] in shared_folds:
+            by_work_fold.setdefault((r["siglum_fold"], r["work_id"]), set()).add(key)
+    alias_membership = {}
+    for row in overlay:
+        f = row["siglum_fold"]
+        for i, group in enumerate(row["alias_groups"].split("|")):
+            if not group:
+                continue
+            claims = group.split(",")
+            work_ids = set().union(*(claim_work.get(c, set()) for c in claims))
+            assert len(work_ids) == 1 and "" not in work_ids, (f, claims, work_ids)
+            for c in claims:
+                alias_membership[(f, c)] = i
+    for (f, wid), claims in by_work_fold.items():
+        sources = {c.split(":", 1)[0] for c in claims}
+        if sources == {"IDX", "AOB"}:
+            groups = {alias_membership.get((f, c)) for c in claims}
+            assert len(groups) == 1 and None not in groups, (f, wid, claims, groups)

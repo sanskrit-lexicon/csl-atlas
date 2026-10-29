@@ -20,13 +20,19 @@ import sys
 from pd_blank_siglum_adjudication import ARCHIVE, LEAVES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SEED = "PD-M1-siglum-work-v1|29-10-2026"
+SEED = "PD-M1-siglum-work-v2|29-10-2026"
 FRAME = os.path.join(ROOT, "data", "pd", "pd_siglum_work_m1_frame.tsv")
 PASS_B = os.path.join(ROOT, "data", "pd", "pd_siglum_work_m1_annotator_b.tsv")
 LABELS = ("confirmed", "wrong_work", "wrong_siglum", "ambiguous")
-QUOTAS = {
+FROZEN_V1_QUOTAS = {
     "ordinary": 100,
     "shared_siglum": 40,
+    "vision_low": 40,
+    "aob_join": 20,
+}
+QUOTAS = {
+    "ordinary": 140,
+    "shared_siglum": 0,
     "vision_low": 40,
     "aob_join": 20,
 }
@@ -132,27 +138,37 @@ def read_pass(path: str) -> dict[str, dict[str, str]]:
 
 def check(complete: bool) -> int:
     expected = build_frame()
+    if complete:
+        expected = []
     if not os.path.exists(FRAME) or not os.path.exists(PASS_B):
         print("MISSING M1 frame or annotator-B file", file=sys.stderr)
         return 2
     actual = read_pass(FRAME)
     pass_b = read_pass(PASS_B)
     errors = []
-    ids = {r["sample_id"] for r in expected}
+    ids = ({f"M1-{i:03d}" for i in range(1, 201)} if complete
+           else {r["sample_id"] for r in expected})
     if len(actual) != 200 or set(actual) != ids:
         errors.append("frame IDs differ from the deterministic 200-row sample")
     if set(pass_b) != ids:
         errors.append("annotator-B IDs differ from the frame")
+    if complete:
+        strata = collections.Counter(r["sample_stratum"] for r in actual.values())
+        if strata != FROZEN_V1_QUOTAS:
+            errors.append(f"frozen v1 strata differ: {dict(strata)}")
+        if len({r["record_id"] for r in actual.values()}) != 200:
+            errors.append("frozen v1 record IDs are not unique")
     for row in expected:
         got = actual.get(row["sample_id"], {})
         for key in FIELDS:
             if got.get(key) != row[key]:
                 errors.append(f"{row['sample_id']}: frame drift in {key}")
-        label = pass_b.get(row["sample_id"], {}).get("label", "")
+    for sample_id in sorted(ids):
+        label = pass_b.get(sample_id, {}).get("label", "")
         if label and label not in LABELS:
-            errors.append(f"{row['sample_id']}: unknown B label {label!r}")
-        if complete and (not label or not pass_b[row["sample_id"]].get("note", "").strip()):
-            errors.append(f"{row['sample_id']}: B annotation incomplete")
+            errors.append(f"{sample_id}: unknown B label {label!r}")
+        if complete and (not label or not pass_b[sample_id].get("note", "").strip()):
+            errors.append(f"{sample_id}: B annotation incomplete")
     if errors:
         print("\n".join(errors[:30]), file=sys.stderr)
         return 2

@@ -11,6 +11,9 @@
     "vision_low": 40,
     "aob_join": 20
   },
+  "registry_baseline": "pre-Y0Q: 57 shared folds / 230 shared_siglum records",
+  "frozen_completed_packet": true,
+  "future_frame": "v2 quotas after Y0Q: 140 ordinary / 0 shared_siglum / 40 vision_low / 20 aob_join; the two residue claims are AOB-only, so no Index-row shared stratum remains; never overwrite this completed v1 packet",
   "label_schema": ["confirmed", "wrong_work", "wrong_siglum", "ambiguous"],
   "annotator_b": {
     "name": "Kimi Work (Kimi)",

@@ -62,6 +62,7 @@ FAMILIES = "data/pd/pd_siglum_families.tsv"
 RECON = "data/pd/pd_aob_sigla_reconciliation.tsv"
 PWG = "data/pd/pd_pwgbib_sigla.tsv"
 PW = "data/pd/pd_pwbib_sigla.tsv"
+ADJUDICATIONS = "data/pd/pd_shared_siglum_adjudications.tsv"
 
 OUT_REGISTRY = "data/pd/pd_work_registry.tsv"
 OUT_MAP = "data/pd/pd_work_edition_map.tsv"
@@ -110,6 +111,44 @@ def digest(text):
 def read_tsv(path):
     with open(path, encoding="utf-8", newline="") as fh:
         return list(csv.DictReader(fh, delimiter="\t"))
+
+
+def pipe_items(value):
+    return [item.strip() for item in (value or "").split("|") if item.strip()]
+
+
+def load_adjudications(rows):
+    """Parse the human-reviewed Y0Q overlay without making identity decisions."""
+    result = {}
+    for row in rows:
+        f = row["siglum_fold"]
+        if not f or f in result:
+            raise ValueError(f"duplicate or blank shared-siglum adjudication fold: {f!r}")
+        if row["status"] not in ("resolved", "partial"):
+            raise ValueError(f"invalid adjudication status for {f}: {row['status']!r}")
+        aliases = []
+        for group in pipe_items(row["alias_groups"]):
+            claims = [claim.strip() for claim in group.split(",") if claim.strip()]
+            if len(claims) < 2:
+                raise ValueError(f"alias group for {f} has fewer than two claims")
+            aliases.append(claims)
+        unresolved = pipe_items(row["unresolved_claims"])
+        if row["status"] == "resolved" and unresolved:
+            raise ValueError(f"resolved fold {f} still has unresolved claims")
+        if row["status"] == "partial" and not unresolved:
+            raise ValueError(f"partial fold {f} has no unresolved claims")
+        if not (row["evidence"] or "").strip() or not (row["rationale"] or "").strip():
+            raise ValueError(f"fold {f} lacks evidence or rationale")
+        result[f] = {
+            "status": row["status"],
+            "split_index_rows": pipe_items(row["split_index_rows"]),
+            "alias_groups": aliases,
+            "rejected_aob_claims": pipe_items(row["rejected_aob_claims"]),
+            "unresolved_claims": unresolved,
+            "adjudicator": row["adjudicator"],
+            "adjudicated_on": row["adjudicated_on"],
+        }
+    return result
 
 
 def write_tsv(fields, rows):
@@ -167,12 +206,25 @@ def build(root):
     recon_rows = read_tsv(os.path.join(root, RECON))
     pwg_rows = read_tsv(os.path.join(root, PWG))
     pw_rows = read_tsv(os.path.join(root, PW))
+    adjudications = load_adjudications(read_tsv(os.path.join(root, ADJUDICATIONS)))
 
     structural = {fold(r["siglum"]) for r in fam_rows if r.get("class") == "structural"}
     structural |= {"a", "b"}
 
     claims = {}          # seed -> claim dict
     index_claim_seed = {}  # (page,row) -> seed or None
+    seed_by_claim_key = {}
+    claim_folds = collections.defaultdict(set)
+    rejected_aob_claims = {
+        claim for a in adjudications.values() for claim in a["rejected_aob_claims"]
+    }
+    unresolved_claim_keys = {
+        claim for a in adjudications.values() for claim in a["unresolved_claims"]
+    }
+    split_index_rows = {
+        (f, loc) for f, a in adjudications.items() for loc in a["split_index_rows"]
+    }
+    rejected_components = []
     map_rows = []
     unresolved_registry = []
 
@@ -238,11 +290,17 @@ def build(root):
         title_iast = (r["title_iast"] or "").strip()
         title_key = fold(title_deva) or fold(title_iast) or f
         seed = f"IDX:{f}:{title_key}"
+        if (f, loc) in split_index_rows:
+            seed += f":{loc}"
+        claim_key = f"IDX:{loc}"
+        claim_folds[claim_key].add(f)
         index_claim_seed[(r["page"], r["row"])] = seed
+        seed_by_claim_key[claim_key] = seed
         c = claims.setdefault(seed, {
             "seed": seed, "source": "index", "siglum_fold": f, "raw_sigla": set(),
-            "rows": [], "editions": [], "bib": [], "harvest": [],
+            "rows": [], "editions": [], "bib": [], "harvest": [], "claim_keys": set(),
         })
+        c["claim_keys"].add(claim_key)
         c["raw_sigla"].add(sig)
         c["rows"].append({
             "loc": loc, "siglum": sig, "confidence": r.get("confidence", ""),
@@ -254,18 +312,26 @@ def build(root):
     aob_claim_by_fold = collections.defaultdict(list)
     for r in aob_rows:
         seed = "AOB:" + fold(r["work_fold"])
+        claim_key = "AOB:" + r["work_fold"]
         sigla = [s.strip() for s in (r["sigla"] or "").split(";") if s.strip()]
-        c = claims.setdefault(seed, {
+        editions = [{"ordinal": i, "siglum": sig, "fold": fold(sig)}
+                    for i, sig in enumerate(sigla, 1)]
+        for e in editions:
+            claim_folds[claim_key].add(e["fold"])
+            aob_claim_by_fold[e["fold"]].append(seed)
+        c = {
             "seed": seed, "source": "aob", "siglum_fold": fold(sigla[0]) if sigla else "",
-            "raw_sigla": set(), "rows": [], "editions": [], "bib": [], "harvest": [],
+            "raw_sigla": set(sigla), "rows": [], "editions": editions, "bib": [],
+            "harvest": [], "claim_keys": {claim_key},
             "aob_title": (r.get("sample_title") or "").strip(),
             "aob_author": (r.get("sample_author") or "").strip(),
             "aob_fold": r["work_fold"],
-        })
-        for i, sig in enumerate(sigla, 1):
-            c["raw_sigla"].add(sig)
-            c["editions"].append({"ordinal": i, "siglum": sig, "fold": fold(sig)})
-            aob_claim_by_fold[fold(sig)].append(seed)
+        }
+        if claim_key in rejected_aob_claims:
+            rejected_components.append(c)
+            continue
+        claims[seed] = c
+        seed_by_claim_key[claim_key] = seed
 
     index_folds = {c["siglum_fold"] for c in claims.values() if c["source"] == "index"}
     aob_folds = set(aob_claim_by_fold)
@@ -281,6 +347,33 @@ def build(root):
     for f, seeds in aob_claim_by_fold.items():
         if len(seeds) > 1:
             shared_folds.add(f)
+
+    if set(adjudications) != shared_folds:
+        missing = sorted(shared_folds - set(adjudications))
+        extra = sorted(set(adjudications) - shared_folds)
+        raise ValueError(f"shared-fold adjudication coverage mismatch; missing={missing}, extra={extra}")
+    alias_seen = set()
+    for f, a in adjudications.items():
+        for loc in a["split_index_rows"]:
+            key = f"IDX:{loc}"
+            if f not in claim_folds.get(key, set()):
+                raise ValueError(f"split claim {key} does not belong to fold {f}")
+        for group in a["alias_groups"]:
+            for key in group:
+                if f not in claim_folds.get(key, set()):
+                    raise ValueError(f"alias claim {key} does not belong to fold {f}")
+                if key not in seed_by_claim_key:
+                    raise ValueError(f"alias claim {key} has no active work claim")
+                if key in alias_seen:
+                    raise ValueError(f"claim {key} occurs in more than one alias group")
+                if key in unresolved_claim_keys or key in rejected_aob_claims:
+                    raise ValueError(f"alias claim {key} is also unresolved or rejected")
+                alias_seen.add(key)
+        for key in a["rejected_aob_claims"] + a["unresolved_claims"]:
+            if f not in claim_folds.get(key, set()):
+                raise ValueError(f"adjudicated claim {key} does not belong to fold {f}")
+        if set(a["rejected_aob_claims"]) & set(a["unresolved_claims"]):
+            raise ValueError(f"fold {f} has a claim that is both rejected and unresolved")
 
     # ---- PW / PWG bibliography claims (PD-scoped, title-evidenced) ---------
     # A bibliography siglum is attached to a work only when the bibliography's
@@ -374,6 +467,13 @@ def build(root):
     for seed, c in claims.items():
         if c.get("pinned_to"):
             uf.union(seed, c["pinned_to"])
+    # A shared fold always blocks the ordinary fold join.  Only these explicit,
+    # source-evidenced Y0Q alias groups may join claims inside such a fold.
+    for a in adjudications.values():
+        for group in a["alias_groups"]:
+            seeds = [seed_by_claim_key[key] for key in group]
+            for other in seeds[1:]:
+                uf.union(seeds[0], other)
 
     components = collections.defaultdict(list)
     for seed in claims:
@@ -463,7 +563,8 @@ def build(root):
                       | {f"{FAMILIES}:{h['siglum']}" for c in harv_members for h in c["harvest"]})
 
         unresolved = set()
-        if any(f in shared_folds for f in folds):
+        member_claim_keys = set().union(*(c.get("claim_keys", set()) for c in members))
+        if member_claim_keys & unresolved_claim_keys:
             unresolved.add("shared_siglum")
         for c in aob_members:
             kinds = [recon_best.get(e["fold"], "") for e in c["editions"]]
@@ -510,7 +611,7 @@ def build(root):
                     "n_editions_in_source": "1", "citation_count": "",
                     "confidence": row["confidence"], "validation_state": VALIDATION_STATE,
                     "sample_role": row_role,
-                    "unresolved_class": "shared_siglum" if c["siglum_fold"] in shared_folds else "",
+                    "unresolved_class": ("shared_siglum" if f"IDX:{row['loc']}" in unresolved_claim_keys else ""),
                     "provenance": row["prov"],
                 })
         # map rows: AOB editions
@@ -525,7 +626,7 @@ def build(root):
                     "n_editions_in_source": str(len(c["editions"])), "citation_count": "",
                     "confidence": "", "validation_state": VALIDATION_STATE,
                     "sample_role": "none",
-                    "unresolved_class": "shared_siglum" if e["fold"] in shared_folds else "",
+                    "unresolved_class": ("shared_siglum" if f"AOB:{c['aob_fold']}" in unresolved_claim_keys else ""),
                     "provenance": f"{AOB_WORKS}:{c['aob_fold']}",
                 })
         # map rows: bibliography identity
@@ -555,6 +656,36 @@ def build(root):
                     "validation_state": VALIDATION_STATE, "sample_role": "none",
                     "unresolved_class": "", "provenance": f"{FAMILIES}:{h['siglum']}",
                 })
+
+    # ---- rejected non-work OCR fragments (explicit Y0Q quarantine) --------
+    for c in rejected_components:
+        prov = f"{AOB_WORKS}:{c['aob_fold']}"
+        folds = sorted({e["fold"] for e in c["editions"] if e["fold"]})
+        unresolved_registry.append({
+            "registry_id": "UNRES-" + digest(f"aob-ocr-non-work:{c['aob_fold']}")[:10],
+            "work_id": "", "identity_status": "unresolved",
+            "label": c["aob_title"], "label_kind": "aob_declared_sample_title",
+            "label_source": prov, "label_variants": "",
+            "n_index_rows": "0", "n_index_blank": "0", "n_index_vision_low": "0",
+            "n_aob_editions": str(len(c["editions"])), "n_harvest_sigla": "0",
+            "n_dictionary_sigla": str(len(c["raw_sigla"])),
+            "siglum_folds": ";".join(folds), "validation_state": VALIDATION_STATE,
+            "sample_role": "none", "unresolved_class": "aob_ocr_non_work",
+            "provenance": prov,
+        })
+        for e in c["editions"]:
+            map_rows.append({
+                "record_id": relation_id(f"aob:{c['aob_fold']}:{e['ordinal']}"),
+                "work_id": "", "related_work_id": "", "relation": "unresolved_aob_ocr_non_work",
+                "source": "pd_aob_declared_works",
+                "source_locator": f"{c['aob_fold']}:{e['ordinal']}",
+                "dictionary": "AOB", "dictionary_siglum": e["siglum"],
+                "siglum_fold": e["fold"], "edition_ordinal": str(e["ordinal"]),
+                "n_editions_in_source": str(len(c["editions"])), "citation_count": "",
+                "confidence": "", "validation_state": VALIDATION_STATE,
+                "sample_role": "none", "unresolved_class": "aob_ocr_non_work",
+                "provenance": prov,
+            })
 
     # ---- commentary relations (sourced from the printed nature cell) ------
     index_title_to_work = collections.defaultdict(list)
@@ -647,7 +778,7 @@ def build(root):
 
     repeated = []
     for wid in sorted({r["work_id"] for r in map_rows
-                       if r["source"] == "pd_aob_declared_works"}):
+                       if r["source"] == "pd_aob_declared_works" and r["work_id"]}):
         eds = [r for r in map_rows if r["source"] == "pd_aob_declared_works"
                and r["work_id"] == wid]
         if len(eds) > 1:
@@ -719,13 +850,15 @@ def build(root):
             "work_id": "PDW- + sha256(canonical seed)[:10]; seed priority "
                        "Index > AOB > PWG bib > PW bib > harvested",
             "labels": "verbatim source cells only; never generated",
+            "shared_fold_adjudication": "Y0Q claim-level overlay: explicit splits and alias groups only; "
+                                        "every original shared fold still blocks the ordinary fold join",
         },
         "inputs": [
             {"path": p, "sha256": digest(open(os.path.join(root, p), "rb").read()),
              "rows": sum(1 for _ in csv.DictReader(open(os.path.join(root, p),
                                                         encoding="utf-8", newline=""),
                                                    delimiter="\t"))}
-            for p in (INDEX, AOB_WORKS, FAMILIES, RECON, PWG, PW)
+            for p in (INDEX, AOB_WORKS, FAMILIES, RECON, PWG, PW, ADJUDICATIONS)
         ],
         "counts": {
             "index_rows": len(index_rows),
@@ -734,19 +867,40 @@ def build(root):
             "index_vision_low_rows": index_low,
             "aob_declared_works": len(aob_rows),
             "aob_editions": sum(len(c["editions"]) for c in claims.values()
-                                if c["source"] == "aob"),
+                                if c["source"] == "aob") + sum(
+                                    len(c["editions"]) for c in rejected_components),
             "pwgbib_sigla": len(pwg_rows),
             "pwbib_sigla": len(pw_rows),
             "works": len(registry_rows),
             "unresolved_registry_rows": len(unresolved_registry),
             "edition_map_rows": len(map_rows),
             "shared_siglum_folds": len(shared_folds),
+            "shared_siglum_folds_resolved": sum(
+                a["status"] == "resolved" for a in adjudications.values()),
+            "shared_siglum_folds_partial": sum(
+                a["status"] == "partial" for a in adjudications.values()),
+            "shared_siglum_records_remaining": unresolved_counts["shared_siglum"],
             "bib_sigla_out_of_pd_scope": dict(bib_unlinked),
             "harvest_sigla_out_of_pd_scope": harvest_unlinked,
         },
         "works_by_label_kind": dict(collections.Counter(
             r["label_kind"] for r in registry_rows)),
         "unresolved_classes": dict(sorted(unresolved_counts.items())),
+        "shared_siglum_adjudication": {
+            "review": "Y0Q",
+            "overlay": ADJUDICATIONS,
+            "baseline_shared_siglum_folds": 57,
+            "baseline_shared_siglum_registry_records": 230,
+            "folds_resolved": sum(a["status"] == "resolved" for a in adjudications.values()),
+            "folds_partial": sum(a["status"] == "partial" for a in adjudications.values()),
+            "registry_records_adjudicated": 230 - unresolved_counts["shared_siglum"],
+            "registry_records_remaining": unresolved_counts["shared_siglum"],
+            "unresolved_claims": sorted(unresolved_claim_keys),
+            "split_index_rows": sum(len(a["split_index_rows"]) for a in adjudications.values()),
+            "alias_groups": sum(len(a["alias_groups"]) for a in adjudications.values()),
+            "rejected_non_work_aob_claims": len(rejected_components),
+            "ordinary_fold_join_blocked_for_all_shared_folds": True,
+        },
         "validation": {
             "state": VALIDATION_STATE,
             "kappa": None,

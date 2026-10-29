@@ -9,7 +9,8 @@
   "cross_source_join": "exact folded-siglum equality, refused when the fold names more than one work in the Index or in the AOB declared canon",
   "no_fuzzy_matching": true,
   "work_id": "PDW- + sha256(canonical seed)[:10]; seed priority Index > AOB > PWG bib > PW bib > harvested",
-  "labels": "verbatim source cells only; never generated"
+  "labels": "verbatim source cells only; never generated",
+  "shared_fold_adjudication": "Y0Q claim-level overlay: explicit splits and alias groups only; every original shared fold still blocks the ordinary fold join"
  },
  "inputs": [
   {
@@ -41,6 +42,11 @@
    "path": "data/pd/pd_pwbib_sigla.tsv",
    "sha256": "5aba81881090246dc7fae435395c4674ac1c876ece5600ec6f6a0a8ed52661fc",
    "rows": 776
+  },
+  {
+   "path": "data/pd/pd_shared_siglum_adjudications.tsv",
+   "sha256": "c3186e768903be5323ffc069b444eb9f2565159408521b2265f4de88d84d74dc",
+   "rows": 57
   }
  ],
  "counts": {
@@ -52,22 +58,25 @@
   "aob_editions": 1118,
   "pwgbib_sigla": 2601,
   "pwbib_sigla": 776,
-  "works": 1923,
-  "unresolved_registry_rows": 416,
-  "edition_map_rows": 6072,
+  "works": 1867,
+  "unresolved_registry_rows": 418,
+  "edition_map_rows": 6069,
   "shared_siglum_folds": 57,
+  "shared_siglum_folds_resolved": 55,
+  "shared_siglum_folds_partial": 2,
+  "shared_siglum_records_remaining": 2,
   "bib_sigla_out_of_pd_scope": {
    "pwg_no_title": 2371,
-   "pwg_ambiguous": 114,
+   "pwg_ambiguous": 116,
    "pw_no_title": 538,
-   "pw_ambiguous": 114,
+   "pw_ambiguous": 115,
    "pw": 1
   },
   "harvest_sigla_out_of_pd_scope": 2542
  },
  "works_by_label_kind": {
-  "index_title_iast": 1561,
-  "aob_declared_sample_title": 361,
+  "index_title_iast": 1541,
+  "aob_declared_sample_title": 325,
   "": 1
  },
  "unresolved_classes": {
@@ -75,9 +84,28 @@
   "aob_join_aob_never_cited": 149,
   "aob_join_aob_never_cited_near_miss": 78,
   "aob_join_join_miss_siglum_equal": 9,
+  "aob_ocr_non_work": 2,
   "blank_abbreviation_cell": 409,
-  "shared_siglum": 230,
+  "shared_siglum": 2,
   "structural_siglum": 7
+ },
+ "shared_siglum_adjudication": {
+  "review": "Y0Q",
+  "overlay": "data/pd/pd_shared_siglum_adjudications.tsv",
+  "baseline_shared_siglum_folds": 57,
+  "baseline_shared_siglum_registry_records": 230,
+  "folds_resolved": 55,
+  "folds_partial": 2,
+  "registry_records_adjudicated": 228,
+  "registry_records_remaining": 2,
+  "unresolved_claims": [
+   "AOB:1962",
+   "AOB:aryasiddhantamahasiddhanta148"
+  ],
+  "split_index_rows": 22,
+  "alias_groups": 50,
+  "rejected_non_work_aob_claims": 2,
+  "ordinary_fold_join_blocked_for_all_shared_folds": true
  },
  "validation": {
   "state": "unvalidated_pending_double_annotation",
@@ -131,11 +159,10 @@
      "one_work": true
     },
     {
-     "work_id": "PDW-df2dd81ed2",
+     "work_id": "PDW-618990b372",
      "editions": 2,
      "sigla": [
-      "PranU.1",
-      "PranU.2"
+      "Linganu"
      ],
      "one_work": true
     }
