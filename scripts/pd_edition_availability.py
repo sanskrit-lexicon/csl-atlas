@@ -370,7 +370,7 @@ def check(rows, aob_rows, summary):
     else:
         for old, new in zip(committed, expected_rows):
             for key in COLUMNS:
-                if old[key] != str(new[key]):
+                if (old[key] or "") != str(new[key]):
                     problems.append(f"TSV drift {new['siglum']}.{key}")
                     break
     with open(OUT_AOB_TSV, encoding="utf-8", newline="") as fh:
