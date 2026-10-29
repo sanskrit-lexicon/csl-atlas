@@ -76,6 +76,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
+sys.path.insert(0, str(ROOT / "scripts" / "lib"))
+from dataset_meta import license_fields  # noqa: E402
 
 ENTRY_MIN_TAIL_LETTERS = 6
 #: H7096: the KoshaSHRI scan leaves a zero-width non-joiner (U+200C) after a
@@ -1134,6 +1136,7 @@ def main(argv=None):
     witnesses = load_witnesses(witness_paths) if witness_paths else []
 
     entries, disc, summary = measure(aob, families, join, witnesses)
+    summary = {**license_fields(), **summary}
 
     if args.check:
         out_dir = ROOT / "data/pd"

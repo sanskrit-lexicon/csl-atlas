@@ -6,10 +6,10 @@
  "covered_works": 118,
  "row_count": 14,
  "inputs_sha256": {
-  "pd_aob_row_test_1473.json": "279a9614f945c6e5ddfb2ed7885607a2ff088b1b3a525f690316033ed07c1390",
-  "pd_aob_declared_canon_audit.json": "d522fa41048aeb433c78bdd5492ed591a19209255950e79c1b6ea4d53f869e65",
-  "pd_index_works_summary.json": "29b22790c810586b940cf042d687d2d700fce229f32a7c920f4c200f7a722e9d",
-  "pd_dcs_metrics.json": "02ebee08936418e882b6e92e2ffb40888e80ea88c793ae1b27503537d2959416",
+  "pd_aob_row_test_1473.json": "9aff78b9ffadd4ce79b73900e08b20585302afd59b46813fb19330e7c45ef90a",
+  "pd_aob_declared_canon_audit.json": "0a02affd2498cb661e07bad704723160af5d3eb8485ed869d247de44db47cd72",
+  "pd_index_works_summary.json": "c88658b39a99df41b8a5cd1c6abb9d6f3223dc5012c704a880ec8af4b2258e3d",
+  "pd_dcs_metrics.json": "260593574cea35626f91a37e9be9778ce503f515343bd9bdc2c547f845b2edc0",
   "pd_index_works_siglum_delta.tsv": "24732e94cae0ead51e3d21b47836cc5b91da760746dc74465a11549f91de0035"
  },
  "rule": "no percentage without its base in the same row; aob_clean_subset_editions is a floor and must never be quoted"
