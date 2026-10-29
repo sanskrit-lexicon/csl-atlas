@@ -1,0 +1,32 @@
+{
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "schema_version": "1.0",
+  "generated_by": "scripts/pd_siglum_work_m1.py",
+  "sample_seed": "PD-M1-siglum-work-v1|29-10-2026",
+  "sample_size": 200,
+  "sample_quotas": {
+    "ordinary": 100,
+    "shared_siglum": 40,
+    "vision_low": 40,
+    "aob_join": 20
+  },
+  "label_schema": ["confirmed", "wrong_work", "wrong_siglum", "ambiguous"],
+  "annotator_b": {
+    "name": "Kimi Work (Kimi)",
+    "exact_model_version": "not exposed in the session",
+    "reading": "independent per-record check of the printed Index page images",
+    "annotated_rows": 200,
+    "labels": {
+      "confirmed": 194,
+      "wrong_work": 5,
+      "wrong_siglum": 1,
+      "ambiguous": 0
+    }
+  },
+  "annotator_a": null,
+  "kappa": null,
+  "kappa_status": "not_measured_no_annotator_a",
+  "adjudicated_rows": 0,
+  "note": "Annotator-B decisions are not gold and were not applied to the registry. Cohen's kappa requires a genuine independent annotator-A pass on the same 200 sample IDs."
+}
