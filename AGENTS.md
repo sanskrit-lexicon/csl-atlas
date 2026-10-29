@@ -31,3 +31,9 @@ and is the normal path. Lock:
 [`scripts/lib/review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs).
 Tests:
 [`test/reseed-lock.test.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/test/reseed-lock.test.mjs).
+
+## Repo-curated orientation
+
+| Read when | Surface |
+|---|---|
+| Regenerating the H7316 KoshaSHRI fixture | [PD data README](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export-h7316) and [export report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md) — `pd_koshashri_entries.tsv` + `pd_koshashri_citations.tsv` are one deterministic unit; the full source response stays local and uncommitted. |
