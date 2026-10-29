@@ -37,3 +37,4 @@ Tests:
 | Read when | Surface |
 |---|---|
 | Regenerating the H7316 KoshaSHRI fixture | [PD data README](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export-h7316) and [export report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md) — `pd_koshashri_entries.tsv` + `pd_koshashri_citations.tsv` are one deterministic unit; the full source response stays local and uncommitted. |
+| Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the H7458/C2 rule in `CLAUDE.md` — regenerate `pd_locus_fields.tsv`, `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`, `pd_locus_fields_summary.json` together, preserve exact H6949 reconciliation, and keep unresolved continuations explicit. |
