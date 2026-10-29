@@ -2,7 +2,7 @@
   "tool": "tools/document_check.py",
   "skill": "/document",
   "legacy_name": "/artifact-propagate",
-  "generated": "2026-10-29 21:44:01",
+  "generated": "2026-10-29 22:21:36",
   "artifacts": [
     {
       "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_koshashri_entries.tsv",
@@ -14,120 +14,120 @@
           "phase": 1,
           "label": "README.md",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/README.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/README.md:126: - [PD data registry](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export-h7316) — H7316 fixture `pd_koshashri_ent"
         },
         {
           "id": "claude_md",
           "phase": 1,
           "label": "CLAUDE.md",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/CLAUDE.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/CLAUDE.md:96: - **PD KoshaSHRI fixture (H7316).** `data/pd/pd_koshashri_entries.tsv` and"
         },
         {
           "id": "cold_start",
           "phase": 1,
           "label": "Cold-start doc (GEMINI.md / equivalent)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/AGENTS.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/AGENTS.md:39: | Regenerating the H7316 KoshaSHRI fixture | [PD data README](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export"
         },
         {
           "id": "sibling_domain_docs",
           "phase": 1,
           "label": "Sibling domain docs (manual/roadmap/method docs)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason sibling_domain_docs=\"...\") or a real edit -- which doc governs the same workstream is a content judgment, not mechanical"
+          "status": "n/a",
+          "evidence": "Existing PD_KOSHASHRI_FIXTURE_EXPORT_2026.md and data/pd/README.md govern this workstream"
         },
         {
           "id": "metadoc",
           "phase": 1,
           "label": "Metadoc (<name>.meta.md)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_koshashri_entries.tsv.meta.md (file does not exist)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/data/pd/pd_koshashri_entries.tsv.meta.md:1: # Metadoc — pd_koshashri_entries.tsv"
         },
         {
           "id": "changelog",
           "phase": 1,
           "label": "CHANGELOG.md -> release (/cut-release)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/CHANGELOG.md, /Users/mac/Documents/GitHub/csl-atlas/changelog.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/CHANGELOG.md:14: paths `data/pd/pd_koshashri_entries.tsv` and `data/pd/pd_koshashri_citations.tsv` across"
         },
         {
           "id": "ai_state",
           "phase": 1,
           "label": ".ai_state.md",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/.ai_state.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/.ai_state.md:69: KoshaSHRI response and adapter; shipped `data/pd/pd_koshashri_entries.tsv` (one entry, 29 senses)"
         },
         {
           "id": "issues",
           "phase": 1,
           "label": "Issues (per-person task issues)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason issues=\"...\") or a real edit -- posting to an issue needs standing or per-action authorization"
+          "status": "n/a",
+          "evidence": "No tracking issue exists; closed H7316 registry is canonical"
         },
         {
           "id": "gtd",
           "phase": 2,
           "label": "Uprava/GTD_NEXT_ACTIONS.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md:1097: - [x] ✅ RESOLVED 29-10-2026 — H7316 shipped pd_koshashri_entries.tsv and pd_koshashri_citations.tsv; PR #653 and independent GLM PASS [evidence](https://github."
         },
         {
           "id": "handoffs_registry",
           "phase": 2,
           "label": "Uprava/handoffs/README.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/handoffs/README.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "Closed H7316 row with both filenames lives in handoffs/registry/archive-shard-0013.md; active README intentionally excludes closed rows"
         },
         {
           "id": "features_index",
           "phase": 2,
           "label": "SanskritLexicography/FEATURES_INDEX.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md:92: | ⚪ C21 | KoshaSHRI `agni` fixture (H7316) | First fixture-only KoshaSHRI export: `pd_koshashri_entries.tsv` (one entry, all 29 senses) + `pd_koshashri_citation"
         },
         {
           "id": "reuse_index",
           "phase": 2,
           "label": "Uprava/REUSE_INDEX.md (reusable assets)",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md:61: | csl-atlas [`scripts/pd_koshashri_vocable.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_koshashri_vocable.py) + [`scripts/pd_koshashr"
         },
         {
           "id": "kosha_manifest",
           "phase": 2,
           "label": "kosha/data/manifest/datasets.json",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/kosha/data/manifest/datasets.json (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/kosha/data/manifest/datasets.json:2951: \"source_path\": \"data/pd/pd_koshashri_entries.tsv\","
         },
         {
           "id": "data_layers_census",
           "phase": 2,
           "label": "Uprava/DATA_LAYERS_CENSUS.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md:173: | **Dictionary text** | restricted KoshaSHRI single-entry response + H7296 `pd_work_edition_map.tsv` | H7316 fixture counted 29-10-2026: [`pd_koshashri_entries."
         },
         {
           "id": "project_interlinks",
           "phase": 2,
           "label": "Uprava/PROJECT_INTERLINKS.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md:825: - **`csl-atlas` KoshaSHRI fixture export** (H7316) = one `agni` entry in [`pd_koshashri_entries.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/da"
         },
         {
           "id": "skills_index",
@@ -150,24 +150,24 @@
           "phase": 2,
           "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/DANGER_FACTS.md, /Users/mac/Documents/GitHub/Uprava/context_facts.yaml exist, no mention found -- destructive-risk fact? supply --reason danger_facts=... if not applicable"
+          "status": "n/a",
+          "evidence": "No new destructive-risk fact"
         },
         {
           "id": "questions_log",
           "phase": 2,
           "label": "Uprava/QUESTIONS_LOG.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/QUESTIONS_LOG.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "Does not answer a previously registered research question"
         },
         {
           "id": "megabook",
           "phase": 2,
           "label": "Uprava/MEGABOOK.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason megabook=\"...\") or a real edit -- thesis refinement only -- never operational status; MEGABOOK edits stay LLM per H2797"
+          "status": "n/a",
+          "evidence": "Routine dataset registration, not thesis-level synthesis"
         },
         {
           "id": "skills_manual_ru",
@@ -182,24 +182,24 @@
           "phase": 2,
           "label": "claude-config HOOKS_INDEX.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/claude-config/HOOKS_INDEX.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "Hook enforcement unchanged"
         },
         {
           "id": "repo_status_rollup",
           "phase": 2,
           "label": "Uprava/REPO_STATUS_ROLLUP.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/REPO_STATUS_ROLLUP.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "No archived, frozen or rebooted repo-level status shift"
         },
         {
           "id": "hub_manifest",
           "phase": 2,
           "label": "Uprava/tools/hub_manifest.json",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/tools/hub_manifest.json (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "No hub file added or removed"
         },
         {
           "id": "auto_derived_views",
@@ -214,10 +214,12 @@
           "phase": 2,
           "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
           "scope": "org",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason epistemic_registries=\"...\") or a real edit -- applies only if the artifact rests on a premise / exposes a disagreement / opens-closes a known-unknown / abandons an approach / is a reproducible recipe / will decay / coins a term"
+          "status": "n/a",
+          "evidence": "No new premise, contradiction, gap, dead end, recipe, staleness class or coined term"
         }
-      ]
+      ],
+      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/data/pd/pd_koshashri_entries.tsv",
+      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910"
     },
     {
       "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_koshashri_citations.tsv",
@@ -229,120 +231,120 @@
           "phase": 1,
           "label": "README.md",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/README.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/README.md:126: - [PD data registry](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export-h7316) — H7316 fixture `pd_koshashri_ent"
         },
         {
           "id": "claude_md",
           "phase": 1,
           "label": "CLAUDE.md",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/CLAUDE.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/CLAUDE.md:97: `data/pd/pd_koshashri_citations.tsv` are generated together by"
         },
         {
           "id": "cold_start",
           "phase": 1,
           "label": "Cold-start doc (GEMINI.md / equivalent)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/AGENTS.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/AGENTS.md:39: | Regenerating the H7316 KoshaSHRI fixture | [PD data README](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export"
         },
         {
           "id": "sibling_domain_docs",
           "phase": 1,
           "label": "Sibling domain docs (manual/roadmap/method docs)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason sibling_domain_docs=\"...\") or a real edit -- which doc governs the same workstream is a content judgment, not mechanical"
+          "status": "n/a",
+          "evidence": "Existing PD_KOSHASHRI_FIXTURE_EXPORT_2026.md and data/pd/README.md govern this workstream"
         },
         {
           "id": "metadoc",
           "phase": 1,
           "label": "Metadoc (<name>.meta.md)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_koshashri_citations.tsv.meta.md (file does not exist)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/data/pd/pd_koshashri_citations.tsv.meta.md:1: # Metadoc — pd_koshashri_citations.tsv"
         },
         {
           "id": "changelog",
           "phase": 1,
           "label": "CHANGELOG.md -> release (/cut-release)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/CHANGELOG.md, /Users/mac/Documents/GitHub/csl-atlas/changelog.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/CHANGELOG.md:14: paths `data/pd/pd_koshashri_entries.tsv` and `data/pd/pd_koshashri_citations.tsv` across"
         },
         {
           "id": "ai_state",
           "phase": 1,
           "label": ".ai_state.md",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/.ai_state.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/.ai_state.md:70: and `data/pd/pd_koshashri_citations.tsv` (1,400 citation-reference rows). The offline builder,"
         },
         {
           "id": "issues",
           "phase": 1,
           "label": "Issues (per-person task issues)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason issues=\"...\") or a real edit -- posting to an issue needs standing or per-action authorization"
+          "status": "n/a",
+          "evidence": "No tracking issue exists; closed H7316 registry is canonical"
         },
         {
           "id": "gtd",
           "phase": 2,
           "label": "Uprava/GTD_NEXT_ACTIONS.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md:1097: - [x] ✅ RESOLVED 29-10-2026 — H7316 shipped pd_koshashri_entries.tsv and pd_koshashri_citations.tsv; PR #653 and independent GLM PASS [evidence](https://github."
         },
         {
           "id": "handoffs_registry",
           "phase": 2,
           "label": "Uprava/handoffs/README.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/handoffs/README.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "Closed H7316 row with both filenames lives in handoffs/registry/archive-shard-0013.md; active README intentionally excludes closed rows"
         },
         {
           "id": "features_index",
           "phase": 2,
           "label": "SanskritLexicography/FEATURES_INDEX.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/SanskritLexicography/FEATURES_INDEX.md:92: | ⚪ C21 | KoshaSHRI `agni` fixture (H7316) | First fixture-only KoshaSHRI export: `pd_koshashri_entries.tsv` (one entry, all 29 senses) + `pd_koshashri_citation"
         },
         {
           "id": "reuse_index",
           "phase": 2,
           "label": "Uprava/REUSE_INDEX.md (reusable assets)",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md:61: | csl-atlas [`scripts/pd_koshashri_vocable.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_koshashri_vocable.py) + [`scripts/pd_koshashr"
         },
         {
           "id": "kosha_manifest",
           "phase": 2,
           "label": "kosha/data/manifest/datasets.json",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/kosha/data/manifest/datasets.json (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/kosha/data/manifest/datasets.json:2977: \"source_path\": \"data/pd/pd_koshashri_citations.tsv\","
         },
         {
           "id": "data_layers_census",
           "phase": 2,
           "label": "Uprava/DATA_LAYERS_CENSUS.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md:173: | **Dictionary text** | restricted KoshaSHRI single-entry response + H7296 `pd_work_edition_map.tsv` | H7316 fixture counted 29-10-2026: [`pd_koshashri_entries."
         },
         {
           "id": "project_interlinks",
           "phase": 2,
           "label": "Uprava/PROJECT_INTERLINKS.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/PROJECT_INTERLINKS.md:825: - **`csl-atlas` KoshaSHRI fixture export** (H7316) = one `agni` entry in [`pd_koshashri_entries.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/da"
         },
         {
           "id": "skills_index",
@@ -365,24 +367,24 @@
           "phase": 2,
           "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/DANGER_FACTS.md, /Users/mac/Documents/GitHub/Uprava/context_facts.yaml exist, no mention found -- destructive-risk fact? supply --reason danger_facts=... if not applicable"
+          "status": "n/a",
+          "evidence": "No new destructive-risk fact"
         },
         {
           "id": "questions_log",
           "phase": 2,
           "label": "Uprava/QUESTIONS_LOG.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/QUESTIONS_LOG.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "Does not answer a previously registered research question"
         },
         {
           "id": "megabook",
           "phase": 2,
           "label": "Uprava/MEGABOOK.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason megabook=\"...\") or a real edit -- thesis refinement only -- never operational status; MEGABOOK edits stay LLM per H2797"
+          "status": "n/a",
+          "evidence": "Routine dataset registration, not thesis-level synthesis"
         },
         {
           "id": "skills_manual_ru",
@@ -397,24 +399,24 @@
           "phase": 2,
           "label": "claude-config HOOKS_INDEX.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/claude-config/HOOKS_INDEX.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "Hook enforcement unchanged"
         },
         {
           "id": "repo_status_rollup",
           "phase": 2,
           "label": "Uprava/REPO_STATUS_ROLLUP.md",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/REPO_STATUS_ROLLUP.md (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "No archived, frozen or rebooted repo-level status shift"
         },
         {
           "id": "hub_manifest",
           "phase": 2,
           "label": "Uprava/tools/hub_manifest.json",
           "scope": "org",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/Uprava/tools/hub_manifest.json (file exists, no mention of artifact found)"
+          "status": "n/a",
+          "evidence": "No hub file added or removed"
         },
         {
           "id": "auto_derived_views",
@@ -429,16 +431,18 @@
           "phase": 2,
           "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
           "scope": "org",
-          "status": "missing",
-          "evidence": "requires human-readable reason (--reason epistemic_registries=\"...\") or a real edit -- applies only if the artifact rests on a premise / exposes a disagreement / opens-closes a known-unknown / abandons an approach / is a reproducible recipe / will decay / coins a term"
+          "status": "n/a",
+          "evidence": "No new premise, contradiction, gap, dead end, recipe, staleness class or coined term"
         }
-      ]
+      ],
+      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910/data/pd/pd_koshashri_citations.tsv",
+      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas/csl-atlas-h7316-document-2910"
     }
   ],
   "provenance": {
     "host": "MacBook-Air.local",
-    "git_head": "8f4062c5c52e9ea6a347fc458663b976aa43d4ef",
-    "git_branch": "main",
+    "git_head": "0147d16b8582ffbdec43e1730fa9e12c9f47eab0",
+    "git_branch": "release-0.21.3",
     "handoff": "H7316"
   }
 }

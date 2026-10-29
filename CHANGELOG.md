@@ -7,6 +7,16 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.21.3] - 2026-10-29
+
+# PD KoshaSHRI fixture dataset registration (H7316)
+- **PD KoshaSHRI fixture dataset registration (H7316).** Registered the exact H7316 dataset
+  paths `data/pd/pd_koshashri_entries.tsv` and `data/pd/pd_koshashri_citations.tsv` across
+  the repository and estate surfaces. Added per-file metadocs with schemas, rights, provenance
+  and regeneration commands; linked the fixture from the root README and agent orientation;
+  recorded the sync rule that adapter or exporter changes regenerate both TSVs and rerun
+  `--check` plus offline tests in the same PR. The all-rights-reserved full source response
+  remains local and uncommitted. Dataset bytes and canaries are unchanged from v0.21.2 / PR #653.
 ## [0.21.2] - 2026-10-29
 
 # PD KoshaSHRI fixture TSV exports (H7316)
