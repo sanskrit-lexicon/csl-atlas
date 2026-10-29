@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-_Created: 03-07-2026 · Last updated: 09-10-2026 (H5885 truth refresh: sanskrit-util v0.12.0 re-vendor, paper-priv guard, DOI, lint-zero)_
+_Created: 03-07-2026 · Last updated: 29-10-2026 (H7316 KoshaSHRI fixture regeneration and rights rule)_
 
 Recent state (09-10-2026): `v0.19.11` released; vendored
 `sanskrit-util` re-pinned to **v0.12.0** (#542 — H3975 medial-anusvāra
@@ -93,6 +93,13 @@ publishes `dist/` to GitHub Pages.
   `reports/PD_QUOTATION_UNIT_2026-10-18.md` and the `data/pd/README.md` row must move with
   them. `tests/forensic/test_quotation_units.py` holds the rule with **hand-derived**
   expectations — never regenerate those pins from the script they check.
+- **PD KoshaSHRI fixture (H7316).** `data/pd/pd_koshashri_entries.tsv` and
+  `data/pd/pd_koshashri_citations.tsv` are generated together by
+  `scripts/pd_koshashri_fixture_export.py` from the restricted local response through
+  `scripts/pd_koshashri_vocable.py`. Changing the adapter, exporter or canonical input regenerates
+  both TSVs and runs `python3 scripts/pd_koshashri_fixture_export.py --check` plus
+  `python3.13 -m pytest tests/forensic/test_pd_koshashri_fixture_export.py -q` in the same PR.
+  Never commit the full `data/pd/koshashri_vocable.json` response: KoshaSHRI is all rights reserved.
 
 ## Do not touch
 
