@@ -2,7 +2,7 @@
   "tool": "tools/document_check.py",
   "skill": "/document",
   "legacy_name": "/artifact-propagate",
-  "generated": "2026-10-30 00:17:54",
+  "generated": "2026-10-30 00:29:34",
   "artifacts": [
     {
       "artifact": "/Users/mac/Documents/GitHub/csl-atlas/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md",
@@ -15,7 +15,7 @@
           "label": "README.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
         },
         {
           "id": "claude_md",
@@ -23,7 +23,7 @@
           "label": "CLAUDE.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CLAUDE.md:103: Method and current coverage: `reports/PD_LOCUS_FIELDS_C2_2026-10-29.md`."
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CLAUDE.md:103: Method and current coverage: `reports/PD_LOCUS_FIELDS_C2_2026-10-29.md`."
         },
         {
           "id": "cold_start",
@@ -31,7 +31,7 @@
           "label": "Cold-start doc (GEMINI.md / equivalent)",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
         },
         {
           "id": "sibling_domain_docs",
@@ -54,16 +54,16 @@
           "phase": 1,
           "label": "CHANGELOG.md -> release (/cut-release)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CHANGELOG.md, /Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/changelog.md exist, no mention of artifact"
+          "status": "n/a",
+          "evidence": "released as v0.21.4; artifact files are named in the release notes"
         },
         {
           "id": "ai_state",
           "phase": 1,
           "label": ".ai_state.md",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/.ai_state.md (file exists, no mention of artifact found)"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/.ai_state.md:74: `pd_locus_fields_summary.json`, 14 controls, `reports/PD_LOCUS_FIELDS_C2_2026-10-29.md`"
         },
         {
           "id": "issues",
@@ -218,8 +218,8 @@
           "evidence": "findings and caveats live in the C2 report; no premise, disagreement, or new-unknown registry change"
         }
       ],
-      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md",
-      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935"
+      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md",
+      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935"
     },
     {
       "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_locus_fields.tsv",
@@ -232,7 +232,7 @@
           "label": "README.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
         },
         {
           "id": "claude_md",
@@ -240,7 +240,7 @@
           "label": "CLAUDE.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CLAUDE.md:96: - **PD locus fields (H7458/C2).** `data/pd/pd_locus_fields.tsv`,"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CLAUDE.md:96: - **PD locus fields (H7458/C2).** `data/pd/pd_locus_fields.tsv`,"
         },
         {
           "id": "cold_start",
@@ -248,7 +248,7 @@
           "label": "Cold-start doc (GEMINI.md / equivalent)",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
         },
         {
           "id": "sibling_domain_docs",
@@ -271,8 +271,8 @@
           "phase": 1,
           "label": "CHANGELOG.md -> release (/cut-release)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CHANGELOG.md, /Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/changelog.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CHANGELOG.md:20: `pd_locus_fields.tsv`, `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,"
         },
         {
           "id": "ai_state",
@@ -280,7 +280,7 @@
           "label": ".ai_state.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/.ai_state.md:72: Added deterministic builder/checker, `pd_locus_fields.tsv`,"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/.ai_state.md:72: Added deterministic builder/checker, `pd_locus_fields.tsv`,"
         },
         {
           "id": "issues",
@@ -319,8 +319,8 @@
           "phase": 2,
           "label": "Uprava/REUSE_INDEX.md (reusable assets)",
           "scope": "org",
-          "status": "n/a",
-          "evidence": "registered in merged Uprava PR 6326"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/REUSE_INDEX.md:62: | csl-atlas [`scripts/pd_locus_fields.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_locus_fields.py) + [`scripts/lib/pd_locus_parser.p"
         },
         {
           "id": "kosha_manifest",
@@ -335,8 +335,8 @@
           "phase": 2,
           "label": "Uprava/DATA_LAYERS_CENSUS.md",
           "scope": "org",
-          "status": "n/a",
-          "evidence": "registered in merged Uprava PR 6326"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md:553: added four committed derived layers: `pd_locus_fields.tsv` (**391,444** explicit pairs),"
         },
         {
           "id": "project_interlinks",
@@ -435,8 +435,8 @@
           "evidence": "findings and caveats live in the C2 report; no premise, disagreement, or new-unknown registry change"
         }
       ],
-      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/data/pd/pd_locus_fields.tsv",
-      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935"
+      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/data/pd/pd_locus_fields.tsv",
+      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935"
     },
     {
       "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_locus_coverage_by_entry.tsv",
@@ -449,7 +449,7 @@
           "label": "README.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
         },
         {
           "id": "claude_md",
@@ -457,7 +457,7 @@
           "label": "CLAUDE.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CLAUDE.md:97: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv` and"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CLAUDE.md:97: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv` and"
         },
         {
           "id": "cold_start",
@@ -465,7 +465,7 @@
           "label": "Cold-start doc (GEMINI.md / equivalent)",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
         },
         {
           "id": "sibling_domain_docs",
@@ -488,8 +488,8 @@
           "phase": 1,
           "label": "CHANGELOG.md -> release (/cut-release)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CHANGELOG.md, /Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/changelog.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CHANGELOG.md:20: `pd_locus_fields.tsv`, `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,"
         },
         {
           "id": "ai_state",
@@ -497,7 +497,7 @@
           "label": ".ai_state.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/.ai_state.md:73: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/.ai_state.md:73: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,"
         },
         {
           "id": "issues",
@@ -552,8 +552,8 @@
           "phase": 2,
           "label": "Uprava/DATA_LAYERS_CENSUS.md",
           "scope": "org",
-          "status": "n/a",
-          "evidence": "registered in merged Uprava PR 6326"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md:554: `pd_locus_coverage_by_entry.tsv` (**107,630** rows; **105,177 = 97.72 %** with a pair),"
         },
         {
           "id": "project_interlinks",
@@ -652,8 +652,8 @@
           "evidence": "findings and caveats live in the C2 report; no premise, disagreement, or new-unknown registry change"
         }
       ],
-      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/data/pd/pd_locus_coverage_by_entry.tsv",
-      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935"
+      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/data/pd/pd_locus_coverage_by_entry.tsv",
+      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935"
     },
     {
       "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_locus_rejections.tsv",
@@ -666,7 +666,7 @@
           "label": "README.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
         },
         {
           "id": "claude_md",
@@ -674,7 +674,7 @@
           "label": "CLAUDE.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CLAUDE.md:97: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv` and"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CLAUDE.md:97: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv` and"
         },
         {
           "id": "cold_start",
@@ -682,7 +682,7 @@
           "label": "Cold-start doc (GEMINI.md / equivalent)",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
         },
         {
           "id": "sibling_domain_docs",
@@ -705,8 +705,8 @@
           "phase": 1,
           "label": "CHANGELOG.md -> release (/cut-release)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CHANGELOG.md, /Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/changelog.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CHANGELOG.md:20: `pd_locus_fields.tsv`, `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,"
         },
         {
           "id": "ai_state",
@@ -714,7 +714,7 @@
           "label": ".ai_state.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/.ai_state.md:73: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/.ai_state.md:73: `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`,"
         },
         {
           "id": "issues",
@@ -769,8 +769,8 @@
           "phase": 2,
           "label": "Uprava/DATA_LAYERS_CENSUS.md",
           "scope": "org",
-          "status": "n/a",
-          "evidence": "registered in merged Uprava PR 6326"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md:555: `pd_locus_rejections.tsv` (diagnostic classes and examples), and"
         },
         {
           "id": "project_interlinks",
@@ -869,8 +869,8 @@
           "evidence": "findings and caveats live in the C2 report; no premise, disagreement, or new-unknown registry change"
         }
       ],
-      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/data/pd/pd_locus_rejections.tsv",
-      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935"
+      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/data/pd/pd_locus_rejections.tsv",
+      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935"
     },
     {
       "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/pd/pd_locus_fields_summary.json",
@@ -883,7 +883,7 @@
           "label": "README.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/README.md:127: - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum"
         },
         {
           "id": "claude_md",
@@ -891,7 +891,7 @@
           "label": "CLAUDE.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CLAUDE.md:98: `pd_locus_fields_summary.json` are generated together by"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CLAUDE.md:98: `pd_locus_fields_summary.json` are generated together by"
         },
         {
           "id": "cold_start",
@@ -899,7 +899,7 @@
           "label": "Cold-start doc (GEMINI.md / equivalent)",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/AGENTS.md:40: | Rebuilding or changing PD locus fields | [C2 report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) and the"
         },
         {
           "id": "sibling_domain_docs",
@@ -922,8 +922,8 @@
           "phase": 1,
           "label": "CHANGELOG.md -> release (/cut-release)",
           "scope": "repo",
-          "status": "missing",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/CHANGELOG.md, /Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/changelog.md exist, no mention of artifact"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/CHANGELOG.md:21: `pd_locus_fields_summary.json`, builder/checker, 14 hand-derived controls, C2 report and"
         },
         {
           "id": "ai_state",
@@ -931,7 +931,7 @@
           "label": ".ai_state.md",
           "scope": "repo",
           "status": "present",
-          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/.ai_state.md:74: `pd_locus_fields_summary.json`, 14 controls, report and PD registry section."
+          "evidence": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/.ai_state.md:74: `pd_locus_fields_summary.json`, 14 controls, `reports/PD_LOCUS_FIELDS_C2_2026-10-29.md`"
         },
         {
           "id": "issues",
@@ -986,8 +986,8 @@
           "phase": 2,
           "label": "Uprava/DATA_LAYERS_CENSUS.md",
           "scope": "org",
-          "status": "n/a",
-          "evidence": "registered in merged Uprava PR 6326"
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/DATA_LAYERS_CENSUS.md:556: `pd_locus_fields_summary.json` (protocol, metrics, input hashes and exact reconciliation of"
         },
         {
           "id": "project_interlinks",
@@ -1086,14 +1086,14 @@
           "evidence": "findings and caveats live in the C2 report; no premise, disagreement, or new-unknown registry change"
         }
       ],
-      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935/data/pd/pd_locus_fields_summary.json",
-      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-h7458-70935"
+      "worktree_artifact": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935/data/pd/pd_locus_fields_summary.json",
+      "worktree": "/Users/mac/Documents/GitHub/worktrees/csl-atlas-release-0.21.4-70935"
     }
   ],
   "provenance": {
     "host": "MacBook-Air.local",
-    "git_head": "16b2beb5aac0949f22631d3051137971238a8147",
-    "git_branch": "h7458-pd-locus-fields-c2-70935",
+    "git_head": "734f68358e5111caba0386efc225c140ac3eb14b",
+    "git_branch": "release-0.21.4-70935",
     "handoff": "H7458"
   }
 }
