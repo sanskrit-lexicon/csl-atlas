@@ -303,6 +303,23 @@ Builder: `python3.13 scripts/pd_edition_availability.py --pd <pd.txt>`; check:
 `python3.13 scripts/pd_edition_availability.py --check --pd <pd.txt>`; controls:
 `python3.13 -m pytest tests/forensic/test_pd_edition_availability.py -q`. Write-up:
 [reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md).
+
+## Locus fields (C2, 29-10-2026)
+
+H6949 is reused unchanged to extract all 419,890 `(siglum, locus)` candidates. **105,890 of
+107,630 entries (98.3834 %)** have at least one non-empty assigned pair; **102,576 (95.3043 %)** have a structurally clean one. Empty, textual, prose-tail, unbalanced and unassigned fields stay flagged rather than being silently repaired.
+
+| File | What it is |
+|---|---|
+| [pd_locus_fields.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_locus_fields.tsv) | 419,890 attestation rows with siglum, locus, type, shape and review flag |
+| [pd_locus_entries.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_locus_entries.tsv) | 107,630 entry rows with pair counts and clean / nonempty-only / empty-only / no-attestation status |
+| [pd_locus_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_locus_summary.json) | headline measures, distributions, 54 empty-only entries, review examples and H6949 reconciliation |
+
+Builder: `python3.13 scripts/pd_locus_fields.py --pd <pd.txt>`; check:
+`python3.13 scripts/pd_locus_fields.py --check --pd <pd.txt>`; controls:
+`python3.13 -m pytest tests/forensic/test_pd_locus_fields.py -q`. Write-up:
+[reports/PD_LOCUS_FIELDS_C2_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md).
+
 ## Method-ladder M1/M2 annotation packets (29-10-2026)
 
 | File | What it is |

@@ -1,0 +1,1096 @@
+{
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "dataset": "pd_locus_fields_c2",
+ "generated_by": "python3.13 scripts/pd_locus_fields.py",
+ "generated_on": "2026-10-29",
+ "evidenceLevels": {
+  "quotation_boundaries": "derived",
+  "locus_extraction": "derived",
+  "structural_flags": "derived",
+  "human_review": "none"
+ },
+ "protocol": {
+  "unit": "H6949 quotation_units.count_units, unchanged",
+  "pair": "assigned siglum plus non-empty locus; unassigned continuations excluded",
+  "clean_pair": "non-empty pair whose review_flag is clean",
+  "review": "empty, textual, prose_tail, unbalanced_parentheses and unassigned stay visible"
+ },
+ "totals": {
+  "entries": 107630,
+  "entries_with_attestation": 105944,
+  "entries_with_pair": 105890,
+  "entries_with_clean_pair": 102576,
+  "attestations": 419890,
+  "siglum_loci": 384217,
+  "continuation_loci": 35673,
+  "nonempty_pairs": 399403,
+  "clean_pairs": 383638,
+  "empty_loci": 20383,
+  "unassigned_continuations": 104,
+  "entries_with_pair_pct": 98.3834,
+  "entries_with_clean_pair_pct": 95.3043,
+  "entries_empty_only": 54,
+  "entries_no_attestation": 1686,
+  "review_loci": 36252
+ },
+ "by_shape": {
+  "alphanumeric": 185998,
+  "empty": 20383,
+  "numeric": 207525,
+  "roman": 792,
+  "textual": 5088,
+  "unassigned": 104
+ },
+ "by_review_flag": {
+  "clean": 383638,
+  "empty": 20383,
+  "prose_tail": 223,
+  "textual": 5088,
+  "unassigned": 104,
+  "unbalanced_parentheses": 10454
+ },
+ "by_entry_status": {
+  "clean": 102576,
+  "empty_only": 54,
+  "no_attestation": 1686,
+  "nonempty_only": 3314
+ },
+ "reconciliation": {
+  "h6949_entry_rows": 107630,
+  "per_entry_attestations_and_locus_kinds_exact": true,
+  "totals_exact": true
+ },
+ "inputs": {
+  "pd_txt_sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+  "pd_quotations_by_entry.tsv": "c67f15137838e78c08cb076065b968435b2ceb19c3b3d3d21d55c5b3386b93a7"
+ },
+ "empty_only_entries": [
+  {
+   "lid": "2006",
+   "pc": "1-0087b",
+   "k1": "akAlakUzmARqa",
+   "sigla": "cf."
+  },
+  {
+   "lid": "9280",
+   "pc": "1-0323b",
+   "k1": "agfhyamARavizaya",
+   "sigla": "KāśiVṛ.;P.;PadMañ."
+  },
+  {
+   "lid": "10547",
+   "pc": "1-0378a",
+   "k1": "agnirajas",
+   "sigla": "ŚabdaKaDru."
+  },
+  {
+   "lid": "10673",
+   "pc": "1-0383a",
+   "k1": "agnivikraya",
+   "sigla": "BṛSarvaAnu."
+  },
+  {
+   "lid": "18628",
+   "pc": "1-0650b",
+   "k1": "aNGripASanaripuGnasutArisAhva",
+   "sigla": "comm."
+  },
+  {
+   "lid": "25846",
+   "pc": "2-0898a",
+   "k1": "aRvAdigaRa",
+   "sigla": "NayaMañ."
+  },
+  {
+   "lid": "29237",
+   "pc": "2-1014b",
+   "k1": "atidvaya",
+   "sigla": "cf."
+  },
+  {
+   "lid": "32199",
+   "pc": "2-1115b",
+   "k1": "ativAdatva",
+   "sigla": "ŚrutaPra."
+  },
+  {
+   "lid": "37047",
+   "pc": "2-1267a",
+   "k1": "atyantastokajIvin",
+   "sigla": "PadmP."
+  },
+  {
+   "lid": "37809",
+   "pc": "2-1290a",
+   "k1": "atyarDa",
+   "sigla": "cf."
+  },
+  {
+   "lid": "39651",
+   "pc": "2-1356b",
+   "k1": "adaSA",
+   "sigla": "comm."
+  },
+  {
+   "lid": "43162",
+   "pc": "2-1476b",
+   "k1": "advEtIkaraRa",
+   "sigla": "__UNASSIGNED_CONTINUATION__;comm."
+  },
+  {
+   "lid": "44393",
+   "pc": "3-1521a",
+   "k1": "aDaScOra",
+   "sigla": "ŚabdaKaDru."
+  },
+  {
+   "lid": "47095",
+   "pc": "3-1629a",
+   "k1": "aDinirhan",
+   "sigla": "Sāy."
+  },
+  {
+   "lid": "48439",
+   "pc": "3-1689b",
+   "k1": "aDisaMvft",
+   "sigla": "cf."
+  },
+  {
+   "lid": "48449",
+   "pc": "3-1689b",
+   "k1": "aDisaMDA",
+   "sigla": "cf."
+  },
+  {
+   "lid": "51506",
+   "pc": "3-1840a",
+   "k1": "aDyEn",
+   "sigla": "cf."
+  },
+  {
+   "lid": "53266",
+   "pc": "3-1910b",
+   "k1": "anaRaka",
+   "sigla": "RasSa."
+  },
+  {
+   "lid": "53769",
+   "pc": "3-1928a",
+   "k1": "anadyatanAvagati",
+   "sigla": "KāśiVṛ.;P.;PadMañ."
+  },
+  {
+   "lid": "54778",
+   "pc": "4-1976b",
+   "k1": "anantajIva",
+   "sigla": "etc."
+  },
+  {
+   "lid": "58036",
+   "pc": "4-2108a",
+   "k1": "anaBiyogya",
+   "sigla": "JainL."
+  },
+  {
+   "lid": "59792",
+   "pc": "4-2184b",
+   "k1": "analAya",
+   "sigla": "cf."
+  },
+  {
+   "lid": "64110",
+   "pc": "4-2362b",
+   "k1": "anABogayogapUrvaka",
+   "sigla": "comm."
+  },
+  {
+   "lid": "65051",
+   "pc": "4-2404b",
+   "k1": "anAvarjitamanas",
+   "sigla": "A.;App.;MahāvīC."
+  },
+  {
+   "lid": "65408",
+   "pc": "4-2419a",
+   "k1": "anASuraScAyAmI",
+   "sigla": "cf."
+  },
+  {
+   "lid": "65409",
+   "pc": "4-2419a",
+   "k1": "anASuraSvAyAmI",
+   "sigla": "cf."
+  },
+  {
+   "lid": "65825",
+   "pc": "4-2437b",
+   "k1": "anAhAryajYAna",
+   "sigla": "__UNASSIGNED_CONTINUATION__;cf."
+  },
+  {
+   "lid": "68896",
+   "pc": "5-2566a",
+   "k1": "anilAvali",
+   "sigla": "Bharatakośa."
+  },
+  {
+   "lid": "70557",
+   "pc": "5-2644b",
+   "k1": "anukalpaSas",
+   "sigla": "Karmapradīpa."
+  },
+  {
+   "lid": "71236",
+   "pc": "5-2677b",
+   "k1": "anukzam",
+   "sigla": "cf."
+  },
+  {
+   "lid": "74411",
+   "pc": "5-2823b",
+   "k1": "anupagUhana",
+   "sigla": "JainaL."
+  },
+  {
+   "lid": "75995",
+   "pc": "6-2894a",
+   "k1": "anupAdA",
+   "sigla": "DBHS."
+  },
+  {
+   "lid": "76782",
+   "pc": "6-2932a",
+   "k1": "anuprekzAdoza",
+   "sigla": "JainaL."
+  },
+  {
+   "lid": "81743",
+   "pc": "6-3177b",
+   "k1": "anuvirAj",
+   "sigla": "cf."
+  },
+  {
+   "lid": "82066",
+   "pc": "6-3194b",
+   "k1": "anuvfdDa",
+   "sigla": "PW."
+  },
+  {
+   "lid": "82418",
+   "pc": "6-3210b",
+   "k1": "anuSAya",
+   "sigla": "PW."
+  },
+  {
+   "lid": "82587",
+   "pc": "6-3222a",
+   "k1": "anuSUka",
+   "sigla": "VIŚVA.;cf."
+  },
+  {
+   "lid": "82590",
+   "pc": "6-3222a",
+   "k1": "anuSf",
+   "sigla": "VIŚVA.;cf."
+  },
+  {
+   "lid": "82592",
+   "pc": "6-3222a",
+   "k1": "anuSfnT",
+   "sigla": "VIŚVA.;cf."
+  },
+  {
+   "lid": "82615",
+   "pc": "6-3223a",
+   "k1": "anuScota",
+   "sigla": "pw."
+  },
+  {
+   "lid": "82665",
+   "pc": "6-3225a",
+   "k1": "anuSvasat",
+   "sigla": "pw."
+  },
+  {
+   "lid": "84205",
+   "pc": "6-3303b",
+   "k1": "anuskanda",
+   "sigla": "PW."
+  },
+  {
+   "lid": "84498",
+   "pc": "6-3318a",
+   "k1": "anUKara",
+   "sigla": "pw."
+  },
+  {
+   "lid": "84538",
+   "pc": "6-3320b",
+   "k1": "anUcI",
+   "sigla": "MW.;PW.;cf.;pw."
+  },
+  {
+   "lid": "84660",
+   "pc": "6-3325b",
+   "k1": "anUdDf",
+   "sigla": "MW."
+  },
+  {
+   "lid": "91627",
+   "pc": "7-3604b",
+   "k1": "antarAyaRa",
+   "sigla": "PW."
+  },
+  {
+   "lid": "92507",
+   "pc": "7-3652a",
+   "k1": "antarjAnuBrami",
+   "sigla": "Bharatakośa."
+  },
+  {
+   "lid": "93832",
+   "pc": "7-3707b",
+   "k1": "antaSIrzakA",
+   "sigla": "Bharatakośa."
+  },
+  {
+   "lid": "93864",
+   "pc": "7-3708b",
+   "k1": "antaSCAyA",
+   "sigla": "Bharatakośa."
+  },
+  {
+   "lid": "94484",
+   "pc": "7-3728b",
+   "k1": "anti",
+   "sigla": "Śabdakalpadruma."
+  },
+  {
+   "lid": "96911",
+   "pc": "7-3837b",
+   "k1": "annaprasava",
+   "sigla": "VIŚVA."
+  },
+  {
+   "lid": "104910",
+   "pc": "8-4164b",
+   "k1": "anvaMS",
+   "sigla": "VIŚVA."
+  },
+  {
+   "lid": "104975",
+   "pc": "8-4168b",
+   "k1": "anvan",
+   "sigla": "APTE."
+  },
+  {
+   "lid": "105821",
+   "pc": "8-4210a",
+   "k1": "anvavapA",
+   "sigla": "MW.;PW."
+  }
+ ],
+ "review_examples": [
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "P.",
+   "locus": "uses the technical  term",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "P.",
+   "locus": "viii. 4. 68 which describes it as  close [e] which replaces the open sound [v] used in the metalanguage of  grammar",
+   "review_flag": "prose_tail"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "MahāBh.",
+   "locus": "iii. 465. 17 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "P.",
+   "locus": "viii. 4. 68)",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "MahāBh.",
+   "locus": "i. 15. 14 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "ŚivSū.",
+   "locus": "1)",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "MahāBh.",
+   "locus": "i. 18. 23 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "ŚivSū.",
+   "locus": "1)",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "Skt.",
+   "locus": "has no distinctive  nasal vowels",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "PadMañ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "KāśiVṛ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "P.",
+   "locus": "'s sūtras",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "DhātuPā.",
+   "locus": "x. 307-367)   prevents    or   of the preceding",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "2",
+   "k1": "a",
+   "siglum": "syallable.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "VaiyāBhūSā.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "Nāg.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "Nāg.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "Nāg.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "cf.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "etc.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "cf.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "MahāBhā.",
+   "locus": ")",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "P.",
+   "locus": "vi. 1. 132)",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "ṚV.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "TaiS.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "cf.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "Nyās.",
+   "locus": "and",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "PadMañ.",
+   "locus": "on it",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "SanatSu.",
+   "locus": "3. 20 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "5",
+   "k1": "a",
+   "siglum": "Śaṅ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "6",
+   "k1": "a",
+   "siglum": "MahāBh.",
+   "locus": "i. 30. 5 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "6",
+   "k1": "a",
+   "siglum": "ŚivSū.",
+   "locus": "5) onwards but  the exact sense is not certain",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "6",
+   "k1": "a",
+   "siglum": "A.",
+   "locus": "2  (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "6",
+   "k1": "a",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "6",
+   "k1": "a",
+   "siglum": "KāśiVṛ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "6",
+   "k1": "a",
+   "siglum": "PadMañ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "6",
+   "k1": "a",
+   "siglum": "KāśiVṛ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "9",
+   "k1": "a",
+   "siglum": "Abhi.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "Kāvyālaṅ.",
+   "locus": "4. 12 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "NalaCam.",
+   "locus": "2. 18 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "YaśasCam.",
+   "locus": "i. 53. 3  (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "comm.",
+   "locus": ")",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "AlaṅkāCin.",
+   "locus": "50. 18 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "PadārthaRaMā.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "10",
+   "k1": "a",
+   "siglum": "etc.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "11",
+   "k1": "a",
+   "siglum": "Yādavā.",
+   "locus": "6. 96  (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "11",
+   "k1": "a",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "13",
+   "k1": "a",
+   "siglum": "Nyās.",
+   "locus": "on",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "13",
+   "k1": "a",
+   "siglum": "KāśiVṛ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "13",
+   "k1": "a",
+   "siglum": "PadMañ.",
+   "locus": "on",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "13",
+   "k1": "a",
+   "siglum": "KāśiVṛ.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "14",
+   "k1": "a",
+   "siglum": "cf.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "15",
+   "k1": "aicadeva",
+   "siglum": "EI.",
+   "locus": "xviii. 294. 20 ( <",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "20",
+   "k1": "afRin",
+   "siglum": "MahāBhā.",
+   "locus": "by",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "20",
+   "k1": "afRin",
+   "siglum": "ŚabdKaDru.",
+   "locus": "and",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "20",
+   "k1": "afRin",
+   "siglum": "Vāc.",
+   "locus": "but  not traceable]",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "21",
+   "k1": "aM",
+   "siglum": "ṚPrāti.",
+   "locus": "1. 20 (Uvaṭa",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "21",
+   "k1": "aM",
+   "siglum": "VājPrāti.",
+   "locus": "8. 21 (Uvaṭa",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "21",
+   "k1": "aM",
+   "siglum": "SiddhaHe.",
+   "locus": "i. 1. 9 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "21",
+   "k1": "aM",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "21",
+   "k1": "aM",
+   "siglum": "s.",
+   "locus": "v.) by Pāṇini",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "21",
+   "k1": "aM",
+   "siglum": "Tribhā.",
+   "locus": "on",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "23",
+   "k1": "aMS",
+   "siglum": "TaiS.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "23",
+   "k1": "aMS",
+   "siglum": "TaiS.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "24",
+   "k1": "aMS",
+   "siglum": "denom.",
+   "locus": "from the noun   ‘part, division’",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "24",
+   "k1": "aMS",
+   "siglum": "PadMañ.",
+   "locus": "and",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "24",
+   "k1": "aMS",
+   "siglum": "Nyās.",
+   "locus": "on",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "24",
+   "k1": "aMS",
+   "siglum": "KāśiVṛ.",
+   "locus": "set up a root",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "24",
+   "k1": "aMS",
+   "siglum": "known.",
+   "locus": "]",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "Sāy.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "ṚV.",
+   "locus": "x. 31. 3 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "Say.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "ṚV.",
+   "locus": "i. 112. 1 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "Sāy.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "e.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "TaiS.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "PañcBr.",
+   "locus": "xiv. 3. 13 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "PañcBr.",
+   "locus": "xxv. 13. 3 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "ArthŚā.",
+   "locus": "ii. 259. 6 (7. 4) (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "Du.",
+   "locus": ") for Aśvinau",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "ṚV.",
+   "locus": "x. 106. 9 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "Sāy.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "TaiS.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "TaiBr.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "ŚatBr.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "e.",
+   "locus": "they reside in the sun in",
+   "review_flag": "textual"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "ṚV.",
+   "locus": "ii. 19. 5 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "Sāy.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "e.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "MahNirvāT.",
+   "locus": "5. 117 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "Kāvyālaṅ.",
+   "locus": "3. 20 (",
+   "review_flag": "unbalanced_parentheses"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "comm.",
+   "locus": "",
+   "review_flag": "empty"
+  },
+  {
+   "lid": "25",
+   "k1": "aMSa",
+   "siglum": "e.",
+   "locus": "",
+   "review_flag": "empty"
+  }
+ ]
+}
