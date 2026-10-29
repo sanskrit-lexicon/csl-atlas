@@ -31,6 +31,9 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts" / "lib"))
+from dataset_meta import license_fields  # noqa: E402
+
 DATA = ROOT / "data" / "pd"
 OUT_TSV = DATA / "pd_canon_ledger.tsv"
 OUT_JSON = DATA / "pd_canon_ledger.json"
@@ -195,6 +198,7 @@ def render_json(rows, covered):
     for name in [ROW_TEST, CANON_AUDIT, INDEX_SUMMARY, METRICS, INDEX_DELTA]:
         inputs[name] = sha256(DATA / name)
     return json.dumps({
+        **license_fields(),
         "generated_by": "scripts/pd_canon_ledger.py",
         "scope": "PD declared canon — every base that has been quoted, with 118/N each",
         "covered_works": covered,
