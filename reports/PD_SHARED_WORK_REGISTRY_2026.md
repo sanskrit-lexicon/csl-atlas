@@ -140,6 +140,8 @@ equality; one changed unresolved cell exits 1 and names the first differing line
 - Identity is **siglum-and-title evidence**, not a bibliographic authority
   record. Two AOB claims still carry `shared_siglum` and need source evidence
   beyond this first manual pass.
+- Follow-up for those two claims:
+  [H7459](https://github.com/gasyoun/Uprava/blob/main/handoffs/H7459-DeepSeek_csl-atlas_pd-shared-siglum-residue_29.10.26.md).
 - AOB joins inherit H6720's classes; 243 AOB works carry an unconfirmed or
   absent join class and are never promoted.
 - One harvest-only work (`ĀtmaU.`) has no sourced title in any input and stays

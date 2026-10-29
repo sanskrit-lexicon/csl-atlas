@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import collections
 import csv
 import os
 import subprocess
@@ -7,6 +8,9 @@ import tempfile
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import pd_siglum_work_m1 as m1  # noqa: E402
+
 M1 = os.path.join(ROOT, "scripts", "pd_siglum_work_m1.py")
 M2 = os.path.join(ROOT, "scripts", "pd_blank_siglum_adjudication.py")
 PASS_B = os.path.join(ROOT, "data", "pd", "pd_siglum_work_m1_annotator_b.tsv")
@@ -28,6 +32,15 @@ class MethodLadderAnnotationTests(unittest.TestCase):
         result = self.run_script(M1, "--check", "--complete")
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("B annotated=200", result.stdout)
+
+    def test_m1_v2_frame_matches_post_y0q_population(self):
+        frame = m1.build_frame()
+        strata = collections.Counter(row["sample_stratum"] for row in frame)
+        self.assertEqual(len(frame), 200)
+        for name, quota in m1.QUOTAS.items():
+            self.assertEqual(strata[name], quota)
+        self.assertEqual(strata["shared_siglum"], 0)
+        self.assertEqual(strata["ordinary"], 140)
 
     def test_kappa_perfect_agreement_is_a_synthetic_fixture(self):
         result = self.run_script(M1, "--kappa", PASS_B, PASS_B)

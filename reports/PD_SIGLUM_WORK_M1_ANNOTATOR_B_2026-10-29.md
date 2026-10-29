@@ -10,6 +10,13 @@ seed `PD-M1-siglum-work-v1|29-10-2026`: 100 ordinary, 40 shared-siglum, 40
 printed evidence, but no annotator-A label. Duplicate record/claim pairs were
 removed before annotation.
 
+**Frozen after Y0Q.** This completed v1 packet remains a pre-Y0Q sample and is
+not regenerated against the adjudicated registry: its annotations would be lost.
+`--check --complete` validates the frozen IDs, v1 strata and B annotations without
+rebuilding the candidate frame. A future blank frame uses v2 quotas (140 ordinary,
+0 shared-siglum, 40 `vision-low`, 20 AOB-join): the two remaining `shared_siglum`
+claims are AOB-only, so no Index-row shared stratum remains.
+
 Annotator B checked every row against the printed Index page images. The label
 schema is `confirmed`, `wrong_work`, `wrong_siglum`, `ambiguous`. Decisions are
 stored separately in `data/pd/pd_siglum_work_m1_annotator_b.tsv`; they were not
