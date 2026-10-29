@@ -283,4 +283,42 @@ claimed. The 3.11 % / 4.03 % and breadth/depth figures remain **preliminary unti
 rerun**; this layer does not recompute them. Write-up:
 [reports/PD_SHARED_WORK_REGISTRY_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SHARED_WORK_REGISTRY_2026.md).
 
+## Edition availability by citation mass (C1, 29-10-2026)
+
+A full-population H6949 parse assigns all **419,890 attestations** to raw sigla, including
+35,673 semicolon continuations. Positive DCS / GRETIL / Archive.org evidence currently
+establishes machine-readable text for **189,400 = 45.11 %** (full 34.44 %, partial 10.49 %,
+embedded 0.18 %). Exact AOB-edition identity is a separate, stricter lower bound:
+**23,173 = 5.52 %**. The unresolved 54.89 % is not an absence verdict.
+
+| File | What it is |
+|---|---|
+| [pd_edition_availability_by_siglum.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_edition_availability_by_siglum.tsv) | 5,364 raw sigla with locus/continuation mass, availability, identity basis and evidence |
+| [pd_edition_availability_by_aob.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_edition_availability_by_aob.tsv) | all 1,437 AOB entries with direct mass and availability; 43 shared-siglum rows stay ambiguous |
+| [pd_edition_availability_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_edition_availability_summary.json) | totals, source/status/class breakdowns, evidence labels, input hashes and top unresolved rows |
+| [pd_edition_availability_evidence.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_edition_availability_evidence.tsv) | curated GRETIL and Archive.org evidence with full/partial and work-level/AOB-exact distinctions |
+| [pd_edition_availability_probes_2026-10-29.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_edition_availability_probes_2026-10-29.json) | live HTTP and machine-readable-text receipts |
+
+Builder: `python3.13 scripts/pd_edition_availability.py --pd <pd.txt>`; check:
+`python3.13 scripts/pd_edition_availability.py --check --pd <pd.txt>`; controls:
+`python3.13 -m pytest tests/forensic/test_pd_edition_availability.py -q`. Write-up:
+[reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md).
+## Method-ladder M1/M2 annotation packets (29-10-2026)
+
+| File | What it is |
+|---|---|
+| [pd_siglum_work_m1_frame.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_siglum_work_m1_frame.tsv) | M1 frozen 200-row stratified siglum→work frame; 100 ordinary, 40 shared-siglum, 40 `vision-low`, 20 AOB-join |
+| [pd_siglum_work_m1_annotator_b.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_siglum_work_m1_annotator_b.tsv) | M1 independent annotator-B reading pass, 200/200 rows; 194 confirmed, 5 `wrong_work`, 1 `wrong_siglum`; **not gold** |
+| [pd_siglum_work_m1_status.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_siglum_work_m1_status.json) | M1 quotas, B provenance and reliability status: annotator A and κ remain `null` |
+| [pd_blank_siglum_adjudication.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_blank_siglum_adjudication.tsv) | M2 frozen 50-row stratified blank-siglum frame with page-image URLs |
+| [pd_blank_siglum_decisions.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_blank_siglum_decisions.tsv) | M2 per-record adjudication: 46 dependent commentaries, 2 cross-references, 2 unmarked works; no uncertain rows |
+
+M1 builder/check: `python3 scripts/pd_siglum_work_m1.py --check --complete`; κ is
+computed only by `--kappa A B` on two genuine, complete reading passes. M2:
+`python3 scripts/pd_blank_siglum_adjudication.py --check --complete`. Reports:
+[PD_SIGLUM_WORK_M1_ANNOTATOR_B_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_SIGLUM_WORK_M1_ANNOTATOR_B_2026-10-29.md)
+and
+[PD_BLANK_SIGLUM_M2_ADJUDICATION_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_BLANK_SIGLUM_M2_ADJUDICATION_2026-10-29.md).
+Neither packet rewrites the registry or claims a completed κ study.
+
 _Dr. Mārcis Gasūns_

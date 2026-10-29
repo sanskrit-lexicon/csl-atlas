@@ -1,6 +1,6 @@
 # csl-atlas
 
-_Created: 23-05-2026 · Last updated: 24-09-2026_
+_Created: 23-05-2026 · Last updated: 29-10-2026_
 
 An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters, plus an all-dictionary coverage layer for every local CDSL v02 source dictionary.
 
@@ -123,6 +123,7 @@ Architecture and planning:
 - [Chart trust template](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/CHART_TRUST_TEMPLATE.md) — required evidence/limitations/validation/owner block
 - [MW Quantitative Depth handoff](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MW_QUANTITATIVE_DEPTH_HANDOFF.md) (Phase 1)
 - [Dictionary comparison plan](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DICTIONARY_COMPARISON_PLAN.md) (Phase 2)
+- [PD data registry](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export-h7316) — H7316 fixture `pd_koshashri_entries.tsv` + `pd_koshashri_citations.tsv`, their provenance, rights boundary and deterministic regeneration contract
 - [H6 structural-register scatter](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H6_STRUCTURAL_REGISTER_SCATTER.md) — implemented scholar-facing analysis page and chart spec
 - [Microstructure profile](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_PROFILE.md) · [methods](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_METHODS.md) · [findings](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_FINDINGS.md)
 - [L0 GQD validation](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md) — how much of the documented dictionary genealogy the convention stemma actually recovers (Generalized Quartet Distance)

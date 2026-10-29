@@ -1,0 +1,1030 @@
+{
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "dataset": "pd_edition_availability_c1",
+ "generated_by": "python scripts/pd_edition_availability.py",
+ "generated_on": "2026-10-29",
+ "protocol": {
+  "population": "all H6949 attestations in the published letter-a PD machine text",
+  "continuation_rule": "a semicolon continuation inherits the immediately preceding siglum in its citation tail",
+  "availability_rule": "DCS crosswalk, hand-checked H7298 GRETIL rows, and curated evidence only",
+  "partial_rule": "partial and embedded witnesses are reported separately from full witnesses",
+  "unknown_rule": "unprobed or unresolved sigla are never counted as absent",
+  "edition_rule": "work-level e-text presence is not identity with the AOB edition; aob_exact is a separate numerator"
+ },
+ "evidenceLevels": {
+  "attestation_counts": "derived",
+  "live_text_probes": "observed",
+  "availability_aggregates": "derived",
+  "human_review": "none"
+ },
+ "warnings": [
+  "unresolved mass is not evidence of absence",
+  "work-level availability does not establish AOB edition identity",
+  "partial and embedded witnesses are not full-work coverage",
+  "104 continuation loci have no assignable preceding siglum and stay unresolved"
+ ],
+ "totals": {
+  "attestations": 419890,
+  "loci": 384217,
+  "continuations": 35673,
+  "raw_sigla": 5364,
+  "available_work_level": 189400,
+  "available_work_level_pct": 45.1071,
+  "available_aob_exact": 23173,
+  "available_aob_exact_pct": 5.5188,
+  "aob_mapped": 295931,
+  "unassigned_continuations": 104
+ },
+ "aob_entries": {
+  "rows": 1437,
+  "with_direct_attestations": 1040,
+  "by_availability": {
+   "ambiguous_shared_siglum": 43,
+   "available_full": 32,
+   "available_partial": 103,
+   "unresolved": 1259
+  }
+ },
+ "by_status": {
+  "available_embedded": {
+   "sigla": 1,
+   "attestations": 755,
+   "pct": 0.1798
+  },
+  "available_full": {
+   "sigla": 250,
+   "attestations": 144615,
+   "pct": 34.4412
+  },
+  "available_partial": {
+   "sigla": 107,
+   "attestations": 44030,
+   "pct": 10.4861
+  },
+  "unavailable_verified": {
+   "sigla": 0,
+   "attestations": 0,
+   "pct": 0.0
+  },
+  "unresolved": {
+   "sigla": 5006,
+   "attestations": 230490,
+   "pct": 54.8929
+  }
+ },
+ "by_source": {
+  "DCS": {
+   "sigla": 120,
+   "attestations": 98890,
+   "pct": 23.5514
+  },
+  "DCS+GRETIL": {
+   "sigla": 10,
+   "attestations": 7401,
+   "pct": 1.7626
+  },
+  "GRETIL": {
+   "sigla": 84,
+   "attestations": 32404,
+   "pct": 7.7173
+  },
+  "archive.org": {
+   "sigla": 154,
+   "attestations": 58106,
+   "pct": 13.8384
+  }
+ },
+ "by_class": {
+  "primary": {
+   "attestations": 381898,
+   "available": 189400
+  },
+  "secondary": {
+   "attestations": 6086,
+   "available": 0
+  },
+  "structural": {
+   "attestations": 22149,
+   "available": 0
+  },
+  "unclassified": {
+   "attestations": 9757,
+   "available": 0
+  }
+ },
+ "inputs": {
+  "pd_txt_sha256": "4ee75e6619ee2bd86a331586bb922101e0ae090f9edd981752cfac36ed724442",
+  "pd_siglum_families.tsv": "d5d0b32ae2f380cd8a0d38dce7bc1adf88b3c6891a9a6fdf7db3cdd434254871",
+  "pd_dcs_text_crosswalk.tsv": "00b2a34f7f2fe13edbdcbc63b43eef9559aaf6717b9375357a7955e29939eb88",
+  "pd_residue_source_status.tsv": "d02b42d26f56ba7fba7ea2753337a3cbd6d3ba4be2a442e519a85134c6a524f3",
+  "pd_aob_declared_entries.tsv": "323fae0d2c83e8c3edd5974d61e097091367654502b68764ebfa4aac012ed6c9",
+  "pd_index_works.tsv": "44ef8d2aa6fb184919e1c0eb90d6ec26971ac8c80eb596535a28849e72e383fb",
+  "pd_work_registry.tsv": "5022751218e24c1ae21f7d76cc0a6660e4a8cf0dc135812e62927d9f3e5a6417",
+  "pd_work_edition_map.tsv": "f6b10fdb7aea1821154697b921147aac185a899478cbe73c0314e86f868fe543",
+  "pd_edition_availability_evidence.tsv": "8ab4728955fe2f97c5c9928583c38fceb56b78f00d770a448cf0b4bdc3be7ff8",
+  "pd_edition_availability_probes_2026-10-29.json": "b4c24aa47a5bd2be708b42f964bbd4fb23efe88586b5a2d408745abdf27b85a4"
+ },
+ "top_unresolved": [
+  {
+   "siglum": "comm.",
+   "attestations": 5222,
+   "class": "unclassified",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "EI.",
+   "attestations": 4417,
+   "class": "secondary",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "PadmP.",
+   "attestations": 3849,
+   "class": "primary",
+   "work_title": "padmapurāṇa",
+   "aob_entry_ids": "AOB-0803",
+   "aob_titles": "urana",
+   "notes": "absent in DCS/GRETIL; archive.org not probed"
+  },
+  {
+   "siglum": "I.",
+   "attestations": 3196,
+   "class": "structural",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "P.",
+   "attestations": 3051,
+   "class": "structural",
+   "work_title": "aṣṭādhyāyī",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "ŚivārkaMaDī.",
+   "attestations": 2770,
+   "class": "primary",
+   "work_title": "kamanidipika on the Brahmasitrabhasya of Srikantha",
+   "aob_entry_ids": "AOB-1126",
+   "aob_titles": "kamanidipika on the Brahmasitrabhasya of Srikantha",
+   "notes": ""
+  },
+  {
+   "siglum": "BṛĀraUBhVā.",
+   "attestations": 2056,
+   "class": "primary",
+   "work_title": "bṛhadāraṇyakopaniṣadbhāṣyavārtika",
+   "aob_entry_ids": "AOB-0217",
+   "aob_titles": "Brhadaranyakopanisadbhasyavarttika",
+   "notes": ""
+  },
+  {
+   "siglum": "Ed.",
+   "attestations": 1930,
+   "class": "structural",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "BhaviP.",
+   "attestations": 1705,
+   "class": "primary",
+   "work_title": "bhaviṣyapurāṇa",
+   "aob_entry_ids": "AOB-1345",
+   "aob_titles": "iS.",
+   "notes": "absent in DCS/GRETIL; archive.org not probed"
+  },
+  {
+   "siglum": "CaturCin.",
+   "attestations": 1495,
+   "class": "primary",
+   "work_title": "caturvargacintāmaṇi",
+   "aob_entry_ids": "AOB-0258",
+   "aob_titles": "wgacintamni",
+   "notes": ""
+  },
+  {
+   "siglum": "LaCandr.",
+   "attestations": 1470,
+   "class": "primary",
+   "work_title": "Laghucandriké on Advaitasiddhi",
+   "aob_entry_ids": "AOB-0568",
+   "aob_titles": "Laghucandriké on Advaitasiddhi",
+   "notes": ""
+  },
+  {
+   "siglum": "II.",
+   "attestations": 1463,
+   "class": "structural",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "PāṇḍaC.",
+   "attestations": 1307,
+   "class": "primary",
+   "work_title": "pāṇḍavacarita",
+   "aob_entry_ids": "AOB-0826",
+   "aob_titles": "Pandavacarita",
+   "notes": ""
+  },
+  {
+   "siglum": "App.",
+   "attestations": 1195,
+   "class": "structural",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "NyāyRa.",
+   "attestations": 1195,
+   "class": "primary",
+   "work_title": "nyāyaratnākara",
+   "aob_entry_ids": "AOB-0786",
+   "aob_titles": "stnakara on Slokavarttika",
+   "notes": ""
+  },
+  {
+   "siglum": "AṇuBh.",
+   "attestations": 1128,
+   "class": "primary",
+   "work_title": "aṇubhāṣya",
+   "aob_entry_ids": "AOB-0074",
+   "aob_titles": "BrahmSi.",
+   "notes": ""
+  },
+  {
+   "siglum": "ManvaVi.",
+   "attestations": 1127,
+   "class": "primary",
+   "work_title": "manvarthavivṛti",
+   "aob_entry_ids": "AOB-0663",
+   "aob_titles": "Manvarthavivrti on Manusmrti",
+   "notes": ""
+  },
+  {
+   "siglum": "III.",
+   "attestations": 1104,
+   "class": "structural",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "PāraS.",
+   "attestations": 1085,
+   "class": "primary",
+   "work_title": "pārameśvarasaṃhitā",
+   "aob_entry_ids": "AOB-0837;AOB-0838",
+   "aob_titles": "Paramasamhita;Paramegvarasamhita",
+   "notes": ""
+  },
+  {
+   "siglum": "AbhinBhā.",
+   "attestations": 1079,
+   "class": "primary",
+   "work_title": "abhinavabhāratī",
+   "aob_entry_ids": "AOB-0007",
+   "aob_titles": "Abhinavabharati on NatyaSa.",
+   "notes": ""
+  },
+  {
+   "siglum": "JaineVyā.",
+   "attestations": 1067,
+   "class": "primary",
+   "work_title": "jainendravyākaraṇa",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "BālaKrī.",
+   "attestations": 1057,
+   "class": "primary",
+   "work_title": "Balakridi on YajiaSm. Visvaripa",
+   "aob_entry_ids": "AOB-0137",
+   "aob_titles": "Balakridi on YajiaSm. Visvaripa",
+   "notes": ""
+  },
+  {
+   "siglum": "GaṇeP.",
+   "attestations": 1054,
+   "class": "primary",
+   "work_title": "gaṇeśapurāṇa",
+   "aob_entry_ids": "AOB-0350",
+   "aob_titles": "Ganesgapurana",
+   "notes": "absent in DCS/GRETIL; archive.org not probed"
+  },
+  {
+   "siglum": "ŚabdaRa.",
+   "attestations": 1017,
+   "class": "primary",
+   "work_title": "Sabdaratnakara",
+   "aob_entry_ids": "AOB-0984;AOB-0985",
+   "aob_titles": "Sabdaratnakara",
+   "notes": ""
+  },
+  {
+   "siglum": "ŚlokaVār.",
+   "attestations": 1014,
+   "class": "primary",
+   "work_title": "ślokavārtika",
+   "aob_entry_ids": "AOB-1144",
+   "aob_titles": "rttika",
+   "notes": ""
+  },
+  {
+   "siglum": "AvantiKa.",
+   "attestations": 1003,
+   "class": "primary",
+   "work_title": "avantisundarīkathā",
+   "aob_entry_ids": "AOB-0132",
+   "aob_titles": "Avantisundarikatha",
+   "notes": ""
+  },
+  {
+   "siglum": "UdaySuKa.",
+   "attestations": 1003,
+   "class": "primary",
+   "work_title": "Udayasundarikatha",
+   "aob_entry_ids": "AOB-1289",
+   "aob_titles": "Udayasundarikatha",
+   "notes": ""
+  },
+  {
+   "siglum": "Yādavā.",
+   "attestations": 984,
+   "class": "primary",
+   "work_title": "yādavābhyudaya",
+   "aob_entry_ids": "AOB-1417",
+   "aob_titles": "ohyudaya",
+   "notes": ""
+  },
+  {
+   "siglum": "SiddhāKau.",
+   "attestations": 968,
+   "class": "primary",
+   "work_title": "siddhāntakaumudī",
+   "aob_entry_ids": "AOB-1100",
+   "aob_titles": "hantakaumudi",
+   "notes": ""
+  },
+  {
+   "siglum": "PrakaVi.",
+   "attestations": 965,
+   "class": "primary",
+   "work_title": "rthavivarana on Brahmasiitrabhasya of Sankaracirya",
+   "aob_entry_ids": "AOB-0875",
+   "aob_titles": "rthavivarana on Brahmasiitrabhasya of Sankaracirya",
+   "notes": ""
+  },
+  {
+   "siglum": "DvyāśraKā.",
+   "attestations": 950,
+   "class": "primary",
+   "work_title": "dvyāśrayakāvya",
+   "aob_entry_ids": "AOB-0339",
+   "aob_titles": "Dvyaésrayakavya",
+   "notes": ""
+  },
+  {
+   "siglum": "NyāyVār.",
+   "attestations": 934,
+   "class": "primary",
+   "work_title": "nyāyavārtika",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "cf.",
+   "attestations": 912,
+   "class": "unclassified",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "ŚārṅgaPa.",
+   "attestations": 901,
+   "class": "primary",
+   "work_title": "Sarhgadharapaddhati",
+   "aob_entry_ids": "AOB-1065",
+   "aob_titles": "Sarhgadharapaddhati",
+   "notes": ""
+  },
+  {
+   "siglum": "Nyās.",
+   "attestations": 898,
+   "class": "primary",
+   "work_title": "Nyasa Kasikavivaranapafijiké",
+   "aob_entry_ids": "AOB-0772",
+   "aob_titles": "Nyasa Kasikavivaranapafijiké",
+   "notes": ""
+  },
+  {
+   "siglum": "KalpaK.",
+   "attestations": 896,
+   "class": "primary",
+   "work_title": "kalpadrukośa",
+   "aob_entry_ids": "AOB-0474",
+   "aob_titles": "rukoga",
+   "notes": ""
+  },
+  {
+   "siglum": "MahāP.",
+   "attestations": 862,
+   "class": "primary",
+   "work_title": "mahāpurāṇa",
+   "aob_entry_ids": "AOB-0627",
+   "aob_titles": "wana",
+   "notes": ""
+  },
+  {
+   "siglum": "JayaMa.",
+   "attestations": 860,
+   "class": "primary",
+   "work_title": "jayamaṅgalā",
+   "aob_entry_ids": "AOB-0450",
+   "aob_titles": "ngala on Kamasiitra",
+   "notes": ""
+  },
+  {
+   "siglum": "PrabhāC.",
+   "attestations": 846,
+   "class": "primary",
+   "work_title": "prabhāvakacarita",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "Kāvyānu.",
+   "attestations": 820,
+   "class": "primary",
+   "work_title": "kāvyānuśāsana",
+   "aob_entry_ids": "AOB-0525",
+   "aob_titles": "Kavyanugasana",
+   "notes": ""
+  },
+  {
+   "siglum": "TattvPradī.",
+   "attestations": 816,
+   "class": "primary",
+   "work_title": "tatvapradīpikā",
+   "aob_entry_ids": "AOB-1260;AOB-1261",
+   "aob_titles": "Tattvapradipika on Pravacanasara;Tattvapradipika",
+   "notes": ""
+  },
+  {
+   "siglum": "PārśvC.",
+   "attestations": 805,
+   "class": "primary",
+   "work_title": "pārśvanāthacarita",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "NyāyKa.",
+   "attestations": 786,
+   "class": "primary",
+   "work_title": "nyāyakandalī",
+   "aob_entry_ids": "AOB-0779",
+   "aob_titles": "andali on Prasastapadabhasya",
+   "notes": ""
+  },
+  {
+   "siglum": "NānārthāSaṃ.",
+   "attestations": 770,
+   "class": "primary",
+   "work_title": "nānārthārṇavasaṃkṣepa",
+   "aob_entry_ids": "AOB-0719",
+   "aob_titles": "larnavasamksepa or Rajarajiya",
+   "notes": "absent in DCS/GRETIL; archive.org not probed"
+  },
+  {
+   "siglum": "PadMañ.",
+   "attestations": 770,
+   "class": "primary",
+   "work_title": "padamañjarī",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "iA.",
+   "attestations": 768,
+   "class": "unclassified",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "Loc.",
+   "attestations": 762,
+   "class": "structural",
+   "work_title": "locana",
+   "aob_entry_ids": "AOB-0607",
+   "aob_titles": "Locana",
+   "notes": ""
+  },
+  {
+   "siglum": "Kiraṇā.",
+   "attestations": 756,
+   "class": "primary",
+   "work_title": "kiraṇāvalī",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "TattvSaṃ.",
+   "attestations": 749,
+   "class": "primary",
+   "work_title": "tatvasaṃgraha",
+   "aob_entry_ids": "AOB-1268",
+   "aob_titles": "Tattivasarngrahapafijika",
+   "notes": ""
+  },
+  {
+   "siglum": "Upask.",
+   "attestations": 744,
+   "class": "primary",
+   "work_title": "upaskāra",
+   "aob_entry_ids": "AOB-1302",
+   "aob_titles": "ra on Vaisesikasitra",
+   "notes": ""
+  },
+  {
+   "siglum": "Mānaso.",
+   "attestations": 738,
+   "class": "primary",
+   "work_title": "Manasollasa",
+   "aob_entry_ids": "AOB-0644",
+   "aob_titles": "Manasollasa",
+   "notes": ""
+  },
+  {
+   "siglum": "Bhāsk.",
+   "attestations": 735,
+   "class": "primary",
+   "work_title": "bhāskarī",
+   "aob_entry_ids": "AOB-0172",
+   "aob_titles": "i",
+   "notes": ""
+  },
+  {
+   "siglum": "PrakriKau.",
+   "attestations": 722,
+   "class": "primary",
+   "work_title": "prakriyākaumudī",
+   "aob_entry_ids": "AOB-0876",
+   "aob_titles": "ikaumudi",
+   "notes": ""
+  },
+  {
+   "siglum": "SetuBa.",
+   "attestations": 709,
+   "class": "primary",
+   "work_title": "setubandha",
+   "aob_entry_ids": "AOB-1095",
+   "aob_titles": "Setubandha on Nityasodasikarnava ASS",
+   "notes": ""
+  },
+  {
+   "siglum": "JayāS.",
+   "attestations": 699,
+   "class": "primary",
+   "work_title": "jayākhyasaṃhitā",
+   "aob_entry_ids": "AOB-0451",
+   "aob_titles": "yasamhita",
+   "notes": ""
+  },
+  {
+   "siglum": "ŚrīKaC.",
+   "attestations": 698,
+   "class": "primary",
+   "work_title": "śrīkaṇṭhacarita",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "IV.",
+   "attestations": 697,
+   "class": "structural",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "iB.",
+   "attestations": 694,
+   "class": "unclassified",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "NaiṣC.",
+   "attestations": 693,
+   "class": "primary",
+   "work_title": "naiṣadhīyacarita",
+   "aob_entry_ids": "AOB-0709",
+   "aob_titles": "iyacarita",
+   "notes": ""
+  },
+  {
+   "siglum": "VedāntKau.",
+   "attestations": 691,
+   "class": "primary",
+   "work_title": "vedāntakaustubha",
+   "aob_entry_ids": "AOB-1353",
+   "aob_titles": "ikaustubha on Brahmasitra",
+   "notes": ""
+  },
+  {
+   "siglum": "ŚaṅkaDigVi.",
+   "attestations": 688,
+   "class": "primary",
+   "work_title": "śāṅkaradigvijaya",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "DBHS.",
+   "attestations": 680,
+   "class": "secondary",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "KhaṇḍanKhā.",
+   "attestations": 677,
+   "class": "primary",
+   "work_title": "khaṇḍanakhaṇḍakhādya",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "AdhyāRā.",
+   "attestations": 672,
+   "class": "primary",
+   "work_title": "adhyātmarāmāyaṇa",
+   "aob_entry_ids": "AOB-0017",
+   "aob_titles": "Adhyatmaramayana",
+   "notes": ""
+  },
+  {
+   "siglum": "PariPar.",
+   "attestations": 665,
+   "class": "primary",
+   "work_title": "taparvan or Sthaviravalicarita",
+   "aob_entry_ids": "AOB-0847",
+   "aob_titles": "taparvan or Sthaviravalicarita",
+   "notes": ""
+  },
+  {
+   "siglum": "VivaPraSaṃ.",
+   "attestations": 664,
+   "class": "primary",
+   "work_title": "vivaraṇaprameyasaṃgraha",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "V.",
+   "attestations": 662,
+   "class": "structural",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "SiddhāTaVi.",
+   "attestations": 661,
+   "class": "primary",
+   "work_title": "siddhāntatattvaviveka",
+   "aob_entry_ids": "AOB-1109",
+   "aob_titles": "rantatativaviveka",
+   "notes": ""
+  },
+  {
+   "siglum": "SaduktiKa.",
+   "attestations": 657,
+   "class": "primary",
+   "work_title": "Saduktikarnamrta",
+   "aob_entry_ids": "AOB-0995",
+   "aob_titles": "Saduktikarnamrta",
+   "notes": ""
+  },
+  {
+   "siglum": "BṛSaṃ.",
+   "attestations": 645,
+   "class": "primary",
+   "work_title": "bṛhatsaṃhitā",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "RaghuVa.",
+   "attestations": 641,
+   "class": "primary",
+   "work_title": "raghuvaṃśa",
+   "aob_entry_ids": "AOB-0923",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "RāghPāṇ.",
+   "attestations": 639,
+   "class": "primary",
+   "work_title": "",
+   "aob_entry_ids": "AOB-0920;AOB-0921",
+   "aob_titles": "apandaviya=Dvisandhana;apandaviya",
+   "notes": ""
+  },
+  {
+   "siglum": "KāśyaS.",
+   "attestations": 634,
+   "class": "primary",
+   "work_title": "kāśyapasaṃhitā",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "ChāndoUBh.",
+   "attestations": 633,
+   "class": "primary",
+   "work_title": "chāndogyopaniṣadbhāṣya",
+   "aob_entry_ids": "AOB-1345",
+   "aob_titles": "iS.",
+   "notes": ""
+  },
+  {
+   "siglum": "NyāyKu.",
+   "attestations": 633,
+   "class": "primary",
+   "work_title": "nyāyakuliśa",
+   "aob_entry_ids": "AOB-0780",
+   "aob_titles": "uliga",
+   "notes": ""
+  },
+  {
+   "siglum": "MediK.",
+   "attestations": 632,
+   "class": "primary",
+   "work_title": "koga KSS. 41",
+   "aob_entry_ids": "AOB-0678",
+   "aob_titles": "koga KSS. 41",
+   "notes": ""
+  },
+  {
+   "siglum": "BrahmVaiP.",
+   "attestations": 630,
+   "class": "primary",
+   "work_title": "brahmavaivartapurāṇa",
+   "aob_entry_ids": "AOB-0213",
+   "aob_titles": "Brahmavaivartapurana",
+   "notes": ""
+  },
+  {
+   "siglum": "NyāyRaMā.",
+   "attestations": 623,
+   "class": "primary",
+   "work_title": "nyāyaratnamālā",
+   "aob_entry_ids": "AOB-0787",
+   "aob_titles": "iinamala",
+   "notes": ""
+  },
+  {
+   "siglum": "SamarāSū.",
+   "attestations": 617,
+   "class": "primary",
+   "work_title": "Samarahasyopanisad",
+   "aob_entry_ids": "AOB-1012",
+   "aob_titles": "Samarahasyopanisad",
+   "notes": ""
+  },
+  {
+   "siglum": "AnekāSaṃ.",
+   "attestations": 616,
+   "class": "primary",
+   "work_title": "anekārthasaṃgraha",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "YuktiSneha.",
+   "attestations": 613,
+   "class": "primary",
+   "work_title": "yuktisnehapūrṇī",
+   "aob_entry_ids": "AOB-1444",
+   "aob_titles": "Yuktisnehaprapirani on Sastradipika. Ramakrgna “Bhatta",
+   "notes": ""
+  },
+  {
+   "siglum": "NyāyKuA.",
+   "attestations": 610,
+   "class": "primary",
+   "work_title": "nyāyakusumāñjali",
+   "aob_entry_ids": "AOB-0781",
+   "aob_titles": "usumafijali",
+   "notes": ""
+  },
+  {
+   "siglum": "KalyāKā.",
+   "attestations": 606,
+   "class": "primary",
+   "work_title": "kalyāṇakāraka",
+   "aob_entry_ids": "AOB-0475",
+   "aob_titles": "Kalyanakaraka",
+   "notes": ""
+  },
+  {
+   "siglum": "Rāgh.",
+   "attestations": 599,
+   "class": "primary",
+   "work_title": "rāghavīya",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "KapiKaS.",
+   "attestations": 598,
+   "class": "primary",
+   "work_title": "kāpiṣṭhalakaṭhasaṃhitā",
+   "aob_entry_ids": "AOB-0484",
+   "aob_titles": "Kapisthalakathasamhita",
+   "notes": ""
+  },
+  {
+   "siglum": "SamarāSaṃ.",
+   "attestations": 596,
+   "class": "primary",
+   "work_title": "Samaradityasarnksepa or Samksepasamaraditya",
+   "aob_entry_ids": "AOB-1010",
+   "aob_titles": "Samaradityasarnksepa or Samksepasamaraditya",
+   "notes": ""
+  },
+  {
+   "siglum": "ŚabdaRaSaK.",
+   "attestations": 589,
+   "class": "primary",
+   "work_title": "śabdaratnasamanvayakośa",
+   "aob_entry_ids": "AOB-0986",
+   "aob_titles": "Sabdaratnasamanvayakoéa",
+   "notes": ""
+  },
+  {
+   "siglum": "SūktiRa.",
+   "attestations": 586,
+   "class": "primary",
+   "work_title": "sūktiratnākara",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "VaiyāBhū.",
+   "attestations": 585,
+   "class": "primary",
+   "work_title": "vaiyākaraṇabhūṣaṇa",
+   "aob_entry_ids": "AOB-1345",
+   "aob_titles": "iS.",
+   "notes": ""
+  },
+  {
+   "siglum": "YātrāPra.",
+   "attestations": 584,
+   "class": "primary",
+   "work_title": "yātrāprabandha",
+   "aob_entry_ids": "AOB-1426",
+   "aob_titles": "abandha",
+   "notes": ""
+  },
+  {
+   "siglum": "LakṣmīT.",
+   "attestations": 581,
+   "class": "primary",
+   "work_title": "kardamītantra",
+   "aob_entry_ids": "AOB-0578",
+   "aob_titles": "Laksmitantra",
+   "notes": ""
+  },
+  {
+   "siglum": "NalaCam.",
+   "attestations": 581,
+   "class": "primary",
+   "work_title": "nalacampū",
+   "aob_entry_ids": "AOB-0712",
+   "aob_titles": "ipa",
+   "notes": ""
+  },
+  {
+   "siglum": "AhirbuS.",
+   "attestations": 577,
+   "class": "primary",
+   "work_title": "ahirbudhnyasaṃhitā",
+   "aob_entry_ids": "AOB-0028",
+   "aob_titles": "Ahirbudhnyasamhita",
+   "notes": ""
+  },
+  {
+   "siglum": "LalitāSaBh.",
+   "attestations": 573,
+   "class": "primary",
+   "work_title": "Lalitaésahasranimabhasgya (Saubhagyabhaskara cf. LalitaSa. — Page. Line on Sloka",
+   "aob_entry_ids": "AOB-0582",
+   "aob_titles": "Lalitaésahasranimabhasgya (Saubhagyabhaskara cf. LalitaSa. — Page. Line on Sloka",
+   "notes": ""
+  },
+  {
+   "siglum": "SiddhaHe.",
+   "attestations": 573,
+   "class": "primary",
+   "work_title": "siddhahemacandraśabdānuśāsana",
+   "aob_entry_ids": "AOB-1099",
+   "aob_titles": "hahemagabdanugasana",
+   "notes": ""
+  },
+  {
+   "siglum": "RāmāMañ.",
+   "attestations": 569,
+   "class": "primary",
+   "work_title": "rāmāyaṇamañjarī",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "SyādvāMañ.",
+   "attestations": 566,
+   "class": "primary",
+   "work_title": "syādvādamañjarī",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "MW.",
+   "attestations": 565,
+   "class": "secondary",
+   "work_title": "",
+   "aob_entry_ids": "",
+   "aob_titles": "",
+   "notes": ""
+  },
+  {
+   "siglum": "ViśvaLoK.",
+   "attestations": 562,
+   "class": "primary",
+   "work_title": "viśvalocanakośa",
+   "aob_entry_ids": "AOB-1399",
+   "aob_titles": "canakoga:or Muktavalikoga",
+   "notes": ""
+  },
+  {
+   "siglum": "VāmaP.",
+   "attestations": 554,
+   "class": "primary",
+   "work_title": "vāmanapurāṇa",
+   "aob_entry_ids": "AOB-1331",
+   "aob_titles": "purana",
+   "notes": ""
+  }
+ ]
+}

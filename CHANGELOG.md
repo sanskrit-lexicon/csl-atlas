@@ -7,6 +7,31 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.21.3] - 2026-10-29
+
+# PD KoshaSHRI fixture dataset registration (H7316)
+- **PD KoshaSHRI fixture dataset registration (H7316).** Registered the exact H7316 dataset
+  paths `data/pd/pd_koshashri_entries.tsv` and `data/pd/pd_koshashri_citations.tsv` across
+  the repository and estate surfaces. Added per-file metadocs with schemas, rights, provenance
+  and regeneration commands; linked the fixture from the root README and agent orientation;
+  recorded the sync rule that adapter or exporter changes regenerate both TSVs and rerun
+  `--check` plus offline tests in the same PR. The all-rights-reserved full source response
+  remains local and uncommitted. Dataset bytes and canaries are unchanged from v0.21.2 / PR #653.
+
+## [0.21.2] - 2026-10-29
+
+# PD KoshaSHRI fixture TSV exports (H7316)
+- Recovered the public single-entry `agni` response and the 27-10 adapter from
+  local evidence, then added the deterministic fixture exporter and two TSVs:
+  one entry and 1,400 citation-reference rows. The export preserves all 29
+  meanings, the first meaning's 242 citation texts → 248 reference rows,
+  hierarchical sense paths, one nested vocable, the volume object and the
+  `<s<small>` source defect. Exact `ṚV.` resolves through H7296 to
+  `PDW-ecd09ac913`; all other works stay unresolved. Added five offline tests,
+  a changed-canary refusal, generation report, data/pd README row and a rights
+  addendum. The restricted full JSON is not committed; there is no bulk import,
+  new work ID, independent-witness claim or csl-orig edit.
+
 ## [0.21.1] - 2026-10-29
 
 - **PD licence-envelope parity in two generators.**
@@ -16,6 +41,7 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 licence backfill. The canon ledger's input hashes are regenerated against the
 current licensed inputs. Both PD parity checks, the AOB selftest and the full
 dataset licence validator pass.
+
 ## [0.21.0] - 2026-10-24
 
 - **H5302 (Opus 5 `claude-opus-5[1m]`) — per-dataset licence matrix: every `data/` family gets a source, a rights basis, a proposed licence and an exception flag.** New [docs/DATASET_LICENCE_MATRIX.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/DATASET_LICENCE_MATRIX.md) covers all 14 families (13 directories + the `data/` root group). Upstream licences probed live in the local clones, not quoted from memory: `csl-orig`, `csl-guides` and DCS are all **CC BY-SA 4.0**, so ShareAlike propagates through every dictionary-derived family and **CC BY 4.0 is clean for exactly two things** — [data/schema/](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/schema) and [data/dictionary_inventory.csv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dictionary_inventory.csv) (bibliographic facts). Two 🔴 exceptions: **E4** — AMAR's licence is stated three different ways across four surfaces (`AMAR/LICENSE` is GPLv2, its README and CITATION.cff say CC-BY-SA-4.0, and the atlas's own [kosa_model_measures.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/lexico/kosa_model_measures.json) records a fourth reading, GPL-3.0, which has propagated into `paper_kosha_macrostructure.md`, `src/paper/kosa-macrostructure.md` and `EMBEDDING_RETRIEVAL_LANE_PLAN.md`); **E7** — the Poona Dictionary source (`PD_TXT`, never committed) has no verified rights statement, and `pd_siglum_raw.tsv`'s three sample contexts per siglum are the only committed excerpts of a rights-unverified work. Four 🟠 conditions recorded (e-texts measured-not-redistributed in `data/forensic/`, Argos MT provenance, Patel 2016 label attribution, scan-metadata-vs-scan-images, MUDIDI schema shape) plus three metadata defects (DCS recorded as "CC BY" where upstream is CC BY-SA 4.0; wrong AMAR upstream repo name; 109 of 130 data JSON files and all 57 CSV/TSV/Newick files licence-silent). CONTRADICTIONS §17's Zenodo ruling is applied with its condition stated: a repo-level deposit stays safe only while the tracked tree redistributes no source dictionary text — true today. Coverage numbers are reproducible via new [scripts/audit_dataset_licence_keys.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/audit_dataset_licence_keys.py). **Proposal only** — no data file, `LICENSE`, `CITATION.cff` or `.zenodo.json` was edited. Part of epic E014.

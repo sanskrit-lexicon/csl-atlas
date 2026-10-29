@@ -1,0 +1,1184 @@
+{
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "dataset": "pd_edition_availability_live_probes",
+ "generated_on": "2026-10-29",
+ "probe_rule": "HTTP 200/206 plus non-empty machine-readable text; catalogue presence alone is insufficient",
+ "gretil_index": {
+  "url": "https://gretil.uni-goettingen.de/gretil.html",
+  "sha256": "4a510b91da2ddc98d341d3e161999f7be208dc0249faecff1735918a1945ec7f"
+ },
+ "gretil_text_probes": {
+  "BrahmSūBh.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_bAdarAyaNa-brahmasUtra-comm.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "VīraMi.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/1_sanskr/6_sastra/4_dharma/smrti/mvir_sau.htm",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewp"
+  },
+  "TātpaṬ.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_gautama-nyAyasUtra-comm2.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "BhāṭṭDī.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_khaNDadeva-bhATTadIpikA1-3.xml",
+   "error": "HTTP Error 404: Not Found"
+  },
+  "YogVā.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_mokSopAya.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "Bhām.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_vAcaspatimizra-bhAmati.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "ŚāstrDī.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_pArthasArathimizra-zAstradIpikA.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "Subhāṣi.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_vallabhadeva-subhASitAvali-1-1040.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "RasGaṅ.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_jagannAthapaNDitarAja-rasagaGgAdhara-1.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "GītāBh.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_rAmAnuja-bhagavadgItAbhASya.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "TattvCin.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_gAGgeza-tattvacintAmaNizabdakhANDa.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "NyāyMāVi.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_mAdhava-jaiminIyanyAyamAlAvistara.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "PrakaPañ.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_zAlikanAthamizra-prakaraNapaJcikA-comm.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "NyāyPari.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_veGkaTanAtha-nyAyaparizuddhibhUmikA-13-5.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "Mitā.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_vijJAnezvara-mitAkSarA.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  },
+  "PauṣkS.": {
+   "url": "https://gretil.uni-goettingen.de/gretil/corpustei/sa_pauSkarasaMhitA-27-43.xml",
+   "http": 206,
+   "sample_bytes": 2048,
+   "content_length": "2048",
+   "sample_start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-model href=\"http://www.tei-c.org/re"
+  }
+ },
+ "archive_text_probes": {
+  "BrahmSūBh.": [
+   {
+    "identifier": "BrahmasutraBhashyaMula",
+    "title": "Brahmasutra Bhashya Mula",
+    "year": null,
+    "creator": "Rahul-Adiga(ರಾಹುಲ)",
+    "text_files": [
+     {
+      "name": "Brahmasutra Bhashya Mula_djvu.txt",
+      "size": "2224076",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/BrahmasutraBhashyaMula/Brahmasutra%20Bhashya%20Mula_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": " । ब्रह्मसूत्रम्‌ ।। \nश्रीमच्छ"
+    }
+   }
+  ],
+  "VīraMi.": [
+   {
+    "identifier": "kijv-viramitrodaya-fasciculus-5-by-mitra-mishra-edited-",
+    "title": "Viramitrodaya Fasciculus 5 By Mitra Mishra Edited By Parvatiya Nityananda Sharma Sanskrit Dharmashastra Benares 1908 Chowkhamba Sanskrit Book Depot",
+    "year": null,
+    "creator": "Chowkhamba Sanskrit Book Depot",
+    "text_files": [
+     {
+      "name": "Viramitrodaya Fasciculus 5 By Mitra Mishra Edited By Parvatiya Nityananda Sharma Sanskrit Dharmashastra Benares 1908 - Chowkhamba Sanskrit Book Depot_djvu.txt",
+      "size": "320916",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/kijv-viramitrodaya-fasciculus-5-by-mitra-mishra-edited-/Viramitrodaya%20Fasciculus%205%20By%20Mitra%20Mishra%20Edited%20By%20Parvatiya%20Nityananda%20Sharma%20Sanskrit%20Dharmashastra%20Benares%201908%20-%20Chowkhamba%20Sanskrit%20Book%20Depot_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "CC-0. In Public Domain. Digitization by eGangotri.Funding: MIDF \n\n\nNepal Sanskri"
+    }
+   }
+  ],
+  "ManuBh.": [
+   {
+    "identifier": "ibru_manu-smriti-by-manu-commentary-manubhashya-commentator-medhatithi-edited-by",
+    "title": "Manu Smriti By Manu Commentary Manubhashya Commentator Medhatithi Edited By Mahamahopadhyaya Ganganath Jha Sanskrit Dharma Shastra Calcutta 1932 The Asiatic Society Of",
+    "year": null,
+    "creator": "The Asiatic Society of",
+    "text_files": [
+     {
+      "name": "Manu Smriti by Manu Commentary Manubhashya Commentator Medhatithi Edited by Mahamahopadhyaya Ganganath Jha Sanskrit Dharma Shastra Calcutta 1932 - The Asiatic Society of _djvu.txt",
+      "size": "2673863",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/ibru_manu-smriti-by-manu-commentary-manubhashya-commentator-medhatithi-edited-by/Manu%20Smriti%20by%20Manu%20Commentary%20Manubhashya%20Commentator%20Medhatithi%20Edited%20by%20Mahamahopadhyaya%20Ganganath%20Jha%20Sanskrit%20Dharma%20Shastra%20Calcutta%201932%20-%20The%20Asiatic%20Society%20of%20_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "७ बु NA \nउन्‌ टं \n> SNPS 7८8 ` \n- पुरु EIN ANYON 21 "
+    }
+   },
+   {
+    "identifier": "manusmritiwiththemanubhashyaofmedhatithivolumeiiiindexesofversesedgjhacalcutta1939600dpilossles_219_p",
+    "title": "Manusmriti With The Manubhashya Of Medhatithi Volume III Indexes Of Verses Ed G Jha Calcutta 1939 600dpi Lossless",
+    "year": null,
+    "creator": "Indira Bandi",
+    "text_files": [
+     {
+      "name": "Manusmriti-With-the-Manubhashya-of-Medhatithi-Volume-III-Indexes-of-Verses-Ed-G-jha-Calcutta-1939-600dpi-Lossless_djvu.txt",
+      "size": "560309",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Manusmriti-With-the-Manubhashya-of-Medhatithi-Volume-III-Indexes-of-Verses-Ed-G-jha-Calcutta-1939-600dpi-Lossless_text.pdf",
+      "size": "4797340",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/manusmritiwiththemanubhashyaofmedhatithivolumeiiiindexesofversesedgjhacalcutta1939600dpilossles_219_p/Manusmriti-With-the-Manubhashya-of-Medhatithi-Volume-III-Indexes-of-Verses-Ed-G-jha-Calcutta-1939-600dpi-Lossless_text.pdf",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "%PDF-1.5\n%µ¶\n\n1 0 obj\n<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /OutputIntents [ 81"
+    }
+   }
+  ],
+  "TantrVā.": [
+   {
+    "identifier": "raswhish108-107",
+    "title": "Mīmāṃsā-Tantravārttika",
+    "year": "[1800?]",
+    "creator": "Kumāriḻa Svāmin",
+    "text_files": [
+     {
+      "name": "raswhish108-107_djvu.txt",
+      "size": "859961",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/raswhish108-107/raswhish108-107_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "शपति \n\n\nच {~` \n\n\n\n\n\nवात) \n\n\nकणा \n\n\n\n\n\nन ~ =-= न \n\n\nन"
+    }
+   }
+  ],
+  "MīmāKau.": [
+   {
+    "identifier": "in.ernet.dli.2015.486513",
+    "title": "The Chowkham Sanskrit Series Nos 303-310 &amp; 326(mimamsa Kaustubha)",
+    "year": null,
+    "creator": "Khandadeva",
+    "text_files": [
+     {
+      "name": "2015.486513.The-Chowkham_djvu.txt",
+      "size": "2938207",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "2015.486513.The-Chowkham_text.pdf",
+      "size": "74795594",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/in.ernet.dli.2015.486513/2015.486513.The-Chowkham_text.pdf",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "%PDF-1.5\n%µ¶\n\n1 0 obj\n<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /OutputIntents [ 56"
+    }
+   }
+  ],
+  "BālamBha.": [
+   {
+    "identifier": "in.ernet.dli.2015.487276",
+    "title": "Vyavahara-balambhatti",
+    "year": null,
+    "creator": "Parvatiya, Pandit Nityananda Pant, Ed.",
+    "text_files": [
+     {
+      "name": "2015.487276.Vyavahar-Balambhatti_djvu.txt",
+      "size": "3739783",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "2015.487276.Vyavahar-Balambhatti_text.pdf",
+      "size": "74804317",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/in.ernet.dli.2015.487276/2015.487276.Vyavahar-Balambhatti_text.pdf",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "%PDF-1.5\n%µ¶\n\n1 0 obj\n<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /OutputIntents [ 79"
+    }
+   }
+  ],
+  "SmṛtiCan.": [
+   {
+    "identifier": "in.ernet.dli.2015.486480",
+    "title": "Smriti Chandrika-samskara Kand",
+    "year": null,
+    "creator": "Devan Bhatta",
+    "text_files": [
+     {
+      "name": "2015.486480.Smriti-Chandrika-Samskara_djvu.txt",
+      "size": "540725",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "2015.486480.Smriti-Chandrika-Samskara_text.pdf",
+      "size": "16391490",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/in.ernet.dli.2015.486480/2015.486480.Smriti-Chandrika-Samskara_text.pdf",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "%PDF-1.5\n%µ¶\n\n1 0 obj\n<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /OutputIntents [ 17"
+    }
+   }
+  ],
+  "Prasā.": [
+   {
+    "identifier": "prakriyakaumudiramachandraprasadavitthalakamalashankarpranshankartrivedipart1bss_973_m",
+    "title": "Prakriya Kaumudi Ramachandra Prasada Vitthala Kamalashankar Pranshankar Trivedi Part 1 BSS",
+    "year": null,
+    "creator": "Gotama Gokhale",
+    "text_files": [
+     {
+      "name": "Prakriya Kaumudi Ramachandra Prasada Vitthala Kamalashankar Pranshankar Trivedi Part 1 BSS_djvu.txt",
+      "size": "991956",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Prakriya Kaumudi Ramachandra Prasada Vitthala Kamalashankar Pranshankar Trivedi Part 1 BSS_text.pdf",
+      "size": "67490895",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/prakriyakaumudiramachandraprasadavitthalakamalashankarpranshankartrivedipart1bss_973_m/Prakriya%20Kaumudi%20Ramachandra%20Prasada%20Vitthala%20Kamalashankar%20Pranshankar%20Trivedi%20Part%201%20BSS_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "| HTH T STTSsft TTCfta STCITS* \n\n£ L.B.S. National Academy of Administration \nM"
+    }
+   },
+   {
+    "identifier": "prakriyakaumudiramachandraprasadavitthalakamalashankarpranshankartrivedipart2bss_978_Y",
+    "title": "Prakriya Kaumudi Ramachandra Prasada Vitthala Kamalashankar Pranshankar Trivedi Part 2 BSS",
+    "year": null,
+    "creator": "Vasanta Chaudhary",
+    "text_files": [
+     {
+      "name": "Prakriya Kaumudi Ramachandra Prasada Vitthala Kamalashankar Pranshankar Trivedi Part 2 BSS_djvu.txt",
+      "size": "837750",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Prakriya Kaumudi Ramachandra Prasada Vitthala Kamalashankar Pranshankar Trivedi Part 2 BSS_text.pdf",
+      "size": "58359913",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/prakriyakaumudiramachandraprasadavitthalakamalashankarpranshankartrivedipart2bss_978_Y/Prakriya%20Kaumudi%20Ramachandra%20Prasada%20Vitthala%20Kamalashankar%20Pranshankar%20Trivedi%20Part%202%20BSS_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "GL SANS 491.25 \nRAM \n\n■■i \n\n126473 \nLBSNAA \n\n\n$ \n\n5TCTmsT 3WT^fft | \n\nademy "
+    }
+   }
+  ],
+  "Bhām.": [
+   {
+    "identifier": "in.ernet.dli.2015.272984",
+    "title": "Bhamati",
+    "year": null,
+    "creator": "Digital Library Of India",
+    "text_files": [
+     {
+      "name": "2015.272984.Bhamati_djvu.txt",
+      "size": "1698393",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "2015.272984.Bhamati_text.pdf",
+      "size": "304728419",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/in.ernet.dli.2015.272984/2015.272984.Bhamati_text.pdf",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "%PDF-1.5\n%µ¶\n\n1 0 obj\n<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /OutputIntents [ 47"
+    }
+   }
+  ],
+  "YogVā.": [
+   {
+    "identifier": "TheYogaVasisthaOfValmikiINirnayaSagarPress",
+    "title": "The Yoga Vasistha Of Valmiki I Nirnaya Sagar Press",
+    "year": null,
+    "creator": "javanesegraviton",
+    "text_files": [
+     {
+      "name": "The Yoga Vasistha Of Valmiki I - Nirnaya Sagar Press_djvu.txt",
+      "size": "8385392",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "The Yoga Vasistha Of Valmiki I - Nirnaya Sagar Press_text.pdf",
+      "size": "258333901",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/TheYogaVasisthaOfValmikiINirnayaSagarPress/The%20Yoga%20Vasistha%20Of%20Valmiki%20I%20-%20Nirnaya%20Sagar%20Press_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "` , छनः \n\n\n__ ` ____ निय सागर मेस, बम्बई क"
+    }
+   }
+  ],
+  "LaŚabdeŚe.": [
+   {
+    "identifier": "laghu-shabdendu-shekhara-nagoji-bhatt-part-i-chaukhmaba-vidya-vilas-press",
+    "title": "Laghu Shabdendu Shekhara Nagoji Bhatt Part I Chaukhmaba Vidya Vilas Press",
+    "year": null,
+    "creator": "Chaukhmaba Vidya Vilas Press",
+    "text_files": [
+     {
+      "name": "Laghu Shabdendu Shekhara Nagoji Bhatt Part I - Chaukhmaba Vidya Vilas Press_djvu.txt",
+      "size": "4838986",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Laghu Shabdendu Shekhara Nagoji Bhatt Part I - Chaukhmaba Vidya Vilas Press_text.pdf",
+      "size": "134641817",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/laghu-shabdendu-shekhara-nagoji-bhatt-part-i-chaukhmaba-vidya-vilas-press/Laghu%20Shabdendu%20Shekhara%20Nagoji%20Bhatt%20Part%20I%20-%20Chaukhmaba%20Vidya%20Vilas%20Press_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "< \n\n\nत १९८४ \n| ` ^ . ` 'राजयासनाजरोधेन स"
+    }
+   }
+  ],
+  "KośaKaTa.": [
+   {
+    "identifier": "koshakalpataruofvisvanathavol1patkarm.m.krishnamurthysharmak.v.deccancollege_832_",
+    "title": "Kosha Kalpataru Of Visvanatha Vol 1 Patkar M. M., Krishnamurthy Sharma K. V. Deccan College",
+    "year": null,
+    "creator": "Vasanta Doctor",
+    "text_files": [
+     {
+      "name": "Kosha kalpataru Of Visvanatha Vol 1  Patkar M.M., Krishnamurthy Sharma K.V. Deccan College_djvu.txt",
+      "size": "1169868",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/koshakalpataruofvisvanathavol1patkarm.m.krishnamurthysharmak.v.deccancollege_832_/Kosha%20kalpataru%20Of%20Visvanatha%20Vol%201%20%20Patkar%20M.M.%2C%20Krishnamurthy%20Sharma%20K.V.%20Deccan%20College_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "280५6 : 99999990293083 \n\n11116 - ॥<058।९810881॥ 2 \\/§/६/18108 \n(11/"
+    }
+   }
+  ],
+  "SaraKaṇṭhā.": [
+   {
+    "identifier": "eugk-sarasvati-kanthabharana-chitra-prakarana-tika-by-b",
+    "title": "Sarasvati Kanthabharana Chitra Prakarana Tika By Bhoja Sanskrit In Devanagari Script Poetics Lithograph Illustrated Banaras Sulemani Press",
+    "year": null,
+    "creator": "Sulemani Press",
+    "text_files": [
+     {
+      "name": "Sarasvati Kanthabharana Chitra Prakarana Tika By Bhoja Sanskrit in Devanagari Script Poetics Lithograph Illustrated Banaras - Sulemani Press_djvu.txt",
+      "size": "106855",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/eugk-sarasvati-kanthabharana-chitra-prakarana-tika-by-b/Sarasvati%20Kanthabharana%20Chitra%20Prakarana%20Tika%20By%20Bhoja%20Sanskrit%20in%20Devanagari%20Script%20Poetics%20Lithograph%20Illustrated%20Banaras%20-%20Sulemani%20Press_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "CC-0. In Public Domain. Digitization by eGangotri \n\n\nRE \n\n\nTi \n\n\nCC-0. In Public"
+    }
+   }
+  ],
+  "Nyāyāmṛ.": [
+   {
+    "identifier": "mbvi-nyayamrita-advaita-siddhi-part-1-by-vyasatirtha-sw",
+    "title": "Nyayamrita Advaita Siddhi Part 1 By Vyasatirtha Swami Yogindrananda Sanskrit Hindi Vedanta Varanasi 1977 Shatdarshana Prakashana Pratishthanam",
+    "year": null,
+    "creator": "Shatdarshana Prakashana Pratishthanam",
+    "text_files": [
+     {
+      "name": "Nyayamrita Advaita Siddhi Part 1 By Vyasatirtha Swami Yogindrananda Sanskrit Hindi Vedanta Varanasi 1977 - Shatdarshana Prakashana Pratishthanam_djvu.txt",
+      "size": "5597348",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Nyayamrita Advaita Siddhi Part 1 By Vyasatirtha Swami Yogindrananda Sanskrit Hindi Vedanta Varanasi 1977 - Shatdarshana Prakashana Pratishthanam_text.pdf",
+      "size": "56194891",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/mbvi-nyayamrita-advaita-siddhi-part-1-by-vyasatirtha-sw/Nyayamrita%20Advaita%20Siddhi%20Part%201%20By%20Vyasatirtha%20Swami%20Yogindrananda%20Sanskrit%20Hindi%20Vedanta%20Varanasi%201977%20-%20Shatdarshana%20Prakashana%20Pratishthanam_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "त का \nFu १ \n\n\nड तृतीयं ~~ कायनधन्थमा�"
+    }
+   },
+   {
+    "identifier": "pome-nyayamrita-advaita-siddhi-part-2-swami-yogindranan",
+    "title": "Nyayamrita Advaita Siddhi Part 2 Swami Yogindrananda By Vyasaraja Yati And Madhusudana Sarasvati Sanskrit Vedanta Varanasi 1986 Shaddarshana Prakashana",
+    "year": null,
+    "creator": "Shaddarshana Prakashana",
+    "text_files": [
+     {
+      "name": "Nyayamrita Advaita Siddhi Part 2 Swami Yogindrananda By Vyasaraja Yati And Madhusudana Sarasvati Sanskrit Vedanta Varanasi 1986 - Shaddarshana Prakashana_djvu.txt",
+      "size": "4703612",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Nyayamrita Advaita Siddhi Part 2 Swami Yogindrananda By Vyasaraja Yati And Madhusudana Sarasvati Sanskrit Vedanta Varanasi 1986 - Shaddarshana Prakashana_text.pdf",
+      "size": "44938590",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/pome-nyayamrita-advaita-siddhi-part-2-swami-yogindranan/Nyayamrita%20Advaita%20Siddhi%20Part%202%20Swami%20Yogindrananda%20By%20Vyasaraja%20Yati%20And%20Madhusudana%20Sarasvati%20Sanskrit%20Vedanta%20Varanasi%201986%20-%20Shaddarshana%20Prakashana_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "NUL SUE SUE DUE DUE DIE SNE NE NAY - \nीव्यासत ५० \nछ क्�"
+    }
+   }
+  ],
+  "Subhāṣi.": [
+   {
+    "identifier": "tTre_the-subhashitavali-of-vallabhacharya-edited-by-peter-peterson-and-pt.-durga-pras",
+    "title": "The Subhashitavali Of Vallabhacharya Edited By Peter Peterson And Pt. Durga Prasad ( Sanskrit, 1886, Missing Pages) Education Society's Press, Bombay",
+    "year": null,
+    "creator": "eGangotri",
+    "text_files": [
+     {
+      "name": "The Subhashitavali Of Vallabhacharya Edited By Peter Peterson And Pt. Durga Prasad (Sanskrit, 1886, Missing Pages) - Education Society's Press, Bombay_djvu.txt",
+      "size": "1898481",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/tTre_the-subhashitavali-of-vallabhacharya-edited-by-peter-peterson-and-pt.-durga-pras/The%20Subhashitavali%20Of%20Vallabhacharya%20Edited%20By%20Peter%20Peterson%20And%20Pt.%20Durga%20Prasad%20%28Sanskrit%2C%201886%2C%20Missing%20Pages%29%20-%20Education%20Society%27s%20Press%2C%20Bombay_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "M rot ee rt \n\n\nnu \n\n\n;* \n\nfm. P \ni j h Q \n\nB $ w t i \n\n\nion! P bye \n”> “न�"
+    }
+   }
+  ],
+  "Pradī.": [
+   {
+    "identifier": "mahabhashyapradipakaiyataudyotanageshbhattatippanibalashastried.damodarshastribh_20191218_2034",
+    "title": "Mahabhashya Pradipa Kaiyata Udyota Nagesh Bhatta Tippani Bala Shastri Ed. Damodar Shastri Bhardwaj, Gangadhara Shastri Manvalli, Patwardhan Shastri Chapters 2 4, 1889 Raja Rajesvari Yantralaya, Kasi 1889",
+    "year": null,
+    "creator": "Ajit Gargeshwari",
+    "text_files": [
+     {
+      "name": "Mahabhashya Pradipa Kaiyata Udyota Nagesh Bhatta Tippani Bala Shastri Ed. Damodar Shastri Bhardwaj, Gangadhara Shastri Manvalli, Patwardhan Shastri Chapters 2-4, 1889 Raja Rajesvari Yantralaya, Kasi 1889_djvu.txt",
+      "size": "732366",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Mahabhashya Pradipa Kaiyata Udyota Nagesh Bhatta Tippani Bala Shastri Ed. Damodar Shastri Bhardwaj, Gangadhara Shastri Manvalli, Patwardhan Shastri Chapters 2-4, 1889 Raja Rajesvari Yantralaya, Kasi 1889_text.pdf",
+      "size": "131755854",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/mahabhashyapradipakaiyataudyotanageshbhattatippanibalashastried.damodarshastribh_20191218_2034/Mahabhashya%20Pradipa%20Kaiyata%20Udyota%20Nagesh%20Bhatta%20Tippani%20Bala%20Shastri%20Ed.%20Damodar%20Shastri%20Bhardwaj%2C%20Gangadhara%20Shastri%20Manvalli%2C%20Patwardhan%20Shastri%20Chapters%202-4%2C%201889%20Raja%20Rajesvari%20Yantralaya%2C%20Kasi%201889_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "\n,v.vs ytvXif \n\n\n£-y$& \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    }
+   }
+  ],
+  "HarVi.": [
+   {
+    "identifier": "ayfc_haravijaya-rajanaka-alaka-commentary-by-rajanaka-ratnakara-durgaprasad-kash",
+    "title": "Haravijaya Rajanaka Alaka Commentary By Rajanaka Ratnakara Durgaprasad Kashinath Pandurang Parab Editor Sanskrit Bombay 1890 Nirnaya Sagara Press Kavyamala Series 22",
+    "year": null,
+    "creator": "Nirnaya Sagara Press Kavyamala Series 22",
+    "text_files": [
+     {
+      "name": "Haravijaya Rajanaka Alaka Commentary By Rajanaka Ratnakara Durgaprasad Kashinath Pandurang Parab Editor Sanskrit Bombay 1890 - Nirnaya Sagara Press Kavyamala Series 22_djvu.txt",
+      "size": "2729253",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/ayfc_haravijaya-rajanaka-alaka-commentary-by-rajanaka-ratnakara-durgaprasad-kash/Haravijaya%20Rajanaka%20Alaka%20Commentary%20By%20Rajanaka%20Ratnakara%20Durgaprasad%20Kashinath%20Pandurang%20Parab%20Editor%20Sanskrit%20Bombay%201890%20-%20Nirnaya%20Sagara%20Press%20Kavyamala%20Series%2022_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "0020. Agamnigam Digital Preservation Foundation, 7 च Yu \n\n\n2५ ५ \n\n\nCC-0. A"
+    }
+   }
+  ],
+  "RasGaṅ.": [
+   {
+    "identifier": "rasagangadharajagannathasaralamathurnathshastritikanageshbhattamathurnathsastrin",
+    "title": "Rasa Gangadhara Jagannatha Sarala Mathurnath Shastri Tika Nagesh Bhatta Mathurnath Sastri Nirnaya Sagar Press KM 12 1947",
+    "year": null,
+    "creator": "Manish_dutta",
+    "text_files": [
+     {
+      "name": "Rasa Gangadhara Jagannatha Sarala Mathurnath Shastri Tika Nagesh Bhatta Mathurnath Sastri Nirnaya Sagar Press KM 12 1947_djvu.txt",
+      "size": "3931101",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Rasa Gangadhara Jagannatha Sarala Mathurnath Shastri Tika Nagesh Bhatta Mathurnath Sastri Nirnaya Sagar Press KM 12 1947_text.pdf",
+      "size": "127611453",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/rasagangadharajagannathasaralamathurnathshastritikanageshbhattamathurnathsastrin/Rasa%20Gangadhara%20Jagannatha%20Sarala%20Mathurnath%20Shastri%20Tika%20Nagesh%20Bhatta%20Mathurnath%20Sastri%20Nirnaya%20Sagar%20Press%20KM%2012%201947_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "पट 6 ८ [9 ^ 7, 12. \n\"ब ` ८ £ \n\n\n१२4 54.१41) ^ २4 \n\n\nष्ट"
+    }
+   }
+  ],
+  "AdvaiSi.": [
+   {
+    "identifier": "advaita-siddhi-madhusudana-saraswati-hari-hara-shastri-1893-advaita-manjari-series",
+    "title": "Advaita Siddhi Madhusudana Saraswati Hari Hara Shastri 1893 ( Advaita Manjari Series)",
+    "year": null,
+    "creator": "Ajit Gargeshwari",
+    "text_files": [
+     {
+      "name": "Advaita Siddhi Madhusudana Saraswati  Hari Hara Shastri 1893 (Advaita Manjari Series)_djvu.txt",
+      "size": "2163111",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Advaita Siddhi Madhusudana Saraswati  Hari Hara Shastri 1893 (Advaita Manjari Series)_text.pdf",
+      "size": "52267495",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/advaita-siddhi-madhusudana-saraswati-hari-hara-shastri-1893-advaita-manjari-series/Advaita%20Siddhi%20Madhusudana%20Saraswati%20%20Hari%20Hara%20Shastri%201893%20%28Advaita%20Manjari%20Series%29_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "॥ शिवाभ्यां “नमः ॥ \nइयं किल \nश्र"
+    }
+   }
+  ],
+  "GītāBh.": [
+   {
+    "identifier": "shrimad-bhagavad-gita-ramanuja-bhashya-ramanujacharya-mahavana-shastri-sanskrit-",
+    "title": "Shrimad Bhagavad Gita Ramanuja Bhashya Ramanujacharya Mahavana Shastri Sanskrit Vedanta Kalyan Mumbai 1893 Lakshmi Venkateshwar Press",
+    "year": null,
+    "creator": "Agamnigam Digital Preservation Foundation",
+    "text_files": [
+     {
+      "name": "Shrimad Bhagavad Gita Ramanuja Bhashya Ramanujacharya Mahavana Shastri Sanskrit Vedanta Kalyan Mumbai 1893 - Lakshmi Venkateshwar Press_djvu.txt",
+      "size": "1018028",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Shrimad Bhagavad Gita Ramanuja Bhashya Ramanujacharya Mahavana Shastri Sanskrit Vedanta Kalyan Mumbai 1893 - Lakshmi Venkateshwar Press_text.pdf",
+      "size": "13537850",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/shrimad-bhagavad-gita-ramanuja-bhashya-ramanujacharya-mahavana-shastri-sanskrit-/Shrimad%20Bhagavad%20Gita%20Ramanuja%20Bhashya%20Ramanujacharya%20Mahavana%20Shastri%20Sanskrit%20Vedanta%20Kalyan%20Mumbai%201893%20-%20Lakshmi%20Venkateshwar%20Press_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "000 “14 \n\n\nSR \n\n\neee त जू पन ला \n\n\n“या \n\n\n* FR Et \n\n\nRRSP "
+    }
+   }
+  ],
+  "ManvaMu.": [
+   {
+    "identifier": "eALw_manusmriti-with-kulluka-bhatts-tika-manvartha-muktavali-1909-nirnay-sagar-press",
+    "title": "Manusmriti With Kulluka Bhatts Tika Manvartha Muktavali 1909 Nirnay Sagar Press",
+    "year": null,
+    "creator": "Nirnay Sagar Press",
+    "text_files": [
+     {
+      "name": "Manusmriti with Kulluka Bhatts Tika  Manvartha Muktavali 1909 - Nirnay Sagar Press_djvu.txt",
+      "size": "2945548",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/eALw_manusmriti-with-kulluka-bhatts-tika-manvartha-muktavali-1909-nirnay-sagar-press/Manusmriti%20with%20Kulluka%20Bhatts%20Tika%20%20Manvartha%20Muktavali%201909%20-%20Nirnay%20Sagar%20Press_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "Digitized पा u Foundation Trust, Delhi and 80931५0. °. \na UP State Museum"
+    }
+   }
+  ],
+  "Hastyāyur.": [
+   {
+    "identifier": "in.ernet.dli.2015.345317",
+    "title": "Hastyayurveda",
+    "year": null,
+    "creator": "Muni, Palakapya",
+    "text_files": [
+     {
+      "name": "2015.345317.Hastyayurveda_djvu.txt",
+      "size": "2828814",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "2015.345317.Hastyayurveda_text.pdf",
+      "size": "54191807",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/in.ernet.dli.2015.345317/2015.345317.Hastyayurveda_text.pdf",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "%PDF-1.5\n%µ¶\n\n1 0 obj\n<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /OutputIntents [ 52"
+    }
+   }
+  ],
+  "IṣṭaSi.": [
+   {
+    "identifier": "ishta-siddhi",
+    "title": "Ishta Siddhi, श्री विमुक्तात्माचार्यप्रणीत इष्टसिद्धि, श्री ज्ञानोत्तमाचार्य विवरणसमेता",
+    "year": "2023",
+    "creator": "Swami Brahmavidyananda",
+    "text_files": [
+     {
+      "name": "Ishta Siddhi_djvu.txt",
+      "size": "2353506",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Ishta Siddhi_text.pdf",
+      "size": "11128339",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/ishta-siddhi/Ishta%20Siddhi_djvu.txt",
+     "http": 206,
+     "sample_bytes": 1024,
+     "sample_start": "न . इष्टसिदिधः \n। ^ विवरणसमेता \n\n\n�"
+    }
+   }
+  ],
+  "Aparā.": [
+   {
+    "identifier": "yajnavalkya-smriti-with-aparadityas-tippani-anandasram-edition",
+    "title": "Yajnavalkya Smriti With Aparaditya's Tippani Anandasram Edition",
+    "year": null,
+    "creator": "Yajnavalkya, Aparaditya",
+    "text_files": [
+     {
+      "name": "Yajnavalkya Smriti with Aparaditya's Tippani Part 1- Anandasram 1903_djvu.txt",
+      "size": "2447249",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Yajnavalkya Smriti with Aparaditya's Tippani Part 1- Anandasram 1903_text.pdf",
+      "size": "56787195",
+      "format": "Additional Text PDF"
+     },
+     {
+      "name": "Yajnavalkya Smriti with Aparaditya's Tippani Part 2- Anandasram 1904_djvu.txt",
+      "size": "3049838",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Yajnavalkya Smriti with Aparaditya's Tippani Part 2- Anandasram 1904_text.pdf",
+      "size": "66308880",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/yajnavalkya-smriti-with-aparadityas-tippani-anandasram-edition/Yajnavalkya%20Smriti%20with%20Aparaditya%27s%20Tippani%20Part%201-%20Anandasram%201903_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "आनन्दाश्रमसंस्छृतग्रन्थावद�"
+    }
+   }
+  ],
+  "Vaija.": [
+   {
+    "identifier": "vaijayantiofyadavaprakasagustavoppert1893ms_236_f",
+    "title": "Vaijayanti Of Yadava Prakasa Gustav Oppert 1893 ( MS)",
+    "year": null,
+    "creator": "Ganesha Pillai",
+    "text_files": [
+     {
+      "name": "Vaijayanti Of Yadava Prakasa Gustav Oppert 1893 (MS)_djvu.txt",
+      "size": "2486415",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Vaijayanti Of Yadava Prakasa Gustav Oppert 1893 (MS)_text.pdf",
+      "size": "25397965",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/vaijayantiofyadavaprakasagustavoppert1893ms_236_f/Vaijayanti%20Of%20Yadava%20Prakasa%20Gustav%20Oppert%201893%20%28MS%29_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "१ \n\n\n20008. 0थाधि] जला1८5 ०. ‰ 2 \nवे ज क \nवै�"
+    }
+   },
+   {
+    "identifier": "rbzl-vaijayanti-by-yadavaprakasha-edited-by-gustav-oppe",
+    "title": "Vaijayanti By Yadavaprakasha Edited By Gustav Oppert Sanskrit Lexicography Madras 1893 Madras Sanskrit And Vernacular Text Publication Society",
+    "year": null,
+    "creator": "Madras Sanskrit And Vernacular Text Publication Society",
+    "text_files": [
+     {
+      "name": "Vaijayanti By Yadavaprakasha Edited By Gustav Oppert Sanskrit Lexicography Madras 1893 - Madras Sanskrit And Vernacular Text Publication Society_djvu.txt",
+      "size": "1912515",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/rbzl-vaijayanti-by-yadavaprakasha-edited-by-gustav-oppe/Vaijayanti%20By%20Yadavaprakasha%20Edited%20By%20Gustav%20Oppert%20Sanskrit%20Lexicography%20Madras%201893%20-%20Madras%20Sanskrit%20And%20Vernacular%20Text%20Publication%20Society_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "cE \n\n\nF \n\n\nTHE VAIJAYANTI \n\n\n: \n\n\nAES xm H ui YADAVAPRAKAS \n\n\nFOR, THE \"FIRST. T"
+    }
+   },
+   {
+    "identifier": "Vaijayanti",
+    "title": "Vaijayanti",
+    "year": "1893",
+    "creator": "Yādavaprakāśa",
+    "text_files": []
+   }
+  ],
+  "BhāṭṭDī.": [
+   {
+    "identifier": "in.ernet.dli.2015.485460",
+    "title": "The Bhatta Dipika",
+    "year": null,
+    "creator": "Pandurang Jawaji Troprietor Of The Nirnaya Sagar Press Bombay",
+    "text_files": [
+     {
+      "name": "2015.485460.The-Bhatta_djvu.txt",
+      "size": "4567396",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "2015.485460.The-Bhatta_text.pdf",
+      "size": "91722373",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/in.ernet.dli.2015.485460/2015.485460.The-Bhatta_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "[प्रह \n\n\nएत^1^ [णि \n0 \n1#^ त 4#4 70741) त ४५१५ 564�"
+    }
+   }
+  ],
+  "ŚrutaPra.": [
+   {
+    "identifier": "GTVZ_shri-bhashyam-of-ramanuj-with-shruta-prakashika-and-bhava-prakashika-annotation-",
+    "title": "Shri Bhashyam Of Ramanuj With Shruta Prakashika And Bhava Prakashika Annotation Of Sudarshan And Ranga Ramanuj, 1917 ( Partly Damaged) Shrinivas Press, Vrindavan",
+    "year": null,
+    "creator": "Shrinivas Press, Vrindavan",
+    "text_files": [
+     {
+      "name": "Shri Bhashyam Of Ramanuj With Shruta Prakashika And Bhava Prakashika Annotation Of Sudarshan And Ranga Ramanuj, 1917 (Partly Damaged) - Shrinivas Press, Vrindavan_djvu.txt",
+      "size": "2745554",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Shri Bhashyam Of Ramanuj With Shruta Prakashika And Bhava Prakashika Annotation Of Sudarshan And Ranga Ramanuj, 1917 (Partly Damaged) - Shrinivas Press, Vrindavan_text.pdf",
+      "size": "20674246",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/GTVZ_shri-bhashyam-of-ramanuj-with-shruta-prakashika-and-bhava-prakashika-annotation-/Shri%20Bhashyam%20Of%20Ramanuj%20With%20Shruta%20Prakashika%20And%20Bhava%20Prakashika%20Annotation%20Of%20Sudarshan%20And%20Ranga%20Ramanuj%2C%201917%20%28Partly%20Damaged%29%20-%20Shrinivas%20Press%2C%20Vrindavan_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "का \n\n\nगीमद्धगचद्रामाचुजविरचित-"
+    }
+   }
+  ],
+  "MayūMāli.": [
+   {
+    "identifier": "Snox_shastra-dipika-with-mayukha-malika-commentary-of-somanatha-and-rama-krishna-ed-b",
+    "title": "Shastra Dipika With Mayukha Malika Commentary Of Somanatha And Rama Krishna Ed By Shri Dharma Datta Suri Bombay 1915 Nirnaya Sagar Press",
+    "year": null,
+    "creator": "Nirnaya Sagar Press",
+    "text_files": [
+     {
+      "name": "Shastra Dipika With Mayukha Malika Commentary Of Somanatha And Rama Krishna Ed By Shri Dharma Datta Suri Bombay 1915 - Nirnaya Sagar Press_djvu.txt",
+      "size": "11204440",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/Snox_shastra-dipika-with-mayukha-malika-commentary-of-somanatha-and-rama-krishna-ed-b/Shastra%20Dipika%20With%20Mayukha%20Malika%20Commentary%20Of%20Somanatha%20And%20Rama%20Krishna%20Ed%20By%20Shri%20Dharma%20Datta%20Suri%20Bombay%201915%20-%20Nirnaya%20Sagar%20Press_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "Haridwar. Ane \n\n\n००३ THE \n* हर ST, *. \nSHASTRADIPIKA \nWith the Comment"
+    }
+   }
+  ],
+  "TilaMañ.": [
+   {
+    "identifier": "ksu.p2778.tilakamanjariofd0000pand",
+    "title": "The Tilaka-Manjari Of Dhanapala Kavyamala 85",
+    "year": null,
+    "creator": "Pandit Bhavadatta Sastri",
+    "text_files": [
+     {
+      "name": "ksu.p2778.tilakamanjariofd0000pand_djvu.txt",
+      "size": "1736099",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/ksu.p2778.tilakamanjariofd0000pand/ksu.p2778.tilakamanjariofd0000pand_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "य ह. ४ 11 \n) 9 \n\nद ॐ \nजभ्य ४९ \n\nचै, \n\n\n४, \n\n\n=> क�"
+    }
+   }
+  ],
+  "NyāyMañ.": [
+   {
+    "identifier": "hNLc_nyaya-manjari-part-3-by-jayanta-bhatta-with-commentary-of-granthi-bhanga-by-chak",
+    "title": "Nyaya Manjari ( Part 3) By Jayanta Bhatta With Commentary Of Granthi Bhanga By Chakradhar Edited By Gauri Nath Shastri 1984 Benaras Ratna Printing Works",
+    "year": null,
+    "creator": "Ratna Printing Works",
+    "text_files": [
+     {
+      "name": "Nyaya Manjari (Part-3) By Jayanta Bhatta With Commentary Of Granthi Bhanga By Chakradhar Edited By Gauri Nath Shastri 1984 Benaras - Ratna Printing Works_djvu.txt",
+      "size": "1002797",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/hNLc_nyaya-manjari-part-3-by-jayanta-bhatta-with-commentary-of-granthi-bhanga-by-chak/Nyaya%20Manjari%20%28Part-3%29%20By%20Jayanta%20Bhatta%20With%20Commentary%20Of%20Granthi%20Bhanga%20By%20Chakradhar%20Edited%20By%20Gauri%20Nath%20Shastri%201984%20Benaras%20-%20Ratna%20Printing%20Works_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "ae : \nSeries ees \nPENS LE \n\n\nwap si \n४202 \n\n\n९००९ \n2१ \n\n\neS te \nse \n"
+    }
+   }
+  ],
+  "TriṣaŚaPuC.": [
+   {
+    "identifier": "trishasti-shalaka-purusa-caritra-Volume01-06",
+    "title": "Trishashti Shalaka Purusha Caritra Volume 01-06",
+    "year": null,
+    "creator": "TheZeePDF",
+    "text_files": [
+     {
+      "name": "Trishasti-Shalaka-Purusa-Caritra-1_djvu.txt",
+      "size": "983427",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Trishasti-Shalaka-Purusa-Caritra-2_djvu.txt",
+      "size": "789300",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Trishasti-Shalaka-Purusa-Caritra-3_djvu.txt",
+      "size": "794477",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Trishasti-Shalaka-Purusa-Caritra-4_djvu.txt",
+      "size": "794957",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Trishasti-Shalaka-Purusa-Caritra-5_djvu.txt",
+      "size": "958701",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Trishasti-Shalaka-Purusa-Caritra-6_djvu.txt",
+      "size": "841020",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/trishasti-shalaka-purusa-caritra-Volume01-06/Trishasti-Shalaka-Purusa-Caritra-1_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "GAEKWAD'S ORIENTAL SERIES \n\n\nPublished under the Authority of \nthe Government of"
+    }
+   }
+  ],
+  "YaśasCam.": [
+   {
+    "identifier": "ttow_yashastilaka-champu-kavya-part-1-chandrika-shrutasagara-suri-by-somadeva-su",
+    "title": "Yashastilaka Champu Kavya Part 1 Chandrika Shrutasagara Suri By Somadeva Suri Shivadatta Vasudeva Panashikar Sanskrit Kavya Bombay 1916 Nirnaya Sagar Press",
+    "year": null,
+    "creator": "Nirnaya Sagar Press",
+    "text_files": [
+     {
+      "name": "Yashastilaka Champu Kavya Part 1 Chandrika Shrutasagara Suri By Somadeva Suri Shivadatta Vasudeva Panashikar Sanskrit Kavya Bombay 1916 - Nirnaya Sagar Press_djvu.txt",
+      "size": "3641750",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/ttow_yashastilaka-champu-kavya-part-1-chandrika-shrutasagara-suri-by-somadeva-su/Yashastilaka%20Champu%20Kavya%20Part%201%20Chandrika%20Shrutasagara%20Suri%20By%20Somadeva%20Suri%20Shivadatta%20Vasudeva%20Panashikar%20Sanskrit%20Kavya%20Bombay%201916%20-%20Nirnaya%20Sagar%20Press_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "CC-0. Agamnigam Digital Preservation Foundation, Chandigarh. १ \n\n\nह री�"
+    }
+   }
+  ],
+  "ĪśānŚiPa.": [
+   {
+    "identifier": "GKxM_ishana-shiva-guru-deva-paddhati-part-2-mantra-pada-trivandrum-72-sanskrit-series",
+    "title": "Ishana Shiva Guru Deva Paddhati Part 2 Mantra Pada Trivandrum 72 Sanskrit Series By Ishana Shiva Guru Deva Mishra Ed. By T. Ganapati Sastri Gurukul Kangri Collecti",
+    "year": null,
+    "creator": "Gurukul Kangri Collecti",
+    "text_files": [
+     {
+      "name": "Ishana Shiva Guru Deva Paddhati Part 2 Mantra Pada Trivandrum 72 Sanskrit Series  By Ishana Shiva Guru Deva Mishra Ed. By T. Ganapati Sastri - Gurukul Kangri Collecti_djvu.txt",
+      "size": "1368711",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/GKxM_ishana-shiva-guru-deva-paddhati-part-2-mantra-pada-trivandrum-72-sanskrit-series/Ishana%20Shiva%20Guru%20Deva%20Paddhati%20Part%202%20Mantra%20Pada%20Trivandrum%2072%20Sanskrit%20Series%20%20By%20Ishana%20Shiva%20Guru%20Deva%20Mishra%20Ed.%20By%20T.%20Ganapati%20Sastri%20-%20Gurukul%20Kangri%20Collecti_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "Gangotri \n\n\nDigitized by Arya Samaj Foundation Chennai and है \n\n\nby Arya Sam"
+    }
+   },
+   {
+    "identifier": "yuFo_isana-shiva-gurudeva-paddhati-of-ishana-shiva-gurudev-mishra-part-3-kriyapada-ts",
+    "title": "Isana Shiva Gurudeva Paddhati Of Ishana Shiva Gurudev Mishra Part 3 Kriyapada TSS By T. Ganapati Shastri Jangamwadi Math Collection",
+    "year": null,
+    "creator": "Jangamwadi Math collection",
+    "text_files": [
+     {
+      "name": "Isana Shiva Gurudeva Paddhati of Ishana Shiva Gurudev Mishra Part 3 Kriyapada TSS by T. Ganapati Shastri - Jangamwadi Math collection_djvu.txt",
+      "size": "1231619",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Isana Shiva Gurudeva Paddhati of Ishana Shiva Gurudev Mishra Part 3 Kriyapada TSS by T. Ganapati Shastri - Jangamwadi Math collection_text.pdf",
+      "size": "46040367",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/yuFo_isana-shiva-gurudeva-paddhati-of-ishana-shiva-gurudev-mishra-part-3-kriyapada-ts/Isana%20Shiva%20Gurudeva%20Paddhati%20of%20Ishana%20Shiva%20Gurudev%20Mishra%20Part%203%20Kriyapada%20TSS%20by%20T.%20Ganapati%20Shastri%20-%20Jangamwadi%20Math%20collection_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nभि च क क म \n| चि 94 ~ १ ५\" = {`= ४ \n| �"
+    }
+   }
+  ],
+  "GuruCandr.": [
+   {
+    "identifier": "Advaita.Siddhi.with.Guru.Chandrika",
+    "title": "Advaita Siddhi with Guru Chandrika [3 Volumes Combined, 1209 Pages, Sanskrit]",
+    "year": "1933",
+    "creator": "Madhusudana Sarasvati",
+    "text_files": [
+     {
+      "name": "Advaita.Siddhi.with.Guru.Chandrika_djvu.txt",
+      "size": "4844382",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Advaita.Siddhi.with.Guru.Chandrika_text.pdf",
+      "size": "56364059",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/Advaita.Siddhi.with.Guru.Chandrika/Advaita.Siddhi.with.Guru.Chandrika_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "५1106151 0 112080८ \n\n\n271612६8] [.10181-छ 2101168 ६1018 \nऽ909हर�"
+    }
+   }
+  ],
+  "RāmC.": [
+   {
+    "identifier": "ybvf_ramacarita-by-abhinanda-edited-by-k-s-ramaswami-sastri-siromani-sanskrit-ga",
+    "title": "Ramacarita By Abhinanda Edited By K S Ramaswami Sastri Siromani Sanskrit Gaekwad Oriental Series Baroda 1930 Oriental Institute",
+    "year": null,
+    "creator": "Oriental Institute",
+    "text_files": [
+     {
+      "name": "Ramacarita By Abhinanda Edited By K S Ramaswami Sastri Siromani Sanskrit Gaekwad Oriental Series Baroda 1930 - Oriental Institute_djvu.txt",
+      "size": "1778423",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Ramacarita By Abhinanda Edited By K S Ramaswami Sastri Siromani Sanskrit Gaekwad Oriental Series Baroda 1930 - Oriental Institute_text.pdf",
+      "size": "27751457",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/ybvf_ramacarita-by-abhinanda-edited-by-k-s-ramaswami-sastri-siromani-sanskrit-ga/Ramacarita%20By%20Abhinanda%20Edited%20By%20K%20S%20Ramaswami%20Sastri%20Siromani%20Sanskrit%20Gaekwad%20Oriental%20Series%20Baroda%201930%20-%20Oriental%20Institute_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "ah \nrach \n\n\nRAMACARITA \nOF \nABHINANDA \n\n\nCritically edited with an introduction "
+    }
+   }
+  ],
+  "TattvPrakā.": [
+   {
+    "identifier": "tattva-prakasika",
+    "title": "Brahmasutra Madhva Bhashya Tattva Prakashika of Jayatirtha",
+    "year": null,
+    "creator": "Jayatirtha",
+    "text_files": [
+     {
+      "name": "tattva prakasika_djvu.txt",
+      "size": "2456138",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/tattva-prakasika/tattva%20prakasika_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "|| अथ प्रथमोऽध्यायः ॥। \n\n\n|| अथ प्र�"
+    }
+   }
+  ],
+  "VedāntKa.": [
+   {
+    "identifier": "VedantaKalpataruPart12VSS13",
+    "title": "Vedanta Kalpataru Part 1 & 2 VSS 13",
+    "year": null,
+    "creator": "Rahul-Adiga(ರಾಹುಲ)",
+    "text_files": [
+     {
+      "name": "Vedanta kalpataru Part 1 & 2 VSS 13_djvu.txt",
+      "size": "3062753",
+      "format": "DjVuTXT"
+     },
+     {
+      "name": "Vedanta kalpataru Part 1 & 2 VSS 13_text.pdf",
+      "size": "65663928",
+      "format": "Additional Text PDF"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/VedantaKalpataruPart12VSS13/Vedanta%20kalpataru%20Part%201%20%26%202%20VSS%2013_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "[)10111260 0\\/ 1/16 1116109 ^\\/6111\\/ \n10 2011 ५110 {4760100 10] \n(।11\\/6815"
+    }
+   }
+  ],
+  "ŚatDū.": [
+   {
+    "identifier": "wBGA_shastra-muktavali-5-shata-dushani-of-sri-vedanta-desika-with-chandamarutha-comme",
+    "title": "Shastra Muktavali 5, Shata Dushani Of Sri Vedanta Desika With Chandamarutha Commentary By P. B. Ananthacharya, ( Sanskrit) Vol 1, 1901, Sri Kanchi Sri Sudarsana Press, Sri Kanchi",
+    "year": null,
+    "creator": "Sri Sudarsana Press, Sri Kanchi",
+    "text_files": [
+     {
+      "name": "Shastra Muktavali - 5, Shata Dushani Of Sri Vedanta Desika With Chandamarutha Commentary By P.B. Ananthacharya, (Sanskrit) Vol 1, 1901, Sri Kanchi - Sri Sudarsana Press, Sri Kanchi_djvu.txt",
+      "size": "1745462",
+      "format": "DjVuTXT"
+     }
+    ],
+    "text_probe": {
+     "url": "https://archive.org/download/wBGA_shastra-muktavali-5-shata-dushani-of-sri-vedanta-desika-with-chandamarutha-comme/Shastra%20Muktavali%20-%205%2C%20Shata%20Dushani%20Of%20Sri%20Vedanta%20Desika%20With%20Chandamarutha%20Commentary%20By%20P.B.%20Ananthacharya%2C%20%28Sanskrit%29%20Vol%201%2C%201901%2C%20Sri%20Kanchi%20-%20Sri%20Sudarsana%20Press%2C%20Sri%20Kanchi_djvu.txt",
+     "http": 200,
+     "sample_bytes": 1024,
+     "sample_start": "मिन \nBans \n\n\nपरश \nमी \n2) \n\n\n| क \n$२६२5९$२$२२:२"
+    }
+   }
+  ]
+ }
+}
