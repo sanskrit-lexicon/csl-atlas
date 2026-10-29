@@ -93,6 +93,14 @@ publishes `dist/` to GitHub Pages.
   `reports/PD_QUOTATION_UNIT_2026-10-18.md` and the `data/pd/README.md` row must move with
   them. `tests/forensic/test_quotation_units.py` holds the rule with **hand-derived**
   expectations — never regenerate those pins from the script they check.
+- **PD locus fields (H7458/C2).** `data/pd/pd_locus_fields.tsv`,
+  `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv` and
+  `pd_locus_fields_summary.json` are generated together by
+  `python3.13 scripts/pd_locus_fields.py --pd <staged pd.txt>`. Reuse H6949's traversal and
+  C1's continuation inheritance; never rewrite their frozen aggregates. Any parser change
+  reruns `--check` plus `tests/forensic/test_pd_locus_fields.py` in the same PR, and every
+  H6949 siglum/continuation marker must remain accounted for in the summary reconciliation.
+  Method and current coverage: `reports/PD_LOCUS_FIELDS_C2_2026-10-29.md`.
 - **PD KoshaSHRI fixture (H7316).** `data/pd/pd_koshashri_entries.tsv` and
   `data/pd/pd_koshashri_citations.tsv` are generated together by
   `scripts/pd_koshashri_fixture_export.py` from the restricted local response through

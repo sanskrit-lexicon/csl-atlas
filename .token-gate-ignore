@@ -21,3 +21,6 @@ data/**
 # blocks every edit to it otherwise. Added 19-10-2026 with the A68 denominator
 # probe (PWG quotation-linked tags, the two 2021 baselines).
 reports/PD_DCS_CORPUS_COVERAGE_2026.md
+
+# Machine-generated /document sweep receipts (not agent-authored prose).
+reports/sweeps/document_sweep_*.json
