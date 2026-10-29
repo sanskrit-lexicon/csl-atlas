@@ -101,8 +101,8 @@ questions.
    variant/editor notes, sense boundaries, and unassigned continuations.
 7. Made the builder fail on any source-hash, population, order, quotation-total, or
    per-class reconciliation drift. `--check` rebuilds and byte-compares all four outputs
-   and checks the report's headline values. More precisely, the comparisons are on parsed
-   TSV rows and JSON values, not raw bytes.
+   and checks the report's headline values.
+   More precisely, the comparisons are on parsed TSV rows and JSON values, not raw bytes.
 
 Commands:
 
