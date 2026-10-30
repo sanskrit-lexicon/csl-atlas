@@ -1,4 +1,4 @@
-# PD × DCS residue status queue: H6722's acquisition queue becomes status-aware (H7298)
+- **PD × DCS residue status queue: H6722's acquisition queue becomes status-aware (H7298).**
 
 The 44 named-residue works (PD-cited, absent from DCS) now carry DCS / GRETIL /
 wisdomlib-portal / wisdomlib-estate state, rights, annotation and fragment status, and

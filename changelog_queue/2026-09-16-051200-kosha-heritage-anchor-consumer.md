@@ -1,4 +1,4 @@
-# kosha heritage_anchor is now the atlas heritage-witness anchor source (H4720, A17 edge live)
+- **kosha heritage_anchor is now the atlas heritage-witness anchor source (H4720, A17 edge live).**
 
 `build-heritage-witness` reads the sibling kosha `heritage_anchor` table
 (read-only `node:sqlite`) with the raw SanskritLexicography crosswalk kept as

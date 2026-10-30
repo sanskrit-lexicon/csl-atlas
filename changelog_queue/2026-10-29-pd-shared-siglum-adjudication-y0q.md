@@ -1,4 +1,4 @@
-# PD shared-siglum adjudication (Y0Q)
+- **PD shared-siglum adjudication (Y0Q).**
 
 Added a claim-level overlay for all **57 shared siglum folds / 230 registry records**
 in the H7296 PD work registry. The first manual pass marks **55 folds resolved** and
