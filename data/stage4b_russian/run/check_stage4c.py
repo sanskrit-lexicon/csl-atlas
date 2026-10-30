@@ -35,6 +35,8 @@ def main():
     check("results JSON parses", RESULTS.exists())
     d = json.loads(RESULTS.read_text(encoding="utf-8"))
 
+    check("results envelope declares a matrix-valid licence", d.get("license") == "CC-BY-SA-4.0" and d.get("licenseUrl", "").startswith("https://creativecommons.org/"))
+
     meta = d.get("run_meta", {})
     check("handoff is H7523", meta.get("handoff") == "H7523")
     check("preregistration names H7518/#687", "H7518" in meta.get("preregistration", "") and "687" in meta.get("preregistration", ""))
