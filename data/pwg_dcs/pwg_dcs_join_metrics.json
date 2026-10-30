@@ -1,0 +1,286 @@
+{
+  "coverage": {
+    "denominators": {
+      "cov_alpha": 77740,
+      "cov_ql": 430570,
+      "text_alpha": 115390,
+      "text_cov_alpha": 73380,
+      "text_cov_ql": 400054,
+      "text_ql": 629718,
+      "total_alpha": 132483,
+      "total_ql": 729719
+    },
+    "pooled_alpha": 58.68,
+    "pooled_omega": 59.0,
+    "stratum_excluded_alpha": 63.59,
+    "stratum_excluded_omega": 63.53
+  },
+  "g5_battery": {
+    "bootstrap_B": 2000,
+    "bootstrap_p2_5": 46.62,
+    "bootstrap_p97_5": 76.08,
+    "bootstrap_seed": 20261030,
+    "denominator_band": {
+      "pooled_751_canon": 59.0,
+      "stratum_excluded": 63.53
+    },
+    "leave_one_out_max": 66.04,
+    "leave_one_out_min": 59.46
+  },
+  "generated_by": "scripts/pwg_dcs_join.py",
+  "grid": {
+    "A68_headline_25_2": 25.16,
+    "H2_per_letter_dispersion_exceeds_PD_fascicles": true,
+    "PD_bootstrap_band": [
+      19.15,
+      31.52
+    ],
+    "contradiction": true,
+    "convergence": false,
+    "coverage_alpha_stratum_excluded": 63.59,
+    "coverage_omega_stratum_excluded": 63.53,
+    "divergence_branch": "above_band"
+  },
+  "h2": {
+    "dispersion_pp": 32.19,
+    "exceeds": true,
+    "pd_fascicle_span_pp": 19.99
+  },
+  "per_letter": [
+    {
+      "coverage_pct": 63.99,
+      "letter": "s",
+      "ql": 75410
+    },
+    {
+      "coverage_pct": 64.22,
+      "letter": "v",
+      "ql": 66121
+    },
+    {
+      "coverage_pct": 61.57,
+      "letter": "p",
+      "ql": 64585
+    },
+    {
+      "coverage_pct": 61.25,
+      "letter": "k",
+      "ql": 42232
+    },
+    {
+      "coverage_pct": 67.38,
+      "letter": "a",
+      "ql": 40825
+    },
+    {
+      "coverage_pct": 60.35,
+      "letter": "m",
+      "ql": 36795
+    },
+    {
+      "coverage_pct": 63.4,
+      "letter": "S",
+      "ql": 32458
+    },
+    {
+      "coverage_pct": 64.99,
+      "letter": "d",
+      "ql": 26376
+    },
+    {
+      "coverage_pct": 61.2,
+      "letter": "n",
+      "ql": 24714
+    },
+    {
+      "coverage_pct": 62.26,
+      "letter": "t",
+      "ql": 20270
+    },
+    {
+      "coverage_pct": 60.24,
+      "letter": "B",
+      "ql": 18839
+    },
+    {
+      "coverage_pct": 62.88,
+      "letter": "g",
+      "ql": 17986
+    },
+    {
+      "coverage_pct": 63.99,
+      "letter": "r",
+      "ql": 17578
+    },
+    {
+      "coverage_pct": 69.05,
+      "letter": "y",
+      "ql": 17421
+    },
+    {
+      "coverage_pct": 66.32,
+      "letter": "h",
+      "ql": 15531
+    },
+    {
+      "coverage_pct": 64.21,
+      "letter": "ā",
+      "ql": 13541
+    },
+    {
+      "coverage_pct": 64.62,
+      "letter": "u",
+      "ql": 12739
+    },
+    {
+      "coverage_pct": 65.92,
+      "letter": "j",
+      "ql": 12479
+    },
+    {
+      "coverage_pct": 63.57,
+      "letter": "c",
+      "ql": 12065
+    },
+    {
+      "coverage_pct": 63.75,
+      "letter": "b",
+      "ql": 11967
+    },
+    {
+      "coverage_pct": 65.01,
+      "letter": "D",
+      "ql": 11652
+    },
+    {
+      "coverage_pct": 54.6,
+      "letter": "l",
+      "ql": 9962
+    },
+    {
+      "coverage_pct": 74.75,
+      "letter": "i",
+      "ql": 6883
+    },
+    {
+      "coverage_pct": 55.38,
+      "letter": "K",
+      "ql": 2799
+    },
+    {
+      "coverage_pct": 72.51,
+      "letter": "e",
+      "ql": 2757
+    },
+    {
+      "coverage_pct": 63.68,
+      "letter": "G",
+      "ql": 2536
+    },
+    {
+      "coverage_pct": 82.8,
+      "letter": "f",
+      "ql": 2285
+    },
+    {
+      "coverage_pct": 60.1,
+      "letter": "C",
+      "ql": 2105
+    },
+    {
+      "coverage_pct": 72.32,
+      "letter": "ī",
+      "ql": 2063
+    },
+    {
+      "coverage_pct": 72.74,
+      "letter": "ū",
+      "ql": 1592
+    },
+    {
+      "coverage_pct": 50.61,
+      "letter": "P",
+      "ql": 1227
+    },
+    {
+      "coverage_pct": 53.21,
+      "letter": "z",
+      "ql": 1060
+    }
+  ],
+  "protocol": "report pwg-nws-pd-dcs-8294e5 §8, pre-registered",
+  "register_sigla": 2680,
+  "strata": {
+    "catalogue_journal": {
+      "coverage_pct": 0.0,
+      "held_works": 0,
+      "ql": 46098,
+      "ql_share_pct": 6.32,
+      "works": 20
+    },
+    "edition_marker": {
+      "coverage_pct": 0.0,
+      "held_works": 0,
+      "ql": 6086,
+      "ql_share_pct": 0.83,
+      "works": 3
+    },
+    "edition_split": {
+      "coverage_pct": 100.0,
+      "held_works": 4,
+      "ql": 5035,
+      "ql_share_pct": 0.69,
+      "works": 4
+    },
+    "grammar": {
+      "coverage_pct": 0.0,
+      "held_works": 0,
+      "ql": 30897,
+      "ql_share_pct": 4.23,
+      "works": 6
+    },
+    "kosha_lexicon": {
+      "coverage_pct": 62.65,
+      "held_works": 6,
+      "ql": 91560,
+      "ql_share_pct": 12.55,
+      "works": 9
+    },
+    "manuscript": {
+      "coverage_pct": 0.0,
+      "held_works": 0,
+      "ql": 3391,
+      "ql_share_pct": 0.46,
+      "works": 17
+    },
+    "primary": {
+      "coverage_pct": 67.23,
+      "held_works": 47,
+      "ql": 502226,
+      "ql_share_pct": 68.82,
+      "works": 2556
+    },
+    "second_hand": {
+      "coverage_pct": 68.69,
+      "held_works": 8,
+      "ql": 44426,
+      "ql_share_pct": 6.09,
+      "works": 65
+    }
+  },
+  "token_view": {
+    "anchor_share_pct": 93.98,
+    "anchor_texts": 118,
+    "anchor_tokens_2026": 4430111,
+    "anchor_tokens_pwgcited": 4163428,
+    "note": "PWG-cited share of the 118-text anchored DCS token mass only; full-corpus token weighting needs a per-text token dump"
+  },
+  "work_level": {
+    "auto_exact_bib_hits": 26,
+    "held_share_pct": 12.62,
+    "held_works": 65,
+    "resolved_works": 515,
+    "unresolved_ql": 29599,
+    "unresolved_works": 2165
+  }
+}

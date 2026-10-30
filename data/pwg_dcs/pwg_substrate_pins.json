@@ -1,0 +1,26 @@
+{
+  "distinct_base_sigla": 2680,
+  "note": "quotation-linked rule = shared unit rule of scripts/pd_quotations_vs_pwg.py; pins must equal 801788 raw / 729719 ql",
+  "pd_frontier": {
+    "last_k1": "apacaya",
+    "pwg_alpha_entries": 24855,
+    "pwg_alpha_ql": 132483,
+    "pwg_omega_ql": 597236
+  },
+  "pwg_txt": {
+    "bytes": 54634244,
+    "path": "/Users/mac/Documents/GitHub/csl-orig/v02/pwg/pwg.txt",
+    "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166"
+  },
+  "registers": {
+    "deprecated_568730": "never used",
+    "deprecated_570817": "never used",
+    "entries": 123366,
+    "quotation_linked": 729719,
+    "raw_ls_tags": 801788,
+    "tags_without_n_attr": {
+      "ql": 0,
+      "raw": 0
+    }
+  }
+}
