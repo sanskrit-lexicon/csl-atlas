@@ -163,6 +163,11 @@ def test_shared_siglum_adjudication_counts_and_residue():
         "data/pd/pd_aob_declared_works.tsv:1962",
         "data/pd/pd_aob_declared_works.tsv:aryasiddhantamahasiddhanta148",
     }
+    residue = {r["siglum_fold"]: r for r in read_tsv("pd_shared_siglum_adjudications.tsv")
+               if r["status"] == "partial"}
+    assert set(residue) == {"aryasi", "tantrsa"}
+    assert all("STOP_INSUFFICIENT_TITLE_EVIDENCE" in r["rationale"]
+               for r in residue.values())
 
 
 def test_shared_siglum_aliases_splits_and_quarantine():

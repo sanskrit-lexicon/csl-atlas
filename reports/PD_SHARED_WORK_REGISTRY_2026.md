@@ -1,6 +1,6 @@
 # PD shared work-and-edition identity registry (H7296, Q3)
 
-_Created: 26-10-2026 · Updated: 29-10-2026 (Y0Q) · Handoff: [H7296](https://github.com/gasyoun/Uprava/blob/main/handoffs/H7296-DeepSeek_csl-atlas_pd-shared-work-registry_26.10.26.md)_
+_Created: 26-10-2026 · Updated: 30-10-2026 (H7459) · Handoff: [H7296](https://github.com/gasyoun/Uprava/blob/main/handoffs/H7296-DeepSeek_csl-atlas_pd-shared-work-registry_26.10.26.md)_
 
 This is the shared PD ↔ PWG / MW work-and-edition identity layer ruled in Q3. It is
 an **identity consumer**: it reads H6992's printed Index (2,031 rows), H6720's
@@ -51,12 +51,16 @@ downstream coverage claim.
 
 All **57 folds** have a claim-level overlay row with evidence and rationale:
 **55 resolved** and **2 partial**. Of the original **230 registry records**, **228**
-were adjudicated; the two unresolved claims are deliberately not guessed:
+were adjudicated; the two unresolved claims are deliberately not guessed. The H7459
+second pass re-inspected the printed Index and AOB source rows and confirmed both
+verdicts as `STOP_INSUFFICIENT_TITLE_EVIDENCE`, so these counts intentionally remain
+unchanged:
 
-- `AOB:aryasiddhantamahasiddhanta148` — the combined Aryasiddhānta/Mahāsiddhānta
-  entry cannot be assigned to only one of the two distinct Index works.
-- `AOB:1962` — only the year fragment survives; the three printed Tantra works
-  remain split, with no title evidence for the AOB claim.
+- `AOB:aryasiddhantamahasiddhanta148` — Index XCII:1 and CXIII:17 print the distinct
+  titles Aryasiddhānta and Mahāsiddhānta, while AOB-0101 preserves an undistributed
+  combined entry; no printed evidence assigns that claim to only one Index work.
+- `AOB:1962` — AOB-1235 preserves only the year fragment; Index C:40–C:42 print three
+  distinct Tantra works, and no title or author evidence identifies the AOB claim.
 
 The overlay makes **22 author/qualifier splits**, **50 explicit alias groups** and
 quarantines **2 OCR/editor fragments** as `aob_ocr_non_work`. The overlay itself is
@@ -122,7 +126,7 @@ and `rerun_in_this_unit = false`.
 
 Inputs pinned by sha256 in the diagnostics file: Index `44ef8d2aa6fb`,
 AOB works `686f75d2601a`, families `d5d0b32ae2f3`, reconciliation `ffaca8a29a8a`,
-PWG bib `a56732bde7a6`, PW bib `5aba81881090`, Y0Q overlay `c3186e768903`.
+PWG bib `a56732bde7a6`, PW bib `5aba81881090`, Y0Q overlay `96fd20f0edc5`.
 
 ## Reproduce
 
@@ -138,10 +142,9 @@ equality; one changed unresolved cell exits 1 and names the first differing line
 ## Limits
 
 - Identity is **siglum-and-title evidence**, not a bibliographic authority
-  record. Two AOB claims still carry `shared_siglum` and need source evidence
-  beyond this first manual pass.
-- Follow-up for those two claims:
-  [H7459](https://github.com/gasyoun/Uprava/blob/main/handoffs/H7459-DeepSeek_csl-atlas_pd-shared-siglum-residue_29.10.26.md).
+  record. Two AOB claims still carry `shared_siglum`; the H7459 second pass
+  preserved both as `STOP_INSUFFICIENT_TITLE_EVIDENCE`, not as unresolved work
+  awaiting a siglum-only guess.
 - AOB joins inherit H6720's classes; 243 AOB works carry an unconfirmed or
   absent join class and are never promoted.
 - One harvest-only work (`ĀtmaU.`) has no sourced title in any input and stays
