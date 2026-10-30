@@ -110,6 +110,8 @@ def main() -> int:
     pin("registry.works", len(registry["works"]), 174)
     pin("registry.fetched", prov["fetched"], SCRAPE_FETCHED)
     pin("registry.html_sha256", prov["html_sha256"], SCRAPE_HTML_SHA)
+    if not registry.get("license"):
+        fails.append("registry copy: no licence envelope (H5303)")
     pin("pins.nws_tar.sha256", pins["nws_tar"]["sha256"], TAR_SHA)
     pin("pins.pwg_txt.sha256", pins["pwg_txt"]["sha256"], PWG_SHA)
     pin("pins.scrape_echo", pins["works_registry_scrape"]["html_sha256"], SCRAPE_HTML_SHA)

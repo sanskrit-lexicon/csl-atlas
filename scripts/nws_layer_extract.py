@@ -97,8 +97,20 @@ def main() -> int:
                  "html sha 86c9495e…, 174 works)")
 
     OUT.mkdir(parents=True, exist_ok=True)
+    # verbatim copy + the H5303 licence envelope (additive top-level keys;
+    # works/provenance content untouched — see data/nws_layer/README.md)
+    registry_copy = dict(registry_doc)
+    registry_copy["license"] = "CC-BY-SA-4.0"
+    registry_copy["licenseUrl"] = ("https://creativecommons.org/licenses/"
+                                   "by-sa/4.0/")
+    registry_copy["copied_from"] = {
+        "repo": "gasyoun/kosha", "path": "data/nws/nws_works_registry.json",
+        "note": "dated scrape copied verbatim; licence envelope additive "
+                "(H5303); rights see provenance.rights",
+    }
     (OUT / "nws_works_registry.json").write_text(
-        json.dumps(registry_doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        json.dumps(registry_copy, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8")
 
     index = nip.WorksIndex(registry_doc["works"])
 

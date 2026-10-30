@@ -12,7 +12,7 @@ Every published number regenerates from these files under
 |---|---|
 | `nws_headword_mass.tsv` | 34,101 rows: per-key1 senses/sigla/page-precise/literature refs + X(MW) tracer counts |
 | `nws_works_attestation.tsv` | 174 rows: the declared-vs-exercised test (exact/fuzzy citations, attested flag) |
-| `nws_works_registry.json` | the dated scrape (fetched 2026-10-06, html sha `86c9495e…`), verbatim |
+| `nws_works_registry.json` | the dated scrape (fetched 2026-10-06, html sha `86c9495e…`): works/provenance verbatim, licence envelope additive (H5303) |
 | `pwg_headword_ql.tsv` | 123,366 rows: per-k1 PWG raw/quotation-linked mass (entry-family sums at join) |
 | `nws_letter_envelope.tsv` | key-space envelope per letter (48 letters, full-alphabet digitization) |
 | `nws_x_mw_census.tsv` | the X(MW) internal-source family (41 kinds) |
