@@ -9,11 +9,11 @@ _Created: 30-10-2026 · Scope: all 1,622 siglum-bearing Index rows and all 391,4
 | Work identity | **1,615 / 1,622** | **99.57 %** | Index row has an H7296 `PDW-…` work identity |
 | AOB edition identity | **815 / 1,622** | **50.25 %** | H7296 edition edge, or C1's explicit AOB-exact entry |
 | AOB-exact scan target | **14 / 1,622 rows** | **0.86 %** | Live image URL for a C1-confirmed AOB edition |
-| Locus → unique scan page | **1,660 / 23,491 AOB-exact C2 pairs** | **7.07 %** | Printed-page image resolved without a part/page ambiguity |
+| Locus → unique scan page | **5,323 / 23,491 AOB-exact C2 pairs** | **22.66 %** | Printed-page image resolved without a part/page ambiguity |
 
 The 14 scan-bearing Index rows represent **13 distinct works**: `VīraMi.` occupies two printed
 Index rows. The AOB-exact locus population is **23,491 of all 391,444 C2 pairs (6.00 %)**;
-the 1,660 resolved pairs are **0.42 % of all C2 pairs**. This is a lower bound bounded by
+the 5,323 resolved pairs are **1.36 % of all C2 pairs**. This is a lower bound bounded by
 C1's exact-edition evidence and by the quality of Archive.org page labels, not an absence census.
 
 The table also retains a separate `index_scan_url` for **all 1,622 rows**. That URL opens the
@@ -45,50 +45,69 @@ For locus resolution, a URL is emitted only when all four conditions hold:
 2. C1 identifies the edition as `aob_exact`.
 3. The AOB locus scheme contains a printed page (`Page, Line`, `Page, Śloka`, or
    `Volume, Page, Line`).
-4. Archive.org scandata maps that page to one unambiguous leaf inside a run of at least three
-   consecutive printed-page labels.
+4. Either Archive.org scandata maps that page to one unambiguous leaf inside a run of at least
+   three consecutive labels, or a committed visual range maps it inside a multiply anchored
+   printed-page sequence.
 
 A resolved target is a **page-level** link. It does not claim line-level placement, quotation
-fidelity, or that PD's reading matches the scan. Three image-level spot checks also matched
-the printed numerals on the pages: `VīraMi. n5 → 386`, `SmṛtiCan. n7 → 3`, and
-`RasGaṅ. n67 → 6`.
+fidelity, or that PD's reading matches the scan. Three scandata spot checks matched
+`VīraMi. n5 → 386`, `SmṛtiCan. n7 → 3`, and `RasGaṅ. n67 → 6`.
+
+The visual extension adds six ranges over four works. Every range has repeated image anchors;
+unstable early sections and later resets stay outside the map.
+
+| Siglum / part | Accepted leaves | Printed pages | Pages per leaf |
+|---|---:|---:|---:|
+| `Prasā.` part I | 200–977 | 148–925 | 1 |
+| `Prasā.` part II | 305–805 | 297–797 | 1 |
+| `Bhām.` | 5–650 | 97–742 | 1 |
+| `Aparā.` | 10–500 | 11–501 | 1 |
+| `Vaija.` | 5–150 | 2–293 | 2 |
+
+`Vaija.` is explicitly a two-page scan: left and right pages receive separate numbers but share
+the leaf URL. Its range stops at leaf 150; a later two-page gap is not bridged. `Aparā.` is
+confirmed through page 501. The `Prasā.` ranges use only their stable segments, not the
+insertion-heavy openings.
 
 ## 4. Locus resolution by work
 
 | Principal siglum | AOB-exact C2 pairs | Unique scan page | Share within work |
 |---|---:|---:|---:|
+| `Vaija.` | 1,175 | **1,169** | 99.49 % |
+| `Prasā.` | 1,487 | **1,116** | 75.05 % |
 | `RasGaṅ.` | 1,235 | **1,166** | 94.41 % |
+| `Bhām.` | 1,475 | **1,016** | 68.88 % |
+| `Aparā.` | 1,293 | **362** | 28.00 % |
 | `VīraMi.` | 3,590 | **357** | 9.94 % |
 | `SmṛtiCan.` | 1,794 | **137** | 7.64 % |
-| Other ten exact-edition works | 16,872 | **0** | 0 % |
-| **Total** | **23,491** | **1,660** | **7.07 %** |
+| Other six exact-edition works | 11,442 | **0** | 0 % |
+| **Total** | **23,491** | **5,323** | **22.66 %** |
 
 The zeroes are explained, not treated as missing works. `HarVi.` uses sarga/śloka and
-`Subhāṣi.` śloka alone, so their loci carry no page coordinate. Several other witnesses have
-no numeric printed-page labels in scandata.
+`Subhāṣi.` śloka alone, so their loci carry no page coordinate.
 
-Two initially tempting classes were deliberately excluded after range inspection:
+Two initially tempting classes remain excluded after range inspection:
 
 - **`BālamBha.`** — leaves 1072–1126 restart at pages 2–56. That late reset cannot be equated
   with the main pagination, so no links are emitted from it.
 - **`VedāntKa.`** — the combined parts repeat and incompletely label pagination, while PD's
   locus has no part coordinate. Even a locally unique label cannot prove the correct part.
 
-The committed page map contains **967 candidates**: **921 unique** and **46 ambiguous
-duplicates**. Only the unique class is eligible, and only inside the three accepted
-main-pagination maps above.
+The committed page map contains **3,675 candidates**: **3,629 unique** and **46 ambiguous
+duplicates**. Only the unique class is eligible, inside either the three scandata maps or the
+six visually anchored ranges above.
 
 ## 5. Complete unresolved-locus accounting
 
 | Reason | C2 pairs |
 |---|---:|
-| Printed page not mapped / excluded / absent from the scanned portion | 11,317 |
+| Printed page not mapped / excluded / absent from the scanned portion | 7,654 |
 | Required volume not present in the verified scan set | 7,806 |
 | Non-page locus scheme (`sarga/śloka`, śloka only) | 2,499 |
 | Locus syntax outside the bounded page parser | 118 |
 | Ambiguous duplicate printed page | 53 |
 | Volume required but absent in the PD locus | 38 |
-| **Unique printed-page target** | **1,660** |
+| **Unique printed-page target** | **5,323** |
 | **Total AOB-exact C2 pairs** | **23,491** |
 
 “Unresolved” therefore names the failed link stage. It does not mean that the work or edition
@@ -98,9 +117,11 @@ is unavailable, and it does not convert missing scandata labels into an absence 
 
 - [`pd_aob_scan_targets.tsv`](../data/pd/pd_aob_scan_targets.tsv) — all 1,622 Index rows, with separate work, edition, exact-scan and Index-scan fields.
 - [`pd_aob_locus_scan_resolution.tsv`](../data/pd/pd_aob_locus_scan_resolution.tsv) — all 23,491 AOB-exact C2 pairs, target or explicit unresolved reason.
-- [`pd_aob_scan_page_map.tsv`](../data/pd/pd_aob_scan_page_map.tsv) — 967 printed-page candidates, unique and duplicate status preserved.
+- [`pd_aob_scan_page_map.tsv`](../data/pd/pd_aob_scan_page_map.tsv) — 3,675 printed-page candidates, unique and duplicate status preserved.
+- [`pd_aob_scan_ranges.tsv`](../data/pd/pd_aob_scan_ranges.tsv) — six bounded visual ranges, including `Vaija.`'s two-page scans.
+- [`pd_aob_scan_range_anchors.tsv`](../data/pd/pd_aob_scan_range_anchors.tsv) — the repeated image observations supporting those ranges.
 - [`pd_aob_scan_editions.tsv`](../data/pd/pd_aob_scan_editions.tsv) — 14 curated C1-exact Archive.org items, volume, locus scheme and map-scope decision.
-- [`pd_aob_scan_probes_2026-10-30.json`](../data/pd/pd_aob_scan_probes_2026-10-30.json) — metadata/scandata hashes and live image receipts.
+- [`pd_aob_scan_probes_2026-10-30.json`](../data/pd/pd_aob_scan_probes_2026-10-30.json) — metadata/scandata hashes, visual range anchors and live image receipts.
 - [`pd_aob_scan_links_summary.json`](../data/pd/pd_aob_scan_links_summary.json) — protocol, all headline measures, per-work and per-reason aggregates, input hashes.
 - [`scripts/pd_aob_scan_links.py`](../scripts/pd_aob_scan_links.py) — deterministic builder/checker; Archive.org refresh is a separate explicit mode.
 - [`tests/forensic/test_pd_aob_scan_links.py`](../tests/forensic/test_pd_aob_scan_links.py) — hand-derived parser/map controls and full-population reconciliation.
@@ -120,7 +141,7 @@ python3.13 scripts/pd_aob_scan_links.py --fetch-archive
 Expected check:
 
 ```text
-PASS C3 Index work 1615/1,622; edition 815/1,622; scan 14/1,622; loci 1660/23491 = 7.07% AOB-exact
+PASS C3 Index work 1615/1,622; edition 815/1,622; scan 14/1,622; loci 5323/23491 = 22.66% AOB-exact
 ```
 
 ## 8. Limits and next increment
@@ -129,9 +150,9 @@ PASS C3 Index work 1615/1,622; edition 815/1,622; scan 14/1,622; loci 1660/23491
   looser promotion of C1's work-level witnesses.
 - **Identity is not yet human-reviewed.** H7296's `unvalidated_pending_double_annotation`
   status is inherited; C3 claims no κ and no independent precision estimate.
-- **Page labels are not uniform.** A useful next acquisition pass is printed-page verification
-  for the no-label witnesses, beginning with `Prasā.`, `Bhām.`, `Aparā.` and `Vaija.`.
+- **Visual ranges remain bounded.** The next page-map increment is the unstable opening of
+  `Prasā.` and `Aparā.` beyond page 501, not an extrapolation from the accepted ranges.
 - **No content match is claimed.** Comparing PD's quoted reading with the scan is a later
-  quotation-alignment task, not part of the 1,660-link numerator.
+  quotation-alignment task, not part of the 5,323-link numerator.
 
 _30-10-2026 — Kimi Work; C3 full-population identity projection, live Archive.org scan probes, and conservative printed-page resolution._

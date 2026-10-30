@@ -2,6 +2,8 @@
 """Archive.org image probes and conservative scandata labels for PD C3."""
 from __future__ import annotations
 
+import csv
+import os
 import re
 import time
 import urllib.request
@@ -73,3 +75,26 @@ def monotonic_page_candidates(scandata):
     if len(run) >= 3:
         accepted.extend(run)
     return accepted, len(labelled)
+
+
+def visual_range_candidates(ranges):
+    """Expand only visually anchored ranges; two-page scans use page_step=2."""
+    candidates = []
+    for row in ranges:
+        first_leaf = int(row["leaf_first"])
+        for leaf in range(first_leaf, int(row["leaf_last"]) + 1):
+            page = int(row["printed_page_first"]) + (leaf - first_leaf) * int(row["printed_page_step"])
+            candidates.append({
+                "siglum": row["siglum"], "archive_id": row["archive_id"],
+                "volume": row["volume"], "printed_page": page, "leaf": leaf,
+                "target_status": "", "scan_url": scan_url(row["archive_id"], leaf),
+                "map_basis": row["map_basis"],
+            })
+    return candidates
+
+
+def compare_tsv(path, columns, expected):
+    with open(path, encoding="utf-8", newline="") as fh:
+        actual = list(csv.DictReader(fh, delimiter="\t"))
+    normalized = [{c: str(row.get(c, "")) for c in columns} for row in expected]
+    return [] if actual == normalized else [os.path.basename(path) + " differs from rebuilt rows"]

@@ -107,7 +107,9 @@ publishes `dist/` to GitHub Pages.
   ordinary builds and `--check` offline. Only `--fetch-archive` refreshes Archive.org evidence.
   Keep work identity, AOB edition identity, Index scan URLs and locus-level page resolution
   separate. Emit a locus link only for a page-bearing AOB scheme and a unique printed-page
-  label in an accepted main-pagination run; late resets and multipart resets stay unresolved.
+  label in an accepted main-pagination run or a multiply anchored visual range in
+  `pd_aob_scan_ranges.tsv`; two-page scans carry two page numbers per leaf. Late resets,
+  multipart resets and unanchored gaps stay unresolved.
   Method: `reports/PD_AOB_SCAN_LINKS_C3_2026-10-30.md`.
 - **PD KoshaSHRI fixture (H7316).** `data/pd/pd_koshashri_entries.tsv` and
   `data/pd/pd_koshashri_citations.tsv` are generated together by

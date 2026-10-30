@@ -41,7 +41,8 @@ ROMAN = set("i ii iii iv v vi vii viii ix x".split())
 
 sys.path.insert(0, os.path.join(ROOT, "scripts", "lib"))
 from pd_aob_scan_archive import (  # noqa: E402
-    fetch_bytes, monotonic_page_candidates, numeric_page, probe_image, scan_url,
+    compare_tsv, fetch_bytes, monotonic_page_candidates, numeric_page, probe_image,
+    scan_url, visual_range_candidates,
 )
 
 
@@ -103,6 +104,8 @@ def fetch_archive():
             "title_page_probe": probe_image(ident, 0),
         })
         time.sleep(0.25)
+    candidates.extend(visual_range_candidates(read_tsv("pd_aob_scan_ranges.tsv")))
+    receipts["visual_range_anchors"] = read_tsv("pd_aob_scan_range_anchors.tsv")
     grouped = collections.defaultdict(list)
     for row in candidates:
         grouped[(row["siglum"], row["volume"], row["printed_page"])].append(row)
@@ -278,13 +281,13 @@ def build():
             "work_identity": "H7296 primary_work record for each printed Index row; structural sigla stay unresolved",
             "edition_identity": "H7296 edition_of_declared_work records, or C1's explicit aob_exact entry where the conservative registry has no edge; never inferred from work-level availability",
             "scan_target": "C1 aob_exact Archive.org witness with a live page/n0.jpg probe; item details URLs are not scan targets",
-            "locus_resolution": "C2 pair + AOB page-bearing locus scheme + unique printed-page label in a monotonic Archive.org scandata run",
+            "locus_resolution": "C2 pair + AOB page-bearing scheme + unique page in a monotonic scandata run or a visually anchored range",
             "duplicate_rule": "repeated printed-page labels in different parts remain ambiguous",
             "unknown_rule": "missing edition, missing scan, non-page locus and unmapped page are distinct unresolved classes, never absence verdicts",
         },
         "evidenceLevels": {
             "identity_and_aggregates": "derived", "archive_probes": "observed",
-            "page_map": "derived_from_archive_scandata", "human_review": "none",
+            "page_map": "derived_from_scandata_and_visual_range_anchors", "human_review": "none",
         },
         "index": {
             "siglum_rows": len(targets), "work_identity_resolved": work_resolved,
@@ -314,6 +317,7 @@ def build():
         },
         "inputs": {name: sha256(os.path.join(DATA, name)) for name in (
             "pd_aob_scan_editions.tsv", "pd_aob_scan_page_map.tsv",
+            "pd_aob_scan_ranges.tsv", "pd_aob_scan_range_anchors.tsv",
             "pd_aob_scan_probes_2026-10-30.json", "pd_edition_availability_by_siglum.tsv",
             "pd_work_registry.tsv", "pd_work_edition_map.tsv", "pd_index_works.tsv",
             "pd_index_works_by_page.tsv", "pd_locus_fields.tsv",
@@ -326,16 +330,6 @@ def build():
         ],
     }
     return targets, loci, summary
-
-
-def compare_tsv(path, columns, expected):
-    problems = []
-    with open(path, encoding="utf-8", newline="") as fh:
-        actual = list(csv.DictReader(fh, delimiter="\t"))
-    normalized = [{c: str(row.get(c, "")) for c in columns} for row in expected]
-    if actual != normalized:
-        problems.append(os.path.basename(path) + " differs from rebuilt rows")
-    return problems
 
 
 def main(argv=None):
