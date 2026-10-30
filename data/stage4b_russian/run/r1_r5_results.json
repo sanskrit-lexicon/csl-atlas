@@ -1,0 +1,133 @@
+{
+ "run_meta": {
+  "handoff": "H7523",
+  "preregistration": "H7518 / PR sanskrit-lexicon/csl-atlas#687 (data/stage4b_russian/)",
+  "licence_gate": "released by MG ruling 30-10-2026 ('yes' to the Stage 4b closer): private hash-verified analysis in scope; DB not redistributed",
+  "dump_expected_sha256": "532cad47eb4e3a2c12161a2402ae645d166ea35dcf96d2a7429c8e84400685fc",
+  "computed_utc": "2026-10-30T20:59:47Z",
+  "unit_convention": "citation mass by normalised siglum = first comma-segment of Sources.Sokr, whitespace-collapsed (pre-registered, declared at compute time)",
+  "random_state": 7523
+ },
+ "join_view": {
+  "joined_examples": 10318,
+  "distinct_siglum_groups_cited": 825,
+  "note": "same 10,318 joined examples as the Stage 4b denominator set"
+ },
+ "R1": {
+  "hypothesis": "mass per cited siglum is extreme-right-skewed; top decile concentrates, near-zero tail",
+  "falsifier": "top-decile share < 2x uniform (0.20) OR decile shares linear in rank",
+  "n_siglum_groups": 825,
+  "top_decile_mass_share": 0.5701,
+  "bottom_half_mass_share": 0.072301,
+  "gini": 0.6973,
+  "decile_shares_desc": [
+   0.57007,
+   0.17038,
+   0.09236,
+   0.05718,
+   0.03731,
+   0.02617,
+   0.01715,
+   0.01337,
+   0.00795,
+   0.00804
+  ],
+  "decile_linearity_r2": 0.5099,
+  "top10_sigla": [
+   [
+    "Библ.",
+    442
+   ],
+   [
+    "Шестоднев Ио.екз.1",
+    269
+   ],
+   [
+    "Пов.Мерк.Смол.(Б.)",
+    256
+   ],
+   [
+    "Хрон.Г.Амарт.",
+    198
+   ],
+   [
+    "Лавр.лет.",
+    189
+   ],
+   [
+    "Назиратель",
+    162
+   ],
+   [
+    "Гр.Наз.",
+    156
+   ],
+   [
+    "Моск.лет.",
+    148
+   ],
+   [
+    "Ефр.корм.I",
+    144
+   ],
+   [
+    "Патерик Син.",
+    139
+   ]
+  ],
+  "adjudication": "SUPPORTED (skew confirmed; falsifier not fired)",
+  "falsifier_fired": false
+ },
+ "R3": {
+  "hypothesis": "source-density rankings on the C-half vs T-half of the SAME dump diverge materially — partial-apparatus artefact demo",
+  "falsifier": "rankings coincide (rho ~ 1) — metric choice then carries no apparatus artefact",
+  "n_sigla_c_half": 653,
+  "n_sigla_t_half": 663,
+  "n_shared_sigla": 496,
+  "spearman_rho": 0.7444,
+  "p_value": 1.1121467615224161e-88,
+  "operationalisation": "material divergence declared as rho < 0.90 on shared sigla (declared at compute time, before looking: the ONP a-em lesson predicts instability)",
+  "adjudication": "SUPPORTED (halves diverge: partial-apparatus rankings are apparatus artefacts)",
+  "falsifier_fired": false
+ },
+ "R4": {
+  "hypothesis": "word-, meaning-, example- and row-density-weighted source rankings diverge materially",
+  "falsifier": "all pairwise rho ~ 1 (coincidence) — metric choice then carries no information",
+  "n_siglum_groups": 825,
+  "pairwise_spearman": {
+   "word_weighted__meaning_weighted": 0.9996,
+   "word_weighted__example_weighted": 0.9986,
+   "word_weighted__row_density_weighted": 0.5698,
+   "meaning_weighted__example_weighted": 0.9991,
+   "meaning_weighted__row_density_weighted": 0.5719,
+   "example_weighted__row_density_weighted": 0.5727
+  },
+  "min_pairwise_rho": 0.5698,
+  "top100_jaccard_word_vs_example": 0.9802,
+  "operationalisation": "material divergence declared as min pairwise rho < 0.95",
+  "adjudication": "SUPPORTED (weightings diverge — metric choice carries information)",
+  "falsifier_fired": false
+ },
+ "R2": {
+  "hypothesis": "declared-complete canonical texts show an order-of-magnitude density advantage over same-genre selective sources",
+  "pre_declared_fallback": "if no declaration is recoverable from the printed front matter, R2 is reclassified UNTESTABLE-ON-THIS-SUBSTRATE before the run, never silently adapted",
+  "declaration_hits": [],
+  "excerption_class_columns": [],
+  "adjudication": "UNTESTABLE-ON-THIS-SUBSTRATE (no declared complete-excerption list recoverable: zero declaration hits in the open-code clone, no excerption-class column in Sources; the printed dictionary's front matter is out-of-band for this run)",
+  "falsifier_fired": null
+ },
+ "R5": {
+  "hypothesis": "which declared sources are never exercised is predictable from genre/date/Lang profile, not random",
+  "falsifier": "CV-AUC ~ 0.5 (chance)",
+  "adjudication": "UNTESTABLE-IN-PRE-REGISTERED-DIRECTION (vacuous negatives)",
+  "falsifier_fired": null,
+  "reason": "single class after grouping: essentially every declared source row/group is exercised by joined examples — there is no never-exercised set to predict",
+  "evidence": {
+   "declared_source_rows": 8400,
+   "cited_source_rows": 8399,
+   "never_cited_source_rows": 1
+  },
+  "observed_inversion": "the dump's asymmetry runs OPPOSITE to the ONP shape: exercised (11,477 distinct source IDs across all examples, incl. 14,087 examples citing IDs absent from Sources) >> declared (8,400 rows / ~825 siglum groups) — the Sources table reads as a BY-PRODUCT of the excerpting (a slice-generated list), not an independent catalogue that could have absences",
+  "implication": "the independence-weakening recorded at Stage 4b is stronger than assumed: corpus side == exercised side on this substrate"
+ }
+}
