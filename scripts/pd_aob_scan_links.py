@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""C3 PD AOB scan links. Offline build/--check; network only --fetch-archive."""
+"""C3 PD AOB scan links. Offline checks; explicit network refresh."""
 from __future__ import annotations
 
 import argparse
@@ -69,7 +68,9 @@ def sha256(path):
 def fetch_archive():
     editions = read_tsv("pd_aob_scan_editions.tsv")
     candidates = []
-    receipts = {"dataset": "pd_aob_scan_c3", "generated_on": "2026-10-30",
+    receipts = {"dataset": "pd_aob_scan_c3", "license": "CC-BY-SA-4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "generated_on": "2026-10-30",
                 "protocol": "Archive.org metadata + scandata; monotonic printed-page runs only",
                 "items": [], "locus_page_samples": []}
     for edition in editions:
