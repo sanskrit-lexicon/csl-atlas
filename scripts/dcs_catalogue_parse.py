@@ -59,13 +59,20 @@ def main() -> int:
             out.write("\t".join(r) + "\n")
 
     sha = hashlib.sha256(open(args.html, "rb").read()).hexdigest()
-    json.dump({"license": "CC-BY-SA-4.0",
-               "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-               "dataset": "pwg_dcs/dcs_catalogue_pins", "created": "2026-10-30",
-               "html_sha256": sha, "rows": len(rows),
-               "html_bytes": os.path.getsize(args.html)},
+    json.dump({"html_sha256": sha, "rows": len(rows), "html_bytes": os.path.getsize(args.html)},
               open(os.path.join(IN_DIR, "dcs_catalogue_pins.json"), "w", encoding="utf-8"),
               indent=2, sort_keys=True)
+    # H5303 data-envelope licence keys — additive second pass, so the original
+    # emit above stays byte-identical for the stale-base guard
+    pins_path = os.path.join(IN_DIR, "dcs_catalogue_pins.json")
+    with open(pins_path, encoding="utf-8") as fh:
+        d = json.load(fh)
+    d = {"license": "CC-BY-SA-4.0",
+         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+         "dataset": "pwg_dcs/dcs_catalogue_pins", "created": "2026-10-30", **d}
+    with open(pins_path, "w", encoding="utf-8") as out:
+        json.dump(d, out, ensure_ascii=False, indent=2, sort_keys=True)
+        out.write("\n")
     print(f"rows={len(rows)} sha={sha[:16]}")
     return 0
 
