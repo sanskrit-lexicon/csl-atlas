@@ -61,4 +61,40 @@ if [ -n "$staged_md" ] && [ -f "$(git rev-parse --show-toplevel)/scripts/check_p
     python3 "$(git rev-parse --show-toplevel)/scripts/check_prose_number_drift.py" --check $staged_md || exit 1
 fi
 
+# changelog_queue fragment shape gate (H7467, 30-10-2026) — refuse a
+# malformed queue fragment at commit time, while its author is present and
+# the fix is one keystroke. PRs #670/#674 repaired eight hand-written
+# malformed fragments days after they landed; the release consumer
+# (Uprava tools/cut_release.py) only WARNs and skips them at cut time.
+# The validator is CONSUMED from the canonical Uprava parser via
+# scripts/changelog_queue_shape_gate.py (sibling checkout ../Uprava or
+# $UPRAVA_TOOLS) — never copied into this public repo. The gate degrades
+# to a loud WARNING + pass when the parser is absent (public clones).
+# Escape hatch:  ALLOW_CHANGELOG_QUEUE_SHAPE=1 git commit ...
+if [ -z "${ALLOW_CHANGELOG_QUEUE_SHAPE:-}" ]; then
+    if git diff --cached --name-only --diff-filter=ACMR | grep -qE '^changelog_queue/.*\.md$'; then
+        SHAPE_GATE="$(git rev-parse --show-toplevel)/scripts/changelog_queue_shape_gate.py"
+        # python3 can be a Windows Store stub that exists in PATH but cannot
+        # run — probe with --version and fall through to `python`.
+        SHAPE_PY=""
+        for _cand in python3 python; do
+            if command -v "$_cand" >/dev/null 2>&1 && "$_cand" --version >/dev/null 2>&1; then
+                SHAPE_PY="$_cand"
+                break
+            fi
+        done
+        if [ ! -f "$SHAPE_GATE" ]; then
+            echo "pre-commit: WARNING changelog_queue shape gate SKIPPED: $SHAPE_GATE missing." >&2
+        elif [ -z "$SHAPE_PY" ]; then
+            echo "pre-commit: WARNING changelog_queue shape gate SKIPPED: no working python3/python on PATH." >&2
+        else
+            SHAPE_STATUS=0
+            "$SHAPE_PY" "$SHAPE_GATE" --staged || SHAPE_STATUS=$?
+            if [ "$SHAPE_STATUS" -ne 0 ]; then
+                exit 1
+            fi
+        fi
+    fi
+fi
+
 exit 0
