@@ -47,6 +47,17 @@ class ScanLinkRuleTests(unittest.TestCase):
         self.assertEqual(c3.parse_page_locus("2349", "sloka_only"),
                          (None, None, "non_page_locus_scheme"))
 
+    def test_two_page_visual_range_expands_both_sides(self):
+        ranges = [{"siglum": "X.", "archive_id": "item", "volume": "",
+                   "leaf_first": "5", "leaf_last": "5", "printed_page_first": "2",
+                   "printed_page_step": "2", "map_basis": "visual_test"}]
+        rows = c3.visual_range_candidates(ranges)
+        self.assertEqual([(r["leaf"], r["printed_page"]) for r in rows], [(5, 2)])
+        ranges[0]["printed_page_first"] = "3"
+        rows = c3.visual_range_candidates(ranges)
+        self.assertEqual(rows[0]["printed_page"], 3)
+        self.assertEqual(rows[0]["map_basis"], "visual_test")
+
 
 class ScanLinkPopulationTests(unittest.TestCase):
     @classmethod
@@ -70,12 +81,20 @@ class ScanLinkPopulationTests(unittest.TestCase):
         self.assertEqual(len(self.loci), loci["aob_exact"])
         self.assertEqual(sum(loci["by_reason"].values()), len(self.loci))
         self.assertEqual(loci["by_reason"]["printed_page_unique"], loci["resolved_scan_pages"])
+        self.assertEqual(loci["resolved_scan_pages"], 5323)
 
     def test_multipart_and_late_reset_scans_are_not_promoted(self):
         resolved = {r["principal_siglum"] for r in self.loci if r["resolution_status"] == "resolved"}
-        self.assertEqual(resolved, {"VīraMi.", "SmṛtiCan.", "RasGaṅ."})
+        self.assertEqual(resolved, {"VīraMi.", "SmṛtiCan.", "RasGaṅ.", "Prasā.",
+                                    "Bhām.", "Aparā.", "Vaija."})
         for siglum in ("BālamBha.", "VedāntKa.", "HarVi.", "Subhāṣi."):
             self.assertEqual(self.summary["loci"]["by_siglum"][siglum]["resolved"], 0)
+
+    def test_vaija_stops_before_the_unmapped_two_page_gap(self):
+        targets = [r for r in self.loci if r["principal_siglum"] == "Vaija." and r["resolution_status"] == "resolved"]
+        self.assertEqual(len(targets), 1169)
+        self.assertTrue(all(int(r["printed_page"]) <= 293 for r in targets))
+        self.assertTrue(all("/page/n" in r["scan_url"] for r in targets))
 
     def test_every_resolved_locus_has_a_distinct_page_image_target(self):
         for row in self.loci:
