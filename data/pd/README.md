@@ -324,6 +324,28 @@ Builder/check: `python3.13 scripts/pd_locus_fields.py --pd <pd.txt>` and the sam
 with `--check`; controls: `python -m pytest tests/forensic/test_pd_locus_fields.py -q`.
 Write-up: [reports/PD_LOCUS_FIELDS_C2_2026-10-29.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md).
 
+## AOB edition and scan-page links (C3, 30-10-2026)
+
+C3 keeps three measures separate: **1,615 / 1,622** Index sigla have work identity,
+**815 / 1,622** have AOB edition identity, and **14 rows / 13 works** have a live
+AOB-exact scan target. Among the 23,491 AOB-exact C2 pairs, **1,660 = 7.07 %** resolve
+to a unique printed-page image (0.42 % of all 391,444 C2 pairs). Index-page URLs are
+present for all 1,622 rows but are never counted as AOB-edition targets.
+
+| File | What it is |
+|---|---|
+| [pd_aob_scan_targets.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_targets.tsv) | all 1,622 Index rows with work, edition, AOB-exact scan and Index-scan fields kept separate |
+| [pd_aob_locus_scan_resolution.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_locus_scan_resolution.tsv) | all 23,491 AOB-exact C2 pairs with a unique scan-page target or named unresolved reason |
+| [pd_aob_scan_page_map.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_page_map.tsv) | 967 printed-page candidates from accepted main-pagination runs; duplicates stay ambiguous |
+| [pd_aob_scan_editions.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_editions.tsv) | 14 C1-exact Archive.org items with volume, locus scheme and map-scope decisions |
+| [pd_aob_scan_probes_2026-10-30.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_probes_2026-10-30.json) | metadata/scandata hashes and live image-probe receipts |
+| [pd_aob_scan_links_summary.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_links_summary.json) | protocol, three identity/link measures, complete locus accounting and input hashes |
+
+Offline builder/check: `python3.13 scripts/pd_aob_scan_links.py` and the same command
+with `--check`; explicit network refresh: `--fetch-archive`; controls:
+`python3.13 -m pytest tests/forensic/test_pd_aob_scan_links.py -q`. Write-up:
+[reports/PD_AOB_SCAN_LINKS_C3_2026-10-30.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_AOB_SCAN_LINKS_C3_2026-10-30.md).
+
 ## Method-ladder M1/M2 annotation packets (29-10-2026)
 
 | File | What it is |
