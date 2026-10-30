@@ -12,5 +12,5 @@
   "pd_dcs_metrics.json": "260593574cea35626f91a37e9be9778ce503f515343bd9bdc2c547f845b2edc0",
   "pd_index_works_siglum_delta.tsv": "24732e94cae0ead51e3d21b47836cc5b91da760746dc74465a11549f91de0035"
  },
- "rule": "no percentage without its base in the same row; aob_clean_subset_editions is a floor and must never be quoted"
+ "rule": "no percentage without its base in the same row and its kind in pct_kind — covered_over_value (118/N over this row's own value) vs share_of_base (this row's value over its base); aob_clean_subset_editions is a floor and must never be quoted"
 }

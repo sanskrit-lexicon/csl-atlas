@@ -1,4 +1,4 @@
-_Created: 24-10-2026 · Last updated: 24-10-2026_
+_Created: 24-10-2026 · Last updated: 31-10-2026_
 
 ---
 title: PD — Poona Dictionary / EDSHP (1948–, unfinished)
@@ -10,8 +10,8 @@ title: PD — Poona Dictionary / EDSHP (1948–, unfinished)
 
 ## Trust Block
 
-- **Evidence:** committed `data/pd/` artifacts — `pd_quotations_vs_pwg.tsv` (4,093 shared lemmas), `pd_volume_homogeneity.tsv` (35 ledger rows, 24 measured), `pd_dcs_metrics.json`, `pd_canon_ledger.tsv`. The machine text is the Cologne PDScan 2020 edition of fascicles 1976–2009.
-- **Limitations:** letter *a-* only, machine text to ~*apaca-* (2009); print runs to 2019. PD is not comparable to a finished dictionary on coverage — only on the span it has covered.
+- **Evidence:** committed `data/pd/` artifacts — `pd_quotations_vs_pwg.tsv` (4,093 shared lemmas), `pd_volume_homogeneity.tsv` (35 ledger rows, 24 measured), `pd_dcs_metrics.json`, `pd_canon_ledger.tsv`. The machine text is the Cologne PDScan 2020 edition of fascicles 1976–2008.
+- **Limitations:** letter *a-* only, machine text to ~*apaca-* (2008); print runs to 2019. PD is not comparable to a finished dictionary on coverage — only on the span it has covered.
 - **Validation:** `npm run build`; the numbers below are re-derivable from the committed TSVs, and the canon bases are gated in `pd_canon_ledger.tsv` (`--check` green).
 - **Owner repo:** `csl-atlas`.
 - **Next use:** open [PDScan](https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/web/index.php) for an entry, then the canon ledger before quoting any coverage percentage.
@@ -23,7 +23,7 @@ title: PD — Poona Dictionary / EDSHP (1948–, unfinished)
 | | |
 |---|---|
 | **Machine-readable records** | 107,630 (`<L>` entries), 104,959 lemmas |
-| **Machine-readable span** | fascicles 1976–2009, *a-* to ~*apaca-* |
+| **Machine-readable span** | fascicles 1976–2008, *a-* to ~*apaca-* |
 | **Printed to date** | 35 fascicle-volumes / 6,056 pp by 2019, still inside *a-* |
 | **Alphabet covered** | ~4–6 % of the headword span of a complete dictionary |
 | **Editorial model** | quotation-slip corpus lexicography, senses in historical order |
@@ -76,7 +76,7 @@ A fragment cannot be profiled like a completed dictionary, but it can be tested 
 
 1. **Entry size is stable.** The **median entry is 3 printed lines in every one of the 24 measured volumes** and in all 8 bound volumes. The mean runs 4.22–7.56 lines by fascicle — variation in tail length, not in the typical entry.
 2. **Source marking declines, and not in a clean step.** The share of entries carrying a bracketed dictionary source falls from **2.06 % in vol. 1 to 0.39 % in vol. 8**, but the series is non-monotonic (pre-v7 average 1.94 %, v7 0.88 %, v8 0.39 %; fascicle 7.2 = 1.88 % against 7.1 = 0.53 %). The cheap conversion signatures are absent — general bracket use is stable at 11–17 % of entries, long source brackets number 29 in the whole corpus, OCR near-misses of the seven source sigla number 3 — so the fall reads as **editorial/content, not a conversion artefact** (medium-high confidence; a print check of one v7 and one v8 page is the falsification test still owed).
-3. **Citation mass per page is high and steady.** 419,890 attestations over 6,056 printed pages is **≈69 attestations per printed page** across the 35-volume record.
+3. **Citation mass per page is high and steady.** 419,890 attestations over the 4,327 printed pages the machine text actually covers is **≈97 attestations per printed page**. The oft-quoted ≈69 per page divides the same numerator by the full 6,056-page print extent — a catalogue-extent normalisation that spreads the text over ~1,700 pages (2009–2019) it does not occupy (`pd_publication_ledger.meta.json` pp_lo/pp_hi; the two bases are separated in `page_economics.tsv` and [PD_PAGE_ECONOMICS_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_PAGE_ECONOMICS_2026.md)).
 
 ```js
 const vols = FileAttachment("../data/pd/pd_volume_homogeneity.tsv").tsv({typed: true});
@@ -117,7 +117,11 @@ The flat median in the first figure and the falling bars in the second are the s
 - **It cannot see print pages 2009–2019.** The machine text stops at `8-4327a` (~*apaca-*); the printed record goes further into *a-*.
 - **It inherits a known trap.** `MahāBhā.` is the Mahābhārata, `MahāBh.` is the Mahābhāṣya — similarity clustering fuses them; only the locator shape separates them.
 
-## 5. Read next
+## 5. State of the lane (30-10-2026)
+
+The headline numbers above are two-layer validated and policy-matched: the DCS coverage headline recomputes to **25.36 %** against the pinned 25.16 % ([two-layer validation](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md), fascicle range 16.9–36.9 %), and the PD÷PWG attestation multiple standardises to **8.41×** against the raw 8.55× ([policy-matched density](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_POLICY_MATCHED_DENSITY_2026.md)). Four evidence packets landed 29–30 October: [C1](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md) edition availability (45.11 % work-level lower bound), [C2](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) locus fields (391,444 pairs), [C3](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_AOB_SCAN_LINKS_C3_2026-10-30.md) scan links, and the M1/M2 annotation packets. The lane's open items live in the [parity report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KNOWLEDGE_INDEX_PARITY_2026-10-24.md) — its one open row is the human-κ double-coding study.
+
+## 6. Read next
 
 - [PD × DCS coverage report](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_DCS_CORPUS_COVERAGE_2026.md) — what the largest lemmatised Sanskrit corpus does and does not hold of PD's canon.
 - [`pd_canon_ledger.tsv`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_canon_ledger.tsv) — every canon base and its 118/N.

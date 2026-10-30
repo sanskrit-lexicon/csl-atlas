@@ -232,7 +232,7 @@ def main(argv=None):
             "url": "https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/downloads/pdtxt.zip",
             "licence": "© 2014 The Sanskrit Library / Thomas Malten, CC BY-NC-SA 3.0",
         },
-        "scope_caveat": "letter-a canon only, up to ~apaca- (fascicles 1976-2009); "
+        "scope_caveat": "letter-a canon only, up to ~apaca- (fascicles 1976-2008); "
                         "the printed record has since reached Vol. 35 / 6,056 pp, still inside a-",
         "totals": tot,
         "distribution": {

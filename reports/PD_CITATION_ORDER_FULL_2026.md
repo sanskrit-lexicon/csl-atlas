@@ -19,7 +19,7 @@ PD's Preface claims strict chronological order **within the smallest division**.
 
 ## Population funnel
 
-* `<L>` entries parsed: **107,620**
+* `<L>` entries parsed: **107,620** (with headword blocks, of 107,630 `<L>` entries; see [PD_QUOTATION_UNIT_2026-10-18.md](PD_QUOTATION_UNIT_2026-10-18.md))
 * entries with at least one real `{@n@}` marker: **12,770**
 * real sense divisions (preamble and whole-entry chunks excluded): **36,449**
 * divisions with at least two citation sigla: **13,358**

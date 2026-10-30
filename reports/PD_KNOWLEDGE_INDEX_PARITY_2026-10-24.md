@@ -1,6 +1,6 @@
 # PD knowledge index — parity report, 24-10-2026
 
-_Created: 24-10-2026 · Updated: 29-10-2026 · Scope: the Poona Dictionary's knowledge surface — public page, canon ledger, atlas chapter, gate — and what remains before it can be called research-grade · Status: 9 of 10 checks pass, one open with a named owner._
+_Created: 24-10-2026 · Updated: 31-10-2026 · Scope: the Poona Dictionary's knowledge surface — public page, canon ledger, atlas chapter, gate — and what remains before it can be called research-grade · Status: 10 of 11 checks pass, one open with a named owner._
 
 **What this report is.** On 24-10-2026 the PD knowledge page was a private working document with a
 gated number set, five silent canon denominators, no human-verified claim, and no place in the
@@ -71,8 +71,9 @@ artefact.
 | 8 | Every number gated | **pass** | 489 / 489 |
 | 9 | Mirror in sync | **pass** | 24-10-2026 |
 | 10 | A published report | **pass** | this file |
+| 11 | Chapter reachable from site nav | **pass** | H7492: `/dicts/pd` in the Dictionaries array of `observablehq.config.js` — row 6's build check proves the chapter compiles, not that the nav lists it, and could not catch the chapter shipping unreachable (the 30-10 estate audit's finding 1) |
 
-**Score: 9 / 10.** The remaining open row is the honest part of the report, not an appendix.
+**Score: 10 / 11.** The remaining open row is the honest part of the report, not an appendix.
 
 ## 5. The DOI — minted after the report
 
@@ -133,4 +134,4 @@ all present in `data/pd/`.
 - [`PD_KNOWLEDGE.md`](https://github.com/sanskrit-lexicon/PD/blob/main/PD_KNOWLEDGE.md) — the public
   knowledge page this programme exists to make citable.
 
-_24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH; the DOI and the chapter closed after first publication. Updated 29-10-2026 by Kimi Work: C1 closed the availability row at 9/10; human κ remains open._
+_24-10-2026 — DeepSeek Flash (`deepseek-flash`) via DSH; the DOI and the chapter closed after first publication. Updated 29-10-2026 by Kimi Work: C1 closed the availability row at 9/10; human κ remains open. Updated 31-10-2026 by GLM 5.3 (H7492): added the nav-reachability row (11) after the 30-10 estate audit found the built chapter unreachable from the site nav; denominator and year fixes landed in the chapter the same day._

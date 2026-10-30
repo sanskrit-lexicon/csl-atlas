@@ -535,7 +535,7 @@ KNA/KOW/AMAR — if/when sources land.)*
 ## 11. Open questions for next round
 
 1. ✅ **Not-yet-on-GitHub dicts** (IEG, MWE, PE, PGN, SNP, YAT; AE now = ApteES) — **deferred to future work** (2026-05-31). The "scan-only" label was flagged inaccurate by M.G.; re-check their digital status before any ingest.
-2. ✅ **Add PD** — **yes, included** (2026-05-31): its `a-` volumes are the whole practical dictionary; PD distinct files are being added in `csl-pywork`.
+2. ✅ **Add PD** — **yes, included** (2026-05-31): its `a-` volumes are the whole practical dictionary; PD distinct files are being added in `csl-pywork`. *(Superseded as a decision record: since 24-10-2026 the PD lane's plan-of-record is its parity checklist — §12.)*
 3. ✅ **Phase L0** — executed (`scripts/L0/`, `data/L0/`; see RESEARCH_LAYER_ROADMAP §0).
 4. **Update CITATION.cff data**: auto-populate year+author per repo from the inventory CSV. *(Partially done — the documented + M3 repos have enriched CITATION.cff; a full-org sweep remains.)*
 5. ✅ **Identify FRI / KNA / KOW / LRV** — resolved (2026-05-31): Frish / Knauer / Kossowich / Vaidya.
@@ -549,5 +549,16 @@ KNA/KOW/AMAR — if/when sources land.)*
 2. ✅ **Patel's open conventions** (mahat-type/sakārānta/rephānta/ṛ-nipātita) → operationalise as dims 31+ **and contribute back to `hwnorm1`** (Phase L0.9, §10).
 3. ✅ **Convention-vs-content finding → both** a standalone methods note (article 16+ in PUBLICATIONS) **and** Paper H §5.
 4. ✅ **Paper-final tree rigor** → add full Bayesian MCMC + NJ-posterior (Phase L0-rigor, §10).
+
+## 12. PD — the lane's plan-of-record (added 31-10-2026, H7492)
+
+This roadmap's §11 item 2 recorded only the 2026-05-31 *ingestion* decision for the Poona
+Dictionary. PD has since grown into a full measurement lane (canon ledger, atlas chapter
+`/dicts/pd`, DCS coverage, C1–C3 evidence packets, M1/M2 annotation packets), and its
+plan-of-record is **not** this roadmap but the lane's own parity checklist:
+[`reports/PD_KNOWLEDGE_INDEX_PARITY_2026-10-24.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_KNOWLEDGE_INDEX_PARITY_2026-10-24.md)
+(11 rows; 10 pass). The one open item — the human-κ double-coding study (parity row 4, a
+200-row second-coder pass) — lives only in that parity report and the Uprava handoff queue,
+not here; day-to-day lane state is `data/pd/README.md`.
 
 _Dr. Mārcis Gasūns_
