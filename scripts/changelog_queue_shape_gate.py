@@ -88,15 +88,26 @@ def _main_worktree(repo: Path) -> Path | None:
     return None
 
 
+_IMPORT_ERROR: str | None = None
+
+
 def load_strict_validator(repo: Path):
     """Return validate_entry bound to strict=True from the canonical parser,
-    or None when the parser cannot be located (degraded mode)."""
+    or None when the parser cannot be located OR fails to import (reviewer
+    round 1, H7467: a present-but-broken parser must degrade to the loud
+    WARNING, never traceback at the commit chokepoint)."""
+    global _IMPORT_ERROR
+    _IMPORT_ERROR = None
     tools = resolve_uprava_tools(repo)
     if tools is None:
         return None
     if str(tools) not in sys.path:
         sys.path.insert(0, str(tools))
-    from changelog_queue_consume import validate_entry  # noqa: PLC0415
+    try:
+        from changelog_queue_consume import validate_entry  # noqa: PLC0415
+    except Exception as e:  # broken sibling checkout, not a gate failure
+        _IMPORT_ERROR = f"{type(e).__name__}: {e}"
+        return None
 
     def strict(text: str) -> None:
         validate_entry(text, strict=True)
@@ -191,6 +202,9 @@ def degraded_skip(repo: Path) -> int:
           file=sys.stderr)
     print("  looked for $UPRAVA_TOOLS and the sibling checkout(s): "
           + ", ".join(str(p) for p in looked), file=sys.stderr)
+    if _IMPORT_ERROR is not None:
+        print(f"  parser was found but failed to import: {_IMPORT_ERROR}",
+              file=sys.stderr)
     print("  csl-atlas is public and Uprava is org-private, so the parser is",
           file=sys.stderr)
     print("  consumed from a sibling checkout, never copied (H7467).", file=sys.stderr)

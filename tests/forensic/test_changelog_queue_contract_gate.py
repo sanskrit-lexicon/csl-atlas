@@ -215,6 +215,28 @@ def test_degraded_mode_warns_and_passes_without_uprava(tmp_path: Path):
     assert "Uprava" in g.stderr
 
 
+def test_degraded_mode_on_broken_import(tmp_path: Path):
+    """Reviewer round 1 (H7467): a sibling parser that EXISTS but fails to
+    import must degrade to the loud WARNING (with the import error named),
+    never traceback at the commit chokepoint."""
+    broken = tmp_path / "broken-tools"
+    broken.mkdir()
+    (broken / "changelog_queue_consume.py").write_text(
+        "raise ImportError('probe: broken sibling parser')\n",
+        encoding="utf-8")
+    probe = tmp_path / "probe.md"
+    probe.write_text("- fine\n", encoding="utf-8")
+    env = dict(os.environ)
+    env["UPRAVA_TOOLS"] = str(broken)
+    g = run([sys.executable, str(GATE), "--repo", str(REPO_ROOT),
+             "--paths", str(probe)], env=env)
+    assert g.returncode == 0, (g.stdout, g.stderr)
+    assert "SKIPPED" in g.stderr
+    assert "failed to import" in g.stderr
+    assert "probe: broken sibling parser" in g.stderr
+    assert "Traceback" not in g.stderr
+
+
 def test_hook_wiring_syntax():
     """The two wired hooks must stay valid bash."""
     bash = shutil.which("bash")
