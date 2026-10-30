@@ -101,6 +101,14 @@ publishes `dist/` to GitHub Pages.
   reruns `--check` plus `tests/forensic/test_pd_locus_fields.py` in the same PR, and every
   H6949 siglum/continuation marker must remain accounted for in the summary reconciliation.
   Method and current coverage: `reports/PD_LOCUS_FIELDS_C2_2026-10-29.md`.
+- **PD AOB scan links (C3).** `data/pd/pd_aob_scan_targets.tsv`,
+  `pd_aob_locus_scan_resolution.tsv` and `pd_aob_scan_links_summary.json` are rebuilt together
+  by `python3.13 scripts/pd_aob_scan_links.py`; the committed page map and probe receipts make
+  ordinary builds and `--check` offline. Only `--fetch-archive` refreshes Archive.org evidence.
+  Keep work identity, AOB edition identity, Index scan URLs and locus-level page resolution
+  separate. Emit a locus link only for a page-bearing AOB scheme and a unique printed-page
+  label in an accepted main-pagination run; late resets and multipart resets stay unresolved.
+  Method: `reports/PD_AOB_SCAN_LINKS_C3_2026-10-30.md`.
 - **PD KoshaSHRI fixture (H7316).** `data/pd/pd_koshashri_entries.tsv` and
   `data/pd/pd_koshashri_citations.tsv` are generated together by
   `scripts/pd_koshashri_fixture_export.py` from the restricted local response through
