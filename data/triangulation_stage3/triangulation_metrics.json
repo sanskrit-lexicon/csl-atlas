@@ -1,0 +1,165 @@
+{
+ "branch_verdicts": {
+  "BR1_contradiction_localisation": {
+   "evidence": {
+    "band_top": 31.52,
+    "bootstrap_p2_5": 46.62,
+    "pwg_omega_se_pct": 63.53
+   },
+   "fired": true
+  },
+  "BR2_within_type_programme_gap": {
+   "evidence": {
+    "band_width_pp": 12.37,
+    "gap_pp": 38.43
+   },
+   "fired": true
+  },
+  "BR3_scope_artefact": {
+   "evidence": {
+    "band_width_pp": 12.37,
+    "scope_gap_pp": 0.06
+   },
+   "fired": false
+  },
+  "BR4_type_line_reality": {
+   "evidence": {
+    "containment_pct": 82.57,
+    "headword_rho": 0.3414
+   },
+   "fired": true
+  },
+  "BR5_dispersion_convergence": {
+   "evidence": {
+    "pd_fascicle_span_pp": 19.99,
+    "pwg_dispersion_pp": 32.19
+   },
+   "fired": true
+  },
+  "BR6_token_level_convergence": {
+   "evidence": {
+    "pd_token_weighted_2026_pct": 77.88,
+    "pwg_anchor_cited_pct": 93.98
+   },
+   "fired": true
+  }
+ },
+ "created": "2026-10-30",
+ "dataset": "triangulation_stage3/triangulation_metrics",
+ "derived": {
+  "band_width_pp": 12.37,
+  "contradiction_margin_pp": 32.01,
+  "interval_non_overlap_pp": 15.1,
+  "nws_type_line": {
+   "containment_pct": 82.57,
+   "headword_rho": 0.3414,
+   "letter_aggregate_rho": 0.9782,
+   "reading": "inventory contained, allocation divergent — the type line carries information (envelope tracks at letter level, within-letter allocation does not)"
+  },
+  "pd_residue_share_pct": 74.84,
+  "pwg_residue_share_pct": 36.47,
+  "residue_share_ratio": 2.05,
+  "scope_gap_pp": 0.06,
+  "token_level_pair": {
+   "construction_note": "PWG's share is within the 118-text DCS anchor (PD-covered-by-construction); PD's 77.88 is against the whole corpus. Same-side reading: within the anchored core, PWG independently cites 93.98% of token mass.",
+   "pd_token_weighted_2021_pct": 74.06,
+   "pd_token_weighted_2026_pct": 77.88,
+   "pwg_anchor_cited_pct": 93.98
+  },
+  "within_type_gap_pp": 38.43
+ },
+ "generated_by": "scripts/triangulation_stage3_join.py",
+ "grid": {
+  "commit": "b531f96",
+  "committed_before_run": true,
+  "path": "data/triangulation_stage3/grid_preregistration.md",
+  "sha256": "b020d966735a3e2b98befb3ccf69339c9e5564c71398633d75244177d59b39c7"
+ },
+ "handoff": "H7484",
+ "inputs": {
+  "nws_attested_works": 82,
+  "nws_containment_pct": 82.57,
+  "nws_declared_works": 174,
+  "nws_letter_aggregate_rho": 0.9782,
+  "nws_lex_mw_markers": 5873,
+  "nws_pure_mw_mediated": 3356,
+  "nws_rho_total": 0.3414,
+  "pd_alpha_pct": 25.16,
+  "pd_band": [
+   19.15,
+   31.52
+  ],
+  "pd_covered_mass": 88929,
+  "pd_fascicle_span_pp": 19.99,
+  "pd_primary_work_mass": 353512,
+  "pd_residue_mass": 264583,
+  "pd_token_2021_pct": 74.06,
+  "pd_token_2026_pct": 77.88,
+  "pwg_alpha_se_pct": 63.59,
+  "pwg_anchor_cited_pct": 93.98,
+  "pwg_bootstrap_p2_5": 46.62,
+  "pwg_bootstrap_p97_5": 76.08,
+  "pwg_h2_dispersion_pp": 32.19,
+  "pwg_omega_se_pct": 63.53,
+  "pwg_pooled_omega_pct": 59.0
+ },
+ "kill_exits_respected": [
+  "stage-3 contradiction localizes the A68 headline to PD's programme",
+  "H5 confirmation (NWS = transfer noise) did not fire; NWS stays in its three delimited roles, upgrade H5940-gated",
+  "NWS<->DCS inventory join stays pre-registered out",
+  "no stage-3 verdict upgrades genre certification into task adequacy"
+ ],
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "protocol": "research/notes/final_report_pwg-nws-pd-dcs-8294e5.md §8+§12+§13 (committed before Stage 1)",
+ "row12_verdicts": {
+  "chronological_order": {
+   "basis": "no committed work-date join rows; no Stage-3 claim",
+   "verdict": "open__h4_not_executed_in_stages_1_2"
+  },
+  "citation_weighted_25_16": {
+   "basis": "BR1+BR2",
+   "verdict": "localized_to_pd_programme"
+  },
+  "declared_canon_8pct": {
+   "basis": "NWS 82/174 exercised; the PWG 527/2,665 analogue is report-level, not row-committed",
+   "verdict": "declared_vs_exercised_distinction_corroborated_by_nws_h6"
+  },
+  "deep_not_broad": {
+   "basis": "BR1+BR2",
+   "verdict": "survives_for_pd__dies_as_class_claim"
+  },
+  "density_multiple": {
+   "basis": "PWG 6.50 vs MW 1.12 <ls>/entry; not re-measured",
+   "verdict": "already_corroborated_and_bounded_stage1"
+  },
+  "residue_four_cluster_structure": {
+   "basis": "no genre-level rows for the PWG residue in the committed substrates; Stage-1 report §4 carries the qualitative cluster remark only",
+   "verdict": "not_triangulable_row_level"
+  },
+  "three_quarters_outside_dcs": {
+   "basis": "BR1",
+   "verdict": "overturned_as_class_claim__apparatus_specific_to_pd"
+  },
+  "token_weighted_77_88_74_06": {
+   "basis": "BR6 + construction note",
+   "verdict": "corroborated_within_anchored_core"
+  }
+ },
+ "row_level_anchors": {
+  "nws_attested_works": 82,
+  "nws_declared_works": 174,
+  "pd_alpha_pct": 25.16,
+  "pd_residue_share_pct": 74.84,
+  "pwg_alpha_se_pct": 63.59,
+  "pwg_omega_se_pct": 63.53,
+  "pwg_text_alpha": 115390,
+  "pwg_text_cov_alpha": 73380,
+  "pwg_text_cov_ql": 400054,
+  "pwg_text_ql": 629718
+ },
+ "unconditional": [
+  "kosha reframing stands regardless (12 held koshas are a catalogue fact)",
+  "no stage-3 verdict upgrades genre-level certification into task adequacy"
+ ]
+}
