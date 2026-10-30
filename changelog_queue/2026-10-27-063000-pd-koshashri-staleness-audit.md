@@ -1,4 +1,4 @@
-# PD KoshaSHRI staleness audit: Cologne digital ends 2008, print reaches 2019 (H7300)
+- **PD KoshaSHRI staleness audit: Cologne digital ends 2008, print reaches 2019 (H7300).**
 
 Three panels, four separate verdicts. **Markup capability:** Cologne PDScan = one
 flat record per entry (107,630 `<L>`; `<ls>`/`<ab>`/`<info>` = 0 — the 25-10

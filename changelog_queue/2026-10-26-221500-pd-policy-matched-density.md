@@ -1,4 +1,4 @@
-# PD policy-matched density: the 8.55× survives simplex/derivative/compound stratification; the 23.2× inventory contrast is a policy artefact (H7297)
+- **PD policy-matched density: the 8.55× survives simplex/derivative/compound stratification; the 23.2× inventory contrast is a policy artefact (H7297).**
 
 The raw H6949/H7095 comparison is unchanged — 157,480 : 18,423 attestations (8.55×),
 97,413 : 10,225 quotations (9.53×), median 4.0×, 340 below-parity lemmas over the

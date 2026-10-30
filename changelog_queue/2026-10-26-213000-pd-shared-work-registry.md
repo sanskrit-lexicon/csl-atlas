@@ -1,4 +1,4 @@
-# PD shared work-and-edition identity registry (H7296, Q3)
+- **PD shared work-and-edition identity registry (H7296, Q3).**
 
 One conservative identity layer over H6992's 2,031-row printed Index, H6707's
 1,112 AOB declared works / 1,118 editions, H6720's printed-vs-harvested

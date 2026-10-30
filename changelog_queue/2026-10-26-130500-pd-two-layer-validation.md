@@ -1,4 +1,4 @@
-# PD two-layer validation: letter-a strata are heterogeneous, print-only tail stops (H7275)
+- **PD two-layer validation: letter-a strata are heterogeneous, print-only tail stops (H7275).**
 
 The 25.2 % citation-weighted coverage is recomputed from the H6949 quotation unit
 at 88,363 / 348,430 = 25.36 % over mapped primary sigla (pinned H1336 point:
