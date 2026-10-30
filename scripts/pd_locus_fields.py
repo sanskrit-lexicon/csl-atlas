@@ -255,7 +255,7 @@ def build(pd_path):
             "pd_quotations_by_entry_sha256": sha256(BASELINE),
             "pd_siglum_families_sha256": sha256(FAMILIES),
         },
-        "scope_caveat": "published letter-a PD machine text only, up to ~apaca- (1976–2009 fascicles)",
+        "scope_caveat": "published letter-a PD machine text only, up to ~apaca- (1976–2008 fascicles)",
     }
     if summary["inputs"]["pd_txt_sha256"] != EXPECTED_PD_SHA256:
         raise ValueError("PDScan source SHA-256 differs from the pinned H6949 input")
