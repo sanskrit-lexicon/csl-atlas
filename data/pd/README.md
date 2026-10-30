@@ -328,16 +328,16 @@ Write-up: [reports/PD_LOCUS_FIELDS_C2_2026-10-29.md](https://github.com/sanskrit
 
 C3 keeps three measures separate: **1,615 / 1,622** Index sigla have work identity,
 **815 / 1,622** have AOB edition identity, and **14 rows / 13 works** have a live
-AOB-exact scan target. Among the 23,491 AOB-exact C2 pairs, **5,323 = 22.66 %** resolve
-to a unique printed-page image (1.36 % of all 391,444 C2 pairs). Index-page URLs are
+AOB-exact scan target. Among the 23,491 AOB-exact C2 pairs, **5,639 = 24.00 %** resolve
+to a unique printed-page image (1.44 % of all 391,444 C2 pairs). Index-page URLs are
 present for all 1,622 rows but are never counted as AOB-edition targets.
 
 | File | What it is |
 |---|---|
 | [pd_aob_scan_targets.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_targets.tsv) | all 1,622 Index rows with work, edition, AOB-exact scan and Index-scan fields kept separate |
 | [pd_aob_locus_scan_resolution.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_locus_scan_resolution.tsv) | all 23,491 AOB-exact C2 pairs with a unique scan-page target or named unresolved reason |
-| [pd_aob_scan_page_map.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_page_map.tsv) | 3,675 printed-page candidates from scandata and six visual ranges; duplicates stay ambiguous |
-| [pd_aob_scan_ranges.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_ranges.tsv) | six visually anchored ranges for Prasāda, Bhāmatī, Aparārka and Vaijayantī, including two-page scans |
+| [pd_aob_scan_page_map.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_page_map.tsv) | 4,032 printed-page candidates from scandata and eight visual ranges; duplicates stay ambiguous |
+| [pd_aob_scan_ranges.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_ranges.tsv) | eight visually anchored ranges for Prasāda, Bhāmatī, Aparārka and Vaijayantī, including two-page scans |
 | [pd_aob_scan_range_anchors.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_range_anchors.tsv) | repeated image observations supporting the visual ranges |
 | [pd_aob_scan_editions.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_editions.tsv) | 14 C1-exact Archive.org items with volume, locus scheme and map-scope decisions |
 | [pd_aob_scan_probes_2026-10-30.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_aob_scan_probes_2026-10-30.json) | metadata/scandata hashes, visual anchors and live image-probe receipts |

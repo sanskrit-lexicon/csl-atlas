@@ -81,7 +81,16 @@ class ScanLinkPopulationTests(unittest.TestCase):
         self.assertEqual(len(self.loci), loci["aob_exact"])
         self.assertEqual(sum(loci["by_reason"].values()), len(self.loci))
         self.assertEqual(loci["by_reason"]["printed_page_unique"], loci["resolved_scan_pages"])
-        self.assertEqual(loci["resolved_scan_pages"], 5323)
+        self.assertEqual(loci["resolved_scan_pages"], 5639)
+
+    def test_prasa_early_ranges_and_apara_late_range_are_live(self):
+        prasa = [r for r in self.loci if r["principal_siglum"] == "Prasā." and r["resolution_status"] == "resolved"]
+        self.assertEqual(len(prasa), 1371)
+        self.assertTrue(any(r["printed_page"] == 6 and "part1bss" in r["scan_url"] for r in prasa))
+        self.assertTrue(any(r["printed_page"] == 4 and "part2bss" in r["scan_url"] for r in prasa))
+        apara = [r for r in self.loci if r["principal_siglum"] == "Aparā." and r["resolution_status"] == "resolved"]
+        self.assertEqual(len(apara), 423)
+        self.assertTrue(any(r["printed_page"] == 576 for r in apara))
 
     def test_multipart_and_late_reset_scans_are_not_promoted(self):
         resolved = {r["principal_siglum"] for r in self.loci if r["resolution_status"] == "resolved"}

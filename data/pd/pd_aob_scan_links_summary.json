@@ -38,22 +38,22 @@
   "c2_total": 391444,
   "aob_exact": 23491,
   "aob_exact_pct_of_c2": 6.0011,
-  "resolved_scan_pages": 5323,
-  "resolved_pct_of_aob_exact": 22.6597,
-  "resolved_pct_of_all_c2": 1.3598,
+  "resolved_scan_pages": 5639,
+  "resolved_pct_of_aob_exact": 24.0049,
+  "resolved_pct_of_all_c2": 1.4406,
   "by_reason": {
    "ambiguous_duplicate_page": 53,
    "locus_syntax": 118,
    "missing_volume": 38,
    "non_page_locus_scheme": 2499,
-   "printed_page_not_mapped": 7654,
-   "printed_page_unique": 5323,
+   "printed_page_not_mapped": 7338,
+   "printed_page_unique": 5639,
    "volume_not_scanned": 7806
   },
   "by_siglum": {
    "Aparā.": {
     "aob_exact": 1293,
-    "resolved": 362
+    "resolved": 423
    },
    "Bhām.": {
     "aob_exact": 1475,
@@ -77,7 +77,7 @@
    },
    "Prasā.": {
     "aob_exact": 1487,
-    "resolved": 1116
+    "resolved": 1371
    },
    "RasGaṅ.": {
     "aob_exact": 1235,
@@ -108,16 +108,16 @@
  "archive": {
   "edition_items": 14,
   "live_title_page_targets": 14,
-  "page_candidates": 3675,
-  "unique_page_candidates": 3629,
+  "page_candidates": 4032,
+  "unique_page_candidates": 3986,
   "ambiguous_page_candidates": 46
  },
  "inputs": {
   "pd_aob_scan_editions.tsv": "6729812e8f8589684ee3f6e59b190f8f76640148ef1c0a9e4b4e971f63032c03",
-  "pd_aob_scan_page_map.tsv": "0a632af9dfd8180c197c630f98a3420eb9853b468fa7c32528fa8fb715ce6e69",
-  "pd_aob_scan_ranges.tsv": "fa260d29f811f726d32e5770ee2e49f1b8758ab692499479beb5d13c775e3d6c",
-  "pd_aob_scan_range_anchors.tsv": "6d9c8f0c4f8afd8608335a6aaa8fc8a46bc3ac521c001f689fb458e55576a243",
-  "pd_aob_scan_probes_2026-10-30.json": "d036769f2fd3282179e81062c96584da5dfd80e1b1feab8609688d6e2a936183",
+  "pd_aob_scan_page_map.tsv": "174e6f96bb4c0a99e7d2d223481054e8056ebf1c9ba9bd00fe7e4d8e5f8bd57f",
+  "pd_aob_scan_ranges.tsv": "e99d78f7c334f2a5fb450b3d43051592fdfb21338112265833245925794c6e71",
+  "pd_aob_scan_range_anchors.tsv": "2444cd9461d3cc3f626d30a459d0f41f82fe8ffb5b9c2101bede4500c53896e8",
+  "pd_aob_scan_probes_2026-10-30.json": "73426d395aec8fe2dc387d4f19deeda9ff14a2d595eb5aaba94460b1e32c748a",
   "pd_edition_availability_by_siglum.tsv": "ef483636f4f9b62cd18e1a8922922bf512ee7fa67aace3de0f71e87a037b3f44",
   "pd_work_registry.tsv": "9fe83a1f48a5bddc9d3772c31e733da9d054f1dca6574d6cbc9572f226035a2e",
   "pd_work_edition_map.tsv": "574e57f53d70f9755aa6f7afee7fe80c34dc97a0a7f2fa1ee8b789d67ea6e916",
