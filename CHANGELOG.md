@@ -7,6 +7,136 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.21.5] - 2026-10-30
+
+- **kosha heritage_anchor is now the atlas heritage-witness anchor source (H4720, A17 edge live).**
+`build-heritage-witness` reads the sibling kosha `heritage_anchor` table
+(read-only `node:sqlite`) with the raw SanskritLexicography crosswalk kept as
+the CI-safe fallback; `validate-heritage-witness` re-verifies a deterministic
+~400-row sample of witnessed rows value-for-value against kosha. Packet
+schemaVersion 1.1.0 with `sourceLayer` + kosha provenance in the envelope;
+page trust block refreshed. Totals unchanged (25,136 covered / 24,548
+anchored) — serving layer and upstream crosswalk agree. Uprava
+`interlinks_edges.tsv` row 190 (csl-atlas→kosha heritage_anchor witness
+anchors) flipped proposed→live.
+- **PD two-layer validation: letter-a strata are heterogeneous, print-only tail stops (H7275).**
+The 25.2 % citation-weighted coverage is recomputed from the H6949 quotation unit
+at 88,363 / 348,430 = 25.36 % over mapped primary sigla (pinned H1336 point:
+88,929 / 353,512 = 25.16 %). Stratified, it is **not stable across fascicles**:
+the 24 measured rows range 16.9–36.9 % (12 outside ±2 pp), while
+leave-one-fascicle-out stays 24.9–25.6 % and a work-level bootstrap gives
+19.2–31.5 %. The class split (simplex 29.1 %, derivative 17.7 %, compound-other
+21.6 %, privative 28.1 %, preverb 32.3 %) is citation-weighted, not
+entry-weighted. The 11 print-only ledger rows (2009–2019, 1,552 of 5,880 pages)
+carry no machine text and no page images are reachable, so a 300-slot sample
+(100 per period) is frozen from the ledger alone and the second verdict is
+**STOP_NO_PRINT_ACCESS** — no machine-text row is substituted. Builder
+`scripts/pd_two_layer_validation.py` (`--manifest` / `--check`), 5 pins in
+`tests/forensic/test_pd_two_layer_validation.py`, write-up
+`reports/PD_TWO_LAYER_VALIDATION_2026-10-26.md`.
+- **PD shared work-and-edition identity registry (H7296, Q3).**
+One conservative identity layer over H6992's 2,031-row printed Index, H6707's
+1,112 AOB declared works / 1,118 editions, H6720's printed-vs-harvested
+reconciliation, the PD harvested siglum families and the PW / PWG bibliographies:
+**1,923 work IDs** (`PDW-…`), **6,072 edition-map records**, **416 explicit
+unresolved rows** (409 printed blank abbreviation cells + 7 structural sigla),
+**57 shared siglum folds never merged**. Blank, `vision-low` and one seeded
+ordinary control stay `unvalidated_pending_double_annotation`; kappa is `null`,
+adjudicated rows 0. Canaries: `MahāBhā.` ≠ `MahāBh.`, 142 near-homograph pairs
+(32 skeleton collisions) with 0 merges, 6 repeated-edition works joined without
+losing a siglum, `AmaKoUd.` as a `commentary_on` relation. Builder
+`scripts/pd_shared_work_registry.py` (`--check`), bibliography extractor
+`scripts/pd_pwbib_extract.py`, 8 pins in
+`tests/forensic/test_pd_shared_work_registry.py`, write-up
+`reports/PD_SHARED_WORK_REGISTRY_2026.md`. The 3.11 % / 4.03 % and breadth/depth
+figures remain **preliminary until rerun** — this unit does not recompute them.
+- **PD policy-matched density: the 8.55× survives simplex/derivative/compound stratification; the 23.2× inventory contrast is a policy artefact (H7297).**
+The raw H6949/H7095 comparison is unchanged — 157,480 : 18,423 attestations (8.55×),
+97,413 : 10,225 quotations (9.53×), median 4.0×, 340 below-parity lemmas over the
+4,093 shared lemmas. This pass changes the **comparison policy** only: each shared
+lemma is assigned the frozen H7110 class from PD's printed analysis, and the ratio is
+recomputed inside each stratum with its own PD and PWG denominator. PD is denser in
+every stratum — **7.53× simplex** (773 lemmas), **8.56× derivative** (357), **9.13×
+compound** (2,929) — and the equal-weight standardised pool is **8.41×** (95 % CI
+7.68–9.27, 2,000-replicate stratified lemma bootstrap, seed 7297), against the raw
+8.55×. The aggregate is therefore not an artefact of the shared lemmas' family mix;
+the PD-mix mean of stratum ratios (8.77×) and the simplex-only subset (7.53×) bracket
+the same answer. The 34 unclassified lemmas form an explicit stratum and stay out of
+the standardised pool. Below-parity membership is frozen by SHA-256 (simplex 110,
+derivative 17, compound 209, unclassified 4).
+PD-only headwords are published separately as an inventory-policy result: 100,866
+headwords with no PWG counterpart carry 262,410 attestations between them (median
+**1**, mean 2.60; 66,036 at most one), against a median of 8 and a mean of 38.48 in
+the shared set. The **23.2×** headword-inventory contrast therefore stays a
+lemmatisation-choice ratio: never a citation measure, never a density multiple, never
+a typical per-headword claim. Canaries: *akāmataḥ* (`akAmatas`: 31/75 against 2/6 =
+12.5×), the compound stratum (2,929 / 97,674 / 10,699) and the 340-row below-parity
+set. New `scripts/pd_policy_matched_density.py` (`--build --pd` / `--check`, the check
+needs no external text), `data/pd/pd_policy_matched_{class,density,inventory}` artifacts,
+`reports/PD_POLICY_MATCHED_DENSITY_2026.md`, 18 gold rows and 9 pins in
+`tests/forensic/test_pd_policy_matched_density.py`. No A68 prose, table, figure or
+canary value moves; the raw ledgers are read, not rebuilt.
+- **PD KoshaSHRI staleness audit: Cologne digital ends 2008, print reaches 2019 (H7300).**
+Three panels, four separate verdicts. **Markup capability:** Cologne PDScan = one
+flat record per entry (107,630 `<L>`; `<ls>`/`<ab>`/`<info>` = 0 — the 25-10
+correction holds) + open bulk text (CC BY-NC-SA 3.0); KoshaSHRI = typed per-volume
+JSON (33/35 ids answer, the 12/14 gap unchanged), no public entry artefact, no
+export, all rights reserved. **Dated content coverage:** the Cologne machine text
+ends at vol 24 (2008, p. 4328); the print record runs to vol 35 (2019, p. 6056) —
+the Pune-only tail is 11 volumes / 1,728 distinct pages / 2009–2019, so every
+machine-text number is a floor on the dictionary. **Same-print-page fidelity:**
+the v7/v8 bracketed-source-mark control (4 Cologne scan pages, 20 marks, incl.
+bare-vs-bracketed DBHS. negative controls) finds 20/20 consistent — no conversion
+loss, no editorial divergence in sample; the 2009–2019 print panel is
+**STOP_NO_PRINT_ACCESS** (H7275 precedent), and no editorial claim is made from
+tags alone. Source anomalies are explicit: portal ids 12/14 error (ledger
+fallback, marked), portal vols 31/32 overlap by 88 pages, ledger rows 32/33
+double-list pp. 5609–5708, vol-year disagreements (6, 32, 33). Five canaries
+pinned. Builder `scripts/pd_koshashri_staleness_audit.py` (`--check`), 7 pins in
+`tests/forensic/test_pd_koshashri_staleness_audit.py`, rights note
+`data/pd/pd_koshashri_rights_provenance.md`, write-up
+`reports/PD_KOSHASHRI_STALENESS_AUDIT_2026.md`.
+- **PD × DCS residue status queue: H6722's acquisition queue becomes status-aware (H7298).**
+The 44 named-residue works (PD-cited, absent from DCS) now carry DCS / GRETIL /
+wisdomlib-portal / wisdomlib-estate state, rights, annotation and fragment status, and
+route into three action lanes: **ingest-annotate** 9 works / 10,262 cites (GRETIL full or
+embedded), **acquire-digitise** 6 / 9,229 (H6722's missing-everywhere class, membership
+unchanged), **fragment-completion** 6 (5 GRETIL-partial + the covered-but-fragmentary
+Skandapurāṇa context row, 5,348 expected gain); the 24 GRETIL-uncrossed rows (9,685
+cites) stay `unverified` rather than guessed. New evidence: the MSI wisdomlib store was
+re-located (`E:\Tools\wisdomlib-scrape`; the D: path is gone) and probed — Padmapurāṇa,
+Bhaviṣyapurāṇa, Naiṣadhīyacarita, Bṛhatsaṃhitā and Skandapurāṇa all have manifest entries
+but **link indexes only, no chapter bodies** (CF-blocked since 23-07-2026). Skandapurāṇa
+verdict: portal Sanskrit edition `skanda-purana-sanskrit` (95,556 chapters) identified,
+print-edition identity INCONCLUSIVE (live probe CF-blocked), rights = derived layers
+CC BY 4.0 (Zenodo 10.5281/zenodo.22117833), annotation none; DCS holds fragments only
+(SkPuR 113,333 + SkPu 16,479 tok). Five-row spot checks PASS. Deliverables:
+`data/pd/pd_residue_source_status.tsv` (frozen evidence input),
+`data/pd/pd_dcs_residue_status_queue.{tsv,json}`, deterministic
+`scripts/pd_dcs_residue_status_queue.py` (`--check` parity + lane invariants),
+`tests/forensic/test_pd_dcs_residue_status_queue.py` (8 pins), dated report
+`reports/PD_DCS_RESIDUE_STATUS_QUEUE_2026.md`. No corpus ingestion, no KoshaSHRI bulk
+text, no publication. H6722's queue and C5/C6 sweeps unchanged (read-only).
+- **PD shared-siglum adjudication (Y0Q).**
+Added a claim-level overlay for all **57 shared siglum folds / 230 registry records**
+in the H7296 PD work registry. The first manual pass marks **55 folds resolved** and
+**2 partial**, adjudicating **228 records** and leaving only two evidence-poor AOB
+claims unresolved: `AOB:aryasiddhantamahasiddhanta148` and `AOB:1962`. The overlay
+adds 22 author/qualifier splits and 50 explicit alias groups while keeping the
+ordinary fold join blocked for every shared fold; two OCR/editor fragments are
+quarantined as `aob_ocr_non_work`, not promoted to works.
+Regenerated registry: **1,867 work identities**, **418 unresolved registry rows**
+(409 blank cells + 7 structural sigla + 2 OCR non-work), **6,069 edition-map rows**,
+**236 bibliography attachments** (PWG 114, PW 122). Added the deterministic evidence
+exporter; updated the registry report and
+`data/pd/README.md` in the same pass. The completed M1 v1 annotation packet stays
+frozen (its 200 B decisions are not overwritten); a future v2 frame has no Index-row
+shared stratum because both residue claims are AOB-only. C1 edition availability was
+rebuilt against the new registry with unchanged headline measures (45.11 % work-level,
+5.52 % AOB-exact). Verification: builder `--check` green on all four artifacts,
+C1 `--check` PASS, M1 `--check --complete` PASS, and **245 forensic tests passed,
+4 skipped**. Q5 remains unchanged: all records are
+`unvalidated_pending_double_annotation`, kappa is `null`, adjudicated rows 0.
 ## [0.21.4] - 2026-10-30
 
 # PD M1/M2 annotation packets — 29-10-2026
