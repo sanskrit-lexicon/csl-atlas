@@ -7,6 +7,9 @@ All notable changes to csl-atlas are documented here. Format follows [Keep a Cha
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.21.6] - 2026-10-30
+
+- **PD shared-siglum residue adjudication (H7459):** Re-inspected the printed Index and AOB evidence for the two Y0Q residue claims. Both remain deliberately unresolved as `STOP_INSUFFICIENT_TITLE_EVIDENCE`: `AOB:aryasiddhantamahasiddhanta148` has only an undistributed combined title, and `AOB:1962` has no surviving title or author. No work was merged by siglum alone. Regenerated all four registry artifacts. Counts remain **57 folds / 230 records**, **55 resolved + 2 partial**, **228 adjudicated + 2 unresolved**; the other 55 folds and the Q5 validation contract are unchanged. Added a forensic pin for both sourced stop verdicts and updated the registry report and overlay hash.
 ## [0.21.5] - 2026-10-30
 
 - **kosha heritage_anchor is now the atlas heritage-witness anchor source (H4720, A17 edge live).**
