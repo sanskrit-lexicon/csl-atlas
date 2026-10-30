@@ -1,0 +1,132 @@
+{
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "dataset": "pd_aob_scan_links_c3",
+ "generated_by": "python scripts/pd_aob_scan_links.py",
+ "generated_on": "2026-10-30",
+ "protocol": {
+  "work_identity": "H7296 primary_work record for each printed Index row; structural sigla stay unresolved",
+  "edition_identity": "H7296 edition_of_declared_work records, or C1's explicit aob_exact entry where the conservative registry has no edge; never inferred from work-level availability",
+  "scan_target": "C1 aob_exact Archive.org witness with a live page/n0.jpg probe; item details URLs are not scan targets",
+  "locus_resolution": "C2 pair + AOB page-bearing locus scheme + unique printed-page label in a monotonic Archive.org scandata run",
+  "duplicate_rule": "repeated printed-page labels in different parts remain ambiguous",
+  "unknown_rule": "missing edition, missing scan, non-page locus and unmapped page are distinct unresolved classes, never absence verdicts"
+ },
+ "evidenceLevels": {
+  "identity_and_aggregates": "derived",
+  "archive_probes": "observed",
+  "page_map": "derived_from_archive_scandata",
+  "human_review": "none"
+ },
+ "index": {
+  "siglum_rows": 1622,
+  "work_identity_resolved": 1615,
+  "work_identity_pct": 99.5684,
+  "aob_edition_identity_resolved": 815,
+  "aob_edition_identity_pct": 50.2466,
+  "aob_edition_identity_by_source": {
+   "resolved_c1_exact": 1,
+   "resolved_registry": 814,
+   "unresolved": 807
+  },
+  "aob_exact_scan_targets": 14,
+  "aob_exact_scan_targets_pct": 0.8631,
+  "aob_exact_scan_works": 13,
+  "index_scan_targets": 1622
+ },
+ "loci": {
+  "c2_total": 391444,
+  "aob_exact": 23491,
+  "aob_exact_pct_of_c2": 6.0011,
+  "resolved_scan_pages": 1660,
+  "resolved_pct_of_aob_exact": 7.0665,
+  "resolved_pct_of_all_c2": 0.4241,
+  "by_reason": {
+   "ambiguous_duplicate_page": 53,
+   "locus_syntax": 118,
+   "missing_volume": 38,
+   "non_page_locus_scheme": 2499,
+   "printed_page_not_mapped": 11317,
+   "printed_page_unique": 1660,
+   "volume_not_scanned": 7806
+  },
+  "by_siglum": {
+   "Aparā.": {
+    "aob_exact": 1293,
+    "resolved": 0
+   },
+   "Bhām.": {
+    "aob_exact": 1475,
+    "resolved": 0
+   },
+   "BālamBha.": {
+    "aob_exact": 1946,
+    "resolved": 0
+   },
+   "HarVi.": {
+    "aob_exact": 1226,
+    "resolved": 0
+   },
+   "ManuBh.": {
+    "aob_exact": 3347,
+    "resolved": 0
+   },
+   "MīmāKau.": {
+    "aob_exact": 2356,
+    "resolved": 0
+   },
+   "Prasā.": {
+    "aob_exact": 1487,
+    "resolved": 0
+   },
+   "RasGaṅ.": {
+    "aob_exact": 1235,
+    "resolved": 1166
+   },
+   "SmṛtiCan.": {
+    "aob_exact": 1794,
+    "resolved": 137
+   },
+   "Subhāṣi.": {
+    "aob_exact": 1273,
+    "resolved": 0
+   },
+   "Vaija.": {
+    "aob_exact": 1175,
+    "resolved": 0
+   },
+   "VedāntKa.": {
+    "aob_exact": 1294,
+    "resolved": 0
+   },
+   "VīraMi.": {
+    "aob_exact": 3590,
+    "resolved": 357
+   }
+  }
+ },
+ "archive": {
+  "edition_items": 14,
+  "live_title_page_targets": 14,
+  "page_candidates": 967,
+  "unique_page_candidates": 921,
+  "ambiguous_page_candidates": 46
+ },
+ "inputs": {
+  "pd_aob_scan_editions.tsv": "6729812e8f8589684ee3f6e59b190f8f76640148ef1c0a9e4b4e971f63032c03",
+  "pd_aob_scan_page_map.tsv": "28b8702f1fc3db150c4e2e58cce880e0939470bb9a9431c674eef244bb1ca7ab",
+  "pd_aob_scan_probes_2026-10-30.json": "f8048d21bce122f31fd96d73cc1d5286866e243ff35137a39d49e31ce680f305",
+  "pd_edition_availability_by_siglum.tsv": "ef483636f4f9b62cd18e1a8922922bf512ee7fa67aace3de0f71e87a037b3f44",
+  "pd_work_registry.tsv": "9fe83a1f48a5bddc9d3772c31e733da9d054f1dca6574d6cbc9572f226035a2e",
+  "pd_work_edition_map.tsv": "574e57f53d70f9755aa6f7afee7fe80c34dc97a0a7f2fa1ee8b789d67ea6e916",
+  "pd_index_works.tsv": "44ef8d2aa6fb184919e1c0eb90d6ec26971ac8c80eb596535a28849e72e383fb",
+  "pd_index_works_by_page.tsv": "792247fa468cb64b4d6b10715b80d42950af7450d45bdd159931bbd0fcacceae",
+  "pd_locus_fields.tsv": "bc749c729a2c0843a082371a37a6ecad294f8e31d7a7f1962473c8cc4128d28d"
+ },
+ "warnings": [
+  "Index scan URLs locate the printed siglum row, not the cited AOB edition; they are reported separately",
+  "AOB-exact scan coverage is a lower bound bounded by C1's curated exact-edition evidence",
+  "A resolved locus is a printed-page image target, not a quotation-fidelity or line-level verification",
+  "Work identity and edition identity inherit H7296's unvalidated_pending_double_annotation status"
+ ]
+}
