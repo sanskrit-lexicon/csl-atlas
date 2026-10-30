@@ -5,8 +5,12 @@
 // Usage: node scripts/build-review-pool-assignment.mjs --annotators pool-a01,pool-a02[,…]
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+// fileURLToPath, not URL.pathname: on Windows the pathname keeps a leading
+// "/C:/" and path.resolve folds it into the cwd's drive (C:\C:\Users\…),
+// which broke the pool-assignment test on Windows hosts.
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const flag = (name) => {
   const i = args.indexOf(`--${name}`);
