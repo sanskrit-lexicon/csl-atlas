@@ -1,6 +1,6 @@
 # What share of the Poona Dictionary's source canon does DCS cover? (2026)
 
-_Created: 20-07-2026 · Last updated: 14-10-2026_
+_Created: 20-07-2026 · Last updated: 30-10-2026_
 
 **Handoff:** [H1336](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1336-Opus_csl-atlas_pd-abbrev-vs-dcs-corpus-coverage_19.07.26.md)
 · **Model:** Opus 4.8 (`claude-opus-4-8`) · **Scope:** Poona Dictionary letter **a-** only (see §6).
@@ -553,10 +553,15 @@ The contrast could not be sharper. Böhtlingk's *kürzere Fassung* (PWK) documen
 lemmas across the whole alphabet in ten years**; PD has 104,959 lemmas and has covered ~4 % of
 the alphabet in fifty. Sanskrit is not the problem — **exhaustive historical detail is**, and the
 proof is 170 years old. **Theodor Goldstücker's 1856 remake of Wilson** set out to improve the
-whole dictionary, sank into `a`, published 6,761 exhaustive entries, and was abandoned there at his
-death — the one clean death-in-`a` (his exact last entry is *abhyāhita*, printed p. 320b — 6,780
-entries in Cologne's GST digitisation, `csl-orig` v02/gst, checked 14-10-2026; PD's printed
-fascicles, through *abhigamyamānaparadā* in 2019, have not yet passed it).
+whole dictionary, sank into `a`, published 6,761 exhaustive entries in its digitised parts 1–4
+(1856–May 1860), and was abandoned there — the one clean death-in-`a` (the digitisation's exact
+last entry is *abhyāhita*, printed p. 320b — 6,780 entries in Cologne's GST digitisation,
+`csl-orig` v02/gst, checked 14-10-2026; the printed work itself ran on into *ar*-words by 1864 —
+the BL scan ([archive.org](https://archive.org/details/goldstucker-a-dictionary-sanskrit-and-english))
+runs continuously to p. 480 with entries past p. 320b, and the memoir in the
+[Literary Remains](https://archive.org/details/in.ernet.dli.2015.31677) gives "480 pages" and
+"1856-64"; PD's printed fascicles, through *abhigamyamānaparadā* in 2019, have not yet passed it;
+census dossier: gasyoun/Uprava `papers/A68/GOLDSTUCKER_VS_WILSON_CENSUS_2026-10-30.md`).
 Two contemporaries are often lumped with him but do not
 belong: **Kossowicz's 1854 Sanskrit→Russian dictionary** reached 13,488 entries but is arranged in
 **Russian**, not Sanskrit, alphabetical order and was left unfinished — a partial work of a
