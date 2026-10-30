@@ -1,0 +1,234 @@
+{
+  "created": "2026-10-30",
+  "dataset": "nws_layer/nws_layer_metrics",
+  "generated_by": "scripts/nws_layer_join.py",
+  "h5": {
+    "inversions": 2,
+    "operationalization": "declared at Stage-2 execution (protocol pins the direction, not a number; not retuned): tracks = rho>=0.6 and inversions<=1; divergent = rho<0.4 or inversions>=3; else mixed",
+    "protocol_text": "NWS attestation mass on shared headwords tracks PW's distribution; divergence — with the undigitized Halle remainder quantified — upgrades NWS toward a delimited witness (report §8, written before the join)",
+    "rho_total": 0.3414,
+    "upgrade_conditional": "divergence upgrades NWS toward a delimited witness ONLY together with a quantified undigitized remainder — the remainder is H5940-gated and NOT quantified on this substrate, so no upgrade is claimed here",
+    "verdict": "divergent"
+  },
+  "h6": {
+    "verdict": "82/174 attested (47.13%) recomputed from the dated scrape (fetched 2026-10-06, html sha 86c9495e…), hash-pinned; filename-stem method not used"
+  },
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "pre_registered_out": {
+    "nws_dcs_inventory_join": "OUT — NWS's inventory is the Petersburg inventory (22 of 167,991 keys outside) and its citations are transferred, not re-attested: the join would carry no independent information while adding transfer noise (report §8)"
+  },
+  "protocol": "report pwg-nws-pd-dcs-8294e5 §8 Stage 2 — NWS in its three delimited roles; pre-registered, not retuned",
+  "role1_attestation_mass": {
+    "concentration_top_decile_pct": {
+      "nws_mass": 38.6,
+      "pwg_ql": 67.24
+    },
+    "containment_pct": 82.57,
+    "decile_inversions": 2,
+    "decile_profile": [
+      {
+        "decile": 1,
+        "nws_mass_mean": 0.966,
+        "nws_mass_share_pct": 5.52,
+        "pwg_ql_mean": 0.0
+      },
+      {
+        "decile": 2,
+        "nws_mass_mean": 0.668,
+        "nws_mass_share_pct": 3.82,
+        "pwg_ql_mean": 0.72
+      },
+      {
+        "decile": 3,
+        "nws_mass_mean": 0.802,
+        "nws_mass_share_pct": 4.59,
+        "pwg_ql_mean": 1.0
+      },
+      {
+        "decile": 4,
+        "nws_mass_mean": 0.85,
+        "nws_mass_share_pct": 4.86,
+        "pwg_ql_mean": 1.86
+      },
+      {
+        "decile": 5,
+        "nws_mass_mean": 0.849,
+        "nws_mass_share_pct": 4.86,
+        "pwg_ql_mean": 2.67
+      },
+      {
+        "decile": 6,
+        "nws_mass_mean": 1.052,
+        "nws_mass_share_pct": 6.01,
+        "pwg_ql_mean": 4.5
+      },
+      {
+        "decile": 7,
+        "nws_mass_mean": 1.217,
+        "nws_mass_share_pct": 6.96,
+        "pwg_ql_mean": 8.04
+      },
+      {
+        "decile": 8,
+        "nws_mass_mean": 1.739,
+        "nws_mass_share_pct": 9.94,
+        "pwg_ql_mean": 15.25
+      },
+      {
+        "decile": 9,
+        "nws_mass_mean": 2.596,
+        "nws_mass_share_pct": 14.84,
+        "pwg_ql_mean": 31.36
+      },
+      {
+        "decile": 10,
+        "nws_mass_mean": 6.751,
+        "nws_mass_share_pct": 38.6,
+        "pwg_ql_mean": 134.2
+      }
+    ],
+    "denominators": {
+      "digitized_envelope_pct": 20.3,
+      "literature_refs": 8937,
+      "nws_key_space": 167990,
+      "nws_prose_entries": 34101,
+      "page_precise_refs": 8440
+    },
+    "letter_aggregate_rho": 0.9782,
+    "nws_keys_outside_pwg": 5943,
+    "pwg_ql_on_nws_treated_keys": {
+      "all": 729719,
+      "share_pct": 77.02,
+      "treated": 562047
+    },
+    "shared_headwords": 28158,
+    "spearman_vs_pwg_ql": {
+      "lit_refs": 0.0085,
+      "mass_own_ex_mw": 0.333,
+      "mass_total": 0.3414,
+      "n": 28158,
+      "page_refs": 0.2369,
+      "sigla": 0.3432,
+      "t_stat": 60.9
+    },
+    "undigitized_halle_remainder": {
+      "digitized_envelope_note": "the dump treats 34,101 of 167,990 keys across ALL letters — full-alphabet, not letter-limited; editorial silence vs undigitized print is not separable from the dump alone",
+      "gate": "H5940 (MG visa pending) — H6067 OCR route built, page images rights-gated; not quantifiable in entries until the gate opens",
+      "print_remainder_quantified": false
+    }
+  },
+  "role2_declared_vs_exercised": {
+    "attested_pct": 47.13,
+    "attested_works": 82,
+    "declared_works": 174,
+    "method": "recomputed ONLY from the dated scrape (registry JSON with html sha) + parsed sigla match against its 174 rows — NEVER from filename stems",
+    "retracted_figures_banned": [
+      "82.7% absence (filename-stem artefact — H6050 retraction, never reused)",
+      "NWS 82.7% absence figure in any role"
+    ],
+    "scrape": {
+      "fetched": "2026-10-06",
+      "html_sha256": "86c9495e0cbe7824d9d1496974f245fab4d3cfb873cee1ce225defb20bbb8aa7",
+      "url": "https://nws.uzi.uni-halle.de/dictionaries"
+    },
+    "top_attested": [
+      {
+        "citations": 1571,
+        "siglum": "Geldner 1907"
+      },
+      {
+        "citations": 1402,
+        "siglum": "Sircar 1966"
+      },
+      {
+        "citations": 753,
+        "siglum": "Abhyankar 1986"
+      },
+      {
+        "citations": 527,
+        "siglum": "Ensink 1964"
+      },
+      {
+        "citations": 510,
+        "siglum": "Olivelle 2015"
+      },
+      {
+        "citations": 353,
+        "siglum": "Renou 1997"
+      },
+      {
+        "citations": 331,
+        "siglum": "Renou 1934"
+      },
+      {
+        "citations": 295,
+        "siglum": "Kangle 1969"
+      }
+    ],
+    "zero_citation_works": 92
+  },
+  "role3_dependence_tracer": {
+    "dict_marker_entries": 4941,
+    "entries_with_family_marker": 7479,
+    "family_marker_entry_share_pct": 21.93,
+    "lex_mw_markers": 5873,
+    "note": "X(MW) = NWS internal MW-source citations; DCS's own lexicographic layer is MW-derived, so this material is MW-mediated on BOTH sides — the corpus is blind to it by construction (report §8)",
+    "pure_mw_mediated_entries": 3356,
+    "pure_mw_mediated_share_pct": 9.84,
+    "top_family": [
+      {
+        "count": 5873,
+        "marker": "Lex(MW)"
+      },
+      {
+        "count": 2014,
+        "marker": "Kāvya(MW)"
+      },
+      {
+        "count": 1718,
+        "marker": "W(MW)"
+      },
+      {
+        "count": 574,
+        "marker": "Buddh(MW)"
+      },
+      {
+        "count": 405,
+        "marker": "Caraka(MW)"
+      },
+      {
+        "count": 387,
+        "marker": "IW(MW)"
+      }
+    ],
+    "x_mw_family_total": 13738,
+    "x_mw_kinds": 41
+  },
+  "substrate": {
+    "pins_echo": {
+      "nws_tar": {
+        "bytes": 15916182,
+        "sha256": "054b05da96df2f1af2c95c02b7e15d87f8a616d4eaa339f93e3ed7430e07f00c"
+      },
+      "pwg_txt": {
+        "bytes": 54634244,
+        "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166"
+      },
+      "works_registry_scrape": {
+        "fetched": "2026-10-06",
+        "html_sha256": "86c9495e0cbe7824d9d1496974f245fab4d3cfb873cee1ce225defb20bbb8aa7",
+        "url": "https://nws.uzi.uni-halle.de/dictionaries",
+        "works": 174
+      }
+    },
+    "rights_nws": "MLU Halle-Wittenberg — texts with attribution (Impressum probe 04-10-2026); private lemma tar NOT committed (H5939); committed rows are derived counts/keys",
+    "rows": {
+      "nws_headword_mass": 34101,
+      "nws_letter_envelope": 48,
+      "nws_works_attestation": 174,
+      "nws_x_mw_census": 41,
+      "pwg_headword_ql": 123366
+    }
+  }
+}

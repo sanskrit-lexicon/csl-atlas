@@ -1,0 +1,31 @@
+{
+  "created": "2026-10-30",
+  "dataset": "nws_layer/nws_layer_pins",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "method_h6": "attested works recomputed ONLY from the dated scrape (2026-10-06, html sha 86c9495e…) + parsed sigla match — never from filename stems (H6050 retraction)",
+  "nws_key_space": 167990,
+  "nws_tar": {
+    "bytes": 15916182,
+    "sha256": "054b05da96df2f1af2c95c02b7e15d87f8a616d4eaa339f93e3ed7430e07f00c"
+  },
+  "pwg_txt": {
+    "bytes": 54634244,
+    "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166"
+  },
+  "rights_nws": "MLU Halle-Wittenberg — texts with attribution (Impressum probe 04-10-2026); private lemma tar NOT committed (H5939); committed rows are derived counts/keys",
+  "rows": {
+    "nws_headword_mass": 34101,
+    "nws_letter_envelope": 48,
+    "nws_works_attestation": 174,
+    "nws_x_mw_census": 41,
+    "pwg_headword_ql": 123366
+  },
+  "works_registry_scrape": {
+    "fetched": "2026-10-06",
+    "html_sha256": "86c9495e0cbe7824d9d1496974f245fab4d3cfb873cee1ce225defb20bbb8aa7",
+    "url": "https://nws.uzi.uni-halle.de/dictionaries",
+    "works": 174
+  },
+  "x_mw_family_total": 13738
+}
