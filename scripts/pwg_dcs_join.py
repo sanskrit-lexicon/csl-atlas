@@ -271,6 +271,10 @@ def main() -> int:
     grid["H2_per_letter_dispersion_exceeds_PD_fascicles"] = h2_dispersion_exceeds_pd
 
     metrics = {
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "dataset": "pwg_dcs/pwg_dcs_join_metrics",
+        "created": "2026-10-30",
         "generated_by": "scripts/pwg_dcs_join.py",
         "protocol": "report pwg-nws-pd-dcs-8294e5 §8, pre-registered",
         "coverage": coverage,

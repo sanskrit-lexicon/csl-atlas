@@ -250,6 +250,10 @@ def main() -> int:
                 out.write(f"{lit}\t{sig}\t{c['raw']}\t{c['ql']}\n")
 
     pins = {
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "dataset": "pwg_dcs/pwg_substrate_pins",
+        "created": "2026-10-30",
         "pwg_txt": {"path": args.pwg, "bytes": pwg_bytes, "sha256": pwg_sha},
         "registers": {
             "entries": entries,

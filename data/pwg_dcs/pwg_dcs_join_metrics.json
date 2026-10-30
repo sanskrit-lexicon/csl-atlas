@@ -15,6 +15,8 @@
     "stratum_excluded_alpha": 63.59,
     "stratum_excluded_omega": 63.53
   },
+  "created": "2026-10-30",
+  "dataset": "pwg_dcs/pwg_dcs_join_metrics",
   "g5_battery": {
     "bootstrap_B": 2000,
     "bootstrap_p2_5": 46.62,
@@ -46,6 +48,8 @@
     "exceeds": true,
     "pd_fascicle_span_pp": 19.99
   },
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "per_letter": [
     {
       "coverage_pct": 63.99,

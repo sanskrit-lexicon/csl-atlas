@@ -59,7 +59,11 @@ def main() -> int:
             out.write("\t".join(r) + "\n")
 
     sha = hashlib.sha256(open(args.html, "rb").read()).hexdigest()
-    json.dump({"html_sha256": sha, "rows": len(rows), "html_bytes": os.path.getsize(args.html)},
+    json.dump({"license": "CC-BY-SA-4.0",
+               "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+               "dataset": "pwg_dcs/dcs_catalogue_pins", "created": "2026-10-30",
+               "html_sha256": sha, "rows": len(rows),
+               "html_bytes": os.path.getsize(args.html)},
               open(os.path.join(IN_DIR, "dcs_catalogue_pins.json"), "w", encoding="utf-8"),
               indent=2, sort_keys=True)
     print(f"rows={len(rows)} sha={sha[:16]}")
