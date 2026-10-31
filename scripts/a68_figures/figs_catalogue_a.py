@@ -12,7 +12,7 @@ def fig5(m):
     """
     total = m["total_siglum_mass"]
     primary = m["primary_work_mass"]
-    W, H = 860, 500
+    W, H = 930, 500
     lx, lw = 40, 16
     mx, mw = 340, 16
     rx, rw = 640, 16
@@ -79,6 +79,17 @@ def fig5(m):
               f"{label}</text>\n")
         s += (f"<text x='{rx + 26}' y='{yc + 14:.1f}' {FONT} font-size='12' "
               f"font-weight='bold'>{v:,} ({100 * v / primary:.1f} % of primary)</text>\n")
+    # Colour legend (MG review 31-10): swatches for every ribbon colour.
+    legend = [("Primary works / covered by DCS", C_COVERED),
+              ("Residue (outside DCS)", C_RESIDUE),
+              ("Structural", C_STRUCT),
+              ("Secondary scholarship", C_SECOND)]
+    lx, ly = 30, 452
+    for label, color in legend:
+        s += f"<rect x='{lx}' y='{ly}' width='12' height='12' fill='{color}'/>\n"
+        s += (f"<text x='{lx + 18}' y='{ly + 11}' {FONT} font-size='11' "
+              f"fill='#333333'>{label}</text>\n")
+        lx += 18 + int(6.6 * len(label)) + 34
     s += (f"<text x='30' y='{H - 12}' {FONT} font-size='11' fill='#555555'>"
           f"ribbon height = occurrence mass · classes re-derived from "
           f"pd_siglum_families.tsv</text>\n")

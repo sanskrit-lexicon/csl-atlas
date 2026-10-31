@@ -10,3 +10,6 @@
 # published with the public A68 report; no manuscript prose. The paper itself
 # stays in gasyoun/Uprava/papers.
 papers/figures/a68_fig*.svg  # published: csl-atlas A68 report figures | license: repo (generated)
+# A68 style studies — same code-generated plates (figs 7/10 x four review idioms),
+# no manuscript prose; pending MG style pick, same rationale as the figures above.
+papers/figures/style_studies/a68_fig*.svg  # generated: style review proposals (build_a68_figures.py)

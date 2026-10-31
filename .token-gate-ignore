@@ -24,3 +24,8 @@ reports/PD_DCS_CORPUS_COVERAGE_2026.md
 
 # Machine-generated /document sweep receipts (not agent-authored prose).
 reports/sweeps/document_sweep_*.json
+
+# A68 paper figures — deterministic builder output (scripts/build_a68_figures.py),
+# regenerable from committed data + code; only the builder source is gated.
+papers/figures/*.svg
+papers/figures/style_studies/*.svg

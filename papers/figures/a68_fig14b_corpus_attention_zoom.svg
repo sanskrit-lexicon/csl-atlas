@@ -1,0 +1,522 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='1030' viewBox='0 0 1600 1030'>
+<title>Corpus size vs dictionary attention — quadrant zoom</title>
+<rect width='1600' height='1030' fill='white'/>
+<text x='30' y='34' font-family='Georgia, serif' font-size='17' font-weight='bold'>Corpus size vs dictionary attention — every covered title, readable</text>
+<text x='30' y='56' font-family='Georgia, serif' font-size='12' fill='#555555'>zoom: four median quadrants at ~2× axis scale (≈4× area) · crosshairs = medians (12,906 tok, 400 cites) · n = 118</text>
+<text x='60' y='88' font-family='Georgia, serif' font-size='12' font-weight='bold'>overview</text>
+<circle cx='417.3' cy='120.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='344.3' cy='153.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='255.1' cy='161.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='188.4' cy='162.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='360.7' cy='163.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='311.0' cy='165.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='338.0' cy='166.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='194.7' cy='169.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='314.4' cy='178.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='322.0' cy='187.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='328.1' cy='187.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='295.9' cy='191.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='282.6' cy='191.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='177.9' cy='192.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='254.1' cy='197.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='287.9' cy='198.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='307.8' cy='198.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='318.9' cy='200.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='300.3' cy='201.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='140.7' cy='201.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='253.2' cy='201.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='331.9' cy='202.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='338.7' cy='203.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='229.2' cy='203.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='263.3' cy='205.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='288.2' cy='207.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='246.2' cy='209.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='282.2' cy='211.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='286.7' cy='211.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='251.7' cy='215.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='140.9' cy='216.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='333.3' cy='218.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='284.1' cy='219.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='242.9' cy='219.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='155.6' cy='221.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='205.2' cy='221.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='226.7' cy='221.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='218.0' cy='224.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='318.2' cy='225.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='301.3' cy='226.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='174.1' cy='226.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='326.8' cy='229.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='260.3' cy='231.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='222.1' cy='231.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='305.9' cy='232.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='244.6' cy='232.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='149.9' cy='233.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='277.1' cy='234.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='316.4' cy='234.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='259.4' cy='235.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='252.3' cy='236.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='129.9' cy='237.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='198.1' cy='237.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='87.1' cy='239.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='264.1' cy='240.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='228.9' cy='241.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='271.1' cy='241.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='278.6' cy='243.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='230.7' cy='244.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='260.5' cy='245.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='146.4' cy='245.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='261.1' cy='245.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='213.8' cy='245.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='266.4' cy='247.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='250.9' cy='248.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='273.7' cy='249.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='275.5' cy='250.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='249.6' cy='251.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='260.7' cy='253.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='237.1' cy='253.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='144.1' cy='254.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='267.6' cy='255.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='66.3' cy='256.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='237.0' cy='256.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='194.0' cy='260.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='297.5' cy='260.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='253.7' cy='263.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='260.6' cy='264.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='214.0' cy='264.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='214.5' cy='265.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='233.2' cy='266.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='238.7' cy='269.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='205.2' cy='269.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='271.2' cy='270.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='140.1' cy='270.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='271.5' cy='273.4' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='236.0' cy='274.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='266.8' cy='274.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='245.3' cy='274.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='251.5' cy='278.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='236.0' cy='278.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='151.3' cy='279.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='224.5' cy='279.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='228.8' cy='280.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='131.0' cy='281.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='228.2' cy='281.8' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='228.3' cy='282.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='216.1' cy='282.6' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='222.6' cy='286.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='216.6' cy='286.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='227.3' cy='289.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='225.2' cy='290.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='241.8' cy='290.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='308.9' cy='290.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='237.4' cy='290.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='249.7' cy='293.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='228.1' cy='294.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='177.1' cy='294.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='233.7' cy='296.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='247.0' cy='297.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='236.0' cy='297.5' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='224.1' cy='297.9' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='222.0' cy='298.3' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='280.3' cy='298.7' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='210.9' cy='299.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='223.0' cy='300.2' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='194.7' cy='304.1' r='2.6' fill='#2166ac' opacity='0.6'/>
+<circle cx='177.2' cy='305.0' r='2.6' fill='#2166ac' opacity='0.6'/>
+<line x1='245.7' y1='100' x2='245.7' y2='480' stroke='#999999' stroke-dasharray='4 3'/>
+<line x1='60' y1='244.6' x2='500' y2='244.6' stroke='#999999' stroke-dasharray='4 3'/>
+<text x='70' y='116' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#b2182b' text-anchor='start'>A · 2 titles</text>
+<text x='490' y='116' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#b2182b' text-anchor='end'>B · 2 titles</text>
+<text x='70' y='470' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#b2182b' text-anchor='start'>C · 2 titles</text>
+<text x='490' y='470' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#b2182b' text-anchor='end'>D · 2 titles</text>
+<rect x='564' y='100' width='482' height='410' fill='#fbfbfb' stroke='#dddddd'/>
+<text x='576' y='124' font-family='Georgia, serif' font-size='13' font-weight='bold' fill='#b2182b'>A</text>
+<text x='596' y='124' font-family='Georgia, serif' font-size='12.5'>small corpus × heavy attention · 20 titles</text>
+<line x1='745.7' y1='140' x2='745.7' y2='466' stroke='#eeeeee'/>
+<text x='745.7' y='482' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>1k</text>
+<line x1='890.3' y1='140' x2='890.3' y2='466' stroke='#eeeeee'/>
+<text x='890.3' y='482' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>10k</text>
+<line x1='630' y1='322.7' x2='920' y2='322.7' stroke='#eeeeee'/>
+<text x='622' y='326.7' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>1k</text>
+<circle cx='812.0' cy='157.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='818.0' y='144.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Kāśikāvṛtti</text>
+<line x1='815.6' y1='157.5' x2='818.0' y2='141.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='822.5' cy='182.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='828.5' y='170.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Nyāyasūtra</text>
+<line x1='826.1' y1='182.9' x2='828.5' y2='167.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='794.8' cy='264.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='800.8' y='251.8' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Aṣṭāṅgasaṃgraha</text>
+<line x1='798.4' y1='264.8' x2='800.8' y2='248.8' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='879.1' cy='304.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='885.1' y='292.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Agnipurāṇa</text>
+<line x1='882.7' y1='304.9' x2='885.1' y2='289.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='901.6' cy='362.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='907.6' y='349.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Amarakośa</text>
+<line x1='905.2' y1='362.0' x2='907.6' y2='346.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='839.7' cy='368.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='845.7' y='360.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Abhidhānacintāmaṇi</text>
+<line x1='843.3' y1='368.2' x2='845.7' y2='357.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='875.1' cy='369.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='881.1' y='372.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Nāṭyaśāstra</text>
+<circle cx='860.7' cy='378.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='866.7' y='383.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Āśvālāyanaśrautasūtra</text>
+<circle cx='788.5' cy='387.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='794.5' y='395.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Tarkasaṃgraha</text>
+<circle cx='867.5' cy='404.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='873.5' y='406.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Taittirīyāraṇyaka</text>
+<circle cx='904.5' cy='408.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='910.5' y='418.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Kātyāyanaśrautasūtra</text>
+<line x1='908.1' y1='408.2' x2='910.5' y2='415.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='828.1' cy='426.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='834.1' y='429.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Nirukta</text>
+<circle cx='645.5' cy='433.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='651.5' y='441.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Tattvavaiśāradī</text>
+<line x1='649.1' y1='433.2' x2='651.5' y2='438.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='878.7' cy='439.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='884.7' y='452.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Tantrākhyāyikā</text>
+<line x1='882.3' y1='439.5' x2='884.7' y2='449.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='881.6' cy='448.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='887.6' y='464.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Śatakatraya</text>
+<line x1='885.2' y1='448.5' x2='887.6' y2='461.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='733.8' cy='298.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='727.8' y='295.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Śivapurāṇa</text>
+<line x1='730.2' y1='298.5' x2='727.8' y2='292.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='734.1' cy='351.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='728.1' y='348.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Hiraṇyakeśiśrautasūtra</text>
+<line x1='730.5' y1='351.5' x2='728.1' y2='345.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='758.2' cy='366.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='752.2' y='363.3' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Mānavaśrautasūtra</text>
+<line x1='754.6' y1='366.8' x2='752.2' y2='360.3' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='748.9' cy='411.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='742.9' y='408.1' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Sarvadarśanasaṃgraha</text>
+<line x1='745.3' y1='411.6' x2='742.9' y2='405.1' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='715.9' cy='424.3' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='709.9' y='420.8' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Varāhapurāṇa</text>
+<line x1='712.3' y1='424.3' x2='709.9' y2='417.8' stroke='#bbbbbb' stroke-width='0.6'/>
+<text x='775' y='500' font-family='Georgia, serif' font-size='10.5' fill='#555555' text-anchor='middle'>DCS tokens 2026</text>
+<text x='574' y='303' font-family='Georgia, serif' font-size='10.5' fill='#555555' transform='rotate(-90 574 303)' text-anchor='middle'>PD citations</text>
+<rect x='1084' y='100' width='482' height='410' fill='#fbfbfb' stroke='#dddddd'/>
+<text x='1096' y='124' font-family='Georgia, serif' font-size='13' font-weight='bold' fill='#b2182b'>B</text>
+<text x='1116' y='124' font-family='Georgia, serif' font-size='12.5'>big corpus × heavy attention · 39 titles</text>
+<line x1='1150.1' y1='140' x2='1150.1' y2='466' stroke='#eeeeee'/>
+<text x='1150.1' y='482' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>10k</text>
+<line x1='1283.3' y1='140' x2='1283.3' y2='466' stroke='#eeeeee'/>
+<text x='1283.3' y='482' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>100k</text>
+<line x1='1416.5' y1='140' x2='1416.5' y2='466' stroke='#eeeeee'/>
+<text x='1416.5' y='482' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>1M</text>
+<line x1='1150' y1='366.3' x2='1440' y2='366.3' stroke='#eeeeee'/>
+<text x='1142' y='370.3' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>1k</text>
+<line x1='1150' y1='151.1' x2='1440' y2='151.1' stroke='#eeeeee'/>
+<text x='1142' y='155.1' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>10k</text>
+<circle cx='1424.5' cy='157.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1430.5' y='154.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Mahābhārata</text>
+<line x1='1428.1' y1='157.5' x2='1430.5' y2='151.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1314.0' cy='234.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1320.0' y='231.2' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Ṛgveda</text>
+<line x1='1317.6' y1='234.7' x2='1320.0' y2='228.2' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1338.9' cy='258.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1344.9' y='255.3' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Rāmāyaṇa</text>
+<line x1='1342.5' y1='258.8' x2='1344.9' y2='252.3' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1304.4' cy='265.3' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1310.4' y='266.8' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Śatapathabrāhmaṇa</text>
+<circle cx='1177.4' cy='339.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1183.4' y='336.2' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Mīmāṃsāsūtrabhāṣya</text>
+<line x1='1181.0' y1='339.7' x2='1183.4' y2='333.2' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1176.1' cy='350.1' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1182.1' y='347.7' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Vājasaneyisaṃhitā (Mādhya…</text>
+<line x1='1179.7' y1='350.1' x2='1182.1' y2='344.7' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1295.2' cy='352.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1301.2' y='359.2' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Matsyapurāṇa</text>
+<circle cx='1305.5' cy='354.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1311.5' y='370.7' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Suśrutasaṃhitā</text>
+<line x1='1309.1' y1='354.0' x2='1311.5' y2='367.7' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1173.8' cy='381.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1179.8' y='382.2' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Taittirīyabrāhmaṇa</text>
+<circle cx='1297.4' cy='389.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1303.4' y='393.7' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Liṅgapurāṇa</text>
+<circle cx='1174.8' cy='433.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1180.8' y='429.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Kauṣītakibrāhmaṇa</text>
+<line x1='1178.4' y1='433.0' x2='1180.8' y2='426.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1192.7' cy='441.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1198.7' y='441.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Śāṅkhāyanaśrautasūtra</text>
+<circle cx='1179.0' cy='253.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1173.0' y='138.1' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Skandapurāṇa</text>
+<line x1='1175.4' y1='253.7' x2='1173.0' y2='135.1' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1263.7' cy='263.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1257.7' y='149.6' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Atharvaveda (Śaunaka)</text>
+<line x1='1260.1' y1='263.6' x2='1257.7' y2='146.6' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1268.8' cy='295.3' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1262.8' y='179.7' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Bhāgavatapurāṇa</text>
+<line x1='1265.2' y1='295.3' x2='1262.8' y2='176.7' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1280.2' cy='315.1' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1274.2' y='199.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Carakasaṃhitā</text>
+<line x1='1276.6' y1='315.1' x2='1274.2' y2='196.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1289.5' cy='315.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1283.5' y='211.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kathāsaritsāgara</text>
+<line x1='1285.9' y1='315.9' x2='1283.5' y2='208.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1240.8' cy='324.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1234.8' y='222.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Taittirīyasaṃhitā</text>
+<line x1='1237.2' y1='324.8' x2='1234.8' y2='219.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1220.6' cy='324.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1214.6' y='234.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Āpastambaśrautasūtra</text>
+<line x1='1217.0' y1='324.8' x2='1214.6' y2='231.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1228.6' cy='342.1' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1222.6' y='245.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kāṭhakasaṃhitā</text>
+<line x1='1225.0' y1='342.1' x2='1222.6' y2='242.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1258.7' cy='343.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1252.7' y='257.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Maitrāyaṇīsaṃhitā</text>
+<line x1='1255.1' y1='343.0' x2='1252.7' y2='254.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1275.6' cy='346.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1269.6' y='268.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Viṣṇupurāṇa</text>
+<line x1='1272.0' y1='346.6' x2='1269.6' y2='265.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1247.3' cy='349.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1241.3' y='280.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Jaiminīyabrāhmaṇa</text>
+<line x1='1243.7' y1='349.0' x2='1241.3' y2='277.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1191.4' cy='359.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1185.4' y='291.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Arthaśāstra</text>
+<line x1='1187.8' y1='359.4' x2='1185.4' y2='288.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1229.1' cy='363.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1223.1' y='303.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Baudhāyanaśrautasūtra</text>
+<line x1='1225.5' y1='363.2' x2='1223.1' y2='300.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1165.5' cy='367.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1159.5' y='314.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Bhāvaprakāśa</text>
+<line x1='1161.9' y1='367.4' x2='1159.5' y2='311.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1220.0' cy='373.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1214.0' y='326.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Harṣacarita</text>
+<line x1='1216.4' y1='373.4' x2='1214.0' y2='323.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1226.8' cy='373.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1220.8' y='337.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Manusmṛti</text>
+<line x1='1223.2' y1='373.8' x2='1220.8' y2='334.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1222.9' cy='392.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1216.9' y='349.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Daśakumāracarita</text>
+<line x1='1219.3' y1='392.0' x2='1216.9' y2='346.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1274.5' cy='406.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1268.5' y='360.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Harivaṃśa</text>
+<line x1='1270.9' y1='406.4' x2='1268.5' y2='357.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1248.9' cy='409.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1242.9' y='372.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Aitareyabrāhmaṇa</text>
+<line x1='1245.3' y1='409.4' x2='1242.9' y2='369.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1287.5' cy='416.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1281.5' y='383.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Aṣṭāṅgahṛdayasaṃhitā</text>
+<line x1='1283.9' y1='416.9' x2='1281.5' y2='380.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1186.9' cy='420.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1180.9' y='395.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kāmasūtra</text>
+<line x1='1183.3' y1='420.9' x2='1180.9' y2='392.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1255.8' cy='422.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1249.8' y='406.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Bṛhatkathāślokasaṃgraha</text>
+<line x1='1252.2' y1='422.9' x2='1249.8' y2='403.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1212.3' cy='427.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1206.3' y='418.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Pañcaviṃśabrāhmaṇa</text>
+<line x1='1208.7' y1='427.4' x2='1206.3' y2='415.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1271.7' cy='428.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1265.7' y='429.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kūrmapurāṇa</text>
+<circle cx='1185.5' cy='430.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1179.5' y='441.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kirātārjunīya</text>
+<line x1='1181.9' y1='430.2' x2='1179.5' y2='438.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1203.2' cy='445.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1197.2' y='452.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Hitopadeśa</text>
+<circle cx='1214.5' cy='448.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1208.5' y='464.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Gopathabrāhmaṇa</text>
+<line x1='1210.9' y1='448.5' x2='1208.5' y2='461.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<text x='1295' y='500' font-family='Georgia, serif' font-size='10.5' fill='#555555' text-anchor='middle'>DCS tokens 2026</text>
+<text x='1094' y='303' font-family='Georgia, serif' font-size='10.5' fill='#555555' transform='rotate(-90 1094 303)' text-anchor='middle'>PD citations</text>
+<rect x='564' y='560' width='482' height='410' fill='#fbfbfb' stroke='#dddddd'/>
+<text x='576' y='584' font-family='Georgia, serif' font-size='13' font-weight='bold' fill='#b2182b'>C</text>
+<text x='596' y='584' font-family='Georgia, serif' font-size='12.5'>small corpus × light attention · 39 titles</text>
+<line x1='636.4' y1='600' x2='636.4' y2='926' stroke='#eeeeee'/>
+<text x='636.4' y='942' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>100</text>
+<line x1='763.7' y1='600' x2='763.7' y2='926' stroke='#eeeeee'/>
+<text x='763.7' y='942' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>1k</text>
+<line x1='891.0' y1='600' x2='891.0' y2='926' stroke='#eeeeee'/>
+<text x='891.0' y='942' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>10k</text>
+<line x1='630' y1='879.6' x2='920' y2='879.6' stroke='#eeeeee'/>
+<text x='622' y='883.6' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>100</text>
+<circle cx='858.9' cy='620.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='864.9' y='510.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Kāvyālaṃkāra</text>
+<line x1='862.5' y1='620.4' x2='864.9' y2='507.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='892.6' cy='659.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='898.6' y='549.3' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Aitareya-Āraṇyaka</text>
+<line x1='896.2' y1='659.2' x2='898.6' y2='546.3' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='645.5' cy='673.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='651.5' y='563.8' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Abhidharmakośabhāṣya</text>
+<line x1='649.1' y1='673.7' x2='651.5' y2='560.8' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='892.5' cy='674.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='898.5' y='575.3' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Kumārasaṃbhava</text>
+<line x1='896.1' y1='674.4' x2='898.5' y2='572.3' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='830.2' cy='689.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='836.2' y='586.8' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Mṛgendratantra</text>
+<line x1='833.8' y1='689.4' x2='836.2' y2='583.8' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='859.1' cy='711.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='865.1' y='602.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Śārṅgadharasaṃhitā</text>
+<line x1='862.7' y1='711.9' x2='865.1' y2='599.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='859.9' cy='716.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='865.9' y='613.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Gautamadharmasūtra</text>
+<line x1='863.5' y1='716.0' x2='865.9' y2='610.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='887.0' cy='722.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='893.0' y='625.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Āpastambadharmasūtra</text>
+<line x1='890.6' y1='722.6' x2='893.0' y2='622.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='894.9' cy='733.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='900.9' y='636.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Drāhyāyaṇaśrautasūtra</text>
+<line x1='898.5' y1='733.0' x2='900.9' y2='633.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='846.4' cy='736.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='852.4' y='648.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Kāvyādarśa</text>
+<line x1='850.0' y1='736.6' x2='852.4' y2='645.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='891.1' cy='757.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='897.1' y='659.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Yogasūtrabhāṣya</text>
+<line x1='894.7' y1='757.7' x2='897.1' y2='656.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='904.5' cy='759.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='910.5' y='671.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Śāṅkhāyanāraṇyaka</text>
+<line x1='908.1' y1='759.7' x2='910.5' y2='668.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='891.1' cy='780.3' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='897.1' y='682.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Vasiṣṭhadharmasūtra</text>
+<line x1='894.7' y1='780.3' x2='897.1' y2='679.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='874.4' cy='786.1' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='880.4' y='694.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Gobhilagṛhyasūtra</text>
+<line x1='878.0' y1='786.1' x2='880.4' y2='691.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='880.6' cy='790.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='886.6' y='705.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Śāṅkhāyanagṛhyasūtra</text>
+<line x1='884.2' y1='790.8' x2='886.6' y2='702.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='879.8' cy='795.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='885.8' y='717.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Vaikhānasagṛhyasūtra</text>
+<line x1='883.4' y1='795.7' x2='885.8' y2='714.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='880.0' cy='799.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='886.0' y='728.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Parāśaradharmasaṃhitā</text>
+<line x1='883.6' y1='799.4' x2='886.0' y2='725.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='862.2' cy='799.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='868.2' y='740.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Sāṃkhyatattvakaumudī</text>
+<line x1='865.8' y1='799.4' x2='868.2' y2='737.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='871.7' cy='816.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='877.7' y='751.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Āśvalāyanagṛhyasūtra</text>
+<line x1='875.3' y1='816.6' x2='877.7' y2='748.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='863.0' cy='819.3' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='869.0' y='763.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Gītagovinda</text>
+<line x1='866.6' y1='819.3' x2='869.0' y2='760.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='878.4' cy='833.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='884.4' y='774.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Mānavagṛhyasūtra</text>
+<line x1='882.0' y1='833.9' x2='884.4' y2='771.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='875.4' cy='835.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='881.4' y='786.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Ṣaḍviṃśabrāhmaṇa</text>
+<line x1='879.0' y1='835.4' x2='881.4' y2='783.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='899.5' cy='835.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='905.5' y='797.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Bhāradvājagṛhyasūtra</text>
+<line x1='903.1' y1='835.4' x2='905.5' y2='794.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='893.1' cy='840.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='899.1' y='809.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Hiraṇyakeśigṛhyasūtra</text>
+<line x1='896.7' y1='840.0' x2='899.1' y2='806.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='879.6' cy='856.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='885.6' y='820.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Pāraskaragṛhyasūtra</text>
+<line x1='883.2' y1='856.2' x2='885.6' y2='817.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='805.8' cy='859.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='811.8' y='832.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Sūryasiddhānta</text>
+<line x1='809.4' y1='859.7' x2='811.8' y2='829.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='887.8' cy='864.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='893.8' y='843.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Vaitānasūtra</text>
+<line x1='891.4' y1='864.9' x2='893.8' y2='840.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='891.0' cy='872.1' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='897.0' y='855.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Sāṃkhyakārikābhāṣya</text>
+<line x1='894.6' y1='872.1' x2='897.0' y2='852.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='873.8' cy='874.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='879.8' y='866.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Kāṭhakagṛhyasūtra</text>
+<line x1='877.4' y1='874.0' x2='879.8' y2='863.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='870.8' cy='875.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='876.8' y='878.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Dhanvantarinighaṇṭu</text>
+<circle cx='854.7' cy='879.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='860.7' y='889.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Sāmavidhānabrāhmaṇa</text>
+<line x1='858.3' y1='879.6' x2='860.7' y2='886.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='872.2' cy='885.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='878.2' y='901.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Jaiminigṛhyasūtra</text>
+<line x1='875.8' y1='885.5' x2='878.2' y2='898.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='831.3' cy='904.1' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='837.3' y='912.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Meghadūta</text>
+<line x1='834.9' y1='904.1' x2='837.3' y2='909.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='806.0' cy='908.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='812.0' y='924.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Śvetāśvataropaniṣad</text>
+<line x1='809.6' y1='908.5' x2='812.0' y2='921.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='761.3' cy='617.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='755.3' y='614.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Nyāyabhāṣya</text>
+<line x1='757.7' y1='617.5' x2='755.3' y2='611.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='758.1' cy='660.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='752.1' y='657.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Trikāṇḍaśeṣa</text>
+<line x1='754.5' y1='660.5' x2='752.1' y2='654.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='752.3' cy='742.1' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='746.3' y='738.6' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Vetālapañcaviṃśatikā</text>
+<line x1='748.7' y1='742.1' x2='746.3' y2='735.6' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='768.5' cy='782.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='762.5' y='779.1' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Abhidharmakośa</text>
+<line x1='764.9' y1='782.6' x2='762.5' y2='776.1' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='739.1' cy='792.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='733.1' y='790.6' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kauṣītakagṛhyasūtra</text>
+<line x1='735.5' y1='792.0' x2='733.1' y2='787.6' stroke='#bbbbbb' stroke-width='0.6'/>
+<text x='775' y='960' font-family='Georgia, serif' font-size='10.5' fill='#555555' text-anchor='middle'>DCS tokens 2026</text>
+<text x='574' y='763' font-family='Georgia, serif' font-size='10.5' fill='#555555' transform='rotate(-90 574 763)' text-anchor='middle'>PD citations</text>
+<rect x='1084' y='560' width='482' height='410' fill='#fbfbfb' stroke='#dddddd'/>
+<text x='1096' y='584' font-family='Georgia, serif' font-size='13' font-weight='bold' fill='#b2182b'>D</text>
+<text x='1116' y='584' font-family='Georgia, serif' font-size='12.5'>big corpus × light attention · 20 titles</text>
+<line x1='1150' y1='910.7' x2='1440' y2='910.7' stroke='#eeeeee'/>
+<text x='1142' y='914.7' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>100</text>
+<circle cx='1181.6' cy='637.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1187.6' y='633.9' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Baudhāyanadharmasūtra</text>
+<line x1='1185.2' y1='637.4' x2='1187.6' y2='630.9' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1176.5' cy='648.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1182.5' y='645.4' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Yājñavalkyasmṛti</text>
+<line x1='1180.1' y1='648.5' x2='1182.5' y2='642.4' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1376.5' cy='699.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1382.5' y='696.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Rājanighaṇṭu</text>
+<line x1='1380.1' y1='699.5' x2='1382.5' y2='693.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1184.3' cy='799.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1190.3' y='796.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Baudhāyanagṛhyasūtra</text>
+<line x1='1187.9' y1='799.5' x2='1190.3' y2='793.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1424.5' cy='861.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1430.5' y='857.7' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Divyāvadāna</text>
+<line x1='1428.1' y1='861.2' x2='1430.5' y2='854.7' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1304.9' cy='908.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1310.9' y='905.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='start'>Saddharmapuṇḍarīkasūtra</text>
+<line x1='1308.5' y1='908.5' x2='1310.9' y2='902.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1222.1' cy='617.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1216.1' y='614.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Saundarānanda</text>
+<line x1='1218.5' y1='617.5' x2='1216.1' y2='611.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1224.5' cy='618.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1218.5' y='625.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Viṣṇusmṛti</text>
+<circle cx='1246.6' cy='628.7' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1240.6' y='637.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Bhāradvājaśrautasūtra</text>
+<line x1='1243.0' y1='628.7' x2='1240.6' y2='634.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1277.0' cy='638.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1271.0' y='648.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Vaikhānasaśrautasūtra</text>
+<line x1='1273.4' y1='638.0' x2='1271.0' y2='645.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1284.6' cy='646.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1278.6' y='660.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Rasaratnasamuccaya</text>
+<line x1='1281.0' y1='646.6' x2='1278.6' y2='657.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1222.6' cy='661.5' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1216.6' y='671.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Buddhacarita</text>
+<line x1='1219.0' y1='661.5' x2='1216.6' y2='668.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1251.4' cy='674.6' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1245.4' y='683.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kauśikasūtra</text>
+<line x1='1247.8' y1='674.6' x2='1245.4' y2='680.0' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1193.7' cy='717.0' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1187.7' y='713.5' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Chāndogyopaniṣad</text>
+<line x1='1190.1' y1='717.0' x2='1187.7' y2='710.5' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1222.2' cy='722.2' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1216.2' y='725.0' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Bṛhadāraṇyakopaniṣad</text>
+<circle cx='1266.6' cy='755.8' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1260.6' y='752.3' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Vārāhaśrautasūtra</text>
+<line x1='1263.0' y1='755.8' x2='1260.6' y2='749.3' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1267.9' cy='770.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1261.9' y='767.4' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Lalitavistara</text>
+<line x1='1264.3' y1='770.9' x2='1261.9' y2='764.4' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1248.1' cy='775.4' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1242.1' y='778.9' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Jaiminīya-Upaniṣad-Brāhma…</text>
+<circle cx='1176.9' cy='878.9' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1170.9' y='875.4' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Kātyāyanasmṛti</text>
+<line x1='1173.3' y1='878.9' x2='1170.9' y2='872.4' stroke='#bbbbbb' stroke-width='0.6'/>
+<circle cx='1165.5' cy='902.3' r='3.4' fill='#2166ac' opacity='0.75'/>
+<text x='1159.5' y='898.8' font-family='Georgia, serif' font-size='10' fill='#333333' text-anchor='end'>Nāradasmṛti</text>
+<line x1='1161.9' y1='902.3' x2='1159.5' y2='895.8' stroke='#bbbbbb' stroke-width='0.6'/>
+<text x='1295' y='960' font-family='Georgia, serif' font-size='10.5' fill='#555555' text-anchor='middle'>DCS tokens 2026</text>
+<text x='1094' y='763' font-family='Georgia, serif' font-size='10.5' fill='#555555' transform='rotate(-90 1094 763)' text-anchor='middle'>PD citations</text>
+<text x='60.0' y='496' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>100</text>
+<text x='236.0' y='496' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>10k</text>
+<text x='412.0' y='496' font-family='Georgia, serif' font-size='10.5' text-anchor='middle'>1M</text>
+<text x='52' y='484.0' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>1</text>
+<text x='52' y='303.0' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>100</text>
+<text x='52' y='122.1' font-family='Georgia, serif' font-size='10.5' text-anchor='end'>10k</text>
+<text x='30' y='1016' font-family='Georgia, serif' font-size='11' fill='#555555'>log scales · labels truncated at 25 chars · quadrant split at the medians; panel edges ARE the median crosshair</text>
+</svg>

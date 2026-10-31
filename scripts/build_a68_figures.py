@@ -25,6 +25,15 @@ papers/figures/:
   a68_fig13_coverage_slope.svg    — cat #8: coverage slope 2021→2026 (118 titles)
   a68_fig14_corpus_attention.svg  — cat #9: corpus size vs dictionary attention
   a68_fig15_class_forest.svg      — cat #19: class coverage forest with CIs
+  a68_fig14b_corpus_attention_zoom.svg — cat #9 zoom: 4 median quadrants,
+                                   every title labelled (MG review 31-10)
+  a68_fig16_pwg_vs_pd_forest.svg  — PWG vs PD per stratum, companion forest
+                                   to fig15 (MG review 31-10)
+
+plus papers/figures/style_studies/ — fig7 and fig10 each in four review
+style proposals (Tufte / Economist / FT / engraved plate), same committed
+numbers, not paper figures until MG picks. python -m a68_figures.gallery
+wraps everything into a single review HTML.
 
 Figures 5-15 (H7545, MG-voted 11-figure set, verdict PR Uprava#6407) follow
 the same contract. The C4 layer figures 10-11 encode the committed sweep
