@@ -1,46 +1,45 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='860' height='340' viewBox='0 0 860 340'>
+<svg xmlns='http://www.w3.org/2000/svg' width='860' height='360' viewBox='0 0 860 360'>
 <title>DCS-276 token mass by Renou layer</title>
-<rect width='860' height='340' fill='white'/>
-<text x='30' y='30' font-family='Georgia, serif' font-size='15' font-weight='bold'>Vedic+epic layers carry 44.0 % of DCS tokens — 53.0 % inside the PD-covered set</text>
-<text x='180' y='113.0' font-family='Georgia, serif' font-size='12' text-anchor='end'>All DCS-276 (2026 snapshot)</text>
-<rect x='190.0' y='86' width='87.3' height='46' fill='#d73027'/>
-<text x='233.7' y='113.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>16.2 %</text>
-<rect x='277.3' y='86' width='150.1' height='46' fill='#f46d43'/>
-<text x='352.4' y='113.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>27.8 %</text>
-<rect x='427.4' y='86' width='171.1' height='46' fill='#2166ac'/>
-<text x='513.0' y='113.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>31.7 %</text>
-<rect x='598.5' y='86' width='40.2' height='46' fill='#92c5de'/>
-<rect x='638.7' y='86' width='69.6' height='46' fill='#54278f'/>
-<text x='673.5' y='113.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>12.9 %</text>
-<rect x='708.3' y='86' width='21.7' height='46' fill='#999999'/>
-<text x='180' y='223.0' font-family='Georgia, serif' font-size='12' text-anchor='end'>PD-covered 118</text>
-<rect x='190.0' y='196' width='104.2' height='46' fill='#d73027'/>
-<text x='242.1' y='223.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>19.3 %</text>
-<rect x='294.2' y='196' width='182.3' height='46' fill='#f46d43'/>
-<text x='385.3' y='223.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>33.8 %</text>
-<rect x='476.5' y='196' width='130.4' height='46' fill='#2166ac'/>
-<text x='541.7' y='223.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>24.2 %</text>
-<rect x='606.9' y='196' width='44.0' height='46' fill='#92c5de'/>
-<rect x='650.9' y='196' width='63.9' height='46' fill='#54278f'/>
-<text x='682.9' y='223.0' font-family='Georgia, serif' font-size='11' fill='white' text-anchor='middle'>11.8 %</text>
-<rect x='714.8' y='196' width='15.2' height='46' fill='#999999'/>
-<line x1='190' y1='74' x2='427.4' y2='74' stroke='#444444' stroke-width='1.2'/>
-<text x='308.7' y='68' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle'>Vedic+epic 44.0 %</text>
-<line x1='427.4' y1='74' x2='470.9' y2='74' stroke='#888888'/>
-<text x='449.2' y='68' font-family='Georgia, serif' font-size='12' fill='#555555' text-anchor='middle'>classical 52.0 %</text>
-<line x1='190' y1='184' x2='476.5' y2='184' stroke='#444444' stroke-width='1.2'/>
-<text x='333.2' y='179' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle'>53.0 %</text>
-<rect x='190' y='261' width='13' height='13' fill='#d73027'/>
-<text x='208' y='272' font-family='Georgia, serif' font-size='12'>Vedic — 920,029 tok</text>
-<rect x='333' y='261' width='13' height='13' fill='#f46d43'/>
-<text x='351' y='272' font-family='Georgia, serif' font-size='12'>epic — 1,581,085 tok</text>
-<rect x='469' y='261' width='13' height='13' fill='#2166ac'/>
-<text x='487' y='272' font-family='Georgia, serif' font-size='12'>śāstra — 1,802,358 tok</text>
-<rect x='619' y='261' width='13' height='13' fill='#92c5de'/>
-<text x='637' y='272' font-family='Georgia, serif' font-size='12'>kāvya — 423,207 tok</text>
-<rect x='190' y='285' width='13' height='13' fill='#54278f'/>
-<text x='208' y='296' font-family='Georgia, serif' font-size='12'>purāṇic — 733,553 tok</text>
-<rect x='347' y='285' width='13' height='13' fill='#999999'/>
-<text x='365' y='296' font-family='Georgia, serif' font-size='12'>other — 228,184 tok</text>
-<text x='30' y='330' font-family='Georgia, serif' font-size='11' fill='#555555'>layer tags: committed C4 sweep (H6698, 14-10-2026) · the documented sūtra-cycle call lifts Vedic+epic to 50.5 %</text>
+<rect width='860' height='360' fill='white'/>
+<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>
+<text x='56' y='44' font-family='Helvetica, Arial, sans-serif' font-size='17' font-weight='bold'>The covered canon leans older than the corpus</text>
+<text x='56' y='62' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#555555'>DCS token mass by Renou layer · Vedic+epic 44.0 % of all, 53.0 % of the covered set</text>
+<text x='30' y='144.0' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#333333'>All DCS-276</text>
+<rect x='210.0' y='118' width='90.6' height='44' fill='#DB444B'/>
+<text x='255.3' y='144.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>16 %</text>
+<rect x='300.6' y='118' width='155.7' height='44' fill='#F0AB00'/>
+<text x='378.4' y='144.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>28 %</text>
+<rect x='456.2' y='118' width='177.4' height='44' fill='#006BA2'/>
+<text x='544.9' y='144.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>32 %</text>
+<rect x='633.7' y='118' width='41.7' height='44' fill='#3EBCD2'/>
+<text x='654.5' y='144.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>7 %</text>
+<rect x='675.3' y='118' width='72.2' height='44' fill='#379A8B'/>
+<text x='711.4' y='144.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>13 %</text>
+<rect x='747.5' y='118' width='22.5' height='44' fill='#B4BA39'/>
+<text x='30' y='234.0' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#333333'>PD-covered 118</text>
+<rect x='210.0' y='208' width='108.0' height='44' fill='#DB444B'/>
+<text x='264.0' y='234.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>19 %</text>
+<rect x='318.0' y='208' width='189.0' height='44' fill='#F0AB00'/>
+<text x='412.5' y='234.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>34 %</text>
+<rect x='507.1' y='208' width='135.3' height='44' fill='#006BA2'/>
+<text x='574.7' y='234.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>24 %</text>
+<rect x='642.3' y='208' width='45.7' height='44' fill='#3EBCD2'/>
+<text x='665.2' y='234.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>8 %</text>
+<rect x='688.0' y='208' width='66.2' height='44' fill='#379A8B'/>
+<text x='721.1' y='234.0' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='white' text-anchor='middle'>12 %</text>
+<rect x='754.2' y='208' width='15.8' height='44' fill='#B4BA39'/>
+<rect x='210' y='278' width='12' height='12' fill='#DB444B'/>
+<text x='227' y='288' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#333333'>Vedic</text>
+<rect x='283' y='278' width='12' height='12' fill='#F0AB00'/>
+<text x='300' y='288' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#333333'>epic</text>
+<rect x='350' y='278' width='12' height='12' fill='#006BA2'/>
+<text x='367' y='288' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#333333'>śāstra</text>
+<rect x='429' y='278' width='12' height='12' fill='#3EBCD2'/>
+<text x='446' y='288' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#333333'>kāvya</text>
+<rect x='502' y='278' width='12' height='12' fill='#379A8B'/>
+<text x='519' y='288' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#333333'>purāṇic</text>
+<rect x='588' y='278' width='12' height='12' fill='#B4BA39'/>
+<text x='605' y='288' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#333333'>other</text>
+<line x1='30' y1='314' x2='830' y2='314' stroke='#E3120B' stroke-width='1'/>
+<text x='30' y='332' font-family='Helvetica, Arial, sans-serif' font-size='10.5' fill='#888888'>Source: C4 Renou-layer sweep of DCS-276, committed 14-10-2026 · layer tags are sweep literals; the per-text tag map is not committed</text>
 </svg>

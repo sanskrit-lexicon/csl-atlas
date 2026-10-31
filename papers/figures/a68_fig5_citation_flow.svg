@@ -2,8 +2,9 @@
 <title>PD citation-mass flow into the DCS crosswalk</title>
 <rect width='930' height='500' fill='white'/>
 <text x='30' y='30' font-family='Georgia, serif' font-size='15' font-weight='bold'>Where PD's citation mass goes — 398,359 siglum occurrences</text>
-<text x='30' y='72' font-family='Georgia, serif' font-size='12'>All siglum occurrences — </text>
-<text x='208' y='72' font-family='Georgia, serif' font-size='12' font-weight='bold'>398,359</text>
+<text x='30' y='72' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#333333'>All siglum occurrences — 398,359</text>
+<text x='340' y='72' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#333333'>split by citation class</text>
+<text x='640' y='72' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#333333'>primary mass by DCS-276 coverage</text>
 <path d='M 56 86.0 C 198.0 86.0, 198.0 86.0, 340 86.0 L 340 364.7 C 198.0 364.7, 198.0 400.0, 56 400.0 Z' fill='#2166ac' opacity='0.5'/>
 <path d='M 56 86.0 C 198.0 86.0, 198.0 364.7, 340 364.7 L 340 396.2 C 198.0 396.2, 198.0 400.0, 56 400.0 Z' fill='#999999' opacity='0.5'/>
 <path d='M 56 86.0 C 198.0 86.0, 198.0 396.2, 340 396.2 L 340 400.0 C 198.0 400.0, 198.0 400.0, 56 400.0 Z' fill='#f4a582' opacity='0.5'/>

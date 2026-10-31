@@ -1,7 +1,7 @@
 """Figs 5-9 — catalogue figures (H7545): flow, fascicle CI strip,
 denominator ladder, fifty-year timeline, PD-vs-PWG paired bars."""
 from .helpers import (C_BAR, C_BAR2, C_COVERED, C_RESIDUE, C_SECOND,
-                      C_STRUCT, FONT, PIN_ADJUDICATED, esc, svg_header)
+                      C_STRUCT, FONT, SANS, esc, ladder, svg_header)
 
 
 def fig5(m):
@@ -20,10 +20,15 @@ def fig5(m):
     s = svg_header(W, H, "PD citation-mass flow into the DCS crosswalk")
     s += (f"<text x='30' y='30' {FONT} font-size='15' font-weight='bold'>"
           f"Where PD's citation mass goes — {total:,} siglum occurrences</text>\n")
-    s += (f"<text x='{lx - 10}' y='{top - 14}' {FONT} font-size='12'>"
-          f"All siglum occurrences — </text>\n")
-    s += (f"<text x='{lx - 10 + 178}' y='{top - 14}' {FONT} font-size='12' "
-          f"font-weight='bold'>{total:,}</text>\n")
+    # Stage headers (MG review pass 3, 31-10): every column named, above.
+    s += (f"<text x='{lx - 10}' y='{top - 14}' {FONT} font-size='12' "
+          f"font-weight='bold' fill='#333333'>All siglum occurrences — "
+          f"{total:,}</text>\n")
+    s += (f"<text x='{mx}' y='{top - 14}' {FONT} font-size='12' "
+          f"font-weight='bold' fill='#333333'>split by citation class</text>\n")
+    s += (f"<text x='{rx}' y='{top - 14}' {FONT} font-size='12' "
+          f"font-weight='bold' fill='#333333'>primary mass by DCS-276 "
+          f"coverage</text>\n")
 
     mid_lbl = [("Primary works", primary, C_COVERED),
                ("Structural", m["structural_mass"], C_STRUCT),
@@ -176,50 +181,60 @@ def fig6(fasc, m):
 
 
 def fig7(m):
-    """Cat #12 — the denominator ladder of §5.2.1.
+    """Cat #12 — the denominator ladder of §5.2.1 (Economist idiom).
+
+    MG pass-3 pick (31-10): style study B promoted to the canonical render;
+    headline rewritten to state the claim's fraction outright — the old
+    "One claim, four denominators" title answered no question by itself.
 
     398,359 all-siglum -> 353,512 primary -> 123,453 hand-adjudicated (pin)
-    -> 88,929 covered. Step bars, every denominator in one look.
+    -> 88,929 covered. Horizontal bars, every denominator in one look.
     """
-    total = m["total_siglum_mass"]
-    steps = [
-        ("All siglum occurrences", total, C_STRUCT,
-         ("letters a-: case labels,", "loci, scholarship, works")),
-        ("Primary work occurrences", m["primary_work_mass"], C_SECOND,
-         ("siglum adjudicated", "class = primary")),
-        ("Hand-adjudicated primary", PIN_ADJUDICATED, "#d6604d",
-         ("164 hand-adjudicated", "titles (pin)")),
-        ("Covered by DCS (118 works)", m["covered_mass"], C_COVERED,
-         ("matched in the crosswalk",)),
-    ]
-    W, H = 780, 410
-    x0, y0 = 70, 80
-    bw, gap = 140, 30
-    plot_h = 220
+    steps = ladder(m)
+    total = steps[0][1]
+    covered = steps[3][1]
+    primary = steps[1][1]
+    W, H = 830, 400
+    x0 = 230
+    bw_max = 460
+    y0, dy = 118, 62
+    blue, red = "#006BA2", "#DB444B"
     s = svg_header(W, H, "The denominator ladder of the coverage headline")
-    s += (f"<text x='30' y='30' {FONT} font-size='15' font-weight='bold'>"
-          f"One claim, four denominators — what 25.2 % is a fraction of</text>\n")
-    x = x0
-    for label, v, color, note_lines in steps:
-        h = plot_h * v / total
-        y = y0 + plot_h - h
-        s += f"<rect x='{x}' y='{y:.1f}' width='{bw}' height='{h:.1f}' fill='{color}'/>\n"
-        s += (f"<text x='{x + bw / 2}' y='{y - 10:.1f}' {FONT} font-size='13' "
-              f"font-weight='bold' text-anchor='middle'>{v:,}</text>\n")
-        s += (f"<text x='{x + bw / 2}' y='{y - 26:.1f}' {FONT} font-size='11' "
-              f"fill='#555555' text-anchor='middle'>"
-              f"{100 * v / total:.1f} % of all</text>\n")
-        s += (f"<text x='{x + bw / 2}' y='{y0 + plot_h + 20}' {FONT} "
-              f"font-size='11' font-weight='bold' text-anchor='middle'>"
-              f"{label}</text>\n")
-        for j, line in enumerate(note_lines):
-            s += (f"<text x='{x + bw / 2}' y='{y0 + plot_h + 36 + j * 12}' "
-                  f"{FONT} font-size='10' fill='#555555' text-anchor='middle'>"
-                  f"{esc(line)}</text>\n")
-        x += bw + gap
-    s += (f"<text x='30' y='{H - 16}' {FONT} font-size='11' fill='#555555'>"
-          f"25.16 % = 88,929 / 353,512 (PD-citation-weighted) · third rung is "
-          f"the claim-ledger pin P-adjudicated (164 titles)</text>\n")
+    s += f"<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>\n"
+    s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
+          f"DCS-276 covers {100 * covered / primary:.1f} % of PD primary-work"
+          f" citations</text>\n")
+    s += (f"<text x='56' y='62' {SANS} font-size='12' fill='#555555'>"
+          f"{covered:,} of {primary:,} siglum occurrences — the same claim "
+          f"under four candidate denominators, Poona Dictionary 1976–2019"
+          f"</text>\n")
+    for gv in (0, 100000, 200000, 300000, 400000):
+        x = x0 + bw_max * gv / total
+        s += (f"<line x1='{x:.1f}' y1='96' x2='{x:.1f}' y2='{y0 + dy * 4 - 26}' "
+              f"stroke='#e6e6e6'/>\n")
+        s += (f"<text x='{x:.1f}' y='88' {SANS} font-size='11' fill='#888888' "
+              f"text-anchor='middle'>{'0' if gv == 0 else f'{gv // 1000}k'}"
+              f"</text>\n")
+    for i, (label, v, tag) in enumerate(steps):
+        y = y0 + i * dy
+        w = bw_max * v / total
+        color = red if tag != "pin" and i == 3 else blue
+        s += (f"<text x='30' y='{y - 8:.1f}' {SANS} font-size='12' "
+              f"fill='#333333'>{esc(label)}{'' if not tag else ' — pin'}"
+              f"</text>\n")
+        s += (f"<rect x='{x0}' y='{y:.1f}' width='{w:.1f}' height='22' "
+              f"fill='{color}'/>\n")
+        s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 16:.1f}' {SANS} "
+              f"font-size='13' font-weight='bold' fill='#333333'>{v:,}</text>\n")
+        s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 32:.1f}' {SANS} "
+              f"font-size='10.5' fill='#888888'>{100 * v / total:.1f} % of "
+              f"all</text>\n")
+    s += (f"<line x1='30' y1='{H - 52}' x2='{W - 30}' y2='{H - 52}' "
+          f"stroke='#E3120B' stroke-width='1'/>\n")
+    s += (f"<text x='30' y='{H - 34}' {SANS} font-size='10.5' "
+          f"fill='#888888'>Source: PD↔DCS crosswalk, committed metrics · "
+          f"third rung: A68 claim-ledger pin (164 hand-adjudicated "
+          f"titles)</text>\n")
     s += "</svg>\n"
     return s
 
