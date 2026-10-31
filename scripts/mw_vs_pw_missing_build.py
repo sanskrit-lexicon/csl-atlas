@@ -358,6 +358,8 @@ def main() -> int:
     metrics = {
         "dataset": "mw_vs_pw/mw_missing_entries_scan",
         "created": "2026-10-31",
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "handoff": "H7513",
         "question": "csl-corrections #119 / Telegram #502926 (KnbRao 14-09-2026)",
         "definitions": {
