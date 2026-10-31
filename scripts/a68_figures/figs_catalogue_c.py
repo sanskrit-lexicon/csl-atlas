@@ -31,7 +31,7 @@ def fig14b(crosswalk, m):
         "D": ("big corpus × light attention",
               [p for p in pts if p[1] >= medx and p[2] < medy]),
     }
-    W, H = 1600, 1030
+    W, H = 1600, 1090
 
     def rng(vals, pad=0.06):
         lo = math.log10(min(vals))
@@ -79,8 +79,8 @@ def fig14b(crosswalk, m):
               f"{q} · {len(quads[q])} titles</text>\n")
 
     # --- four zoom panels ---
-    pw, ph = 490, 410
-    pos = {"A": (560, 100), "B": (1080, 100), "C": (560, 560), "D": (1080, 560)}
+    pw, ph = 490, 440
+    pos = {"A": (560, 100), "B": (1080, 100), "C": (560, 580), "D": (1080, 580)}
     for q, (px, py) in pos.items():
         reading, qpts = quads[q]
         xr = rng([p[1] for p in qpts])
@@ -118,46 +118,48 @@ def fig14b(crosswalk, m):
                   f"stroke='#eeeeee'/>\n")
             s += (f"<text x='{qx0 - 8}' y='{y + 4:.1f}' {FONT} font-size='10.5'"
                   f" text-anchor='end'>{tickfmt(e)}</text>\n")
-        # Label placement: preferred side by panel midx, but every label
-        # must fit INSIDE its panel box (flip side / truncate to the
-        # available room); greedy vertical ladder per side, shifted up as
-        # a block if it overruns the bottom.
+        # Label placement: side = the point's side of the panel midx,
+        # ALWAYS (a flipped label would slice through the opposite label
+        # cloud); labels truncate to the room their side has at that
+        # point. Left rects end < midx-6, right rects start > midx+6 —
+        # the two clouds cannot overlap. Greedy vertical ladder per side,
+        # shifted up as a block if it overruns the panel bottom.
         midx = (qx0 + qx1) / 2
         CH = 5.6  # px per 10px-font character, conservative
         sides = {"right": [], "left": []}
-        for p in qpts:
-            title, tok, cit = p
+        for title, tok, cit in qpts:
             x, y = qx(tok), qy(cit)
             lbl = title if len(title) <= 26 else title[:25] + "…"
-            w = CH * len(lbl)
-            pref = "right" if x >= midx else "left"
-            room_r = (px + pw - 6) - (x + 6)
-            room_l = (x - 6) - (px + 6)
-            if (pref == "right" and room_r >= w) or \
-               (pref == "left" and room_l >= w):
-                side = pref
-            elif room_r >= w or room_r > room_l:
-                side = "right"
-            else:
-                side = "left"
-            room = room_r if side == "right" else room_l
+            side = "right" if x >= midx else "left"
+            room = ((px + pw - 6) - (x + 6) if side == "right"
+                    else (x - 6) - (px + 6))
             if CH * len(lbl) > room:
                 keep = max(4, int(room / CH) - 1)
                 lbl = lbl[:keep] + "…"
             sides[side].append((x, y, lbl))
         for side in ("right", "left"):
+            entries = sorted(sides[side], key=lambda t: t[1])
+            band = (qy1 - 2) - (qy0 + 8)
+            # 13 px minimum: diacritic-heavy 10 px lines interleave below
+            # that. If the point-snapping ladder cannot fit the band, the
+            # side switches to even distribution across the whole band
+            # (labels leave their points, leader lines connect). The right
+            # cloud carries a half-step phase so seam rows interleave
+            # instead of abutting.
+            step = min(13.0, band / max(1, len(entries) - 1))
+            floor = qy0 + 8 + (6.5 if side == "right" else 0.0)
             placed = []
             ladder = -10_000.0
-            for x, y, lbl in sorted(sides[side],
-                                    key=lambda t: t[1]):
-                ly_t = max(y - 3.5, ladder + 11.5, qy0 + 8)
+            for x, y, lbl in entries:
+                ly_t = max(y - 3.5, ladder + step, floor)
                 ladder = ly_t
                 placed.append((x, y, ly_t, lbl))
-            if placed:
-                over = max(0.0, placed[-1][2] - (qy1 - 2))
-                if over:
-                    placed = [(x, y, ly - over, t)
-                              for x, y, ly, t in placed]
+            if placed and placed[-1][2] > qy1 - 2:
+                n = len(placed)
+                avail = (qy1 - 2) - floor
+                gap = avail / max(1, n - 1)
+                placed = [(x, y, floor + i * gap, lbl)
+                          for i, (x, y, _, lbl) in enumerate(placed)]
             for x, y, ly_t, lbl in placed:
                 s += (f"<circle cx='{x:.1f}' cy='{y:.1f}' r='3.4' "
                       f"fill='#2166ac' opacity='0.75'/>\n")
