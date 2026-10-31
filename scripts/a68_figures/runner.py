@@ -4,6 +4,9 @@ from .helpers import (C4_LAYERS, DATA, OUT, PIN_ADJUDICATED, check,
 from .figs_core import fig1, fig2, fig3, fig4
 from .figs_catalogue_a import fig5, fig6, fig7, fig8, fig9, fig15
 from .figs_catalogue_b import fig10, fig11, fig12, fig13, fig14
+from .figs_catalogue_c import fig14b, fig16
+from . import figs_style_fig10 as ss10
+from . import figs_style_fig7 as ss7
 import json
 import sys
 
@@ -164,6 +167,21 @@ def main():
     ok &= check("class simplex coverage pin", 29.06,
                 float(simplex["coverage_pct"]), tol=0.005)
 
+    # --- MG review follow-ups (31-10): fig14b quadrant census + fig16 gates ---
+    pooled_dens = next(r for r in dens
+                       if r["stratum"] == "pooled_standardised_equal_weight")
+    ok &= check("fig16 pooled std ratio committed",
+                float(pooled_dens["attestation_ratio"]), 8.4051, tol=0.001)
+    for r in dens:
+        if r["row_kind"] not in ("stratum", "pooled"):
+            continue
+        ratio = float(r["attestation_ratio"])
+        lo_c = r["attestation_ratio_lo"].strip()
+        hi_c = r["attestation_ratio_hi"].strip()
+        if lo_c and hi_c:
+            ok &= check(f"fig16 {r['stratum']} ratio within CI",
+                        1 if float(lo_c) <= ratio <= float(hi_c) else 0, 1)
+
     if not ok:
         print("DRIFT DETECTED — refusing to draw figures from stale metrics.")
         return 2
@@ -197,10 +215,38 @@ def main():
         "a68_fig14_corpus_attention.svg": fig14(crosswalk, m),
         "a68_fig15_class_forest.svg": fig15(cls, m),
     }
+    # MG review follow-ups (31-10): zoomed fig14 + PWG-vs-PD forest.
+    fig14b_svg, quad_n = fig14b(crosswalk, m)
+    ok_q = sum(quad_n.values()) == len(crosswalk)
+    print(f"  [{'OK ' if ok_q else 'FAIL'}] fig14b quadrant census: "
+          f"{quad_n} sums to {sum(quad_n.values())} of {len(crosswalk)}")
+    if not ok_q:
+        print("DRIFT DETECTED — fig14b quadrants do not partition the 118.")
+        return 2
+    figs["a68_fig14b_corpus_attention_zoom.svg"] = fig14b_svg
+    figs["a68_fig16_pwg_vs_pd_forest.svg"] = fig16(dens)
     for name, content in figs.items():
         (OUT / name).write_text(content, encoding="utf-8", newline="\n")
         print(f"  wrote papers/figures/{name}")
-    print(f"All checks passed; {len(figs)} figures written.")
+
+    # Style studies (review proposals, not paper figures yet).
+    ss_out = OUT / "style_studies"
+    ss_out.mkdir(parents=True, exist_ok=True)
+    studies = {
+        "a68_fig7_styleA_tufte.svg": ss7.fig7_tufte(m),
+        "a68_fig7_styleB_economist.svg": ss7.fig7_economist(m),
+        "a68_fig7_styleC_ft.svg": ss7.fig7_ft(m),
+        "a68_fig7_styleD_engraving.svg": ss7.fig7_engraving(m),
+        "a68_fig10_styleA_tufte.svg": ss10.fig10_tufte(m),
+        "a68_fig10_styleB_economist.svg": ss10.fig10_economist(m),
+        "a68_fig10_styleC_ft.svg": ss10.fig10_ft(m),
+        "a68_fig10_styleD_engraving.svg": ss10.fig10_engraving(m),
+    }
+    for name, content in studies.items():
+        (ss_out / name).write_text(content, encoding="utf-8", newline="\n")
+        print(f"  wrote papers/figures/style_studies/{name}")
+    print(f"All checks passed; {len(figs)} figures + {len(studies)} style "
+          f"studies written.")
     return 0
 
 

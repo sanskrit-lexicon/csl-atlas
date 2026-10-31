@@ -1,0 +1,35 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='830' height='400' viewBox='0 0 830 400'>
+<title>Denominator ladder — Economist style</title>
+<rect width='830' height='400' fill='white'/>
+<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>
+<text x='56' y='44' font-family='Helvetica, Arial, sans-serif' font-size='17' font-weight='bold'>One claim, four denominators</text>
+<text x='56' y='62' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#555555'>siglum occurrences, 1976–2019 Poona Dictionary</text>
+<line x1='230.0' y1='96' x2='230.0' y2='340' stroke='#e6e6e6'/>
+<text x='230.0' y='88' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#888888' text-anchor='middle'>0</text>
+<line x1='345.5' y1='96' x2='345.5' y2='340' stroke='#e6e6e6'/>
+<text x='345.5' y='88' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#888888' text-anchor='middle'>100k</text>
+<line x1='460.9' y1='96' x2='460.9' y2='340' stroke='#e6e6e6'/>
+<text x='460.9' y='88' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#888888' text-anchor='middle'>200k</text>
+<line x1='576.4' y1='96' x2='576.4' y2='340' stroke='#e6e6e6'/>
+<text x='576.4' y='88' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#888888' text-anchor='middle'>300k</text>
+<line x1='691.9' y1='96' x2='691.9' y2='340' stroke='#e6e6e6'/>
+<text x='691.9' y='88' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#888888' text-anchor='middle'>400k</text>
+<text x='30' y='110.0' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#333333'>All siglum occurrences</text>
+<rect x='230' y='118.0' width='460.0' height='22' fill='#006BA2'/>
+<text x='700.0' y='134.0' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#333333'>398,359</text>
+<text x='700.0' y='150.0' font-family='Helvetica, Arial, sans-serif' font-size='10.5' fill='#888888'>100.0 % of all</text>
+<text x='30' y='172.0' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#333333'>Primary work occurrences</text>
+<rect x='230' y='180.0' width='408.2' height='22' fill='#006BA2'/>
+<text x='648.2' y='196.0' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#333333'>353,512</text>
+<text x='648.2' y='212.0' font-family='Helvetica, Arial, sans-serif' font-size='10.5' fill='#888888'>88.7 % of all</text>
+<text x='30' y='234.0' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#333333'>Hand-adjudicated primary — pin</text>
+<rect x='230' y='242.0' width='142.6' height='22' fill='#006BA2'/>
+<text x='382.6' y='258.0' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#333333'>123,453</text>
+<text x='382.6' y='274.0' font-family='Helvetica, Arial, sans-serif' font-size='10.5' fill='#888888'>31.0 % of all</text>
+<text x='30' y='296.0' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#333333'>Covered by DCS (118 works)</text>
+<rect x='230' y='304.0' width='102.7' height='22' fill='#DB444B'/>
+<text x='342.7' y='320.0' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#333333'>88,929</text>
+<text x='342.7' y='336.0' font-family='Helvetica, Arial, sans-serif' font-size='10.5' fill='#888888'>22.3 % of all</text>
+<line x1='30' y1='348' x2='800' y2='348' stroke='#E3120B' stroke-width='1'/>
+<text x='30' y='366' font-family='Helvetica, Arial, sans-serif' font-size='10.5' fill='#888888'>Source: PD↔DCS crosswalk, committed metrics · third rung: A68 claim-ledger pin (164 hand-adjudicated titles)</text>
+</svg>
