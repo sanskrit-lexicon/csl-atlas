@@ -1,12 +1,16 @@
 """Style studies (MG review 31-10): fig10 DCS-276 layer bar in four
 non-Office render styles — review proposals, not paper figures.
 
-Styles: A tufte, B economist, C ft, D engraving (see figs_style_fig7).
-Same committed C4_LAYERS numbers as the canonical fig10.
-"""
-from .helpers import C4_LAYERS, FONT, esc
+MG pass-3 pick (31-10): style B (Economist) chosen as MAIN — folded into
+the canonical figs_catalogue_b.fig10; fig10_economist below aliases it so
+the style_studies/ set stays complete as the review record.
 
-SANS = "font-family='Helvetica, Arial, sans-serif'"
+Styles: A tufte, B economist (CANONICAL since MG pass 3, 31-10), C ft,
+D engraving (see figs_style_fig7). Same committed C4_LAYERS numbers as
+the canonical fig10.
+"""
+from .helpers import C4_LAYERS, FONT, SANS, esc
+
 SERIF = FONT
 
 
@@ -79,57 +83,9 @@ def fig10_tufte(m):
 
 # ---------------------------------------------------------------- fig10 B
 def fig10_economist(m):
-    layers = C4_LAYERS
-    tot26 = sum(r[2] for r in layers)
-    cov26 = sum(r[5] for r in layers)
-    ve = sum(r[2] for r in layers if r[0] in ("Vedic", "epic"))
-    ve_cov = sum(r[5] for r in layers if r[0] in ("Vedic", "epic"))
-    pal = {"Vedic": "#DB444B", "epic": "#F0AB00", "śāstra": "#006BA2",
-           "kāvya": "#3EBCD2", "purāṇic": "#379A8B", "other": "#B4BA39"}
-    W, H = 860, 360
-    bx, bw = 210, 560
-    rows = (("All DCS-276", tot26, 118), ("PD-covered 118", cov26, 208))
-    strip_h = 44
-    s = (f"<svg xmlns='http://www.w3.org/2000/svg' width='{W}' height='{H}' "
-         f"viewBox='0 0 {W} {H}'>\n<title>DCS-276 token mass by Renou layer "
-         f"— Economist style</title>\n<rect width='{W}' height='{H}' "
-         f"fill='white'/>\n")
-    s += f"<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>\n"
-    s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
-          f"The covered canon leans older than the corpus</text>\n")
-    s += (f"<text x='56' y='62' {SANS} font-size='12' fill='#555555'>"
-          f"DCS token mass by Renou layer · Vedic+epic "
-          f"{100 * ve / tot26:.1f} % of all, {100 * ve_cov / cov26:.1f} % of "
-          f"the covered set</text>\n")
-    for ri, (label, tot, y) in enumerate(rows):
-        x = bx
-        s += (f"<text x='30' y='{y + strip_h / 2 + 4:.1f}' {SANS} "
-              f"font-size='12.5' font-weight='bold' fill='#333333'>"
-              f"{label}</text>\n")
-        for lname, _, tok26, _, _, ctok, _ in layers:
-            v = tok26 if ri == 0 else ctok
-            w = bw * v / tot
-            s += (f"<rect x='{x:.1f}' y='{y}' width='{w:.1f}' "
-                  f"height='{strip_h}' fill='{pal[lname]}'/>\n")
-            if w > 44:
-                s += (f"<text x='{x + w / 2:.1f}' y='{y + strip_h / 2 + 4:.1f}'"
-                      f" {SANS} font-size='11' fill='white' "
-                      f"text-anchor='middle'>{100 * v / tot:.0f} %</text>\n")
-            x += w
-    lx, ly = 210, 288
-    for lname, _, tok26, _, _, _, _ in layers:
-        s += (f"<rect x='{lx}' y='{ly - 10}' width='12' height='12' "
-              f"fill='{pal[lname]}'/>\n")
-        s += (f"<text x='{lx + 17}' y='{ly}' {SANS} font-size='11' "
-              f"fill='#333333'>{esc(lname)}</text>\n")
-        lx += 20 + int(6.3 * len(lname)) + 22
-    s += (f"<line x1='30' y1='{H - 46}' x2='{W - 30}' y2='{H - 46}' "
-          f"stroke='#E3120B' stroke-width='1'/>\n")
-    s += (f"<text x='30' y='{H - 28}' {SANS} font-size='10.5' "
-          f"fill='#888888'>Source: C4 Renou-layer sweep of DCS-276, committed"
-          f" 14-10-2026 · style study, Economist chart idiom</text>\n")
-    s += "</svg>\n"
-    return s
+    """CANONICAL since MG pass 3 (31-10) — aliases figs_catalogue_b.fig10."""
+    from .figs_catalogue_b import fig10 as _canonical_fig10
+    return _canonical_fig10(m)
 
 
 # ---------------------------------------------------------------- fig10 C

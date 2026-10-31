@@ -3,82 +3,66 @@ availability pyramid, coverage slope, corpus-vs-attention, class forest."""
 import math
 
 from .helpers import (C4_LAYERS, C_BAR, C_BAR2, C_COVERED, C_RESIDUE,
-                      C_SECOND, FONT, esc, svg_header)
+                      C_SECOND, FONT, SANS, esc, svg_header)
 
 
 def fig10(m):
-    """Cat #24 — DCS-276 token mass by Renou layer, all vs covered-118.
+    """Cat #24 — DCS-276 token mass by Renou layer, all vs covered-118
+    (Economist idiom).
 
+    MG pass-3 pick (31-10): style study B promoted to the canonical render.
     Encodes the committed C4 sweep table; Vedic+epic 44.0 % (all) vs 53.0 %
-    (covered, exact 53.05 — the sweep prose rounds it to 53.1), classical
-    52.0 % annotated. Layer tags are sweep literals — the per-text tag map
-    is not committed; nothing here re-tags texts.
+    (covered, exact 53.05 — the sweep prose rounds it to 53.1). Layer tags
+    are sweep literals — the per-text tag map is not committed; nothing
+    here re-tags texts.
     """
     layers = C4_LAYERS
     tot26 = sum(r[2] for r in layers)
     cov26 = sum(r[5] for r in layers)
-    vedic_epic = sum(r[2] for r in layers if r[0] in ("Vedic", "epic"))
-    vedic_epic_cov = sum(r[5] for r in layers if r[0] in ("Vedic", "epic"))
-    classical = sum(r[2] for r in layers
-                    if r[0] in ("śāstra", "kāvya", "purāṇic"))
-    colors = {"Vedic": "#d73027", "epic": "#f46d43", "śāstra": "#2166ac",
-              "kāvya": "#92c5de", "purāṇic": "#54278f", "other": "#999999"}
-    W, H = 860, 340
-    bx, bw = 190, 540
-    rowy = (86, 196)
-    rowh = 46
+    ve = sum(r[2] for r in layers if r[0] in ("Vedic", "epic"))
+    ve_cov = sum(r[5] for r in layers if r[0] in ("Vedic", "epic"))
+    pal = {"Vedic": "#DB444B", "epic": "#F0AB00", "śāstra": "#006BA2",
+           "kāvya": "#3EBCD2", "purāṇic": "#379A8B", "other": "#B4BA39"}
+    W, H = 860, 360
+    bx, bw = 210, 560
+    rows = (("All DCS-276", tot26, 118), ("PD-covered 118", cov26, 208))
+    strip_h = 44
     s = svg_header(W, H, "DCS-276 token mass by Renou layer")
-    s += (f"<text x='30' y='30' {FONT} font-size='15' font-weight='bold'>"
-          f"Vedic+epic layers carry {100 * vedic_epic / tot26:.1f} % of DCS "
-          f"tokens — {100 * vedic_epic_cov / cov26:.1f} % inside the "
-          f"PD-covered set</text>\n")
-    for ri, (label, tot) in enumerate((("All DCS-276 (2026 snapshot)", tot26),
-                                       ("PD-covered 118", cov26))):
+    s += f"<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>\n"
+    s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
+          f"The covered canon leans older than the corpus</text>\n")
+    s += (f"<text x='56' y='62' {SANS} font-size='12' fill='#555555'>"
+          f"DCS token mass by Renou layer · Vedic+epic "
+          f"{100 * ve / tot26:.1f} % of all, {100 * ve_cov / cov26:.1f} % of "
+          f"the covered set</text>\n")
+    for ri, (label, tot, y) in enumerate(rows):
         x = bx
-        y = rowy[ri]
-        s += (f"<text x='{bx - 10}' y='{y + rowh / 2 + 4:.1f}' {FONT} "
-              f"font-size='12' text-anchor='end'>{label}</text>\n")
+        s += (f"<text x='30' y='{y + strip_h / 2 + 4:.1f}' {SANS} "
+              f"font-size='12.5' font-weight='bold' fill='#333333'>"
+              f"{label}</text>\n")
         for lname, _, tok26, _, _, ctok, _ in layers:
             v = tok26 if ri == 0 else ctok
             w = bw * v / tot
-            s += (f"<rect x='{x:.1f}' y='{y}' width='{w:.1f}' height='{rowh}' "
-                  f"fill='{colors[lname]}'/>\n")
-            if w > 52:
-                s += (f"<text x='{x + w / 2:.1f}' y='{y + rowh / 2 + 4:.1f}' "
-                      f"{FONT} font-size='11' fill='white' text-anchor='middle'>"
-                      f"{100 * v / tot:.1f} %</text>\n")
+            s += (f"<rect x='{x:.1f}' y='{y}' width='{w:.1f}' "
+                  f"height='{strip_h}' fill='{pal[lname]}'/>\n")
+            if w > 40:  # 41.7 px kāvya segment must carry its 7 % label
+                s += (f"<text x='{x + w / 2:.1f}' y='{y + strip_h / 2 + 4:.1f}'"
+                      f" {SANS} font-size='11' fill='white' "
+                      f"text-anchor='middle'>{100 * v / tot:.0f} %</text>\n")
             x += w
-    ve_end = bx + bw * vedic_epic / tot26
-    ve_cov_end = bx + bw * vedic_epic_cov / cov26
-    cl_end = bx + bw * classical / tot26
-    s += (f"<line x1='{bx}' y1='74' x2='{ve_end:.1f}' y2='74' stroke='#444444' "
-          f"stroke-width='1.2'/>\n")
-    s += (f"<text x='{(bx + ve_end) / 2:.1f}' y='68' {FONT} font-size='12' "
-          f"font-weight='bold' text-anchor='middle'>Vedic+epic "
-          f"{100 * vedic_epic / tot26:.1f} %</text>\n")
-    s += (f"<line x1='{ve_end:.1f}' y1='74' x2='{cl_end:.1f}' y2='74' "
-          f"stroke='#888888'/>\n")
-    s += (f"<text x='{(ve_end + cl_end) / 2:.1f}' y='68' {FONT} font-size='12' "
-          f"fill='#555555' text-anchor='middle'>classical "
-          f"{100 * classical / tot26:.1f} %</text>\n")
-    s += (f"<line x1='{bx}' y1='{rowy[1] - 12}' x2='{ve_cov_end:.1f}' "
-          f"y2='{rowy[1] - 12}' stroke='#444444' stroke-width='1.2'/>\n")
-    s += (f"<text x='{(bx + ve_cov_end) / 2:.1f}' y='{rowy[1] - 17}' {FONT} "
-          f"font-size='12' font-weight='bold' text-anchor='middle'>"
-          f"{100 * vedic_epic_cov / cov26:.1f} %</text>\n")
-    lx, ly = bx, 272
+    lx, ly = 210, 288
     for lname, _, tok26, _, _, _, _ in layers:
-        s += (f"<rect x='{lx}' y='{ly - 11}' width='13' height='13' "
-              f"fill='{colors[lname]}'/>\n")
-        s += (f"<text x='{lx + 18}' y='{ly}' {FONT} font-size='12'>"
-              f"{esc(lname)} — {tok26:,} tok</text>\n")
-        lx += 30 + 7 * len(lname) + 78
-        if lx > W - 170:
-            lx = bx
-            ly += 24
-    s += (f"<text x='30' y='{H - 10}' {FONT} font-size='11' fill='#555555'>"
-          f"layer tags: committed C4 sweep (H6698, 14-10-2026) · the documented "
-          f"sūtra-cycle call lifts Vedic+epic to 50.5 %</text>\n")
+        s += (f"<rect x='{lx}' y='{ly - 10}' width='12' height='12' "
+              f"fill='{pal[lname]}'/>\n")
+        s += (f"<text x='{lx + 17}' y='{ly}' {SANS} font-size='11' "
+              f"fill='#333333'>{esc(lname)}</text>\n")
+        lx += 20 + int(6.3 * len(lname)) + 22
+    s += (f"<line x1='30' y1='{H - 46}' x2='{W - 30}' y2='{H - 46}' "
+          f"stroke='#E3120B' stroke-width='1'/>\n")
+    s += (f"<text x='30' y='{H - 28}' {SANS} font-size='10.5' "
+          f"fill='#888888'>Source: C4 Renou-layer sweep of DCS-276, committed"
+          f" 14-10-2026 · layer tags are sweep literals; the per-text tag map"
+          f" is not committed</text>\n")
     s += "</svg>\n"
     return s
 

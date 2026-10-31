@@ -1,17 +1,40 @@
 """Build the A68 review gallery (single self-contained HTML, inline SVGs).
 
-Usage:  python -m a68_figures.gallery <figures_dir> <out_html>
+Usage:  python -m a68_figures.gallery <figures_dir> <out_html> [pass3]
 
 The gallery is a SESSION/REVIEW artifact, not a paper deliverable: it wraps
 the deterministic SVGs written by the builder with headings and notes so a
-human review pass sees everything on one page. Sections are declared below;
-files not listed land in a trailing 'unchanged' section.
+human review pass sees everything on one page. Default sections are the
+pass-2 review set; `pass3` builds the MG-picks page (fig5 stage labels,
+fig7/fig10 Economist mains, fig15 reference). Files not listed land in a
+trailing 'unchanged' section.
 """
 import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
+
+SECTIONS_3 = [
+    ("fig5 · cat #1 — citation-mass flow — <b>FIX: stage labels above every "
+     "column</b>",
+     ["a68_fig5_citation_flow.svg"],
+     "Left column: all 398,359 siglum occurrences. Middle: split by citation "
+     "class. Right: the primary mass by DCS-276 coverage outcome."),
+    ("fig7 · cat #12 — denominator ladder — <b>MAIN: Economist idiom (MG "
+     "pick) + title now states the claim</b>",
+     ["a68_fig7_denominator_ladder.svg"],
+     "Headline answers the question outright: DCS-276 covers 25.2 % of PD "
+     "primary-work citations — 88,929 of 353,512 siglum occurrences, under "
+     "four candidate denominators."),
+    ("fig10 · cat #24 — DCS-276 token mass by Renou layer — <b>MAIN: "
+     "Economist idiom (MG pick)</b>",
+     ["a68_fig10_dcs276_layers.svg"],
+     "Vedic+epic 44.0 % of all DCS tokens, 53.0 % inside the PD-covered "
+     "set."),
+    ("fig15 · cat #19 — class-coverage forest (PD side, for reference)",
+     ["a68_fig15_class_forest.svg"], ""),
+]
 
 SECTIONS = [
     ("fig5 · cat #1 — citation-mass flow — <b>FIX: colour legend added</b>",
@@ -65,7 +88,8 @@ SECTIONS = [
 ]
 
 
-def build(figures_dir: Path, out_path: Path, title: str) -> None:
+def build(figures_dir: Path, out_path: Path, title: str, sections=None,
+          include_others=True) -> None:
     parts = [
         "<!doctype html><html><head><meta charset='utf-8'>",
         f"<title>{title}</title></head><body "
@@ -77,7 +101,7 @@ def build(figures_dir: Path, out_path: Path, title: str) -> None:
         "marked in bold; the rest repeat for side-by-side comparison.</p>",
     ]
     seen = set()
-    for heading, files, note in SECTIONS:
+    for heading, files, note in sections if sections is not None else SECTIONS:
         body = []
         for rel in files:
             p = figures_dir / rel
@@ -98,7 +122,7 @@ def build(figures_dir: Path, out_path: Path, title: str) -> None:
     others = sorted(
         str(p.relative_to(figures_dir))
         for p in figures_dir.rglob("*.svg")
-        if str(p.relative_to(figures_dir)) not in seen)
+        if str(p.relative_to(figures_dir)) not in seen) if include_others else []
     if others:
         body = "".join((figures_dir / o).read_text(encoding="utf-8")
                        for o in others)
@@ -115,11 +139,17 @@ def build(figures_dir: Path, out_path: Path, title: str) -> None:
 
 
 def main():
-    if len(sys.argv) != 3:
-        print("usage: python -m a68_figures.gallery <figures_dir> <out_html>")
+    if len(sys.argv) not in (3, 4):
+        print("usage: python -m a68_figures.gallery <figures_dir> <out_html>"
+              " [pass3]")
         return 2
-    build(Path(sys.argv[1]), Path(sys.argv[2]),
-          "A68 figures — MG review pass 2 (31-10-2026)")
+    if len(sys.argv) == 4 and sys.argv[3] == "pass3":
+        build(Path(sys.argv[1]), Path(sys.argv[2]),
+              "A68 figures — MG picks (pass 3, 31-10-2026)",
+              sections=SECTIONS_3, include_others=False)
+    else:
+        build(Path(sys.argv[1]), Path(sys.argv[2]),
+              "A68 figures — MG review pass 2 (31-10-2026)")
     return 0
 
 

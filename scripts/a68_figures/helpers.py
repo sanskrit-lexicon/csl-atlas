@@ -20,6 +20,7 @@ C_SECOND = "#f4a582"
 C_BAR = "#2166ac"
 C_BAR2 = "#92c5de"
 FONT = "font-family='Georgia, serif'"
+SANS = "font-family='Helvetica, Arial, sans-serif'"
 
 # C4 layer table — verbatim from the committed sweep
 # Uprava/papers/A68/sweeps/2026-10-14-C4-renou-layers-dcs276.md (H6698/C4,
@@ -45,6 +46,19 @@ C4_LAYERS = [
 #   rows" (Uprava papers/A68/A68_CLAIM_LEDGER.tsv; iscls.tex §5.2.1 table:
 #   164 hand-adjudicated primary titles). Pinned, zero tolerance.
 PIN_ADJUDICATED = 123453
+
+
+def ladder(m):
+    """The four §5.2.1 denominators, top rung first (pin = claim-ledger).
+
+    Shared by the canonical fig7 and the fig7 style studies.
+    """
+    return [
+        ("All siglum occurrences", m["total_siglum_mass"], ""),
+        ("Primary work occurrences", m["primary_work_mass"], ""),
+        ("Hand-adjudicated primary", PIN_ADJUDICATED, "pin"),
+        ("Covered by DCS (118 works)", m["covered_mass"], ""),
+    ]
 
 
 def read_tsv(path):
