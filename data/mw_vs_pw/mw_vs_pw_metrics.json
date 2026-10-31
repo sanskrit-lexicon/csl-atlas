@@ -1,0 +1,160 @@
+{
+  "dataset": "mw_vs_pw/mw_missing_entries_scan",
+  "created": "2026-10-31",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "handoff": "H7513",
+  "question": "csl-corrections #119 / Telegram #502926 (KnbRao 14-09-2026)",
+  "definitions": {
+    "base_headword": "clean(k1); MW side also resolves clean(k2) aliases",
+    "pwk": "pw.txt + pwkvn.txt (kürzerer Fassung incl. Nachträge)",
+    "cited": ">=1 <ls> tag with >=1 alphanumeric char in payload, in any entry of that headword in pwg/pw/pwkvn (raw-tag notion)",
+    "a_missing_by_error": "candidate (absent from MW exact) that PWG/pwk cite; covers 'MW lacks it' and 'MW has it under a form that no longer resolves' (stem/nearform subclasses)",
+    "b_expected_absence": "candidate absent from MW exact that PWG/pwk never cite (derivative entries)",
+    "nearform": "difflib folded ratio >= 0.80, deterministic tie-break; review flag, NOT proof of presence"
+  },
+  "substrate_reuse": {
+    "pwg_txt_sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166",
+    "pwg_dcs_pin_file": "data/pwg_dcs/pwg_substrate_pins.json",
+    "pwg_dcs_pin_sha_matches": true,
+    "pwg_entries_pin": 123366
+  },
+  "mw": {
+    "entries": 286525,
+    "distinct_base": 194142
+  },
+  "sources": {
+    "pwg": {
+      "file": "pwg/pwg.txt",
+      "bytes": 54634244,
+      "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166",
+      "entries": 123366,
+      "distinct_base": 106079
+    },
+    "pw": {
+      "file": "pw/pw.txt",
+      "bytes": 31495479,
+      "sha256": "399de2e20f8fff20860da18b46ced725b9ccb9ff975930b3cf86543cee75ae40",
+      "entries": 170556,
+      "distinct_base": 151346
+    },
+    "pwkvn": {
+      "file": "pwkvn/pwkvn.txt",
+      "bytes": 3066388,
+      "sha256": "aebc7576cdfde7e77193ea0b233f094be7aedb3f39eddea519f8a4b1e825042c",
+      "entries": 24976,
+      "distinct_base": 14995
+    }
+  },
+  "pwk_union": {
+    "entries": 195532,
+    "distinct_base": 151368
+  },
+  "comparison_universe": {
+    "denominator": 157994,
+    "definition": "|distinct base k1 headwords in PWG ∪ pwk|",
+    "in_mw_exact": 132284,
+    "candidates_total": 25710
+  },
+  "classes": {
+    "a_missing_by_error": {
+      "count": 19465,
+      "denominator": 157994,
+      "subclasses": {
+        "a_missing_by_error.form_unresolved_nearform": 11483,
+        "a_missing_by_error.form_unresolved_stem": 2961,
+        "a_missing_by_error.mw_lacks": 5021
+      }
+    },
+    "b_expected_absence": {
+      "count": 6245,
+      "denominator": 157994,
+      "subclasses": {
+        "b_expected_absence.form_unresolved_nearform": 3362,
+        "b_expected_absence.form_unresolved_stem": 940,
+        "b_expected_absence.mw_lacks": 1943
+      }
+    }
+  },
+  "per_source": {
+    "pwg": {
+      "entries": 123366,
+      "distinct_base": 106079,
+      "in_mw_exact": 94781,
+      "candidates": 11298,
+      "a_missing_by_error": 10373,
+      "b_expected_absence": 925
+    },
+    "pw": {
+      "entries": 170556,
+      "distinct_base": 151346,
+      "in_mw_exact": 129008,
+      "candidates": 22338,
+      "a_missing_by_error": 16556,
+      "b_expected_absence": 5782
+    },
+    "pwkvn": {
+      "entries": 24976,
+      "distinct_base": 14995,
+      "in_mw_exact": 9758,
+      "candidates": 5237,
+      "a_missing_by_error": 4332,
+      "b_expected_absence": 905
+    }
+  },
+  "corroboration": {
+    "dictionaries": [
+      "abch",
+      "acc",
+      "acph",
+      "acsj",
+      "ae",
+      "ap",
+      "ap90",
+      "armh",
+      "ben",
+      "bhs",
+      "bop",
+      "bor",
+      "bur",
+      "cae",
+      "ccs",
+      "fri",
+      "gra",
+      "gst",
+      "ieg",
+      "inm",
+      "krm",
+      "lan",
+      "lrv",
+      "mci",
+      "md",
+      "nmmb",
+      "nybj",
+      "pe",
+      "pgn",
+      "pui",
+      "sch",
+      "shs",
+      "skd",
+      "snp",
+      "stc",
+      "vcp",
+      "vei",
+      "wil",
+      "yat"
+    ],
+    "a_with_ge1": 9799,
+    "a_with_ge2": 4405,
+    "a_nomatch_with_ge2": 897
+  },
+  "canary": {
+    "kAritra": {
+      "class": "a_missing_by_error",
+      "subclass": "form_unresolved_nearform",
+      "sources": "pw+pwkvn",
+      "mw_tier": "nearform",
+      "corroboration_dicts": "bhs,sch"
+    }
+  }
+}
