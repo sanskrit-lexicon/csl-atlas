@@ -1,0 +1,29 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='860' height='500' viewBox='0 0 860 500'>
+<title>PD citation-mass flow into the DCS crosswalk</title>
+<rect width='860' height='500' fill='white'/>
+<text x='30' y='30' font-family='Georgia, serif' font-size='15' font-weight='bold'>Where PD's citation mass goes — 398,359 siglum occurrences</text>
+<text x='30' y='72' font-family='Georgia, serif' font-size='12'>All siglum occurrences — </text>
+<text x='208' y='72' font-family='Georgia, serif' font-size='12' font-weight='bold'>398,359</text>
+<path d='M 56 86.0 C 198.0 86.0, 198.0 86.0, 340 86.0 L 340 364.7 C 198.0 364.7, 198.0 400.0, 56 400.0 Z' fill='#2166ac' opacity='0.5'/>
+<path d='M 56 86.0 C 198.0 86.0, 198.0 364.7, 340 364.7 L 340 396.2 C 198.0 396.2, 198.0 400.0, 56 400.0 Z' fill='#999999' opacity='0.5'/>
+<path d='M 56 86.0 C 198.0 86.0, 198.0 396.2, 340 396.2 L 340 400.0 C 198.0 400.0, 198.0 400.0, 56 400.0 Z' fill='#f4a582' opacity='0.5'/>
+<path d='M 356 86.0 C 498.0 86.0, 498.0 86.0, 640 86.0 L 640 156.1 C 498.0 156.1, 498.0 364.7, 356 364.7 Z' fill='#2166ac' opacity='0.5'/>
+<path d='M 356 86.0 C 498.0 86.0, 498.0 156.1, 640 156.1 L 640 364.7 C 498.0 364.7, 498.0 364.7, 356 364.7 Z' fill='#b2182b' opacity='0.5'/>
+<rect x='40' y='86' width='16' height='314' fill='#444444'/>
+<rect x='340' y='86.0' width='16' height='278.7' fill='#2166ac'/>
+<rect x='340' y='364.7' width='16' height='31.5' fill='#999999'/>
+<rect x='340' y='396.2' width='16' height='3.8' fill='#f4a582'/>
+<rect x='640' y='86.0' width='16' height='70.1' fill='#2166ac'/>
+<rect x='640' y='156.1' width='16' height='208.6' fill='#b2182b'/>
+<text x='366' y='223.3' font-family='Georgia, serif' font-size='12'>Primary works</text>
+<text x='366' y='239.3' font-family='Georgia, serif' font-size='12' font-weight='bold'>353,512 (88.7 %)</text>
+<text x='366' y='378.4' font-family='Georgia, serif' font-size='12'>Structural</text>
+<text x='366' y='394.4' font-family='Georgia, serif' font-size='12' font-weight='bold'>39,987 (10.0 %)</text>
+<text x='366' y='416.0' font-family='Georgia, serif' font-size='12'>Secondary scholarship</text>
+<text x='366' y='432.0' font-family='Georgia, serif' font-size='12' font-weight='bold'>4,860 (1.2 %)</text>
+<text x='666' y='119.0' font-family='Georgia, serif' font-size='12'>Covered by DCS (118 works)</text>
+<text x='666' y='135.0' font-family='Georgia, serif' font-size='12' font-weight='bold'>88,929 (25.2 % of primary)</text>
+<text x='666' y='258.4' font-family='Georgia, serif' font-size='12'>Residue (outside DCS)</text>
+<text x='666' y='274.4' font-family='Georgia, serif' font-size='12' font-weight='bold'>264,583 (74.8 % of primary)</text>
+<text x='30' y='488' font-family='Georgia, serif' font-size='11' fill='#555555'>ribbon height = occurrence mass · classes re-derived from pd_siglum_families.tsv</text>
+</svg>
