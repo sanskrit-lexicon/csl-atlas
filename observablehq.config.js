@@ -112,7 +112,8 @@ const PAGE_DESCRIPTIONS = {
   "/dicts/skd": "SKD — Śabdakalpadruma (1822–1858): an atlas chapter on this classical Sanskrit encyclopaedic kosha.",
   "/dicts/vcp": "VCP — Vācaspatyam (1873–1884): an atlas chapter on this classical Sanskrit encyclopaedic kosha.",
   "/dicts/armh": "ARMH — Abhidhānaratnamālā (Halāyudhakośa, ~10th c.): an atlas chapter on this classical Sanskrit synonymic kosha.",
-  "/dicts/abch": "ABCH — Abhidhānacintāmaṇi (~12th c.): an atlas chapter on Hemacandra's classical Sanskrit synonymic kosha."
+  "/dicts/abch": "ABCH — Abhidhānacintāmaṇi (~12th c.): an atlas chapter on Hemacandra's classical Sanskrit synonymic kosha.",
+  "/dicts/pd": "PD — the Poona Dictionary / EDSHP (1948–, unfinished): an atlas chapter on the fragment's covered span, citation density, and production record."
 };
 
 // Escape a string for safe interpolation into an HTML attribute value.
@@ -263,7 +264,8 @@ export default {
         { name: "SKD (Śabdakalpadruma)", path: "/dicts/skd" },
         { name: "VCP (Vācaspatya)", path: "/dicts/vcp" },
         { name: "ARMH (Halāyudha)", path: "/dicts/armh" },
-        { name: "ABCH (Hemacandra)", path: "/dicts/abch" }
+        { name: "ABCH (Hemacandra)", path: "/dicts/abch" },
+        { name: "PD (Poona Dictionary, unfinished)", path: "/dicts/pd" }
       ]
     }
   ],

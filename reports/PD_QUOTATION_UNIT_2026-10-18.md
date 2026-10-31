@@ -82,7 +82,7 @@ Details that change counts and are therefore pinned by test:
   loci.
 
 Scope, unchanged from every other PD number: **letter *a* only, up to ~*apaca-*** (the
-fascicles issued 1976–2009). Every figure below is a floor on the dictionary, not a
+fascicles issued 1976–2008). Every figure below is a floor on the dictionary, not a
 description of it.
 
 ## 3. What the corpus says
@@ -230,7 +230,7 @@ pinned to the revisions they were measured on.
 
 ## 7. Caveats
 
-- **Scope.** Letter *a* to ~*apaca-* only, 1976–2009 fascicles. The printed record has
+- **Scope.** Letter *a* to ~*apaca-* only, 1976–2008 fascicles. The printed record has
   since reached Vol. 35 / 6,056 pp, still inside *a*; that material is not in the text and
   not in any number here.
 - **Unit boundary cases.** A quotation whose Sanskrit is interrupted by an italic gloss or

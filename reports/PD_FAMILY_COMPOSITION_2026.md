@@ -3,7 +3,8 @@
 _Created: 19-10-2026 · Last updated: 19-10-2026_
 
 _Source data: Cologne PDScan 2020 `pdtxt.zip` → `txt/pd.txt` (55,122,076 B, SHA-256
-`4ee75e66…724442`, 107,620 `<L>` entries), read-only · PWG: `csl-orig/v02/pwg/pwg.txt`
+`4ee75e66…724442`, 107,620 `<L>` entries — with headword blocks, of 107,630; see
+[PD_QUOTATION_UNIT_2026-10-18.md](PD_QUOTATION_UNIT_2026-10-18.md)), read-only · PWG: `csl-orig/v02/pwg/pwg.txt`
 (106,067 unique `k1`) · Artifact:
 [pd_family_composition.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/pd_family_composition.tsv) ·
 Builder: [pd_family_composition.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/pd_family_composition.py) ·

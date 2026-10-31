@@ -2,7 +2,7 @@
 
 _Created: 18-10-2026 · Last updated: 18-10-2026_
 
-**Handoff:** H6944 · **Executor:** DeepSeek v4.1 Flash (`deepseek/deepseek-flash`) · **Scope:** PD letter-`a` headwords (107,620 printed entries)
+**Handoff:** H6944 · **Executor:** DeepSeek v4.1 Flash (`deepseek/deepseek-flash`) · **Scope:** PD letter-`a` headwords (107,620 printed entries — with headword blocks, of 107,630 `<L>` entries; see [PD_QUOTATION_UNIT_2026-10-18.md](PD_QUOTATION_UNIT_2026-10-18.md))
 
 Artifacts: [data/pd/pd_dcs_earliest_lag.tsv](../data/pd/pd_dcs_earliest_lag.tsv) (2,458 rows) ·
 [data/pd/pd_dcs_earliest_lag.json](../data/pd/pd_dcs_earliest_lag.json) (joins + distribution) ·

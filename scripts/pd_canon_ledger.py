@@ -45,7 +45,8 @@ METRICS = "pd_dcs_metrics.json"
 INDEX_DELTA = "pd_index_works_siglum_delta.tsv"
 
 COLUMNS = ["measure_id", "label", "value", "unit", "base_id", "covered_works",
-           "pct_of_base", "source_file", "source_field", "provenance", "note"]
+           "pct_of_base", "pct_kind", "source_file", "source_field",
+           "provenance", "note"]
 
 
 def load(name):
@@ -96,12 +97,13 @@ def build():
     rows = []
 
     def add(measure_id, label, value, unit, base_id, cov, p, src, field,
-            prov, note, recorded=None):
+            prov, note, recorded=None, kind=""):
         if p is not None and recorded is not None and abs(p - recorded) > 0.011:
             raise SystemExit("%s: computed %s != recorded %s" % (measure_id, p, recorded))
         rows.append({"measure_id": measure_id, "label": label, "value": value,
                      "unit": unit, "base_id": base_id, "covered_works": cov,
                      "pct_of_base": "" if p is None else p,
+                     "pct_kind": kind,
                      "source_file": src, "source_field": field,
                      "provenance": prov, "note": note})
 
@@ -111,68 +113,78 @@ def build():
         pct(covered, census["r1_entry_like_lines_uncorrected"]), ROW_TEST,
         "printed_row_census.r1_entry_like_lines_uncorrected", "observed",
         "structural count; the paper's denominator",
-        effect["at_r1_uncorrected"]["pct"])
+        effect["at_r1_uncorrected"]["pct"], kind="covered_over_value")
     add("aob_header_corrected",
         "AOB entry rows, the 7 repeated column-header rows removed",
         census["entry_rows_header_corrected"], "rows", "", covered,
         pct(covered, census["entry_rows_header_corrected"]), ROW_TEST,
         "printed_row_census.entry_rows_header_corrected", "observed",
         "the printed list's own row count",
-        effect["at_header_corrected"]["pct"])
+        effect["at_header_corrected"]["pct"], kind="covered_over_value")
     add("aob_print_census", "Print census of AOB entry rows (press-attributed)",
         rec["print_census"], "rows", "", covered, pct(covered, rec["print_census"]),
         CANON_AUDIT, "recorded_numbers.print_census", "press",
         "external count; same producer, older snapshot",
-        audit["metric_title_level_declared_pct_at"]["print_census"]["pct"])
+        audit["metric_title_level_declared_pct_at"]["print_census"]["pct"],
+        kind="covered_over_value")
     add("aob_pass1", "Pass-1 loose entry parse (not reproducible)",
         rec["pass1_loose_entries"], "rows", "", covered,
         pct(covered, rec["pass1_loose_entries"]), CANON_AUDIT,
         "recorded_numbers.pass1_loose_entries", "recorded",
         "kept only so the retracted 1,419 cannot be requoted as current",
-        audit["metric_title_level_declared_pct_at"]["pass1_recorded"]["pct"])
+        audit["metric_title_level_declared_pct_at"]["pass1_recorded"]["pct"],
+        kind="covered_over_value")
     add("aob_reparse", "Committed re-parse, raw entries (upper bound)",
         rec["reparse_raw_entries"], "rows", "", covered,
         pct(covered, rec["reparse_raw_entries"]), CANON_AUDIT,
         "recorded_numbers.reparse_raw_entries", "derived",
         "upper bound of the band; never a headline",
-        audit["metric_title_level_declared_pct_at"]["reparse_raw"]["pct"])
+        audit["metric_title_level_declared_pct_at"]["reparse_raw"]["pct"],
+        kind="covered_over_value")
     add("aob_usable_inventory", "Usable edition-level inventory rows",
         metrics["n_declared_aob_rows_edition_level"], "rows", "", covered,
         pct(covered, metrics["n_declared_aob_rows_edition_level"]), METRICS,
         "n_declared_aob_rows_edition_level", "observed",
         "the H6932 edition-level inventory; the paper's §5.2.1 imprint dates "
-        "are counted on the clean subset, not on this row")
+        "are counted on the clean subset, not on this row",
+        kind="covered_over_value")
     add("aob_clean_subset_editions",
         "Published clean-subset edition rows — a FLOOR, never a denominator",
         audit["metric_title_level_declared_pct_at"]["published_tsv_edition_rows"]["n"],
         "rows", "", covered,
         audit["metric_title_level_declared_pct_at"]["published_tsv_edition_rows"]["pct"],
         CANON_AUDIT, "metric_title_level_declared_pct_at.published_tsv_edition_rows",
-        "derived", "DROPS the Mahābhārata and Rāmāyaṇa: QUOTING THIS IS A DEFECT")
+        "derived", "DROPS the Mahābhārata and Rāmāyaṇa: QUOTING THIS IS A DEFECT",
+        kind="covered_over_value")
 
     # --- Index-side bases ---------------------------------------------------
     add("index_all_rows", "Index of Works, every printed row (pp. LXXXIX–CXXVII)",
         index_all, "rows", "", covered, pct(covered, index_all), INDEX_SUMMARY,
         "row_total_full", "observed",
-        "vision transcription, 39 pages; the estate's work authority (Q5)")
+        "vision transcription, 39 pages; the estate's work authority (Q5)",
+        kind="covered_over_value")
     add("index_with_siglum", "Index rows that print an AOB siglum",
         with_siglum, "rows", "index_all_rows", covered,
         pct(covered, with_siglum), INDEX_SUMMARY, "siglum_reconciliation.with_siglum",
-        "derived", "joinable layer")
+        "derived", "joinable layer", kind="covered_over_value")
     add("index_blank_siglum", "Index rows with no siglum printed",
         blank, "rows", "index_all_rows", None, pct(blank, index_all), INDEX_SUMMARY,
         "blank_siglum", "observed",
-        "20.1 % of the Index; classed, not dropped; 50-row adjudication is ladder unit M2")
+        "20.1 % of the Index; classed, not dropped; 50-row adjudication is ladder unit M2",
+        kind="share_of_base")
 
     # --- The join and the divergence ---------------------------------------
     add("index_in_aob", "Index sigla that find an AOB row (both + AOB-only)",
         in_aob, "sigla", "index_with_siglum", None, pct(in_aob, with_siglum),
         INDEX_DELTA, "status: in_both + in_aob_only", "derived",
-        "the direct siglum join the Index pilot predicted")
+        "the direct siglum join the Index pilot predicted; C3's stricter "
+        "edition-identity measure is 815/1,622 = 50.25 % "
+        "(reports/PD_AOB_SCAN_LINKS_C3_2026-10-30.md)",
+        kind="share_of_base")
     add("index_not_in_aob", "Index sigla with no AOB row (families-only + neither)",
         not_in_aob, "sigla", "index_with_siglum", None, pct(not_in_aob, with_siglum),
         INDEX_DELTA, "status: in_families_only + index_only", "derived",
-        "AOB inventory gap or OCR break; not yet classed")
+        "AOB inventory gap or OCR break; not yet classed", kind="share_of_base")
     add("aob_only_sigla", "AOB sigla the Index never prints",
         status["aob_only"], "sigla", "", None, None, INDEX_DELTA, "status: aob_only",
         "observed", "a second join gap, in the opposite direction")
@@ -181,7 +193,8 @@ def build():
         "aob_header_corrected", None,
         pct(index_all - census["entry_rows_header_corrected"],
             census["entry_rows_header_corrected"]), "(derived)", "index_all_rows - aob_header_corrected",
-        "derived", "the two printed canon counts differ by this much")
+        "derived", "the two printed canon counts differ by this much",
+        kind="share_of_base")
 
     return rows, covered
 
@@ -204,7 +217,9 @@ def render_json(rows, covered):
         "covered_works": covered,
         "row_count": len(rows),
         "inputs_sha256": inputs,
-        "rule": "no percentage without its base in the same row; "
+        "rule": "no percentage without its base in the same row and its kind in "
+                "pct_kind — covered_over_value (118/N over this row's own value) "
+                "vs share_of_base (this row's value over its base); "
                 "aob_clean_subset_editions is a floor and must never be quoted",
     }, indent=1, ensure_ascii=False) + "\n"
 
