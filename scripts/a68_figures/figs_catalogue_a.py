@@ -373,7 +373,7 @@ def fig15(cls, m):
     """
     pooled = m["metric_pd_citation_weighted_pct"]
     rows = sorted(cls, key=lambda r: -float(r["coverage_pct"]))
-    W, H = 760, 130 + 44 * len(rows)
+    W, H = 760, 152 + 44 * len(rows)
     x0, x1 = 200, 580
     xmax = 40.0
 
@@ -381,21 +381,21 @@ def fig15(cls, m):
         return x0 + (x1 - x0) * v / xmax
 
     s = svg_header(W, H, "Coverage by morphological class, with 95% CIs")
-    s += (f"<text x='30' y='30' {FONT} font-size='15' font-weight='bold'>"
+    s += (f"<text x='30' y='30' {SANS} font-size='15' font-weight='bold'>"
           f"Preverbs and simplexes lead; derivatives lag</text>\n")
-    s += (f"<text x='30' y='50' {FONT} font-size='12' fill='#555555'>"
+    s += (f"<text x='30' y='50' {SANS} font-size='12' fill='#555555'>"
           f"dot = covered/primary loci · whisker = Wilson 95 % CI · "
           f"policy-matched simplex ratio vs PWG: 7.5× (see fig. 9)</text>\n")
     for gv in (0, 10, 20, 30, 40):
         x = xx(gv)
         s += (f"<line x1='{x:.1f}' y1='76' x2='{x:.1f}' y2='{H - 58}' "
               f"stroke='#dddddd'/>\n")
-        s += (f"<text x='{x:.1f}' y='{H - 42}' {FONT} font-size='11' "
+        s += (f"<text x='{x:.1f}' y='{H - 42}' {SANS} font-size='11' "
               f"text-anchor='middle'>{gv} %</text>\n")
     px = xx(pooled)
     s += (f"<line x1='{px:.1f}' y1='76' x2='{px:.1f}' y2='{H - 58}' "
           f"stroke='#444444' stroke-dasharray='6 4' stroke-width='1.5'/>\n")
-    s += (f"<text x='{px:.1f}' y='70' {FONT} font-size='11' "
+    s += (f"<text x='{px:.1f}' y='70' {SANS} font-size='11' "
           f"text-anchor='middle'>pooled {pooled:.2f} %</text>\n")
     y = 96
     for r in rows:
@@ -404,7 +404,7 @@ def fig15(cls, m):
         whi = float(r["wilson_hi"])
         n = int(r["primary_loci"])
         ym = y + 22
-        s += (f"<text x='{x0 - 12}' y='{ym + 4:.1f}' {FONT} font-size='12' "
+        s += (f"<text x='{x0 - 12}' y='{ym + 4:.1f}' {SANS} font-size='12' "
               f"text-anchor='end'>{esc(r['class'])}</text>\n")
         s += (f"<line x1='{xx(wlo):.1f}' y1='{ym:.1f}' x2='{xx(whi):.1f}' "
               f"y2='{ym:.1f}' stroke='#2166ac' stroke-width='2'/>\n")
@@ -412,7 +412,7 @@ def fig15(cls, m):
             s += (f"<line x1='{xx(wv):.1f}' y1='{ym - 5:.1f}' x2='{xx(wv):.1f}' "
                   f"y2='{ym + 5:.1f}' stroke='#2166ac' stroke-width='2'/>\n")
         s += f"<circle cx='{xx(cov):.1f}' cy='{ym:.1f}' r='4.5' fill='#2166ac'/>\n"
-        s += (f"<text x='{x1 + 14}' y='{ym + 4:.1f}' {FONT} font-size='11'>"
+        s += (f"<text x='{x1 + 14}' y='{ym + 4:.1f}' {SANS} font-size='11'>"
               f"{cov:.2f} [{wlo:.2f}, {whi:.2f}] · n={n:,}</text>\n")
         y += 44
     s += "</svg>\n"
