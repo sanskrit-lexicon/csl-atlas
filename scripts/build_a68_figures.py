@@ -43,6 +43,12 @@ cross-checked against metrics totals, never re-tagged. Per-layer residue
 composition stays blocked (C2/C8) and appears in no figure.
 
 Usage:  python scripts/build_a68_figures.py
+
+Outputs are LOCAL-ONLY since 01-11-2026 (MG ruling: nothing from the
+unpublished article is public before print): the papers/figures/ SVG/PDF
+files stay untracked in this public repo; canonical copies live in
+gasyoun/Uprava papers/A68/figures/. Do not `git add` them here —
+the paper-priv-guard blocks the commit by default.
 """
 
 """Shim entry point — the implementation lives in scripts/a68_figures/
