@@ -189,14 +189,19 @@ def fig7(m):
 
     398,359 all-siglum -> 353,512 primary -> 123,453 hand-adjudicated (pin)
     -> 88,929 covered. Horizontal bars, every denominator in one look.
+
+    H7616 anti-slop pass (01-11): every non-title text raised to >=14 px
+    SVG (>=6 pt effective at the 0.8 \\linewidth slot), gray text moved
+    #888888 -> #666666 (5.74:1 AA; 3.55:1 was a Floor), source line split
+    in two. Conviction arithmetic: a68_figures/wcag_check.py.
     """
     steps = ladder(m)
     total = steps[0][1]
     covered = steps[3][1]
     primary = steps[1][1]
     W, H = 830, 400
-    x0 = 230
-    bw_max = 460
+    x0 = 270          # H7616: 14 px category labels need a wider left column
+    bw_max = 420      # bar band still ends at x=690
     y0, dy = 118, 62
     blue, red = "#006BA2", "#DB444B"
     s = svg_header(W, H, "The denominator ladder of the coverage headline")
@@ -204,37 +209,39 @@ def fig7(m):
     s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
           f"DCS-276 covers {100 * covered / primary:.1f} % of PD primary-work"
           f" citations</text>\n")
-    s += (f"<text x='56' y='62' {SANS} font-size='12' fill='#555555'>"
-          f"{covered:,} of {primary:,} siglum occurrences — the same claim "
-          f"under four candidate denominators, Poona Dictionary 1976–2019"
-          f"</text>\n")
+    s += (f"<text x='56' y='62' {SANS} font-size='14' fill='#555555'>"
+          f"{covered:,} of {primary:,} siglum occurrences — one claim, "
+          f"four denominators · Poona Dictionary 1976–2019</text>\n")
     for gv in (0, 100000, 200000, 300000, 400000):
         x = x0 + bw_max * gv / total
         s += (f"<line x1='{x:.1f}' y1='96' x2='{x:.1f}' y2='{y0 + dy * 4 - 26}' "
               f"stroke='#e6e6e6'/>\n")
-        s += (f"<text x='{x:.1f}' y='88' {SANS} font-size='11' fill='#888888' "
+        s += (f"<text x='{x:.1f}' y='88' {SANS} font-size='14' fill='#666666' "
               f"text-anchor='middle'>{'0' if gv == 0 else f'{gv // 1000}k'}"
               f"</text>\n")
     for i, (label, v, tag) in enumerate(steps):
         y = y0 + i * dy
         w = bw_max * v / total
         color = red if tag != "pin" and i == 3 else blue
-        s += (f"<text x='30' y='{y - 8:.1f}' {SANS} font-size='12' "
+        s += (f"<text x='30' y='{y - 8:.1f}' {SANS} font-size='14' "
               f"fill='#333333'>{esc(label)}{'' if not tag else ' — pin'}"
               f"</text>\n")
         s += (f"<rect x='{x0}' y='{y:.1f}' width='{w:.1f}' height='22' "
               f"fill='{color}'/>\n")
         s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 16:.1f}' {SANS} "
-              f"font-size='13' font-weight='bold' fill='#333333'>{v:,}</text>\n")
+              f"font-size='14.5' font-weight='bold' fill='#333333'>{v:,}"
+              f"</text>\n")
         s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 32:.1f}' {SANS} "
-              f"font-size='10.5' fill='#888888'>{100 * v / total:.1f} % of "
+              f"font-size='14' fill='#666666'>{100 * v / total:.1f} % of "
               f"all</text>\n")
     s += (f"<line x1='30' y1='{H - 52}' x2='{W - 30}' y2='{H - 52}' "
           f"stroke='#E3120B' stroke-width='1'/>\n")
-    s += (f"<text x='30' y='{H - 34}' {SANS} font-size='10.5' "
-          f"fill='#888888'>Source: PD↔DCS crosswalk, committed metrics · "
-          f"third rung: A68 claim-ledger pin (164 hand-adjudicated "
-          f"titles)</text>\n")
+    s += (f"<text x='30' y='{H - 34}' {SANS} font-size='14' "
+          f"fill='#666666'>Source: PD↔DCS crosswalk, committed metrics"
+          f"</text>\n")
+    s += (f"<text x='30' y='{H - 16}' {SANS} font-size='14' "
+          f"fill='#666666'>Third rung: A68 claim-ledger pin (164 "
+          f"hand-adjudicated titles)</text>\n")
     s += "</svg>\n"
     return s
 
