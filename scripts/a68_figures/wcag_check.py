@@ -40,6 +40,17 @@ PAIRS = [
     ("fig10", "in-bar % black on kāvya #3EBCD2", "#000000", "#3EBCD2"),
     ("fig10", "in-bar % black on purāṇic #379A8B", "#000000", "#379A8B"),
     ("fig10", "in-bar % black on other #B4BA39", "#000000", "#B4BA39"),
+    # fig10-canon pass (H7641): the pairs the three restyled figures draw.
+    ("fig7", "in-bar value white on #006BA2", "#FFFFFF", "#006BA2"),
+    ("fig7", "in-bar value black on #DB444B (white would be 4.25 FAIL)",
+     "#000000", "#DB444B"),
+    ("fig7", "bold row labels #333333 on white", "#333333", "#FFFFFF"),
+    ("fig4", "in-bar value white on #2166ac", "#FFFFFF", "#2166ac"),
+    ("fig4", "bold row labels #333333 on white", "#333333", "#FFFFFF"),
+    ("fig4", "legend/row text #333333 on white", "#333333", "#FFFFFF"),
+    ("fig15", "bold row labels #333333 on white", "#333333", "#FFFFFF"),
+    ("fig15", "value tspan #333333 on white", "#333333", "#FFFFFF"),
+    ("fig15", "pooled label bold #333333 on white", "#333333", "#FFFFFF"),
 ]
 
 

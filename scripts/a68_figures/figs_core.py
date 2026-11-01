@@ -107,29 +107,66 @@ def fig4(gainers):
 
     Canvas is 830 wide (not 760): the first bar label '144,139 (+140,421)'
     ends ~794px at x0+420+6 — it clipped at 760.
+
+    fig10-canon pass (MG 01-11 'only the Renou-table style'): red title
+    block, bold Helvetica row labels, no axis, taller bars carrying their
+    own values (white on #2166ac, 5.7:1), swatch legend row below the
+    chart, red source separator — the light/dark pair is now explained by
+    the legend instead of a subtitle clause.
     """
     rows = gainers[:8]
     W = 830
-    rh = 40
-    H = 90 + rh * len(rows)
+    rh = 58
+    legend_y = 90 + rh * len(rows) + 6
+    H = legend_y + 84
     maxv = max(r[2] for r in rows)
     x0, bw_max = 260, 420
     s = svg_header(W, H, "DCS 2021 to 2026 growth in PD-covered texts")
-    s += (f"<text x='30' y='30' {SANS} font-size='15' font-weight='bold'>"
-          f"Where DCS grew, 2021→2026: the Vedic core of PD's canon</text>\n")
-    s += (f"<text x='30' y='50' {SANS} font-size='12' fill='#555555'>"
-          f"light bar = tokens 2021 · dark bar = tokens 2026</text>\n")
-    y = 72
+    s += f"<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>\n"
+    s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
+          f"Where DCS grew, 2021→2026: the Vedic core of PD's canon"
+          f"</text>\n")
+    s += (f"<text x='56' y='62' {SANS} font-size='14' fill='#555555'>"
+          f"PD-covered texts by DCS token gain · top {len(rows)} of 118"
+          f"</text>\n")
+    y = 90
     for title, t21, t26 in rows:
         w21 = bw_max * t21 / maxv
         w26 = bw_max * t26 / maxv
-        s += (f"<text x='{x0 - 8}' y='{y + 18}' {SANS} font-size='12' "
+        s += (f"<text x='{x0 - 8}' y='{y + 25}' {SANS} font-size='14' "
+              f"font-weight='bold' fill='#333333' "
               f"text-anchor='end'>{esc(title)}</text>\n")
-        s += f"<rect x='{x0}' y='{y}' width='{w21:.1f}' height='11' fill='{C_BAR2}'/>\n"
-        s += f"<rect x='{x0}' y='{y + 13}' width='{w26:.1f}' height='11' fill='{C_BAR}'/>\n"
-        s += (f"<text x='{x0 + w26 + 6:.1f}' y='{y + 23}' {SANS} font-size='11'>"
-              f"{t26:,} (+{t26 - t21:,})</text>\n")
+        s += (f"<rect x='{x0}' y='{y}' width='{w21:.1f}' height='12' "
+              f"fill='{C_BAR2}'/>\n")
+        s += (f"<rect x='{x0}' y='{y + 15}' width='{w26:.1f}' height='24' "
+              f"fill='{C_BAR}'/>\n")
+        if w26 > 104:
+            s += (f"<text x='{x0 + w26 / 2:.1f}' y='{y + 32:.1f}' {SANS} "
+                  f"font-size='14' font-weight='bold' fill='white' "
+                  f"text-anchor='middle'>{t26:,}</text>\n")
+            s += (f"<text x='{x0 + w26 + 10:.1f}' y='{y + 32:.1f}' {SANS} "
+                  f"font-size='14' fill='#666666'>+{t26 - t21:,}</text>\n")
+        else:
+            s += (f"<text x='{x0 + w26 + 10:.1f}' y='{y + 32:.1f}' {SANS} "
+                  f"font-size='14' font-weight='bold' fill='#333333'>"
+                  f"{t26:,}</text>\n")
+            s += (f"<text x='{x0 + w26 + 10:.1f}' y='{y + 48:.1f}' {SANS} "
+                  f"font-size='14' fill='#666666'>+{t26 - t21:,}</text>\n")
         y += rh
+    # legend row (fig10 canon): 2021 light swatch, 2026 dark swatch
+    s += (f"<rect x='{x0}' y='{legend_y}' width='12' height='12' "
+          f"fill='{C_BAR2}'/>\n")
+    s += (f"<text x='{x0 + 17}' y='{legend_y + 11}' {SANS} font-size='14' "
+          f"fill='#333333'>tokens 2021</text>\n")
+    s += (f"<rect x='{x0 + 130}' y='{legend_y}' width='12' height='12' "
+          f"fill='{C_BAR}'/>\n")
+    s += (f"<text x='{x0 + 147}' y='{legend_y + 11}' {SANS} font-size='14' "
+          f"fill='#333333'>tokens 2026</text>\n")
+    s += (f"<line x1='30' y1='{H - 46}' x2='{W - 30}' y2='{H - 46}' "
+          f"stroke='#E3120B' stroke-width='1'/>\n")
+    s += (f"<text x='30' y='{H - 28}' {SANS} font-size='14' fill='#666666'>"
+          f"Source: PD↔DCS crosswalk, 2021 and 2026 snapshots · top gainers "
+          f"among the covered 118</text>\n")
     s += "</svg>\n"
     return s
 

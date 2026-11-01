@@ -190,10 +190,7 @@ def fig7(m):
     398,359 all-siglum -> 353,512 primary -> 123,453 hand-adjudicated (pin)
     -> 88,929 covered. Horizontal bars, every denominator in one look.
 
-    H7616 anti-slop pass (01-11): every non-title text raised to >=14 px
-    SVG (>=6 pt effective at the 0.8 \\linewidth slot), gray text moved
-    #888888 -> #666666 (5.74:1 AA; 3.55:1 was a Floor), source line split
-    in two. Conviction arithmetic: a68_figures/wcag_check.py.
+    H7616: >=14 px text, gray #666666, split source (wcag_check.py).
     """
     steps = ladder(m)
     total = steps[0][1]
@@ -212,28 +209,31 @@ def fig7(m):
     s += (f"<text x='56' y='62' {SANS} font-size='14' fill='#555555'>"
           f"{covered:,} of {primary:,} siglum occurrences — one claim, "
           f"four denominators · Poona Dictionary 1976–2019</text>\n")
-    for gv in (0, 100000, 200000, 300000, 400000):
-        x = x0 + bw_max * gv / total
-        s += (f"<line x1='{x:.1f}' y1='96' x2='{x:.1f}' y2='{y0 + dy * 4 - 26}' "
-              f"stroke='#e6e6e6'/>\n")
-        s += (f"<text x='{x:.1f}' y='88' {SANS} font-size='14' fill='#666666' "
-              f"text-anchor='middle'>{'0' if gv == 0 else f'{gv // 1000}k'}"
-              f"</text>\n")
+    # fig10 canon: no axis/gridlines; bars carry their own values.
     for i, (label, v, tag) in enumerate(steps):
         y = y0 + i * dy
         w = bw_max * v / total
         color = red if tag != "pin" and i == 3 else blue
-        s += (f"<text x='30' y='{y - 8:.1f}' {SANS} font-size='14' "
-              f"fill='#333333'>{esc(label)}{'' if not tag else ' — pin'}"
-              f"</text>\n")
-        s += (f"<rect x='{x0}' y='{y:.1f}' width='{w:.1f}' height='22' "
+        lbl_fill = "#000000" if color == red else "white"  # wcag pairs
+        s += (f"<text x='30' y='{y + 16:.1f}' {SANS} font-size='14' "
+              f"font-weight='bold' fill='#333333'>{esc(label)}"
+              f"{'' if not tag else ' — pin'}</text>\n")
+        s += (f"<rect x='{x0}' y='{y:.1f}' width='{w:.1f}' height='28' "
               f"fill='{color}'/>\n")
-        s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 16:.1f}' {SANS} "
-              f"font-size='14.5' font-weight='bold' fill='#333333'>{v:,}"
-              f"</text>\n")
-        s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 32:.1f}' {SANS} "
-              f"font-size='14' fill='#666666'>{100 * v / total:.1f} % of "
-              f"all</text>\n")
+        if w > 96:
+            s += (f"<text x='{x0 + w / 2:.1f}' y='{y + 19:.1f}' {SANS} "
+                  f"font-size='14' font-weight='bold' fill='{lbl_fill}' "
+                  f"text-anchor='middle'>{v:,}</text>\n")
+            s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 19:.1f}' {SANS} "
+                  f"font-size='14' fill='#666666'>{100 * v / total:.1f} % "
+                  f"of all</text>\n")
+        else:
+            s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 15:.1f}' {SANS} "
+                  f"font-size='14' font-weight='bold' fill='#333333'>"
+                  f"{v:,}</text>\n")
+            s += (f"<text x='{x0 + w + 10:.1f}' y='{y + 31:.1f}' {SANS} "
+                  f"font-size='14' fill='#666666'>{100 * v / total:.1f} % "
+                  f"of all</text>\n")
     s += (f"<line x1='30' y1='{H - 52}' x2='{W - 30}' y2='{H - 52}' "
           f"stroke='#E3120B' stroke-width='1'/>\n")
     s += (f"<text x='30' y='{H - 34}' {SANS} font-size='14' "
@@ -368,12 +368,11 @@ def fig9(dens):
 def fig15(cls, m):
     """Cat #19 — class-coverage forest with Wilson CIs (six classes).
 
-    Coverage = covered_loci / primary_loci per morphological class; pooled
-    25.16 % line; policy-matched annotation.
+    Coverage = covered_loci / primary_loci per class; pooled 25.16 % line.
     """
     pooled = m["metric_pd_citation_weighted_pct"]
     rows = sorted(cls, key=lambda r: -float(r["coverage_pct"]))
-    W, H = 760, 152 + 44 * len(rows)
+    W, H = 880, 152 + 44 * len(rows) + 64
     x0, x1 = 200, 580
     xmax = 40.0
 
@@ -381,22 +380,18 @@ def fig15(cls, m):
         return x0 + (x1 - x0) * v / xmax
 
     s = svg_header(W, H, "Coverage by morphological class, with 95% CIs")
-    s += (f"<text x='30' y='30' {SANS} font-size='15' font-weight='bold'>"
+    s += f"<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>\n"
+    s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
           f"Preverbs and simplexes lead; derivatives lag</text>\n")
-    s += (f"<text x='30' y='50' {SANS} font-size='12' fill='#555555'>"
-          f"dot = covered/primary loci · whisker = Wilson 95 % CI · "
-          f"policy-matched simplex ratio vs PWG: 7.5× (see fig. 9)</text>\n")
-    for gv in (0, 10, 20, 30, 40):
-        x = xx(gv)
-        s += (f"<line x1='{x:.1f}' y1='76' x2='{x:.1f}' y2='{H - 58}' "
-              f"stroke='#dddddd'/>\n")
-        s += (f"<text x='{x:.1f}' y='{H - 42}' {SANS} font-size='11' "
-              f"text-anchor='middle'>{gv} %</text>\n")
+    s += (f"<text x='56' y='62' {SANS} font-size='14' fill='#555555'>"
+          f"dot = covered/primary loci · whisker = Wilson 95 % CI</text>\n")
     px = xx(pooled)
-    s += (f"<line x1='{px:.1f}' y1='76' x2='{px:.1f}' y2='{H - 58}' "
+    s += (f"<line x1='{px:.1f}' y1='76' x2='{px:.1f}' y2='{H - 122}' "
           f"stroke='#444444' stroke-dasharray='6 4' stroke-width='1.5'/>\n")
-    s += (f"<text x='{px:.1f}' y='70' {SANS} font-size='11' "
-          f"text-anchor='middle'>pooled {pooled:.2f} %</text>\n")
+    # pooled label right of the line: clear of subtitle and first row.
+    s += (f"<text x='{px + 8:.1f}' y='88' {SANS} font-size='14' "
+          f"font-weight='bold' fill='#333333'>pooled {pooled:.2f} %"
+          f"</text>\n")
     y = 96
     for r in rows:
         cov = float(r["coverage_pct"])
@@ -404,7 +399,8 @@ def fig15(cls, m):
         whi = float(r["wilson_hi"])
         n = int(r["primary_loci"])
         ym = y + 22
-        s += (f"<text x='{x0 - 12}' y='{ym + 4:.1f}' {SANS} font-size='12' "
+        s += (f"<text x='{x0 - 12}' y='{ym + 5:.1f}' {SANS} font-size='14' "
+              f"font-weight='bold' fill='#333333' "
               f"text-anchor='end'>{esc(r['class'])}</text>\n")
         s += (f"<line x1='{xx(wlo):.1f}' y1='{ym:.1f}' x2='{xx(whi):.1f}' "
               f"y2='{ym:.1f}' stroke='#2166ac' stroke-width='2'/>\n")
@@ -412,8 +408,15 @@ def fig15(cls, m):
             s += (f"<line x1='{xx(wv):.1f}' y1='{ym - 5:.1f}' x2='{xx(wv):.1f}' "
                   f"y2='{ym + 5:.1f}' stroke='#2166ac' stroke-width='2'/>\n")
         s += f"<circle cx='{xx(cov):.1f}' cy='{ym:.1f}' r='4.5' fill='#2166ac'/>\n"
-        s += (f"<text x='{x1 + 14}' y='{ym + 4:.1f}' {SANS} font-size='11'>"
-              f"{cov:.2f} [{wlo:.2f}, {whi:.2f}] · n={n:,}</text>\n")
+        s += (f"<text x='{x1 + 14}' y='{ym + 5:.1f}' {SANS} font-size='14'>"
+              f"<tspan font-weight='bold' fill='#333333'>{cov:.2f} %</tspan>"
+              f"<tspan fill='#666666'> · CI {wlo:.2f}–{whi:.2f} · n {n:,}"
+              f"</tspan></text>\n")
         y += 44
+    s += (f"<line x1='30' y1='{H - 46}' x2='{W - 30}' y2='{H - 46}' "
+          f"stroke='#E3120B' stroke-width='1'/>\n")
+    s += (f"<text x='30' y='{H - 28}' {SANS} font-size='14' fill='#666666'>"
+          f"Source: committed class-coverage table · Wilson 95 % intervals · "
+          f"repeated citations share works and entries</text>\n")
     s += "</svg>\n"
     return s
