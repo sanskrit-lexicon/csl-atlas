@@ -366,9 +366,13 @@ def fig9(dens):
 
 
 def fig15(cls, m):
-    """Cat #19 — class-coverage forest with Wilson CIs (six classes).
+    """Cat #19 — class coverage, dot + printed counts (six classes).
 
     Coverage = covered_loci / primary_loci per class; pooled 25.16 % line.
+    H7643 (review doco.QgsCMUTQoBeyYY4LafqIvA): whiskers removed — a
+    finite-text descriptive census needs counts/denominators, not nominal
+    Wilson intervals. Same visual family as the H7641 canon (dot, right-hand
+    value column, pooled dashed line).
     """
     pooled = m["metric_pd_citation_weighted_pct"]
     rows = sorted(cls, key=lambda r: -float(r["coverage_pct"]))
@@ -379,12 +383,12 @@ def fig15(cls, m):
     def xx(v):
         return x0 + (x1 - x0) * v / xmax
 
-    s = svg_header(W, H, "Coverage by morphological class, with 95% CIs")
+    s = svg_header(W, H, "Coverage by morphological class")
     s += f"<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>\n"
     s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
           f"Preverbs and simplexes lead; derivatives lag</text>\n")
     s += (f"<text x='56' y='62' {SANS} font-size='14' fill='#555555'>"
-          f"dot = covered/primary loci · whisker = Wilson 95 % CI</text>\n")
+          f"dot = covered/primary loci · label = per cent · covered / primary loci</text>\n")
     px = xx(pooled)
     s += (f"<line x1='{px:.1f}' y1='76' x2='{px:.1f}' y2='{H - 122}' "
           f"stroke='#444444' stroke-dasharray='6 4' stroke-width='1.5'/>\n")
@@ -395,28 +399,22 @@ def fig15(cls, m):
     y = 96
     for r in rows:
         cov = float(r["coverage_pct"])
-        wlo = float(r["wilson_lo"])
-        whi = float(r["wilson_hi"])
+        k = int(r["covered_loci"])
         n = int(r["primary_loci"])
         ym = y + 22
         s += (f"<text x='{x0 - 12}' y='{ym + 5:.1f}' {SANS} font-size='14' "
               f"font-weight='bold' fill='#333333' "
               f"text-anchor='end'>{esc(r['class'])}</text>\n")
-        s += (f"<line x1='{xx(wlo):.1f}' y1='{ym:.1f}' x2='{xx(whi):.1f}' "
-              f"y2='{ym:.1f}' stroke='#2166ac' stroke-width='2'/>\n")
-        for wv in (wlo, whi):
-            s += (f"<line x1='{xx(wv):.1f}' y1='{ym - 5:.1f}' x2='{xx(wv):.1f}' "
-                  f"y2='{ym + 5:.1f}' stroke='#2166ac' stroke-width='2'/>\n")
         s += f"<circle cx='{xx(cov):.1f}' cy='{ym:.1f}' r='4.5' fill='#2166ac'/>\n"
         s += (f"<text x='{x1 + 14}' y='{ym + 5:.1f}' {SANS} font-size='14'>"
               f"<tspan font-weight='bold' fill='#333333'>{cov:.2f} %</tspan>"
-              f"<tspan fill='#666666'> · CI {wlo:.2f}–{whi:.2f} · n {n:,}"
+              f"<tspan fill='#666666'> · {k:,} / {n:,} loci"
               f"</tspan></text>\n")
         y += 44
     s += (f"<line x1='30' y1='{H - 46}' x2='{W - 30}' y2='{H - 46}' "
           f"stroke='#E3120B' stroke-width='1'/>\n")
     s += (f"<text x='30' y='{H - 28}' {SANS} font-size='14' fill='#666666'>"
-          f"Source: committed class-coverage table · Wilson 95 % intervals · "
-          f"repeated citations share works and entries</text>\n")
+          f"Source: committed class-coverage table · counts and denominators "
+          f"printed per class · repeated citations share works and entries</text>\n")
     s += "</svg>\n"
     return s
