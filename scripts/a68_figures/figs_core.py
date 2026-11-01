@@ -1,5 +1,5 @@
 """Figs 1-4 — the original four A68 figures (unchanged output)."""
-from .helpers import (C_BAR, C_BAR2, C_COVERED, C_RESIDUE, C_SECOND,
+from .helpers import (SANS, C_BAR, C_BAR2, C_COVERED, C_RESIDUE, C_SECOND,
                       C_STRUCT, FONT, esc, svg_header)
 
 
@@ -115,19 +115,19 @@ def fig4(gainers):
     maxv = max(r[2] for r in rows)
     x0, bw_max = 260, 420
     s = svg_header(W, H, "DCS 2021 to 2026 growth in PD-covered texts")
-    s += (f"<text x='30' y='30' {FONT} font-size='15' font-weight='bold'>"
+    s += (f"<text x='30' y='30' {SANS} font-size='15' font-weight='bold'>"
           f"Where DCS grew, 2021→2026: the Vedic core of PD's canon</text>\n")
-    s += (f"<text x='30' y='50' {FONT} font-size='12' fill='#555555'>"
+    s += (f"<text x='30' y='50' {SANS} font-size='12' fill='#555555'>"
           f"light bar = tokens 2021 · dark bar = tokens 2026</text>\n")
     y = 72
     for title, t21, t26 in rows:
         w21 = bw_max * t21 / maxv
         w26 = bw_max * t26 / maxv
-        s += (f"<text x='{x0 - 8}' y='{y + 18}' {FONT} font-size='12' "
+        s += (f"<text x='{x0 - 8}' y='{y + 18}' {SANS} font-size='12' "
               f"text-anchor='end'>{esc(title)}</text>\n")
         s += f"<rect x='{x0}' y='{y}' width='{w21:.1f}' height='11' fill='{C_BAR2}'/>\n"
         s += f"<rect x='{x0}' y='{y + 13}' width='{w26:.1f}' height='11' fill='{C_BAR}'/>\n"
-        s += (f"<text x='{x0 + w26 + 6:.1f}' y='{y + 23}' {FONT} font-size='11'>"
+        s += (f"<text x='{x0 + w26 + 6:.1f}' y='{y + 23}' {SANS} font-size='11'>"
               f"{t26:,} (+{t26 - t21:,})</text>\n")
         y += rh
     s += "</svg>\n"
