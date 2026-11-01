@@ -5,11 +5,12 @@
 # Manuscripts live only in gasyoun/Uprava/papers
 # (STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY, 04-10-2026).
 # Every exemption below carries its reason — add lines only with a documented one.
+#
+# MG ruling 01-11-2026 (supersedes the A68 figure exemptions below, removed
+# the same day): NONE of the unpublished articles' material — including the
+# figure plates and style studies — is public before the article is printed
+# on paper. The a68_fig*.svg outputs of scripts/build_a68_figures.py are
+# therefore local-only (untracked) until print; the canonical copies live in
+# gasyoun/Uprava papers/A68/figures/. Re-allowlisting at camera-ready/print
+# requires a fresh documented reason naming the venue.
 
-# A68 report figures — code-generated SVG plates (scripts/build_a68_figures.py),
-# published with the public A68 report; no manuscript prose. The paper itself
-# stays in gasyoun/Uprava/papers.
-papers/figures/a68_fig*.svg  # published: csl-atlas A68 report figures | license: repo (generated)
-# A68 style studies — same code-generated plates (figs 7/10 x four review idioms),
-# no manuscript prose; pending MG style pick, same rationale as the figures above.
-papers/figures/style_studies/a68_fig*.svg  # generated: style review proposals (build_a68_figures.py)
