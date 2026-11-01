@@ -15,6 +15,12 @@ def fig10(m):
     (covered, exact 53.05 — the sweep prose rounds it to 53.1). Layer tags
     are sweep literals — the per-text tag map is not committed; nothing
     here re-tags texts.
+
+    H7616 anti-slop pass (01-11): in-bar % labels need 4.5:1 on their own
+    fill — white only on śāstra (5.79:1); every other fill takes black
+    (white on Vedic #DB444B is 4.25:1 FAIL, black 4.94:1). Non-title text
+    raised to >=14 px SVG (>=6 pt effective at the 0.85 \\linewidth slot);
+    source split in two. Conviction arithmetic: a68_figures/wcag_check.py.
     """
     layers = C4_LAYERS
     tot26 = sum(r[2] for r in layers)
@@ -23,6 +29,7 @@ def fig10(m):
     ve_cov = sum(r[5] for r in layers if r[0] in ("Vedic", "epic"))
     pal = {"Vedic": "#DB444B", "epic": "#F0AB00", "śāstra": "#006BA2",
            "kāvya": "#3EBCD2", "purāṇic": "#379A8B", "other": "#B4BA39"}
+    dark_label_layers = {"Vedic", "epic", "kāvya", "purāṇic", "other"}
     W, H = 860, 360
     bx, bw = 210, 560
     rows = (("All DCS-276", tot26, 118), ("PD-covered 118", cov26, 208))
@@ -31,14 +38,14 @@ def fig10(m):
     s += f"<rect x='30' y='24' width='14' height='42' fill='#E3120B'/>\n"
     s += (f"<text x='56' y='44' {SANS} font-size='17' font-weight='bold'>"
           f"The covered canon leans older than the corpus</text>\n")
-    s += (f"<text x='56' y='62' {SANS} font-size='12' fill='#555555'>"
+    s += (f"<text x='56' y='62' {SANS} font-size='14' fill='#555555'>"
           f"DCS token mass by Renou layer · Vedic+epic "
           f"{100 * ve / tot26:.1f} % of all, {100 * ve_cov / cov26:.1f} % of "
           f"the covered set</text>\n")
     for ri, (label, tot, y) in enumerate(rows):
         x = bx
-        s += (f"<text x='30' y='{y + strip_h / 2 + 4:.1f}' {SANS} "
-              f"font-size='12.5' font-weight='bold' fill='#333333'>"
+        s += (f"<text x='30' y='{y + strip_h / 2 + 5:.1f}' {SANS} "
+              f"font-size='14' font-weight='bold' fill='#333333'>"
               f"{label}</text>\n")
         for lname, _, tok26, _, _, ctok, _ in layers:
             v = tok26 if ri == 0 else ctok
@@ -46,23 +53,28 @@ def fig10(m):
             s += (f"<rect x='{x:.1f}' y='{y}' width='{w:.1f}' "
                   f"height='{strip_h}' fill='{pal[lname]}'/>\n")
             if w > 40:  # 41.7 px kāvya segment must carry its 7 % label
-                s += (f"<text x='{x + w / 2:.1f}' y='{y + strip_h / 2 + 4:.1f}'"
-                      f" {SANS} font-size='11' fill='white' "
+                lbl_fill = ("#000000" if lname in dark_label_layers
+                            else "white")
+                s += (f"<text x='{x + w / 2:.1f}' "
+                      f"y='{y + strip_h / 2 + 5:.1f}' {SANS} font-size='14' "
+                      f"fill='{lbl_fill}' "
                       f"text-anchor='middle'>{100 * v / tot:.0f} %</text>\n")
             x += w
     lx, ly = 210, 288
     for lname, _, tok26, _, _, _, _ in layers:
         s += (f"<rect x='{lx}' y='{ly - 10}' width='12' height='12' "
               f"fill='{pal[lname]}'/>\n")
-        s += (f"<text x='{lx + 17}' y='{ly}' {SANS} font-size='11' "
+        s += (f"<text x='{lx + 17}' y='{ly}' {SANS} font-size='14' "
               f"fill='#333333'>{esc(lname)}</text>\n")
-        lx += 20 + int(6.3 * len(lname)) + 22
+        lx += 20 + int(8.4 * len(lname)) + 26
     s += (f"<line x1='30' y1='{H - 46}' x2='{W - 30}' y2='{H - 46}' "
           f"stroke='#E3120B' stroke-width='1'/>\n")
-    s += (f"<text x='30' y='{H - 28}' {SANS} font-size='10.5' "
-          f"fill='#888888'>Source: C4 Renou-layer sweep of DCS-276, committed"
-          f" 14-10-2026 · layer tags are sweep literals; the per-text tag map"
-          f" is not committed</text>\n")
+    s += (f"<text x='30' y='{H - 30}' {SANS} font-size='14' "
+          f"fill='#666666'>Source: C4 Renou-layer sweep of DCS-276, "
+          f"committed 14-10-2026</text>\n")
+    s += (f"<text x='30' y='{H - 14}' {SANS} font-size='14' "
+          f"fill='#666666'>Layer tags are sweep literals; the per-text tag "
+          f"map is not committed</text>\n")
     s += "</svg>\n"
     return s
 
