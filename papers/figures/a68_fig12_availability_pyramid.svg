@@ -1,0 +1,21 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='400' viewBox='0 0 760 400'>
+<title>Edition availability of PD's cited sources</title>
+<rect width='760' height='400' fill='white'/>
+<text x='30' y='30' font-family='Georgia, serif' font-size='15' font-weight='bold'>What DCS could legitimately absorb next: availability of cited editions</text>
+<text x='30' y='50' font-family='Georgia, serif' font-size='12' fill='#555555'>bar width = attestation mass (n = 419,890) · work-level e-text presence, not edition identity</text>
+<rect x='269.8' y='96.0' width='220.4' height='42' fill='#2166ac'/>
+<text x='380' y='120.0' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle' fill='white'>144,615 (34.4 %)</text>
+<text x='257.8' y='126.0' font-family='Georgia, serif' font-size='12' text-anchor='end' fill='#333333'>Full e-text available</text>
+<rect x='346.4' y='148.0' width='67.1' height='42' fill='#92c5de'/>
+<text x='423.6' y='178.0' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#333333'>44,030 (10.5 %)</text>
+<text x='538.6' y='178.0' font-family='Georgia, serif' font-size='12' fill='#333333'>Partial edition available</text>
+<rect x='379.4' y='200.0' width='1.2' height='42' fill='#f4a582'/>
+<text x='390.6' y='230.0' font-family='Georgia, serif' font-size='12' font-weight='bold' fill='#333333'>755 (0.2 %)</text>
+<text x='476.0' y='230.0' font-family='Georgia, serif' font-size='12' fill='#333333'>Embedded witness only</text>
+<rect x='204.3' y='252.0' width='351.3' height='42' fill='#b8b8b8'/>
+<text x='380' y='276.0' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle' fill='white'>230,490 (54.9 %)</text>
+<text x='567.7' y='282.0' font-family='Georgia, serif' font-size='12' fill='#333333'>Unresolved (not absence)</text>
+<text x='30' y='358' font-family='Georgia, serif' font-size='12'>available at work level: 189,400 attestations = 45.1 %</text>
+<text x='30' y='374' font-family='Georgia, serif' font-size='12'>AOB edition rows (1,437): 32 full · 103 partial · 43 ambiguous · 1259 unresolved</text>
+<text x='30' y='390' font-family='Georgia, serif' font-size='11' fill='#555555'>unresolved mass is not evidence of absence · source: pd_edition_availability_by_siglum.tsv (C1 protocol)</text>
+</svg>
