@@ -1,0 +1,47 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='880' height='400' viewBox='0 0 880 400'>
+<title>PD vs PWG attestations per morphological stratum</title>
+<rect width='880' height='400' fill='white'/>
+<text x='30' y='30' font-family='Georgia, serif' font-size='15' font-weight='bold'>What PWG gave PD: attestations per stratum, policy-matched key-1s</text>
+<text x='30' y='50' font-family='Georgia, serif' font-size='12' fill='#555555'>dark = PD attestations · light = PWG attestations · label = ratio PD/PWG</text>
+<line x1='205' y1='310.0' x2='860' y2='310.0' stroke='#dddddd'/>
+<text x='199' y='314.0' font-family='Georgia, serif' font-size='11' text-anchor='end'>0</text>
+<line x1='205' y1='271.9' x2='860' y2='271.9' stroke='#dddddd'/>
+<text x='199' y='275.9' font-family='Georgia, serif' font-size='11' text-anchor='end'>25k</text>
+<line x1='205' y1='233.8' x2='860' y2='233.8' stroke='#dddddd'/>
+<text x='199' y='237.8' font-family='Georgia, serif' font-size='11' text-anchor='end'>50k</text>
+<line x1='205' y1='195.7' x2='860' y2='195.7' stroke='#dddddd'/>
+<text x='199' y='199.7' font-family='Georgia, serif' font-size='11' text-anchor='end'>75k</text>
+<line x1='205' y1='157.6' x2='860' y2='157.6' stroke='#dddddd'/>
+<text x='199' y='161.6' font-family='Georgia, serif' font-size='11' text-anchor='end'>100k</text>
+<text x='205' y='190.0' font-family='Georgia, serif' font-size='11' text-anchor='end'>simplex</text>
+<rect x='215' y='239.5' width='56' height='70.5' fill='#2166ac'/>
+<text x='243.0' y='233.5' font-family='Georgia, serif' font-size='10' text-anchor='middle'>46,236</text>
+<rect x='277' y='300.6' width='56' height='9.4' fill='#92c5de'/>
+<text x='305.0' y='294.6' font-family='Georgia, serif' font-size='10' text-anchor='middle'>6,144</text>
+<text x='274' y='328' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle'>7.5×</text>
+<text x='341' y='190.0' font-family='Georgia, serif' font-size='11' text-anchor='end'>derivative</text>
+<rect x='351' y='291.3' width='56' height='18.7' fill='#2166ac'/>
+<text x='379.0' y='285.3' font-family='Georgia, serif' font-size='10' text-anchor='middle'>12,276</text>
+<rect x='413' y='307.8' width='56' height='2.2' fill='#92c5de'/>
+<text x='441.0' y='301.8' font-family='Georgia, serif' font-size='10' text-anchor='middle'>1,434</text>
+<text x='410' y='328' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle'>8.6×</text>
+<text x='477' y='190.0' font-family='Georgia, serif' font-size='11' text-anchor='end'>compound</text>
+<rect x='487' y='161.1' width='56' height='148.9' fill='#2166ac'/>
+<text x='515.0' y='155.1' font-family='Georgia, serif' font-size='10' text-anchor='middle'>97,674</text>
+<rect x='549' y='293.7' width='56' height='16.3' fill='#92c5de'/>
+<text x='577.0' y='287.7' font-family='Georgia, serif' font-size='10' text-anchor='middle'>10,699</text>
+<text x='546' y='328' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle'>9.1×</text>
+<text x='613' y='190.0' font-family='Georgia, serif' font-size='11' text-anchor='end'>unclassified</text>
+<rect x='623' y='308.0' width='56' height='2.0' fill='#2166ac'/>
+<text x='651.0' y='302.0' font-family='Georgia, serif' font-size='10' text-anchor='middle'>1,294</text>
+<rect x='685' y='309.8' width='56' height='0.2' fill='#92c5de'/>
+<text x='713.0' y='303.8' font-family='Georgia, serif' font-size='10' text-anchor='middle'>146</text>
+<text x='682' y='328' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle'>8.9×</text>
+<text x='749' y='190.0' font-family='Georgia, serif' font-size='11' font-weight='bold' text-anchor='end'>pooled (std.)</text>
+<rect x='759' y='70.0' width='56' height='240.0' fill='#2166ac'/>
+<text x='787.0' y='64.0' font-family='Georgia, serif' font-size='10' text-anchor='middle'>157,480</text>
+<rect x='821' y='281.9' width='56' height='28.1' fill='#92c5de'/>
+<text x='849.0' y='275.9' font-family='Georgia, serif' font-size='10' text-anchor='middle'>18,423</text>
+<text x='818' y='328' font-family='Georgia, serif' font-size='12' font-weight='bold' text-anchor='middle'>8.5×</text>
+<text x='30' y='388' font-family='Georgia, serif' font-size='11' fill='#555555'>policy-matched density sample (4,093 key-1 headwords, equal stratum weights) · pooled standardised ratio 8.41×</text>
+</svg>
