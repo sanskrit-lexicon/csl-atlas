@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-03T10:03:59.483Z",
+  "generatedAt": "2026-11-03T12:21:24.775Z",
   "sourceRoot": "../csl-orig/v02",
   "assumptions": [
     "Lemmas are grouped by normalized SLP1 headword forms; kosha synonym dictionaries use validated <syns> headword extraction.",
@@ -12,7 +12,7 @@
     "broadHeadword": "Broad 40",
     "coreComparison": "Core 7"
   },
-  "distinctLemmas": 377481,
+  "distinctLemmas": 377485,
   "dictionaryCount": 40,
   "dictionaries": [
     {
@@ -929,7 +929,7 @@
     "PUI": 17512,
     "BHS": 17839,
     "FRI": 8155,
-    "AP": 90851,
+    "AP": 90856,
     "ACC": 49833,
     "PE": 8799,
     "KRM": 2061,
@@ -971,7 +971,7 @@
     "PUI": 11730,
     "BHS": 17777,
     "FRI": 7775,
-    "AP": 88875,
+    "AP": 88880,
     "ACC": 32585,
     "PE": 6623,
     "KRM": 1698,
@@ -981,11 +981,11 @@
     "PGN": 470
   },
   "coverageHistogram": {
-    "1": 159609,
+    "1": 159613,
     "2": 63817,
     "3": 45068,
-    "4": 30838,
-    "5": 17890,
+    "4": 30837,
+    "5": 17891,
     "6": 11760,
     "7": 9251,
     "8": 8005,
@@ -1023,7 +1023,7 @@
         "AP"
       ],
       "size": 1,
-      "count": 30835
+      "count": 30840
     },
     {
       "dicts": [
@@ -1091,7 +1091,7 @@
         "LRV"
       ],
       "size": 1,
-      "count": 8495
+      "count": 8494
     },
     {
       "dicts": [
@@ -1322,7 +1322,7 @@
         "AP"
       ],
       "size": 4,
-      "count": 1068
+      "count": 1067
     },
     {
       "dicts": [
@@ -2416,7 +2416,7 @@
           "notes": "Cologne scan-only"
         }
       ],
-      "distinctLemmas": 377481,
+      "distinctLemmas": 377485,
       "recordsByDict": {
         "SKD": 42531,
         "WIL": 44577,
@@ -2450,7 +2450,7 @@
         "PUI": 17512,
         "BHS": 17839,
         "FRI": 8155,
-        "AP": 90851,
+        "AP": 90856,
         "ACC": 49833,
         "PE": 8799,
         "KRM": 2061,
@@ -2492,7 +2492,7 @@
         "PUI": 11730,
         "BHS": 17777,
         "FRI": 7775,
-        "AP": 88875,
+        "AP": 88880,
         "ACC": 32585,
         "PE": 6623,
         "KRM": 1698,
@@ -2502,11 +2502,11 @@
         "PGN": 470
       },
       "coverageHistogram": {
-        "1": 159609,
+        "1": 159613,
         "2": 63817,
         "3": 45068,
-        "4": 30838,
-        "5": 17890,
+        "4": 30837,
+        "5": 17891,
         "6": 11760,
         "7": 9251,
         "8": 8005,
@@ -2544,7 +2544,7 @@
             "AP"
           ],
           "size": 1,
-          "count": 30835
+          "count": 30840
         },
         {
           "dicts": [
@@ -2612,7 +2612,7 @@
             "LRV"
           ],
           "size": 1,
-          "count": 8495
+          "count": 8494
         },
         {
           "dicts": [
@@ -2843,7 +2843,7 @@
             "AP"
           ],
           "size": 4,
-          "count": 1068
+          "count": 1067
         },
         {
           "dicts": [
@@ -3211,10 +3211,10 @@
           "notes": "Original publication 1822; Cologne digitisation based on later 1886 edition"
         }
       ],
-      "distinctLemmas": 298509,
+      "distinctLemmas": 298514,
       "recordsByDict": {
         "MW": 286525,
-        "AP": 90851,
+        "AP": 90856,
         "PWG": 123366,
         "PWK": 170556,
         "WIL": 44577,
@@ -3223,7 +3223,7 @@
       },
       "lemmasByDict": {
         "MW": 194083,
-        "AP": 88875,
+        "AP": 88880,
         "PWG": 106079,
         "PWK": 151346,
         "WIL": 43938,
@@ -3231,7 +3231,7 @@
         "SKD": 40814
       },
       "coverageHistogram": {
-        "1": 123681,
+        "1": 123686,
         "2": 67741,
         "3": 54130,
         "4": 24433,
@@ -3261,7 +3261,7 @@
             "AP"
           ],
           "size": 1,
-          "count": 35855
+          "count": 35860
         },
         {
           "dicts": [
