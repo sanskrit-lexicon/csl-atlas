@@ -1,0 +1,158 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='470' viewBox='0 0 760 470'>
+<title>Corpus size vs dictionary attention, covered 118</title>
+<rect width='760' height='470' fill='white'/>
+<text x='30' y='30' font-family='Georgia, serif' font-size='15' font-weight='bold'>Big corpora are not the cited ones: tokens vs PD citations</text>
+<text x='30' y='50' font-family='Georgia, serif' font-size='12' fill='#555555'>log-log · crosshairs = medians (12,906 tok, 400 cites)</text>
+<line x1='80.0' y1='64' x2='80.0' y2='400' stroke='#eeeeee'/>
+<text x='80.0' y='418' font-family='Georgia, serif' font-size='11' text-anchor='middle'>100</text>
+<line x1='204.0' y1='64' x2='204.0' y2='400' stroke='#eeeeee'/>
+<text x='204.0' y='418' font-family='Georgia, serif' font-size='11' text-anchor='middle'>1k</text>
+<line x1='328.0' y1='64' x2='328.0' y2='400' stroke='#eeeeee'/>
+<text x='328.0' y='418' font-family='Georgia, serif' font-size='11' text-anchor='middle'>10k</text>
+<line x1='452.0' y1='64' x2='452.0' y2='400' stroke='#eeeeee'/>
+<text x='452.0' y='418' font-family='Georgia, serif' font-size='11' text-anchor='middle'>100k</text>
+<line x1='576.0' y1='64' x2='576.0' y2='400' stroke='#eeeeee'/>
+<text x='576.0' y='418' font-family='Georgia, serif' font-size='11' text-anchor='middle'>1M</text>
+<line x1='700.0' y1='64' x2='700.0' y2='400' stroke='#eeeeee'/>
+<text x='700.0' y='418' font-family='Georgia, serif' font-size='11' text-anchor='middle'>10M</text>
+<text x='390' y='438' font-family='Georgia, serif' font-size='12' text-anchor='middle'>DCS tokens 2026</text>
+<line x1='80' y1='400.0' x2='706' y2='400.0' stroke='#eeeeee'/>
+<text x='72' y='404.0' font-family='Georgia, serif' font-size='11' text-anchor='end'>1</text>
+<line x1='80' y1='321.4' x2='706' y2='321.4' stroke='#eeeeee'/>
+<text x='72' y='325.4' font-family='Georgia, serif' font-size='11' text-anchor='end'>10</text>
+<line x1='80' y1='242.9' x2='706' y2='242.9' stroke='#eeeeee'/>
+<text x='72' y='246.9' font-family='Georgia, serif' font-size='11' text-anchor='end'>100</text>
+<line x1='80' y1='164.3' x2='706' y2='164.3' stroke='#eeeeee'/>
+<text x='72' y='168.3' font-family='Georgia, serif' font-size='11' text-anchor='end'>1k</text>
+<line x1='80' y1='85.7' x2='706' y2='85.7' stroke='#eeeeee'/>
+<text x='72' y='89.7' font-family='Georgia, serif' font-size='11' text-anchor='end'>10k</text>
+<text x='34' y='235' font-family='Georgia, serif' font-size='12' transform='rotate(-90 34 235)' text-anchor='middle'>PD citations</text>
+<line x1='341.7' y1='70' x2='341.7' y2='400' stroke='#999999' stroke-dasharray='5 4'/>
+<line x1='80' y1='195.6' x2='700' y2='195.6' stroke='#999999' stroke-dasharray='5 4'/>
+<circle cx='583.4' cy='88.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='480.6' cy='116.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='354.9' cy='123.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='260.9' cy='123.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='503.8' cy='125.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='433.7' cy='126.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='471.7' cy='127.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='269.8' cy='130.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='438.5' cy='138.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='449.2' cy='145.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='457.8' cy='145.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='412.5' cy='149.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='393.7' cy='149.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='246.1' cy='150.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='353.5' cy='154.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='401.1' cy='155.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='429.1' cy='155.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='444.9' cy='157.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='418.6' cy='158.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='193.8' cy='158.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='352.2' cy='158.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='463.1' cy='159.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='472.6' cy='159.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='318.4' cy='159.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='366.4' cy='161.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='401.6' cy='163.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='342.4' cy='164.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='393.1' cy='166.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='399.4' cy='167.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='350.1' cy='170.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='194.0' cy='171.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='465.1' cy='172.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='395.8' cy='173.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='337.7' cy='173.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='214.8' cy='175.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='284.7' cy='175.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='315.0' cy='175.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='302.7' cy='178.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='443.9' cy='178.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='420.0' cy='180.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='240.7' cy='180.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='455.9' cy='182.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='362.3' cy='184.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='308.5' cy='184.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='426.4' cy='184.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='340.1' cy='185.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='206.7' cy='186.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='385.9' cy='186.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='441.3' cy='187.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='361.0' cy='187.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='351.0' cy='188.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='178.4' cy='189.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='274.6' cy='189.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='118.1' cy='191.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='367.7' cy='191.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='318.0' cy='192.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='377.4' cy='193.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='388.0' cy='194.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='320.5' cy='195.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='362.6' cy='196.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='201.7' cy='196.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='363.4' cy='196.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='296.7' cy='196.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='370.8' cy='197.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='348.9' cy='199.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='381.1' cy='199.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='383.6' cy='200.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='347.2' cy='201.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='362.7' cy='203.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='329.5' cy='203.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='198.6' cy='203.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='372.5' cy='205.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='88.9' cy='206.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='329.4' cy='206.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='268.8' cy='209.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='414.6' cy='209.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='353.0' cy='212.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='362.6' cy='212.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='296.9' cy='213.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='297.7' cy='213.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='324.1' cy='214.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='331.8' cy='216.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='284.5' cy='217.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='377.6' cy='218.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='192.9' cy='218.4' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='378.0' cy='220.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='328.1' cy='221.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='371.4' cy='221.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='341.1' cy='221.5' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='349.8' cy='225.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='328.0' cy='225.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='208.7' cy='225.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='311.8' cy='226.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='317.8' cy='227.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='180.1' cy='227.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='317.1' cy='227.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='317.2' cy='228.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='299.9' cy='228.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='309.1' cy='231.6' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='300.7' cy='232.1' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='315.7' cy='234.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='312.8' cy='235.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='336.2' cy='235.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='430.8' cy='235.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='330.0' cy='235.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='347.3' cy='237.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='316.9' cy='238.7' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='245.0' cy='239.3' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='324.8' cy='240.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='343.5' cy='241.5' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='328.0' cy='241.5' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='311.2' cy='241.8' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='308.3' cy='242.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='390.5' cy='242.5' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='292.6' cy='242.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='309.6' cy='243.9' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='269.8' cy='247.2' r='3.4' fill='#2166ac' opacity='0.65'/>
+<circle cx='245.1' cy='248.0' r='3.4' fill='#2166ac' opacity='0.65'/>
+<text x='583.4' y='76.1' font-family='Georgia, serif' font-size='10' fill='#333333'>Mahābhārata</text>
+<text x='488.6' y='106.2' font-family='Georgia, serif' font-size='10' fill='#333333'>Ṛgveda</text>
+<text x='479.7' y='141.4' font-family='Georgia, serif' font-size='10' fill='#333333'>Śatapathabrāhmaṇa</text>
+<text x='511.8' y='121.1' font-family='Georgia, serif' font-size='10' fill='#333333'>Rāmāyaṇa</text>
+<text x='441.7' y='132.8' font-family='Georgia, serif' font-size='10' fill='#333333'>Atharvaveda (Śaunaka)</text>
+<text x='90' y='80' font-family='Georgia, serif' font-size='11' text-anchor='start' fill='#555555'>small corpus, heavy attention ↑</text>
+<text x='692' y='392' font-family='Georgia, serif' font-size='11' text-anchor='end' fill='#555555'>big corpus, light attention →</text>
+<text x='30' y='462' font-family='Georgia, serif' font-size='11' fill='#555555'>n = 118 covered titles · log scales · the median crosshair splits the covered canon four ways</text>
+</svg>
