@@ -1,6 +1,6 @@
 # csl-atlas
 
-_Created: 23-05-2026 · Last updated: 29-10-2026_
+_Created: 23-05-2026 · Last updated: 05-11-2026_
 
 An interactive companion to the [CDSL](https://www.sanskrit-lexicon.uni-koeln.de/) — comparative microstructural analysis of nine narrative Sanskrit-dictionary chapters, plus an all-dictionary coverage layer for every local CDSL v02 source dictionary.
 
@@ -25,7 +25,7 @@ Current URL structure:
 ```
 /                        landing (EN)
 /tools/dictionary-coverage
-/tools/matrix-explorer   18×8 block/type matrix explorer
+/tools/matrix-explorer   18×14 block/type matrix explorer
 /tools/lineage-sankey    kosha → WIL/PWG/PWK/MW lineage Sankey
 /paper/grounded
 /paper/triangulation
@@ -56,7 +56,7 @@ Each narrative dictionary gets a chapter; each Tier-1 figure has a per-dictionar
 
 TEI, OntoLex, FrAC, SHACL, RDF, and related export/validation work now belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards):
 
-- local path: `C:\Users\user\Documents\GitHub\csl-standards`
+- local clone: sibling checkout `../csl-standards`
 - migration note: [TEI/OntoLex migration note](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/TEI_ONTOLEX_MIGRATION.md)
 
 The atlas may link to standards outputs when they clarify dictionary evidence, but it no longer owns those generators, schemas, generated pilot data, or UI routes.
@@ -159,7 +159,7 @@ npm run build-sense-depth          # sense-division richness comparison
 npm run build-gender-review        # gender-conflict review queue
 npm run build-source-layer-review  # unknown source-layer review queue
 npm run build-alignment-review     # low-confidence alignment review queue
-npm run install-review-tools       # install immutable csl-pyutil v0.2.0 emitter
+npm run install-review-tools       # install immutable pinned csl-pyutil emitter (v0.6.0)
 npm run build-review-sheets        # generate four ignored strict HTML sheets
 npm run test-review-decisions      # test strict export validation rules
 npm run validate-review-decisions -- review/csl-atlas-skd-iti_100units_decisions.json
@@ -188,7 +188,7 @@ The full script inventory — many additional derived-data builders, importers, 
 - [x] MW Quantitative Depth Phase 1: parser, classifiers, source-layer + family-depth metrics, 3 dashboards
 - [x] Comparative Dictionary Lab Phase 2 (first slice): 7-dictionary coverage/overlap/intersection/unique + tagged-dict gender disagreement, 4 pages
 - [x] Per-lemma dossier: interactive lookup over ~28.5k lemmas in ≥5 dictionaries
-- [x] Review layer ([`scripts/lib/review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs)): gender-conflict (4,556) + unknown-source-layer (449) + low-confidence-alignment (7) + source-siglum-alias (151) queues, schema-conforming, human decisions preserved across rebuilds, 4 review pages
+- [x] Review layer ([`scripts/lib/review-report.mjs`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/lib/review-report.mjs)): gender-conflict (4,543) + unknown-source-layer (449) + low-confidence-alignment (7) + source-siglum-alias (158) queues, schema-conforming, human decisions preserved across rebuilds, 4 review pages
 - [x] Cross-dictionary source-siglum alignment: fold + reviewed alias table → working source × dictionary citation matrix
 - [x] Sense-depth comparison (AP/PWG/PWK): per-dictionary richness, deepest-treatment leaderboard, largest gaps
 - [x] DCS corpus slice moved out of the atlas; migration copies are preserved in `VisualDCS/docs/csl-atlas-migration/`
@@ -204,7 +204,7 @@ The full script inventory — many additional derived-data builders, importers, 
 
 ## Issues Overview
 
-Live issues: <https://github.com/sanskrit-lexicon/csl-atlas/issues>. As of 11-07-2026 there are **2** open issues; issue/PR numbering has reached #243.
+Live issues: <https://github.com/sanskrit-lexicon/csl-atlas/issues>. As of 05-11-2026 there are **5** open issues; issue/PR numbering has reached #704.
 
 ## GitHub Issue Conventions
 
@@ -222,7 +222,7 @@ Follows the [Cologne tooling-repo taxonomy](https://github.com/sanskrit-lexicon/
 
 CC-BY-SA-4.0, matching [MWS](https://github.com/sanskrit-lexicon/MWS). See [`LICENSE`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/LICENSE).
 
-Source data: [CDSL csl-orig](https://github.com/sanskrit-lexicon/csl-orig), `mw.txt` 2026-05-23 and sibling dict files. All figures regenerate from JSON data via Python scripts in [MWS papers/microanalysis/figures/scripts/](https://github.com/sanskrit-lexicon/MWS/tree/docs-pass/papers/microanalysis/figures/scripts).
+Source data: [CDSL csl-orig](https://github.com/sanskrit-lexicon/csl-orig), `mw.txt` 2026-05-29 and sibling dict files. All figures regenerate from JSON data via Python scripts in [MWS papers/microanalysis/figures/scripts/](https://github.com/sanskrit-lexicon/MWS/tree/docs-pass/papers/microanalysis/figures/scripts).
 
 ---
 
@@ -233,7 +233,7 @@ attested in at least five of seven Cologne dictionaries, with per-dictionary
 record counts, first source lines, and grammar tokens.
 
 - **Version:** dataset 1.0.0, repo release `v0.20.0`
-- **DOI (this version):** [`10.5281/zenodo.23613057`](https://doi.org/10.5281/zenodo.23613057)
+- **DOI (this version):** [`10.5281/zenodo.23536487`](https://doi.org/10.5281/zenodo.23536487)
 - **DOI (concept, all versions):** [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691)
 - **Licence:** CC BY-SA 4.0
 - **OntoLex profile:** [`docs/ONTOLEX_PROFILE_CORE_DOSSIER.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/ONTOLEX_PROFILE_CORE_DOSSIER.md)
@@ -247,11 +247,11 @@ human-reviewed rows; see the data statement for the full limitations.
 
 ## How to cite
 
-Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.21.5: [`10.5281/zenodo.23793389`](https://doi.org/10.5281/zenodo.23793389)).
+Citation metadata lives in [`CITATION.cff`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/CITATION.cff) (Citation File Format 1.2.0); GitHub renders a **"Cite this repository"** button from it. A machine-readable [`.zenodo.json`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/.zenodo.json) pre-stages a Zenodo software deposit; the repository **is connected to [Zenodo](https://zenodo.org)** and the archival **DOI** is minted: concept DOI [`10.5281/zenodo.21419691`](https://doi.org/10.5281/zenodo.21419691) (resolves to the latest tagged release; the most recent minted version DOI is 0.21.6: [`10.5281/zenodo.23794413`](https://doi.org/10.5281/zenodo.23794413)).
 
 Cite the atlas via its archival Zenodo DOI:
 
-> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.21.5). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.23793389>
+> Gasūns, M., Funderburk, J., & Andhrabharati. *csl-atlas: an evidence-graded atlas of the Cologne Digital Sanskrit Lexicon* (version 0.21.6). Cologne Digital Sanskrit Dictionaries project. <https://doi.org/10.5281/zenodo.23794413>
 
 When citing a specific dataset rather than the repository, use that dataset's own provenance envelope (`sourcePath`, `generatedBy`, `generatedAt`) so the exact source records and build step are recoverable. The meaning of each per-claim evidence label is defined in [`docs/EVIDENCE_LABELS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS.md), and its equivalent in W3C PROV-O and TEI `@cert` / `@resp` — with the explicit list of what has no equivalent — in [`docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/EVIDENCE_LABELS_PROVO_CROSSWALK.md).
 
