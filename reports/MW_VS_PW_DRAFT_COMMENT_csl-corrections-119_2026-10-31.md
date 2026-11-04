@@ -22,8 +22,10 @@ Böhtlingk actually *cites* the word:
 
 Denominator, stated for both classes: 157,994 distinct base headwords in
 PWG ∪ pwk, of which 132,284 (83.7 %) resolve verbatim in MW. Per source:
-PWG 11,298 candidates (10,373 cited / 925 uncited), pwk-union 22,338
-(16,556 / 5,782 in `pw`; 4,332 / 905 in the Nachträge).
+PWG 11,298 candidates (10,373 cited / 925 uncited), pwk-union 22,360
+(16,557 cited / 5,803 uncited — `pw` alone 16,556 / 5,782, the Nachträge
+4,332 / 905 with 5,215 rows already shared with `pw` and 22 Nachträge-only
+rows adding 1 / 21).
 
 `kāritra` reproduces end-to-end and is pinned as the canary: PW 7-331-d /
 Nachträge (Mahāvy. 245, 844, = ceṣṭita), zero occurrences in mw.txt, nearest
