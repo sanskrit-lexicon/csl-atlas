@@ -83,10 +83,12 @@ each sha-pinned.
 | Entries | 123,366 | 195,532 (170,556 + 24,976) |
 | Distinct base k1 | 106,079 | 151,368 |
 | In MW verbatim | 94,781 | 129,008 |
-| Candidates | 11,298 | 22,338 |
+| Candidates | 11,298 | 22,360 |
 
 Per-source class split (a/b): PWG 10,373/925 · pw 16,556/5,782 · pwkvn
-4,332/905 (rows can carry several sources; see metrics for the union).
+4,332/905 · pwk-union 16,557/5,803 (rows can carry several sources; the
+union = pw rows + 22 pwkvn-only rows, 1/21 — the metrics envelope carries
+the union denominators `pwk_union`, not a union candidates field).
 
 ## 3 — The two classes
 
