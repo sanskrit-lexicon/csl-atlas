@@ -148,6 +148,14 @@ bumps `CITATION.cff` + `.zenodo.json`. Real example, v0.19.5 (commit `78fb3b2`,
 24-09-2026): touched exactly `CHANGELOG.md`, `CITATION.cff`, `.zenodo.json`,
 and deleted the consumed queue entry — 4 files, 5 insertions, 3 deletions.
 
+Fragments are shape-gated at commit and push (H7467, PR #680): the hook
+validates each staged `changelog_queue/*.md` fragment against the canonical
+Uprava parser (`validate_entry` strict), consumed from the sibling `../Uprava`
+checkout or `UPRAVA_TOOLS` — the parser is never copied into this repo. A
+malformed fragment blocks commit/push; escape `ALLOW_CHANGELOG_QUEUE_SHAPE=1`.
+In a cold or public clone without Uprava — or when the sibling parser exists
+but fails to import — the gate degrades to a loud WARNING-only fail-open.
+
 For **data exports shipped as release artifacts** (not committed): e.g.
 `npm run build-stardict-export` writes `stardict-dist/` (MW .dict ≈ 46 MB) —
 gitignored by policy; attach to a GitHub release

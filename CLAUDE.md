@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-_Created: 03-07-2026 · Last updated: 29-10-2026 (H7316 KoshaSHRI fixture regeneration and rights rule)_
+_Created: 03-07-2026 · Last updated: 05-11-2026 (H7746 orientation backfill: PWG-DCS / NWS / triangulation registration, changelog-queue shape gate, CI paragraph truth-pass)_
 
 Recent state (09-10-2026): `v0.19.11` released; vendored
 `sanskrit-util` re-pinned to **v0.12.0** (#542 — H3975 medial-anusvāra
@@ -41,6 +41,14 @@ for the name — do not guess. Pair `build-*` with `validate-*` when a validator
 exists (`build-mw-depth` / `validate-mw-depth`, `build-dict-comparison` /
 `validate-dict-comparison`).
 
+The forensic data-stage pipelines are the deliberate exception: the H7463 /
+H7476 / H7484 substrates under `data/pwg_dcs/`, `data/nws_layer/` and
+`data/triangulation_stage3/` are bare `python3` scripts invoked directly (no
+npm wrapper) — `scripts/pwg_dcs_join.py`, `scripts/nws_layer_extract.py` +
+`scripts/nws_layer_join.py`, `scripts/triangulation_stage3_join.py` — each
+with a `*_check.py` gate that exits non-zero on drift. Invoke them directly;
+do not hunt for a `build-*` name that does not exist.
+
 ## Key paths
 
 | Path | Purpose |
@@ -51,9 +59,14 @@ exists (`build-mw-depth` / `validate-mw-depth`, `build-dict-comparison` /
 | [`data/`](https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data) | Raw/intermediate inputs (not the generated `src/data/` copies) |
 | `dist/` | Build output — generated, gitignored |
 
-CI: `test.yml` (PR/push `main`) runs `npm ci` → `npm test` →
-`validate-review-reports` → `npm run build`. `build-and-deploy.yml` then
-publishes `dist/` to GitHub Pages.
+CI: `test.yml` (PR/push `main`) runs `npm ci` → `npm run verify` — the full
+production acceptance gate (unit tests, validators, both regeneration passes,
+the production dependency audit, `npm run build`, and the clean-tree assert
+before and after), not a plain `npm test` → build. A second job runs the
+offline forensic claim pins (`python -m pytest tests/forensic -q`), and two
+negative-control jobs (H4613 generator-owned docs, H7096 PD regeneration
+gate) hand-edit a generated file and prove the gate actually goes RED.
+`build-and-deploy.yml` then publishes `dist/` to GitHub Pages.
 
 ## Conventions
 
@@ -118,6 +131,31 @@ publishes `dist/` to GitHub Pages.
   both TSVs and runs `python3 scripts/pd_koshashri_fixture_export.py --check` plus
   `python3.13 -m pytest tests/forensic/test_pd_koshashri_fixture_export.py -q` in the same PR.
   Never commit the full `data/pd/koshashri_vocable.json` response: KoshaSHRI is all rights reserved.
+- **PWG↔DCS Stage 1 join (H7463).** Everything in `data/pwg_dcs/` regenerates by
+  `python3 scripts/pwg_dcs_join.py` (register: `scripts/pwg_work_register.py`; catalogue:
+  `scripts/dcs_catalogue_parse.py` over the sha-pinned snapshot). `python3 scripts/pwg_dcs_check.py`
+  exits non-zero on drift; pins in `tests/forensic/test_pwg_dcs_join.py`. The denominators are
+  pre-registered (quotation-linked 729,719 / raw 801,788 / α-frontier `k1 ≤ apacaya`) and strata
+  are never pooled. Method: `reports/PWG_DCS_JOIN_STAGE1_2026-10-30.md`.
+- **NWS layer (H7476).** `data/nws_layer/` rebuilds local-only via
+  `python3 scripts/nws_layer_extract.py` + `python3 scripts/nws_layer_join.py` — the private
+  lemma tar is NOT committed (H5939). `python3 scripts/nws_layer_check.py` gates drift; pins in
+  `tests/forensic/test_nws_layer_join.py`. The attested fraction is recomputed only from the
+  dated, hash-pinned scrape (`nws_works_registry.json`, fetched 2026-10-06); the retracted
+  82.7 % figure is structurally barred. Method: `reports/NWS_LAYER_STAGE2_2026-10-30.md`.
+- **PD/PWG/NWS Stage-3 triangulation (H7484).** `data/triangulation_stage3/` is rebuilt by
+  `python3 scripts/triangulation_stage3_join.py` — deterministic and read-only over the
+  committed Stage-1/Stage-2 substrates; it adds no new measurement. The interpretation grid
+  (`grid_preregistration.md`, commit `b531f96`, sha-pinned) was committed before the run and
+  is never retuned. `python3 scripts/triangulation_stage3_check.py` exits non-zero on drift;
+  pins in `tests/forensic/test_triangulation_stage3.py`. Method:
+  `reports/TRIANGULATION_STAGE3_2026-10-30.md`.
+- **PD edition availability (C1).** `data/pd/pd_edition_availability_by_aob.tsv`,
+  `pd_edition_availability_by_siglum.tsv`, `pd_edition_availability_evidence.tsv` and
+  `pd_edition_availability_summary.json` regenerate by
+  `python3 scripts/pd_edition_availability.py`; pins in
+  `tests/forensic/test_pd_edition_availability.py`. Method:
+  `reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md`.
 
 ## Do not touch
 
@@ -162,5 +200,15 @@ The shared main tree is guarded: `.githooks/pre-commit` blocks main-tree commits
 auto-reverts a foreign branch-switch back to `main` (shared-tree branch-switch guard,
 03-10-2026, PR #532; escape `ALLOW_MAIN_TREE_CHECKOUT=1`). Work in a session-unique
 worktree; `core.hooksPath=.githooks`.
+
+The changelog-queue shape gate (H7467, PR #680) runs from the same hooks:
+`.githooks/pre-commit` (staged fragments) and the pre-push gate validate every
+staged `changelog_queue/*.md` fragment against the canonical Uprava parser
+(`validate_entry` strict), consumed from the sibling `../Uprava` checkout or
+`UPRAVA_TOOLS` — the parser is never copied into this repo. A malformed fragment
+blocks commit and push; escape `ALLOW_CHANGELOG_QUEUE_SHAPE=1`. Where Uprava is
+absent (public or cold clones, CI), or the sibling parser exists but fails to
+import, the gate degrades to a loud WARNING-only fail-open instead of
+tracebacking at the commit chokepoint.
 
 _Dr. Mārcis Gasūns_

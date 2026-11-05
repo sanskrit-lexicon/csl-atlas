@@ -126,6 +126,10 @@ Architecture and planning:
 - [PD data registry](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/README.md#koshashri-fixture-export-h7316) — H7316 fixture `pd_koshashri_entries.tsv` + `pd_koshashri_citations.tsv`, their provenance, rights boundary and deterministic regeneration contract
 - [PD locus fields (C2)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_LOCUS_FIELDS_C2_2026-10-29.md) — H7458: 391,444 well-formed `(siglum, locus)` pairs and 105,177 / 107,630 entries (97.72 %), with exact H6949 marker reconciliation; `pd_locus_fields.tsv`, `pd_locus_coverage_by_entry.tsv`, `pd_locus_rejections.tsv`, `pd_locus_fields_summary.json` regenerate together deterministically
 - [PD AOB scan links (C3)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_AOB_SCAN_LINKS_C3_2026-10-30.md) — 1,622 Index rows with separate work/edition/scan measures; 5,639 unique locus→page links from scandata and visually anchored ranges; offline deterministic check plus explicit Archive.org refresh
+- [PWG↔DCS Stage 1 join (H7463)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PWG_DCS_JOIN_STAGE1_2026-10-30.md) — the 2,680-siglum PWG work register joined to the sha-pinned DCS catalogue snapshot (285 texts) under a pre-registered protocol; coverage(PWG_Omega) = 63.53 % stratum-excluded vs the PD band 19.15–31.52 %; deterministic substrate in [`data/pwg_dcs/`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pwg_dcs/README.md)
+- [NWS layer Stage 2 (H7476)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/NWS_LAYER_STAGE2_2026-10-30.md) — NWS headword mass (34,101 prose keys), works attestation on 28,158 shared headwords (ρ = 0.3414) and the X(MW) census; substrate in [`data/nws_layer/`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/nws_layer/README.md), private lemma tar stays local (H5939)
+- [PD/PWG/NWS Stage-3 triangulation (H7484)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/TRIANGULATION_STAGE3_2026-10-30.md) — the pre-registered BR1–BR6 grid overturns 'three-quarters outside DCS' as a class claim and localizes it to PD's programme; read-only over the Stage-1/2 substrates, metrics in [`data/triangulation_stage3/`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/triangulation_stage3/README.md)
+- [PD edition availability (C1)](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_EDITION_AVAILABILITY_C1_2026-10-29.md) — citation-mass edition availability per AOB edition and per siglum, with evidence rows and summary
 - [H6 structural-register scatter](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/H6_STRUCTURAL_REGISTER_SCATTER.md) — implemented scholar-facing analysis page and chart spec
 - [Microstructure profile](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_PROFILE.md) · [methods](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_METHODS.md) · [findings](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/MICROSTRUCTURE_FINDINGS.md)
 - [L0 GQD validation](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_GQD_VALIDATION.md) — how much of the documented dictionary genealogy the convention stemma actually recovers (Generalized Quartet Distance)
@@ -166,7 +170,16 @@ npm run validate-review-decisions -- review/csl-atlas-skd-iti_100units_decisions
 npm test         # unit tests for the deterministic libs (node --test)
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
+npm run verify   # full production acceptance gate
+npm run verify -- --fast --jobs 4  # faster local gate; four parallel checks
 ```
+
+Full verification includes two regeneration passes and the production dependency
+audit. `--fast` skips only the second pass and the audit; tests, validators, one
+regeneration, build, and clean-tree checks still run. `--jobs N` parallelizes
+independent checks but leaves regeneration, build, and audit sequential. Every
+step reports elapsed time; Linux also reports sampled peak child RSS. Use full
+verification before release.
 
 Review sheets and decision exports stay in the gitignored `review/` directory.
 Strict sheets autosave incomplete drafts locally, but final downloads require
