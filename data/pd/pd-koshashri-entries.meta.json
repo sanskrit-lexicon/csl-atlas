@@ -1,0 +1,28 @@
+{
+  "layer": "pd-koshashri-entries",
+  "made_by": "ai",
+  "model": "kimi-code-plan-global/k3.1-pro",
+  "handoff": "H7316",
+  "consumers": [
+    {
+      "kind": "repo",
+      "id": "csl-atlas",
+      "use": "reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md — the export report naming this fixture as the entry-level half"
+    },
+    {
+      "kind": "repo",
+      "id": "csl-atlas",
+      "use": "data/pd/README.md — PD fixture inventory"
+    }
+  ],
+  "status": "active",
+  "novelty": "Single-row (agni) entry-level fixture of KoshaSHRI with stable source identity, Devanagari/IAST/SLP1 headwords and preserved source HTML — evidence layer for PD triage under the H7316 scope, not a dictionary; intentionally one data row, not one per sense.",
+  "roundtrip": {
+    "checked": true,
+    "rows_in": 1,
+    "rows_out": 1,
+    "note": "fixture: one agni entry; count matches manifest rows 1"
+  },
+  "built_at": "2026-10-29",
+  "builder": "csl-atlas scripts/pd_koshashri_vocable.py + scripts/pd_koshashri_fixture_export.py (public single-entry GET, restricted full response stays local)"
+}
