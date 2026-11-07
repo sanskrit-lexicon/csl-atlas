@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-03T10:03:59.494Z",
+  "generatedAt": "2026-11-03T12:21:24.786Z",
   "sourceRoot": "../csl-orig/v02",
   "assumptions": [
     "Jaccard = shared normalized headwords / union of normalized headwords."
@@ -995,7 +995,7 @@
       "b": "MW",
       "aCode": "lrv",
       "bCode": "mw",
-      "shared": 36140,
+      "shared": 36141,
       "jaccard": 0.1753
     },
     {
@@ -1075,7 +1075,7 @@
       "b": "LRV",
       "aCode": "pw",
       "bCode": "lrv",
-      "shared": 29699,
+      "shared": 29700,
       "jaccard": 0.1748
     },
     {
@@ -1107,7 +1107,7 @@
       "b": "LRV",
       "aCode": "pwg",
       "bCode": "lrv",
-      "shared": 28368,
+      "shared": 28369,
       "jaccard": 0.2252
     },
     {
@@ -1164,7 +1164,7 @@
       "aCode": "ap90",
       "bCode": "ap",
       "shared": 26056,
-      "jaccard": 0.2684
+      "jaccard": 0.2683
     },
     {
       "a": "CCS",
@@ -1323,7 +1323,7 @@
       "b": "AP",
       "aCode": "lrv",
       "bCode": "ap",
-      "shared": 18327,
+      "shared": 18328,
       "jaccard": 0.1543
     },
     {
@@ -8124,7 +8124,7 @@
           "b": "MW",
           "aCode": "lrv",
           "bCode": "mw",
-          "shared": 36140,
+          "shared": 36141,
           "jaccard": 0.1753
         },
         {
@@ -8204,7 +8204,7 @@
           "b": "LRV",
           "aCode": "pw",
           "bCode": "lrv",
-          "shared": 29699,
+          "shared": 29700,
           "jaccard": 0.1748
         },
         {
@@ -8236,7 +8236,7 @@
           "b": "LRV",
           "aCode": "pwg",
           "bCode": "lrv",
-          "shared": 28368,
+          "shared": 28369,
           "jaccard": 0.2252
         },
         {
@@ -8293,7 +8293,7 @@
           "aCode": "ap90",
           "bCode": "ap",
           "shared": 26056,
-          "jaccard": 0.2684
+          "jaccard": 0.2683
         },
         {
           "a": "CCS",
@@ -8452,7 +8452,7 @@
           "b": "AP",
           "aCode": "lrv",
           "bCode": "ap",
-          "shared": 18327,
+          "shared": 18328,
           "jaccard": 0.1543
         },
         {
