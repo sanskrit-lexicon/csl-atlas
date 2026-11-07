@@ -24,5 +24,8 @@
     "note": "fixture: one agni entry; count matches manifest rows 1"
   },
   "built_at": "2026-10-29",
-  "builder": "csl-atlas scripts/pd_koshashri_vocable.py + scripts/pd_koshashri_fixture_export.py (public single-entry GET, restricted full response stays local)"
+  "builder": "csl-atlas scripts/pd_koshashri_vocable.py + scripts/pd_koshashri_fixture_export.py (public single-entry GET, restricted full response stays local)",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_note": "Covers this fixture TSV only; the KoshaSHRI source stays all rights reserved per data/pd/pd_koshashri_rights_provenance.md — no reuse beyond the H7316 scope."
 }
