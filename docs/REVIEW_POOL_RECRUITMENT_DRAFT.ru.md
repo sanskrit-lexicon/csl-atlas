@@ -3,7 +3,7 @@ _Created: 24-09-2026 · Last updated: 24-09-2026_
 # Черновик объявления: набор 5–10 студентов-рецензентов (RU)
 
 Статус: **ЧЕРНОВИК — ничего не отправлено и не опубликовано**
-([H5311](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5311-OxAlpha_csl-atlas_review-pool-recruitment-post-draft-ru_23.09.26.md)).
+([H5311](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5311-OxAlpha_csl-atlas_review-pool-recruitment-post-draft-ru_23.09.26.md)).
 Файл держит два слоя: готовый текст объявления (раздел 2) и рабочие
 числа/вопросы вокруг него (разделы 3–5). Числа строк сняты с живых файлов
 пакетов в репозитории 24-09-2026, время на пакет выведено из этих размеров
@@ -21,9 +21,9 @@ _Created: 24-09-2026 · Last updated: 24-09-2026_
 размечают два рецензента
 (двойная разметка), расхождения сводит координатор, согласие считается каппой.
 Механика листов и отчёта готовится параллельно
-([H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md),
-[H5308](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5308-OxAlpha_csl-atlas_review-pool-packets-to-double-keyed-sheets_23.09.26.md),
-[H5310](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5310-Fable_csl-atlas_review-pool-student-guide-ru_23.09.26.md)) —
+([H5307](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5307-Opus_csl-atlas_review-pool-v1-double-keying-design_23.09.26.md),
+[H5308](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5308-OxAlpha_csl-atlas_review-pool-packets-to-double-keyed-sheets_23.09.26.md),
+[H5310](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5310-Fable_csl-atlas_review-pool-student-guide-ru_23.09.26.md)) —
 публиковать объявление до их готовности рано (см. раздел 5).
 
 ## 2. Текст объявления (черновик)

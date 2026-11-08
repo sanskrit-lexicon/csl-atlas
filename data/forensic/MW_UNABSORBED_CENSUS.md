@@ -20,7 +20,7 @@ is a volume-7 entry with an explicit `<hom>N.</hom>`, N ≥ 2 (hom 1 is the base
 MW99 already heads and whose N **exceeds MW's main-body maximum** `<h>` for that `k1` (the MW
 annexure, `<info n="sup"/>`, excluded from the max and reported as a per-row sensitivity flag).
 **Canary `kārin`:** MW main body tops out at homonym 2, the Nachträge record homonym 3 at
-`7-331-d` ([`pw.txt` line 620966](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/pw/pw.txt#L620966))
+`7-331-d` ([`pw.txt` line 620966](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/pw/pw.txt#L620966))
 ⇒ extension. The *kārin*³ in MW's own annexure ("scattering, destroying," fr. √kṛ) is a
 **different derivation** — a numbering coincidence, not absorption; exactly 8 of the 571 carry
 such an annexure number, the other **563 none at all**. POS from entry `<lex>` tags, normalised;

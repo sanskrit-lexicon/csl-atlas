@@ -15,7 +15,7 @@ editions — the audit's controls are the reusable part.
 
 ## Provenance
 
-Built under [H5073](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5073-Opus_csl-atlas_forensic-combined-evidence-dependence-audit_17.09.26.md)
+Built under [H5073](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5073-Opus_csl-atlas_forensic-combined-evidence-dependence-audit_17.09.26.md)
 by Claude Code Opus 5 (`claude-opus-5`), 20-09-2026. Handoff minted by Codex
 Astra (`gpt-6-astra`), 16-09-2026. Script:
 [`f11_evidence_dependence.py`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/forensic/f11_evidence_dependence.py)

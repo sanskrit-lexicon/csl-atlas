@@ -3,7 +3,7 @@ _Created: 08-09-2026 · Last updated: 08-09-2026_
 # Forensic claim pins — coverage, expected-vs-actual, unpinned residue (H4352)
 
 Executor: Claude Code Fable 5.1 (`claude-fable-5-1`), 08-09-2026. Handoff: Uprava
-[H4352](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4352-Fable_csl-atlas_forensic-claim-arithmetic-null-pins_08.09.26.md)
+[H4352](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H4352-Fable_csl-atlas_forensic-claim-arithmetic-null-pins_08.09.26.md)
 (rank 3 of [TEST_GAP_CENSUS_ORGWIDE_08-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/reports/TEST_GAP_CENSUS_ORGWIDE_08-09-2026.md)).
 
 ## What this suite is for

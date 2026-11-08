@@ -2,7 +2,7 @@
 
 _Created: 05-08-2026 · Last updated: 05-08-2026_
 
-Referee: Fable 5 (`claude-fable-5`), handoff [H1866](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1866-Fable_csl-atlas_july-hypothesis-promotions-hostile-referee_29.07.26.md).
+Referee: Fable 5 (`claude-fable-5`), handoff [H1866](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1866-Fable_csl-atlas_july-hypothesis-promotions-hostile-referee_29.07.26.md).
 Posture: **default REFUTED** — every promotion had to survive on its committed evidence,
 not on having been promoted. Method: every figure asserted in the
 [HYPOTHESIS_INDEX.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/HYPOTHESIS_INDEX.md)

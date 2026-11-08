@@ -3,7 +3,7 @@ _Created: 20-09-2026 · Last updated: 22-09-2026_
 # Evidence-dependence audit — are A10's three strongest descent signals independent? (H5073)
 
 Executor: Claude Code Opus 5 (`claude-opus-5`), 20-09-2026. Handoff: Uprava
-[H5073](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5073-Opus_csl-atlas_forensic-combined-evidence-dependence-audit_17.09.26.md)
+[H5073](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5073-Opus_csl-atlas_forensic-combined-evidence-dependence-audit_17.09.26.md)
 (minted by Codex Astra `gpt-6-astra`, 16-09-2026). Predecessor:
 [`FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/tests/forensic/FORENSIC_CLAIM_PINS_COVERAGE_08-09-2026.md)
 (H4352), which pinned the *arithmetic* of the nine highest-claim scripts.

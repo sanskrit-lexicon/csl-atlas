@@ -539,9 +539,9 @@ Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Sonnet_csl-atlas_timeli
 ```
 Read C:\Users\user\Documents\GitHub\Uprava\handoffs\H###-Fable_csl-atlas_coverage_saturation_era_DD.MM.YY.md and execute it.
 ```
-🔴 EXECUTED: [H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md) (26-07-2026 — backlog #6 done, see the table above)
+🔴 EXECUTED: [H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1577-Fable_csl-atlas_ortho-drift-census_24.07.26.md) (26-07-2026 — backlog #6 done, see the table above)
 
-🔴 EXECUTED: [H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md) (26-07-2026 — backlog #8 done, see the table above)
+🔴 EXECUTED: [H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1578-Fable_csl-atlas_l0-gqd-validation_24.07.26.md) (26-07-2026 — backlog #8 done, see the table above)
 
 ## 7. Deferred / out-of-scope appendix
 
@@ -592,7 +592,7 @@ agenda exists to remove). Ranked items:
 
 | # | Item | Shape | Target | Status |
 |---|---|---|---|---|
-| U1 | Chance-corrected κ attached to A04's agreement claims: `[reviewed]` markers (machine-reviewed channel named), pairwise κ figures, build commit `f29e06a2`, Artstein & Poesio 2008 citation | field-standard metrics | [`Uprava/papers/A04`](https://github.com/gasyoun/Uprava/blob/main/papers/A04/paper_indigenous_microstructure.md) | ✅ 10-10-2026 — [H6386](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6386-GLM_Uprava_acl-uplift-a04-kappa_10.10.26.md) |
+| U1 | Chance-corrected κ attached to A04's agreement claims: `[reviewed]` markers (machine-reviewed channel named), pairwise κ figures, build commit `f29e06a2`, Artstein & Poesio 2008 citation | field-standard metrics | [`Uprava/papers/A04`](https://github.com/gasyoun/Uprava/blob/main/papers/A04/paper_indigenous_microstructure.md) | ✅ 10-10-2026 — [H6386](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6386-GLM_Uprava_acl-uplift-a04-kappa_10.10.26.md) |
 | U2 | Same discipline on A02/P2: attach the R2 checkpoint agreement figures + markers | field-standard metrics | `Uprava/papers/A02` | queued |
 | U3 | Stamp exact build commits into the remaining five drafts | field-standard metrics | `Uprava/papers/A0X` | queued |
 | U4 | Review-pool α becomes a real measurement: recruit annotators, cross-family (DeepSeek) second annotator blind to pass provenance, honest human×model / model×model channel labels; Wave-2's 61-row human residue as the seed set | annotator validity | [`REVIEW_POOL_KAPPA_REPORT.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/REVIEW_POOL_KAPPA_REPORT.md) | queued — human dependency (recruitment) |

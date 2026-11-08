@@ -25,7 +25,7 @@ vocabulary — those stay in `data/lexico/*_packet.json`.
 
 ## Provenance
 
-- Handoff: [H5310](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5310-Fable_csl-atlas_review-pool-student-guide-ru_23.09.26.md)
+- Handoff: [H5310](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5310-Fable_csl-atlas_review-pool-student-guide-ru_23.09.26.md)
   (epic E014, ATLAS fair-pubs wave 1), roadmap item «Community review pool v1» in
   [ROADMAP_ATLAS_FAIR_PUBLICATIONS_2026_2027.md](https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_ATLAS_FAIR_PUBLICATIONS_2026_2027.md).
 - Model: Claude Code Fable 5.1 (`claude-fable-5-1`), 24-09-2026.
