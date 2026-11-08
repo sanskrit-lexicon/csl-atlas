@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-10-03T10:04:00.790Z",
+  "generatedAt": "2026-11-03T12:21:25.950Z",
   "sourceRoot": "../csl-orig/v02",
   "dictionaries": [
     {
@@ -43,12 +43,12 @@
   ],
   "assumptions": [],
   "warnings": [],
-  "distinctLemmas": 298509,
+  "distinctLemmas": 298514,
   "dossierEntries": 28524,
   "lookupEntries": 52957,
   "recordsByDict": {
     "MW": 286525,
-    "AP": 90851,
+    "AP": 90856,
     "PWG": 123366,
     "PWK": 170556,
     "WIL": 44577,
@@ -58,13 +58,13 @@
   "coverageScopes": {
     "broadHeadword": {
       "dictionaryCount": 40,
-      "distinctLemmas": 377481,
+      "distinctLemmas": 377485,
       "intersectionAll": 0,
       "pairwiseRows": 780
     },
     "coreComparison": {
       "dictionaryCount": 7,
-      "distinctLemmas": 298509,
+      "distinctLemmas": 298514,
       "intersectionAll": 1916,
       "pairwiseRows": 21
     }
