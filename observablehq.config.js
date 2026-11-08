@@ -77,6 +77,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/structural-register": "Structural register scatter (H6): whether citation style plus grammar marking predicts a Cologne dictionary's family.",
   "/tools/richness-typology": "Data-richness typology (M1): every locally-present Cologne dictionary placed on the roadmap's L0-L10 ordinal scale (scan-only to full structured semantic web), with a machine-readable justification per level.",
   "/tools/etymology-style": "Etymology-style witness: WIL (1832) Nirukta-style .E. affix notation vs later Western cf. comparativism — a frozen five-dictionary exploratory spike, not a full CDSL census.",
+  "/tools/etymology-census": "Etymology component census: how often, with which marker, of which type and at which position in the entry nine Cologne dictionaries state an etymology — plus the European derivation vs indigenous vyutpatti comparison on the shared-lemma set.",
   "/tools/semantic-fields": "Semantic fields (H4): whether the Cologne Sanskrit dictionaries show measurable topical coverage profiles.",
   "/tools/xref-lineage": "Cross-reference lineage (M6): whether dictionary-internal cross-reference graphs preserve lexicographic lineage.",
   "/tools/r2-explorer": "R2 sense explorer: browse cross-dictionary sense structure across the Cologne Sanskrit lexicons.",
@@ -89,6 +90,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/review-source-siglum": "Review queue: source sigla cited by only one tagged Cologne dictionary — genuinely unique, or the same source under different aliases.",
   "/tools/sense-divergence": "Cross-dict entry-coverage divergence: which Sanskrit headwords each Cologne dictionary treats very differently from its peers.",
   "/tools/h4-review": "H4 semantic-field review: per dictionary and Amarakośa field, whether an apparent coverage anomaly is real or an artifact.",
+  "/tools/benchmark": "Atlas benchmark v2: three frozen held-out tasks, double-keyed gold coverage, rule and trivial baselines, chance-corrected agreement, and an honest insufficiency report.",
   "/tools/cross-dict": "Cross-dictionary comparison: nine Cologne dictionaries on a format-robust common-block vocabulary, showing citation density and structure.",
   "/tools/dictionary-coverage": "All-dictionary coverage: the nine-chapter comparison extended to every CDSL v02 dictionary with a main source file.",
   "/tools/matrix-explorer": "Matrix explorer: an 18×14 block-by-article-type heatmap of Monier-Williams, with per-cell counts and filtering.",
@@ -111,7 +113,8 @@ const PAGE_DESCRIPTIONS = {
   "/dicts/skd": "SKD — Śabdakalpadruma (1822–1858): an atlas chapter on this classical Sanskrit encyclopaedic kosha.",
   "/dicts/vcp": "VCP — Vācaspatyam (1873–1884): an atlas chapter on this classical Sanskrit encyclopaedic kosha.",
   "/dicts/armh": "ARMH — Abhidhānaratnamālā (Halāyudhakośa, ~10th c.): an atlas chapter on this classical Sanskrit synonymic kosha.",
-  "/dicts/abch": "ABCH — Abhidhānacintāmaṇi (~12th c.): an atlas chapter on Hemacandra's classical Sanskrit synonymic kosha."
+  "/dicts/abch": "ABCH — Abhidhānacintāmaṇi (~12th c.): an atlas chapter on Hemacandra's classical Sanskrit synonymic kosha.",
+  "/dicts/pd": "PD — the Poona Dictionary / EDSHP (1948–, unfinished): an atlas chapter on the fragment's covered span, citation density, and production record."
 };
 
 // Escape a string for safe interpolation into an HTML attribute value.
@@ -210,6 +213,7 @@ export default {
         { name: "Structural register", path: "/tools/structural-register" },
         { name: "Data-richness typology", path: "/tools/richness-typology" },
         { name: "Etymology style", path: "/tools/etymology-style" },
+        { name: "Etymology census", path: "/tools/etymology-census" },
         { name: "Semantic fields", path: "/tools/semantic-fields" },
         { name: "Cross-reference lineage", path: "/tools/xref-lineage" },
         { name: "R2 sense explorer", path: "/tools/r2-explorer" },
@@ -226,7 +230,8 @@ export default {
         { name: "Alignment confidence", path: "/tools/review-alignment" },
         { name: "Source-siglum aliases", path: "/tools/review-source-siglum" },
         { name: "Cross-dict divergence", path: "/tools/sense-divergence" },
-        { name: "H4 semantic fields", path: "/tools/h4-review" }
+        { name: "H4 semantic fields", path: "/tools/h4-review" },
+        { name: "Benchmark v2", path: "/tools/benchmark" }
       ]
     },
     {
@@ -261,7 +266,8 @@ export default {
         { name: "SKD (Śabdakalpadruma)", path: "/dicts/skd" },
         { name: "VCP (Vācaspatya)", path: "/dicts/vcp" },
         { name: "ARMH (Halāyudha)", path: "/dicts/armh" },
-        { name: "ABCH (Hemacandra)", path: "/dicts/abch" }
+        { name: "ABCH (Hemacandra)", path: "/dicts/abch" },
+        { name: "PD (Poona Dictionary, unfinished)", path: "/dicts/pd" }
       ]
     }
   ],

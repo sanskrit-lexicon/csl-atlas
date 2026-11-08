@@ -12,7 +12,7 @@ import { pathToFileURL } from "node:url";
 import { parseCsv } from "./build-xref-hub-review.mjs";
 import { dictExists, iterateDict } from "./lib/dict-parser.mjs";
 import { cologneLinksFor, entryUrl } from "./lib/cologne-links.mjs";
-import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
+import { generatedAtForPayload, readJsonIfExists, licenseFields } from "./lib/dataset-meta.mjs";
 import { normalizeXrefKey } from "./lib/xref-normalize.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
@@ -668,6 +668,7 @@ export function buildPayload(hubReview, edgeRows, generatedAt = new Date().toISO
   const allRows = applyAutoTriage([...sharedCoreRows, ...prefixControlRows]);
   const unresolvedSourcePointers = allRows.flatMap(row => row.sourcePointers).filter(pointer => !pointer.href);
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "xref-source-check-packet",
     claim: "XREF-CORE source checking must keep MW/PWG lexical shared-core rows separate from PWG/MW prefix-convention hub controls.",

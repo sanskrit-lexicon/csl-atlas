@@ -359,7 +359,39 @@ display(html`<div class="dossier-grid">
 </div>`);
 ```
 
+## Cited at
+
+A lemma dossier shows where a headword is described; the citation index shows where MW
+quotes the works behind those descriptions. Pick a canonical source to see the MW entry
+records that cite it, then open the entry in the source viewer.
+
+```js
+const citedAtIndex = await FileAttachment("../data/citations/source-to-entries.json").json();
+const citedAtSource = view(Inputs.select(Object.keys(citedAtIndex.sources), { label: "Cited source", value: "Ṛgveda" }));
+const citedAtEntry = citedAtIndex.sources[citedAtSource];
+const citedAtRows = citedAtEntry.records.slice(0, 12);
+```
+
+```js
+display(html`<div class="cited-at-panel">
+  <p><b>${citedAtSource}</b> — ${citedAtEntry.citations.toLocaleString()} citations across
+    ${citedAtEntry.entryCount.toLocaleString()} MW <code>&lt;L&gt;</code> records
+    (${Object.keys(citedAtEntry.rawForms).join(", ")}).
+    <a href="../citation-tracer">Open the citation tracer</a></p>
+  <ul>${citedAtRows.map(L => {
+    const line = citedAtEntry.lines[L];
+    return html`<li><code>${L}</code>${line ? html` · <a href=${`../source#mw/${line}`}>MW source line ${line.toLocaleString()}</a>` : ""}</li>`;
+  })}</ul>
+  <p class="muted">Showing ${citedAtRows.length} of ${citedAtEntry.records.length.toLocaleString()} records.
+    Source-to-entry links are a retrieval aid, not a verification of the quotation.</p>
+</div>`);
+```
+
 <style>
+.cited-at-panel { border-left: 4px solid var(--theme-foreground-faint); padding: 4px 0 4px 14px; margin: 14px 0; }
+.cited-at-panel ul { margin: 6px 0; padding-left: 20px; }
+.cited-at-panel li { margin: 2px 0; }
+.cited-at-panel .muted { color: var(--theme-foreground-muted); }
 .trust-block { border-left: 4px solid color-mix(in srgb, var(--theme-foreground), transparent 55%); padding: 4px 0 4px 14px; margin: 10px 0 18px; }
 .trust-block h2 { font-size: 1rem; margin: 0 0 8px; }
 .trust-block dl { display: grid; gap: 6px; margin: 0; }

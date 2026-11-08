@@ -4,4 +4,13 @@
 #   papers/foo.md  # published: <venue year> | preprint: <id> | license: <DOI>
 # Manuscripts live only in gasyoun/Uprava/papers
 # (STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY, 04-10-2026).
-# No active exemptions below — add lines only with a documented reason.
+# Every exemption below carries its reason — add lines only with a documented one.
+#
+# MG ruling 01-11-2026 (supersedes the A68 figure exemptions below, removed
+# the same day): NONE of the unpublished articles' material — including the
+# figure plates and style studies — is public before the article is printed
+# on paper. The a68_fig*.svg outputs of scripts/build_a68_figures.py are
+# therefore local-only (untracked) until print; the canonical copies live in
+# gasyoun/Uprava papers/A68/figures/. Re-allowlisting at camera-ready/print
+# requires a fresh documented reason naming the venue.
+

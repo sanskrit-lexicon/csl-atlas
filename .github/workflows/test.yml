@@ -95,3 +95,20 @@ jobs:
             exit 1
           }
           echo "negative control OK: hand edit went RED on the byte-compare and was erased by regeneration"
+
+  # H7096 negative control: the PD regeneration gate must actually fire.
+  # The #598 failure mode was a committed HAND EDIT to a generated data/pd
+  # file (two ZWNJ strips applied to pd_aob_entries.tsv instead of taught to
+  # the generator). The parity gates caught the drift, but nothing in CI ran
+  # them, so it sat unnoticed until a session ran the gates by hand. This job
+  # proves the new gate is not blind: a hand edit to a generated PD file must
+  # turn the gate RED, and restoring the file must turn it GREEN again.
+  pd-regeneration-negative-control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Negative control — a hand edit to a generated PD file must go RED
+        run: python3 scripts/pd_regen_gate_selftest.py

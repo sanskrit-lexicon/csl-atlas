@@ -10,6 +10,7 @@ import assert from "node:assert/strict";
 import os from "node:os";
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 
 import { injectMarker, generateExplorerScript, h1PanelPoints } from "../scripts/build-r2-pages.mjs";
 import { parseHeader, iterateRecords } from "../scripts/lib/mw-parser.mjs";
@@ -461,12 +462,25 @@ test("vendored sanskrit-util.js matches the canonical sanskrit-util source", dri
   assert.equal(vendored, canonical, "src/lib/sanskrit-util.js has drifted from ../sanskrit-util/js/index.mjs — re-vendor it");
 });
 
+// CI-visible drift guard (bughunt 07-10-2026 finding 2): the sibling comparison
+// above skips on the CI runner, so drift shipped green for a month. The committed
+// pin is checked everywhere; re-vendor and update the pin in the same commit.
+const utilPin = JSON.parse(fs.readFileSync(path.resolve("src", "lib", "sanskrit-util.pin.json"), "utf8"));
+test("vendored sanskrit-util.js matches its committed sha256 pin", () => {
+  const lf = s => s.replace(/\r\n/g, "\n");
+  const vendored = lf(fs.readFileSync(path.resolve(utilPin.file), "utf8"));
+  const digest = crypto.createHash("sha256").update(vendored, "utf8").digest("hex");
+  assert.equal(digest, utilPin.sha256,
+    "src/lib/sanskrit-util.js drifted from src/lib/sanskrit-util.pin.json — re-vendor and update the pin in the same commit");
+});
+
 test("normalizeLookupQuery supports SLP1, IAST, and title-case reader input", () => {
   assert.deepEqual(normalizeLookupQuery("aMSa").candidates, ["aMSa"]);
   assert.deepEqual(normalizeLookupQuery("a/MSa").candidates, ["aMSa"]);
   assert.deepEqual(normalizeLookupQuery("śiva").candidates, ["Siva"]);
   assert.deepEqual(normalizeLookupQuery("dharma").candidates, ["dharma", "Darma"]);
   assert.deepEqual(normalizeLookupQuery("Agni").candidates, ["Agni", "agni"]);
+  assert.deepEqual(normalizeLookupQuery("DEVA").candidates, ["DEVA", "deva"]);
   assert.deepEqual(normalizeLookupQuery("Dharma").candidates, ["Dharma", "dharma", "Darma"]);
 });
 

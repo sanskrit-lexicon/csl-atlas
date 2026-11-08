@@ -11,7 +11,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
-import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
+import { generatedAtForPayload, readJsonIfExists, licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const REVIEW_PATH = path.resolve(process.cwd(), "src", "data", "review", "h5-anomaly-review.json");
@@ -316,6 +316,7 @@ export function buildPayload(reviewReport, generatedAt = new Date().toISOString(
   ) ? warnings : [];
   const sourceCheckedRows = qaCandidateRows.filter(row => row.sourceCheckStatus !== "needs-source-check").length;
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "h5-maker-qa-candidate-packet",
     claim: "The reviewed H5 anomaly sample yields a small source-checkable maker QA subset without editing dictionary data or accepting ghost-entry claims.",

@@ -1,0 +1,658 @@
+{
+  "tool": "tools/document_check.py",
+  "skill": "/document",
+  "legacy_name": "/artifact-propagate",
+  "generated": "2026-10-18 09:20:51",
+  "artifacts": [
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/compound-depth/typography-probe-2026-10-17.json",
+      "repo": "/Users/mac/Documents/GitHub/csl-atlas",
+      "kind": "dataset",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "one-off analysis probe; README indexes reader-facing site content, not internal review evidence"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no agent contract or sync rule changed; probe scripts are standalone, not wired into npm build/verify"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "AGENTS.md is generated org context; a one-off probe does not change repo orientation"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "governing doc docs/DHARMAMITRA_INTEGRATION.md updated in this sweep with the verdict and file pointers"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no metadoc convention for one-off reports or data snapshots; provenance is inline (generatedBy/assumptions)"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "queued at changelog_queue/2026-10-18-compound-depth-typography-probe.md per H3355; CHANGELOG is generated at release cut"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/.ai_state.md:68: + `scripts/verify-compound-probe-local.py`; snapshots `data/compound-depth/typography-probe-2026-10-17.json`"
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no issue opened; posting needs standing or authorization - the GTD row carries the follow-up"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "GTD row 0ZF carries the human follow-up for the report; the raw snapshots need no action"
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no handoff minted or closed for this probe; the registry tracks H### rows only"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a shipped feature/page; internal review evidence"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "one-off probe harness, not a shared library; scripts stay repo-local"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a kosha-published dataset; review-evidence snapshot stays in csl-atlas"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "3.9 MB committed review evidence; census is harvested by tools/data_layers_harvest.py - the next snapshot picks it up, no hand row"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no cross-repo ownership or dependency edge changed"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no destructive-risk fact; model output remains evidence-only at the documented boundary"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "answered in-session (strict vs loose bracket); not a logged Q/T/R row and no repeated pattern"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not thesis-level synthesis; operational probe only"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no hook or guard changed"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no repo-level status shift"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no new long-lived hub or registry file"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "findings appended: Uprava §1611 (API vs local validity), SanskritLexicography §648 (joint vs constituent depth)"
+        }
+      ]
+    },
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-atlas/data/compound-depth/local-replication-2026-10-17.json",
+      "repo": "/Users/mac/Documents/GitHub/csl-atlas",
+      "kind": "dataset",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "one-off analysis probe; README indexes reader-facing site content, not internal review evidence"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no agent contract or sync rule changed; probe scripts are standalone, not wired into npm build/verify"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "AGENTS.md is generated org context; a one-off probe does not change repo orientation"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "governing doc docs/DHARMAMITRA_INTEGRATION.md updated in this sweep with the verdict and file pointers"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no metadoc convention for one-off reports or data snapshots; provenance is inline (generatedBy/assumptions)"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "queued at changelog_queue/2026-10-18-compound-depth-typography-probe.md per H3355; CHANGELOG is generated at release cut"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/.ai_state.md:69: + `local-replication-2026-10-17.json`; report `reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md`."
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no issue opened; posting needs standing or authorization - the GTD row carries the follow-up"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "GTD row 0ZF carries the human follow-up for the report; the raw snapshots need no action"
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no handoff minted or closed for this probe; the registry tracks H### rows only"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a shipped feature/page; internal review evidence"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "one-off probe harness, not a shared library; scripts stay repo-local"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a kosha-published dataset; review-evidence snapshot stays in csl-atlas"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "3.9 MB committed review evidence; census is harvested by tools/data_layers_harvest.py - the next snapshot picks it up, no hand row"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no cross-repo ownership or dependency edge changed"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no destructive-risk fact; model output remains evidence-only at the documented boundary"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "answered in-session (strict vs loose bracket); not a logged Q/T/R row and no repeated pattern"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not thesis-level synthesis; operational probe only"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no hook or guard changed"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no repo-level status shift"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no new long-lived hub or registry file"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "findings appended: Uprava §1611 (API vs local validity), SanskritLexicography §648 (joint vs constituent depth)"
+        }
+      ]
+    },
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-atlas/reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md",
+      "repo": "/Users/mac/Documents/GitHub/csl-atlas",
+      "kind": "doc",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "one-off analysis probe; README indexes reader-facing site content, not internal review evidence"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no agent contract or sync rule changed; probe scripts are standalone, not wired into npm build/verify"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "AGENTS.md is generated org context; a one-off probe does not change repo orientation"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "governing doc docs/DHARMAMITRA_INTEGRATION.md updated in this sweep with the verdict and file pointers"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no metadoc convention for one-off reports or data snapshots; provenance is inline (generatedBy/assumptions)"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "queued at changelog_queue/2026-10-18-compound-depth-typography-probe.md per H3355; CHANGELOG is generated at release cut"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-atlas/.ai_state.md:69: + `local-replication-2026-10-17.json`; report `reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md`."
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "no issue opened; posting needs standing or authorization - the GTD row carries the follow-up"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/Uprava/GTD_NEXT_ACTIONS.md:1614: - agent lane `@DO` (S ~20m, since 18-10-2026) — **Compound-depth bracket claim: locate the doc/paper quoting 7 % vs 20 % and replace it with the probe result — "
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no handoff minted or closed for this probe; the registry tracks H### rows only"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a shipped feature/page; internal review evidence"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "one-off probe harness, not a shared library; scripts stay repo-local"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a derived dataset"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not large/local-only data (risk) and no open statistics cell to close"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no cross-repo ownership or dependency edge changed"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no destructive-risk fact; model output remains evidence-only at the documented boundary"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "answered in-session (strict vs loose bracket); not a logged Q/T/R row and no repeated pattern"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not thesis-level synthesis; operational probe only"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no hook or guard changed"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no repo-level status shift"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no new long-lived hub or registry file"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "findings appended: Uprava §1611 (API vs local validity), SanskritLexicography §648 (joint vs constituent depth)"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "host": "MacBook-Air.local",
+    "git_head": "362682fed39914a04e1a5a222b1021cc8c2eeea3",
+    "git_branch": "HEAD"
+  }
+}

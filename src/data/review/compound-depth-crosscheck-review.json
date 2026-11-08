@@ -6,6 +6,15 @@
   "sourcePath": "../csl-orig/v02/mw/mw.txt + src/data/external/dharmamitra-segmentation.json",
   "recordCount": 3496,
   "queue": "compound-depth-crosscheck",
+  "retirement": {
+    "status": "retired",
+    "date": "2026-10-18",
+    "handoff": "H6962",
+    "reason": "Never triaged; superseded by the Dharmamitra compound-depth typography probe.",
+    "cite": "1,439 of 2,173 resolved rows (66.2%) read model-splits-fewer, i.e. the markup split the compound into more joints than the independent segmenter.",
+    "decision": "Uprava/papers/A68/COMPOUND_DEPTH_CORRECTION_DECISIONS_2026-10-18.md (Q14)",
+    "probe": "reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md"
+  },
   "minSegments": 4,
   "candidateCount": 3496,
   "snapshot": {
@@ -25,6 +34,7 @@
     "Reviews are an overlay keyed by reviewId; human-decided statuses are preserved across rebuilds."
   ],
   "warnings": [
+    "RETIRED 2026-10-18 (H6962): this queue is kept as a tombstone, not an active review queue. 1,439 of 2,173 resolved rows (66.2%) read model-splits-fewer, i.e. the markup split the compound into more joints than the independent segmenter. See reports/COMPOUND_DEPTH_TYPOGRAPHY_PROBE_2026-10-17.md.",
     "verdict=model-pending means the surface is either not in the snapshot yet OR the model returned degenerate/junk output (filtered). The first ByT5 pass used the remote dharmamitra.org API in a degraded state (~38% failed/filtered); re-run on a healthy API or a local GPU for fuller, reproducible coverage.",
     "model-splits-fewer with model=1 (no split) may be a soft model failure rather than a linguistic judgment; weight it accordingly.",
     "Expect systematic disagreement on bound morphemes (e.g. privative a-, -tva, -tA): the markup often counts them as members; the model may attach them. That is signal, not noise."

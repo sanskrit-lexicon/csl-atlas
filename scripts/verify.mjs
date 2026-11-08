@@ -12,13 +12,17 @@ const VALIDATORS = [
   "validate-correction-feed.mjs",
   "validate-heritage-witness.mjs",
   "validate-ghost-stock.mjs",
+  "validate-plan-deviation.mjs",
   "validate-kosa-chapters.mjs",
   "validate-heap-sat.mjs",
   "validate-period-signatures.mjs",
   "validate-four-axis-independence.mjs",
   "validate-l0-gqd.mjs",
   "validate-learner-index.mjs",
-  "validate-review-reports.mjs"
+  "validate-review-reports.mjs",
+  // H7101: the candidate-lane provenance contract (machine-candidate only,
+  // no reviewed status, every row validated against the committed schema).
+  "validate-llm-candidate-lane.mjs"
 ];
 
 function run(command, args) {
@@ -44,6 +48,12 @@ export function verify() {
   run("python", ["-m", "unittest", "scripts.test_validate_review_decisions"]);
   run("python", ["-m", "unittest", "scripts.test_merge_review_pool_decisions"]);
   run("python", ["-m", "unittest", "scripts.lexico.test_lexico_review_pool_kappa"]);
+  // H7096: the PD generators' --check parity gates. A hand edit to a
+  // generated data/pd file (the #598 failure mode) must go RED here, not
+  // sit unnoticed until someone runs the gate by hand.
+  run("python", [path.join("scripts", "pd_regen_gate.py")]);
+  // H5303 (G6): every data JSON envelope must carry its matrix licence.
+  run("python", [path.join("scripts", "validate_dataset_licences.py")]);
   for (const validator of VALIDATORS) run(process.execPath, [path.join("scripts", validator)]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);
   run(process.execPath, [path.join("scripts", "regen-review-artifacts.mjs")]);

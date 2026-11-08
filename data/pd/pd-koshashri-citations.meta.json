@@ -1,0 +1,31 @@
+{
+  "layer": "pd-koshashri-citations",
+  "made_by": "ai",
+  "model": "kimi-code-plan-global/k3.1-pro",
+  "handoff": "H7316",
+  "consumers": [
+    {
+      "kind": "repo",
+      "id": "csl-atlas",
+      "use": "reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md — the export report naming this fixture as the citation-level half"
+    },
+    {
+      "kind": "repo",
+      "id": "csl-atlas",
+      "use": "data/pd/README.md — PD fixture inventory"
+    }
+  ],
+  "status": "active",
+  "novelty": "Citation-level sibling of the pd-koshashri-entries fixture: all 29 senses of the agni entry represented across 1400 quote rows with validation state and provenance — the sense-coverage half of the H7316 KoshaSHRI fixture pair.",
+  "roundtrip": {
+    "checked": true,
+    "rows_in": 1400,
+    "rows_out": 1400,
+    "note": "count matches manifest rows 1400"
+  },
+  "built_at": "2026-10-29",
+  "builder": "csl-atlas scripts/pd_koshashri_vocable.py + scripts/pd_koshashri_fixture_export.py (public single-entry GET, restricted full response stays local)",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_note": "Covers this fixture TSV only; the KoshaSHRI source stays all rights reserved per data/pd/pd_koshashri_rights_provenance.md — no reuse beyond the H7316 scope."
+}

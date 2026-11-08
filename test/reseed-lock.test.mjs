@@ -28,8 +28,11 @@ import { fileURLToPath } from "node:url";
 
 import {
   OVERLAY_WIPE_HATCH,
+  PROTECTED_PATHS_REGISTRY,
   RESEED_DANGER_SENTENCE,
   RESEED_REFUSAL_EXIT,
+  isProtectedPath,
+  loadProtectedPaths,
   refuseReseedWithoutHatch,
   reseedIsHatched,
   reseedRefusalMessage
@@ -106,6 +109,50 @@ test("refuseReseedWithoutHatch lets a hatched run through untouched", () => {
   });
   assert.equal(refused, false);
   assert.equal(exited, false);
+});
+
+test("H6980: the registry protects the review report and carries owner/reason", () => {
+  const registry = path.join(repoRoot, PROTECTED_PATHS_REGISTRY);
+  assert.ok(fs.existsSync(registry), `missing ${PROTECTED_PATHS_REGISTRY}`);
+  const rows = fs.readFileSync(registry, "utf8")
+    .split(/\r?\n/)
+    .filter(line => line.trim() && !line.trimStart().startsWith("#"))
+    .map(line => line.split("\t"));
+  const header = rows.shift();
+  const index = Object.fromEntries(header.map((name, i) => [name, i]));
+  const own = rows.filter(row => row[index.repo] === "csl-atlas");
+  assert.ok(own.length > 0, "the csl-atlas rows must be in the shared registry");
+  assert.ok(isProtectedPath(path.join(repoRoot, REPORT)));
+  assert.ok(!isProtectedPath(path.join(repoRoot, "src", "data", "review", "h6980-free.json")));
+  assert.deepEqual(loadProtectedPaths(), own.map(row => row[index.path_glob]));
+  for (const row of own) {
+    assert.ok(row[index.reason].trim(), "every row needs a reason");
+    assert.ok(row[index.owner].trim(), "every row needs an owner");
+    assert.ok(row[index.since].trim(), "every row needs a since date");
+  }
+});
+
+test("H6980: a reseed into an unprotected path is not a wipe and is allowed", () => {
+  const exits = [];
+  const logs = [];
+  const refused = refuseReseedWithoutHatch({
+    script: GENERATOR,
+    outputPath: path.join(repoRoot, "src", "data", "review", "h6980-free.json"),
+    env: {},
+    exit: code => exits.push(code),
+    log: message => logs.push(message)
+  });
+  assert.equal(refused, false);
+  assert.deepEqual(exits, []);
+  assert.deepEqual(logs, []);
+});
+
+test("H6980: a missing registry falls back to the H2890 review report", () => {
+  const missing = path.join(repoRoot, "data", "manifest", "h6980-absent.tsv");
+  assert.ok(isProtectedPath(path.join(repoRoot, REPORT), { registry: missing }));
+  assert.ok(!isProtectedPath(path.join(repoRoot, "src", "data", "review", "h6980-free.json"), {
+    registry: missing
+  }));
 });
 
 test("the refusal names the plain rebuild as the way forward", () => {

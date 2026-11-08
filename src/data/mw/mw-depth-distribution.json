@@ -2,12 +2,14 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-13T07:40:40.154Z",
+  "generatedAt": "2026-10-18T07:45:34.409Z",
   "sourcePath": "../csl-orig/v02/mw/mw.txt",
   "sourceDate": "2026-05-29",
   "recordCount": 286560,
   "assumptions": [
-    "compoundSegmentDistribution counts <k2> segments; segment count 1 means no compound marker."
+    "compoundDepthSeries publishes the joint count under two labelled brackets: strict (em dash only) and loose (em dash, hyphen, plus).",
+    "compoundSegmentDistribution is the loose series, kept under its historical key for existing consumers.",
+    "A joint is an internal division of <k2>; a joint count is not a member (immediate-constituent) depth. Segment/joint count 1 means no compound marker."
   ],
   "warnings": [],
   "typesPerRecord": [
@@ -81,5 +83,82 @@
     "4-7": 5907,
     "8-15": 977,
     "16+": 483
+  },
+  "compoundDepthSeries": {
+    "metricId": "compoundSegmentCount",
+    "metricLabel": "compound joints",
+    "note": "A joint is an internal division of <k2>. A joint count is not a member (immediate-constituent) depth: the Dharmamitra probe found 47.3% of valid markup-3 rows parse as two members.",
+    "strict": {
+      "id": "strict",
+      "label": "Strict joints — em dash only",
+      "definition": "Members are divided only by em dashes; hyphens and plus signs do not deepen the count.",
+      "distribution": [
+        {
+          "value": 1,
+          "count": 159018
+        },
+        {
+          "value": 2,
+          "count": 118904
+        },
+        {
+          "value": 3,
+          "count": 8596
+        },
+        {
+          "value": 4,
+          "count": 42
+        }
+      ],
+      "threePlusTotal": 8638
+    },
+    "loose": {
+      "id": "loose",
+      "label": "Loose joints — em dash, hyphen, plus",
+      "definition": "Members are divided by em dashes, hyphens and plus signs; the historical compoundSegmentCount series.",
+      "distribution": [
+        {
+          "value": 1,
+          "count": 104541
+        },
+        {
+          "value": 2,
+          "count": 151316
+        },
+        {
+          "value": 3,
+          "count": 27174
+        },
+        {
+          "value": 4,
+          "count": 2974
+        },
+        {
+          "value": 5,
+          "count": 434
+        },
+        {
+          "value": 6,
+          "count": 95
+        },
+        {
+          "value": 7,
+          "count": 15
+        },
+        {
+          "value": 8,
+          "count": 9
+        },
+        {
+          "value": 9,
+          "count": 1
+        },
+        {
+          "value": 10,
+          "count": 1
+        }
+      ],
+      "threePlusTotal": 30703
+    }
   }
 }

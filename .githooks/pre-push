@@ -407,6 +407,33 @@ while read -r local_ref local_sha remote_ref remote_sha; do
             fi
             ;;
     esac
+
+    # (9) changelog_queue FRAGMENT SHAPE gate (H7467, 30-10-2026) — mirrors
+    #     the pre-commit gate at the push chokepoint, same reasoning as (4):
+    #     --no-verify, plumbing update-ref and sequencer continuations never
+    #     ran pre-commit. A malformed fragment that lands on origin/main is
+    #     only WARNed-and-skipped by the release consumer (Uprava
+    #     tools/cut_release.py, H4466), so it sits in the queue until a
+    #     repair PR like #670/#674 fixes it days later. The validator is
+    #     CONSUMED from the canonical Uprava parser (sibling ../Uprava or
+    #     $UPRAVA_TOOLS) via scripts/changelog_queue_shape_gate.py — never
+    #     copied into this public repo; the gate self-skips with a WARNING
+    #     where that checkout is absent.
+    #     Escape hatch: ALLOW_CHANGELOG_QUEUE_SHAPE=1 git push ...
+    if [ -n "${ALLOW_CHANGELOG_QUEUE_SHAPE:-}" ]; then
+        log_firing changelog-queue-shape escape "ALLOW_CHANGELOG_QUEUE_SHAPE=1"
+    elif [ ! -f "$TOPLEVEL/scripts/changelog_queue_shape_gate.py" ]; then
+        echo "pre-push: WARNING changelog_queue shape gate SKIPPED: scripts/changelog_queue_shape_gate.py missing." >&2
+        log_firing changelog-queue-shape skip "checker missing: scripts/changelog_queue_shape_gate.py"
+    elif [ -z "$PY" ]; then
+        echo "pre-push: WARNING changelog_queue shape gate SKIPPED: no interpreter at the floor." >&2
+        log_firing changelog-queue-shape skip "no interpreter at the floor"
+    elif ! "$PY" "$TOPLEVEL/scripts/changelog_queue_shape_gate.py" \
+                --ref "$local_sha" ${eff_base:+--base "$eff_base"}; then
+        echo "pre-push: BLOCKED — see above. Override: ALLOW_CHANGELOG_QUEUE_SHAPE=1" >&2
+        status=1
+        log_firing changelog-queue-shape refuse "malformed changelog_queue fragment"
+    fi
 done
 
 exit "$status"

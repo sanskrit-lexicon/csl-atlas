@@ -1,0 +1,77 @@
+{
+  "created": "2026-10-31",
+  "dataset": "mw_vs_pw/substrate_pins",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "note": "machine texts live off-git in csl-orig (never committed); pwg.txt is pinned to the H7463 Stage-1 substrate sha",
+  "mw_txt": {
+    "path": "C:\\Users\\COMPUTER\\Documents\\GitHub\\csl-orig\\v02\\mw\\mw.txt",
+    "bytes": 50163993,
+    "sha256": "e4641dc4384de459408368a9b34b2a13c90a19b0ecd4671f92c055b7578d0129",
+    "entries": 286525
+  },
+  "sources": {
+    "pwg": {
+      "file": "pwg/pwg.txt",
+      "bytes": 54634244,
+      "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166",
+      "entries": 123366,
+      "distinct_base": 106079
+    },
+    "pw": {
+      "file": "pw/pw.txt",
+      "bytes": 31495479,
+      "sha256": "399de2e20f8fff20860da18b46ced725b9ccb9ff975930b3cf86543cee75ae40",
+      "entries": 170556,
+      "distinct_base": 151346
+    },
+    "pwkvn": {
+      "file": "pwkvn/pwkvn.txt",
+      "bytes": 3066388,
+      "sha256": "aebc7576cdfde7e77193ea0b233f094be7aedb3f39eddea519f8a4b1e825042c",
+      "entries": 24976,
+      "distinct_base": 14995
+    }
+  },
+  "corroboration_shas": {
+    "abch": "8bcece892591e071cf2d69d8646d5fb0eafca87bb5d9b6acb62644c46771a0ce",
+    "acc": "8e07ddd553cd4a8c4749979cc47bed73d2faa0a5e363162a584e802bd162c62d",
+    "acph": "e8cd7b4212158509075f6241f27b23178f6ddbd452b2e8c9ef2dac506918baf6",
+    "acsj": "bf8b5bcb2d26dea7875923c843ea4e74804f5cba558e6b0bf7410a16bee6529d",
+    "ae": "515b9876a53b0feef618290e33d37adc82ec38148ebba2263f33ae18b47acab7",
+    "ap": "222dae081dfc3049881570be9dcec3191277b8e574c1a018a5ac9a87e3906b78",
+    "ap90": "f5c408de803aad0f16737936b4030ef8fe673dc0c60ad9135aa892f73d708229",
+    "armh": "13c20e3eabfe44c7ee45554907bc1c1503c02ca0f326e792fd957fc8b86c45ef",
+    "ben": "685fae64e42efb9795cb7c23d3fa841b1b83c7102b63eceddc168b3d449d5675",
+    "bhs": "1cf4a001a250b14b9b76477bab21748a60d7e9948276274704cd1d33756dd13f",
+    "bop": "d0d75890f9ab9803c606783f5db7ae03caad7abd2d84ed209974389ce4f4e4f0",
+    "bor": "8e55ff77cdd13dccb1338f578ade89bc5fb2bc07578ba5875c7bebfd10eb8372",
+    "bur": "2d43ecd19229458d2039e8ef9c9852f895ccf03e33113c9ba59cadacea8f95f6",
+    "cae": "be19a0a648a3eea94e16ce5c22d0f4065179cb1fa9f7c0ae8d0df02670ca66d2",
+    "ccs": "22ed59d6fdf20309eaaf9d1a9da616f24e2727adfbd3e39989fc8afd1176e475",
+    "fri": "0a0d5204104f9e2293b1fcc167cadd5308d245a47f27d7a7d620aa226e28e7f3",
+    "gra": "991cfc16b8524bbac0d11d11832e0a8c15e571df2d969c6a54cc6cfce6554874",
+    "gst": "427b3468cab89cb64ca91ee9d33b4c97902c2ee4a935aae2b4f949647424b275",
+    "ieg": "1cf8cc7d457fee13039f63cdf884cb9a31bdc567da0db6169f2d6cd10462ee2b",
+    "inm": "1575db0abf2b9f8acbdf3406361b3394c5ccfdb6f4530253cfae81de4512a2a6",
+    "krm": "ca1d4d1587084c60f08a3b44ba22e4331f18c916d938f2c2a59a5ea809f3de97",
+    "lan": "4ac932024231eb050c016e795004f204cfc06fdf858030f5df73502d86b51c0e",
+    "lrv": "5b076453795e5846b95b4c00a1ebed0d1e736e6037a315c2829ac8149ea40986",
+    "mci": "09132f827231ad9ed2e091c4c89b364fa5e2eb717e6c70bd3f33a08d39c49fff",
+    "md": "e099479d7264d07b6e461bb5beab693566802334460e70370465efc36a4f8ce1",
+    "nmmb": "c633192bba86405d19a6ad1eedb90f1086a61cfc18daeed325618e0b3d8cd6a1",
+    "nybj": "70b2c76989880e28414f8e6ec1beffa21b4f3bea1193682ae72a6bb643ad1cab",
+    "pe": "b32d2df0bf6097bee18be185418a214f39a0e4c173681f8cfe2170ce9f910f16",
+    "pgn": "c004f12a1ae952abb0f9295ff35233e87a76c315bf01ed874042c815e3cec385",
+    "pui": "fa441540d251ab5bcaf26b8cce4b4e73c41f4ebd4dd61440830d8a7e7465869d",
+    "sch": "6f019d0f5cce65e907e5ed8ce37a871fd0a3665625f510934197ad5128c89f08",
+    "shs": "85a006c8e66c5b5523fa8e1b7567cb547e1eca0d46cd3d0e1cc276d6df8375f2",
+    "skd": "c7d7c8a89a81b14e264ccde5963241c5549bfe820e60777504c7de5f7c5d4cec",
+    "snp": "1133f9f3b41346e48cfb051f1579d56d8a1d0b4bac96c18b3c9f2f706e34ffbc",
+    "stc": "0d81473b8c764febcb4d1df68376ae346886ed7a343cc0dc5b500fec230f805c",
+    "vcp": "18e50a21f57c625c0ba4ff7b40dbe89b8f0f24647c170235992ff00b25aeab6a",
+    "vei": "bcdaadf64ab64338278fe70f8d539d833220bdbade54b635ef5141f16c6d109e",
+    "wil": "30e820a641d7bd4749ad55097cf3d2691759b9e641dd14532570e669007fdfeb",
+    "yat": "05670a086ea2b9ba74e828d9613899e9a29d93ade6f8a75b87d2b9d13aef8562"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "schema": "stage4b-executability-verdict/1",
+  "handoff": "H7518",
+  "stage": "PWG-NWS-PD-DCS Stage 4b — Russian Slovar XI-XVII executability + pre-registration (protocol §9+§13)",
+  "protocol": "research/notes/final_report_pwg-nws-pd-dcs-8294e5.md (hyperresearch run 8294e5)",
+  "predecessor": "H7507 (Stage 4 census, data/stage4_portability/stage4_gate_census.json, PR#685)",
+  "assessment_window_utc": "2026-10-30T19:27:00Z/2026-10-30T20:05:00Z",
+  "executor": "GLM-5.3 (account:zai-individual-coding-plan/GLM-5.3), effort medium",
+  "network_context": "Executing LAN has documented interference toward web-corpora.net (root/app time out from this LAN, per H7507 census 2026-10-30T17:56Z and re-confirmed this session); every web-corpora.net verdict below was taken from an external network (hosted reader service). GitHub was reachable from this LAN and used directly.",
+  "verdict": "STRUCTURED-DATA PATH EXISTS, EXECUTABLE-WITH-CONSTRAINTS — NOT the §13 kill-exit negative, NOT a clean run either",
+  "verdict_detail": "The interface's own open-code credit (Sokureo/RusDict, tied to the deployed app by footer link, byte-identical style.css, and data-generation identity) commits the app's SQLite database itself: user_interface/RusDict.db, 25,174,016 B, sha256 532cad47eb4e3a2c12161a2402ae645d166ea35dcf96d2a7429c8e84400685fc, last DB commit 2018-02-21. So the Russian analogue is NOT query-only: a bulk structured deposit exists. But three constraints gate any run and are printed alongside, never absorbed: (1) LICENCE GAP — repo carries no licence and the underlying dictionary is IRJa RAN's; free online access (EURALEX 2020-2021) is not an open-data licence; a full-dictionary run needs a dated permission, the same gate shape as ONP rank 1. (2) PARTIAL APPARATUS — the database (and the live interface today, 6,284 headwords) covers only the letters S..T plus a Dopolnenija section: 2 letters of the alphabet, the exact partial-apparatus class protocol P3 warns about. (3) STALE + INCOMPLETE JOINS — dump is 2018-frozen (-23 headword drift vs live), only 10,318/24,405 examples (42.3%) join to Sources, genre flags cover 31.8% of source rows, the translated/Lang axis is sparse, and siglum strings repeat across Sources.Id rows.",
+  "kill_exit_check": {
+    "condition": "query-only interface, no dump, no licence -> dated negative IS the deliverable",
+    "fired": false,
+    "reason": "a dump exists (the app's own SQLite, in its open-code repo); the negative's conjunctive premise fails on the dump arm; the licence arm alone does not trigger the kill-exit but is carried as a gating constraint",
+    "qualified_negative_component": "as of 2026-10-30 there is NO licensed, full-alphabet, machine-readable path: any run executed today would be an unlicensed 2-letter slice; that qualified negative is printed alongside the executability verdict, mirroring §9's portability reading"
+  },
+  "export_surface": {
+    "wsgi_routes": ["/", "/lists", "/dict", "/results/<word>", "/source", "/link_part_of_speech", "/link_so", "/link_source", "/link_w"],
+    "export_or_api_route_exists": false,
+    "source_of_route_list": "user_interface/search_page_fin.py @app.route set at HEAD ea38bc8 (2018-02-26), read from the clone",
+    "bulk_enumeration": "/lists renders all 6,284 live headwords in one GET (server-rendered HTML, no machine format)",
+    "bulk_data_path": "git clone / raw GET of user_interface/RusDict.db from github.com/Sokureo/RusDict"
+  },
+  "join_substrate": {
+    "dictionary_side": "Words(Id, Word1 headword, Gram1, Full full-entry text) <- Meanings(Id, Def, IDword) <- Examples(Id, example citation text, source->Sources.Id, date1-4, meaningID) -> Sources(Id, Sokr siglum, Name bibliography, Time1-4 dates, 9 genre flags, Lang original language, *1 translated-genre flags)",
+    "corpus_side": "the Sources table IS the declared corpus side (8,400 bibliographic rows with genre/date/language metadata) — there is no independent external corpus in this candidate; the analogue of the ONP<->Menota join is dictionary-citations <-> the dictionary's own source list, so the independence premise WEAKENS vs the ONP case and every R-hypothesis below is scoped to internal-consistency claims unless an independent old-Russian corpus is added later",
+    "exercised_vs_declared": "11,477 distinct source Ids exercised in Examples vs 8,400 declared Sources rows; 10,318/24,405 examples join (42.3%); 14,087 unjoined — declared-vs-exercised and slice-artefact questions are live in this Slavic tradition exactly as the mission anticipated",
+    "unit_caveat": "citation-mass unit must be the SIGLUM (Sokr), not Sources.Id — sigla repeat across Id rows (e.g. 'Bibl.' >=2 rows, 428+8 joined citations)"
+  },
+  "probes": [
+    {
+      "ts_utc": "2026-10-30T19:27:10Z",
+      "kind": "preflight",
+      "what": "handoff.py go H7518 --json",
+      "result": "exit 0 CLEAR, registry lead queued, family GLM matches session GLM 5.3"
+    },
+    {
+      "ts_utc": "2026-10-30T19:29:00Z",
+      "kind": "github-search",
+      "network": "executing-host LAN (gh api / gh search — GitHub reachable)",
+      "queries": ["repos: web-corpora (0 relevant)", "repos: oldrus (0 relevant)", "code: oldrus.wsgi (0 hits)", "code: web-corpora.net (23 repos, none is the oldrus app)", "org probes webcorpora/web-corpora/corpora-hse (404/empty)"],
+      "result": "repo search does NOT surface the project; the interface-credit path (below) is the resolver"
+    },
+    {
+      "ts_utc": "2026-10-30T19:30:00Z",
+      "kind": "web-search",
+      "network": "external (search service)",
+      "query": "web-corpora.net github oldrus Slovar",
+      "result": "Sokureo/RusDict surfaces as the only GitHub project tied to oldrus.wsgi/dict; EURALEX 2020-2021 proceedings corroborate vols 28-30 digitized, free online"
+    },
+    {
+      "ts_utc": "2026-10-30T19:31:00Z",
+      "kind": "repo-metadata",
+      "network": "executing-host LAN (gh api)",
+      "repo": "Sokureo/RusDict",
+      "created": "2017-11-28T17:16:36Z",
+      "head_commit": "ea38bc8 2018-02-26T00:46:12+0300",
+      "last_db_commit": "a3cdb59 2018-02-21T20:15:38+0300 (search bugs)",
+      "licenseInfo": null,
+      "disk_kb": 7410,
+      "is_fork": false,
+      "footer_credit": "templates/*.html all carry: <a href=\"https://github.com/Sokureo/RusDict\">Проект на GitHub</a>"
+    },
+    {
+      "ts_utc": "2026-10-30T19:34:34Z",
+      "kind": "clone+hash",
+      "network": "executing-host LAN (git clone, GitHub reachable)",
+      "artifact": "user_interface/RusDict.db",
+      "bytes": 25174016,
+      "sha256": "532cad47eb4e3a2c12161a2402ae645d166ea35dcf96d2a7429c8e84400685fc",
+      "body_committed": false,
+      "note": "the DB is NOT redistributed into csl-atlas (no licence); hash + counts only"
+    },
+    {
+      "ts_utc": "2026-10-30T19:33:00Z",
+      "kind": "live-fetch",
+      "url": "http://web-corpora.net/wsgi/oldrus.wsgi/static/styles/style.css",
+      "network": "hosted reader service (external to the LAN)",
+      "http_status": 200,
+      "identity": "matches repo file (2,262 B) on full selector set — deployed app runs the repo codebase",
+      "evidence": {"file": "probe_evidence/deployed_code_identity_2026-10-30.md"}
+    },
+    {
+      "ts_utc": "2026-10-30T19:33:30Z",
+      "kind": "live-fetch",
+      "url": "http://web-corpora.net/wsgi/oldrus.wsgi/",
+      "network": "hosted reader service (external to the LAN)",
+      "http_status": 200,
+      "reading": "query axes identical to H7507 census fetch 18:07Z (cross-session stability)",
+      "evidence": {"file": "probe_evidence/oldrus_wsgi_live_2026-10-30.md"}
+    },
+    {
+      "ts_utc": "2026-10-30T19:36:30Z",
+      "kind": "live-fetch",
+      "url": "http://web-corpora.net/wsgi/oldrus.wsgi/lists",
+      "network": "hosted reader service (external to the LAN)",
+      "http_status": 200,
+      "live_headword_count": 6284,
+      "span": "СТАРИЧЕКЪ … ТѢ … Дополнения по буквам С и Т",
+      "drift_vs_dump": "6307 (2018 dump) - 6284 (live) = -23 rows over 8.7 years",
+      "footer": "Контакты: … Проект на GitHub (target = Sokureo/RusDict per repo templates)",
+      "evidence": {"file": "probe_evidence/oldrus_lists_live_2026-10-30.md"}
+    },
+    {
+      "ts_utc": "2026-10-30T19:31:30Z",
+      "kind": "dead-path-probe",
+      "url": "http://web-corpora.net/wsgi/oldrus.wsgi/about",
+      "network": "two external services",
+      "result": "reader service: HTTP 500 (reader-side); harness fetcher: connect timeout — no verdict obtainable either way; the route is absent from the 2018 source and no evidence of a newer route set exists; not load-bearing for the verdict"
+    }
+  ],
+  "dump_denominators": {
+    "words": 6307,
+    "meanings": 8858,
+    "examples": 24405,
+    "sources_rows": 8400,
+    "distinct_source_ids_exercised": 11477,
+    "examples_joining_sources": 10318,
+    "join_fraction": 0.4227,
+    "sources_with_genre_flag": 2675,
+    "sources_with_time1": 2300,
+    "sources_with_translated_flag": 17,
+    "alphabet_span": "S..T + Dopolnenija (2 letters, partial apparatus)",
+    "top50_id_share_of_joined": 0.0685,
+    "top_id": {"siglum": "Библ.", "joined_citations": 428},
+    "computed_utc": "2026-10-30T19:35:00Z",
+    "tool": "sqlite3 on clone at /tmp/h7518-rusdict (not committed)"
+  },
+  "preregistration_russian_analogues": {
+    "status": "FIXED IN ADVANCE, UNEXECUTED — no hypothesis-testing query has been run against the dump beyond schema/counts/join-integrity probes above",
+    "unit_convention": "citation mass aggregated by siglum (Sources.Sokr normalised), never by Sources.Id; denominators recomputed at run time on a dated re-clone",
+    "R1": {
+      "analogue_of": "P1 (right-skewed citation mass)",
+      "hypothesis": "citation mass per cited siglum is extreme-right-skewed, with the Biblical/Psalter-class sigla concentrating in the top decile and a near-zero tail; uniform overlap/mass across sigla falsifies A68's coverage structure in this tradition",
+      "denominators": "24,405 examples; joined subset 10,318 (42.3%); siglum universe from distinct normalised Sokr in the joined subset; tail defined as bottom 50% of sigla by mass",
+      "falsifier": "top-decile mass share < 2x uniform expectation, or decile shares linear in rank"
+    },
+    "R2": {
+      "analogue_of": "P2 (complete-vs-selective source density)",
+      "hypothesis": "declared-complete canonical texts (Bible-class: Bibl. siglum group) show an order-of-magnitude citation-density advantage over same-genre selective sources — with the explicit caveat that the dump carries NO declared complete-excerption list; if no declaration is recoverable from the printed dictionary's front matter (out-of-band source), R2 is reclassified UNTESTABLE-ON-THIS-SUBSTRATE before any run, not silently adapted",
+      "denominators": "Bibl.-group siglum mass vs same-genre (Bible-and-apocrypha flagged) non-canonical sources; density per source row"
+    },
+    "R3": {
+      "analogue_of": "P3 (print-vs-database coverage ratio / partial-apparatus artefact)",
+      "hypothesis": "the database's S..T slice is a partial apparatus: source-density rankings computed on the S-half vs the T-half of the SAME dump diverge materially (Spearman rho materially < 1 on shared sigla); instability of rankings across the two half-slices demonstrates that partial-apparatus results are apparatus artefacts — the direct in-dump test of the ONP a-em 2.6x lesson",
+      "denominators": "S-initial vs T-initial word subsets (Words.Word1 prefix split); shared-siglum citation vectors"
+    },
+    "R4": {
+      "analogue_of": "P4 (weighting divergence)",
+      "hypothesis": "headword-, meaning-, example- and siglum-weighted source rankings diverge materially; coincidence across the four weightings overturns the claim that metric choice carries information",
+      "denominators": "6,307 words / 8,858 meanings / 24,405 examples / siglum universe as above; divergence metric pre-declared: Spearman rho + top-100 overlap (Jaccard)"
+    },
+    "R5": {
+      "analogue_of": "P5 (absence predictability)",
+      "hypothesis": "which DECLARED sources (Sources rows) are never exercised by any joined example is predictable from their genre/date/Lang profile (logistic model, genre+century predictors), not random — the declared-vs-exercised asymmetry is structure, not noise; additionally the 14,087 unjoined examples form a systematic (not random) residue whose meaningID/sourceId pattern predicts dump-generation artefacts",
+      "denominators": "8,400 declared sources; exercised-set = distinct normalised sigla among joined examples; unjoined-residue = 24,405 - 10,318"
+    },
+    "gate_before_any_run": "dated permission or written licence for the IRJa RAN data, OR an explicit MG ruling that hash-verified private analysis of the unlicensed repo dump is in scope; without one of these the run does not fire (mirrors ONP rank-1 conditional)"
+  },
+  "bias_register_s11_adaptations": [
+    "Scrape-vs-deposit provenance: the structured path is a CODE-repo artefact (the app's own committed DB), not a published dataset — provenance chain rests on the three-strand identity tie recorded in probe_evidence/deployed_code_identity_2026-10-30.md; the tie must be re-verified at run time (style.css hash + /lists count) because the repo can silently diverge from the deployed DB",
+    "Licence ambiguity: no licence anywhere in the chain; free-access declarations (EURALEX) do not transfer reuse rights; run gate above",
+    "Anti-bot fragility: this LAN cannot reach web-corpora.net at all (documented interference); reader services work today but rate-limit/rotate — every live verdict needs >=2 external networks per the H7507 precedent; /lists is a single-point bulk surface",
+    "Catalogue rot / moving denominators: live headword count drifts (6,307 -> 6,284 over 8.7 years); the 2018 dump is frozen while the interface is not — every denominator carries both dates; a run pins to the dump hash, not the live count",
+    "Siglum-vs-Id duality: mass aggregation by Id under-states concentration (Bibl. spans multiple rows); unit convention fixed above",
+    "Join incompleteness as structure, not noise: 57.7% unjoined examples + 11,477 exercised Ids vs 8,400 declared rows — R5 tests structure, and no genre/date claim may be made on the unjoined subset without mining Words.Full",
+    "Partial apparatus: S..T only; R3 is the in-dump artefact test; any whole-dictionary claim from this slice is out of scope",
+    "Sparse axes dump-side: genre flags on 31.8% of sources, Time1 on 27.4%, translated/Lang on ~0.2% — the UI advertises axes the 2018 dump barely populates; the live DB may be richer (unverifiable without the licence gate)"
+  ],
+  "verifier_contract": "close needs the external-model verifier trio (H4430 class); machine evidence = this JSON + check script exit 0 + PR URL"
+}

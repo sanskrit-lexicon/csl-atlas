@@ -1,0 +1,283 @@
+{
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "schema": "stage4-gate-census/1",
+  "handoff": "H7507",
+  "stage": "PWG-NWS-PD-DCS Stage 4 — external portability (protocol §9+§13)",
+  "protocol": "research/notes/final_report_pwg-nws-pd-dcs-8294e5.md (hyperresearch run 8294e5, committed before Stage 1)",
+  "census_window_utc": "2026-10-30T17:48:45Z/2026-10-30T18:10:00Z",
+  "executor": "GLM-5.3 (account:zai-individual-coding-plan/GLM-5.3), effort hard",
+  "network_context": "The executing host sits on a LAN with documented resolver/TCP interference (poisoned nets 8.6.112.x / 8.47.69.x, diagnosed 21-10-2026, global fix applied 22-10-2026; residue still observable for some hosts). Protocol §9 therefore demands the Russian analogue be verified from a network other than this LAN; every other candidate was additionally probed from at least one external network (hosted reader service, harness-hosted fetcher, Spider cloud) so that no 'unreachable' verdict rests on this LAN alone.",
+  "part2_onp_menota_executed": false,
+  "part2_skip_reason": "ONP gate closed on both arms: (a) dated permission — none exists as of 2026-10-30; (b) reachable structured deposit — the sole structured deposit (CLARIN handle 11356/1583) re-read 2026-10-30T17:48Z is still metadata-only (declared 65,000 entries; no files, no licence row, no citation rows). Per the mission, the dated census IS the Stage 4 deliverable.",
+  "candidates": [
+    {
+      "candidate": "ONP↔Menota",
+      "protocol_rank": "rank 1, conditional on a dated permission/scrape gate",
+      "gate_verdict": "closed",
+      "gate_arms": {
+        "dated_permission": "none exists as of 2026-10-30",
+        "reachable_structured_deposit": "closed — CLARIN 11356/1583 metadata-only (see probes)"
+      },
+      "live_host_refinement": "Refines §9's 'live ONP unreachable from every tested path': the host is UP and answers from external networks, but with a browser-verification interstitial (anti-bot wall); from this LAN the connection is reset at TCP level. Either way no machine-usable structured access exists today. The bot-wall is an access state, not a refusal — the §9 demotion condition ('persistent ONP refusal') is NOT triggered; rank 1 conditional stands.",
+      "probes": [
+        {
+          "ts_utc": "2026-10-30T17:48:45Z",
+          "url": "https://hdl.handle.net/11356/1583",
+          "effective_url": "https://www.clarin.si/repository/xmlui/handle/11356/1583",
+          "network": "executing-host LAN (curl)",
+          "http_status": 200,
+          "bytes": 34462,
+          "sha256": "774886b1182b5178ff8a97321cc660b72fac52c60cfc7096d0024be7cc881c34",
+          "body_committed": false,
+          "reading": "Metadata record re-read, still metadata-only: Size 65000 entries; Date issued 2021-08-05; Publisher Centre for Language Technology, Dept. of Nordic Research, University of Copenhagen; Project URL https://onp.ku.dk/onp/onp.php. No bitstream/download rows, no licence field on the record (only the repository-wide 'Rights Label' browse menu), no per-work citation rows."
+        },
+        {
+          "ts_utc": "2026-10-30T17:48:46Z",
+          "url": "https://onp.ku.dk/",
+          "network": "executing-host LAN (curl)",
+          "http_status": 0,
+          "transport": "curl(35) Recv failure: Connection reset by peer (HTTPS)",
+          "reading": "TCP-level reset; DNS itself resolves cleanly to 192.38.114.128."
+        },
+        {
+          "ts_utc": "2026-10-30T17:51:08Z",
+          "url": "https://onp.ku.dk/onp/onp.php",
+          "network": "executing-host LAN (curl)",
+          "http_status": 0,
+          "transport": "curl(35) Recv failure: Connection reset by peer"
+        },
+        {
+          "ts_utc": "2026-10-30T17:51:13Z",
+          "url": "http://onp.ku.dk/onp/onp.php",
+          "network": "executing-host LAN (curl)",
+          "http_status": 0,
+          "transport": "curl(56) Recv failure: Connection reset by peer"
+        },
+        {
+          "ts_utc": "2026-10-30T17:53:30Z",
+          "url": "https://onp.ku.dk/onp/onp.php",
+          "network": "harness-hosted fetcher (external to the LAN)",
+          "http_status": 0,
+          "transport": "read ECONNRESET",
+          "reading": "Second network, same connection-reset signature."
+        },
+        {
+          "ts_utc": "2026-10-30T17:54:30Z",
+          "url": "https://onp.ku.dk/onp/onp.php",
+          "network": "hosted reader service (external to the LAN)",
+          "http_status": 200,
+          "content": "browser-verification interstitial",
+          "evidence": {
+            "file": "probe_evidence/onp_interstitial_reader_2026-10-30.md",
+            "bytes": 493,
+            "sha256": "4d7f67940b0875a7c030ff36e8fc790e5bb668c057dae57ffc39318e5c675113"
+          },
+          "reading": "Server UP from an external network; serves 'Checking your browser… Security Check'. A JS browser wall, not an outage: live ONP is reachable in principle by a human browser and NOT machine-usable as a structured deposit."
+        },
+        {
+          "ts_utc": "2026-10-30T18:00:30Z",
+          "url": "https://onp.ku.dk/onp/onp.php",
+          "network": "executing-host LAN (real in-app browser, JS on)",
+          "http_status": null,
+          "transport": "navigation committed, DOM empty (snapshot length 0)",
+          "reading": "The connection commits far enough to set the URL, then the stream stalls; consistent with mid-stream reset toward this LAN. No dictionary interface rendered."
+        }
+      ],
+      "menota_corpus_side": {
+        "gate_verdict": "public and structured-accessible (not the binding gate)",
+        "reading": "Menota catalogue is public, no login; the binding gate of the ONP↔Menota run is the ONP side. Dated counts below; a 'Download all XML files' button is present on the catalogue page (bulk structured access on the corpus side).",
+        "probes": [
+          {
+            "ts_utc": "2026-10-30T17:48:52Z",
+            "url": "https://menota.org/",
+            "effective_url": "https://menota.org/forside.xhtml",
+            "network": "executing-host LAN (curl)",
+            "http_status": 200,
+            "bytes": 32931,
+            "sha256": "b87530b5e010c586e233947cf7f24c684d3cd4db3cbcd45ad48e9bae560bc6c3",
+            "body_committed": false
+          },
+          {
+            "ts_utc": "2026-10-30T17:52:33Z",
+            "url": "https://clarino.uib.no/menota/catalogue/menota",
+            "network": "executing-host LAN (curl)",
+            "http_status": 200,
+            "bytes": 2802,
+            "sha256": "be3bfb55dc519e6a8d07b65070d05a32bc32c72b2b142b7a837d24a0e345401f",
+            "reading": "Identical Korpuskel SPA shell for all four catalogue routes (menota, menota-diploma, menota-lln, menota-rune); app bundle 669,826 B sha256 66982d060e080c48898e5fcedd75e55c04b1de269700607408029df08ad0260a; SPA base '/korpuskel-api/'."
+          },
+          {
+            "ts_utc": "2026-10-30T18:03:00Z",
+            "url": "https://clarino.uib.no/menota/catalogue/menota",
+            "network": "executing-host LAN (real in-app browser, JS rendered)",
+            "http_status": 200,
+            "counts": {
+              "main_codices": 91,
+              "charters": 196,
+              "runic_inscriptions": 100,
+              "le_lingue_nordiche": 7,
+              "total": 394
+            },
+            "bulk_access": "'Download all XML files' button present",
+            "evidence": {
+              "file": "probe_evidence/menota_catalogue_rendered_2026-10-30.txt",
+              "bytes": 6144,
+              "sha256": "3e936f19ecec2478b6b874235c10c75b0c3cb114f6d308b149f360b4e069cfb3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "CAD↔Oracc/CDLI",
+      "protocol_rank": "rank 1 the day ISAC publishes transcribed data (date-stamped)",
+      "gate_verdict": "closed",
+      "gate_arms": {
+        "isac_transcribed_data_publication": "not published as of 2026-10-30 — page revision stamp 2026-05-27; team/history/publications content only; the two .pdf references are publication items, not datasets"
+      },
+      "live_host_refinement": "The 'digital CAD exists as announcement only' state persists; the reversal condition (ISAC release promotes CAD to rank 1) has NOT fired.",
+      "probes": [
+        {
+          "ts_utc": "2026-10-30T17:51:19Z",
+          "url": "https://isac.uchicago.edu/research/publications/chicago-assyrian-dictionary",
+          "effective_url": "https://isac.uchicago.edu/research-projects/chicago-assyrian-dictionary",
+          "network": "executing-host LAN (curl)",
+          "http_status": 200,
+          "bytes": 231216,
+          "sha256": "be18919c073a32b976e56d0dca30e0c1928e0f8200690d1de623f5fe4ee02ea0",
+          "body_committed": false,
+          "page_published_time_meta": "2026-05-27T09:18:59-0500",
+          "reading": "Page content: CAD team (Reculeau; Borgen; Ray; former Editors-in-Charge Gelb/Oppenheim/Reiner/Roth), history, select publications. No dataset, no transcribed-data download, no open-data statement."
+        }
+      ]
+    },
+    {
+      "candidate": "Russian Словарь XI–XVII вв.↔web-corpora.net",
+      "protocol_rank": "unqualified pending one successful fetch from a different network (§9)",
+      "gate_verdict": "verification precondition now satisfied — host and dictionary interface VERIFIED from an external network",
+      "gate_arms": {
+        "verified_external_fetch": "satisfied 2026-10-30 (twice, independent services): platform root and the dictionary app http://web-corpora.net/wsgi/oldrus.wsgi",
+        "structured_data_access": "unassessed beyond the search UI — a wsgi query application with headword/mask/example/source/genre/language/date axes and a linked open-code GitHub project; no bulk export or licence row seen on the interface. Executability of a run is a separate assessment (successor)."
+      },
+      "live_host_refinement": "§9's row read 'Host timed out under every probe from this perimeter' — still true from this LAN (root and app time out; browser navigation never commits), but FALSE as a property of the host: from external networks the platform serves normally. Verdict column upgrades from Unknown/unqualified to verified-alive structural analogue; the 'searchable by source list' claim is CONFIRMED (переводные/непереводные; genre axis: Библия и апокрифы, Богословие, Гомилетика, Агиография, Повести и беллетристика, Литургика, Эпистолография, Летопись, Хроника и хронография, Документы; original-language axis for translated sources; year/century and first-attestation year/century axes).",
+      "probes": [
+        {
+          "ts_utc": "2026-10-30T17:56:57Z",
+          "url": "https://web-corpora.net/slovar11-17/",
+          "network": "executing-host LAN (curl)",
+          "http_status": 0,
+          "transport": "curl timeout after 30.0s (no answer)",
+          "note": "path was a guess, abandoned; the real app URL comes from search + external fetch below"
+        },
+        {
+          "ts_utc": "2026-10-30T17:55:30Z",
+          "url": "https://web-corpora.net/",
+          "network": "hosted reader service (external to the LAN)",
+          "http_status": 200,
+          "title": "Corpora :: Home page",
+          "evidence": {
+            "file": "probe_evidence/webcorpora_root_reader_2026-10-30.md",
+            "bytes": 4380,
+            "sha256": "5c16c2b3b001d7d741ed777d1a024210a02fba6679f97c093d1545682a0e396b"
+          },
+          "reading": "Platform verified alive from an external network; resource list includes 'Словарь русского языка XI–XVII веков — База данных на основе словаря'."
+        },
+        {
+          "ts_utc": "2026-10-30T18:06:30Z",
+          "url": "http://web-corpora.net/wsgi/oldrus.wsgi",
+          "url_source": "web search result naming the beta database of the academic Словарь русского языка XI–XVII вв. (ИРЯ РАН, изд. с 1975)",
+          "network": "harness-hosted fetcher (external to the LAN)",
+          "http_status": 0,
+          "transport": "Connect Timeout (443, 10s) — one external service slow to this host"
+        },
+        {
+          "ts_utc": "2026-10-30T18:07:00Z",
+          "url": "http://web-corpora.net/wsgi/oldrus.wsgi",
+          "network": "hosted reader service (external to the LAN)",
+          "http_status": 200,
+          "title": "Словарь русского языка XI–XVII веков",
+          "evidence": {
+            "file": "probe_evidence/oldrus_wsgi_reader_2026-10-30.md",
+            "bytes": 2043,
+            "sha256": "669dd5b53c10e1b7b756cc4671e31b752580ca67ce2d9a3ab9775b09cb630b6e"
+          },
+          "reading": "Dictionary interface confirmed live: поиск по заголовочному слову / по маске / по примерам; часть речи (11 категорий); ПОИСК ПО ИСТОЧНИКАМ (переводные/не переводные); жанр источника (10 жанров); язык оригинала (греческий, латынь, немецкий, польский, чешский); год/век; год/век первого упоминания."
+        }
+      ]
+    },
+    {
+      "candidate": "GDLI↔OVI/TLIO",
+      "protocol_rank": "rank 3, held to its medieval slice",
+      "gate_verdict": "held (unchanged) — no post-1375 independent Italian inventory appeared",
+      "gate_arms": {
+        "post_1375_independent_inventory": "not fired as of 2026-10-30 — TLIO remains the medieval corpus 'per il vocabolario' (GattoWeb); dated corpus count now 3,295 testi (9 settembre 2024), up from the ~1,960 figure the protocol carried — corpus growth, not a scope change"
+      },
+      "probes": [
+        {
+          "ts_utc": "2026-10-30T17:51:20Z",
+          "url": "https://tlioweb.ovi.cnr.it/",
+          "network": "executing-host LAN (curl)",
+          "http_status": 0,
+          "transport": "curl(35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL"
+        },
+        {
+          "ts_utc": "2026-10-30T18:09:30Z",
+          "url": "https://tlioweb.ovi.cnr.it/",
+          "network": "hosted reader service (external to the LAN)",
+          "http_status": 200,
+          "title": "GattoWeb",
+          "evidence": {
+            "file": "probe_evidence/tlio_gattoweb_reader_2026-10-30.md",
+            "bytes": 1019,
+            "sha256": "829babb386231a5ac1cd04457dd16425ccff1cf279df24d8b7a2e2f26e7607f1"
+          },
+          "reading": "'Corpus TLIO per il vocabolario', corpus 3295 testi - 9 settembre 2024; ISSN 2281-5058; first publication 15.10.2005; Direttori Larson/Artale/Dotto. Alive; medieval scope unchanged; GDLI stays held to its medieval slice."
+        }
+      ]
+    }
+  ],
+  "reversal_conditions_recheck": [
+    {
+      "condition": "ISAC publishing the transcribed CAD promotes CAD to rank 1",
+      "fired": false,
+      "ts_utc": "2026-10-30T17:51:19Z",
+      "dated_evidence": "ISAC CAD page 2026-10-30T17:51Z: no transcribed data; page stamp 2026-05-27"
+    },
+    {
+      "condition": "a persistent ONP refusal drops it below CAD",
+      "fired": false,
+      "ts_utc": "2026-10-30T17:54:30Z",
+      "dated_evidence": "2026-10-30: no refusal event exists — the live host answers with a browser-verification wall and the deposit stays metadata-only; an access state is not an administrative refusal"
+    },
+    {
+      "condition": "a post-1375 independent Italian inventory revives GDLI",
+      "fired": false,
+      "ts_utc": "2026-10-30T18:09:30Z",
+      "dated_evidence": "TLIO 2026-10-30T18:09Z: medieval corpus, 3,295 testi, no scope change"
+    },
+    {
+      "condition": "Menota already absorbed into ONP citations at scale collapses the independence premise",
+      "fired": null,
+      "ts_utc": "2026-10-30T18:10:00Z",
+      "dated_evidence": "untestable with the ONP gate closed; no evidence either way as of 2026-10-30 (None = not assessable, not a pass)"
+    }
+  ],
+  "preregistrations_onp_menota_p1_p5": {
+    "status": "fixed in advance (protocol §9), UNEXECUTED — the run never fired because the ONP gate stayed closed",
+    "bias_register": "protocol §11 applies to the run when it fires; this census itself used multi-network probing to counter the catalog-rot threat ('Catalogue rot / moving denominators': every verdict carries its own timestamp and content hash)",
+    "P1": "citation mass per cited work is extreme-right-skewed, with Menota overlap concentrating in the top decile and near-zero tail overlap — uniform overlap falsifies A68's coverage structure",
+    "P2": "completely excerpted works show an order-of-magnitude citation-density advantage over same-genre selective works — uniform density falsifies the editorial-artefact hypothesis",
+    "P3": "print-only coverage underestimates archive coverage by ≈2.6× (1/0.38) for a–em — instability of that ratio shows partial-apparatus results are apparatus artefacts",
+    "P4": "work-, citation- and manuscript-weighted metrics diverge materially — coincidence overturns the claim that metric choice carries information",
+    "P5": "Menota absences are predictable from genre/date/charters profile, not random"
+  },
+  "section9_reading_printed_alongside": "Read strictly, no external candidate is currently cleanly executable — which is the portability claim's true state: CAD remains OCR-gated (and ISAC has published no transcribed data as of 2026-10-30), GDLI corpus-circular beyond its medieval slice (TLIO scope unchanged), ONP bot-walled with its sole structured deposit still metadata-only, and the Russian analogue — verified alive today with its search-by-source-list structure confirmed — offers a query interface, not yet an assessed structured-data path. This qualifier is printed alongside the §9 recommendation, never absorbed by it. Kill-exit honoured (§13): the programme records the pending state rather than manufacturing a survival.",
+  "verdict_summary": {
+    "onp_menota": "gate closed (permission arm: none; deposit arm: metadata-only); Part 2 unexecuted by design",
+    "cad_isac": "gate closed (no transcribed data published)",
+    "russian_slovar": "verification precondition FIRED — verified alive externally, structural analogue confirmed; executability assessment is successor work",
+    "gdli_tlio": "held to medieval slice (reversal unfired); corpus count updated 3,295 testi (2024-09-09)",
+    "menota_corpus_side": "public, 394 texts dated across four archives, bulk-XML button present"
+  }
+}
