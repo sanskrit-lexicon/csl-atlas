@@ -89,6 +89,36 @@ def test_corroboration_pins():
     assert c["a_nomatch_with_ge2"] == 897
 
 
+def test_pwk_union_split():
+    """H7851 (H7513 residual): the pwk-union candidates figure and its a/b
+    split are envelope fields re-derived from the TSV — the number published
+    from prose once (22,338, the pw-only count) drifted in PR #704's wake;
+    these pins keep 22,360 machine-gated."""
+    m = json.load(open(os.path.join(D, "mw_vs_pw_metrics.json"), encoding="utf-8"))
+    pu = m["pwk_union"]
+    assert pu["candidates"] == 22360
+    assert pu["a_missing_by_error"] == 16557
+    assert pu["b_expected_absence"] == 5803
+    assert pu["a_missing_by_error"] + pu["b_expected_absence"] == pu["candidates"]
+    po = pu["pwkvn_only"]
+    assert po["candidates"] == 22
+    assert po["a_missing_by_error"] == 1
+    assert po["b_expected_absence"] == 21
+    # union = pw per-source + pwkvn-only; distinct_base = pw base + pwkvn-only
+    assert m["per_source"]["pw"]["candidates"] + po["candidates"] == pu["candidates"]
+    assert m["sources"]["pw"]["distinct_base"] + po["candidates"] == pu["distinct_base"]
+    # and the same numbers re-derive live from the committed TSV
+    rows = _rows()
+    union = [r for r in rows if {"pw", "pwkvn"} & set(r["sources"].split("+"))]
+    assert len(union) == 22360
+    assert sum(1 for r in union if r["class"] == "a_missing_by_error") == 16557
+    assert sum(1 for r in union if r["class"] == "b_expected_absence") == 5803
+    only = [r for r in rows
+            if "pwkvn" in r["sources"].split("+") and "pw" not in r["sources"].split("+")]
+    assert len(only) == 22
+    assert [r["slp1"] for r in only if r["class"] == "a_missing_by_error"] == ["triveRa"]
+
+
 def test_substrate_reuse_pin():
     """pwg.txt is pinned to the H7463 Stage-1 substrate sha (data/pwg_dcs)."""
     m = json.load(open(os.path.join(D, "mw_vs_pw_metrics.json"), encoding="utf-8"))

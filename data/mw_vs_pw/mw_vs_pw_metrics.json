@@ -48,7 +48,16 @@
   },
   "pwk_union": {
     "entries": 195532,
-    "distinct_base": 151368
+    "distinct_base": 151368,
+    "candidates": 22360,
+    "a_missing_by_error": 16557,
+    "b_expected_absence": 5803,
+    "pwkvn_only": {
+      "candidates": 22,
+      "a_missing_by_error": 1,
+      "b_expected_absence": 21
+    },
+    "definition": "candidates citing pw or pwkvn (pw 22338 + 22 pwkvn-only); distinct_base = pw.distinct_base + pwkvn_only.candidates"
   },
   "comparison_universe": {
     "denominator": 157994,

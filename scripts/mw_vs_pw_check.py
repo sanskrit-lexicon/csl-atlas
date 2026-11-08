@@ -88,6 +88,37 @@ def main() -> int:
         pin(f"per_source_{code}_a", ps["a_missing_by_error"] + ps["b_expected_absence"],
             ps["candidates"])
 
+    # ---- pwk_union candidates + a/b split regenerate from the TSV (H7851:
+    # the union figure was published from prose once and drifted — PR #704 —
+    # so it is machine-gated like every other number now) ----
+    pu = m["pwk_union"]
+    union_rows = [r for r in rows if {"pw", "pwkvn"} & set(r["sources"].split("+"))]
+    pin("pwk_union_candidates", len(union_rows), pu["candidates"])
+    pin("pwk_union_a", sum(1 for r in union_rows
+                           if r["class"] == "a_missing_by_error"),
+        pu["a_missing_by_error"])
+    pin("pwk_union_b", sum(1 for r in union_rows
+                           if r["class"] == "b_expected_absence"),
+        pu["b_expected_absence"])
+    pin("pwk_union_class_sum",
+        pu["a_missing_by_error"] + pu["b_expected_absence"], pu["candidates"])
+    # composition: union = pw per-source rows + pwkvn-only rows (H7513: 22338 + 22)
+    pwkvn_only = [r for r in rows
+                  if "pwkvn" in r["sources"].split("+") and "pw" not in r["sources"].split("+")]
+    po = pu["pwkvn_only"]
+    pin("pwkvn_only_candidates", len(pwkvn_only), po["candidates"])
+    pin("pwkvn_only_a", sum(1 for r in pwkvn_only
+                            if r["class"] == "a_missing_by_error"),
+        po["a_missing_by_error"])
+    pin("pwkvn_only_b", sum(1 for r in pwkvn_only
+                            if r["class"] == "b_expected_absence"),
+        po["b_expected_absence"])
+    pin("pwk_union_composition",
+        m["per_source"]["pw"]["candidates"] + po["candidates"], pu["candidates"])
+    # denominator identity: pw.distinct_base + pwkvn-only candidates = union distinct_base
+    pin("pwk_union_distinct_base_identity",
+        m["sources"]["pw"]["distinct_base"] + po["candidates"], pu["distinct_base"])
+
     # ---- corroboration columns regenerate ----
     cor = m["corroboration"]
     pin("a_with_ge2", sum(1 for r in rows if r["class"] == "a_missing_by_error"
