@@ -16,15 +16,16 @@ articles > 100k chars). Dict-level rows + per-letter rows.
 
 Writes: data/pd/density_fingerprint.tsv (+ src/data/pd mirror). Deterministic.
 """
-import sys, re
+import re
+import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-import numpy as np
 import letter_anatomy as la
+import numpy as np
 
 L_BLOCK = re.compile(r'<L>(.*?)<LEND>', re.DOTALL)
 K1 = re.compile(r'<k1>(.*?)(?:<|$)')

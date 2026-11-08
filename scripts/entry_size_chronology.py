@@ -13,16 +13,18 @@ Writes:
 Reuses letter_anatomy.py constants/paths; measures body length the same way (H1416).
 Deterministic (no random/now).
 """
-import sys, re, math
+import math
+import re
+import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import letter_anatomy as la  # reuse CSL_ORIG, OUT, SRC_OUT, base_letter, TAG, BRACE
 import numpy as np
 from scipy import stats as sps
-import letter_anatomy as la   # reuse CSL_ORIG, OUT, SRC_OUT, base_letter, TAG, BRACE
 
 # ---- entry parser that also yields the <pc> field (Wave-B extension) ----
 L_BLOCK = re.compile(r'<L>(.*?)<LEND>', re.DOTALL)

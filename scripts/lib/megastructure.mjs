@@ -10,7 +10,9 @@
 const SUPPORTED = new Set([
   "$schema", "$id", "$ref", "$defs", "title", "description", "type", "enum", "const", "required",
   "properties", "additionalProperties", "pattern", "minItems", "items", "minimum",
-  "exclusiveMinimum", "minLength"
+  "exclusiveMinimum", "minLength",
+  // H5303: the licence stamp is annotation-only metadata on every envelope.
+  "license", "licenseUrl"
 ]);
 
 function typeOf(value) {

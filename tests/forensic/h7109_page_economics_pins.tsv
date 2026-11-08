@@ -1,0 +1,11 @@
+key	expected	where_it_comes_from	note
+pd_entries	107630	pd.txt: count of <L> entry headers	acceptance canary; also the H6942/H6949 baseline
+pd_line_divisions	440003	pd.txt: count of <div n="lb"> tags	the handoff's "line-divisions" figure
+pd_printed_lines	547633	pd.txt: <div n="lb"> + entry-opening lines	the machine text's own header says "547634Lines"; the +1 is the file header line
+pd_characters	42247645	pd.txt: body characters after joining lines and removing <div n="lb">	acceptance canary; matches data/pd/pd_volume_homogeneity.json totals.chars
+pd_column_codes	7684	pd.txt: distinct <pc> values (volume-page + column letter a/b)	7,684 entry-bearing columns
+pd_page_numbers	4055	pd.txt: distinct volume-page of <pc> (column letter stripped)	fewer than the 4,327 pages the text spans because a page whose columns carry no entry start has no code
+pwg_entries	123366	pwg.txt: count of <L> entry headers	acceptance canary
+pwg_machine_lines	223497	pwg.txt: non-empty body lines (excludes <L> and <LEND>)	the handoff's "223,497 machine lines"; these are NOT printed lines
+pwg_column_codes	8171	pwg.txt: distinct <pc> values (volume-column)	odd column = left of the printed page, even = right (pwg-meta2.txt)
+pwg_printed_pages	4750	pwg.txt: sum over the 7 volumes of ceil(highest <pc> column / 2)	reconstruction, not a count of scanned pages; stated as such in the report

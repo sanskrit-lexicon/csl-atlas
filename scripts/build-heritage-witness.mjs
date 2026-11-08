@@ -2,17 +2,24 @@
 // (INRIA) entry-level crosswalk onto the atlas's MW headword set (H346;
 // Tier-2 roadmap item 4; sibling of the kosha ingest H345).
 //
+// Anchor source since H4720: the sibling kosha checkout's heritage_anchor
+// table (the H345 ingest of the same crosswalk, 1 row per raw mw_key1) is the
+// serving layer this atlas consumes — the raw SanskritLexicography crosswalk
+// TSV is the documented fallback when kosha.db is absent (CI-safe: neither
+// sibling exists on CI runners, the committed JSON is the artifact).
+//
 // The crosswalk is OWNED by SanskritLexicography
-// (scripts/heritage_mw_crosswalk.py under HeadwordLists/) and consumed here
-// read-only from the sibling checkout — never re-derived. Heritage is an
+// (scripts/heritage_mw_crosswalk.py under HeadwordLists/); kosha's
+// heritage_anchor layer is OWNED by kosha (build_db.py --stage heritage) —
+// both consumed here read-only, never re-derived. Heritage is an
 // independent, non-Cologne witness: "which MW headwords does Heritage
 // independently confirm" is atlas-native evidence for the P-series papers'
 // attestation arguments.
 //
 // Join key: normalized SLP1 headword (scripts/lib/dict-normalize.mjs
 // normalizeLemma, the same key build-dictionary-comparison.mjs uses to align
-// MW against the other dictionaries) on both the MW <k1> and the crosswalk's
-// mw_key1 column.
+// MW against the other dictionaries) on both the MW <k1> and the
+// crosswalk/kosha mw_key1 column.
 //
 // Usage: npm run build-heritage-witness   (then npm run validate-heritage-witness)
 
@@ -24,10 +31,12 @@ import { iterateDict } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
 import { licenseFields, generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
 
-const SCHEMA_VERSION = "1.0.0";
+const SCHEMA_VERSION = "1.1.0";
 const GENERATED_BY = "npm run build-heritage-witness";
 const SIBLING_ROOT = path.resolve(process.cwd(), "..", "SanskritLexicography");
 const CROSSWALK_PATH = path.join(SIBLING_ROOT, "HeadwordLists", "mw_heritage_crosswalk.tsv");
+const KOSHA_ROOT = path.resolve(process.cwd(), "..", "kosha");
+const KOSHA_DB_PATH = path.join(KOSHA_ROOT, "data", "db", "kosha.db");
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "heritage");
 const JSON_OUT = path.join(OUT_DIR, "heritage_witness.json");
 const SOURCE_OUT = path.join(OUT_DIR, "heritage_witness.source.json");
@@ -41,6 +50,51 @@ export function parseTsv(text) {
     header.forEach((h, i) => (row[h] = cells[i] ?? ""));
     return row;
   });
+}
+
+// Map kosha heritage_anchor rows (mw_key1, covered INTEGER, anchor TEXT) onto
+// the crosswalk-shaped rows the fold already understands. H4720 consumer edge:
+// csl-atlas reads the witness anchors from kosha, the H345 serving layer.
+export function koshaRowsToCrosswalkRows(rows) {
+  return rows.map((r) => ({
+    mw_key1: r.mw_key1,
+    covered_flag: r.covered ? "1" : "0",
+    heritage_entry_anchor: r.anchor ?? ""
+  }));
+}
+
+// Load the heritage_anchor layer from the sibling kosha checkout, read-only.
+// Returns null when kosha.db is absent or the runtime lacks node:sqlite
+// (repo engines allow Node 20; node:sqlite needs >=22.5) — callers fall back
+// to the raw crosswalk. Never throws.
+export async function loadKoshaHeritageRows() {
+  if (!fs.existsSync(KOSHA_DB_PATH)) return null;
+  let DatabaseSync;
+  try {
+    ({ DatabaseSync } = await import("node:sqlite"));
+  } catch {
+    return null;
+  }
+  let db;
+  try {
+    db = new DatabaseSync(KOSHA_DB_PATH, { readOnly: true });
+    const rows = db.prepare("SELECT mw_key1, covered, anchor FROM heritage_anchor").all();
+    return { rows };
+  } catch {
+    return null;
+  } finally {
+    try {
+      db?.close();
+    } catch {}
+  }
+}
+
+function gitCommitAt(dir) {
+  try {
+    return execSync(`git -C "${dir}" rev-parse HEAD`, { encoding: "utf8" }).trim();
+  } catch {
+    return "unknown";
+  }
 }
 
 function round(value, digits = 4) {
@@ -73,7 +127,9 @@ function foldCrosswalk(crosswalkRows) {
   return byKey;
 }
 
-export function buildPayload(mwRecords, crosswalkRows, { generatedAt } = {}) {
+export function buildPayload(mwRecords, crosswalkRows, { generatedAt, source } = {}) {
+  const sourceLayer = source?.layer ?? "crosswalk.tsv";
+  const koshaSourced = sourceLayer === "kosha.heritage_anchor";
   const crosswalk = foldCrosswalk(crosswalkRows);
 
   const byHeadword = new Map(); // normalized -> { occurrences, firstLine }
@@ -132,13 +188,22 @@ export function buildPayload(mwRecords, crosswalkRows, { generatedAt } = {}) {
     schemaVersion: SCHEMA_VERSION,
     ...licenseFields(),
     generatedBy: GENERATED_BY,
-    sourceFiles: [
-      "SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv",
-      "csl-orig/v02/mw/mw.txt",
-      "scripts/build-heritage-witness.mjs"
-    ],
-    method:
-      "Iterate MW <L> records from csl-orig v02, normalize each <k1> to SLP1 (strip accents + trailing homonym digits, scripts/lib/dict-normalize.mjs) to get one row per distinct MW headword. Join the SanskritLexicography mw_heritage_crosswalk.tsv (built from the Heritage mirror's own MW<->DICO alignment, no OCR/fuzzy matching) on the same normalized key. matchTier is 'anchored' (covered_flag=1 with a resolved DICO/<file>.html#<key> anchor), 'covered-no-anchor' (covered_flag=1, MW's bare anchor drops DICO's #N homonym suffix and no fallback resolved), or 'absent' (covered_flag=0 or missing from the crosswalk).",
+    sourceFiles: koshaSourced
+      ? [
+          "kosha/data/db/kosha.db (heritage_anchor table, H345 ingest)",
+          "SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv (upstream of the kosha layer)",
+          "csl-orig/v02/mw/mw.txt",
+          "scripts/build-heritage-witness.mjs"
+        ]
+      : [
+          "SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv",
+          "csl-orig/v02/mw/mw.txt",
+          "scripts/build-heritage-witness.mjs"
+        ],
+    sourceLayer,
+    method: koshaSourced
+      ? "Anchor source: the sibling kosha checkout's heritage_anchor table (build_db.py --stage heritage, the H345 ingest of the crosswalk; consumed read-only, one row per raw mw_key1). Iterate MW <L> records from csl-orig v02, normalize each <k1> to SLP1 (strip accents + trailing homonym digits, scripts/lib/dict-normalize.mjs) to get one row per distinct MW headword. Join on the same normalized key. matchTier is 'anchored' (covered=1 with a resolved DICO/<file>.html#<key> anchor), 'covered-no-anchor' (covered=1, MW's bare anchor drops DICO's #N homonym suffix and no fallback resolved), or 'absent' (covered=0 or missing). The validate-heritage-witness kosha sample check re-verifies witnessed values against the same table row-by-row on a deterministic sample."
+      : "Iterate MW <L> records from csl-orig v02, normalize each <k1> to SLP1 (strip accents + trailing homonym digits, scripts/lib/dict-normalize.mjs) to get one row per distinct MW headword. Join the SanskritLexicography mw_heritage_crosswalk.tsv (built from the Heritage mirror's own MW<->DICO alignment, no OCR/fuzzy matching) on the same normalized key. matchTier is 'anchored' (covered_flag=1 with a resolved DICO/<file>.html#<key> anchor), 'covered-no-anchor' (covered_flag=1, MW's bare anchor drops DICO's #N homonym suffix and no fallback resolved), or 'absent' (covered_flag=0 or missing from the crosswalk).",
     totals: {
       mwEntries,
       crosswalkRows: crosswalkRows.length,
@@ -165,44 +230,48 @@ export function buildPayload(mwRecords, crosswalkRows, { generatedAt } = {}) {
   return payload;
 }
 
-function writeSourceEnvelope(payload) {
-  let commit = "unknown";
-  let crosswalkCommit = "unknown";
-  try {
-    commit = execSync("git rev-parse HEAD", { encoding: "utf8" }).trim();
-  } catch {}
-  try {
-    crosswalkCommit = execSync(`git -C "${SIBLING_ROOT}" rev-parse HEAD`, { encoding: "utf8" }).trim();
-  } catch {}
+function writeSourceEnvelope(payload, { kosha } = {}) {
   const envelope = {
     dataset: "heritage_witness",
-    commit,
+    commit: gitCommitAt(process.cwd()),
     crosswalkRepo: "https://github.com/gasyoun/SanskritLexicography",
     crosswalkPath: "HeadwordLists/mw_heritage_crosswalk.tsv",
-    crosswalkCommit,
+    crosswalkCommit: gitCommitAt(SIBLING_ROOT),
     generatedAt: payload.generatedAt,
     generatedBy: GENERATED_BY,
     sourceFiles: payload.sourceFiles,
     schemaVersion: SCHEMA_VERSION
   };
+  if (kosha) {
+    envelope.sourceLayer = "kosha.heritage_anchor";
+    envelope.koshaRepo = "https://github.com/gasyoun/kosha";
+    envelope.koshaDbPath = "data/db/kosha.db";
+    envelope.koshaCommit = gitCommitAt(KOSHA_ROOT);
+    envelope.koshaHeritageAnchorRows = kosha.rows.length;
+  }
   fs.writeFileSync(SOURCE_OUT, `${JSON.stringify(envelope, null, 2)}\n`);
 }
 
-function main() {
-  if (!fs.existsSync(CROSSWALK_PATH)) {
+async function main() {
+  const kosha = await loadKoshaHeritageRows();
+  const koshaSourced = kosha !== null;
+  if (!koshaSourced && !fs.existsSync(CROSSWALK_PATH)) {
     console.error(
-      `Crosswalk not found: ${CROSSWALK_PATH}\n` +
-        "This builder needs a sibling SanskritLexicography checkout (the committed src/data/heritage/heritage_witness.json is the CI-safe artifact)."
+      `Neither kosha.db (${KOSHA_DB_PATH}) nor the crosswalk (${CROSSWALK_PATH}) found.\n` +
+        "This builder needs a sibling kosha checkout (preferred, H4720 consumer edge) or a sibling SanskritLexicography checkout (fallback) — the committed src/data/heritage/heritage_witness.json is the CI-safe artifact."
     );
     process.exit(1);
   }
   const mwRecords = [...iterateDict("mw")];
-  const crosswalkRows = parseTsv(fs.readFileSync(CROSSWALK_PATH, "utf8"));
-  const payload = buildPayload(mwRecords, crosswalkRows);
+  const anchorRows = koshaSourced ? koshaRowsToCrosswalkRows(kosha.rows) : parseTsv(fs.readFileSync(CROSSWALK_PATH, "utf8"));
+  const payload = buildPayload(mwRecords, anchorRows, {
+    source: { layer: koshaSourced ? "kosha.heritage_anchor" : "crosswalk.tsv" }
+  });
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`);
-  writeSourceEnvelope(payload);
+  writeSourceEnvelope(payload, { kosha: koshaSourced ? kosha : null });
   console.log(`Wrote heritage-witness packet (${payload.totals.mwEntries} MW headwords):`);
+  console.log(`- anchor source: ${koshaSourced ? `kosha heritage_anchor (${kosha.rows.length} rows)` : "raw SanskritLexicography crosswalk (kosha.db absent)"}`);
   console.log(`- ${path.relative(process.cwd(), JSON_OUT)}`);
   console.log(`- ${path.relative(process.cwd(), SOURCE_OUT)}`);
   console.log(
@@ -211,4 +280,9 @@ function main() {
   );
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) main();
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}

@@ -1,0 +1,12 @@
+# AIAS data declaration — csl-atlas (H7119).
+# Schema + level scale: Uprava docs/AIAS_DATA_MANIFEST_SCHEMA_2026-10-24.md
+# Checked by tools/aias_manifest_check.py (vendored) in the aias-gate workflow.
+schema_version: 1
+level: 3
+produced_by: "code — the .mjs/.py builders under scripts/ and the atlas artifacts they generate from the kosha and csl-orig sources"
+decided_by: "MG ruled the atlas contract and the human-review overlay policy (--reseed is gated, overlays are never wiped); agents chose builder internals"
+review: none
+generated_at: 2026-10-24
+scope: "the atlas artifacts this repo builds and publishes; source lexica in csl-orig are out of scope and never touched"
+generated_by: "H7119 pilot (DeepSeek v4.1 Flash, deepseek/deepseek-flash)"
+notes: "level 3: builders are agent-written and the rebuild is deterministic, so what a human decided lives in the R2 overlay decisions. Those record per-entry data decisions, not a review of this declaration, so review stays none."

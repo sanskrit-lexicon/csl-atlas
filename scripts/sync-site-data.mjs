@@ -11,6 +11,26 @@ import { BROAD_HEADWORD_SHARD_PREFIXES, shardIdForLemma, shardPrefixForId } from
 
 const COPIES = [
   {
+    source: "data/citations/source-to-entries.json",
+    target: "src/data/citations/source-to-entries.json"
+  },
+  {
+    source: "data/citations/citation-passage-links.json",
+    target: "src/data/citations/citation-passage-links.json"
+  },
+  {
+    source: "data/citations/passage_pilot.tsv",
+    target: "src/data/citations/passage_pilot.tsv"
+  },
+  {
+    source: "data/citations/passage_pilot_checks.tsv",
+    target: "src/data/citations/passage_pilot_checks.tsv"
+  },
+  {
+    source: "data/citations/passage_pilot.csv",
+    target: "src/data/citations/passage_pilot.csv"
+  },
+  {
     source: "data/dcs/dcs_lemma_summary.json",
     target: "src/data/dcs/dcs_lemma_summary.json",
     optionalFallback: JSON.stringify({ lemmas: {} }, null, 2) + "\n",
@@ -27,6 +47,18 @@ const COPIES = [
   {
     source: "data/lexico/kosa_model_measures.json",
     target: "src/data/lexico/kosa_model_measures.json"
+  },
+  {
+    source: "data/lexico/access_structures.json",
+    target: "src/data/lexico/access_structures.json"
+  },
+  {
+    source: "data/lexico/access_structures_rules.csv",
+    target: "src/data/lexico/access_structures_rules.csv"
+  },
+  {
+    source: "data/lexico/access_structures_counterexamples.csv",
+    target: "src/data/lexico/access_structures_counterexamples.csv"
   },
   {
     source: "data/lexico/kosa_model_amar_sample.json",

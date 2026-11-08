@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "npm run build-citation-passage-index",
+  "generatedAt": "2026-10-19T14:53:39.347Z",
+  "cslOrig": {
+    "revision": "55e8addbd96e8d9001b8789026b026763f4049c1",
+    "dirty": true,
+    "dirtyPaths": [
+      "M  v02/mw/mw.txt"
+    ],
+    "path": "../csl-orig",
+    "mwTxtSha256": "6457c145c517acf311ffe7bfd8efec630347a1de8dc546c90e3c4b49a7bd6683"
+  },
+  "abbreviations": {
+    "path": "data/citations/mw-source-abbreviations.tsv",
+    "source": "https://github.com/sanskrit-lexicon/MWS/blob/main/mwauthorities/tooltip.txt",
+    "sha256": "35d7f1a42575dee4beeaaf7caf684ca1a95dcd4888d25e8e7a7ae2735d2fc0e5"
+  },
+  "outputs": {
+    "source-to-entries.json": "e10ecea1e44376c62204c51164c86f428aff23d372eb8faae06f789b9269974e",
+    "citation-passage-links.json": "b759e4e0f1f940c9ccf00649f30621ffc958e516a711e1a38f6b7d6bfe13482c",
+    "passage_pilot.tsv": "c6187b51bee83aa181da9c7c665f908e93e8b1c04149dc360de98eccff28556c",
+    "passage_pilot.csv": "8cf6981361d639b05151f4751bf1473324f90838343594f6bdba3671fb64d4fb",
+    "passage_pilot_checks.tsv": "ec17e861e765dece7d2efa4b42fa22ad33e76d54f8577048373649063f8e57ef"
+  }
+}

@@ -20,7 +20,14 @@ to a GITIGNORED local jsonl, never committed.
 Run from repo root:  python scripts/forensic/f8_mbh_harvest.py
 Deps: indic_transliteration.
 """
-import sys, os, re, ssl, time, json, html, urllib.request
+import html
+import json
+import os
+import re
+import ssl
+import sys
+import time
+import urllib.request
 from collections import Counter
 
 sys.stdout.reconfigure(encoding="utf-8")

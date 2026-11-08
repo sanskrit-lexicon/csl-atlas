@@ -30,13 +30,13 @@ nānārtha final-consonant (a tergo) order, and alphabetical adjacency against M
 Stdlib only. Run from the repo root:
     python scripts/lexico/m10_kosa_macrostructure_model.py
 """
+import json
 import math
 import os
 import re
 import subprocess
 import sys
 from collections import Counter, OrderedDict, defaultdict
-import json
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -45,7 +45,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 GH = os.path.abspath(os.path.join(ROOT, ".."))
 sys.path.insert(0, os.path.join(ROOT, "scripts", "lib"))
-from dataset_meta import license_fields, generated_at_for_payload, read_json_if_exists  # noqa: E402
+from dataset_meta import (  # noqa: E402
+    generated_at_for_payload,
+    license_fields,
+    read_json_if_exists,
+)
 from dharmamitra_infer import slp1_to_iast  # noqa: E402
 
 AMAR_REPO = os.path.join(GH, "AMAR")

@@ -34,19 +34,25 @@ Outputs (data/L0/):
   validation_report.json                  recovery + LOO + bootstrap + deviations
 """
 
-import os
-import sys
-import re
 import csv
 import json
 import math
+import os
+import re
+import sys
+from collections import Counter, defaultdict
+
 import numpy as np
-from collections import defaultdict, Counter
-from scipy.cluster.hierarchy import linkage, to_tree, cophenet
+from scipy.cluster.hierarchy import cophenet, linkage, to_tree
 from scipy.spatial.distance import squareform
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from preview_tree import neighbor_joining, linkage_to_newick, ascii_tree, png  # noqa: E402
+from preview_tree import (  # noqa: E402
+    ascii_tree,
+    linkage_to_newick,
+    neighbor_joining,
+    png,
+)
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -451,12 +457,12 @@ def main():
         "bootstrap_strong_edges_>=0.80": strong,
         "lineage_cohesion": lineage_report,
         "deviations_from_design": [
-            "Patel dims 1,3,5,6,7,8,16 still at the M.G. co-annotation gate (judgement-bound); "
-            "tree built missing-aware on dims 2,4 (auto-patel) + 9-30 (auto).",
-            "Primary-only stage-2 cells collapse encodings B/C to a shared categorical value → "
-            "4 (encoding,metric) configs instead of the nominal 9.",
-            "Bayesian-consensus canonical tree approximated by 1000x dimension-bootstrap "
-            "majority-consensus UPGMA; full MCMC deferred (design §9).",
+            ("Patel dims 1,3,5,6,7,8,16 still at the M.G. co-annotation gate (judgement-bound); "
+            "tree built missing-aware on dims 2,4 (auto-patel) + 9-30 (auto)."),
+            ("Primary-only stage-2 cells collapse encodings B/C to a shared categorical value → "
+            "4 (encoding,metric) configs instead of the nominal 9."),
+            ("Bayesian-consensus canonical tree approximated by 1000x dimension-bootstrap "
+            "majority-consensus UPGMA; full MCMC deferred (design §9)."),
         ],
     }
     with open("data/L0/validation_report.json", "w", encoding="utf-8") as f:
@@ -474,7 +480,7 @@ def main():
     for r in sorted(boot_rows, key=lambda x: -x["consensus_support"]):
         print(f"  {r['parent']:5s} -> {r['child']:5s} [{r['tier']}]  "
               f"support={r['consensus_support']:.2f}  CI[{r['ci95_low']:.2f},{r['ci95_high']:.2f}]")
-    print("\nLineage cohesion vs global mean (%.3f):" % gmean)
+    print("\nLineage cohesion vs global mean ({:.3f}):".format(gmean))
     for name, v in lineage_report.items():
         flag = "tighter" if v["tighter_than_global"] else "looser "
         print(f"  {flag}  {v['mean_within']:.3f}  {name}  {v['members']}")

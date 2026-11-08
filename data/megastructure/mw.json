@@ -1,4 +1,6 @@
 {
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "schemaVersion": "1.0.0",
   "dict": "mw",
   "dictName": "Monier-Williams, A Sanskrit-English Dictionary",
@@ -14,7 +16,7 @@
       "id": "mw-csldoc",
       "kind": "cologne-csldoc",
       "description": "Cologne csldoc front-matter pages for MW (29 pages, title + v-xxxii), OCR'd in sanskrit-lexicon/MWS prefaces/.",
-      "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/dictionaries/prefaces/mwpref/",
+      "baseUrl": "https://sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/_images/",
       "inventory": "data/megastructure/scan_inventory.tsv"
     },
     {

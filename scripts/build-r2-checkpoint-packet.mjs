@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const LABEL_PROPOSALS_PATH = path.resolve(process.cwd(), "data", "lexico", "r2_packet_label_proposals.json");
@@ -149,6 +150,7 @@ function validatePayload(payload, labelPayload) {
 export function buildPayload(labelPayload) {
   const checkpointRows = (labelPayload.checkpointRows ?? []).map(row => compactCheckpointRow(labelPayload, row));
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "r2-checkpoint-review-packet",
     claim: "The R2 machine-label checkpoint is packaged as a 10-row reviewer worksheet before any parser promotion.",

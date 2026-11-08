@@ -25,9 +25,8 @@ MW-vs-AP bags (no MT needed): jaccard (0,0)=1 (1,1)=2/3 (2,2)=1 (3,3)=2/3, rest 
 
 import sys
 
-import pytest
-
 import f10_sense_order as f10
+import pytest
 from conftest import git_commit_all, write_text
 
 MW_TXT = """<L>1<pc>1-1<k1>go<k2>go

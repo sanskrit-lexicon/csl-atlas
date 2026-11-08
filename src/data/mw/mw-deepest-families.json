@@ -2,19 +2,20 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "generatedAt": "2026-06-13T07:40:40.411Z",
+  "generatedAt": "2026-10-18T07:45:35.669Z",
   "sourcePath": "../csl-orig/v02/mw/mw.txt",
   "sourceDate": "2026-05-29",
   "recordCount": 286560,
   "assumptions": [
     "Families are grouped by the leading base segment of <k2>; this is an inferred grouping, not an explicit MW derivation link.",
-    "compoundSegmentCount counts <k2> segments split on compound markers (em dash, hyphen, plus).",
-    "maxFamilyDepth uses compound segment count as a depth proxy; it is not a Paninian derivation depth.",
+    "compoundSegmentCount counts <k2> joints split on compound markers (em dash, hyphen, plus); it is a joint count, not a member (immediate-constituent) depth.",
+    "maxFamilyDepth uses the joint count as a depth proxy; it is not a Paninian derivation depth.",
     "rootCandidate prefers a member tagged genuineroot, else the shortest base member.",
     "depthScore is for ranking only; always read the stored components instead."
   ],
   "warnings": [
-    "Family grouping is inferred (evidence level: inferred); verify against source records via the example links."
+    "Family grouping is inferred (evidence level: inferred); verify against source records via the example links.",
+    "maxCompoundDepth is a joint count, not a member or immediate-constituent depth; families are not re-ranked on model output."
   ],
   "familyCount": 19527,
   "shown": 100,
@@ -7545,5 +7546,10 @@
         }
       ]
     }
-  ]
+  ],
+  "depthMetric": {
+    "id": "compoundSegmentCount",
+    "label": "compound joints",
+    "note": "A joint is an internal division of <k2>. A joint count is not a member (immediate-constituent) depth: the Dharmamitra probe found 47.3% of valid markup-3 rows parse as two members."
+  }
 }

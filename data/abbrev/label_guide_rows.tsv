@@ -1,0 +1,140 @@
+section	label	in_census	distinct_expansions	expansion	legend_dicts	corpus_tag_dicts
+gender	m.	True	5	Masculine	AE	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	m.	True	5	Masculine.	AP;AP90;LRV	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	m.	True	5	masculine.	BHS;CAE;MD	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	m.	True	5	masculin	BUR	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	m.	True	5	meaning.	CAE	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	m.	True	5	masculinum	GRA	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	m.	True	5	masculine gender	MW	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	m.	True	5	masculin.	STC	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	Feminine	AE	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	Feminine.	AP;AP90	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	feminine; following.	BHS	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	féminin	BUR	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	feminine.	CAE	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	femininum	GRA	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	Feminine (of adjectives).	LRV	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	feminine; also = for.	MD	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	feminine	MW	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	f.	True	6	féminin.	STC	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	Neuter	AE	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	Neuter.	AP;AP90;LRV	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	nominative; name.	BHS	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	neutre	BUR	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	neuter.	CAE;MD	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	neutrum	GRA	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	neuter gender	MW	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	n.	True	6	nom.	STC	ae,ap,ap90,ben,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn,stc,wil
+gender	mfn.	True	1	masculine, feminine and neuter; or = adjective	MW	mw,wil
+pada	P.	True	11	Parasmaipada.	AP;AP90;MD	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	Pāṇini's Aṣṭādhyāyī.	AP90	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	1) Parasmaipadum. 2) P�taliputra (ed. H. Brockhaus. Lipsiae 1835.)	BOP	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	1) Parasmaipadum. 2) Påtaliputra (ed. H. Brockhaus. Lipsiae 1835.)	BOP	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	parfait	BUR	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	Passive.	CAE	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	Participium	GRA	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	Pitṛ.	INM	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	Parasmai-pada	MW	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	Parasmai-pada.	MW72	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	PĀṆINI. (vol. 1)	PW	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	P.	True	11	PĀṆINI'S acht Bücher grammatischer Regeln (GILD. Bibl. 244).	PWG	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+pada	A.	True	8	Ātmanepada	AE	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	Ātmanepada.	AP90	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	1) Atman�padum. 2) Arg'uni reditus ex Indri coelo. (*)	BOP	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	1) Atmanêpadum. 2) Arg'uni reditus ex Indri coelo. (*)	BOP	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	adjectif	BUR	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	Active.	CAE	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	Accusativ	GRA	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	Aśvin.	INM	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	Active	MW	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	A.	True	8	Ātmane-pada ; the long mark over the A. has been omitted for convenience in printing.	MW72	ae,ap90,bhs,bur,cae,gra,pw,pwg,pwkvn
+pada	U.	True	5	Ubhayapada (Parasmai and Atmane).	AP	ap,ap90,bhs,md,pw,pwg
+pada	U.	True	5	Ubhayapada (Parasmai. and Ātmane.)	AP90	ap,ap90,bhs,md,pw,pwg
+pada	U.	True	5	Uttararāmacarita.	AP90	ap,ap90,bhs,md,pw,pwg
+pada	U.	True	5	Uraga.	INM	ap,ap90,bhs,md,pw,pwg
+pada	U.	True	5	Upaniṣad.	MD	ap,ap90,bhs,md,pw,pwg
+verbclass	c.	True	4	Causal	AE	ae,ben,bhs,bur,gra,mw,pw,pwg
+verbclass	c.	True	4	causatif	BUR	ae,ben,bhs,bur,gra,mw,pw,pwg
+verbclass	c.	True	4	causativ	GRA	ae,ben,bhs,bur,gra,mw,pw,pwg
+verbclass	c.	True	4	case	MW	ae,ben,bhs,bur,gra,mw,pw,pwg
+verbclass	c.	True	4	case.	MW72	ae,ben,bhs,bur,gra,mw,pw,pwg
+verbclass	D.	True	5	Denominative	AE	ae,bhs,cae,gra,pw,pwg,pwkvn,wil
+verbclass	D.	True	5	Desiderative.	CAE	ae,bhs,cae,gra,pw,pwg,pwkvn,wil
+verbclass	D.	True	5	Dativ	GRA	ae,bhs,cae,gra,pw,pwg,pwkvn,wil
+verbclass	D.	True	5	Deva.	INM	ae,bhs,cae,gra,pw,pwg,pwkvn,wil
+verbclass	D.	True	5	SĀHITYADARPAṆA, ? [Cologne Addition]	PWG	ae,bhs,cae,gra,pw,pwg,pwkvn,wil
+verbclass	med.	True	1	medium	GRA	gra,md,mw,pw,pwg
+participle	p.	True	5	parfait	BUR	ben,bhs,bur,cae,gra,md,mw,pwg,wil
+participle	p.	True	5	possessive, v. pref.	CAE	ben,bhs,bur,cae,gra,md,mw,pwg,wil
+participle	p.	True	5	plural	GRA	ben,bhs,bur,cae,gra,md,mw,pwg,wil
+participle	p.	True	5	page and participle (cf. p.p.)	MW	ben,bhs,bur,cae,gra,md,mw,pwg,wil
+participle	p.	True	5	page.	MW72	ben,bhs,bur,cae,gra,md,mw,pwg,wil
+participle	pp.	True	6	participe passé	BUR	bur,cae,gra,md,mw
+participle	pp.	True	6	participle.	CAE	bur,cae,gra,md,mw
+participle	pp.	True	6	perge, perge‎	GRA	bur,cae,gra,md,mw
+participle	pp.	True	6	Past passive participle.	LRV	bur,cae,gra,md,mw
+participle	pp.	True	6	perfect passive participle.	MD	bur,cae,gra,md,mw
+participle	pp.	True	6	past participle	MW	bur,cae,gra,md,mw
+titles	V.	True	7	Vikramorvaśīyam (Bombay).	AP90	ae,bhs,gra,lan,md,mw,pw,pwg,pwkvn
+titles	V.	True	7	Vôpadêvus grammaticus cujus radicum corpus, Kavikalpadruma inscriptum, edidit W. Carey in grammaticâ suâ. Westerg. est Westergardii liber Radices sanscritae inscriptus.	BOP	ae,bhs,gra,lan,md,mw,pw,pwg,pwkvn
+titles	V.	True	7	Vocativ	GRA	ae,bhs,gra,lan,md,mw,pw,pwg,pwkvn
+titles	V.	True	7	Burdwan edition.	INM	ae,bhs,gra,lan,md,mw,pw,pwg,pwkvn
+titles	V.	True	7	Vasu.	INM	ae,bhs,gra,lan,md,mw,pw,pwg,pwkvn
+titles	V.	True	7	Veda, Vedic.	MD	ae,bhs,gra,lan,md,mw,pw,pwg,pwkvn
+titles	V.	True	7	Verb.	SHS	ae,bhs,gra,lan,md,mw,pw,pwg,pwkvn
+titles	P.	True	11	Parasmaipada.	AP;AP90;MD	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	Pāṇini's Aṣṭādhyāyī.	AP90	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	1) Parasmaipadum. 2) P�taliputra (ed. H. Brockhaus. Lipsiae 1835.)	BOP	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	1) Parasmaipadum. 2) Påtaliputra (ed. H. Brockhaus. Lipsiae 1835.)	BOP	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	parfait	BUR	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	Passive.	CAE	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	Participium	GRA	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	Pitṛ.	INM	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	Parasmai-pada	MW	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	Parasmai-pada.	MW72	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	PĀṆINI. (vol. 1)	PW	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	P.	True	11	PĀṆINI'S acht Bücher grammatischer Regeln (GILD. Bibl. 244).	PWG	ap,ap90,bhs,bur,cae,gra,md,mw,pw
+titles	N.	True	10	Name.	AP;AP90;CAE;MW72	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	Naiṣadhacarita.	AP90	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	Nalus (Berol. apud Nicolai).	BOP	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	neutre	BUR	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	Nominativ	GRA	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	Nāga.	INM	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	name; when alone = name of a man or of a woman.	MD	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	Name (also = title or epithet)	MW	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	NALOPĀKHYĀNA in BÖHTLINGK'S Chrestomathie (GILD. Bibl. 49). Die BOPP'sche Ausgabe (GILD. Bibl. 99) ist durch N. (BOPP) bezeichnet.	PWG	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	N.	True	10	Neuter.	SHS	ap,ap90,bhs,bur,cae,gra,lan,md,mw,pw,pwg,pwkvn
+titles	M.	True	11	Mālavikāgnimitra (Bombay).	AP90	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	Māhārāṣṭrī.	BHS	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	Matsyôpâkhyâna, i.e. episodium de diluvio.	BOP	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	masculin	BUR	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	Middle.	CAE	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	Mātaríśva	GRA	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	Marut.	INM	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	Manusmṛiti (in twelve adyāyas, Māndlik’s edition, 1886).	LRV	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	MĀNAVADHARMAŚĀSTRA. (vol. 1)	PW	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	MANU'S Gesetzbuch in der Ausg. von LOISELEUR DESLONGCHAMPS (GILD. Bibl. 289).	PWG	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	M.	True	11	Masculine.	SHS	ae,bhs,bur,cae,gra,md,mw,pw,pwg
+titles	S.	True	5	substantif	BUR	bhs,bur,cae,gra,lan,md,mw,pw,pwg
+titles	S.	True	5	Simple.	CAE	bhs,bur,cae,gra,lan,md,mw,pw,pwg
+titles	S.	True	5	Siehe	GRA	bhs,bur,cae,gra,lan,md,mw,pw,pwg
+titles	S.	True	5	Sādhya.	INM	bhs,bur,cae,gra,lan,md,mw,pw,pwg
+titles	S.	True	5	Sūtra.	MD	bhs,bur,cae,gra,lan,md,mw,pw,pwg
+titles	R.	True	7	Raghuvaṃśa (Bombay).	AP90	bhs,mw,pw,pwg
+titles	R.	True	7	Rudra.	INM	bhs,mw,pw,pwg
+titles	R.	True	7	Raghuvanśa (in nineteen sargas, Nirṇayasāgara edition, 1886).	LRV	bhs,mw,pw,pwg
+titles	R.	True	7	river.	MD	bhs,mw,pw,pwg
+titles	R.	True	7	RĀMĀYANA. Das 1ste und 2te Kāṇḍa nach der Ausg. von SCHLEGEL, das 3--6te nach der von GORRESIO, das 7te nach der Bomb. Ausg., wenn nicht ausdrücklich eine andere Ausgabe genannt ist. Eine eingeklammerte Zahl bezieht ist sich auf ed. Bomb. (vol. 1)	PW	bhs,mw,pw,pwg
+titles	R.	True	7	RĀMĀYAṆA. Ohne eine nähere Angabe ist bei den zwei ersten Büchern die Ausgabe von SCHLEGEL (GILD. Bibl. 84), bei den vier letzten die von GORRESIO (GILD. Bibl. 85) gemeint.	PWG	bhs,mw,pw,pwg
+titles	R.	True	7	Root.	SHS	bhs,mw,pw,pwg
+titles	K.	True	5	Kādambarī (Bombay).	AP90	bhs,gra,md,pw,pwg
+titles	K.	True	5	Kâs'inâthus, grammaticus indicus, cujus radicum collectionem edidit Wilkinsius (The radicals of the Sanscrita Language, London 1815). (****)	BOP	bhs,gra,md,pw,pwg
+titles	K.	True	5	Karañja	GRA	bhs,gra,md,pw,pwg
+titles	K.	True	5	Kinnara.	INM	bhs,gra,md,pw,pwg
+titles	K.	True	5	king.	MD	bhs,gra,md,pw,pwg
+titles	H.	True	5	Hitopadeśa (Nirṇaya Sāgara Edition).	AP90	bhs,gra,pw,pwg,pwkvn
+titles	H.	True	5	Hidimbi caedes. (**)	BOP	bhs,gra,pw,pwg,pwkvn
+titles	H.	True	5	Himmel	GRA	bhs,gra,pw,pwg,pwkvn
+titles	H.	True	5	HEMAK4ANDRA'S ABHIDHĀNAK4INTĀMAṆI, Ausg. von BÖHTLINGK und RIEU. (vol. 1)	PW	bhs,gra,pw,pwg,pwkvn
+titles	H.	True	5	HEMACANDRA'S ABHIDHĀNACINTĀMAṆI, ein systematisch angeordnetes synonymisches Lexicon. Herausgegeben, übersetzt und mit Anmer- kungen begleitet von OTTO BÖHTLINGK und CHARLES RIEU. St. Peters- burg 1847.	PWG	bhs,gra,pw,pwg,pwkvn
+register	inj.	False	0			

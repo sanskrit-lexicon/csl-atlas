@@ -10,7 +10,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { iterateDict, dictExists } from "./lib/dict-parser.mjs";
 import { normalizeLemma } from "./lib/dict-normalize.mjs";
-import { generatedAtForPayload, readJsonIfExists } from "./lib/dataset-meta.mjs";
+import { generatedAtForPayload, readJsonIfExists, licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const INPUT = path.resolve(process.cwd(), "data", "lexico", "h5_maker_qa_candidates.json");
@@ -226,6 +226,7 @@ export function buildPayload(qaPacket, generatedAt = new Date().toISOString(), p
     .filter(row => row.sourceCheckStatus !== "source-declared-correction-candidate")
     .map(excludedRow);
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "h5-maker-correction-proposal-packet",
     claim: "The source-checked H5 maker-QA packet yields one maker-facing correction proposal and no automatic dictionary edit.",

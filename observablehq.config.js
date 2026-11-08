@@ -71,6 +71,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/lexicography": "Dictionary genealogy: first empirical findings on how the Cologne Sanskrit dictionaries descend from one another, derived from canonical headword data.",
   "/tools/descent-axes": "Descent axes (PH2 CITE-4AXIS): whether citation-profile similarity is a fourth separable axis of dictionary inheritance beside content, convention, and microstructure — axis-pair scatters and the 4×4 correlation matrix on the testable L0 edges.",
   "/tools/lexicographic-conventions": "Convention fingerprints: how the Cologne Sanskrit dictionaries relate by house style — orthographic and citation formatting — as a cladogram.",
+  "/tools/access-structures": "Access structures (Zugriffsstrukturen): which alphabetisation rule produced each Cologne dictionary's printed headword order — best-fit varṇamālā rule and violation rate per dictionary, what the order can and cannot decide about ṃ/ḥ/geminates, AP's root nests, and a browsable counterexample list.",
   "/tools/citation-truncation": "Citation truncation and hapax overlap (PET-MW-CITE): whether the Petersburg-to-MW lineage is visible as a one-directional loss of citation locator precision, with within-lane control pairs and a rare-headword (hapax) overlap test.",
   "/tools/ortho-drift": "Orthographic drift (PH5 ORTHO-CLOCK): pre-reform German and Russian spellings in dictionary gloss text as a dating and descent signal — per-dictionary drift census with CIs, drift-vs-year scatter, era-composition clock, and a searchable top-drifted-forms table.",
   "/tools/structural-register": "Structural register scatter (H6): whether citation style plus grammar marking predicts a Cologne dictionary's family.",
@@ -89,6 +90,7 @@ const PAGE_DESCRIPTIONS = {
   "/tools/review-source-siglum": "Review queue: source sigla cited by only one tagged Cologne dictionary — genuinely unique, or the same source under different aliases.",
   "/tools/sense-divergence": "Cross-dict entry-coverage divergence: which Sanskrit headwords each Cologne dictionary treats very differently from its peers.",
   "/tools/h4-review": "H4 semantic-field review: per dictionary and Amarakośa field, whether an apparent coverage anomaly is real or an artifact.",
+  "/tools/benchmark": "Atlas benchmark v2: three frozen held-out tasks, double-keyed gold coverage, rule and trivial baselines, chance-corrected agreement, and an honest insufficiency report.",
   "/tools/cross-dict": "Cross-dictionary comparison: nine Cologne dictionaries on a format-robust common-block vocabulary, showing citation density and structure.",
   "/tools/dictionary-coverage": "All-dictionary coverage: the nine-chapter comparison extended to every CDSL v02 dictionary with a main source file.",
   "/tools/matrix-explorer": "Matrix explorer: an 18×14 block-by-article-type heatmap of Monier-Williams, with per-cell counts and filtering.",
@@ -111,7 +113,8 @@ const PAGE_DESCRIPTIONS = {
   "/dicts/skd": "SKD — Śabdakalpadruma (1822–1858): an atlas chapter on this classical Sanskrit encyclopaedic kosha.",
   "/dicts/vcp": "VCP — Vācaspatyam (1873–1884): an atlas chapter on this classical Sanskrit encyclopaedic kosha.",
   "/dicts/armh": "ARMH — Abhidhānaratnamālā (Halāyudhakośa, ~10th c.): an atlas chapter on this classical Sanskrit synonymic kosha.",
-  "/dicts/abch": "ABCH — Abhidhānacintāmaṇi (~12th c.): an atlas chapter on Hemacandra's classical Sanskrit synonymic kosha."
+  "/dicts/abch": "ABCH — Abhidhānacintāmaṇi (~12th c.): an atlas chapter on Hemacandra's classical Sanskrit synonymic kosha.",
+  "/dicts/pd": "PD — the Poona Dictionary / EDSHP (1948–, unfinished): an atlas chapter on the fragment's covered span, citation density, and production record."
 };
 
 // Escape a string for safe interpolation into an HTML attribute value.
@@ -205,6 +208,7 @@ export default {
         { name: "Descent axes", path: "/tools/descent-axes" },
         { name: "Citation truncation", path: "/tools/citation-truncation" },
         { name: "Convention fingerprints", path: "/tools/lexicographic-conventions" },
+        { name: "Access structures", path: "/tools/access-structures" },
         { name: "Orthographic drift", path: "/tools/ortho-drift" },
         { name: "Structural register", path: "/tools/structural-register" },
         { name: "Data-richness typology", path: "/tools/richness-typology" },
@@ -226,7 +230,8 @@ export default {
         { name: "Alignment confidence", path: "/tools/review-alignment" },
         { name: "Source-siglum aliases", path: "/tools/review-source-siglum" },
         { name: "Cross-dict divergence", path: "/tools/sense-divergence" },
-        { name: "H4 semantic fields", path: "/tools/h4-review" }
+        { name: "H4 semantic fields", path: "/tools/h4-review" },
+        { name: "Benchmark v2", path: "/tools/benchmark" }
       ]
     },
     {
@@ -261,7 +266,8 @@ export default {
         { name: "SKD (Śabdakalpadruma)", path: "/dicts/skd" },
         { name: "VCP (Vācaspatya)", path: "/dicts/vcp" },
         { name: "ARMH (Halāyudha)", path: "/dicts/armh" },
-        { name: "ABCH (Hemacandra)", path: "/dicts/abch" }
+        { name: "ABCH (Hemacandra)", path: "/dicts/abch" },
+        { name: "PD (Poona Dictionary, unfinished)", path: "/dicts/pd" }
       ]
     }
   ],

@@ -63,15 +63,14 @@ Regenerate with::
 """
 from __future__ import annotations
 
-
 import collections
 import csv
 import hashlib
 import json
 import os
 import re
-import sys
 import subprocess
+import sys
 import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))

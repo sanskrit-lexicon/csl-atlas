@@ -22,11 +22,11 @@ Run from repo root:
   python scripts/L0/apply_lrv_fri_annotation.py --rerun    # + rebuild trees
 """
 
-import os
-import sys
 import csv
 import json
+import os
 import subprocess
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

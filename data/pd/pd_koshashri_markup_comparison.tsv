@@ -1,0 +1,13 @@
+axis	cologne_pdscan_2020	koshashri_portal	evidence
+per-entry public URL	yes — getword.php?key=<SLP1>, HTTP 200 (re-probed 27-10-2026 live probe: 927 B)	no — /search/preview/<id> answers the sign-in page (re-probed 27-10-2026 live probe)	C1/K3 re-probed 27-10-2026 live probe
+stable record id in the artefact	<L>510 in text, ID=510 in entry HTML	numeric vocable.id in doT templates only, not publicly exposed	25-10-2026 audit (Uprava papers/A68/sweeps/2026-10-25-PD-two-digitisations-html-markup.md)
+citation markup	none — <ls> 0, <ab> 0, <info> 0 in pd.txt (sigla are plain text)	unobservable — no public entry artefact	census 2026-10-27; gating 27-10-2026 live probe
+printed-page anchor	<pc> anchor on every record (107630) + scan deep link (servepdf)	not in the public surface (page ranges only, per volume)	census 2026-10-27
+headword keys	<k1>/<k2> SLP1 on every record (107630)	JSON carries per-volume opening/closing entries only	census + snapshot 2026-10-27
+volume metadata	derivable from <pc> ranges; no official machine metadata	public JSON per volume: year, editor, pages, opening/closing entry (33/35 ids answer)	snapshot 2026-10-27
+bulk machine text	yes — one zip, 107630 <L> records, 55122076 bytes text	none observed; no export offered	census 2026-10-27; C7 Uprava papers/A68/sweeps/2026-10-14-C7-koshashri-cologne-audit.md
+public API	none found (JSON guesses 404)	fetchVolumeInfo/<n> only; POST data paths redirect to /403	snapshot 2026-10-27; 25-10-2026 audit (Uprava papers/A68/sweeps/2026-10-25-PD-two-digitisations-html-markup.md)
+rendering	static HTML per entry, machine-generated	JS shell + SockJS/STOMP, client-side render; search term absent from served HTML	25-10-2026 audit (Uprava papers/A68/sweeps/2026-10-25-PD-two-digitisations-html-markup.md)
+crawl surface	direct downloads	robots.txt 404, sitemap.xml 404 (re-probed 27-10-2026 live probe)	27-10-2026 live probe
+licence	CC BY-NC-SA 3.0	all rights reserved (permission by email)	C7 Uprava papers/A68/sweeps/2026-10-14-C7-koshashri-cologne-audit.md
+entry schema observability	full — record text and entry HTML both public	none public — entry schema behind sign-in is UNKNOWN, not absent	K3 re-probed 27-10-2026 live probe

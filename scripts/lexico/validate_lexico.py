@@ -7,11 +7,11 @@ and that each row's internal invariants hold. Run after m1/m2:
     python scripts/lexico/validate_lexico.py      # exits non-zero on any failure
 """
 
-import os
-import sys
+import collections
 import csv
 import json
-import collections
+import os
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

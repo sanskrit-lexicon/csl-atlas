@@ -64,11 +64,11 @@ import os
 # bit-identical in output. Must be set before ctranslate2/torch import their pools.
 os.environ.setdefault("OMP_NUM_THREADS", "1")
 
-import re
-import sys
 import csv
 import json
 import random
+import re
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -503,9 +503,9 @@ def main():
         cand_all = cand_all[:SAMPLE]
     robust = robustness_analyses(mw_bags, pwg_bags, ap_bags, cand_all)
     pd = robust["paired"]
-    print("\n  PAIRED (same headwords scored in both, n=%d): MW-vs-PWG %.4f  vs  Apte %.4f  "
-          "(diff %+.4f, sign-test z=%.2f)" % (pd["scored_in_both"], pd["paired_mean_pwg"],
-          pd["paired_mean_ap"], pd["mean_diff_pwg_minus_ap"], pd["sign_test_z"]))
+    print(f"\n  PAIRED (same headwords scored in both, n={pd['scored_in_both']}): "
+          f"MW-vs-PWG {pd['paired_mean_pwg']:.4f}  vs  Apte {pd['paired_mean_ap']:.4f}  "
+          f"(diff {pd['mean_diff_pwg_minus_ap']:+.4f}, sign-test z={pd['sign_test_z']:.2f})")
     print("  similarity-floor sweep (paired PWG vs Apte; excess emerges only on the")
     print("  high-confidence subset where MW's gloss most closely echoes PWG's):")
     print(f"    {'floor':>6s} {'n':>5s} {'PWG':>7s} {'Apte':>7s} {'PWG-Apte':>9s}")

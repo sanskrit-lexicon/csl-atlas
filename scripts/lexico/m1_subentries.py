@@ -44,16 +44,16 @@ Outputs (data/lexico/; sample runs get a `.<letter>` infix):
     m1_report[.<letter>].json                  run metadata + caveats + marker table
 """
 
-import os
-import re
-import sys
+import collections
 import csv
 import glob
 import json
-import collections
+import os
+import re
+import sys
 
 sys.path.insert(0, os.path.abspath("scripts/forensic"))
-from parse_cslorig import iter_entries, CSL_ORIG
+from parse_cslorig import CSL_ORIG, iter_entries
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

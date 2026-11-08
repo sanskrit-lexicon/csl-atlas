@@ -15,12 +15,13 @@ Inputs : data/L0/preview/dist_gower.csv  (convention, 32 dicts)
 Outputs: data/L0/preview/tanglegram.png + homoplasy_metrics.json + two newicks.
 """
 
-import os
-import sys
 import csv
 import json
+import os
+import sys
+
 import numpy as np
-from scipy.cluster.hierarchy import linkage, to_tree, leaves_list
+from scipy.cluster.hierarchy import leaves_list, linkage, to_tree
 from scipy.spatial.distance import squareform
 
 sys.stdout.reconfigure(encoding="utf-8")

@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseCsv, structuralDistance } from "./build-h6-structural-review.mjs";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 
 const SCHEMA_VERSION = "1.0.0";
 const GENERATED_BY = "npm run build-three-axis-comparison";
@@ -309,6 +310,7 @@ export function buildPayload({ bootstrapRows, jaccardRows, conventionRows, struc
   const comparisonRows = bootstrapRows.map(row => buildComparisonRow(row, indexes));
   const focusRows = FOCUS_EDGE_IDS.map(rowId => comparisonRows.find(row => row.rowId === rowId)).filter(Boolean);
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "three-axis-comparison-packet",
     claim: "THREE-AXES: content, convention, and microstructure inheritance must be compared as separate atlas evidence axes.",

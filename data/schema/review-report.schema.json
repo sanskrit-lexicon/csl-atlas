@@ -1,4 +1,6 @@
 {
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Review Report",
   "description": "Stub schema for atlas review reports. See docs/REVIEW_REPORTS.md for the canonical field and status definitions. Reports overlay machine output with human judgment; they never edit generated source data.",

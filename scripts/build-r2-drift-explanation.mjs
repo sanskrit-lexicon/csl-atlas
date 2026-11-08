@@ -10,6 +10,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { licenseFields } from "./lib/dataset-meta.mjs";
 import { CHECKPOINT_DIAGNOSTIC_IDS } from "./build-r2-label-proposals.mjs";
 import { PARSER_DISPOSITIONS } from "./build-r2-checkpoint-review.mjs";
 import { HUMAN_STATUSES } from "./lib/review-report.mjs";
@@ -343,6 +344,7 @@ export function buildPayload(labelPayload, checkpointPacket, checkpointReview) {
   const checkpointByDisposition = countBy(decidedCheckpointRows, row => row.reviewedValue?.parserDisposition ?? "unspecified");
   const postDecision = checkpointDecided > 0;
   const payload = {
+    ...licenseFields(),
     schemaVersion: SCHEMA_VERSION,
     status: "r2-drift-explanation-packet",
     claim: postDecision

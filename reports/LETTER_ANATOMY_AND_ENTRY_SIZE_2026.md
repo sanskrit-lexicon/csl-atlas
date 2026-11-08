@@ -1,6 +1,6 @@
 # Per-letter anatomy of the Sanskrit lexicon — samāsa share, upasarga profile, and the entry-size "funding-decay" test
 
-_Created: 21-07-2026 · Last updated: 21-07-2026_
+_Created: 21-07-2026 · Last updated: 18-10-2026_
 
 This report turns three per-letter observations made in passing by the H1336 PD × DCS study
 ([PD_DCS_CORPUS_COVERAGE_2026.md](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/reports/PD_DCS_CORPUS_COVERAGE_2026.md)
@@ -274,12 +274,53 @@ per-letter law holds and reproduces §2 exactly (MW `a` 83.1 %, `u` 79.5 %, `s` 
 morphological splitter; the plan wires the DharmaMitra ByT5 model
 ([import_compound_segmentation.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/import_compound_segmentation.py)
 → [compound_share.py](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/scripts/compound_share.py),
-calibrated against MW dash-truth). **In this run the ByT5 model was not reachable in the build
-environment**, so the feed
-([compound_share_by_letter.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/compound_share_by_letter.tsv))
-ships the **dash-truth-only** columns (MW/GRA) with the splitter columns marked *model
-unavailable* — the accepted degraded outcome. Re-running the import step where the model is
-reachable fills the splitter estimates (with the MW-calibration error bar) for all dicts.
+calibrated against MW dash-truth).
+
+**The splitter columns are now populated (H6964, 18-10-2026).** The committed
+[compound_share_by_letter.tsv](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/pd/compound_share_by_letter.tsv)
+carries `splitter_pct` + a Wilson 95 % CI + its n for **all 74 rows** (42 MW, 32 GRA); no
+`n/a (model unavailable)` cell remains. The estimates come from the import-once snapshot
+[compound_segmentation_sample.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/dharmamitra/compound_segmentation_sample.json)
+— model `chronbmm/sanskrit5-multitask` at the pinned revision `c0d2ada54f3d`, dated
+2026-10-18, 1,637 segmented headwords (25 per letter, equal-letter stratified). The build
+(`scripts/compound_share.py`) reads only that JSON and makes no network call (verified with
+`unshare -n`); two consecutive rebuilds are byte-identical. The inference box was a single
+vCPU, so the same pinned weights were run with dynamic int8 quantization of the encoder and
+decoder only (the `lm_head` stays in fp32 — quantizing it corrupts generation); the
+quantization is recorded in the snapshot. The snapshot is re-runnable at ~300/letter on a
+larger box without any code change.
+
+The splitter answers "is this a compound (2+ members)?", not "how deep is the compound?"
+The dash truth has two readings (A68 Q13), so the calibration is a **2×2 against both** —
+the same splitter verdict (`n_segments ≥ 2`) scored twice. The loose reading is "any dash
+joint"; the strict reading is the em-dash joint count, 3+ members (≥ 2 em dashes), over the
+em-dash population that is the denominator of the 6.8 % figure.
+
+#### 7.1.1 Calibration — both dash truths (MW)
+
+| truth | population | n | truth + | splitter + | tp | fp | fn | tn | precision | recall | F1 |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **loose** — any dash joint | all sampled MW headwords | 941 | 516 (54.8 %) | 347 (36.9 %) | 273 | 74 | 243 | 351 | 0.787 | 0.529 | **0.633** |
+| **strict** — em-dash 3+ joints | sampled MW em-dash headwords | 440 | 26 (5.9 %) | 250 (56.8 %) | 21 | 229 | 5 | 185 | 0.084 | 0.808 | **0.152** |
+
+The loose overall base rate is an equal-per-letter sample average, not a population-weighted
+one; the per-letter feed is the comparable row. On the anchor letter, MW `a` gives **84.0 %
+dash-marked** (21/25) against the population's 83.1 %, and the strict sample base is **5.9 %**
+against the population's 6.8 %. GRA is calibrated on the loose reading only (the strict
+em-dash reading is MW's convention; GRA's marker convention is A68 Q8, not assumed here):
+n = 696, base 26.4 %, precision 0.408, recall 0.592, F1 0.483.
+
+**What the two truths disagree about.** The loose truth asks whether the headword is marked
+as a compound at all; the strict truth asks whether it is a 3+ joint. They differ by 48.9
+points of base rate. The same splitter calls therefore look competent against the loose truth
+(F1 0.63) and poor as a depth detector (F1 0.15): strict precision 0.084 says only 8.4 % of
+its positive calls are 3+ joints, while strict recall 0.808 says it still catches most of the
+true 3+ joints. The disagreements are not random: the model reads prefixed forms
+(`ati-`, `anu-`, `apa-`, `abhi-`, `ava-`,
+`ā-`, privative `a-`) as one word, exactly the bound-prefix behaviour the typography probe
+documented for privatives. Reporting one F1 alone would hide that. Neither reading licenses
+the loose *depth* bracket the probe killed; both are shown so the splitter's error bar rides
+with every estimate in the TSV.
 
 ### 7.2 Wave B — entry-size decay in real publication time
 

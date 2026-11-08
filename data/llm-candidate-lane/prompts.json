@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dataset": "h7101_llm_candidate_prompts",
+  "task": "classify-and-span a candidate correction with confidence and abstention",
+  "selectedVariant": "P6",
+  "variants": [
+    {
+      "id": "P1",
+      "purpose": "zero-shot direct classification",
+      "template": "You are auditing one line of a Sanskrit dictionary.\nClassify what kind of edit the line needs. Allowed labels:\nocr-error — a letter inside lexical text (headword, gloss, or citation content) is wrong and should be corrected.\nsense-split — the correction inserts or removes a sense boundary (semicolon/pipe, <div>, or a numbered sense marker).\nsource-mismatch — the correction changes the citation/source label inside <ls>...</ls> by more than punctuation or case.\nmarkup-normalization — punctuation, tags, whitespace, case, or metadata only; text is not lexically wrong.\nno-correction — the line is already acceptable; do not propose an edit.\nSource: {{DICT}} {{LOCUS}}\nLine:\n{{TEXT}}\nReturn one JSON object and nothing else: {\"editType\":\"ocr-error|sense-split|source-mismatch|markup-normalization|no-correction\",\"span\":{\"text\":\"exact changed text or empty string\",\"start\":0,\"end\":0},\"confidence\":0.0,\"abstain\":false,\"rationale\":\"one sentence\"}\nAbstain (abstain=true) if the line has no defensible single edit. Never invent a correction.",
+      "sha256": "6680b355d4c0be6eea161965cb26b7ca0d6dbc3248088def7d14d8184edb7635"
+    },
+    {
+      "id": "P2",
+      "purpose": "abstention-first, then classify",
+      "template": "Step 1: decide whether this line contains a defensible editorial defect.\nStep 2: only if yes, classify it.\nLabels: ocr-error, sense-split, source-mismatch, markup-normalization, no-correction.\nocr-error — a letter inside lexical text (headword, gloss, or citation content) is wrong and should be corrected.\nsense-split — the correction inserts or removes a sense boundary (semicolon/pipe, <div>, or a numbered sense marker).\nsource-mismatch — the correction changes the citation/source label inside <ls>...</ls> by more than punctuation or case.\nmarkup-normalization — punctuation, tags, whitespace, case, or metadata only; text is not lexically wrong.\nno-correction — the line is already acceptable; do not propose an edit.\nLine ({{DICT}} {{LOCUS}}):\n{{TEXT}}\nJSON only: {\"editType\":\"ocr-error|sense-split|source-mismatch|markup-normalization|no-correction\",\"span\":{\"text\":\"exact changed text or empty string\",\"start\":0,\"end\":0},\"confidence\":0.0,\"abstain\":false,\"rationale\":\"one sentence\"}\nPrefer abstain=true over a low-confidence guess.",
+      "sha256": "459a14741adf300e622cc6b78a2fd900485ca795abb7b64cb9a5be72c5ebd1a6"
+    },
+    {
+      "id": "P3",
+      "purpose": "span-first extraction",
+      "template": "Find the smallest span in the line that a human editor would change.\nThen classify the change using these labels: ocr-error, sense-split, source-mismatch, markup-normalization, no-correction.\nocr-error — a letter inside lexical text (headword, gloss, or citation content) is wrong and should be corrected.\nsense-split — the correction inserts or removes a sense boundary (semicolon/pipe, <div>, or a numbered sense marker).\nsource-mismatch — the correction changes the citation/source label inside <ls>...</ls> by more than punctuation or case.\nmarkup-normalization — punctuation, tags, whitespace, case, or metadata only; text is not lexically wrong.\nno-correction — the line is already acceptable; do not propose an edit.\nLine ({{DICT}} {{LOCUS}}):\n{{TEXT}}\nReturn JSON only. If no span is defensible, set abstain=true and span.text to an empty string.\n{\"editType\":\"ocr-error|sense-split|source-mismatch|markup-normalization|no-correction\",\"span\":{\"text\":\"exact changed text or empty string\",\"start\":0,\"end\":0},\"confidence\":0.0,\"abstain\":false,\"rationale\":\"one sentence\"}",
+      "sha256": "90164340c1cc2f041e8b6f1ea1fc0bf53ae3e3b43ed1370671fa7b24ba5735c4"
+    },
+    {
+      "id": "P4",
+      "purpose": "critical-difference prompt with explicit null control",
+      "template": "Two kinds of lines occur here: lines that were already acceptable and lines that a human corrected.\nFor the line below, name the correction type and the exact changed span.\nLabels: ocr-error, sense-split, source-mismatch, markup-normalization, no-correction. ocr-error — a letter inside lexical text (headword, gloss, or citation content) is wrong and should be corrected.\nsense-split — the correction inserts or removes a sense boundary (semicolon/pipe, <div>, or a numbered sense marker).\nsource-mismatch — the correction changes the citation/source label inside <ls>...</ls> by more than punctuation or case.\nmarkup-normalization — punctuation, tags, whitespace, case, or metadata only; text is not lexically wrong.\nno-correction — the line is already acceptable; do not propose an edit.\nA markup-only change is still a correction, but it is not an OCR error.\nLine ({{DICT}} {{LOCUS}}):\n{{TEXT}}\nJSON only: {\"editType\":\"ocr-error|sense-split|source-mismatch|markup-normalization|no-correction\",\"span\":{\"text\":\"exact changed text or empty string\",\"start\":0,\"end\":0},\"confidence\":0.0,\"abstain\":false,\"rationale\":\"one sentence\"}\nAbstain when the evidence is insufficient; do not promote the row to reviewed.",
+      "sha256": "72f493d75c6f3926dc61103459b17057b169dcc60e08cdf86368add4e805b01d"
+    },
+    {
+      "id": "P5",
+      "purpose": "citation-aware classification",
+      "template": "You are reviewing a Cologne Digital Sanskrit lexicon line.\nPay special attention to <ls> citation content and to sense boundaries.\nAllowed labels: ocr-error, sense-split, source-mismatch, markup-normalization, no-correction. ocr-error — a letter inside lexical text (headword, gloss, or citation content) is wrong and should be corrected.\nsense-split — the correction inserts or removes a sense boundary (semicolon/pipe, <div>, or a numbered sense marker).\nsource-mismatch — the correction changes the citation/source label inside <ls>...</ls> by more than punctuation or case.\nmarkup-normalization — punctuation, tags, whitespace, case, or metadata only; text is not lexically wrong.\nno-correction — the line is already acceptable; do not propose an edit.\nLine ({{DICT}} {{LOCUS}}):\n{{TEXT}}\nReturn JSON only: {\"editType\":\"ocr-error|sense-split|source-mismatch|markup-normalization|no-correction\",\"span\":{\"text\":\"exact changed text or empty string\",\"start\":0,\"end\":0},\"confidence\":0.0,\"abstain\":false,\"rationale\":\"one sentence\"}\nIf the only change would be punctuation outside a citation, prefer markup-normalization.",
+      "sha256": "5e9dbc13c82d94ba8a74d85a4941b917248f96518918f84f919b612aa4865798"
+    },
+    {
+      "id": "P6",
+      "purpose": "conservative production prompt (selected for a credentialed run)",
+      "template": "Task: generate a candidate correction for one lexicon line, with span provenance.\nDo not rewrite the line. Do not mark anything reviewed. Output a candidate only.\nAllowed edit types and their meanings:\nocr-error — a letter inside lexical text (headword, gloss, or citation content) is wrong and should be corrected.\nsense-split — the correction inserts or removes a sense boundary (semicolon/pipe, <div>, or a numbered sense marker).\nsource-mismatch — the correction changes the citation/source label inside <ls>...</ls> by more than punctuation or case.\nmarkup-normalization — punctuation, tags, whitespace, case, or metadata only; text is not lexically wrong.\nno-correction — the line is already acceptable; do not propose an edit.\nRules:\n1. span.text must be copied exactly from the input line.\n2. If two labels fit, choose the narrowest lexical label; use markup-normalization for punctuation only.\n3. If confidence < 0.6, set abstain=true and confidence to the measured value.\nLine ({{DICT}} {{LOCUS}}):\n{{TEXT}}\nReturn exactly one JSON object: {\"editType\":\"ocr-error|sense-split|source-mismatch|markup-normalization|no-correction\",\"span\":{\"text\":\"exact changed text or empty string\",\"start\":0,\"end\":0},\"confidence\":0.0,\"abstain\":false,\"rationale\":\"one sentence\"}",
+      "sha256": "0a6fb6c846fffcbe7bd917e744f3d080a3cdcb31f843299308b4c7b2e16174fa"
+    }
+  ],
+  "labelGuide": "ocr-error — a letter inside lexical text (headword, gloss, or citation content) is wrong and should be corrected.\nsense-split — the correction inserts or removes a sense boundary (semicolon/pipe, <div>, or a numbered sense marker).\nsource-mismatch — the correction changes the citation/source label inside <ls>...</ls> by more than punctuation or case.\nmarkup-normalization — punctuation, tags, whitespace, case, or metadata only; text is not lexically wrong.\nno-correction — the line is already acceptable; do not propose an edit.",
+  "outputSchema": "{\"editType\":\"ocr-error|sense-split|source-mismatch|markup-normalization|no-correction\",\"span\":{\"text\":\"exact changed text or empty string\",\"start\":0,\"end\":0},\"confidence\":0.0,\"abstain\":false,\"rationale\":\"one sentence\"}"
+}

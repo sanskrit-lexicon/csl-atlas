@@ -38,19 +38,20 @@ table, not here — this module owns HOW an allowed command is executed.
 from __future__ import annotations
 
 import os
+
+# --- pyfloor bootstrap (H3541): declared interpreter floor + newline= compat ---
+import os as _os
 import subprocess
+import sys as _sys
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import NamedTuple
 
-# --- pyfloor bootstrap (H3541): declared interpreter floor + newline= compat ---
-import os as _os, sys as _sys
 if _os.path.dirname(_os.path.abspath(__file__)) not in _sys.path:
     _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
-import pyfloor  # noqa: E402
 # --- end pyfloor bootstrap ---
-
 import _common  # noqa: E402
+import pyfloor  # noqa: E402
 
 DEFAULT_TIMEOUT_S = 60
 

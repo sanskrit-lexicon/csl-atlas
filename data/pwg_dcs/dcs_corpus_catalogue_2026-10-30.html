@@ -1,0 +1,957 @@
+<!-- Process the settings -->
+<!DOCTYPE HTML>
+<html lang="en" itemscope itemtype="http://schema.org/Science">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Digital Corpus of Sanskrit (DCS) - Online Sanskrit dictionary and annotated corpus
+	</title>
+	<meta name="description" content="The Digital Corpus of Sanskrit contains lemmatized and POS tagged texts from all layers and genres of Sanskrit literature.">
+	<meta name="author" content="Oliver Hellwig">
+	<meta name="keywords" content="Sanskrit, corpus, corpus linguistics, dictionary, Sanskrit online dictionary, Sanskrit corpus, KWIC, key-word-in-context, lexicography, lexicon, citation, parallels">
+	<meta name="google-site-verification" content="YIPZCkqDobyvaaEbbLY6bGeDFM6d2UCVEod5tsPuQIw" >
+	<meta itemprop="name" content="Digital Corpus of Sanskrit">
+	<meta itemprop="description" content="Online dictionary of Sanskrit">
+	<meta itemprop="image" content="img/TabBg.gif">
+	<link rel="stylesheet" type="text/css" href="design/navigation.css">
+	<link rel="stylesheet" type="text/css" href="design/layout.css">
+	<link rel="stylesheet" type="text/css" href="design/ajaxmodal.css">
+	<link rel="stylesheet" type="text/css" href="design/css-tree/css-tree.css">
+	<link rel="stylesheet" type="text/css" href="design/analysis.css">
+	<link rel="stylesheet" type="text/css" href="design/select.css">
+	<link rel="stylesheet" type="text/css" href="design/histogram.css">
+	<link rel="stylesheet" type="text/css" href="design/unsupervised.css">
+	<link rel="stylesheet" type="text/css" href="design/parallels.css">
+	<!-- TODO dynamically load the latest version from the web -->
+	<script type="text/javascript" src="js/libraries/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src='js/libraries/d3.min.js'></script>
+	<script type="text/javascript" src='js/libraries/jquery-ui-1.14.1/jquery-ui.min.js'></script>
+	<link rel="stylesheet" href="js/libraries/jquery-ui-1.14.1/jquery-ui.min.css">
+	<!-- End TODO -->
+
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.5"> </script>
+	<script type="text/javascript" src="js/transliteration.js"></script>
+	<script type="text/javascript" src="js/toggle_div.js"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+	<script type="text/javascript" src="js/query.js"></script>
+	<script type="text/javascript" src='js/word-diagram.js'></script>
+	<script type="text/javascript" src='js/dependencies.js'></script>
+	<script type="text/javascript" src='js/dependencies-train.js'></script>
+	<script type="text/javascript" src='js/dependencies-revise.js'></script>
+	<script type="text/javascript" src='js/vc-functions.js'></script>
+	<script type="text/javascript" src='js/histogram.js'></script>
+	<script type="text/javascript" src='js/occurrences-unsupervised.js'></script>
+</head>
+<body>
+
+
+<div id="container">
+	<div id="header">
+<div style="color:#fff;font-weight:bold;font-size:1.5em;padding-top:20px;padding-bottom:20px;padding-left:10px;">DCS - Digital Corpus of Sanskrit</div>
+<!-- navigation -->
+	<ul class="topnav">
+		<li><a href="index.php">Home</a></li>
+		<li><a href="index.php?contents=abfrage">Query</a></li>
+		<li><a href="index.php?contents=dictionary">Dictionary</a></li>
+		<li><a href="index.php?contents=texte">Texts</a></li>
+		<li><a href="index.php?contents=multiword_query">Extended Queries</a></li>
+		<li><a href="index.php?contents=kwic">KWIC</a></li>
+		<li><a href="index.php?contents=parallels">Parallels</a>
+		<li><a href="index.php?contents=vc">Vedic Conc.</a>
+		<li><a href="index.php?contents=corpus">Corpus</a></li>
+		<li><a href="index.php?contents=help_center">Help</a></li>
+		<li><a href="index.php?contents=functions">Functions</a></li>
+		<li><a href="index.php?contents=login">Login</a></li>
+		<li class="icon">
+		    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+		</li>
+	</ul>
+	</div>
+	
+&nbsp;	<div id="content">
+		<noscript  style="font-weight:bold;background-color:red;color:white;">Please consider activating JavaScript!</noscript>
+<h1>The DCS Corpus</h1>
+
+<div class="small"><a href="index.php?contents=help_corpus">Help!</a></div>
+
+<form action="index.php" method="get">
+	<input type="hidden" name="contents" value="corpus"/><!-- Redirects to this page. -->
+	<strong>Display mode:</strong>
+	<select size="1" name="displaymode" onchange="this.form.submit()">
+		<option value="1" selected>Default</option>
+		<option value="2">Time</option>
+		<option value="3">Subject</option>
+		<option value="4">Time and subject</option>
+	</select><br/>
+	<input type="image" name="button_display" src="img/Button_Proceed.png"/>
+</form>
+<div style="margin-top:10px;margin-bottom:20px">
+<h2 style="margin-top:30px;">Texts with supervised analysis</h2>
+
+<table>
+	<tr><th>Text</th><th>Author</th><th>Time slot</th><th>Subject</th><th>Completed</th><th>Show</th><th>Bib.</th><th>Dict.</th><th>Freq.</th></tr>
+	<tr style="background:#9dbae2">
+		<td>AMTest</td><td>&nbsp;</td><td> --- </td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=247">S</a></td><td><a href="index.php?contents=textdetails&IDText=247">B</a></td><td><a href="index.php?contents=dictionary&text_id=247">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=247">F</a></td>
+	</tr>
+	<tr>
+		<td>Abhidharmakośa</td><td>Vasubandhu</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=378">S</a></td><td><a href="index.php?contents=textdetails&IDText=378">B</a></td><td><a href="index.php?contents=dictionary&text_id=378">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=378">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Abhidharmakośabhāṣya</td><td>Vasubandhu</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=379">S</a></td><td><a href="index.php?contents=textdetails&IDText=379">B</a></td><td><a href="index.php?contents=dictionary&text_id=379">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=379">F</a></td>
+	</tr>
+	<tr>
+		<td>Abhidhānacintāmaṇi</td><td>Hemacandra</td><td>medieval</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=449">S</a></td><td><a href="index.php?contents=textdetails&IDText=449">B</a></td><td><a href="index.php?contents=dictionary&text_id=449">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=449">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Abhinavacintāmaṇi</td><td>Cakrapāṇidāsa</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=398">S</a></td><td><a href="index.php?contents=textdetails&IDText=398">B</a></td><td><a href="index.php?contents=dictionary&text_id=398">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=398">F</a></td>
+	</tr>
+	<tr>
+		<td>Acintyastava</td><td>Nāgārjuna</td><td>medieval</td><td>Buddhist</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=415">S</a></td><td><a href="index.php?contents=textdetails&IDText=415">B</a></td><td><a href="index.php?contents=dictionary&text_id=415">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=415">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Agastīyaratnaparīkṣā</td><td>&nbsp;</td><td>late</td><td>Ratnashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=11">S</a></td><td><a href="index.php?contents=textdetails&IDText=11">B</a></td><td><a href="index.php?contents=dictionary&text_id=11">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=11">F</a></td>
+	</tr>
+	<tr>
+		<td>Agnipurāṇa</td><td>&nbsp;</td><td>classical</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=388">S</a></td><td><a href="index.php?contents=textdetails&IDText=388">B</a></td><td><a href="index.php?contents=dictionary&text_id=388">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=388">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Aitareya-Āraṇyaka</td><td>&nbsp;</td><td>early</td><td>Aranyaka</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=555">S</a></td><td><a href="index.php?contents=textdetails&IDText=555">B</a></td><td><a href="index.php?contents=dictionary&text_id=555">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=555">F</a></td>
+	</tr>
+	<tr>
+		<td>Aitareyabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=471">S</a></td><td><a href="index.php?contents=textdetails&IDText=471">B</a></td><td><a href="index.php?contents=dictionary&text_id=471">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=471">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Aitareyopaniṣad</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=421">S</a></td><td><a href="index.php?contents=textdetails&IDText=421">B</a></td><td><a href="index.php?contents=dictionary&text_id=421">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=421">F</a></td>
+	</tr>
+	<tr>
+		<td>Amarakośa</td><td>Amara</td><td>classical</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=84">S</a></td><td><a href="index.php?contents=textdetails&IDText=84">B</a></td><td><a href="index.php?contents=dictionary&text_id=84">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=84">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Amaraughaśāsana</td><td>Gorakṣanātha</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=59">S</a></td><td><a href="index.php?contents=textdetails&IDText=59">B</a></td><td><a href="index.php?contents=dictionary&text_id=59">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=59">F</a></td>
+	</tr>
+	<tr>
+		<td>Amaruśataka</td><td>Amaru</td><td>classical</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=131">S</a></td><td><a href="index.php?contents=textdetails&IDText=131">B</a></td><td><a href="index.php?contents=dictionary&text_id=131">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=131">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Amṛtabindūpaniṣat</td><td>&nbsp;</td><td>epic</td><td>Upanishad</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=113">S</a></td><td><a href="index.php?contents=textdetails&IDText=113">B</a></td><td><a href="index.php?contents=dictionary&text_id=113">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=113">F</a></td>
+	</tr>
+	<tr>
+		<td>Antagaḍadasāo</td><td>&nbsp;</td><td> --- </td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=260">S</a></td><td><a href="index.php?contents=textdetails&IDText=260">B</a></td><td><a href="index.php?contents=dictionary&text_id=260">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=260">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Arthaśāstra</td><td>Kauṭilya</td><td>epic</td><td>Arthashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=354">S</a></td><td><a href="index.php?contents=textdetails&IDText=354">B</a></td><td><a href="index.php?contents=dictionary&text_id=354">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=354">F</a></td>
+	</tr>
+	<tr>
+		<td>Atharvaprāyaścittāni</td><td>&nbsp;</td><td>early</td><td>Kalpa</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=502">S</a></td><td><a href="index.php?contents=textdetails&IDText=502">B</a></td><td><a href="index.php?contents=dictionary&text_id=502">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=502">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Atharvaveda (Paippalāda)</td><td>&nbsp;</td><td>early</td><td>Atharvaveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=468">S</a></td><td><a href="index.php?contents=textdetails&IDText=468">B</a></td><td><a href="index.php?contents=dictionary&text_id=468">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=468">F</a></td>
+	</tr>
+	<tr>
+		<td>Atharvaveda (Śaunaka)</td><td>&nbsp;</td><td>early</td><td>Atharvaveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=464">S</a></td><td><a href="index.php?contents=textdetails&IDText=464">B</a></td><td><a href="index.php?contents=dictionary&text_id=464">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=464">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Atharvavedapariśiṣṭa</td><td>&nbsp;</td><td>early</td><td>Kalpa</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=515">S</a></td><td><a href="index.php?contents=textdetails&IDText=515">B</a></td><td><a href="index.php?contents=dictionary&text_id=515">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=515">F</a></td>
+	</tr>
+	<tr>
+		<td>Avadānaśataka</td><td>&nbsp;</td><td>epic</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=466">S</a></td><td><a href="index.php?contents=textdetails&IDText=466">B</a></td><td><a href="index.php?contents=dictionary&text_id=466">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=466">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Ayurvedarasāyana</td><td>Hemādri</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=16">S</a></td><td><a href="index.php?contents=textdetails&IDText=16">B</a></td><td><a href="index.php?contents=dictionary&text_id=16">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=16">F</a></td>
+	</tr>
+	<tr>
+		<td>Aṣṭasāhasrikā</td><td>&nbsp;</td><td>epic</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=467">S</a></td><td><a href="index.php?contents=textdetails&IDText=467">B</a></td><td><a href="index.php?contents=dictionary&text_id=467">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=467">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Aṣṭādhyāyī</td><td>Pāṇini</td><td>epic</td><td>Paniniya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=413">S</a></td><td><a href="index.php?contents=textdetails&IDText=413">B</a></td><td><a href="index.php?contents=dictionary&text_id=413">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=413">F</a></td>
+	</tr>
+	<tr>
+		<td>Aṣṭāvakragīta</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=420">S</a></td><td><a href="index.php?contents=textdetails&IDText=420">B</a></td><td><a href="index.php?contents=dictionary&text_id=420">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=420">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Aṣṭāṅgahṛdayasaṃhitā</td><td>Vāgbhaṭa</td><td>classical</td><td>Ayurveda</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=14">S</a></td><td><a href="index.php?contents=textdetails&IDText=14">B</a></td><td><a href="index.php?contents=dictionary&text_id=14">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=14">F</a></td>
+	</tr>
+	<tr>
+		<td>Aṣṭāṅganighaṇṭu</td><td>Vāhaṭa</td><td>medieval</td><td>Kosha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=21">S</a></td><td><a href="index.php?contents=textdetails&IDText=21">B</a></td><td><a href="index.php?contents=dictionary&text_id=21">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=21">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Aṣṭāṅgasaṃgraha</td><td>&nbsp;</td><td>classical</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=275">S</a></td><td><a href="index.php?contents=textdetails&IDText=275">B</a></td><td><a href="index.php?contents=dictionary&text_id=275">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=275">F</a></td>
+	</tr>
+	<tr>
+		<td>Baudhāyanadharmasūtra</td><td>&nbsp;</td><td>early</td><td>Dharmasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=402">S</a></td><td><a href="index.php?contents=textdetails&IDText=402">B</a></td><td><a href="index.php?contents=dictionary&text_id=402">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=402">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Baudhāyanagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=330">S</a></td><td><a href="index.php?contents=textdetails&IDText=330">B</a></td><td><a href="index.php?contents=dictionary&text_id=330">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=330">F</a></td>
+	</tr>
+	<tr>
+		<td>Baudhāyanaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=495">S</a></td><td><a href="index.php?contents=textdetails&IDText=495">B</a></td><td><a href="index.php?contents=dictionary&text_id=495">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=495">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Bhadrabāhucarita</td><td>&nbsp;</td><td>medieval</td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=251">S</a></td><td><a href="index.php?contents=textdetails&IDText=251">B</a></td><td><a href="index.php?contents=dictionary&text_id=251">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=251">F</a></td>
+	</tr>
+	<tr>
+		<td>Bhairavastava</td><td>Abhinavagupta</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=42">S</a></td><td><a href="index.php?contents=textdetails&IDText=42">B</a></td><td><a href="index.php?contents=dictionary&text_id=42">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=42">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Bhallaṭaśataka</td><td>Bhallaṭa</td><td>classical</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=442">S</a></td><td><a href="index.php?contents=textdetails&IDText=442">B</a></td><td><a href="index.php?contents=dictionary&text_id=442">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=442">F</a></td>
+	</tr>
+	<tr>
+		<td>Bhramarāṣṭaka</td><td>&nbsp;</td><td>late</td><td>Kavya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=235">S</a></td><td><a href="index.php?contents=textdetails&IDText=235">B</a></td><td><a href="index.php?contents=dictionary&text_id=235">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=235">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Bhāgavatapurāṇa</td><td>&nbsp;</td><td>medieval</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=119">S</a></td><td><a href="index.php?contents=textdetails&IDText=119">B</a></td><td><a href="index.php?contents=dictionary&text_id=119">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=119">F</a></td>
+	</tr>
+	<tr>
+		<td>Bhāradvājagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=329">S</a></td><td><a href="index.php?contents=textdetails&IDText=329">B</a></td><td><a href="index.php?contents=dictionary&text_id=329">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=329">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Bhāradvājaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=538">S</a></td><td><a href="index.php?contents=textdetails&IDText=538">B</a></td><td><a href="index.php?contents=dictionary&text_id=538">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=538">F</a></td>
+	</tr>
+	<tr>
+		<td>Bhāratamañjarī</td><td>Kṣemendra</td><td>medieval</td><td>Mahabharata</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=446">S</a></td><td><a href="index.php?contents=textdetails&IDText=446">B</a></td><td><a href="index.php?contents=dictionary&text_id=446">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=446">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Bhāvaprakāśa</td><td>Bhāvamiśra</td><td>late</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=165">S</a></td><td><a href="index.php?contents=textdetails&IDText=165">B</a></td><td><a href="index.php?contents=dictionary&text_id=165">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=165">F</a></td>
+	</tr>
+	<tr>
+		<td>Bodhicaryāvatāra</td><td>Śāntideva</td><td>classical</td><td>Buddhist</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=120">S</a></td><td><a href="index.php?contents=textdetails&IDText=120">B</a></td><td><a href="index.php?contents=dictionary&text_id=120">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=120">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Brahmabindūpaniṣat</td><td>&nbsp;</td><td>epic</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=112">S</a></td><td><a href="index.php?contents=textdetails&IDText=112">B</a></td><td><a href="index.php?contents=dictionary&text_id=112">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=112">F</a></td>
+	</tr>
+	<tr>
+		<td>Buddhacarita</td><td>Aśvaghoṣa</td><td>epic</td><td>Buddhist</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=376">S</a></td><td><a href="index.php?contents=textdetails&IDText=376">B</a></td><td><a href="index.php?contents=dictionary&text_id=376">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=376">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Bījanighaṇṭu</td><td>&nbsp;</td><td>medieval</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=118">S</a></td><td><a href="index.php?contents=textdetails&IDText=118">B</a></td><td><a href="index.php?contents=dictionary&text_id=118">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=118">F</a></td>
+	</tr>
+	<tr>
+		<td>Bṛhadāraṇyakopaniṣad</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=439">S</a></td><td><a href="index.php?contents=textdetails&IDText=439">B</a></td><td><a href="index.php?contents=dictionary&text_id=439">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=439">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Bṛhatkathāślokasaṃgraha</td><td>Buddhasvāmin</td><td>classical</td><td>Katha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=405">S</a></td><td><a href="index.php?contents=textdetails&IDText=405">B</a></td><td><a href="index.php?contents=dictionary&text_id=405">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=405">F</a></td>
+	</tr>
+	<tr>
+		<td>Cakra (?) on Suśr</td><td>&nbsp;</td><td> --- </td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=258">S</a></td><td><a href="index.php?contents=textdetails&IDText=258">B</a></td><td><a href="index.php?contents=dictionary&text_id=258">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=258">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Carakasaṃhitā</td><td>&nbsp;</td><td>epic</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=58">S</a></td><td><a href="index.php?contents=textdetails&IDText=58">B</a></td><td><a href="index.php?contents=dictionary&text_id=58">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=58">F</a></td>
+	</tr>
+	<tr>
+		<td>Carakatattvapradīpikā</td><td>Śivadāsasena</td><td>late</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=162">S</a></td><td><a href="index.php?contents=textdetails&IDText=162">B</a></td><td><a href="index.php?contents=dictionary&text_id=162">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=162">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Caurapañcaśikā</td><td>Bilhaṇa</td><td>late</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=437">S</a></td><td><a href="index.php?contents=textdetails&IDText=437">B</a></td><td><a href="index.php?contents=dictionary&text_id=437">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=437">F</a></td>
+	</tr>
+	<tr>
+		<td>Chāndogyopaniṣad</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=365">S</a></td><td><a href="index.php?contents=textdetails&IDText=365">B</a></td><td><a href="index.php?contents=dictionary&text_id=365">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=365">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Commentary on Amaraughaśāsana</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=60">S</a></td><td><a href="index.php?contents=textdetails&IDText=60">B</a></td><td><a href="index.php?contents=dictionary&text_id=60">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=60">F</a></td>
+	</tr>
+	<tr>
+		<td>Commentary on the Kādambarīsvīkaraṇasūtramañjarī</td><td>&nbsp;</td><td>late</td><td>Kamashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=68">S</a></td><td><a href="index.php?contents=textdetails&IDText=68">B</a></td><td><a href="index.php?contents=dictionary&text_id=68">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=68">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Commentary on the Kāvyālaṃkāravṛtti</td><td>&nbsp;</td><td> --- </td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=226">S</a></td><td><a href="index.php?contents=textdetails&IDText=226">B</a></td><td><a href="index.php?contents=dictionary&text_id=226">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=226">F</a></td>
+	</tr>
+	<tr>
+		<td>Daśakumāracarita</td><td>Daṇḍin</td><td>classical</td><td>Katha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=392">S</a></td><td><a href="index.php?contents=textdetails&IDText=392">B</a></td><td><a href="index.php?contents=dictionary&text_id=392">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=392">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Devīkālottarāgama</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=433">S</a></td><td><a href="index.php?contents=textdetails&IDText=433">B</a></td><td><a href="index.php?contents=dictionary&text_id=433">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=433">F</a></td>
+	</tr>
+	<tr>
+		<td>Devīmāhātmya</td><td>&nbsp;</td><td>late</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=454">S</a></td><td><a href="index.php?contents=textdetails&IDText=454">B</a></td><td><a href="index.php?contents=dictionary&text_id=454">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=454">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Dhanurveda</td><td>Sadāśiva</td><td>late</td><td>Dhanurveda</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=375">S</a></td><td><a href="index.php?contents=textdetails&IDText=375">B</a></td><td><a href="index.php?contents=dictionary&text_id=375">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=375">F</a></td>
+	</tr>
+	<tr>
+		<td>Dhanvantarinighaṇṭu</td><td>&nbsp;</td><td>medieval</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=333">S</a></td><td><a href="index.php?contents=textdetails&IDText=333">B</a></td><td><a href="index.php?contents=dictionary&text_id=333">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=333">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Divyāvadāna</td><td>&nbsp;</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=473">S</a></td><td><a href="index.php?contents=textdetails&IDText=473">B</a></td><td><a href="index.php?contents=dictionary&text_id=473">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=473">F</a></td>
+	</tr>
+	<tr>
+		<td>Drāhyāyaṇaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=556">S</a></td><td><a href="index.php?contents=textdetails&IDText=556">B</a></td><td><a href="index.php?contents=dictionary&text_id=556">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=556">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Ekākṣarakoṣa</td><td>Puruṣottamadeva</td><td>medieval</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=34">S</a></td><td><a href="index.php?contents=textdetails&IDText=34">B</a></td><td><a href="index.php?contents=dictionary&text_id=34">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=34">F</a></td>
+	</tr>
+	<tr>
+		<td>Garbhopaniṣat</td><td>&nbsp;</td><td>epic</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=110">S</a></td><td><a href="index.php?contents=textdetails&IDText=110">B</a></td><td><a href="index.php?contents=dictionary&text_id=110">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=110">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Garuḍapurāṇa</td><td>&nbsp;</td><td>medieval</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=411">S</a></td><td><a href="index.php?contents=textdetails&IDText=411">B</a></td><td><a href="index.php?contents=dictionary&text_id=411">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=411">F</a></td>
+	</tr>
+	<tr>
+		<td>Gautamadharmasūtra</td><td>&nbsp;</td><td>early</td><td>Dharmasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=393">S</a></td><td><a href="index.php?contents=textdetails&IDText=393">B</a></td><td><a href="index.php?contents=dictionary&text_id=393">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=393">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Gaṇakārikā</td><td>Haradatta</td><td>classical</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=28">S</a></td><td><a href="index.php?contents=textdetails&IDText=28">B</a></td><td><a href="index.php?contents=dictionary&text_id=28">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=28">F</a></td>
+	</tr>
+	<tr>
+		<td>Gheraṇḍasaṃhitā</td><td>&nbsp;</td><td>late</td><td>Yoga</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=1">S</a></td><td><a href="index.php?contents=textdetails&IDText=1">B</a></td><td><a href="index.php?contents=dictionary&text_id=1">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=1">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Gobhilagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=136">S</a></td><td><a href="index.php?contents=textdetails&IDText=136">B</a></td><td><a href="index.php?contents=dictionary&text_id=136">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=136">F</a></td>
+	</tr>
+	<tr>
+		<td>Gokarṇapurāṇasāraḥ</td><td>&nbsp;</td><td>late</td><td>Purana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=336">S</a></td><td><a href="index.php?contents=textdetails&IDText=336">B</a></td><td><a href="index.php?contents=dictionary&text_id=336">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=336">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Gopathabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=503">S</a></td><td><a href="index.php?contents=textdetails&IDText=503">B</a></td><td><a href="index.php?contents=dictionary&text_id=503">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=503">F</a></td>
+	</tr>
+	<tr>
+		<td>Gorakṣaśataka</td><td>Gorakhnath</td><td>late</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=81">S</a></td><td><a href="index.php?contents=textdetails&IDText=81">B</a></td><td><a href="index.php?contents=dictionary&text_id=81">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=81">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Gītagovinda</td><td>Jayadeva</td><td>medieval</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=243">S</a></td><td><a href="index.php?contents=textdetails&IDText=243">B</a></td><td><a href="index.php?contents=dictionary&text_id=243">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=243">F</a></td>
+	</tr>
+	<tr>
+		<td>Gūḍhārthadīpikā</td><td>Kāśirāma</td><td>late</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=282">S</a></td><td><a href="index.php?contents=textdetails&IDText=282">B</a></td><td><a href="index.php?contents=dictionary&text_id=282">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=282">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Gṛhastharatnākara</td><td>Caṇḍeśvara Ṭhakkura</td><td>medieval</td><td>Dharmashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=343">S</a></td><td><a href="index.php?contents=textdetails&IDText=343">B</a></td><td><a href="index.php?contents=dictionary&text_id=343">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=343">F</a></td>
+	</tr>
+	<tr>
+		<td>G￸ḍhārthaprakāśaka</td><td>Raṅganātha</td><td>medieval</td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=9">S</a></td><td><a href="index.php?contents=textdetails&IDText=9">B</a></td><td><a href="index.php?contents=dictionary&text_id=9">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=9">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Haribhaktivilāsa</td><td>Gopālabhaṭṭa</td><td>late</td><td>Bhakti</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=425">S</a></td><td><a href="index.php?contents=textdetails&IDText=425">B</a></td><td><a href="index.php?contents=dictionary&text_id=425">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=425">F</a></td>
+	</tr>
+	<tr>
+		<td>Harivaṃśa</td><td>&nbsp;</td><td>classical</td><td>Mahabharata</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=566">S</a></td><td><a href="index.php?contents=textdetails&IDText=566">B</a></td><td><a href="index.php?contents=dictionary&text_id=566">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=566">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Harṣacarita</td><td>Bāṇa</td><td>classical</td><td>Katha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=462">S</a></td><td><a href="index.php?contents=textdetails&IDText=462">B</a></td><td><a href="index.php?contents=dictionary&text_id=462">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=462">F</a></td>
+	</tr>
+	<tr>
+		<td>Haṃsadūta</td><td>Rūpa Goswāmin</td><td>late</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=236">S</a></td><td><a href="index.php?contents=textdetails&IDText=236">B</a></td><td><a href="index.php?contents=dictionary&text_id=236">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=236">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Haṃsasaṃdeśa</td><td>Vedānta Deśika</td><td>medieval</td><td>Kavya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=407">S</a></td><td><a href="index.php?contents=textdetails&IDText=407">B</a></td><td><a href="index.php?contents=dictionary&text_id=407">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=407">F</a></td>
+	</tr>
+	<tr>
+		<td>Haṭhayogapradīpikā</td><td>Svātmarāma</td><td>late</td><td>Yoga</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=85">S</a></td><td><a href="index.php?contents=textdetails&IDText=85">B</a></td><td><a href="index.php?contents=dictionary&text_id=85">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=85">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Hiraṇyakeśigṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=313">S</a></td><td><a href="index.php?contents=textdetails&IDText=313">B</a></td><td><a href="index.php?contents=dictionary&text_id=313">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=313">F</a></td>
+	</tr>
+	<tr>
+		<td>Hiraṇyakeśiśrautasūtra</td><td>&nbsp;</td><td>early</td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=579">S</a></td><td><a href="index.php?contents=textdetails&IDText=579">B</a></td><td><a href="index.php?contents=dictionary&text_id=579">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=579">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Hitopadeśa</td><td>Nārāyaṇa</td><td>medieval</td><td>Katha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=189">S</a></td><td><a href="index.php?contents=textdetails&IDText=189">B</a></td><td><a href="index.php?contents=dictionary&text_id=189">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=189">F</a></td>
+	</tr>
+	<tr>
+		<td>Hārāṇacandara on Suśr</td><td>&nbsp;</td><td>late</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=259">S</a></td><td><a href="index.php?contents=textdetails&IDText=259">B</a></td><td><a href="index.php?contents=dictionary&text_id=259">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=259">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Indu (ad AHS)</td><td>Indu</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=327">S</a></td><td><a href="index.php?contents=textdetails&IDText=327">B</a></td><td><a href="index.php?contents=dictionary&text_id=327">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=327">F</a></td>
+	</tr>
+	<tr>
+		<td>Jaiminigṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=265">S</a></td><td><a href="index.php?contents=textdetails&IDText=265">B</a></td><td><a href="index.php?contents=dictionary&text_id=265">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=265">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Jaiminīya-Upaniṣad-Brāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=516">S</a></td><td><a href="index.php?contents=textdetails&IDText=516">B</a></td><td><a href="index.php?contents=dictionary&text_id=516">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=516">F</a></td>
+	</tr>
+	<tr>
+		<td>Jaiminīyabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=479">S</a></td><td><a href="index.php?contents=textdetails&IDText=479">B</a></td><td><a href="index.php?contents=dictionary&text_id=479">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=479">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Jaiminīyaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=563">S</a></td><td><a href="index.php?contents=textdetails&IDText=563">B</a></td><td><a href="index.php?contents=dictionary&text_id=563">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=563">F</a></td>
+	</tr>
+	<tr>
+		<td>Janmamaraṇavicāra</td><td>Vāmadeva</td><td>late</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=70">S</a></td><td><a href="index.php?contents=textdetails&IDText=70">B</a></td><td><a href="index.php?contents=dictionary&text_id=70">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=70">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kaiyadevanighaṇṭu</td><td>&nbsp;</td><td>late</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=332">S</a></td><td><a href="index.php?contents=textdetails&IDText=332">B</a></td><td><a href="index.php?contents=dictionary&text_id=332">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=332">F</a></td>
+	</tr>
+	<tr>
+		<td>Kathāsaritsāgara</td><td>Somadeva</td><td>medieval</td><td>Katha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=456">S</a></td><td><a href="index.php?contents=textdetails&IDText=456">B</a></td><td><a href="index.php?contents=dictionary&text_id=456">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=456">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kauśikasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=71">S</a></td><td><a href="index.php?contents=textdetails&IDText=71">B</a></td><td><a href="index.php?contents=dictionary&text_id=71">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=71">F</a></td>
+	</tr>
+	<tr>
+		<td>Kauśikasūtradārilabhāṣya</td><td>&nbsp;</td><td>late</td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=256">S</a></td><td><a href="index.php?contents=textdetails&IDText=256">B</a></td><td><a href="index.php?contents=dictionary&text_id=256">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=256">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kauśikasūtrakeśavapaddhati</td><td>&nbsp;</td><td>late</td><td>Kalpa</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=542">S</a></td><td><a href="index.php?contents=textdetails&IDText=542">B</a></td><td><a href="index.php?contents=dictionary&text_id=542">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=542">F</a></td>
+	</tr>
+	<tr>
+		<td>Kauṣītakagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=540">S</a></td><td><a href="index.php?contents=textdetails&IDText=540">B</a></td><td><a href="index.php?contents=dictionary&text_id=540">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=540">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kauṣītakibrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=519">S</a></td><td><a href="index.php?contents=textdetails&IDText=519">B</a></td><td><a href="index.php?contents=dictionary&text_id=519">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=519">F</a></td>
+	</tr>
+	<tr>
+		<td>Kauṣītakyupaniṣad</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=459">S</a></td><td><a href="index.php?contents=textdetails&IDText=459">B</a></td><td><a href="index.php?contents=dictionary&text_id=459">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=459">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kaṭhopaniṣad</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=457">S</a></td><td><a href="index.php?contents=textdetails&IDText=457">B</a></td><td><a href="index.php?contents=dictionary&text_id=457">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=457">F</a></td>
+	</tr>
+	<tr>
+		<td>Kaṭhāraṇyaka</td><td>&nbsp;</td><td>late</td><td>Aranyaka</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=561">S</a></td><td><a href="index.php?contents=textdetails&IDText=561">B</a></td><td><a href="index.php?contents=dictionary&text_id=561">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=561">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Khādiragṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=316">S</a></td><td><a href="index.php?contents=textdetails&IDText=316">B</a></td><td><a href="index.php?contents=dictionary&text_id=316">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=316">F</a></td>
+	</tr>
+	<tr>
+		<td>Khādiragṛhyasūtrarudraskandavyākhyā</td><td>Rudraskanda</td><td> --- </td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=317">S</a></td><td><a href="index.php?contents=textdetails&IDText=317">B</a></td><td><a href="index.php?contents=dictionary&text_id=317">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=317">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kirātārjunīya</td><td>Bhāravi</td><td>classical</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=194">S</a></td><td><a href="index.php?contents=textdetails&IDText=194">B</a></td><td><a href="index.php?contents=dictionary&text_id=194">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=194">F</a></td>
+	</tr>
+	<tr>
+		<td>Kokilasaṃdeśa</td><td>Uddaṇḍa</td><td>late</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=444">S</a></td><td><a href="index.php?contents=textdetails&IDText=444">B</a></td><td><a href="index.php?contents=dictionary&text_id=444">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=444">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kumārasaṃbhava</td><td>Kālidāsa</td><td>classical</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=390">S</a></td><td><a href="index.php?contents=textdetails&IDText=390">B</a></td><td><a href="index.php?contents=dictionary&text_id=390">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=390">F</a></td>
+	</tr>
+	<tr>
+		<td>Kādambarīsvīkaraṇasūtramañjarī</td><td>Purūravas</td><td>medieval</td><td>Kamashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=67">S</a></td><td><a href="index.php?contents=textdetails&IDText=67">B</a></td><td><a href="index.php?contents=dictionary&text_id=67">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=67">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kālikāpurāṇa</td><td>&nbsp;</td><td>medieval</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=306">S</a></td><td><a href="index.php?contents=textdetails&IDText=306">B</a></td><td><a href="index.php?contents=dictionary&text_id=306">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=306">F</a></td>
+	</tr>
+	<tr>
+		<td>Kāmasūtra</td><td>Vātsyāyana</td><td>classical</td><td>Kamashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=347">S</a></td><td><a href="index.php?contents=textdetails&IDText=347">B</a></td><td><a href="index.php?contents=dictionary&text_id=347">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=347">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kātyāyanasmṛti</td><td>&nbsp;</td><td>classical</td><td>Dharmashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=406">S</a></td><td><a href="index.php?contents=textdetails&IDText=406">B</a></td><td><a href="index.php?contents=dictionary&text_id=406">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=406">F</a></td>
+	</tr>
+	<tr>
+		<td>Kātyāyanaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=509">S</a></td><td><a href="index.php?contents=textdetails&IDText=509">B</a></td><td><a href="index.php?contents=dictionary&text_id=509">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=509">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kāvyasaṃgraha</td><td>&nbsp;</td><td> --- </td><td>Alamkarashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=234">S</a></td><td><a href="index.php?contents=textdetails&IDText=234">B</a></td><td><a href="index.php?contents=dictionary&text_id=234">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=234">F</a></td>
+	</tr>
+	<tr>
+		<td>Kāvyādarśa</td><td>Daṇḍin</td><td>classical</td><td>Alamkarashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=191">S</a></td><td><a href="index.php?contents=textdetails&IDText=191">B</a></td><td><a href="index.php?contents=dictionary&text_id=191">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=191">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kāvyālaṃkāra</td><td>Bhāmaha</td><td>classical</td><td>Alamkarashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=220">S</a></td><td><a href="index.php?contents=textdetails&IDText=220">B</a></td><td><a href="index.php?contents=dictionary&text_id=220">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=220">F</a></td>
+	</tr>
+	<tr>
+		<td>Kāvyālaṃkāravṛtti</td><td>Vāmana</td><td>classical</td><td>Alamkarashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=225">S</a></td><td><a href="index.php?contents=textdetails&IDText=225">B</a></td><td><a href="index.php?contents=dictionary&text_id=225">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=225">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kāśikāvṛtti</td><td>Jayāditya, Vāmana</td><td>classical</td><td>Paniniya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=412">S</a></td><td><a href="index.php?contents=textdetails&IDText=412">B</a></td><td><a href="index.php?contents=dictionary&text_id=412">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=412">F</a></td>
+	</tr>
+	<tr>
+		<td>Kāṭhakagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=362">S</a></td><td><a href="index.php?contents=textdetails&IDText=362">B</a></td><td><a href="index.php?contents=dictionary&text_id=362">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=362">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kāṭhakasaṃhitā</td><td>&nbsp;</td><td>early</td><td>Yajurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=543">S</a></td><td><a href="index.php?contents=textdetails&IDText=543">B</a></td><td><a href="index.php?contents=dictionary&text_id=543">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=543">F</a></td>
+	</tr>
+	<tr>
+		<td>Kūrmapurāṇa</td><td>&nbsp;</td><td>classical</td><td>Purana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=350">S</a></td><td><a href="index.php?contents=textdetails&IDText=350">B</a></td><td><a href="index.php?contents=dictionary&text_id=350">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=350">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Kṛṣiparāśara</td><td>Parāśara</td><td>medieval</td><td>Ayurveda</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=395">S</a></td><td><a href="index.php?contents=textdetails&IDText=395">B</a></td><td><a href="index.php?contents=dictionary&text_id=395">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=395">F</a></td>
+	</tr>
+	<tr>
+		<td>Kṛṣṇāmṛtamahārṇava</td><td>Mādhva</td><td>medieval</td><td>Bhakti</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=423">S</a></td><td><a href="index.php?contents=textdetails&IDText=423">B</a></td><td><a href="index.php?contents=dictionary&text_id=423">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=423">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Lalitavistara</td><td>&nbsp;</td><td>epic</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=489">S</a></td><td><a href="index.php?contents=textdetails&IDText=489">B</a></td><td><a href="index.php?contents=dictionary&text_id=489">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=489">F</a></td>
+	</tr>
+	<tr>
+		<td>Laṅkāvatārasūtra</td><td>&nbsp;</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=261">S</a></td><td><a href="index.php?contents=textdetails&IDText=261">B</a></td><td><a href="index.php?contents=dictionary&text_id=261">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=261">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Liṅgapurāṇa</td><td>&nbsp;</td><td>classical</td><td>Purana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=246">S</a></td><td><a href="index.php?contents=textdetails&IDText=246">B</a></td><td><a href="index.php?contents=dictionary&text_id=246">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=246">F</a></td>
+	</tr>
+	<tr>
+		<td>Lāṭyāyanaśrautasūtra</td><td>&nbsp;</td><td>early</td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=580">S</a></td><td><a href="index.php?contents=textdetails&IDText=580">B</a></td><td><a href="index.php?contents=dictionary&text_id=580">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=580">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Madanapālanighaṇṭu</td><td>Vinoda</td><td>medieval</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=238">S</a></td><td><a href="index.php?contents=textdetails&IDText=238">B</a></td><td><a href="index.php?contents=dictionary&text_id=238">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=238">F</a></td>
+	</tr>
+	<tr>
+		<td>Mahābhārata</td><td>&nbsp;</td><td>epic</td><td>Mahabharata</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=154">S</a></td><td><a href="index.php?contents=textdetails&IDText=154">B</a></td><td><a href="index.php?contents=dictionary&text_id=154">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=154">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Mahācīnatantra</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=399">S</a></td><td><a href="index.php?contents=textdetails&IDText=399">B</a></td><td><a href="index.php?contents=dictionary&text_id=399">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=399">F</a></td>
+	</tr>
+	<tr>
+		<td>Maitrāyaṇīsaṃhitā</td><td>&nbsp;</td><td>early</td><td>Yajurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=499">S</a></td><td><a href="index.php?contents=textdetails&IDText=499">B</a></td><td><a href="index.php?contents=dictionary&text_id=499">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=499">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Manusmṛti</td><td>Manu</td><td>epic</td><td>Dharmashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=91">S</a></td><td><a href="index.php?contents=textdetails&IDText=91">B</a></td><td><a href="index.php?contents=dictionary&text_id=91">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=91">F</a></td>
+	</tr>
+	<tr>
+		<td>Matsyapurāṇa</td><td>&nbsp;</td><td>classical</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=183">S</a></td><td><a href="index.php?contents=textdetails&IDText=183">B</a></td><td><a href="index.php?contents=dictionary&text_id=183">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=183">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Maṇimāhātmya</td><td>&nbsp;</td><td>medieval</td><td>Ratnashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=40">S</a></td><td><a href="index.php?contents=textdetails&IDText=40">B</a></td><td><a href="index.php?contents=dictionary&text_id=40">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=40">F</a></td>
+	</tr>
+	<tr>
+		<td>Meghadūta</td><td>Kālidāsa</td><td>classical</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=250">S</a></td><td><a href="index.php?contents=textdetails&IDText=250">B</a></td><td><a href="index.php?contents=dictionary&text_id=250">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=250">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Mugdhāvabodhinī</td><td>Caturbhuja Miśra</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=161">S</a></td><td><a href="index.php?contents=textdetails&IDText=161">B</a></td><td><a href="index.php?contents=dictionary&text_id=161">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=161">F</a></td>
+	</tr>
+	<tr>
+		<td>Mukundamālā</td><td>Kulaśekhara</td><td>medieval</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=441">S</a></td><td><a href="index.php?contents=textdetails&IDText=441">B</a></td><td><a href="index.php?contents=dictionary&text_id=441">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=441">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Muṇḍakopaniṣad</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=458">S</a></td><td><a href="index.php?contents=textdetails&IDText=458">B</a></td><td><a href="index.php?contents=dictionary&text_id=458">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=458">F</a></td>
+	</tr>
+	<tr>
+		<td>Mānavagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=361">S</a></td><td><a href="index.php?contents=textdetails&IDText=361">B</a></td><td><a href="index.php?contents=dictionary&text_id=361">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=361">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Mānavaśrautasūtra</td><td>&nbsp;</td><td>early</td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=577">S</a></td><td><a href="index.php?contents=textdetails&IDText=577">B</a></td><td><a href="index.php?contents=dictionary&text_id=577">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=577">F</a></td>
+	</tr>
+	<tr>
+		<td>Mātṛkābhedatantra</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=13">S</a></td><td><a href="index.php?contents=textdetails&IDText=13">B</a></td><td><a href="index.php?contents=dictionary&text_id=13">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=13">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Mīmāṃsāsūtrabhāṣya</td><td>Śabara</td><td>classical</td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=572">S</a></td><td><a href="index.php?contents=textdetails&IDText=572">B</a></td><td><a href="index.php?contents=dictionary&text_id=572">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=572">F</a></td>
+	</tr>
+	<tr>
+		<td>Mūlamadhyamakārikāḥ</td><td>Nāgārjuna</td><td>epic</td><td>Buddhist</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=263">S</a></td><td><a href="index.php?contents=textdetails&IDText=263">B</a></td><td><a href="index.php?contents=dictionary&text_id=263">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=263">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Mṛgendratantra</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=26">S</a></td><td><a href="index.php?contents=textdetails&IDText=26">B</a></td><td><a href="index.php?contents=dictionary&text_id=26">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=26">F</a></td>
+	</tr>
+	<tr>
+		<td>Mṛgendraṭīkā</td><td>Nārāyaṇakaṇṭha</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=27">S</a></td><td><a href="index.php?contents=textdetails&IDText=27">B</a></td><td><a href="index.php?contents=dictionary&text_id=27">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=27">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Narasiṃhapurāṇa</td><td>&nbsp;</td><td>classical</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=455">S</a></td><td><a href="index.php?contents=textdetails&IDText=455">B</a></td><td><a href="index.php?contents=dictionary&text_id=455">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=455">F</a></td>
+	</tr>
+	<tr>
+		<td>Narmamālā</td><td>Kṣemendra</td><td>medieval</td><td>Katha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=430">S</a></td><td><a href="index.php?contents=textdetails&IDText=430">B</a></td><td><a href="index.php?contents=dictionary&text_id=430">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=430">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Nibandhasaṃgraha</td><td>Dalhaṇa</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=6">S</a></td><td><a href="index.php?contents=textdetails&IDText=6">B</a></td><td><a href="index.php?contents=dictionary&text_id=6">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=6">F</a></td>
+	</tr>
+	<tr>
+		<td>Nighaṇṭuśeṣa</td><td>Hemacandra</td><td>medieval</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=386">S</a></td><td><a href="index.php?contents=textdetails&IDText=386">B</a></td><td><a href="index.php?contents=dictionary&text_id=386">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=386">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Nirukta</td><td>Yāska</td><td>early</td><td>Nirukta</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=367">S</a></td><td><a href="index.php?contents=textdetails&IDText=367">B</a></td><td><a href="index.php?contents=dictionary&text_id=367">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=367">F</a></td>
+	</tr>
+	<tr>
+		<td>Nyāyabhāṣya</td><td>Vātsyāyana</td><td>classical</td><td>Nyaya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=384">S</a></td><td><a href="index.php?contents=textdetails&IDText=384">B</a></td><td><a href="index.php?contents=dictionary&text_id=384">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=384">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Nyāyabindu</td><td>Dharmakīrti</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=424">S</a></td><td><a href="index.php?contents=textdetails&IDText=424">B</a></td><td><a href="index.php?contents=dictionary&text_id=424">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=424">F</a></td>
+	</tr>
+	<tr>
+		<td>Nyāyacandrikāpaṇjikā</td><td>Gayadāsācārya</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=7">S</a></td><td><a href="index.php?contents=textdetails&IDText=7">B</a></td><td><a href="index.php?contents=dictionary&text_id=7">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=7">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Nyāyasūtra</td><td>Gautama</td><td>epic</td><td>Nyaya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=382">S</a></td><td><a href="index.php?contents=textdetails&IDText=382">B</a></td><td><a href="index.php?contents=dictionary&text_id=382">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=382">F</a></td>
+	</tr>
+	<tr>
+		<td>Nādabindūpaniṣat</td><td>&nbsp;</td><td>epic</td><td>Upanishad</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=111">S</a></td><td><a href="index.php?contents=textdetails&IDText=111">B</a></td><td><a href="index.php?contents=dictionary&text_id=111">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=111">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Nāradasmṛti</td><td>&nbsp;</td><td>classical</td><td>Dharmashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=410">S</a></td><td><a href="index.php?contents=textdetails&IDText=410">B</a></td><td><a href="index.php?contents=dictionary&text_id=410">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=410">F</a></td>
+	</tr>
+	<tr>
+		<td>Nāḍīparīkṣā</td><td>Rāvaṇa</td><td>late</td><td>Ayurveda</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=292">S</a></td><td><a href="index.php?contents=textdetails&IDText=292">B</a></td><td><a href="index.php?contents=dictionary&text_id=292">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=292">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Nāḍīvijñāna</td><td>Kaṇāda</td><td>late</td><td>Ayurveda</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=293">S</a></td><td><a href="index.php?contents=textdetails&IDText=293">B</a></td><td><a href="index.php?contents=dictionary&text_id=293">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=293">F</a></td>
+	</tr>
+	<tr>
+		<td>Nāṭyaśāstra</td><td>Bharata</td><td>classical</td><td>Natyashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=356">S</a></td><td><a href="index.php?contents=textdetails&IDText=356">B</a></td><td><a href="index.php?contents=dictionary&text_id=356">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=356">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Nāṭyaśāstravivṛti</td><td>Abhinavagupta</td><td>medieval</td><td>Natyashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=357">S</a></td><td><a href="index.php?contents=textdetails&IDText=357">B</a></td><td><a href="index.php?contents=dictionary&text_id=357">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=357">F</a></td>
+	</tr>
+	<tr>
+		<td>Padārthacandrikā</td><td>Candranandana</td><td>medieval</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=181">S</a></td><td><a href="index.php?contents=textdetails&IDText=181">B</a></td><td><a href="index.php?contents=dictionary&text_id=181">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=181">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Paramānandīyanāmamālā</td><td>Makarānanda</td><td>medieval</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=180">S</a></td><td><a href="index.php?contents=textdetails&IDText=180">B</a></td><td><a href="index.php?contents=dictionary&text_id=180">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=180">F</a></td>
+	</tr>
+	<tr>
+		<td>Paraśurāmakalpasūtra</td><td>&nbsp;</td><td>late</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=438">S</a></td><td><a href="index.php?contents=textdetails&IDText=438">B</a></td><td><a href="index.php?contents=dictionary&text_id=438">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=438">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Parāśaradharmasaṃhitā</td><td>&nbsp;</td><td>late</td><td>Dharmashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=345">S</a></td><td><a href="index.php?contents=textdetails&IDText=345">B</a></td><td><a href="index.php?contents=dictionary&text_id=345">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=345">F</a></td>
+	</tr>
+	<tr>
+		<td>Parāśarasmṛtiṭīkā</td><td>Sāyaṇamādhavācārya</td><td>medieval</td><td>Dharmashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=346">S</a></td><td><a href="index.php?contents=textdetails&IDText=346">B</a></td><td><a href="index.php?contents=dictionary&text_id=346">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=346">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Pavanadūta</td><td>Dhoyi</td><td>medieval</td><td>Kavya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=443">S</a></td><td><a href="index.php?contents=textdetails&IDText=443">B</a></td><td><a href="index.php?contents=dictionary&text_id=443">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=443">F</a></td>
+	</tr>
+	<tr>
+		<td>Pañcaviṃśabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=435">S</a></td><td><a href="index.php?contents=textdetails&IDText=435">B</a></td><td><a href="index.php?contents=dictionary&text_id=435">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=435">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Pañcārthabhāṣya</td><td>Kauṇḍinya</td><td>classical</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=96">S</a></td><td><a href="index.php?contents=textdetails&IDText=96">B</a></td><td><a href="index.php?contents=dictionary&text_id=96">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=96">F</a></td>
+	</tr>
+	<tr>
+		<td>Paṃcasuttaṃ</td><td>&nbsp;</td><td> --- </td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=257">S</a></td><td><a href="index.php?contents=textdetails&IDText=257">B</a></td><td><a href="index.php?contents=dictionary&text_id=257">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=257">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Prasannapadā</td><td>Candrakīrti</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=299">S</a></td><td><a href="index.php?contents=textdetails&IDText=299">B</a></td><td><a href="index.php?contents=dictionary&text_id=299">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=299">F</a></td>
+	</tr>
+	<tr>
+		<td>Pāraskaragṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=312">S</a></td><td><a href="index.php?contents=textdetails&IDText=312">B</a></td><td><a href="index.php?contents=dictionary&text_id=312">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=312">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Pāśupatasūtra</td><td>&nbsp;</td><td>epic</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=95">S</a></td><td><a href="index.php?contents=textdetails&IDText=95">B</a></td><td><a href="index.php?contents=dictionary&text_id=95">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=95">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasahṛdayatantra</td><td>Govindbhagavatpāda</td><td>medieval</td><td>Rasashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=160">S</a></td><td><a href="index.php?contents=textdetails&IDText=160">B</a></td><td><a href="index.php?contents=dictionary&text_id=160">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=160">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasakāmadhenu</td><td>Śrīcūḍāmaṇimiśra</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=212">S</a></td><td><a href="index.php?contents=textdetails&IDText=212">B</a></td><td><a href="index.php?contents=dictionary&text_id=212">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=212">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasamañjarī</td><td>Śālīnātha</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=315">S</a></td><td><a href="index.php?contents=textdetails&IDText=315">B</a></td><td><a href="index.php?contents=dictionary&text_id=315">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=315">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasaprakāśasudhākara</td><td>Yaśodhara</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=314">S</a></td><td><a href="index.php?contents=textdetails&IDText=314">B</a></td><td><a href="index.php?contents=dictionary&text_id=314">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=314">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasaratnasamuccaya</td><td>Vāgbhaṭa</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=149">S</a></td><td><a href="index.php?contents=textdetails&IDText=149">B</a></td><td><a href="index.php?contents=dictionary&text_id=149">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=149">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasaratnasamuccayabodhinī</td><td>Āśubodhavidyābhūṣaṇa, Nityabodhavidyāratna</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=228">S</a></td><td><a href="index.php?contents=textdetails&IDText=228">B</a></td><td><a href="index.php?contents=dictionary&text_id=228">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=228">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasaratnasamuccayadīpikā</td><td>Hazārīlāl Sukul</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=360">S</a></td><td><a href="index.php?contents=textdetails&IDText=360">B</a></td><td><a href="index.php?contents=dictionary&text_id=360">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=360">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasaratnasamuccayaṭīkā</td><td>&nbsp;</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=324">S</a></td><td><a href="index.php?contents=textdetails&IDText=324">B</a></td><td><a href="index.php?contents=dictionary&text_id=324">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=324">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasaratnākara</td><td>Nitya Nātha Siddha</td><td>medieval</td><td>Rasashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=57">S</a></td><td><a href="index.php?contents=textdetails&IDText=57">B</a></td><td><a href="index.php?contents=dictionary&text_id=57">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=57">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasaratnākara Rasakhaṇḍa</td><td>Nityanātha</td><td> --- </td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=331">S</a></td><td><a href="index.php?contents=textdetails&IDText=331">B</a></td><td><a href="index.php?contents=dictionary&text_id=331">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=331">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasasaṃketakalikā</td><td>Kāyasthacāmuṇḍa</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=196">S</a></td><td><a href="index.php?contents=textdetails&IDText=196">B</a></td><td><a href="index.php?contents=dictionary&text_id=196">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=196">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasataraṅgiṇī</td><td>&nbsp;</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=334">S</a></td><td><a href="index.php?contents=textdetails&IDText=334">B</a></td><td><a href="index.php?contents=dictionary&text_id=334">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=334">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasendracintāmaṇi</td><td>Ḍhuṇḍhukanātha</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=192">S</a></td><td><a href="index.php?contents=textdetails&IDText=192">B</a></td><td><a href="index.php?contents=dictionary&text_id=192">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=192">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasendracūḍāmaṇi</td><td>Somadeva</td><td>medieval</td><td>Rasashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=215">S</a></td><td><a href="index.php?contents=textdetails&IDText=215">B</a></td><td><a href="index.php?contents=dictionary&text_id=215">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=215">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasendrasārasaṃgraha</td><td>Gopālakṛṣṇabhaṭṭa</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=320">S</a></td><td><a href="index.php?contents=textdetails&IDText=320">B</a></td><td><a href="index.php?contents=dictionary&text_id=320">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=320">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasikapriyā</td><td>Kumbha</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=244">S</a></td><td><a href="index.php?contents=textdetails&IDText=244">B</a></td><td><a href="index.php?contents=dictionary&text_id=244">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=244">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasikasaṃjīvanī</td><td>Arjunavarmadeva</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=237">S</a></td><td><a href="index.php?contents=textdetails&IDText=237">B</a></td><td><a href="index.php?contents=dictionary&text_id=237">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=237">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasādhyāya</td><td>&nbsp;</td><td>medieval</td><td>Rasashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=126">S</a></td><td><a href="index.php?contents=textdetails&IDText=126">B</a></td><td><a href="index.php?contents=dictionary&text_id=126">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=126">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasādhyāyaṭīkā</td><td>&nbsp;</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=127">S</a></td><td><a href="index.php?contents=textdetails&IDText=127">B</a></td><td><a href="index.php?contents=dictionary&text_id=127">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=127">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rasārṇava</td><td>&nbsp;</td><td>medieval</td><td>Rasashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=142">S</a></td><td><a href="index.php?contents=textdetails&IDText=142">B</a></td><td><a href="index.php?contents=dictionary&text_id=142">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=142">F</a></td>
+	</tr>
+	<tr>
+		<td>Rasārṇavakalpa</td><td>&nbsp;</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=139">S</a></td><td><a href="index.php?contents=textdetails&IDText=139">B</a></td><td><a href="index.php?contents=dictionary&text_id=139">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=139">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Ratnadīpikā</td><td>&nbsp;</td><td>medieval</td><td>Ratnashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=311">S</a></td><td><a href="index.php?contents=textdetails&IDText=311">B</a></td><td><a href="index.php?contents=dictionary&text_id=311">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=311">F</a></td>
+	</tr>
+	<tr>
+		<td>Ratnaṭīkā</td><td>Bhāsarvajña</td><td>classical</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=29">S</a></td><td><a href="index.php?contents=textdetails&IDText=29">B</a></td><td><a href="index.php?contents=dictionary&text_id=29">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=29">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rājamārtaṇḍa</td><td>Bhoja</td><td>medieval</td><td>Yoga</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=184">S</a></td><td><a href="index.php?contents=textdetails&IDText=184">B</a></td><td><a href="index.php?contents=dictionary&text_id=184">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=184">F</a></td>
+	</tr>
+	<tr>
+		<td>Rājanighaṇṭu</td><td>Narahari</td><td>medieval</td><td>Kosha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=12">S</a></td><td><a href="index.php?contents=textdetails&IDText=12">B</a></td><td><a href="index.php?contents=dictionary&text_id=12">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=12">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Rāmāyaṇa</td><td>Valmīki</td><td>epic</td><td>Ramayana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=143">S</a></td><td><a href="index.php?contents=textdetails&IDText=143">B</a></td><td><a href="index.php?contents=dictionary&text_id=143">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=143">F</a></td>
+	</tr>
+	<tr>
+		<td>Saddharmapuṇḍarīkasūtra</td><td>&nbsp;</td><td>late</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=532">S</a></td><td><a href="index.php?contents=textdetails&IDText=532">B</a></td><td><a href="index.php?contents=dictionary&text_id=532">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=532">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Sarvadarśanasaṃgraha</td><td>Mādhava</td><td>medieval</td><td>Darshana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=145">S</a></td><td><a href="index.php?contents=textdetails&IDText=145">B</a></td><td><a href="index.php?contents=dictionary&text_id=145">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=145">F</a></td>
+	</tr>
+	<tr>
+		<td>Sarvāṅgasundarā</td><td>Aruṇadatta</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=15">S</a></td><td><a href="index.php?contents=textdetails&IDText=15">B</a></td><td><a href="index.php?contents=dictionary&text_id=15">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=15">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Saundarānanda</td><td>Aśvaghoṣa</td><td>epic</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=463">S</a></td><td><a href="index.php?contents=textdetails&IDText=463">B</a></td><td><a href="index.php?contents=dictionary&text_id=463">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=463">F</a></td>
+	</tr>
+	<tr>
+		<td>Saṃvitsiddhi</td><td>Yāmuna</td><td>classical</td><td>Buddhist</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=434">S</a></td><td><a href="index.php?contents=textdetails&IDText=434">B</a></td><td><a href="index.php?contents=dictionary&text_id=434">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=434">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Saṅghabhedavastu</td><td>&nbsp;</td><td>epic</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=227">S</a></td><td><a href="index.php?contents=textdetails&IDText=227">B</a></td><td><a href="index.php?contents=dictionary&text_id=227">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=227">F</a></td>
+	</tr>
+	<tr>
+		<td>Skandapurāṇa</td><td>&nbsp;</td><td>medieval</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=140">S</a></td><td><a href="index.php?contents=textdetails&IDText=140">B</a></td><td><a href="index.php?contents=dictionary&text_id=140">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=140">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Skandapurāṇa (Revākhaṇḍa)</td><td>&nbsp;</td><td>late</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=300">S</a></td><td><a href="index.php?contents=textdetails&IDText=300">B</a></td><td><a href="index.php?contents=dictionary&text_id=300">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=300">F</a></td>
+	</tr>
+	<tr>
+		<td>Smaradīpikā</td><td>Mīnanātha</td><td>medieval</td><td>Kamashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=51">S</a></td><td><a href="index.php?contents=textdetails&IDText=51">B</a></td><td><a href="index.php?contents=dictionary&text_id=51">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=51">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Spandakārikā</td><td>Vasugupta</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=48">S</a></td><td><a href="index.php?contents=textdetails&IDText=48">B</a></td><td><a href="index.php?contents=dictionary&text_id=48">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=48">F</a></td>
+	</tr>
+	<tr>
+		<td>Spandakārikānirṇaya</td><td>Kṣemarāja</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=49">S</a></td><td><a href="index.php?contents=textdetails&IDText=49">B</a></td><td><a href="index.php?contents=dictionary&text_id=49">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=49">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Sphuṭārthāvyākhyā</td><td>Yaśomitra</td><td>medieval</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=380">S</a></td><td><a href="index.php?contents=textdetails&IDText=380">B</a></td><td><a href="index.php?contents=dictionary&text_id=380">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=380">F</a></td>
+	</tr>
+	<tr>
+		<td>Suśrutasaṃhitā</td><td>Suśruta</td><td>classical</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=5">S</a></td><td><a href="index.php?contents=textdetails&IDText=5">B</a></td><td><a href="index.php?contents=dictionary&text_id=5">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=5">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Sāmavidhānabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=558">S</a></td><td><a href="index.php?contents=textdetails&IDText=558">B</a></td><td><a href="index.php?contents=dictionary&text_id=558">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=558">F</a></td>
+	</tr>
+	<tr>
+		<td>Sātvatatantra</td><td>&nbsp;</td><td>late</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=69">S</a></td><td><a href="index.php?contents=textdetails&IDText=69">B</a></td><td><a href="index.php?contents=dictionary&text_id=69">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=69">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Sāṃkhyakārikā</td><td>Īśvarakṛṣṇa</td><td>classical</td><td>Samkhya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=359">S</a></td><td><a href="index.php?contents=textdetails&IDText=359">B</a></td><td><a href="index.php?contents=dictionary&text_id=359">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=359">F</a></td>
+	</tr>
+	<tr>
+		<td>Sāṃkhyakārikābhāṣya</td><td>Gauḍapāda</td><td>classical</td><td>Samkhya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=363">S</a></td><td><a href="index.php?contents=textdetails&IDText=363">B</a></td><td><a href="index.php?contents=dictionary&text_id=363">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=363">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Sāṃkhyatattvakaumudī</td><td>Vācaspatimiśra</td><td>classical</td><td>Samkhya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=373">S</a></td><td><a href="index.php?contents=textdetails&IDText=373">B</a></td><td><a href="index.php?contents=dictionary&text_id=373">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=373">F</a></td>
+	</tr>
+	<tr>
+		<td>Sūryasiddhānta</td><td>&nbsp;</td><td>classical</td><td>Jyotisha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=8">S</a></td><td><a href="index.php?contents=textdetails&IDText=8">B</a></td><td><a href="index.php?contents=dictionary&text_id=8">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=8">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Sūryaśataka</td><td>Mayūra</td><td>classical</td><td>Kavya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=351">S</a></td><td><a href="index.php?contents=textdetails&IDText=351">B</a></td><td><a href="index.php?contents=dictionary&text_id=351">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=351">F</a></td>
+	</tr>
+	<tr>
+		<td>Sūryaśatakaṭīkā</td><td>Tribhuvanapāla</td><td>medieval</td><td>Kavya</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=352">S</a></td><td><a href="index.php?contents=textdetails&IDText=352">B</a></td><td><a href="index.php?contents=dictionary&text_id=352">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=352">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Taittirīyabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=526">S</a></td><td><a href="index.php?contents=textdetails&IDText=526">B</a></td><td><a href="index.php?contents=dictionary&text_id=526">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=526">F</a></td>
+	</tr>
+	<tr>
+		<td>Taittirīyasaṃhitā</td><td>&nbsp;</td><td>early</td><td>Yajurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=510">S</a></td><td><a href="index.php?contents=textdetails&IDText=510">B</a></td><td><a href="index.php?contents=dictionary&text_id=510">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=510">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Taittirīyopaniṣad</td><td>&nbsp;</td><td>early</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=460">S</a></td><td><a href="index.php?contents=textdetails&IDText=460">B</a></td><td><a href="index.php?contents=dictionary&text_id=460">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=460">F</a></td>
+	</tr>
+	<tr>
+		<td>Taittirīyāraṇyaka</td><td>&nbsp;</td><td>early</td><td>Aranyaka</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=546">S</a></td><td><a href="index.php?contents=textdetails&IDText=546">B</a></td><td><a href="index.php?contents=dictionary&text_id=546">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=546">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Tantrasāra</td><td>Abhinavagupta</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=38">S</a></td><td><a href="index.php?contents=textdetails&IDText=38">B</a></td><td><a href="index.php?contents=dictionary&text_id=38">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=38">F</a></td>
+	</tr>
+	<tr>
+		<td>Tantrākhyāyikā</td><td>&nbsp;</td><td>classical</td><td>Katha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=391">S</a></td><td><a href="index.php?contents=textdetails&IDText=391">B</a></td><td><a href="index.php?contents=dictionary&text_id=391">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=391">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Tantrāloka</td><td>Abhinavagupta</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=408">S</a></td><td><a href="index.php?contents=textdetails&IDText=408">B</a></td><td><a href="index.php?contents=dictionary&text_id=408">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=408">F</a></td>
+	</tr>
+	<tr>
+		<td>Tarkasaṃgraha</td><td>Annambhaṭṭa</td><td>late</td><td>Nyaya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=409">S</a></td><td><a href="index.php?contents=textdetails&IDText=409">B</a></td><td><a href="index.php?contents=dictionary&text_id=409">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=409">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Tattvavaiśāradī</td><td>&nbsp;</td><td>classical</td><td>Yoga</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=403">S</a></td><td><a href="index.php?contents=textdetails&IDText=403">B</a></td><td><a href="index.php?contents=dictionary&text_id=403">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=403">F</a></td>
+	</tr>
+	<tr>
+		<td>Toḍalatantra</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=168">S</a></td><td><a href="index.php?contents=textdetails&IDText=168">B</a></td><td><a href="index.php?contents=dictionary&text_id=168">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=168">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Trikāṇḍaśeṣa</td><td>Puruṣottadeva</td><td>classical</td><td>Kosha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=396">S</a></td><td><a href="index.php?contents=textdetails&IDText=396">B</a></td><td><a href="index.php?contents=dictionary&text_id=396">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=396">F</a></td>
+	</tr>
+	<tr>
+		<td>Uḍḍāmareśvaratantra</td><td>&nbsp;</td><td>late</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=72">S</a></td><td><a href="index.php?contents=textdetails&IDText=72">B</a></td><td><a href="index.php?contents=dictionary&text_id=72">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=72">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Vaikhānasadharmasūtra</td><td>&nbsp;</td><td>classical</td><td>Dharmasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=125">S</a></td><td><a href="index.php?contents=textdetails&IDText=125">B</a></td><td><a href="index.php?contents=dictionary&text_id=125">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=125">F</a></td>
+	</tr>
+	<tr>
+		<td>Vaikhānasagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=239">S</a></td><td><a href="index.php?contents=textdetails&IDText=239">B</a></td><td><a href="index.php?contents=dictionary&text_id=239">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=239">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Vaikhānasaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=553">S</a></td><td><a href="index.php?contents=textdetails&IDText=553">B</a></td><td><a href="index.php?contents=dictionary&text_id=553">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=553">F</a></td>
+	</tr>
+	<tr>
+		<td>Vaitānasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=535">S</a></td><td><a href="index.php?contents=textdetails&IDText=535">B</a></td><td><a href="index.php?contents=dictionary&text_id=535">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=535">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Vaiśeṣikasūtra</td><td>Kaṇāda</td><td>epic</td><td>Vaisheshika</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=369">S</a></td><td><a href="index.php?contents=textdetails&IDText=369">B</a></td><td><a href="index.php?contents=dictionary&text_id=369">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=369">F</a></td>
+	</tr>
+	<tr>
+		<td>Vaiśeṣikasūtravṛtti</td><td>Candrānanda</td><td>classical</td><td>Vaisheshika</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=371">S</a></td><td><a href="index.php?contents=textdetails&IDText=371">B</a></td><td><a href="index.php?contents=dictionary&text_id=371">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=371">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Varāhapurāṇa</td><td>&nbsp;</td><td>classical</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=342">S</a></td><td><a href="index.php?contents=textdetails&IDText=342">B</a></td><td><a href="index.php?contents=dictionary&text_id=342">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=342">F</a></td>
+	</tr>
+	<tr>
+		<td>Vasiṣṭhadharmasūtra</td><td>&nbsp;</td><td>early</td><td>Dharmasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=559">S</a></td><td><a href="index.php?contents=textdetails&IDText=559">B</a></td><td><a href="index.php?contents=dictionary&text_id=559">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=559">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Vetālapañcaviṃśatikā</td><td>&nbsp;</td><td>medieval</td><td>Katha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=323">S</a></td><td><a href="index.php?contents=textdetails&IDText=323">B</a></td><td><a href="index.php?contents=dictionary&text_id=323">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=323">F</a></td>
+	</tr>
+	<tr>
+		<td>Viṃśatikākārikā</td><td>Vasubandhu</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=304">S</a></td><td><a href="index.php?contents=textdetails&IDText=304">B</a></td><td><a href="index.php?contents=dictionary&text_id=304">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=304">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Viṃśatikāvṛtti</td><td>Vasubandhu</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=305">S</a></td><td><a href="index.php?contents=textdetails&IDText=305">B</a></td><td><a href="index.php?contents=dictionary&text_id=305">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=305">F</a></td>
+	</tr>
+	<tr>
+		<td>Viṣṇupurāṇa</td><td>&nbsp;</td><td>classical</td><td>Purana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=400">S</a></td><td><a href="index.php?contents=textdetails&IDText=400">B</a></td><td><a href="index.php?contents=dictionary&text_id=400">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=400">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Viṣṇusmṛti</td><td>&nbsp;</td><td>classical</td><td>Dharmashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=338">S</a></td><td><a href="index.php?contents=textdetails&IDText=338">B</a></td><td><a href="index.php?contents=dictionary&text_id=338">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=338">F</a></td>
+	</tr>
+	<tr>
+		<td>Vājasaneyisaṃhitā (Mādhyandina)</td><td>&nbsp;</td><td>early</td><td>Yajurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=523">S</a></td><td><a href="index.php?contents=textdetails&IDText=523">B</a></td><td><a href="index.php?contents=dictionary&text_id=523">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=523">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Vārāhagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=130">S</a></td><td><a href="index.php?contents=textdetails&IDText=130">B</a></td><td><a href="index.php?contents=dictionary&text_id=130">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=130">F</a></td>
+	</tr>
+	<tr>
+		<td>Vārāhaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=564">S</a></td><td><a href="index.php?contents=textdetails&IDText=564">B</a></td><td><a href="index.php?contents=dictionary&text_id=564">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=564">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Vātūlanāthasūtras</td><td>&nbsp;</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=63">S</a></td><td><a href="index.php?contents=textdetails&IDText=63">B</a></td><td><a href="index.php?contents=dictionary&text_id=63">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=63">F</a></td>
+	</tr>
+	<tr>
+		<td>Vātūlanāthasūtravṛtti</td><td>Anantaśaktipāda</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=64">S</a></td><td><a href="index.php?contents=textdetails&IDText=64">B</a></td><td><a href="index.php?contents=dictionary&text_id=64">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=64">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Vṛddhayamasmṛti</td><td>Yama</td><td>epic</td><td>Dharmashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=137">S</a></td><td><a href="index.php?contents=textdetails&IDText=137">B</a></td><td><a href="index.php?contents=dictionary&text_id=137">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=137">F</a></td>
+	</tr>
+	<tr>
+		<td>Yogaratnākara</td><td>&nbsp;</td><td>late</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=321">S</a></td><td><a href="index.php?contents=textdetails&IDText=321">B</a></td><td><a href="index.php?contents=dictionary&text_id=321">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=321">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Yogasūtra</td><td>Patañjali</td><td>epic</td><td>Yoga</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=52">S</a></td><td><a href="index.php?contents=textdetails&IDText=52">B</a></td><td><a href="index.php?contents=dictionary&text_id=52">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=52">F</a></td>
+	</tr>
+	<tr>
+		<td>Yogasūtrabhāṣya</td><td>Vyāsa</td><td>classical</td><td>Yoga</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=381">S</a></td><td><a href="index.php?contents=textdetails&IDText=381">B</a></td><td><a href="index.php?contents=dictionary&text_id=381">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=381">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Yājñavalkyasmṛti</td><td>Yogīśvara Yājñavalkya</td><td>classical</td><td>Dharmashastra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=385">S</a></td><td><a href="index.php?contents=textdetails&IDText=385">B</a></td><td><a href="index.php?contents=dictionary&text_id=385">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=385">F</a></td>
+	</tr>
+	<tr>
+		<td>Ānandakanda</td><td>&nbsp;</td><td>medieval</td><td>Rasashastra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=294">S</a></td><td><a href="index.php?contents=textdetails&IDText=294">B</a></td><td><a href="index.php?contents=dictionary&text_id=294">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=294">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Āpastambadharmasūtra</td><td>&nbsp;</td><td>early</td><td>Dharmasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=550">S</a></td><td><a href="index.php?contents=textdetails&IDText=550">B</a></td><td><a href="index.php?contents=dictionary&text_id=550">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=550">F</a></td>
+	</tr>
+	<tr>
+		<td>Āpastambagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=318">S</a></td><td><a href="index.php?contents=textdetails&IDText=318">B</a></td><td><a href="index.php?contents=dictionary&text_id=318">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=318">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Āpastambaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=504">S</a></td><td><a href="index.php?contents=textdetails&IDText=504">B</a></td><td><a href="index.php?contents=dictionary&text_id=504">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=504">F</a></td>
+	</tr>
+	<tr>
+		<td>Āryāsaptaśatī</td><td>Govardhana</td><td>medieval</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=431">S</a></td><td><a href="index.php?contents=textdetails&IDText=431">B</a></td><td><a href="index.php?contents=dictionary&text_id=431">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=431">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Āyaraṅga</td><td>&nbsp;</td><td> --- </td><td> --- </td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=219">S</a></td><td><a href="index.php?contents=textdetails&IDText=219">B</a></td><td><a href="index.php?contents=dictionary&text_id=219">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=219">F</a></td>
+	</tr>
+	<tr>
+		<td>Āyurvedadīpikā</td><td>Cakrapāṇidatta</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=148">S</a></td><td><a href="index.php?contents=textdetails&IDText=148">B</a></td><td><a href="index.php?contents=dictionary&text_id=148">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=148">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Āśvalāyanagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=319">S</a></td><td><a href="index.php?contents=textdetails&IDText=319">B</a></td><td><a href="index.php?contents=dictionary&text_id=319">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=319">F</a></td>
+	</tr>
+	<tr>
+		<td>Āśvālāyanaśrautasūtra</td><td>&nbsp;</td><td>early</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=508">S</a></td><td><a href="index.php?contents=textdetails&IDText=508">B</a></td><td><a href="index.php?contents=dictionary&text_id=508">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=508">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śatakatraya</td><td>Bhartṛhari</td><td>classical</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=445">S</a></td><td><a href="index.php?contents=textdetails&IDText=445">B</a></td><td><a href="index.php?contents=dictionary&text_id=445">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=445">F</a></td>
+	</tr>
+	<tr>
+		<td>Śatapathabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=394">S</a></td><td><a href="index.php?contents=textdetails&IDText=394">B</a></td><td><a href="index.php?contents=dictionary&text_id=394">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=394">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śikṣāsamuccaya</td><td>Śāntideva</td><td>classical</td><td>Buddhist</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=470">S</a></td><td><a href="index.php?contents=textdetails&IDText=470">B</a></td><td><a href="index.php?contents=dictionary&text_id=470">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=470">F</a></td>
+	</tr>
+	<tr>
+		<td>Śira'upaniṣad</td><td>&nbsp;</td><td>epic</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=109">S</a></td><td><a href="index.php?contents=textdetails&IDText=109">B</a></td><td><a href="index.php?contents=dictionary&text_id=109">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=109">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śivapurāṇa</td><td>&nbsp;</td><td>medieval</td><td>Purana</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=344">S</a></td><td><a href="index.php?contents=textdetails&IDText=344">B</a></td><td><a href="index.php?contents=dictionary&text_id=344">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=344">F</a></td>
+	</tr>
+	<tr>
+		<td>Śivasūtra</td><td>&nbsp;</td><td>classical</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=44">S</a></td><td><a href="index.php?contents=textdetails&IDText=44">B</a></td><td><a href="index.php?contents=dictionary&text_id=44">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=44">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śivasūtravārtika</td><td>Varadarāja</td><td>medieval</td><td>Tantra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=45">S</a></td><td><a href="index.php?contents=textdetails&IDText=45">B</a></td><td><a href="index.php?contents=dictionary&text_id=45">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=45">F</a></td>
+	</tr>
+	<tr>
+		<td>Śukasaptati</td><td>&nbsp;</td><td>medieval</td><td>Katha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=436">S</a></td><td><a href="index.php?contents=textdetails&IDText=436">B</a></td><td><a href="index.php?contents=dictionary&text_id=436">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=436">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śvetāśvataropaniṣad</td><td>&nbsp;</td><td>epic</td><td>Upanishad</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=366">S</a></td><td><a href="index.php?contents=textdetails&IDText=366">B</a></td><td><a href="index.php?contents=dictionary&text_id=366">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=366">F</a></td>
+	</tr>
+	<tr>
+		<td>Śyainikaśāstra</td><td>Rudradeva</td><td>medieval</td><td>Ayurveda</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=426">S</a></td><td><a href="index.php?contents=textdetails&IDText=426">B</a></td><td><a href="index.php?contents=dictionary&text_id=426">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=426">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śāktavijñāna</td><td>Somānanda</td><td>medieval</td><td>Tantra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=129">S</a></td><td><a href="index.php?contents=textdetails&IDText=129">B</a></td><td><a href="index.php?contents=dictionary&text_id=129">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=129">F</a></td>
+	</tr>
+	<tr>
+		<td>Śārṅgadharasaṃhitā</td><td>Śārṅgadhara</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=280">S</a></td><td><a href="index.php?contents=textdetails&IDText=280">B</a></td><td><a href="index.php?contents=dictionary&text_id=280">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=280">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śārṅgadharasaṃhitādīpikā</td><td>Āḍhamalla</td><td>medieval</td><td>Ayurveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=281">S</a></td><td><a href="index.php?contents=textdetails&IDText=281">B</a></td><td><a href="index.php?contents=dictionary&text_id=281">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=281">F</a></td>
+	</tr>
+	<tr>
+		<td>Śāṅkhāyanagṛhyasūtra</td><td>&nbsp;</td><td>early</td><td>Grhyasutra</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=353">S</a></td><td><a href="index.php?contents=textdetails&IDText=353">B</a></td><td><a href="index.php?contents=dictionary&text_id=353">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=353">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Śāṅkhāyanaśrautasūtra</td><td>&nbsp;</td><td>late</td><td>Shrautasutra</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=547">S</a></td><td><a href="index.php?contents=textdetails&IDText=547">B</a></td><td><a href="index.php?contents=dictionary&text_id=547">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=547">F</a></td>
+	</tr>
+	<tr>
+		<td>Śāṅkhāyanāraṇyaka</td><td>&nbsp;</td><td>early</td><td>Aranyaka</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=440">S</a></td><td><a href="index.php?contents=textdetails&IDText=440">B</a></td><td><a href="index.php?contents=dictionary&text_id=440">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=440">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Ṛgveda</td><td>&nbsp;</td><td>early</td><td>Rgveda</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=450">S</a></td><td><a href="index.php?contents=textdetails&IDText=450">B</a></td><td><a href="index.php?contents=dictionary&text_id=450">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=450">F</a></td>
+	</tr>
+	<tr>
+		<td>Ṛgvedakhilāni</td><td>&nbsp;</td><td>early</td><td>Rgveda</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=497">S</a></td><td><a href="index.php?contents=textdetails&IDText=497">B</a></td><td><a href="index.php?contents=dictionary&text_id=497">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=497">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Ṛgvedavedāṅgajyotiṣa</td><td>Lagadha</td><td>early</td><td>Jyotisha</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=33">S</a></td><td><a href="index.php?contents=textdetails&IDText=33">B</a></td><td><a href="index.php?contents=dictionary&text_id=33">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=33">F</a></td>
+	</tr>
+	<tr>
+		<td>Ṛgvidhāna</td><td>&nbsp;</td><td>early</td><td>Kalpa</td><td>&nbsp;</td><td><a href="index.php?contents=texte&IDTextDisplay=552">S</a></td><td><a href="index.php?contents=textdetails&IDText=552">B</a></td><td><a href="index.php?contents=dictionary&text_id=552">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=552">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Ṛtusaṃhāra</td><td>Kālidāsa</td><td>classical</td><td>Kavya</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=193">S</a></td><td><a href="index.php?contents=textdetails&IDText=193">B</a></td><td><a href="index.php?contents=dictionary&text_id=193">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=193">F</a></td>
+	</tr>
+	<tr>
+		<td>Ṣaḍviṃśabrāhmaṇa</td><td>&nbsp;</td><td>early</td><td>Brahmana</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=567">S</a></td><td><a href="index.php?contents=textdetails&IDText=567">B</a></td><td><a href="index.php?contents=dictionary&text_id=567">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=567">F</a></td>
+	</tr>
+	<tr style="background:#9dbae2">
+		<td>Ṭikanikayātrā</td><td>Varāhamihira</td><td>classical</td><td>Jyotisha</td><td align="center"><img src="img/OK.png"></td><td><a href="index.php?contents=texte&IDTextDisplay=75">S</a></td><td><a href="index.php?contents=textdetails&IDText=75">B</a></td><td><a href="index.php?contents=dictionary&text_id=75">D</a></td><td><a href="index.php?contents=frequent_words_in_text&IDText=75">F</a></td>
+	</tr>
+</table>
+</div>	</div><!-- end 'content' -->
+</div><!-- container -->
+<div id="footer">
+	February 2026 - <a href="index.php?contents=impressum">Contact, copyright, disclaimer</a>
+</div><!-- footer -->
+<div class="ajaxmodal"><!-- This displays the animation during AJAX calls. --></div>
+</body>
+</html>

@@ -166,26 +166,26 @@ def build(draws=200):
             ),
         },
         "interpretation": [
-            "Refutes 'two dictionaries independently made the same link' as grounds for "
+            ("Refutes 'two dictionaries independently made the same link' as grounds for "
             "confirming a shared-core edge; that justification has been removed from the "
-            "label vocabulary.",
-            "Does NOT establish direction on its own. MW's dependence on Boehtlingk-Roth is a "
-            "bibliographic fact (MW 1899 preface), not something this statistic shows.",
-            "A shared edge can still be real and lexical — that, not double attestation, is "
-            "what lexical-shared-core asserts.",
-            "Normalization is a live confound throughout: MW and PWG follow different headword "
+            "label vocabulary."),
+            ("Does NOT establish direction on its own. MW's dependence on Boehtlingk-Roth is a "
+            "bibliographic fact (MW 1899 preface), not something this statistic shows."),
+            ("A shared edge can still be real and lexical — that, not double attestation, is "
+            "what lexical-shared-core asserts."),
+            ("Normalization is a live confound throughout: MW and PWG follow different headword "
             "conventions (Patel 2016), so folding them together can both create and hide edges. "
-            "See docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md.",
+            "See docs/XREF_SHARED_CORE_LABEL_TAXONOMY.md."),
         ],
         "limitations": [
-            "Agreement is measured on normalized (accent-stripped, ring-stripped) forms; the "
-            "normalisation itself can manufacture agreement.",
-            "The null reshuffles MW targets from MW's own target pool, so it preserves MW's "
-            "target frequency profile but not its phonological or semantic structure.",
-            "Marker semantics are not identical: PWG's `Vgl.` and `s.` are distinct referring "
-            "conventions and MW's `cf.` spans both; they are pooled here.",
-            "No per-edge causal claim: a high overall enrichment says nothing about whether any "
-            "ONE card's edge was copied.",
+            ("Agreement is measured on normalized (accent-stripped, ring-stripped) forms; the "
+            "normalisation itself can manufacture agreement."),
+            ("The null reshuffles MW targets from MW's own target pool, so it preserves MW's "
+            "target frequency profile but not its phonological or semantic structure."),
+            ("Marker semantics are not identical: PWG's `Vgl.` and `s.` are distinct referring "
+            "conventions and MW's `cf.` spans both; they are pooled here."),
+            ("No per-edge causal claim: a high overall enrichment says nothing about whether any "
+            "ONE card's edge was copied."),
         ],
     }
 

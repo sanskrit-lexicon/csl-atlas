@@ -15,10 +15,9 @@ marker sits next to the reference: 0 notes.
 
 import json
 
-import pytest
-
 import _corpus_pin
 import f8_mbh_census as f8a
+import pytest
 from conftest import git_commit_all, write_text
 
 

@@ -21,10 +21,9 @@ Pearson of -1:
 import csv
 import json
 
-import pytest
-
-import f3_gloss as f3
 import _corpus_pin
+import f3_gloss as f3
+import pytest
 from conftest import git_commit_all, write_text
 
 

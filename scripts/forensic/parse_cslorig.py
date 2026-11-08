@@ -23,12 +23,12 @@ Or build caches:  python parse_cslorig.py pwg pw mw mw72      (--all = every loc
 The body/gloss is NOT cached (large); F3 re-parses the few dicts it needs.
 """
 
-import os
-import re
-import sys
 import csv
 import glob
 import json
+import os
+import re
+import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

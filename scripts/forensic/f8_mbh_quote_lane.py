@@ -23,7 +23,12 @@ Output: data/forensic/mbh_quote_lane_check.csv + data/forensic/f8_quote_lane_rep
 Run from repo root (after f8_mbh_witnesses.py):  python scripts/forensic/f8_mbh_quote_lane.py
 Deps: ../sanskrit-util/py (slp1_simplify).
 """
-import sys, os, re, json, csv, random
+import csv
+import json
+import os
+import random
+import re
+import sys
 from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")

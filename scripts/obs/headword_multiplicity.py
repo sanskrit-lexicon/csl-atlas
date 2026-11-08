@@ -28,14 +28,24 @@ Outputs
 Usage:  python scripts/obs/headword_multiplicity.py
         (reads ../csl-orig/v02 — the sibling source repo)
 """
-import csv, json, os, re, sys
+import csv
+import json
+import os
+import re
+import sys
 from collections import defaultdict
+
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))          # csl-atlas
 sys.path.insert(0, os.path.join(ROOT, 'scripts', 'lib'))
-from dataset_meta import license_fields, generated_at_for_payload, read_json_if_exists  # noqa: E402
+from dataset_meta import (  # noqa: E402
+    generated_at_for_payload,
+    license_fields,
+    read_json_if_exists,
+)
+
 V02 = os.path.join(os.path.dirname(ROOT), 'csl-orig', 'v02')
 OUT_CSV = os.path.join(ROOT, 'data', 'obs', 'headword_multiplicity.csv')
 OUT_JSON = os.path.join(ROOT, 'data', 'obs', 'headword_collapse.json')
@@ -194,8 +204,8 @@ def main():
             'deltaPoints': round(after_pct - before_pct, 1),
         },
         'warnings': [
-            'entry counts include homonym-split <L> records; the collapse ratio therefore '
-            'mixes lexical redundancy with per-dictionary entry-splitting policy',
+            ('entry counts include homonym-split <L> records; the collapse ratio therefore '
+            'mixes lexical redundancy with per-dictionary entry-splitting policy'),
         ],
     }
     payload['generatedAt'] = generated_at_for_payload(read_json_if_exists(OUT_JSON), payload)

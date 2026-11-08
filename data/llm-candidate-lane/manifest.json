@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "dataset": "h7101_llm_candidate_lane",
+  "generatedAt": "2026-10-19T14:20:10.801Z",
+  "samplePath": "data/llm-candidate-lane/sample-500.jsonl",
+  "sampleSha256": "bd1d30deef5a080c3883094ab1ccecc32264b9f3fb888d88e60cd88b4c1dbaf2",
+  "recordCount": 500,
+  "seed": "H7101-2026-10-19",
+  "frozen": true,
+  "split": "eval",
+  "sources": {
+    "correction-loci": {
+      "repo": "csl-corrections",
+      "commit": "307bad2631a0f764138bbc98f77b04b92dfb7c41",
+      "path": "data/derived/correction_loci.tsv",
+      "sha256": "4e89b93f48859c73c0eee9d41ab9c802888693cf651125bcc31504899399a907"
+    },
+    "review-queue": {
+      "repo": "csl-atlas",
+      "path": "src/data/review/h5-anomaly-review.json"
+    }
+  },
+  "composition": {
+    "byType": {
+      "ocr-error": 122,
+      "markup-normalization": 235,
+      "source-mismatch": 60,
+      "sense-split": 17,
+      "no-correction": 66
+    },
+    "bySource": {
+      "correction-loci": 400,
+      "review-queue": 100
+    }
+  },
+  "prompts": {
+    "path": "data/llm-candidate-lane/prompts.json",
+    "selected": "P6",
+    "variants": 6,
+    "sha256": "e3287e41c6cad3397bd73fd6d8aa764101284b4ccb4cfb0c253d23ab9f3eba4a"
+  },
+  "outputs": {
+    "ruleBaseline": {
+      "path": "data/llm-candidate-lane/outputs/rule-baseline.jsonl",
+      "sha256": "dca2bc074387aae8bda6d540cf28fb0e0e1c448d8896895f6b0f52269b3edc1a"
+    },
+    "llm": {
+      "path": "data/llm-candidate-lane/outputs/llm-abstain.jsonl",
+      "sha256": "f7160ac73c4a65537e1095334d75261cac8703783c8a1914259b8dd7103857ba",
+      "runStatus": "not-run-no-credentials"
+    }
+  },
+  "promotionPolicy": {
+    "autoPromote": false,
+    "revisionStatus": "machine-candidate",
+    "humanReviewRequired": true
+  },
+  "boundary": "Candidate generation only. No row is promoted to reviewed; no full-corpus run before this 500-row evaluation is scored."
+}

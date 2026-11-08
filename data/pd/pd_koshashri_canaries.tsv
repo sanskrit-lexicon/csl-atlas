@@ -1,0 +1,6 @@
+canary_id	assertion	expected	observed	source
+K1	KoshaSHRI vol 1 opens the print record	year=1976 pages=1-216 editor=A.M. Ghatage	year=1976 pages=1-216 editor=A.M. Ghatage	volume snapshot 2026-10-27
+K2	KoshaSHRI vol 35 closes the print record	year=2019 pages=5881-6056 closing=abhigamyamānaparadārādi	year=2019 pages=5881-6056 closing=abhigamyamānaparadārādi	volume snapshot 2026-10-27
+K3	Cologne PDScan record census and the <ls> correction	<L>=107630 <ls>=0	<L>=107630 <ls>=0	cologne census 2026-10-27
+K4	total_vocables is a constant-100 trap, not a per-volume count	distinct total_vocables values across all ok records = {100}	[100]	volume snapshot 2026-10-27
+K5	the portal's known volume-JSON gap persists unchanged	error ids = [12, 14]; ok = 33 of 35	error ids = [12, 14]; ok = 33 of 35	volume snapshot 2026-10-27

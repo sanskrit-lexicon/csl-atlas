@@ -11,7 +11,10 @@ Usage:
   python scripts/import_compound_segmentation.py --source local [--per-letter 300]
 Writes: data/dharmamitra/compound_segmentation_sample.json
 """
-import sys, json, argparse
+import argparse
+import json
+import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -19,8 +22,8 @@ sys.stderr.reconfigure(encoding='utf-8')
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / 'lib'))
-import letter_anatomy as la
 import dharmamitra_infer as dm
+import letter_anatomy as la
 from dict_sample import stratified_sample
 
 OUT = la.ATLAS / 'data' / 'dharmamitra' / 'compound_segmentation_sample.json'
@@ -46,6 +49,7 @@ def dedash(hw):
 def main():
     ap = dm.add_common_args(argparse.ArgumentParser(description=__doc__))
     ap.add_argument('--per-letter', type=int, default=300)
+    ap.set_defaults(max_new_tokens=32)   # segmentation outputs are short
     args = ap.parse_args()
     if args.source != 'local':
         print('NOTE: forcing --source local (pypi unsandhied mangles isolated headwords).')
@@ -81,7 +85,8 @@ def main():
 
     out_rows = []
     for (did, lb, hw, had_dash), (rowkey, surface) in zip(meta, rows):
-        seg = raw_by_key.get(rowkey, '')
+        entry = raw_by_key.get(rowkey, '')
+        seg = entry.get('raw', '') if isinstance(entry, dict) else entry
         n = seg_count(seg)
         out_rows.append({'dict': did, 'letter': lb, 'key2': hw, 'surface': surface,
                          'had_dash': had_dash, 'segmentation': seg, 'n_segments': n})
@@ -89,6 +94,10 @@ def main():
     doc = {
         'model': dm.HF_MODEL_ID,
         'revision': getattr(args, 'revision', None),
+        'date': datetime.now(timezone.utc).strftime('%Y-%m-%d'),
+        'generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+        'source': 'local HF (pinned revision; import-once)',
+        'inference': extra,
         'task': 'segmentation (local prefix "S ")',
         'license': 'CC-BY-SA-4.0',
         'note': 'model prediction — review EVIDENCE only; is_compound := n_segments >= 2',

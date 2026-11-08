@@ -34,14 +34,21 @@ const TINY_INVENTORY = [
   { dict: "xx", scanSet: "xx-scan", ref: "02" }
 ];
 
-test("the committed pilot catalogues pass the schema and every semantic check", () => {
+// H5324 shipped the pilot (mw, skd); H5325 filled the remaining seven, one
+// commit at a time. With the fill complete this test holds the stop condition:
+// exactly these nine dictionaries are catalogued, each sound.
+const NINE_DICTS = ["abch", "ap90", "armh", "mw", "pw", "pwg", "skd", "vcp", "wil"];
+
+test("the committed catalogues pass the schema and every semantic check", () => {
   const { catalogues, errors, coverage } = loadAndCheck();
   assert.deepEqual(errors, []);
-  assert.deepEqual(catalogues.map((c) => c.dict).sort(), ["mw", "skd"]);
+  const dicts = catalogues.map((c) => c.dict);
+  assert.equal(new Set(dicts).size, dicts.length, "no duplicate dict codes");
+  assert.deepEqual([...dicts].sort(), [...NINE_DICTS].sort(), "stop condition: exactly the nine dictionaries");
   for (const row of coverage) assert.equal(row.covered, row.pages, `${row.dict} ${row.scanSet} fully covered`);
 });
 
-test("stop condition: every pilot component carries a scan locus, and MW records back matter", () => {
+test("stop condition: every component carries a scan locus, and MW records back matter", () => {
   const { catalogues } = loadAndCheck();
   for (const catalogue of catalogues) {
     for (const component of catalogue.components) assert.ok(component.scanLocus.length > 0, component.id);

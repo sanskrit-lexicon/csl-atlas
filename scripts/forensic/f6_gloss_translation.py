@@ -21,12 +21,12 @@ Output: data/forensic/f6_gloss_translation.csv, f6_report.json.
 Run:  F6_SAMPLE=1500 python scripts/forensic/f6_gloss_translation.py
 """
 
-import os
-import re
-import sys
 import csv
 import json
+import os
 import random
+import re
+import sys
 import unicodedata
 
 sys.stdout.reconfigure(encoding="utf-8")

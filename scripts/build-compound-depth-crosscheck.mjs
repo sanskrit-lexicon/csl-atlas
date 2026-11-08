@@ -31,6 +31,7 @@ import { pathToFileURL } from "node:url";
 import { parseMwFile, MW_HREF_BASE } from "./lib/mw-parser.mjs";
 import { compoundSegmentCount } from "./lib/mw-depth-graph.mjs";
 import { loadPreserved, reviewFields, reviewPayload, writeReport } from "./lib/review-report.mjs";
+import { readJsonIfExists } from "./lib/dataset-meta.mjs";
 
 const MIN_SEGMENTS = 4; // first slice: deep compounds
 const COMPOUND_MARKER = /[—\-+]/g;
@@ -57,6 +58,15 @@ function verdictFor(atlas, model) {
 }
 
 function main() {
+  // H6962/Q14: the queue is retired with a dated tombstone. Do not silently
+  // resurrect it by regenerating over the tombstone.
+  const prior = readJsonIfExists(OUTPUT, fs);
+  if (prior?.retirement?.status === "retired") {
+    console.log(`Retired queue (${prior.retirement.date}): refusing to regenerate ${path.relative(process.cwd(), OUTPUT)}.`);
+    console.log(`Tombstone cites ${prior.retirement.probe}; remove the retirement block only with a new decision.`);
+    return;
+  }
+
   // 1. Collect deep-compound candidates from MW markup, deduped by surface.
   const byKey = new Map(); // surface -> { surface, atlasSegments, line, recordCount }
   for (const r of parseMwFile()) {

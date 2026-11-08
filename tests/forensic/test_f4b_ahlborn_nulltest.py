@@ -34,12 +34,17 @@ Hand derivation, Part 2 (main):
 
 import json
 
-import pytest
-
+import _corpus_pin
 import f4b_ahlborn_nulltest as f4b
 import parse_cslorig
-import _corpus_pin
-from conftest import FIXTURE_REVISION, git_commit_all, write_parse_provenance, write_text, write_tsv
+import pytest
+from conftest import (
+    FIXTURE_REVISION,
+    git_commit_all,
+    write_parse_provenance,
+    write_text,
+    write_tsv,
+)
 
 AHLBORN = """<pwg err="typo" corr="anarGya">anarDya</pwg> <mw>anarGya</mw>
 <pwg err="typo" corr="abc">abd</pwg> <mw>abd</mw>
