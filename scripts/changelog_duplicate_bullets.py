@@ -110,7 +110,7 @@ def _normalise(bullet):
 def git_show(repo_root, spec):
     """Content of `spec` (e.g. `HEAD:CHANGELOG.md`), or None if unavailable."""
     try:
-        res = subprocess.run(['git', 'show', spec], cwd=repo_root,
+        res = subprocess.run(['git', 'show', spec], cwd=repo_root,  # noqa: S603, S607 (fixed argv, no shell)
                              capture_output=True, text=True, encoding='utf-8',
                              errors='replace', timeout=30)
     except Exception:
@@ -120,7 +120,7 @@ def git_show(repo_root, spec):
 
 def repo_root_of(start):
     try:
-        res = subprocess.run(['git', 'rev-parse', '--show-toplevel'], cwd=start,
+        res = subprocess.run(['git', 'rev-parse', '--show-toplevel'], cwd=start,  # noqa: S603, S607 (fixed argv, no shell)
                              capture_output=True, text=True, encoding='utf-8',
                              errors='replace', timeout=30)
     except Exception:

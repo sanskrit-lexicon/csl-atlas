@@ -140,7 +140,7 @@ def load_allowlist(repo_root):
 def git_show(repo_root, spec):
     """Content of `spec` (e.g. `HEAD:CHANGELOG.md`), or None if unavailable."""
     try:
-        res = subprocess.run(['git', 'show', spec], cwd=repo_root,
+        res = subprocess.run(['git', 'show', spec], cwd=repo_root,  # noqa: S603, S607 (fixed argv, no shell)
                              capture_output=True, text=True, encoding='utf-8',
                              errors='replace', timeout=30)
     except Exception:
@@ -159,7 +159,7 @@ def find_removed(base_text, head_text, allowlist=()):
 
 def repo_root_of(start):
     try:
-        res = subprocess.run(['git', 'rev-parse', '--show-toplevel'], cwd=start,
+        res = subprocess.run(['git', 'rev-parse', '--show-toplevel'], cwd=start,  # noqa: S603, S607 (fixed argv, no shell)
                              capture_output=True, text=True, encoding='utf-8',
                              errors='replace', timeout=30)
     except Exception:
@@ -183,7 +183,7 @@ def fork_point(repo_root, base):
     after you branched is not something your change removed.
     """
     try:
-        res = subprocess.run(['git', 'merge-base', base, 'HEAD'], cwd=repo_root,
+        res = subprocess.run(['git', 'merge-base', base, 'HEAD'], cwd=repo_root,  # noqa: S603, S607 (fixed argv, no shell)
                              capture_output=True, text=True, encoding='utf-8',
                              errors='replace', timeout=30)
     except Exception:
