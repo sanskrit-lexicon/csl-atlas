@@ -106,12 +106,14 @@ def _candidates(minimum):
                 [p, "-c", "import sys;print('%d.%d.%d' % sys.version_info[:3])"],
                 stderr=subprocess.STDOUT,
             )
-        except Exception:
+        except Exception as exc:
+            print(f"warn: interpreter candidate {p} probe failed: {exc}", file=sys.stderr)
             continue
         try:
             txt = out.decode("utf-8", "replace").strip().splitlines()[-1]
             parts = tuple(int(x) for x in txt.split("."))
-        except Exception:
+        except Exception as exc:
+            print(f"warn: version output unparsable for {p}: {exc}", file=sys.stderr)
             continue
         if satisfied(parts, minimum) and (p, txt) not in good:
             good.append((p, txt))
@@ -163,8 +165,8 @@ def require(minimum=None, tool=None):
     try:
         sys.stderr.write(explain(minimum, tool) + "\n")
         sys.stderr.flush()
-    except Exception:
-        pass
+    except Exception as exc:
+        print(f"warn: pyfloor explanation write failed: {exc}", file=sys.stdout)
     raise SystemExit(3)
 
 
