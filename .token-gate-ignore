@@ -29,3 +29,9 @@ reports/sweeps/document_sweep_*.json
 # regenerable from committed data + code; only the builder source is gated.
 papers/figures/*.svg
 papers/figures/style_studies/*.svg
+
+# SYNTHESIS_PROGRAM_8W W7 deliverable (H8063, 13-11-2026): the program convention
+# (SYNTHESIS_PROGRAM_8W_2026-11-11.md) is ONE durable SYNTHESIS_<scope>_YYYY-MM-DD.md
+# per week in the owning repo root — splitting forks the reader the same way the PD × DCS
+# report above cannot be split; it is a bounded citation-dense synthesis, not open-ended prose.
+SYNTHESIS_COLOGNE_DICTIONARY_CLUSTER_2026-11-13.md
