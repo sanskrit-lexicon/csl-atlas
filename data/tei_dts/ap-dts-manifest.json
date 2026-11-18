@@ -1,0 +1,50 @@
+{
+  "@context": "https://distributed-text-services.github.io/contexts/collection/1.jsonld",
+  "@id": "https://sanskrit-lexicon.github.io/csl-atlas/data/tei_dts/ap-tei-sample.xml",
+  "dts": {
+    "conformsTo": "https://distributed-text-services.github.io/specifications/Collection",
+    "profile": "tei-pb-lb-dts-profile-v0.1"
+  },
+  "title": "AP page 0001 — pb/lb-anchored TEI sample",
+  "citeStructure": [
+    {
+      "citeType": "div",
+      "use": "n",
+      "citeStructure": [
+        {
+          "citeType": "pb",
+          "use": "n",
+          "citeStructure": [
+            {
+              "citeType": "entry",
+              "use": "xml:id",
+              "citeStructure": [
+                {
+                  "citeType": "lb",
+                  "use": "n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "citeTotal": 11,
+  "anchors": [
+    "0001-1",
+    "0001-2"
+  ],
+  "provenance": {
+    "source": "csl-orig/v02/ap/ap.txt (page 0001 fixture)",
+    "conventions": "csl-pywork make_xml.py",
+    "citationMap": "data/obs/ls_abbreviation_frequency.json (ap)",
+    "titleMap": "data/pd/pd_aob_siglum_title.tsv",
+    "sourceDate": "2006-09-11",
+    "schemaVersion": "1.0.0"
+  },
+  "licence": {
+    "id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+}

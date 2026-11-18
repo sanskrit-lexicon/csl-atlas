@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0.0",
+  "handoff": "H8428",
+  "mode": "offline",
+  "target": "data/tei_dts/ap-dts-manifest.json",
+  "conforms": true,
+  "errors": [],
+  "verdict": "PASS",
+  "note": "offline: validates the committed DTS Collection manifest; live: GETs the endpoint. No estate DTS endpoint exists as of 18-11-2026."
+}

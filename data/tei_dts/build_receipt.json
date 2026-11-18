@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "handoff": "H8428",
+  "profile": "tei-pb-lb-dts-profile-v0.1",
+  "fixture": "data/tei_dts/ap_page0001.fixture.txt",
+  "counts": {
+    "pages": 2,
+    "entries": 9,
+    "pb": 2,
+    "lb": 9,
+    "cit": 22
+  },
+  "checks": {
+    "pb_matches_pages": true,
+    "lb_matches_entries": true,
+    "dts_cite_structure": true
+  },
+  "verdict": "PASS"
+}
