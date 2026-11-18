@@ -1,0 +1,1035 @@
+{
+ "schemaVersion": "1.0.0",
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "ownerRepo": "csl-atlas",
+ "passRole": "B (blind second annotator)",
+ "model": {
+  "tier": "DeepSeek V4.1 Flash",
+  "exactId": "deepseek-v4.1-flash",
+  "provider": "opencode-go"
+ },
+ "protocol": "https://github.com/gasyoun/Uprava/blob/main/docs/PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026.md",
+ "preRegistration": "docs/PROTOCOL_POOL_ALPHA_H4_2026-11-18.md",
+ "blindInput": "data/review/pool_blind/h4_semantic_field_89rows_blind_2026-11-18.json",
+ "blindInputSha256": "450e70b6d92a82bfb90c1f4e546e7d9088ce8b353ed54ecd94ac23c5a25dcd55",
+ "generatedBy": "one label per blind row, chosen only from the row's own allowed set; joined to Pass A by scripts/lexico/review_pool_kappa.py only",
+ "annotatedAt": "2026-11-18",
+ "rows": 89,
+ "items": [
+  {
+   "item": 1,
+   "reviewId": "h4-skd-false-low:skd:01:viSezyaniGnavargaH:sukftin",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 2,
+   "reviewId": "h4-skd-false-low:skd:02:viSezyaniGnavargaH:puRyavat",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 3,
+   "reviewId": "h4-skd-false-low:skd:11:brahmavargaH:janana",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 4,
+   "reviewId": "h4-skd-false-low:skd:17:vyomavargaH:dyo",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "variant-headword"
+  },
+  {
+   "item": 5,
+   "reviewId": "h4-skd-false-low:skd:18:vyomavargaH:div",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "variant-headword"
+  },
+  {
+   "item": 6,
+   "reviewId": "h4-skd-false-low:skd:19:vyomavargaH:vyoman",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 7,
+   "reviewId": "h4-skd-false-low:skd:21:vyomavargaH:ambara",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 8,
+   "reviewId": "h4-skd-false-low:skd:22:vyomavargaH:naBas",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "variant-headword"
+  },
+  {
+   "item": 9,
+   "reviewId": "h4-skd-false-low:skd:23:vyomavargaH:antarikza",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 10,
+   "reviewId": "h4-skd-false-low:skd:24:vyomavargaH:gagana",
+   "stratum": null,
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 11,
+   "reviewId": "h4-vcp-high-coverage:vcp:01:narakavargaH:nAraka",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 12,
+   "reviewId": "h4-vcp-high-coverage:vcp:02:narakavargaH:naraka",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 13,
+   "reviewId": "h4-vcp-high-coverage:vcp:03:narakavargaH:niraya",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 14,
+   "reviewId": "h4-vcp-high-coverage:vcp:04:narakavargaH:durgati",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 15,
+   "reviewId": "h4-vcp-high-coverage:vcp:05:narakavargaH:tapana",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 16,
+   "reviewId": "h4-vcp-high-coverage:vcp:06:narakavargaH:avIci",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 17,
+   "reviewId": "h4-vcp-high-coverage:vcp:07:narakavargaH:mahArOrava",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 18,
+   "reviewId": "h4-vcp-high-coverage:vcp:08:narakavargaH:rOrava",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 19,
+   "reviewId": "h4-vcp-high-coverage:vcp:09:avyayavargaH:cirAya",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 20,
+   "reviewId": "h4-vcp-high-coverage:vcp:10:avyayavargaH:cirarAtrAya",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 21,
+   "reviewId": "h4-vcp-high-coverage:vcp:11:avyayavargaH:cirasya",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 22,
+   "reviewId": "h4-vcp-high-coverage:vcp:12:avyayavargaH:cira",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 23,
+   "reviewId": "h4-vcp-high-coverage:vcp:13:avyayavargaH:muhus",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 24,
+   "reviewId": "h4-vcp-high-coverage:vcp:14:avyayavargaH:SaSvat",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 25,
+   "reviewId": "h4-vcp-high-coverage:vcp:15:avyayavargaH:aBIkzRam",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 26,
+   "reviewId": "h4-vcp-high-coverage:vcp:16:avyayavargaH:asakft",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 27,
+   "reviewId": "h4-vcp-high-coverage:vcp:17:BUmivargaH:BU",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "thin-entry"
+  },
+  {
+   "item": 28,
+   "reviewId": "h4-vcp-high-coverage:vcp:18:BUmivargaH:BUmi",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 29,
+   "reviewId": "h4-vcp-high-coverage:vcp:19:BUmivargaH:anantA",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 30,
+   "reviewId": "h4-vcp-high-coverage:vcp:20:BUmivargaH:rasA",
+   "stratum": null,
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "label": "true-covered"
+  },
+  {
+   "item": 31,
+   "reviewId": "h4-ap-ap90-delta:ap:01:vanOzaDivargaH:vipina",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 32,
+   "reviewId": "h4-ap-ap90-delta:ap:02:BUmivargaH:acalA",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 33,
+   "reviewId": "h4-ap-ap90-delta:ap:03:BUmivargaH:anantA",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 34,
+   "reviewId": "h4-ap-ap90-delta:ap:04:BUmivargaH:sTirA",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 35,
+   "reviewId": "h4-ap-ap90-delta:ap:05:viSezyaniGnavargaH:mahASaya",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 36,
+   "reviewId": "h4-ap-ap90-delta:ap:06:viSezyaniGnavargaH:mahecCa",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 37,
+   "reviewId": "h4-ap-ap90-delta:ap:07:viSezyaniGnavargaH:mahotsAha",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 38,
+   "reviewId": "h4-ap-ap90-delta:ap:08:viSezyaniGnavargaH:suhfdaya",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 39,
+   "reviewId": "h4-ap-ap90-delta:ap:09:viSezyaniGnavargaH:sukftin",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 40,
+   "reviewId": "h4-ap-ap90-delta:ap:10:digvargaH:pUrvA",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 41,
+   "reviewId": "h4-ap-ap90-delta:ap:11:SUdravargaH:avaravarRa",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 42,
+   "reviewId": "h4-ap-ap90-delta:ap:12:DIvargaH:DizaRA",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 43,
+   "reviewId": "h4-ap-ap90-delta:ap:13:avyayavargaH:aBIkzRam",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 44,
+   "reviewId": "h4-ap-ap90-delta:ap:14:avyayavargaH:cirarAtrAya",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 45,
+   "reviewId": "h4-ap-ap90-delta:ap:16:vyomavargaH:suravartman",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 46,
+   "reviewId": "h4-ap-ap90-delta:ap:17:vESyavargaH:BUmispfS",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 47,
+   "reviewId": "h4-ap-ap90-delta:ap:18:vESyavargaH:vArtA",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 48,
+   "reviewId": "h4-ap-ap90-delta:ap:19:siMhAdivargaH:paYcAsya",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 49,
+   "reviewId": "h4-ap-ap90-delta:ap:20:kzatriyavargaH:mUrDABizikta",
+   "stratum": null,
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "label": "parser-gap"
+  },
+  {
+   "item": 50,
+   "reviewId": "h4-specialized-baseline:armh:01:pAtAlaBogivargaH:aDoBuvana",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 51,
+   "reviewId": "h4-specialized-baseline:fri:02:vyomavargaH:div",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "incidental-match"
+  },
+  {
+   "item": 52,
+   "reviewId": "h4-specialized-baseline:bhs:03:DIvargaH:prajYA",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 53,
+   "reviewId": "h4-specialized-baseline:armh:04:pAtAlaBogivargaH:pAtAla",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 54,
+   "reviewId": "h4-specialized-baseline:fri:05:vyomavargaH:aBra",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 55,
+   "reviewId": "h4-specialized-baseline:bhs:06:DIvargaH:mati",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "incidental-match"
+  },
+  {
+   "item": 56,
+   "reviewId": "h4-specialized-baseline:armh:07:pAtAlaBogivargaH:rasAtala",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 57,
+   "reviewId": "h4-specialized-baseline:fri:08:vyomavargaH:vyoman",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 58,
+   "reviewId": "h4-specialized-baseline:bhs:09:DIvargaH:pratipad",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 59,
+   "reviewId": "h4-specialized-baseline:armh:10:pAtAlaBogivargaH:nAgaloka",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 60,
+   "reviewId": "h4-specialized-baseline:fri:11:vyomavargaH:puzkara",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 61,
+   "reviewId": "h4-specialized-baseline:bhs:12:DIvargaH:jYapti",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 62,
+   "reviewId": "h4-specialized-baseline:armh:13:pAtAlaBogivargaH:kuhara",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 63,
+   "reviewId": "h4-specialized-baseline:fri:14:vyomavargaH:ambara",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 64,
+   "reviewId": "h4-specialized-baseline:bhs:15:DIvargaH:samADAna",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 65,
+   "reviewId": "h4-specialized-baseline:armh:16:pAtAlaBogivargaH:Suzira",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 66,
+   "reviewId": "h4-specialized-baseline:fri:17:vyomavargaH:naBas",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 67,
+   "reviewId": "h4-specialized-baseline:bhs:18:DIvargaH:praRiDAna",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 68,
+   "reviewId": "h4-specialized-baseline:armh:19:pAtAlaBogivargaH:vivara",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 69,
+   "reviewId": "h4-specialized-baseline:fri:20:vyomavargaH:antarikza",
+   "stratum": null,
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "label": "scope-match"
+  },
+  {
+   "item": 70,
+   "reviewId": "h4-index-reverse-control:ae:01:avyayavargaH:cit",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 71,
+   "reviewId": "h4-index-reverse-control:mwe:02:avyayavargaH:cit",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 72,
+   "reviewId": "h4-index-reverse-control:pui:03:narakavargaH:naraka",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "index-artifact"
+  },
+  {
+   "item": 73,
+   "reviewId": "h4-index-reverse-control:inm:04:svargavargaH:svar",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "meaningful-exception"
+  },
+  {
+   "item": 74,
+   "reviewId": "h4-index-reverse-control:ieg:05:vyomavargaH:aBra",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 75,
+   "reviewId": "h4-index-reverse-control:ae:06:avyayavargaH:ha",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 76,
+   "reviewId": "h4-index-reverse-control:mwe:07:avyayavargaH:ha",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 77,
+   "reviewId": "h4-index-reverse-control:pui:08:narakavargaH:niraya",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "index-artifact"
+  },
+  {
+   "item": 78,
+   "reviewId": "h4-index-reverse-control:inm:09:svargavargaH:svarga",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "meaningful-exception"
+  },
+  {
+   "item": 79,
+   "reviewId": "h4-index-reverse-control:ieg:10:vyomavargaH:vyoman",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 80,
+   "reviewId": "h4-index-reverse-control:ae:11:avyayavargaH:he",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 81,
+   "reviewId": "h4-index-reverse-control:mwe:12:avyayavargaH:he",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 82,
+   "reviewId": "h4-index-reverse-control:pui:13:narakavargaH:durgati",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "index-artifact"
+  },
+  {
+   "item": 83,
+   "reviewId": "h4-index-reverse-control:inm:14:svargavargaH:nAka",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "index-artifact"
+  },
+  {
+   "item": 84,
+   "reviewId": "h4-index-reverse-control:ieg:15:vyomavargaH:puzkara",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 85,
+   "reviewId": "h4-index-reverse-control:ae:16:avyayavargaH:a",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 86,
+   "reviewId": "h4-index-reverse-control:mwe:17:avyayavargaH:a",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  },
+  {
+   "item": 87,
+   "reviewId": "h4-index-reverse-control:pui:18:narakavargaH:tapana",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "index-artifact"
+  },
+  {
+   "item": 88,
+   "reviewId": "h4-index-reverse-control:inm:19:svargavargaH:tridiva",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "meaningful-exception"
+  },
+  {
+   "item": 89,
+   "reviewId": "h4-index-reverse-control:ieg:20:vyomavargaH:ambara",
+   "stratum": null,
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "label": "direction-artifact"
+  }
+ ],
+ "sensitivityExclusions": [
+  {
+   "item": 1,
+   "reason": "its Pass A decision was seen by the executor while designing the instrument (disclosed in the pre-registration §4)"
+  }
+ ]
+}
