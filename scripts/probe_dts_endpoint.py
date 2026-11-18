@@ -74,6 +74,8 @@ def fetch(url: str, timeout: int = 10) -> object:
 
 def receipt(mode: str, target: str, ok: bool, errors: list[str]) -> str:
     doc = {
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "schemaVersion": SCHEMA_VERSION,
         "handoff": "H8428",
         "mode": mode,

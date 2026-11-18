@@ -226,6 +226,8 @@ def build_dts(pages: list[dict]) -> str:
     anchors = [f'{p["page"]}-{p["col"]}' for p in pages]
     entries = sum(len(p["entries"]) for p in pages)
     doc = {
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "@context": "https://distributed-text-services.github.io/contexts/collection/1.jsonld",
         "@id": "https://sanskrit-lexicon.github.io/csl-atlas/data/tei_dts/ap-tei-sample.xml",
         "dts": {
@@ -272,6 +274,8 @@ def build_dts(pages: list[dict]) -> str:
 
 def build_receipt(pages: list[dict], tei: str, dts: str) -> str:
     doc = {
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "schemaVersion": SCHEMA_VERSION,
         "handoff": "H8428",
         "profile": PROFILE,
