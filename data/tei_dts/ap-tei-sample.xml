@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sa-Latn">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>AP page 0001 — pb/lb-anchored TEI sample</title>
+        <respStmt><resp>built by</resp><name>tei-pb-lb-dts-profile-v0.1</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>csl-atlas (Sanskrit Lexicon)</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl><title>Apte Sanskrit-English Dictionary (AP)</title>
+          <publisher>Bombay Sanskrit Series</publisher>
+          <date>2006-09-11</date>
+          <ref target="https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02/ap">csl-orig/v02/ap</ref>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>H8428 adoption sample: pb/lb anchors derived from csl-pywork make_xml.py conventions; citations attested against the csl-atlas AP &lt;ls&gt; register.</p></projectDesc>
+      <refsDecl n="pb-lb">
+        <cRefPattern matchPattern="([0-9]{4})-([0-9])([0-9]*):([^:]+)" replacementPattern="#xpath(/TEI/text/body/div/pb[@n=&quot;$1-$2$3&quot;])"><p>page-column + line anchor</p></cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text><body>
+    <div type="dictionary" n="AP">
+      <pb n="0001-1"/>
+      <list type="dictionary">
+        <entry xml:id="ap-0001-1-1">
+          <lb n="1"/>
+          <form><orth>a</orth></form>
+          <sense n="1"><p><foreign xml:lang="sa-Latn">a</foreign>¦ The first letter of the alphabet; <foreign xml:lang="sa-Latn">akzarARAmakAro'smi</foreign> <cit type="source" cert="observed" n="attestations:1541"><bibl><abbr>Bg</abbr></bibl><ref target="csl:ls:Bg">Bg. 10. 33</ref></cit>.</p></sense>
+        </entry>
+        <entry xml:id="ap-0001-1-1-002">
+          <lb n="1.002"/>
+          <form><orth>aH</orth></form>
+          <sense n="1"><p><foreign xml:lang="sa-Latn">a</foreign> + .{@<foreign xml:lang="sa-Latn">aH</foreign>@}¦ [<foreign xml:lang="sa-Latn">avati, atati sAtatyena tizWatIti vA</foreign>; <foreign xml:lang="sa-Latn">av-at- vA, qa</foreign> <cit type="source" cert="observed" n="attestations:304"><bibl><abbr>Tv</abbr></bibl><ref target="csl:ls:Tv">Tv.</ref></cit>]
+∙²1 <abbr>N.</abbr> of Viṣṇu, the first of the three sounds constituting the sacred
+ syllable <foreign xml:lang="sa-Latn">om</foreign>; <foreign xml:lang="sa-Latn">akAro vizRuruddizwa ukArastu maheSvaraH . makArastu smfto</foreign>
+ <foreign xml:lang="sa-Latn">brahmA praRavastu trayAtmakaH ..</foreign> For more explanations of the three
+ syllables <foreign xml:lang="sa-Latn">a, u, m</foreign> see <foreign xml:lang="sa-Latn">om</foreign>.
+∙²2 <abbr>N.</abbr> of Śiva, Brahmā, Vāyu, or Vaiśvānara. −[<foreign xml:lang="sa-Latn">aH kfzRaH SaMkaro</foreign>
+ <foreign xml:lang="sa-Latn">brahmA SakraH somo'nilo'nalaH . sUryaH prARo yamaH kAlo vasantaH praRavaH</foreign>
+ <foreign xml:lang="sa-Latn">suKI ..</foreign> <abbr>Enm.</abbr> <foreign xml:lang="sa-Latn">aH syAd brahmaRi vizRvISakUrmARaNkaraRezu ca . gOrave'ntaHpure</foreign>
+ <foreign xml:lang="sa-Latn">hetO BUzaRe'NGrAvumejyayoH ..</foreign> <cit type="source" cert="observed" n="attestations:223"><bibl><abbr>Nm</abbr></bibl><ref target="csl:ls:Nm">Nm.</ref></cit> <foreign xml:lang="sa-Latn">aH SiKAyAM sidDamantre pragrAhe'rke</foreign>
+ <foreign xml:lang="sa-Latn">raTArvaRi . cakre kukkuwamUrDnIndubimbe brahmeSavizRuzu ..</foreign> <abbr>ibid.</abbr> Thus
+ <foreign xml:lang="sa-Latn">aH</foreign> means Kṛṣṇa, Śiva, Brahmā, Indra, Soma, Vāyu, Agni, the
+ Sun, the life-breath, Yama, Kāla, Vasanta, Praṇava, a happy man, a tortoise,
+ a courtyard, a battle, greatness, a female apartment in a palace, an object
+ or a cause, an ornament, a foot, Umā, sacrifice, a flame, a particularly
+ efficacious mantra, reins, the horse of a chariot, a wheel, the head of
+ a cock, the disc of the moon];</p></sense>
+        </entry>
+        <entry xml:id="ap-0001-1-1-004">
+          <lb n="1.004"/>
+          <form><orth>a</orth></form>
+          <sense n="1"><p><foreign xml:lang="sa-Latn">a</foreign>¦ &lt;lex&gt;ind.&lt;/lex&gt;
+∙²1 A prefix corresponding to <foreign xml:lang="und">Latin</foreign> in, <foreign xml:lang="und">Eng.</foreign> in or un, <foreign xml:lang="und">Gr.</foreign>
+ a or an, and joined to nouns, adjectives, indeclinables (or rarely
+ even to verbs) as a substitute for the negative particle <foreign xml:lang="sa-Latn">naY</foreign>, and
+ changed to <foreign xml:lang="sa-Latn">an</foreign> before vowels (except in the word <foreign xml:lang="sa-Latn">a-fRin</foreign>). The
+ senses of <foreign xml:lang="sa-Latn">na</foreign> usually enumerated are six:−
+∙³(a) <foreign xml:lang="sa-Latn">sAdfSya</foreign> ‘likeness’ or ‘resemblance’; <foreign xml:lang="sa-Latn">abrAhmaRaH</foreign> one like
+ a Brāhmaṇa (wearing the sacred thread <abbr>&amp;c.</abbr>), but not a Brāhmaṇa; a
+ Kṣatriya, or a Vaiśya; <foreign xml:lang="sa-Latn">anikzuH</foreign> a reed appearing like <foreign xml:lang="sa-Latn">ikzu</foreign>, but
+ not a true <foreign xml:lang="sa-Latn">ikzu</foreign>.
+∙³(b) <foreign xml:lang="sa-Latn">aBAva</foreign> ‘absence’, ‘negation’, ‘want’, ‘privation’; <foreign xml:lang="sa-Latn">ajYAnam</foreign>
+ absence of knowledge, ignorance; <foreign xml:lang="sa-Latn">akroDaH, anaNgaH, akaRwakaH, aGawaH</foreign> <abbr>&amp;c.</abbr>
+∙³(c) <foreign xml:lang="sa-Latn">anyatva</foreign> ‘difference’ or ‘distinction’; <foreign xml:lang="sa-Latn">apawaH</foreign> not a cloth,
+ something different from, or other than, a cloth.
+∙³(d) <foreign xml:lang="sa-Latn">alpatA</foreign> ‘smallness’, ‘diminution’, used as a diminutive particle;
+ <foreign xml:lang="sa-Latn">anudarA</foreign> having a slender waist (<foreign xml:lang="sa-Latn">kfSodarI</foreign> or <foreign xml:lang="sa-Latn">tanumaDyamA</foreign>).
+∙³(e) <foreign xml:lang="sa-Latn">aprASastya</foreign> ‘badness’, ‘unfitness’, having a depreciative
+ sense; <foreign xml:lang="sa-Latn">akAlaH</foreign> wrong or improper time; <foreign xml:lang="sa-Latn">akAryam</foreign> not fit to be done,
+ improper, unworthy, bad act.
+∙³(f) <foreign xml:lang="sa-Latn">viroDa</foreign> ‘opposition’, ‘contrariety’; <foreign xml:lang="sa-Latn">anItiH</foreign> the opposite
+ of morality, immorality; <foreign xml:lang="sa-Latn">asita</foreign> not white, black; <foreign xml:lang="sa-Latn">asura</foreign> not a god,
+ a demon <abbr>&amp;c.</abbr> These senses are put together in the following verse:− <foreign xml:lang="sa-Latn">tatsAdfSyamaBAvaSca</foreign>
+ <foreign xml:lang="sa-Latn">tadanyatvaM tadalpatA . aprASastyaM viroDaSca naYarTAH zaw prakIrtitAH ..</foreign>
+ See <foreign xml:lang="sa-Latn">na</foreign> also. With verbal derivatives, such as gerunds, infinitives,
+ participles, it has usually the sense of ‘not’; <foreign xml:lang="sa-Latn">adagDvA</foreign> not having
+ burnt; <foreign xml:lang="sa-Latn">apaSyan</foreign> not seeing; so <foreign xml:lang="sa-Latn">asakft</foreign> not once; <foreign xml:lang="sa-Latn">amfzA, akasmAt</foreign>
+ <abbr>&amp;c.</abbr> Sometimes in <foreign xml:lang="sa-Latn">bahuvrIhi a</foreign> does not affect the sense of the second
+ member; <foreign xml:lang="sa-Latn">a-paScima</foreign> that which has no last, <abbr>i. e.</abbr> best, topmost;
+ <abbr>e. g.</abbr> <foreign xml:lang="sa-Latn">vipaScitAmapaScimaH</foreign> <abbr>cf.</abbr> also <cit type="source" cert="observed" n="attestations:7240"><bibl><abbr>R</abbr></bibl><ref target="csl:ls:R">R. 19. 1</ref></cit>. <foreign xml:lang="sa-Latn">anuttama</foreign> having
+ no superior, unsurpassed, most excellent: (for examples see these words).
+∙²2 An interjection of
+∙³(a) Pity (ah!) <foreign xml:lang="sa-Latn">a avadyaM</foreign> <cit type="source" cert="observed" n="attestations:1374"><bibl><abbr>P</abbr></bibl><ref target="csl:ls:P">P. I. 1. 14. Sk.</ref></cit>
+∙³(b) Reproach, censure (fie, shame); <foreign xml:lang="sa-Latn">apacasi tvaM jAlma</foreign> <cit type="source" cert="observed" n="attestations:1374"><bibl><abbr>P</abbr></bibl><ref target="csl:ls:P">P. VI. 3. 73. Vārt.</ref></cit></p></sense>
+        </entry>
+      </list>
+      <pb n="0001-2"/>
+      <list type="dictionary">
+        <entry xml:id="ap-0001-2-2">
+          <lb n="2"/>
+          <form><orth>afRin</orth></form>
+          <sense n="1"><p><foreign xml:lang="sa-Latn">afRin</foreign>¦ &lt;lex&gt;a.&lt;/lex&gt; (<abbr>epic.</abbr>) (<foreign xml:lang="sa-Latn">f</foreign> being here regarded as a consonant) Not
+ a debtor, free from debt; <foreign xml:lang="sa-Latn">divasasyAzwame BAge SAkaM pacati yo naraH .</foreign>
+ <foreign xml:lang="sa-Latn">afRI cApravAsI ca sa vAricara modate ..</foreign> <cit type="source" cert="observed" n="attestations:4105"><bibl><abbr>Mb</abbr></bibl><ref target="csl:ls:Mb">Mb.</ref></cit> The normal form <foreign xml:lang="sa-Latn">anfRin</foreign>
+ also occurs in this sense.</p></sense>
+        </entry>
+        <entry xml:id="ap-0001-2-3">
+          <lb n="3"/>
+          <form><orth>aMS</orth></form>
+          <sense n="1"><p><foreign xml:lang="sa-Latn">aMS</foreign>¦ €10 <abbr>U.</abbr> <foreign xml:lang="sa-Latn">aMSayati-te</foreign> also <foreign xml:lang="sa-Latn">aMSApayati</foreign> To divide, distribute, share among.</p></sense>
+        </entry>
+        <entry xml:id="ap-0001-2-4">
+          <lb n="4"/>
+          <form><orth>aMSaH</orth></form>
+          <sense n="1"><p><foreign xml:lang="sa-Latn">aMSaH</foreign>¦ [<foreign xml:lang="sa-Latn">aMS-ac</foreign>]
+∙²1 A share, part, portion, division; member; <foreign xml:lang="sa-Latn">sakfdaMSo nipatati</foreign> <cit type="source" cert="observed" n="attestations:5185"><bibl><abbr>Ms</abbr></bibl><ref target="csl:ls:Ms">Ms. 9. 47</ref></cit>;
+ <foreign xml:lang="sa-Latn">turyAMSaH</foreign> a fourth part; <foreign xml:lang="sa-Latn">zazWa˚</foreign>; <foreign xml:lang="sa-Latn">mamEvAMSo jIvaloke jIvaBUtaH</foreign>
+ <foreign xml:lang="sa-Latn">sanAtanaH</foreign> <cit type="source" cert="observed" n="attestations:1541"><bibl><abbr>Bg</abbr></bibl><ref target="csl:ls:Bg">Bg. 15. 7</ref></cit>; <foreign xml:lang="sa-Latn">BuvamaMSAviva DarmayorgatO</foreign> <cit type="source" cert="observed" n="attestations:7240"><bibl><abbr>R</abbr></bibl><ref target="csl:ls:R">R. 8. 16</ref></cit>; <foreign xml:lang="sa-Latn">aMSena</foreign>
+ <foreign xml:lang="sa-Latn">darSitAnukUlatA</foreign> <cit type="source" cert="observed" n="attestations:1725"><bibl><abbr>K</abbr></bibl><ref target="csl:ls:K">K. 159</ref></cit> partly.
+∙²2 A share in property, inheritance; <foreign xml:lang="sa-Latn">svatoM'SataH</foreign> <cit type="source" cert="observed" n="attestations:5185"><bibl><abbr>Ms</abbr></bibl><ref target="csl:ls:Ms">Ms. 8. 408</ref></cit>; <foreign xml:lang="sa-Latn">anaMSO</foreign>
+ <foreign xml:lang="sa-Latn">klIbapatitO</foreign> <cit type="source" cert="observed" n="attestations:5185"><bibl><abbr>Ms</abbr></bibl><ref target="csl:ls:Ms">9. 201</ref></cit>; <foreign xml:lang="sa-Latn">patnyaH kAryAH samAMSikAH</foreign> <cit type="source" cert="observed" n="attestations:1065"><bibl><abbr>Y</abbr></bibl><ref target="csl:ls:Y">Y. 2. 115</ref></cit>.
+∙²3 the numerator of a fraction; <foreign xml:lang="sa-Latn">anyonyahArABihatO harAMSO</foreign> <cit type="source" cert="observed" n="attestations:25"><bibl><abbr>Līlā</abbr></bibl><ref target="csl:ls:Līlā">Līlā.</ref></cit>;
+ sometimes used for fraction itself.
+∙²4 A degree of latitude (or longitude); <foreign xml:lang="sa-Latn">akzasyAMSAH samAKyAtAH zazwyuttaraSatatrayam</foreign>;
+ <foreign xml:lang="sa-Latn">sa ca aMSaH zazwikalAtmakaH, kalA tu zazwivikalAtmikA</foreign>.
+∙²5 The shoulder (more correctly written as <foreign xml:lang="sa-Latn">aMsa</foreign>, <abbr>q. v.</abbr>).
+∙²6 <abbr>N.</abbr> of one of the Ādityas; <cit type="source" cert="observed" n="attestations:4105"><bibl><abbr>Mb</abbr></bibl><ref target="csl:ls:Mb">Mb. 1. 227. 25</ref></cit>; <abbr>cf.</abbr> also the beginning of
+ <cit type="source" cert="observed" n="attestations:115"><bibl><abbr>T</abbr></bibl><ref target="csl:ls:T">T. Ār.</ref></cit> The senses of ‘party’, ‘a share of booty’, ‘earnest money’, which
+ are said to occur in the Veda are traceable to 1 above.
+∙²7 The vital note in a Rāga.
+.━{@<abbr>Comp.</abbr>@}: <foreign xml:lang="sa-Latn">aMSAMSaH, aMSAMSi, aMSAvatAraH, aMSAvataraRam, aMSakuRqalI, aMSaBAj, aMSahara, aMSahArin, aMSavivartin, aMSasavarRanam, aMSasvaraH</foreign></p></sense>
+        </entry>
+        <entry xml:id="ap-0001-2-4-020">
+          <lb n="4.020"/>
+          <form><orth>aMSAMSaH</orth></form>
+          <sense n="2"><p><foreign xml:lang="sa-Latn">aMSaH</foreign> + <foreign xml:lang="sa-Latn">-aMSaH</foreign>¦ [&lt;sab&gt;<foreign xml:lang="sa-Latn">za˚ ta˚</foreign>&lt;/sab&gt;] a secondary incarnation; part of a portion.</p></sense>
+        </entry>
+        <entry xml:id="ap-0001-2-4-022">
+          <lb n="4.022"/>
+          <form><orth>aMSAMSi</orth></form>
+          <sense n="2"><p><foreign xml:lang="sa-Latn">aMSaH</foreign> + <foreign xml:lang="sa-Latn">-aMSi</foreign>¦ &lt;lex&gt;adv.&lt;/lex&gt; share by share.</p></sense>
+        </entry>
+        <entry xml:id="ap-0001-2-4-024">
+          <lb n="4.024"/>
+          <form><orth>aMSAvatAraH</orth></form>
+          <sense n="2"><p><foreign xml:lang="sa-Latn">aMSaH</foreign> + <foreign xml:lang="sa-Latn">-avatAraH, -avataraRam</foreign>¦ [&lt;sab&gt;<foreign xml:lang="sa-Latn">za˚ ta˚</foreign>&lt;/sab&gt;] descent (on earth) of parts
+ of deities, partial incarnation; <foreign xml:lang="sa-Latn">˚tAra iva Darmasya</foreign> <cit type="source" cert="observed" n="attestations:759"><bibl><abbr>Dk</abbr></bibl><ref target="csl:ls:Dk">Dk. 153</ref></cit>; <foreign xml:lang="sa-Latn">˚ramiva</foreign>
+ <foreign xml:lang="sa-Latn">kftAntasya</foreign> <cit type="source" cert="observed" n="attestations:1725"><bibl><abbr>K</abbr></bibl><ref target="csl:ls:K">K. 31</ref></cit>; <foreign xml:lang="sa-Latn">˚uccEHSravasaH</foreign> <cit type="source" cert="observed" n="attestations:1725"><bibl><abbr>K</abbr></bibl><ref target="csl:ls:K">79</ref></cit>; so <foreign xml:lang="sa-Latn">aMSAvatIrRamiva</foreign> <cit type="source" cert="observed" n="attestations:1725"><bibl><abbr>K</abbr></bibl><ref target="csl:ls:K">108</ref></cit>;
+ <abbr>N.</abbr> of a sub-parvan covering Adhyāyas 64-67 of Ādiparvan of <cit type="source" cert="observed" n="attestations:4105"><bibl><abbr>Mb</abbr></bibl><ref target="csl:ls:Mb">Mb.</ref></cit> Even
+ without the compound</p></sense>
+        </entry>
+      </list>
+    </div>
+  </body></text>
+</TEI>
