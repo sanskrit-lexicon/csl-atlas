@@ -335,11 +335,13 @@ def main() -> int:
     )
 
     os.makedirs(os.path.dirname(JSON_OUT), exist_ok=True)
-    with open(JSON_OUT, "w", encoding="utf-8") as fh:
+    # newline="": write LF on every host, so a Windows re-run leaves the committed
+    # report byte-identical instead of rewriting CRLF (reproducibility contract).
+    with open(JSON_OUT, "w", encoding="utf-8", newline="") as fh:
         json.dump(payload, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
 
-    with open(MD_OUT, "w", encoding="utf-8") as fh:
+    with open(MD_OUT, "w", encoding="utf-8", newline="") as fh:
         fh.write(render_markdown(payload))
 
     print(f"wrote {JSON_OUT} and {MD_OUT}")
