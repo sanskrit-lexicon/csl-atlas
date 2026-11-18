@@ -44,6 +44,29 @@ from dataset_meta import (  # noqa: E402
     read_json_if_exists,
 )
 
+sys.path.insert(0, HERE)
+
+import pool_kappa_stats  # noqa: E402
+from pool_kappa_stats import (  # noqa: E402
+    BOOTSTRAP_RESAMPLES,
+    bootstrap_ci,
+    krippendorff_alpha_nominal,
+    landis_koch,
+)
+from pool_kappa_report_md import render_markdown  # noqa: E402
+from pool_kappa_two_model import (  # noqa: E402,F401
+    HUMAN_ANCHOR_NOTE,
+    STRATUM_BY_LABELS,
+    TWO_MODEL_CAVEAT,
+    TWO_MODEL_CHANNEL,
+    gate_band,
+    pass_a_decisions,
+    pass_b_labels,
+    read_json_file,
+    stratum_of,
+    two_model_packet,
+)
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -67,84 +90,6 @@ CONTAMINATION_NOTE = (
     "them but nothing enforces it. Measurable-looking agreement could be agreement with a "
     "copied answer, not independent judgment (design §9 honesty rule 4 / §11 risk 2)."
 )
-
-
-def landis_koch(alpha):
-    if alpha is None:
-        return None
-    if alpha < 0:
-        return "poor"
-    if alpha < 0.20:
-        return "slight"
-    if alpha < 0.40:
-        return "fair"
-    if alpha < 0.60:
-        return "moderate"
-    if alpha < 0.80:
-        return "substantial"
-    return "almost-perfect"
-
-
-def krippendorff_alpha_nominal(units):
-    """units: list of list-of-labels, one list per row (>=1 keys per row).
-
-    Standard nominal Krippendorff's alpha via the coincidence-matrix method
-    (Hayes & Krippendorff 2007). Rows with fewer than 2 keys contribute no
-    pairs and are silently excluded (they carry no disagreement information).
-    Returns None when there is not enough pairable data, or when the expected
-    disagreement is zero (every key falls in a single category -- alpha is
-    undefined by the formula, not zero).
-    """
-    o = defaultdict(float)
-    n_total = 0
-    for labels in units:
-        m = len(labels)
-        if m < 2:
-            continue
-        counts = Counter(labels)
-        denom = m - 1
-        for c, n_c in counts.items():
-            for k, n_k in counts.items():
-                if c == k:
-                    o[(c, k)] += n_c * (n_c - 1) / denom
-                else:
-                    o[(c, k)] += n_c * n_k / denom
-        n_total += m
-    if n_total < 2:
-        return None
-    categories = sorted({c for c, _ in o} | {k for _, k in o})
-    n_c = {c: sum(o.get((c, k), 0.0) for k in categories) for c in categories}
-    n = sum(n_c.values())
-    if n < 2:
-        return None
-    diag = sum(o.get((c, c), 0.0) for c in categories)
-    do_ = (n - diag) / n
-    de_num = n * (n - 1) - sum(v * (v - 1) for v in n_c.values())
-    de_ = de_num / (n * (n - 1))
-    if de_ == 0:
-        return None
-    return 1.0 - do_ / de_
-
-
-def bootstrap_ci(units, rng, resamples=BOOTSTRAP_RESAMPLES):
-    """95% CI over rows for Krippendorff's alpha; None if the point estimate
-    itself is undefined or too few rows carry >=2 keys to resample."""
-    pairable = [u for u in units if len(u) >= 2]
-    if len(pairable) < 2:
-        return None
-    samples = []
-    n = len(pairable)
-    for _ in range(resamples):
-        draw = [pairable[rng.randrange(n)] for _ in range(n)]
-        alpha = krippendorff_alpha_nominal(draw)
-        if alpha is not None:
-            samples.append(alpha)
-    if len(samples) < resamples // 2:
-        return None
-    samples.sort()
-    lo = samples[int(0.025 * len(samples))]
-    hi = samples[min(len(samples) - 1, int(0.975 * len(samples)))]
-    return [round(lo, 4), round(hi, 4)]
 
 
 def cohen_kappa(pairs):
@@ -280,12 +225,34 @@ def packet_report(merge_report, rng, expert_path=None):
     }
 
 
-def build_payload(merge_reports, source_paths, expert_baselines, seed):
+def build_payload(merge_reports, source_paths, expert_baselines, seed, model_pairs=None, pass_a_models=None):
     rng = random.Random(seed)
     packets = [
         packet_report(report, rng, expert_baselines.get(report["sheetId"]))
         for report in merge_reports
     ]
+    model_pairs = model_pairs or {}
+    pass_a_models = pass_a_models or {}
+    two_model_packets = []
+    pair_sources = []
+    for packet_id, spec in model_pairs.items():
+        payload_a = read_json_file(spec["a"])
+        payload_b = read_json_file(spec["b"])
+        blind_payload = read_json_file(spec["blind"]) if spec.get("blind") else None
+        flip_payload = read_json_file(spec["flip"]) if spec.get("flip") else None
+        paths = {
+            "a": os.path.relpath(spec["a"]).replace(os.sep, "/"),
+            "b": os.path.relpath(spec["b"]).replace(os.sep, "/"),
+            "blind": os.path.relpath(spec["blind"]).replace(os.sep, "/") if spec.get("blind") else None,
+            "flip": os.path.relpath(spec["flip"]).replace(os.sep, "/") if spec.get("flip") else None,
+        }
+        pair_sources += [p for p in paths.values() if p]
+        two_model_packets.append(
+            two_model_packet(
+                packet_id, payload_a, payload_b, blind_payload, flip_payload,
+                pass_a_models.get(packet_id, "unrecorded"), rng, paths,
+            )
+        )
     payload = {
         "schemaVersion": "1.0.0",
         **license_fields(),
@@ -293,14 +260,17 @@ def build_payload(merge_reports, source_paths, expert_baselines, seed):
         "reviewStatus": "machine-reviewed",
         "ownerRepo": "csl-atlas",
         "generatedBy": "python scripts/lexico/review_pool_kappa.py",
-        "sourceFiles": [os.path.relpath(p, ROOT).replace(os.sep, "/") for p in source_paths],
+        "sourceFiles": [os.path.relpath(p, ROOT).replace(os.sep, "/") for p in source_paths] + pair_sources,
         "method": (
             "Krippendorff's alpha (nominal, coincidence-matrix method) as the headline statistic "
             "because raters rotate across rows (design §5); Cohen's kappa per dyad only where the "
             "dyad shares >= 30 rows; bootstrap 95% CI over rows (2000 resamples, seeded); "
-            "Landis-Koch bands reused from scripts/lexico/root_agreement_kappa.py."
+            "Landis-Koch bands reused from scripts/lexico/root_agreement_kappa.py. Two-model "
+            "packets add a blind cross-model second pass under Uprava "
+            "PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026 (channel = model x model)."
         ),
         "packets": packets,
+        "twoModelPackets": two_model_packets,
         "limitations": [NO_POOLING_NOTE, CONTAMINATION_NOTE],
         "warnings": [],
     }
@@ -308,84 +278,20 @@ def build_payload(merge_reports, source_paths, expert_baselines, seed):
     return payload
 
 
-def render_markdown(payload):
-    lines = [
-        "# Review Pool v1 — κ Report",
-        "",
-        "Date: " + payload["generatedAt"][:10],
-        "",
-        ("Status: generated machine-reviewed analysis over the community review pool's "
-        "double-keyed decisions; see docs/REVIEW_POOL_V1_DESIGN.md §9."),
-        "",
-        "## Chart Trust Block",
-        "",
-        ("- Claim: Inter-annotator reliability of the community review pool's double-keyed "
-        "packets, reported per packet with Krippendorff's alpha as the headline statistic."),
-        f"- Evidence label: `{payload['evidenceLabel']}`",
-        "- Source files: " + ", ".join(f"`{p}`" for p in payload["sourceFiles"]),
-        f"- Generated by: `{payload['generatedBy']}`",
-        ("- Validation: `npm run test-review-pool-kappa` (fixture-checked alpha/kappa); "
-        "wired into `npm run verify`."),
-        ("- Known false positives: a rotating-partner dyad below n=30 has its Cohen's kappa "
-        "suppressed, not fabricated."),
-        ("- Known false negatives: alpha is undefined (reported `null`) when every key in a "
-        "packet falls in one category (degenerate agreement), including the current synthetic "
-        "all-approve dry-run canary."),
-        f"- Review status: `{payload['reviewStatus']}`",
-        f"- Owner repo: `{payload['ownerRepo']}`",
-        ("- Next action: recruit real annotators (design §10 P6) and re-run this builder; a "
-        "degenerate report before recruitment is machinery verification, not a measurement."),
-        "- External dependencies: none.",
-        ("- Boundary note: derived from committed pool merge reports only; no source/corpus "
-        "read, no public page, no recruitment or consent handling."),
-        "",
-        "## Method",
-        "",
-        payload["method"],
-        "",
-    ]
-    for packet in payload["packets"]:
-        lines += [
-            f"## {packet['packetId']}",
-            "",
-            (f"Rows: {packet['rows']} ({packet['rowsDoubleKeyed']} double-keyed, "
-            f"{packet['rowsSingleKey']} single-key)."),
-            "",
-            "| Statistic | Value |",
-            "|---|---|",
-            f"| Observed agreement | {packet['observedAgreement']} |",
-            f"| Chance-expected agreement | {packet['chanceAgreement']} |",
-            f"| Modal-label share | {packet['modalLabelShare']} |",
-            f"| Krippendorff's α (nominal) | {packet['krippendorffAlpha']} |",
-            f"| α 95% CI (bootstrap, n={BOOTSTRAP_RESAMPLES}) | {packet['alphaCI95']} |",
-            f"| Band | `{packet['band']}` |",
-            f"| Button-level (approve/reject/defer) agreement | {packet['buttonLevelAgreement']} |",
-            f"| Disagreements queued for adjudication | {packet['disagreements']} |",
-            f"| Adjudicated | {packet['adjudicated']} |",
-            f"| Blocked by adjudicator | {packet['blockedByAdjudicator']} |",
-            "",
-            "| Dyad | n | Cohen's κ | Band |",
-            "|---|---:|---:|---|",
-        ]
-        for dyad in packet["cohenKappaByDyad"]:
-            lines.append(f"| {' × '.join(dyad['dyad'])} | {dyad['n']} | {dyad['kappa']} | `{dyad['band']}` |")
-        if packet["expertBaseline"]:
-            eb = packet["expertBaseline"]
-            lines += ["", (f"Expert baseline (`{eb['sourceFile']}`, n={eb['n']}): "
-                          f"pool-key agreement {eb['agreementWithPool']} (never mixed into the pool-internal α).")]
-        lines += ["", "**Limitations for this packet:**", ""]
-        lines += [f"- {x}" for x in packet["limitations"]]
-        lines.append("")
-    lines += ["## Report-level limitations", ""] + [f"- {x}" for x in payload["limitations"]]
-    lines += ["", "_Auto-generated by `python scripts/lexico/review_pool_kappa.py`._", ""]
-    return "\n".join(lines)
-
-
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("merge_reports", nargs="+")
     parser.add_argument("--expert-baseline", action="append", default=[],
                         help="PACKET_ID=FILE.json, repeatable")
+    parser.add_argument("--model-pair", action="append", default=[],
+                        help="PACKET_ID=PASS_A.json=PASS_B.json — blind cross-model second-annotator "
+                             "pair (protocol PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026)")
+    parser.add_argument("--blind", action="append", default=[],
+                        help="PACKET_ID=BLIND.json — the blind view Pass B read (evidence-presence split)")
+    parser.add_argument("--flip-rate", action="append", default=[],
+                        help="PACKET_ID=FLIP_RATE.json — §2.7 flip-rate artifact")
+    parser.add_argument("--pass-a-model", action="append", default=[],
+                        help="PACKET_ID=TIER AND EXACT VERSION (protocol §2.2)")
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     args = parser.parse_args()
 
@@ -398,7 +304,35 @@ def main() -> int:
             sys.exit(f"--expert-baseline must be PACKET_ID=FILE.json, got {spec!r}")
         expert_baselines[packet_id] = file_path
 
-    payload = build_payload(reports, args.merge_reports, expert_baselines, args.seed)
+    def keyed(specs, flag):
+        out = {}
+        for spec in specs:
+            key, _, value = spec.partition("=")
+            if not value or "=" in value:
+                sys.exit(f"{flag} must be KEY=VALUE, got {spec!r}")
+            out[key] = value
+        return out
+
+    model_pairs = {}
+    for spec in args.model_pair:
+        packet_id, _, rest = spec.partition("=")
+        parts = rest.split("=")
+        if len(parts) != 2 or not packet_id:
+            sys.exit(f"--model-pair must be PACKET_ID=PASS_A.json=PASS_B.json, got {spec!r}")
+        model_pairs[packet_id] = {"a": parts[0], "b": parts[1]}
+
+    for packet_id, path in keyed(args.blind, "--blind").items():
+        model_pairs.setdefault(packet_id, {})["blind"] = path
+    for packet_id, path in keyed(args.flip_rate, "--flip-rate").items():
+        model_pairs.setdefault(packet_id, {})["flip"] = path
+    incomplete = [pid for pid, spec in model_pairs.items() if not (spec.get("a") and spec.get("b"))]
+    if incomplete:
+        sys.exit(f"--blind/--flip-rate named packet(s) with no --model-pair: {', '.join(incomplete)}")
+
+    payload = build_payload(
+        reports, args.merge_reports, expert_baselines, args.seed,
+        model_pairs=model_pairs, pass_a_models=keyed(args.pass_a_model, "--pass-a-model"),
+    )
 
     os.makedirs(os.path.dirname(JSON_OUT), exist_ok=True)
     with open(JSON_OUT, "w", encoding="utf-8") as fh:
@@ -412,6 +346,9 @@ def main() -> int:
     for packet in payload["packets"]:
         print(f"  {packet['packetId']}: α={packet['krippendorffAlpha']} band={packet['band']} "
               f"rows={packet['rows']}")
+    for pair in payload.get("twoModelPackets", []):
+        print(f"  {pair['packetId']} [{pair['channel']}]: α={pair['krippendorffAlpha']} "
+              f"CI={pair['alphaCI95']} gate={pair['gate']['outcome']} n={pair['rows']}")
     return 0
 
 

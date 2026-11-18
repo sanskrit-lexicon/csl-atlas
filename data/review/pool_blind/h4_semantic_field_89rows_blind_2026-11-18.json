@@ -1,0 +1,2856 @@
+{
+ "schemaVersion": "1.0.0",
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "ownerRepo": "csl-atlas",
+ "generatedBy": "blind view of the H4 semantic-field review packet (reviewed-ok rows); every decision, provenance, note, proposed-label and sample-type field stripped per PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026 §2.3",
+ "sourcePacket": "data/lexico/h4_semantic_field_review_packet.json",
+ "sourcePacketSha256": "fadda7b52a9f766905ed5260597af753a0c2b1d4f757636f817446757c8c7583",
+ "packetGeneratedAt": "2026-10-30T09:46:59.130Z",
+ "rows": 89,
+ "stripped": [
+  "reviewStatus",
+  "reviewedValue",
+  "reviewer",
+  "reviewedAt",
+  "note",
+  "autoTriage",
+  "proposedLabel",
+  "sampleType",
+  "sampleLabel",
+  "rank"
+ ],
+ "omittedPointerFields": [
+  "sourceFile",
+  "firstAmarL",
+  "firstEid",
+  "role",
+  "href",
+  "line"
+ ],
+ "items": [
+  {
+   "item": 1,
+   "reviewId": "h4-skd-false-low:skd:01:viSezyaniGnavargaH:sukftin",
+   "dict": "SKD",
+   "field": "viSezyaniGnavargaH",
+   "lemma": "sukftin",
+   "variants": [
+    "sukftin"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 29,
+    "amar": 1017,
+    "pct": 0.0285
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma sukftin in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 2,
+   "reviewId": "h4-skd-false-low:skd:02:viSezyaniGnavargaH:puRyavat",
+   "dict": "SKD",
+   "field": "viSezyaniGnavargaH",
+   "lemma": "puRyavat",
+   "variants": [
+    "puRyavat"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 29,
+    "amar": 1017,
+    "pct": 0.0285
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma puRyavat in viSezyaniGnavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 3,
+   "reviewId": "h4-skd-false-low:skd:11:brahmavargaH:janana",
+   "dict": "SKD",
+   "field": "brahmavargaH",
+   "lemma": "janana",
+   "variants": [
+    "janana"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 48,
+    "amar": 385,
+    "pct": 0.1247
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma janana in brahmavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 4,
+   "reviewId": "h4-skd-false-low:skd:17:vyomavargaH:dyo",
+   "dict": "SKD",
+   "field": "vyomavargaH",
+   "lemma": "dyo",
+   "variants": [
+    "dyo"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 3,
+    "amar": 23,
+    "pct": 0.1304
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma dyo in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 5,
+   "reviewId": "h4-skd-false-low:skd:18:vyomavargaH:div",
+   "dict": "SKD",
+   "field": "vyomavargaH",
+   "lemma": "div",
+   "variants": [
+    "div"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 3,
+    "amar": 23,
+    "pct": 0.1304
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma div in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 6,
+   "reviewId": "h4-skd-false-low:skd:19:vyomavargaH:vyoman",
+   "dict": "SKD",
+   "field": "vyomavargaH",
+   "lemma": "vyoman",
+   "variants": [
+    "vyoman"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 3,
+    "amar": 23,
+    "pct": 0.1304
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma vyoman in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 7,
+   "reviewId": "h4-skd-false-low:skd:21:vyomavargaH:ambara",
+   "dict": "SKD",
+   "field": "vyomavargaH",
+   "lemma": "ambara",
+   "variants": [
+    "ambara"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 3,
+    "amar": 23,
+    "pct": 0.1304
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma ambara in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 8,
+   "reviewId": "h4-skd-false-low:skd:22:vyomavargaH:naBas",
+   "dict": "SKD",
+   "field": "vyomavargaH",
+   "lemma": "naBas",
+   "variants": [
+    "naBas"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 3,
+    "amar": 23,
+    "pct": 0.1304
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma naBas in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 9,
+   "reviewId": "h4-skd-false-low:skd:23:vyomavargaH:antarikza",
+   "dict": "SKD",
+   "field": "vyomavargaH",
+   "lemma": "antarikza",
+   "variants": [
+    "antarikza"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 3,
+    "amar": 23,
+    "pct": 0.1304
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma antarikza in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 10,
+   "reviewId": "h4-skd-false-low:skd:24:vyomavargaH:gagana",
+   "dict": "SKD",
+   "field": "vyomavargaH",
+   "lemma": "gagana",
+   "variants": [
+    "gagana"
+   ],
+   "machineState": "missing",
+   "coverage": {
+    "covered": 3,
+    "amar": 23,
+    "pct": 0.1304
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is SKD missing AMAR lemma gagana in vyomavargaH, or is it present under a variant headword, prose passage, or parser-missed source form?",
+   "allowed": [
+    "true-low",
+    "variant-headword",
+    "prose-present",
+    "parser-gap"
+   ],
+   "evidence": []
+  },
+  {
+   "item": 11,
+   "reviewId": "h4-vcp-high-coverage:vcp:01:narakavargaH:nAraka",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "nAraka",
+   "variants": [
+    "nAraka"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword nAraka represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "28524",
+     "excerpt": "nAraka¦ pu0 naraka eva prajYA0 aR . 1 narake . narako Bomyata- yA'styasva aR . 2 narakastye prARini tri0 amaraH ."
+    }
+   ]
+  },
+  {
+   "item": 12,
+   "reviewId": "h4-vcp-high-coverage:vcp:02:narakavargaH:naraka",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "naraka",
+   "variants": [
+    "naraka"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword naraka represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "28040",
+     "excerpt": "naraka¦ pu0 narati nayati pApilokaM pApAnurUpaBogAyAtra nF--naye ADAre bA0 vun . pApaBogasTAne tasya taTAtvaYca vistareRa vizRupu0 SivaDarmottare ca varRitaM tadeva purARasa0 pradarSitaM tacca karmavipAkaSabde 1745 pfzWAdO darSitam . pApaBedena narakaBedaprAp..."
+    }
+   ]
+  },
+  {
+   "item": 13,
+   "reviewId": "h4-vcp-high-coverage:vcp:03:narakavargaH:niraya",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "niraya",
+   "variants": [
+    "niraya"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword niraya represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "28932",
+     "excerpt": "niraya¦ pu0 nirgato'yotra prA0 ba0 nIcEretyatra nir + i AGAre ac vA . narake amaraH “niraye cEva patanaM yAtanASca yamakzaye” manuH ."
+    }
+   ]
+  },
+  {
+   "item": 14,
+   "reviewId": "h4-vcp-high-coverage:vcp:04:narakavargaH:durgati",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "durgati",
+   "variants": [
+    "durgati"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword durgati represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "25393",
+     "excerpt": "durgati¦ strI duzwA gatiH prA0 sa0 . 1 narake amaraH . 2 dAridrye medi0 . “na durgatimavApnoti svargalokaYca gacCati” BA0 SA0 5593 Slo0 duHsTitA gatirasya prA0 ba0 . 3 tadyute tri0 ."
+    }
+   ]
+  },
+  {
+   "item": 15,
+   "reviewId": "h4-vcp-high-coverage:vcp:05:narakavargaH:tapana",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "tapana",
+   "variants": [
+    "tapana"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword tapana represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "22129",
+     "excerpt": "tapana¦ pu0 tapa--lyu . 1 sUrtye 2 BallAtakavfkze . 3 agnyAdOdAha yukte narakaBede 4 grIzme ca hema0 . 5 arkavfkze 6 kzudrAgnimanTavfkze 7 sUryyakAntAmaRO ca rAjani0 . “paYcamaH paYcatapasAM tapano jAtavedasAm” mAGaH . strIRAM yOvane 8 satvajAtAvaNkAraBede na..."
+    }
+   ]
+  },
+  {
+   "item": 16,
+   "reviewId": "h4-vcp-high-coverage:vcp:06:narakavargaH:avIci",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "avIci",
+   "variants": [
+    "avIci"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword avIci represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "5272",
+     "excerpt": "avIci¦ pu0 nAsti vIciH prakASaH suKaM vAtra . 1 narakaBede tatsvarUpaM tatkAraRaYca BAgavate 5 ska0 darSitaM yaTA “tAmisronDatAmisra” ityAdyupakramya “avIcirayaHpAna- mityAdinA azwAviMSatinarakAn viBajya “yastvihAnftaM vadati sAkzye, dravyavinimaye, dAne vA k..."
+    }
+   ]
+  },
+  {
+   "item": 17,
+   "reviewId": "h4-vcp-high-coverage:vcp:07:narakavargaH:mahArOrava",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "mahArOrava",
+   "variants": [
+    "mahArOrava"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword mahArOrava represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "37946",
+     "excerpt": "mahArOrava¦ pu0 karma0 . “mahArOravasaMjYastu UrDvADastAmra- saMpuwe . Damyate KadirANgArEH pracyate kAlamakzayam” ityukte narakaBede vahnipu0 ."
+    }
+   ]
+  },
+  {
+   "item": 18,
+   "reviewId": "h4-vcp-high-coverage:vcp:08:narakavargaH:rOrava",
+   "dict": "VCP",
+   "field": "narakavargaH",
+   "lemma": "rOrava",
+   "variants": [
+    "rOrava"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 28,
+    "amar": 29,
+    "pct": 0.9655
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword rOrava represent real usable coverage for AMAR field narakavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "39894",
+     "excerpt": "rOrava¦ pu0 rorUyate'tra ru--yaN kvip tena prApyaH tasmAyaM vA aR . 1 narakaBede amaraH . 2 caYcale, 3 DUrtte, 4 kzore ca tri0 Sabdara0 . 5 sAmaBede na0 . tacca sAma ahagAne [Page4817-a+ 33] 3 pra0 darSitam . “rOravayODAjaye vArhate tfce BavataH” tA0 brA0 . r..."
+    }
+   ]
+  },
+  {
+   "item": 19,
+   "reviewId": "h4-vcp-high-coverage:vcp:09:avyayavargaH:cirAya",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "cirAya",
+   "variants": [
+    "cirAya"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword cirAya represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "19924",
+     "excerpt": "cirAya¦ avya0 ciramayate arTa--aR . cirakAle dIrGakAle . “cirAya yadi te sOmya! ciramasmi na duHKitaH” BA0 SA0 267 a0 . “cirAya nAmnaH praTamABiDeya- [Page2953-a+ 38] tAm” . “aBIzwamAsAdya cirAya kAlaH” mAGaH ."
+    }
+   ]
+  },
+  {
+   "item": 20,
+   "reviewId": "h4-vcp-high-coverage:vcp:10:avyayavargaH:cirarAtrAya",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "cirarAtrAya",
+   "variants": [
+    "cirarAtrAya"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword cirarAtrAya represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "19916",
+     "excerpt": "cirarAtrAya¦ avya0 cirarAtramayate aya--aR upa0 sa0 . dIrGakAle . “haviryad cirarAtrAya taccAnantyAya kalpate” manuH “Sakyate dustyaje'pyarTe cirarAtrAya jIvitum” BA0 va0 131 a0 ."
+    }
+   ]
+  },
+  {
+   "item": 21,
+   "reviewId": "h4-vcp-high-coverage:vcp:11:avyayavargaH:cirasya",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "cirasya",
+   "variants": [
+    "cirasya"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword cirasya represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "19921",
+     "excerpt": "cirasya¦ avya0 ciramasyate asa--yat Saka0 . dIrGakAle . amaraH . “cirasya dfzweva mftotTiteva” kumA0 ."
+    }
+   ]
+  },
+  {
+   "item": 22,
+   "reviewId": "h4-vcp-high-coverage:vcp:12:avyayavargaH:cira",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "cira",
+   "variants": [
+    "cira"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword cira represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "19897",
+     "excerpt": "cira¦ na0 ci--rak . 1 dIrGakAle . 2 tadvarttini padArTe ti0 . laGvAdO (.') trikale gaRe SabdArTaci0 “dIrGasUtrI cira- kriyaH” amaraH . cirajIvI cirakArI cirakAlAdi ."
+    }
+   ]
+  },
+  {
+   "item": 23,
+   "reviewId": "h4-vcp-high-coverage:vcp:13:avyayavargaH:muhus",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "muhus",
+   "variants": [
+    "muhus"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword muhus represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "38453",
+     "excerpt": "muhus¦ avya0 muha--usik . pOnaH punye amaraH ."
+    }
+   ]
+  },
+  {
+   "item": 24,
+   "reviewId": "h4-vcp-high-coverage:vcp:14:avyayavargaH:SaSvat",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "SaSvat",
+   "variants": [
+    "SaSvat"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword SaSvat represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "43208",
+     "excerpt": "SaSvat¦ avya0 SaSa--vati . 1 nErantaryye 2 punaHpunarityarTe ca amaraH ."
+    }
+   ]
+  },
+  {
+   "item": 25,
+   "reviewId": "h4-vcp-high-coverage:vcp:15:avyayavargaH:aBIkzRam",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "aBIkzRam",
+   "variants": [
+    "aBIkzRam"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword aBIkzRam represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "3568",
+     "excerpt": "aBIkzRam¦ avya0 aBi + kzRu--bA0 qamu pf0 dorGaH . pOnaH- punyesvarAdi . “aBIkzRamakzuRRatayA'tidurgamam” mAGaH ."
+    }
+   ]
+  },
+  {
+   "item": 26,
+   "reviewId": "h4-vcp-high-coverage:vcp:16:avyayavargaH:asakft",
+   "dict": "VCP",
+   "field": "avyayavargaH",
+   "lemma": "asakft",
+   "variants": [
+    "asakft"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 206,
+    "amar": 268,
+    "pct": 0.7687
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword asakft represent real usable coverage for AMAR field avyayavargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "5713",
+     "excerpt": "asakft¦ avya0 na sakft na0 ta0 . pOnaHpunye . “asakfdekara- Tena tarasvinA” raGuH “anyAdyenAsakfccEtAn guRESca pari- nodayet” “asakfdgarBavAsezu vAsaM janma ca dAruRam” iti ca manuH . “AvfttirasakfdupadeSAt” SA0 sU0 ."
+    }
+   ]
+  },
+  {
+   "item": 27,
+   "reviewId": "h4-vcp-high-coverage:vcp:17:BUmivargaH:BU",
+   "dict": "VCP",
+   "field": "BUmivargaH",
+   "lemma": "BU",
+   "variants": [
+    "BU"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 117,
+    "amar": 145,
+    "pct": 0.8069
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword BU represent real usable coverage for AMAR field BUmivargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "36705",
+     "excerpt": "BU¦ prAptO cu0 A0 saka0 sew . BAvayata abIBavata ."
+    }
+   ]
+  },
+  {
+   "item": 28,
+   "reviewId": "h4-vcp-high-coverage:vcp:18:BUmivargaH:BUmi",
+   "dict": "VCP",
+   "field": "BUmivargaH",
+   "lemma": "BUmi",
+   "variants": [
+    "BUmi"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 117,
+    "amar": 145,
+    "pct": 0.8069
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword BUmi represent real usable coverage for AMAR field BUmivargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "36825",
+     "excerpt": "BUmi(mI)¦ strI Bavantyasmin BUtAni BU--mi kiYca vA NIp . 1 pfTivyAm 2 sTAnamAtre medi0 3 jihvAyAM saMkzi0 uRA0 yogaSAstrokte 4 yoginAM cittasyAvasTABede, 5 eka- saMKyAyAYca . pARqusaMKyAdito'c samA0 bahu0 . dviBUmaH prasAdaH pARquBUmo deSaH . yogoktamUmayaSca..."
+    }
+   ]
+  },
+  {
+   "item": 29,
+   "reviewId": "h4-vcp-high-coverage:vcp:19:BUmivargaH:anantA",
+   "dict": "VCP",
+   "field": "BUmivargaH",
+   "lemma": "anantA",
+   "variants": [
+    "anantA"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 117,
+    "amar": 145,
+    "pct": 0.8069
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword anantA represent real usable coverage for AMAR field BUmivargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "1524",
+     "excerpt": "anantA¦ strI nAsti anto'syAH ba0 . viSalyAyAmozaDO (anantamUla) iti KyAte mUlaBede, pAvatyAm, pfTivyAm, durAlaBAyAM, dUrvAyAM, haritakyAM, AmalakyAm, guqUcyAm, agnimanTavfkze, agniSiKAvfkze, SyAmalatAyAm, pipapalyAM, nIladUrvAyAm, SvetadUrvAyAM, SArivozaDO ca..."
+    }
+   ]
+  },
+  {
+   "item": 30,
+   "reviewId": "h4-vcp-high-coverage:vcp:20:BUmivargaH:rasA",
+   "dict": "VCP",
+   "field": "BUmivargaH",
+   "lemma": "rasA",
+   "variants": [
+    "rasA"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 117,
+    "amar": 145,
+    "pct": 0.8069
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does the VCP headword rasA represent real usable coverage for AMAR field BUmivargaH, or is it thin or normalization-sensitive?",
+   "allowed": [
+    "true-covered",
+    "thin-entry",
+    "normalization-risk"
+   ],
+   "evidence": [
+    {
+     "dict": "VCP",
+     "L": "39419",
+     "excerpt": "rasA¦ strI pAkajaH raso mADuryyAdirUpo'styasyAH ac . pfTivyAm amaraH ."
+    }
+   ]
+  },
+  {
+   "item": 31,
+   "reviewId": "h4-ap-ap90-delta:ap:01:vanOzaDivargaH:vipina",
+   "dict": "AP",
+   "field": "vanOzaDivargaH",
+   "lemma": "vipina",
+   "variants": [
+    "vipina"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 543,
+    "amar": 1307,
+    "pct": 0.4155
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 242,
+    "amar": 1307,
+    "pct": 0.1852
+   },
+   "deltaPct": 0.2303,
+   "question": "Why does vipina appear in AP coverage but not AP90 coverage for vanOzaDivargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "29844",
+     "excerpt": "{#vipina#}¦ {%<lex>a.</lex>%} Thick, dense; {#amumativipinaM veda digvyApinam#} <ls>Ki. 5. 18</ls>."
+    }
+   ]
+  },
+  {
+   "item": 32,
+   "reviewId": "h4-ap-ap90-delta:ap:02:BUmivargaH:acalA",
+   "dict": "AP",
+   "field": "BUmivargaH",
+   "lemma": "acalA",
+   "variants": [
+    "acalA"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 82,
+    "amar": 145,
+    "pct": 0.5655
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 54,
+    "amar": 145,
+    "pct": 0.3724
+   },
+   "deltaPct": 0.1931,
+   "question": "Why does acalA appear in AP coverage but not AP90 coverage for BUmivargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "360.004",
+     "excerpt": "{#acala#} + .{@{#-lA#}@}¦ The earth (so called because the earth is immovable according to one view, or, according to Ārya Bhaṭṭa who rejects this view, {#acalAH#} {#parvatAH santyatra, astyarTe ac#}; {#acalatvAt svakakzAto bahirgamanABAvAdvA#}). <ab>cf.</ab>..."
+    }
+   ]
+  },
+  {
+   "item": 33,
+   "reviewId": "h4-ap-ap90-delta:ap:03:BUmivargaH:anantA",
+   "dict": "AP",
+   "field": "BUmivargaH",
+   "lemma": "anantA",
+   "variants": [
+    "anantA"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 82,
+    "amar": 145,
+    "pct": 0.5655
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 54,
+    "amar": 145,
+    "pct": 0.3724
+   },
+   "deltaPct": 0.1931,
+   "question": "Why does anantA appear in AP coverage but not AP90 coverage for BUmivargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "1297.004",
+     "excerpt": "{#ananta#} + .{@{#-ntA#}@}¦ ∙²1 The earth (the endless). ∙²2 The number one. ∙²3 Names of various females; <ab>N.</ab> of Pārvatī. ∙²4 Names of various plants; {#SArivA, anantamUla#} (a very medicinal plant) {#dUrvA, AmalakI, guqUcI, agnimanTa, kaRA, lANgalI,..."
+    }
+   ]
+  },
+  {
+   "item": 34,
+   "reviewId": "h4-ap-ap90-delta:ap:04:BUmivargaH:sTirA",
+   "dict": "AP",
+   "field": "BUmivargaH",
+   "lemma": "sTirA",
+   "variants": [
+    "sTirA"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 82,
+    "amar": 145,
+    "pct": 0.5655
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 54,
+    "amar": 145,
+    "pct": 0.3724
+   },
+   "deltaPct": 0.1931,
+   "question": "Why does sTirA appear in AP coverage but not AP90 coverage for BUmivargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "35762.004",
+     "excerpt": "{#sTira#} + .{@{#-rA#}@}¦ ∙²1 The earth; {#pitAmahastAmAlokya vihastAmasTirAM sTirAm#} <ls>Śiva B. 5. 47</ls>. ∙²2 A strong-minded woman. ∙²3 The silk-cotton tree."
+    }
+   ]
+  },
+  {
+   "item": 35,
+   "reviewId": "h4-ap-ap90-delta:ap:05:viSezyaniGnavargaH:mahASaya",
+   "dict": "AP",
+   "field": "viSezyaniGnavargaH",
+   "lemma": "mahASaya",
+   "variants": [
+    "mahASaya"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 900,
+    "amar": 1017,
+    "pct": 0.885
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 726,
+    "amar": 1017,
+    "pct": 0.7139
+   },
+   "deltaPct": 0.1711,
+   "question": "Why does mahASaya appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "25943.112",
+     "excerpt": "{#mahA#} + {#-ASaya#}¦ {%<lex>a.</lex>%} high-souled, noble-minded, magnanimous, noble; {#dEvAt#} {#prabudDaH SuSrAva varAho hi mahASayaH#} <ls>Ks.</ls>; {#rAjA hiraRyagarBo mahASayaH#} <ls>H. 4</ls>; see {#mahAtman#}."
+    }
+   ]
+  },
+  {
+   "item": 36,
+   "reviewId": "h4-ap-ap90-delta:ap:06:viSezyaniGnavargaH:mahecCa",
+   "dict": "AP",
+   "field": "viSezyaniGnavargaH",
+   "lemma": "mahecCa",
+   "variants": [
+    "mahecCa"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 900,
+    "amar": 1017,
+    "pct": 0.885
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 726,
+    "amar": 1017,
+    "pct": 0.7139
+   },
+   "deltaPct": 0.1711,
+   "question": "Why does mahecCa appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "25943.118",
+     "excerpt": "{#mahA#} + {#-icCa#}¦ {%<lex>a.</lex>%} ∙²1 magnanimous, noble-minded, high-souled, noble; {#mahIM mahecCaH parikIrya#} {#sUnO#} <ls>R. 18. 33</ls>. ∙²2 having lofty aims or aspirations, ambitious; {#vidyAvatAM mahecCAnAM#} {#… … nASrayaH pArTivaM vinA#} <ls>..."
+    }
+   ]
+  },
+  {
+   "item": 37,
+   "reviewId": "h4-ap-ap90-delta:ap:07:viSezyaniGnavargaH:mahotsAha",
+   "dict": "AP",
+   "field": "viSezyaniGnavargaH",
+   "lemma": "mahotsAha",
+   "variants": [
+    "mahotsAha"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 900,
+    "amar": 1017,
+    "pct": 0.885
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 726,
+    "amar": 1017,
+    "pct": 0.7139
+   },
+   "deltaPct": 0.1711,
+   "question": "Why does mahotsAha appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "25943.142",
+     "excerpt": "{#mahA#} + {#-utsAha#}¦ {%<lex>a.</lex>%} possessed of great energy, energetic, perservering; {#ahaM ca karRaM jAnAmi … … satyasaMDaM mahotsAhaM … …#} <ls>Mb. 3. 91. 20</ls>."
+    }
+   ]
+  },
+  {
+   "item": 38,
+   "reviewId": "h4-ap-ap90-delta:ap:08:viSezyaniGnavargaH:suhfdaya",
+   "dict": "AP",
+   "field": "viSezyaniGnavargaH",
+   "lemma": "suhfdaya",
+   "variants": [
+    "suhfdaya"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 900,
+    "amar": 1017,
+    "pct": 0.885
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 726,
+    "amar": 1017,
+    "pct": 0.7139
+   },
+   "deltaPct": 0.1711,
+   "question": "Why does suhfdaya appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "35088.830",
+     "excerpt": "{#su#} + {#-hfdaya#}¦ {%<lex>a.</lex>%} ∙²1 good-hearted. ∙²2 dear, affectionate, loving."
+    }
+   ]
+  },
+  {
+   "item": 39,
+   "reviewId": "h4-ap-ap90-delta:ap:09:viSezyaniGnavargaH:sukftin",
+   "dict": "AP",
+   "field": "viSezyaniGnavargaH",
+   "lemma": "sukftin",
+   "variants": [
+    "sukftin"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 900,
+    "amar": 1017,
+    "pct": 0.885
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 726,
+    "amar": 1017,
+    "pct": 0.7139
+   },
+   "deltaPct": 0.1711,
+   "question": "Why does sukftin appear in AP coverage but not AP90 coverage for viSezyaniGnavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "35088.110",
+     "excerpt": "{#su#} + {#-kftin#}¦ {%<lex>a.</lex>%} ∙²1 acting well or kindly. ∙²2 virtuous, pious, good, righteous; {#santaH santu nirApadaH sukftinAM#} {#kIrtiSciraM varDatAm#} <ls>H. 4. 132</ls>; {#caturviDA Bajante mAM janAH sukftino'rjuna#} <ls>Bg. 7. 16</ls>. ∙²3 wi..."
+    }
+   ]
+  },
+  {
+   "item": 40,
+   "reviewId": "h4-ap-ap90-delta:ap:10:digvargaH:pUrvA",
+   "dict": "AP",
+   "field": "digvargaH",
+   "lemma": "pUrvA",
+   "variants": [
+    "pUrvA"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 159,
+    "amar": 343,
+    "pct": 0.4636
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 105,
+    "amar": 343,
+    "pct": 0.3061
+   },
+   "deltaPct": 0.1575,
+   "question": "Why does pUrvA appear in AP coverage but not AP90 coverage for digvargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "21715.006",
+     "excerpt": "{#pUrva#} + .{@{#-rvA#}@}¦ ∙²1 The east ∙²2 <ab>N.</ab> of a country to the east of Madhyadeśa."
+    }
+   ]
+  },
+  {
+   "item": 41,
+   "reviewId": "h4-ap-ap90-delta:ap:11:SUdravargaH:avaravarRa",
+   "dict": "AP",
+   "field": "SUdravargaH",
+   "lemma": "avaravarRa",
+   "variants": [
+    "avaravarRa"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 152,
+    "amar": 349,
+    "pct": 0.4355
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 100,
+    "amar": 349,
+    "pct": 0.2865
+   },
+   "deltaPct": 0.149,
+   "question": "Why does avaravarRa appear in AP coverage but not AP90 coverage for SUdravargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "5170.036",
+     "excerpt": "{#avara#} + {#-varRa#}¦ {%<lex>a.</lex>%} belonging to a low caste or tribe."
+    }
+   ]
+  },
+  {
+   "item": 42,
+   "reviewId": "h4-ap-ap90-delta:ap:12:DIvargaH:DizaRA",
+   "dict": "AP",
+   "field": "DIvargaH",
+   "lemma": "DizaRA",
+   "variants": [
+    "DizaRA"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 100,
+    "amar": 157,
+    "pct": 0.6369
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 77,
+    "amar": 157,
+    "pct": 0.4904
+   },
+   "deltaPct": 0.1465,
+   "question": "Why does DizaRA appear in AP coverage but not AP90 coverage for DIvargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "18018.004",
+     "excerpt": "{#DizaRaH#} + .{@{#-RA#}@}¦ ∙²1 Speech. ∙²2 Praise, hymn. ∙²3 Intellect, understanding; {#viSudDEvotpattyA patati na ca tatpApaDizaRA#} <ls>Mv. 6. 8</ls>; {#AryaputrAryaDizaRa, prARanATa, SuBavrata#} <ls>Kāśīkhaṇḍa.</ls> ∙²4 Earth. ∙²5 A cup, bowl. .━{@<ab>Co..."
+    }
+   ]
+  },
+  {
+   "item": 43,
+   "reviewId": "h4-ap-ap90-delta:ap:13:avyayavargaH:aBIkzRam",
+   "dict": "AP",
+   "field": "avyayavargaH",
+   "lemma": "aBIkzRam",
+   "variants": [
+    "aBIkzRam"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 188,
+    "amar": 268,
+    "pct": 0.7015
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 150,
+    "amar": 268,
+    "pct": 0.5597
+   },
+   "deltaPct": 0.1418,
+   "question": "Why does aBIkzRam appear in AP coverage but not AP90 coverage for avyayavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "3865.002",
+     "excerpt": "{#aBIkzRa#} + .{@{#-kzRam#}@}¦ {%<lex>ind.</lex>%} ∙²1 Frequently, repeatedly; {#kzate prahArA nipatantyaBIkzRam#} <ls>Pt. 2. 186</ls>. ∙²2 Constantly, ∙²3 Very much, exceedingly. ∙²4 Quickly."
+    }
+   ]
+  },
+  {
+   "item": 44,
+   "reviewId": "h4-ap-ap90-delta:ap:14:avyayavargaH:cirarAtrAya",
+   "dict": "AP",
+   "field": "avyayavargaH",
+   "lemma": "cirarAtrAya",
+   "variants": [
+    "cirarAtrAya"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 188,
+    "amar": 268,
+    "pct": 0.7015
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 150,
+    "amar": 268,
+    "pct": 0.5597
+   },
+   "deltaPct": 0.1418,
+   "question": "Why does cirarAtrAya appear in AP coverage but not AP90 coverage for avyayavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "14975.054",
+     "excerpt": "{{Lbody=14975.052}}"
+    }
+   ]
+  },
+  {
+   "item": 45,
+   "reviewId": "h4-ap-ap90-delta:ap:16:vyomavargaH:suravartman",
+   "dict": "AP",
+   "field": "vyomavargaH",
+   "lemma": "suravartman",
+   "variants": [
+    "suravartman"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 11,
+    "amar": 23,
+    "pct": 0.4783
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 8,
+    "amar": 23,
+    "pct": 0.3478
+   },
+   "deltaPct": 0.1305,
+   "question": "Why does suravartman appear in AP coverage but not AP90 coverage for vyomavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "35135.146",
+     "excerpt": "{#suraH#} + {#-vartman#}¦ {%<lex>n.</lex>%} the sky."
+    }
+   ]
+  },
+  {
+   "item": 46,
+   "reviewId": "h4-ap-ap90-delta:ap:17:vESyavargaH:BUmispfS",
+   "dict": "AP",
+   "field": "vESyavargaH",
+   "lemma": "BUmispfS",
+   "variants": [
+    "BUmispfS"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 344,
+    "amar": 845,
+    "pct": 0.4071
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 234,
+    "amar": 845,
+    "pct": 0.2769
+   },
+   "deltaPct": 0.1302,
+   "question": "Why does BUmispfS appear in AP coverage but not AP90 coverage for vESyavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "25245.140",
+     "excerpt": "{#BUmiH#} + {#-spfS#}¦ {%<lex>a.</lex>%} ∙²1 blind. ∙²2 lame, cripple. ━({%<lex>m.</lex>%}) ∙²1 a man. ∙²2 mankind. ∙²3 a Vaiśya, ∙²4 a thief."
+    }
+   ]
+  },
+  {
+   "item": 47,
+   "reviewId": "h4-ap-ap90-delta:ap:18:vESyavargaH:vArtA",
+   "dict": "AP",
+   "field": "vESyavargaH",
+   "lemma": "vArtA",
+   "variants": [
+    "vArtA"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 344,
+    "amar": 845,
+    "pct": 0.4071
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 234,
+    "amar": 845,
+    "pct": 0.2769
+   },
+   "deltaPct": 0.1302,
+   "question": "Why does vArtA appear in AP coverage but not AP90 coverage for vESyavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "29032.002",
+     "excerpt": "{{Lbody=29032}}"
+    }
+   ]
+  },
+  {
+   "item": 48,
+   "reviewId": "h4-ap-ap90-delta:ap:19:siMhAdivargaH:paYcAsya",
+   "dict": "AP",
+   "field": "siMhAdivargaH",
+   "lemma": "paYcAsya",
+   "variants": [
+    "paYcAsya"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 124,
+    "amar": 396,
+    "pct": 0.3131
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 73,
+    "amar": 396,
+    "pct": 0.1843
+   },
+   "deltaPct": 0.1288,
+   "question": "Why does paYcAsya appear in AP coverage but not AP90 coverage for siMhAdivargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "19731.022",
+     "excerpt": "{{Lbody=19731.020}}"
+    }
+   ]
+  },
+  {
+   "item": 49,
+   "reviewId": "h4-ap-ap90-delta:ap:20:kzatriyavargaH:mUrDABizikta",
+   "dict": "AP",
+   "field": "kzatriyavargaH",
+   "lemma": "mUrDABizikta",
+   "variants": [
+    "mUrDABizikta"
+   ],
+   "machineState": "delta",
+   "coverage": {
+    "covered": 372,
+    "amar": 864,
+    "pct": 0.4306
+   },
+   "comparison": {
+    "dict": "ap90",
+    "covered": 271,
+    "amar": 864,
+    "pct": 0.3137
+   },
+   "deltaPct": 0.1169,
+   "question": "Why does mUrDABizikta appear in AP coverage but not AP90 coverage for kzatriyavargaH: edition history, parser gap, normalization risk, or true delta?",
+   "allowed": [
+    "edition-delta",
+    "parser-gap",
+    "normalization-risk",
+    "true-delta"
+   ],
+   "evidence": [
+    {
+     "dict": "AP",
+     "L": "26523.022",
+     "excerpt": "{#mUrDan#} + {#-aBizikta#}¦ {%<lex>a.</lex>%} ∙²1 consecrated, crowned, inaugurated; {#mUrDABiziktaM kumudo baBAze#} <ls>R. 16. 81</ls>. ∙²2 common, stock (as an instance); {#utkftyotkftya kfttim iti bIBatsasya#} {#mUrDABiziktamudAharaRam#}."
+    }
+   ]
+  },
+  {
+   "item": 50,
+   "reviewId": "h4-specialized-baseline:armh:01:pAtAlaBogivargaH:aDoBuvana",
+   "dict": "ARMH",
+   "field": "pAtAlaBogivargaH",
+   "lemma": "aDoBuvana",
+   "variants": [
+    "aDoBuvana"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 77,
+    "amar": 103,
+    "pct": 0.7476
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does ARMH coverage of aDoBuvana in pAtAlaBogivargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "ARMH",
+     "L": "5425",
+     "excerpt": "aDoBuvana; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
+    }
+   ]
+  },
+  {
+   "item": 51,
+   "reviewId": "h4-specialized-baseline:fri:02:vyomavargaH:div",
+   "dict": "FRI",
+   "field": "vyomavargaH",
+   "lemma": "div",
+   "variants": [
+    "div"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 13,
+    "amar": 23,
+    "pct": 0.5652
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does FRI coverage of div in vyomavargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "FRI",
+     "L": "3050",
+     "excerpt": "I √div dīvyati, pp. dyūta <div n=\"1\"/>1 <lang n=\"czech\">zářiti, tešiti se, hráti (v kostky)</lang> <div n=\"1\"/>2 <lang n=\"russian\">сиять, радоваться, играть (в кости)</lang> <div n=\"1\"/>3 <lang n=\"english\">to shine, rejoice, play, gamble</lang>"
+    }
+   ]
+  },
+  {
+   "item": 52,
+   "reviewId": "h4-specialized-baseline:bhs:03:DIvargaH:prajYA",
+   "dict": "BHS",
+   "field": "DIvargaH",
+   "lemma": "prajYA",
+   "variants": [
+    "prajYA"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 49,
+    "amar": 157,
+    "pct": 0.3121
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does BHS coverage of prajYA in DIvargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "BHS",
+     "L": "9893",
+     "excerpt": "{@prajñā@}¦ (<lang>Skt.</lang>, and <lang>Pali</lang> paññā), {%knowledge%}: three kinds, śrutamayī, cintāmayī, bhāvanāmayī (so in <lang>Pali</lang> cintāmayā, sutamayā, and bhāvanāmayā paññā, <ls>Childers</ls>): <ls>Mvy</ls> 〔1550—3〕; <ls>Dharmas</ls> 〔110〕."
+    }
+   ]
+  },
+  {
+   "item": 53,
+   "reviewId": "h4-specialized-baseline:armh:04:pAtAlaBogivargaH:pAtAla",
+   "dict": "ARMH",
+   "field": "pAtAlaBogivargaH",
+   "lemma": "pAtAla",
+   "variants": [
+    "pAtAla"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 77,
+    "amar": 103,
+    "pct": 0.7476
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does ARMH coverage of pAtAla in pAtAlaBogivargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "ARMH",
+     "L": "5423",
+     "excerpt": "pAtAla; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
+    }
+   ]
+  },
+  {
+   "item": 54,
+   "reviewId": "h4-specialized-baseline:fri:05:vyomavargaH:aBra",
+   "dict": "FRI",
+   "field": "vyomavargaH",
+   "lemma": "aBra",
+   "variants": [
+    "aBra"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 13,
+    "amar": 23,
+    "pct": 0.5652
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does FRI coverage of aBra in vyomavargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "FRI",
+     "L": "549",
+     "excerpt": "abhra n. (m.) <div n=\"1\"/>1 <lang n=\"czech\">mrak, ovzduší</lang> <div n=\"1\"/>2 <lang n=\"russian\">туча, атмосфера</lang> <div n=\"1\"/>3 <lang n=\"english\">cloud, atmosphere</lang>"
+    }
+   ]
+  },
+  {
+   "item": 55,
+   "reviewId": "h4-specialized-baseline:bhs:06:DIvargaH:mati",
+   "dict": "BHS",
+   "field": "DIvargaH",
+   "lemma": "mati",
+   "variants": [
+    "mati"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 49,
+    "amar": 157,
+    "pct": 0.3121
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does BHS coverage of mati in DIvargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "BHS",
+     "L": "11485",
+     "excerpt": "{@Mati@}¦, ({@1@}) <ab>n.</ab> of a prince, son of the Buddha Candrasūryapradīpa: <ls>SP</ls> 〔19.2〕; ({@2@}) <ab>n.</ab> of a brahman youth, previous incarnation of Dharmaruci; corresponds to {@Meghadatta@} of <ls>Mv</ls>, Megha of <lang>Pali</lang>, as asso..."
+    }
+   ]
+  },
+  {
+   "item": 56,
+   "reviewId": "h4-specialized-baseline:armh:07:pAtAlaBogivargaH:rasAtala",
+   "dict": "ARMH",
+   "field": "pAtAlaBogivargaH",
+   "lemma": "rasAtala",
+   "variants": [
+    "rasAtala"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 77,
+    "amar": 103,
+    "pct": 0.7476
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does ARMH coverage of rasAtala in pAtAlaBogivargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "ARMH",
+     "L": "5427",
+     "excerpt": "rasAtala; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
+    }
+   ]
+  },
+  {
+   "item": 57,
+   "reviewId": "h4-specialized-baseline:fri:08:vyomavargaH:vyoman",
+   "dict": "FRI",
+   "field": "vyomavargaH",
+   "lemma": "vyoman",
+   "variants": [
+    "vyoman"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 13,
+    "amar": 23,
+    "pct": 0.5652
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does FRI coverage of vyoman in vyomavargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "FRI",
+     "L": "6679",
+     "excerpt": "vyoman n. <div n=\"1\"/>1 <lang n=\"czech\">nebe, vzduch, ovzduší</lang> <div n=\"1\"/>2 <lang n=\"russian\">небо, воздух, атмосфера</lang> <div n=\"1\"/>3 <lang n=\"english\">heaven, sky, atmosphere</lang>"
+    }
+   ]
+  },
+  {
+   "item": 58,
+   "reviewId": "h4-specialized-baseline:bhs:09:DIvargaH:pratipad",
+   "dict": "BHS",
+   "field": "DIvargaH",
+   "lemma": "pratipad",
+   "variants": [
+    "pratipad"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 49,
+    "amar": 157,
+    "pct": 0.3121
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does BHS coverage of pratipad in DIvargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "BHS",
+     "L": "10013",
+     "excerpt": "{@pratipad@}¦, <lex>f.</lex>, also {@˚dā@} (= <lang>Pali</lang> paṭipadā), {%course of conduct, practice, behavior%}, <ab>esp.</ab> {%good, approved behavior%}, = {@pratipatti@}, <ab>q.v.</ab>; <ab>acc.</ab> to <ls>Childers</ls> and <ls>PTSD</ls>, so also pri..."
+    }
+   ]
+  },
+  {
+   "item": 59,
+   "reviewId": "h4-specialized-baseline:armh:10:pAtAlaBogivargaH:nAgaloka",
+   "dict": "ARMH",
+   "field": "pAtAlaBogivargaH",
+   "lemma": "nAgaloka",
+   "variants": [
+    "nAgaloka"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 77,
+    "amar": 103,
+    "pct": 0.7476
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does ARMH coverage of nAgaloka in pAtAlaBogivargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "ARMH",
+     "L": "5426",
+     "excerpt": "nAgaloka; vaqavAmuKaM pAtAlaM vErocananiketanam . taTADoBuvanaM proktaM nAgaloko rasAtalam .. 623 .. 3.1.1.623"
+    }
+   ]
+  },
+  {
+   "item": 60,
+   "reviewId": "h4-specialized-baseline:fri:11:vyomavargaH:puzkara",
+   "dict": "FRI",
+   "field": "vyomavargaH",
+   "lemma": "puzkara",
+   "variants": [
+    "puzkara"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 13,
+    "amar": 23,
+    "pct": 0.5652
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does FRI coverage of puzkara in vyomavargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "FRI",
+     "L": "4176",
+     "excerpt": "puṣkara n. <div n=\"1\"/>1 <lang n=\"czech\">modrý lotos, voda, obloha; m., n. pr. jméno krále</lang> <div n=\"1\"/>2 <lang n=\"russian\">синий лотос, вода, небо; m., n. pr. имя короля</lang> <div n=\"1\"/>3 <lang n=\"english\">a blue lotus, water, sky; m., n. pr. name o..."
+    }
+   ]
+  },
+  {
+   "item": 61,
+   "reviewId": "h4-specialized-baseline:bhs:12:DIvargaH:jYapti",
+   "dict": "BHS",
+   "field": "DIvargaH",
+   "lemma": "jYapti",
+   "variants": [
+    "jYapti"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 49,
+    "amar": 157,
+    "pct": 0.3121
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does BHS coverage of jYapti in DIvargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "BHS",
+     "L": "6665",
+     "excerpt": "{@jñapti@}¦, for (always in <ls>Mvy</ls>, but nowhere else) {@jñāpti@}, <lex>f.</lex> (= <lang>Pali</lang> ñatti), {%proposal, motion%}, made before the assembly of monks or nuns; in the <lang>BHS</lang> literary passages recorded, usually concerning initiati..."
+    }
+   ]
+  },
+  {
+   "item": 62,
+   "reviewId": "h4-specialized-baseline:armh:13:pAtAlaBogivargaH:kuhara",
+   "dict": "ARMH",
+   "field": "pAtAlaBogivargaH",
+   "lemma": "kuhara",
+   "variants": [
+    "kuhara"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 77,
+    "amar": 103,
+    "pct": 0.7476
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does ARMH coverage of kuhara in pAtAlaBogivargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "ARMH",
+     "L": "5442",
+     "excerpt": "kuhara; nimnamagADo gartaH SvaBraM SuziraM vapA bilaM vivaram . antaramavawucCidraM nirvyaTanaM ranDrarokakuharadarAH .. 624 .. 3.1.1.624"
+    }
+   ]
+  },
+  {
+   "item": 63,
+   "reviewId": "h4-specialized-baseline:fri:14:vyomavargaH:ambara",
+   "dict": "FRI",
+   "field": "vyomavargaH",
+   "lemma": "ambara",
+   "variants": [
+    "ambara"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 13,
+    "amar": 23,
+    "pct": 0.5652
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does FRI coverage of ambara in vyomavargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "FRI",
+     "L": "574",
+     "excerpt": "ambara n. <div n=\"1\"/>1 <lang n=\"czech\">\"obklopující\" = šat, obloha</lang> <div n=\"1\"/>2 <lang n=\"russian\">\"окружающий\" = одежда, небесный свод</lang> <div n=\"1\"/>3 <lang n=\"english\">\"surrouding\" = garment, sky</lang>"
+    }
+   ]
+  },
+  {
+   "item": 64,
+   "reviewId": "h4-specialized-baseline:bhs:15:DIvargaH:samADAna",
+   "dict": "BHS",
+   "field": "DIvargaH",
+   "lemma": "samADAna",
+   "variants": [
+    "samADAna"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 49,
+    "amar": 157,
+    "pct": 0.3121
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does BHS coverage of samADAna in DIvargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "BHS",
+     "L": "16035",
+     "excerpt": "{@samādhāna@}¦, <lex>nt.</lex>, ({@1@}) <ab>acc.</ab> to <lang>Tib.</lang> <tib>lan gdab pa</tib>, {%making answer, reply%}: <ls>Mvy</ls> 〔4448〕; <ab>prob.</ab> in sense of refutation of an opponentʼs argument by way of {%establishing%} oneʼs own view (<ab>cf..."
+    }
+   ]
+  },
+  {
+   "item": 65,
+   "reviewId": "h4-specialized-baseline:armh:16:pAtAlaBogivargaH:Suzira",
+   "dict": "ARMH",
+   "field": "pAtAlaBogivargaH",
+   "lemma": "Suzira",
+   "variants": [
+    "Suzira"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 77,
+    "amar": 103,
+    "pct": 0.7476
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does ARMH coverage of Suzira in pAtAlaBogivargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "ARMH",
+     "L": "5432",
+     "excerpt": "Suzira; nimnamagADo gartaH SvaBraM SuziraM vapA bilaM vivaram . antaramavawucCidraM nirvyaTanaM ranDrarokakuharadarAH .. 624 .. 3.1.1.624"
+    }
+   ]
+  },
+  {
+   "item": 66,
+   "reviewId": "h4-specialized-baseline:fri:17:vyomavargaH:naBas",
+   "dict": "FRI",
+   "field": "vyomavargaH",
+   "lemma": "naBas",
+   "variants": [
+    "naBas"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 13,
+    "amar": 23,
+    "pct": 0.5652
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does FRI coverage of naBas in vyomavargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "FRI",
+     "L": "3458",
+     "excerpt": "nabhas n. <div n=\"1\"/>1 <lang n=\"czech\">mrak, pára, ovzduší; jm. měsíce</lang> <div n=\"1\"/>2 <lang n=\"russian\">туча, пар, атмосфера; название месяца</lang> <div n=\"1\"/>3 <lang n=\"english\">a cloud, mist, the atmosphere; name of a month</lang>"
+    }
+   ]
+  },
+  {
+   "item": 67,
+   "reviewId": "h4-specialized-baseline:bhs:18:DIvargaH:praRiDAna",
+   "dict": "BHS",
+   "field": "DIvargaH",
+   "lemma": "praRiDAna",
+   "variants": [
+    "praRiDAna"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 49,
+    "amar": 157,
+    "pct": 0.3121
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does BHS coverage of praRiDAna in DIvargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "BHS",
+     "L": "9920",
+     "excerpt": "{@praṇidhāna@}¦, <lex>nt.</lex> (<lex>m.</lex> modifiers <ls>Bhad</ls> 〔58〕; = <lang>Pali</lang> paṇidhāna; like {@praṇidhi@}, <ab>n. act.</ab> to {@praṇidadhāti, praṇidheti@}), {%fixation%} of mind (ceto-pra˚ <ls>Mv</ls> 〔i.239.5〕; 〔iii.138.19〕; <lang>Pali</..."
+    }
+   ]
+  },
+  {
+   "item": 68,
+   "reviewId": "h4-specialized-baseline:armh:19:pAtAlaBogivargaH:vivara",
+   "dict": "ARMH",
+   "field": "pAtAlaBogivargaH",
+   "lemma": "vivara",
+   "variants": [
+    "vivara"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 77,
+    "amar": 103,
+    "pct": 0.7476
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does ARMH coverage of vivara in pAtAlaBogivargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "ARMH",
+     "L": "5435",
+     "excerpt": "vivara; nimnamagADo gartaH SvaBraM SuziraM vapA bilaM vivaram . antaramavawucCidraM nirvyaTanaM ranDrarokakuharadarAH .. 624 .. 3.1.1.624"
+    }
+   ]
+  },
+  {
+   "item": 69,
+   "reviewId": "h4-specialized-baseline:fri:20:vyomavargaH:antarikza",
+   "dict": "FRI",
+   "field": "vyomavargaH",
+   "lemma": "antarikza",
+   "variants": [
+    "antarikza"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 13,
+    "amar": 23,
+    "pct": 0.5652
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Does FRI coverage of antarikza in vyomavargaH match the dictionary scope, or is it incidental or out of scope?",
+   "allowed": [
+    "scope-match",
+    "incidental-match",
+    "scope-mismatch"
+   ],
+   "evidence": [
+    {
+     "dict": "FRI",
+     "L": "360",
+     "excerpt": "antarikṣa n. <div n=\"1\"/>1 <lang n=\"czech\">ovzduší, vzduch</lang> <div n=\"1\"/>2 <lang n=\"russian\">атмосфера, воздух</lang> <div n=\"1\"/>3 <lang n=\"english\">the atmosphere, air</lang>"
+    }
+   ]
+  },
+  {
+   "item": 70,
+   "reviewId": "h4-index-reverse-control:ae:01:avyayavargaH:cit",
+   "dict": "AE",
+   "field": "avyayavargaH",
+   "lemma": "cit",
+   "variants": [
+    "cit"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is AE coverage of cit in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "AE",
+     "L": "1774",
+     "excerpt": "{@Cit@}¦,Ⓒ<lex>s.</lex>Ⓓ<s>nAgarikaH, pfTagjanaH, nAgaraMjanaH</s>."
+    }
+   ]
+  },
+  {
+   "item": 71,
+   "reviewId": "h4-index-reverse-control:mwe:02:avyayavargaH:cit",
+   "dict": "MWE",
+   "field": "avyayavargaH",
+   "lemma": "cit",
+   "variants": [
+    "cit"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is MWE coverage of cit in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "MWE",
+     "L": "4533",
+     "excerpt": "CIT¦, {%s.%} {#nAgarajanaH, nAgarakaH, pOrajanaH, pfTagjanaH, avaravarRaH#}."
+    }
+   ]
+  },
+  {
+   "item": 72,
+   "reviewId": "h4-index-reverse-control:pui:03:narakavargaH:naraka",
+   "dict": "PUI",
+   "field": "narakavargaH",
+   "lemma": "naraka",
+   "variants": [
+    "naraka"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 14,
+    "amar": 29,
+    "pct": 0.4828
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is PUI coverage of naraka in narakavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "PUI",
+     "L": "6927",
+     "excerpt": "{%Naraka%}¦ — a son of Anṛta; another name of Raurava. <div n=\"P\"/>Br. II. 9. 64; Vā. 10. 39."
+    }
+   ]
+  },
+  {
+   "item": 73,
+   "reviewId": "h4-index-reverse-control:inm:04:svargavargaH:svar",
+   "dict": "INM",
+   "field": "svargavargaH",
+   "lemma": "svar",
+   "variants": [
+    "svar"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 353,
+    "amar": 674,
+    "pct": 0.5237
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is INM coverage of svar in svargavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "INM",
+     "L": "10642",
+     "excerpt": "{@*Svar@}<sup>1</sup>¦ (“heaven”): XIV, 2840 ({%svar yānti dhārmikāḥ%}); mostly occurring in compounds, e.g. {%˚-gamana%} (VIII, †4088), {%˚-gata%} (I, 355), {%˚-gati%} (I, 263), {%˚-netṛ%} (III, 12705), {%˚-nivāsa%} (I, 3537), {%˚-yāta%} (I, 3807).—Do.<sup>2..."
+    }
+   ]
+  },
+  {
+   "item": 74,
+   "reviewId": "h4-index-reverse-control:ieg:05:vyomavargaH:aBra",
+   "dict": "IEG",
+   "field": "vyomavargaH",
+   "lemma": "aBra",
+   "variants": [
+    "aBra"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 12,
+    "amar": 23,
+    "pct": 0.5217
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is IEG coverage of aBra in vyomavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "IEG",
+     "L": "33",
+     "excerpt": "{%abhra%}¦ (<ls>IE</ls> 7-1-2), ‘cypher’."
+    }
+   ]
+  },
+  {
+   "item": 75,
+   "reviewId": "h4-index-reverse-control:ae:06:avyayavargaH:ha",
+   "dict": "AE",
+   "field": "avyayavargaH",
+   "lemma": "ha",
+   "variants": [
+    "ha"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is AE coverage of ha in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "AE",
+     "L": "4735",
+     "excerpt": "{@Ha@}¦,Ⓒ<lex>interj.</lex>Ⓓ<s>hA, aho, ayi, bata, haMta</s>."
+    }
+   ]
+  },
+  {
+   "item": 76,
+   "reviewId": "h4-index-reverse-control:mwe:07:avyayavargaH:ha",
+   "dict": "MWE",
+   "field": "avyayavargaH",
+   "lemma": "ha",
+   "variants": [
+    "ha"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is MWE coverage of ha in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "MWE",
+     "L": "13560",
+     "excerpt": "HA¦, {%interj.%} {#hA, hahA, AhA, aho, Aho, ahahaH, ahovat, ha, aha#}, {#A, ayi, AScaryyaM#}."
+    }
+   ]
+  },
+  {
+   "item": 77,
+   "reviewId": "h4-index-reverse-control:pui:08:narakavargaH:niraya",
+   "dict": "PUI",
+   "field": "narakavargaH",
+   "lemma": "niraya",
+   "variants": [
+    "niraya"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 14,
+    "amar": 29,
+    "pct": 0.4828
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is PUI coverage of niraya in narakavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "PUI",
+     "L": "7187",
+     "excerpt": "{%Niraya%} (I)¦ — a son of Bhaya and Mṛtyu. <div n=\"P\"/>Bhā. IV. 8. 4."
+    }
+   ]
+  },
+  {
+   "item": 78,
+   "reviewId": "h4-index-reverse-control:inm:09:svargavargaH:svarga",
+   "dict": "INM",
+   "field": "svargavargaH",
+   "lemma": "svarga",
+   "variants": [
+    "svarga"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 353,
+    "amar": 674,
+    "pct": 0.5237
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is INM coverage of svarga in svargavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "INM",
+     "L": "10650",
+     "excerpt": "{@*Svarga@}¦ (“heaven”, or “heavenly bliss”): I, 437, etc.; II, 685, etc.; III, 841, etc.; IV, 2247; V, †387, etc.; VI, 126, etc.; VII, 40, etc.; VIII, 447, etc.; IX, 182, etc.; X, 159, etc.; XI, 59, etc.; XII, 49, etc.; XIII, 307, etc.; 1057 (identified with..."
+    }
+   ]
+  },
+  {
+   "item": 79,
+   "reviewId": "h4-index-reverse-control:ieg:10:vyomavargaH:vyoman",
+   "dict": "IEG",
+   "field": "vyomavargaH",
+   "lemma": "vyoman",
+   "variants": [
+    "vyoman"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 12,
+    "amar": 23,
+    "pct": 0.5217
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is IEG coverage of vyoman in vyomavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "IEG",
+     "L": "6787",
+     "excerpt": "{%vyoman%}¦ (<ls>IE</ls> 7-1-2; <ls>EI</ls> 33), ‘cypher’."
+    }
+   ]
+  },
+  {
+   "item": 80,
+   "reviewId": "h4-index-reverse-control:ae:11:avyayavargaH:he",
+   "dict": "AE",
+   "field": "avyayavargaH",
+   "lemma": "he",
+   "variants": [
+    "he"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is AE coverage of he in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "AE",
+     "L": "4827",
+     "excerpt": "{@He@}¦,Ⓒ<lex>pron.</lex>Ⓓ<s>saH, ezaH, asO, ayaM</s>."
+    }
+   ]
+  },
+  {
+   "item": 81,
+   "reviewId": "h4-index-reverse-control:mwe:12:avyayavargaH:he",
+   "dict": "MWE",
+   "field": "avyayavargaH",
+   "lemma": "he",
+   "variants": [
+    "he"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is MWE coverage of he in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "MWE",
+     "L": "13931",
+     "excerpt": "HE¦, {%s.%} {#saH (tad), ezaH (etad), asO#} {%m.%} {#(adas), sakaH#}; ‘so and so,’ [Page336-a+ 51] {#amukanAmA#} {%m.%} ({#n#}). OBS. The visarga of {#saH#} and {#ezaH#} is dropped before {%any consonant.%}"
+    }
+   ]
+  },
+  {
+   "item": 82,
+   "reviewId": "h4-index-reverse-control:pui:13:narakavargaH:durgati",
+   "dict": "PUI",
+   "field": "narakavargaH",
+   "lemma": "durgati",
+   "variants": [
+    "durgati"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 14,
+    "amar": 29,
+    "pct": 0.4828
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is PUI coverage of durgati in narakavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "PUI",
+     "L": "6066",
+     "excerpt": "{%Durgati%}¦ — a commander of Bhaṇḍa. <div n=\"P\"/>Br. IV. 21. 86."
+    }
+   ]
+  },
+  {
+   "item": 83,
+   "reviewId": "h4-index-reverse-control:inm:14:svargavargaH:nAka",
+   "dict": "INM",
+   "field": "svargavargaH",
+   "lemma": "nAka",
+   "variants": [
+    "nAka"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 353,
+    "amar": 674,
+    "pct": 0.5237
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is INM coverage of nAka in svargavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "INM",
+     "L": "7519",
+     "excerpt": "{@Nāka@},¦ name of a weapon. § 563 (Bhagavadyānap.): V, {@96@}ϕ, 3490 (will be employed by Arjuna)."
+    }
+   ]
+  },
+  {
+   "item": 84,
+   "reviewId": "h4-index-reverse-control:ieg:15:vyomavargaH:puzkara",
+   "dict": "IEG",
+   "field": "vyomavargaH",
+   "lemma": "puzkara",
+   "variants": [
+    "puzkara"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 12,
+    "amar": 23,
+    "pct": 0.5217
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is IEG coverage of puzkara in vyomavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "IEG",
+     "L": "4683",
+     "excerpt": "{%puṣkara%}¦ (<ls>ML</ls>), a tank."
+    }
+   ]
+  },
+  {
+   "item": 85,
+   "reviewId": "h4-index-reverse-control:ae:16:avyayavargaH:a",
+   "dict": "AE",
+   "field": "avyayavargaH",
+   "lemma": "a",
+   "variants": [
+    "a"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is AE coverage of a in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "AE",
+     "L": "1",
+     "excerpt": "{@A@}, {@An@}¦,Ⓐ(As an article) not <ab>ex.</ab>; ‘a man’ <s>naraH</s>. Ⓑ{@2@} (One) <s>eka</s>. Ⓑ{@3@} (Indefinite) <s>kiM</s> with <s>cit, cana</s> or <s>api</s>. Ⓑ{@4@} With <ab>part.</ab>, <ab>ex.</ab> by <ab>dat.</ab> or <ab>inf.</ab>; ‘set out a-hunting..."
+    }
+   ]
+  },
+  {
+   "item": 86,
+   "reviewId": "h4-index-reverse-control:mwe:17:avyayavargaH:a",
+   "dict": "MWE",
+   "field": "avyayavargaH",
+   "lemma": "a",
+   "variants": [
+    "a"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 6,
+    "amar": 268,
+    "pct": 0.0224
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is MWE coverage of a in avyayavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "MWE",
+     "L": "1",
+     "excerpt": "A.¦ As an indefinite article before nouns singular, for the most part not expressed in Sanskrit; as, ‘a lion,’ {#siMhaH#}; (One) {#ekaH -kA -kaM#}. — (Some, a certain) {#kaScit#}; as, ‘a certain man,’ {#kaScit puruzaH#}. — (Each, every) expressed by {#prati#}..."
+    }
+   ]
+  },
+  {
+   "item": 87,
+   "reviewId": "h4-index-reverse-control:pui:18:narakavargaH:tapana",
+   "dict": "PUI",
+   "field": "narakavargaH",
+   "lemma": "tapana",
+   "variants": [
+    "tapana"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 14,
+    "amar": 29,
+    "pct": 0.4828
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is PUI coverage of tapana in narakavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "PUI",
+     "L": "5311",
+     "excerpt": "{%Tapana%}¦ — the Sun whose daughter is Yamunā. <div n=\"P\"/>M. 108. 23; 110. 5."
+    }
+   ]
+  },
+  {
+   "item": 88,
+   "reviewId": "h4-index-reverse-control:inm:19:svargavargaH:tridiva",
+   "dict": "INM",
+   "field": "svargavargaH",
+   "lemma": "tridiva",
+   "variants": [
+    "tridiva"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 353,
+    "amar": 674,
+    "pct": 0.5237
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is INM coverage of tridiva in svargavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "INM",
+     "L": "10920",
+     "excerpt": "{@Tridiva@}¦ (“heaven”): I, 161 ({%˚sthaṃ Dhanañjayaṃ%}), †1258, 1539, †1545, 1638, 2829, 3107 ({%˚aukasāṃ%}), 4180 (do.), 8474; [Page680-b+ 63] III, 1662 ({%˚nivāsināṃ%}), 1805, 1809 ({%rakṣitā…t˚ṃ Maghavān%} {%iva%}), †1878 ({%˚gatāḥ%}), 2229, †8713, 8766, ..."
+    }
+   ]
+  },
+  {
+   "item": 89,
+   "reviewId": "h4-index-reverse-control:ieg:20:vyomavargaH:ambara",
+   "dict": "IEG",
+   "field": "vyomavargaH",
+   "lemma": "ambara",
+   "variants": [
+    "ambara"
+   ],
+   "machineState": "covered",
+   "coverage": {
+    "covered": 12,
+    "amar": 23,
+    "pct": 0.5217
+   },
+   "comparison": null,
+   "deltaPct": null,
+   "question": "Is IEG coverage of ambara in vyomavargaH meaningful, or a lookup-direction/index artifact?",
+   "allowed": [
+    "direction-artifact",
+    "index-artifact",
+    "meaningful-exception"
+   ],
+   "evidence": [
+    {
+     "dict": "IEG",
+     "L": "290",
+     "excerpt": "{%ambara%}¦ (<ls>IE</ls> 7-1-2), ‘cypher’."
+    }
+   ]
+  }
+ ]
+}

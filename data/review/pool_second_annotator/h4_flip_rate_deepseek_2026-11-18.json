@@ -1,0 +1,198 @@
+{
+ "schemaVersion": "1.0.0",
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "ownerRepo": "csl-atlas",
+ "protocol": "https://github.com/gasyoun/Uprava/blob/main/docs/PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026.md",
+ "preRegistration": "docs/PROTOCOL_POOL_ALPHA_H4_2026-11-18.md",
+ "annotator": {
+  "tier": "DeepSeek V4.1 Flash",
+  "exactId": "deepseek-v4.1-flash",
+  "provider": "opencode-go"
+ },
+ "passRole": "B only (Pass A is a historical 2026-07-24 pass and is not re-runnable)",
+ "subsampleRule": "every 3rd item of the 89-row blind set (items 3,6,...,87)",
+ "subsampleSize": 29,
+ "runs": [
+  {
+   "item": 3,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 6,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 9,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 12,
+   "run1": "true-covered",
+   "run2": "true-covered",
+   "run3": "true-covered"
+  },
+  {
+   "item": 15,
+   "run1": "true-covered",
+   "run2": "true-covered",
+   "run3": "true-covered"
+  },
+  {
+   "item": 18,
+   "run1": "true-covered",
+   "run2": "true-covered",
+   "run3": "true-covered"
+  },
+  {
+   "item": 21,
+   "run1": "true-covered",
+   "run2": "true-covered",
+   "run3": "true-covered"
+  },
+  {
+   "item": 24,
+   "run1": "true-covered",
+   "run2": "true-covered",
+   "run3": "true-covered"
+  },
+  {
+   "item": 27,
+   "run1": "thin-entry",
+   "run2": "thin-entry",
+   "run3": "thin-entry"
+  },
+  {
+   "item": 30,
+   "run1": "true-covered",
+   "run2": "true-covered",
+   "run3": "true-covered"
+  },
+  {
+   "item": 33,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 36,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 39,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 42,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 45,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 48,
+   "run1": "parser-gap",
+   "run2": "parser-gap",
+   "run3": "parser-gap"
+  },
+  {
+   "item": 51,
+   "run1": "incidental-match",
+   "run2": "incidental-match",
+   "run3": "incidental-match"
+  },
+  {
+   "item": 54,
+   "run1": "scope-match",
+   "run2": "scope-match",
+   "run3": "scope-match"
+  },
+  {
+   "item": 57,
+   "run1": "scope-match",
+   "run2": "scope-match",
+   "run3": "scope-match"
+  },
+  {
+   "item": 60,
+   "run1": "scope-match",
+   "run2": "scope-match",
+   "run3": "scope-match"
+  },
+  {
+   "item": 63,
+   "run1": "scope-match",
+   "run2": "scope-match",
+   "run3": "scope-match"
+  },
+  {
+   "item": 66,
+   "run1": "scope-match",
+   "run2": "scope-match",
+   "run3": "scope-match"
+  },
+  {
+   "item": 69,
+   "run1": "scope-match",
+   "run2": "scope-match",
+   "run3": "scope-match"
+  },
+  {
+   "item": 72,
+   "run1": "index-artifact",
+   "run2": "index-artifact",
+   "run3": "index-artifact"
+  },
+  {
+   "item": 75,
+   "run1": "direction-artifact",
+   "run2": "direction-artifact",
+   "run3": "direction-artifact"
+  },
+  {
+   "item": 78,
+   "run1": "meaningful-exception",
+   "run2": "meaningful-exception",
+   "run3": "meaningful-exception"
+  },
+  {
+   "item": 81,
+   "run1": "direction-artifact",
+   "run2": "direction-artifact",
+   "run3": "direction-artifact"
+  },
+  {
+   "item": 84,
+   "run1": "direction-artifact",
+   "run2": "direction-artifact",
+   "run3": "direction-artifact"
+  },
+  {
+   "item": 87,
+   "run1": "index-artifact",
+   "run2": "index-artifact",
+   "run3": "index-artifact"
+  }
+ ],
+ "flipRatePct": 0,
+ "flips": 0,
+ "rowRunPairs": 87,
+ "rowsWithAnyChange": 0,
+ "caveat": "runs 2-3 are repeated judgment passes by the same model in the same session over the same rendered evidence block; they are not independent draws, so the measured flip-rate bounds in-session determinism only and is NOT evidence of cross-session stability (§2.7).",
+ "annotatedAt": "2026-11-18"
+}

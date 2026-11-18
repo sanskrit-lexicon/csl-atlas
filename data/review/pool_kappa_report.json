@@ -7,9 +7,13 @@
   "ownerRepo": "csl-atlas",
   "generatedBy": "python scripts/lexico/review_pool_kappa.py",
   "sourceFiles": [
-    "data/review/pool_merge/csl-atlas-r2-checkpoint_10rows.json"
+    "data/review/pool_merge/csl-atlas-r2-checkpoint_10rows.json",
+    "data/lexico/h4_semantic_field_review_packet.json",
+    "data/review/pool_second_annotator/h4_semantic_field_89rows_deepseek-v4.1-flash_2026-11-18.json",
+    "data/review/pool_blind/h4_semantic_field_89rows_blind_2026-11-18.json",
+    "data/review/pool_second_annotator/h4_flip_rate_deepseek_2026-11-18.json"
   ],
-  "method": "Krippendorff's alpha (nominal, coincidence-matrix method) as the headline statistic because raters rotate across rows (design §5); Cohen's kappa per dyad only where the dyad shares >= 30 rows; bootstrap 95% CI over rows (2000 resamples, seeded); Landis-Koch bands reused from scripts/lexico/root_agreement_kappa.py.",
+  "method": "Krippendorff's alpha (nominal, coincidence-matrix method) as the headline statistic because raters rotate across rows (design §5); Cohen's kappa per dyad only where the dyad shares >= 30 rows; bootstrap 95% CI over rows (2000 resamples, seeded); Landis-Koch bands reused from scripts/lexico/root_agreement_kappa.py. Two-model packets add a blind cross-model second pass under Uprava PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026 (channel = model x model).",
   "packets": [
     {
       "packetId": "csl-atlas-r2-checkpoint_10rows",
@@ -47,10 +51,511 @@
       ]
     }
   ],
+  "twoModelPackets": [
+    {
+      "packetId": "h4_semantic_field_89rows",
+      "channel": "model x model",
+      "passA": {
+        "model": "grok-4.5 (H1621 agent adjudication, reviewedAt 2026-07-24; evidence: local csl-orig + packet pointers)",
+        "source": "data/lexico/h4_semantic_field_review_packet.json"
+      },
+      "passB": {
+        "model": {
+          "tier": "DeepSeek V4.1 Flash",
+          "exactId": "deepseek-v4.1-flash",
+          "provider": "opencode-go"
+        },
+        "source": "data/review/pool_second_annotator/h4_semantic_field_89rows_deepseek-v4.1-flash_2026-11-18.json"
+      },
+      "blindInput": "data/review/pool_blind/h4_semantic_field_89rows_blind_2026-11-18.json",
+      "preRegistration": "docs/PROTOCOL_POOL_ALPHA_H4_2026-11-18.md",
+      "rows": 89,
+      "denominator": "89 of 89 Pass-B rows joined to Pass A (89 decision-bearing rows in the packet)",
+      "observedAgreement": 0.7079,
+      "krippendorffAlpha": 0.6563,
+      "alphaCI95": [
+        0.5473,
+        0.7561
+      ],
+      "band": "substantial",
+      "gate": {
+        "outcome": "DEMOTE",
+        "reason": "α CI lower bound 0.5473 < 0.8: publish the measured α and restate any dependent headline as a bounded estimate (§2.6)"
+      },
+      "flipRatePct": 0,
+      "flipRate": {
+        "schemaVersion": "1.0.0",
+        "license": "CC-BY-SA-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "ownerRepo": "csl-atlas",
+        "protocol": "https://github.com/gasyoun/Uprava/blob/main/docs/PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026.md",
+        "preRegistration": "docs/PROTOCOL_POOL_ALPHA_H4_2026-11-18.md",
+        "annotator": {
+          "tier": "DeepSeek V4.1 Flash",
+          "exactId": "deepseek-v4.1-flash",
+          "provider": "opencode-go"
+        },
+        "passRole": "B only (Pass A is a historical 2026-07-24 pass and is not re-runnable)",
+        "subsampleRule": "every 3rd item of the 89-row blind set (items 3,6,...,87)",
+        "subsampleSize": 29,
+        "runs": [
+          {
+            "item": 3,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 6,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 9,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 12,
+            "run1": "true-covered",
+            "run2": "true-covered",
+            "run3": "true-covered"
+          },
+          {
+            "item": 15,
+            "run1": "true-covered",
+            "run2": "true-covered",
+            "run3": "true-covered"
+          },
+          {
+            "item": 18,
+            "run1": "true-covered",
+            "run2": "true-covered",
+            "run3": "true-covered"
+          },
+          {
+            "item": 21,
+            "run1": "true-covered",
+            "run2": "true-covered",
+            "run3": "true-covered"
+          },
+          {
+            "item": 24,
+            "run1": "true-covered",
+            "run2": "true-covered",
+            "run3": "true-covered"
+          },
+          {
+            "item": 27,
+            "run1": "thin-entry",
+            "run2": "thin-entry",
+            "run3": "thin-entry"
+          },
+          {
+            "item": 30,
+            "run1": "true-covered",
+            "run2": "true-covered",
+            "run3": "true-covered"
+          },
+          {
+            "item": 33,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 36,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 39,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 42,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 45,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 48,
+            "run1": "parser-gap",
+            "run2": "parser-gap",
+            "run3": "parser-gap"
+          },
+          {
+            "item": 51,
+            "run1": "incidental-match",
+            "run2": "incidental-match",
+            "run3": "incidental-match"
+          },
+          {
+            "item": 54,
+            "run1": "scope-match",
+            "run2": "scope-match",
+            "run3": "scope-match"
+          },
+          {
+            "item": 57,
+            "run1": "scope-match",
+            "run2": "scope-match",
+            "run3": "scope-match"
+          },
+          {
+            "item": 60,
+            "run1": "scope-match",
+            "run2": "scope-match",
+            "run3": "scope-match"
+          },
+          {
+            "item": 63,
+            "run1": "scope-match",
+            "run2": "scope-match",
+            "run3": "scope-match"
+          },
+          {
+            "item": 66,
+            "run1": "scope-match",
+            "run2": "scope-match",
+            "run3": "scope-match"
+          },
+          {
+            "item": 69,
+            "run1": "scope-match",
+            "run2": "scope-match",
+            "run3": "scope-match"
+          },
+          {
+            "item": 72,
+            "run1": "index-artifact",
+            "run2": "index-artifact",
+            "run3": "index-artifact"
+          },
+          {
+            "item": 75,
+            "run1": "direction-artifact",
+            "run2": "direction-artifact",
+            "run3": "direction-artifact"
+          },
+          {
+            "item": 78,
+            "run1": "meaningful-exception",
+            "run2": "meaningful-exception",
+            "run3": "meaningful-exception"
+          },
+          {
+            "item": 81,
+            "run1": "direction-artifact",
+            "run2": "direction-artifact",
+            "run3": "direction-artifact"
+          },
+          {
+            "item": 84,
+            "run1": "direction-artifact",
+            "run2": "direction-artifact",
+            "run3": "direction-artifact"
+          },
+          {
+            "item": 87,
+            "run1": "index-artifact",
+            "run2": "index-artifact",
+            "run3": "index-artifact"
+          }
+        ],
+        "flipRatePct": 0,
+        "flips": 0,
+        "rowRunPairs": 87,
+        "rowsWithAnyChange": 0,
+        "caveat": "runs 2-3 are repeated judgment passes by the same model in the same session over the same rendered evidence block; they are not independent draws, so the measured flip-rate bounds in-session determinism only and is NOT evidence of cross-session stability (§2.7).",
+        "annotatedAt": "2026-11-18"
+      },
+      "labelCounts": {
+        "passA": {
+          "variant-headword": 1,
+          "prose-present": 7,
+          "true-low": 2,
+          "true-covered": 18,
+          "thin-entry": 2,
+          "parser-gap": 10,
+          "edition-delta": 9,
+          "scope-match": 20,
+          "direction-artifact": 8,
+          "index-artifact": 9,
+          "meaningful-exception": 3
+        },
+        "passB": {
+          "parser-gap": 26,
+          "variant-headword": 3,
+          "true-covered": 19,
+          "thin-entry": 1,
+          "scope-match": 18,
+          "incidental-match": 2,
+          "direction-artifact": 12,
+          "index-artifact": 5,
+          "meaningful-exception": 3
+        }
+      },
+      "byStratum": [
+        {
+          "stratum": "ap-ap90-delta",
+          "n": 19,
+          "alpha": -0.2759,
+          "alphaCI95": [
+            -0.48,
+            -0.0882
+          ]
+        },
+        {
+          "stratum": "index-reverse-control",
+          "n": 20,
+          "alpha": 0.6777,
+          "alphaCI95": [
+            0.3276,
+            0.9225
+          ]
+        },
+        {
+          "stratum": "skd-false-low",
+          "n": 10,
+          "alpha": -0.3475,
+          "alphaCI95": [
+            -0.6379,
+            -0.2752
+          ]
+        },
+        {
+          "stratum": "specialized-baseline",
+          "n": 20,
+          "alpha": -0.0263,
+          "alphaCI95": [
+            -0.1143,
+            0.0
+          ]
+        },
+        {
+          "stratum": "vcp-high-coverage",
+          "n": 20,
+          "alpha": 0.6486,
+          "alphaCI95": [
+            -0.0541,
+            1.0
+          ]
+        }
+      ],
+      "byEvidencePresence": [
+        {
+          "evidence": "excerpt present",
+          "n": 79,
+          "alpha": 0.7559,
+          "alphaCI95": [
+            0.6459,
+            0.8559
+          ]
+        },
+        {
+          "evidence": "no excerpt",
+          "n": 10,
+          "alpha": -0.3475,
+          "alphaCI95": [
+            -0.7431,
+            -0.2752
+          ]
+        }
+      ],
+      "sensitivity": [
+        {
+          "excludedItems": [
+            1
+          ],
+          "reason": "its Pass A decision was seen by the executor while designing the instrument (disclosed in the pre-registration §4)",
+          "n": 88,
+          "alpha": 0.6654,
+          "alphaCI95": [
+            0.5528,
+            0.7696
+          ]
+        }
+      ],
+      "disagreements": [
+        {
+          "reviewId": "h4-skd-false-low:skd:01:viSezyaniGnavargaH:sukftin",
+          "passA": "variant-headword",
+          "passB": "parser-gap",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:02:viSezyaniGnavargaH:puRyavat",
+          "passA": "prose-present",
+          "passB": "parser-gap",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:11:brahmavargaH:janana",
+          "passA": "prose-present",
+          "passB": "parser-gap",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:17:vyomavargaH:dyo",
+          "passA": "true-low",
+          "passB": "variant-headword",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:18:vyomavargaH:div",
+          "passA": "true-low",
+          "passB": "variant-headword",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:19:vyomavargaH:vyoman",
+          "passA": "prose-present",
+          "passB": "parser-gap",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:21:vyomavargaH:ambara",
+          "passA": "prose-present",
+          "passB": "parser-gap",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:22:vyomavargaH:naBas",
+          "passA": "prose-present",
+          "passB": "variant-headword",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:23:vyomavargaH:antarikza",
+          "passA": "prose-present",
+          "passB": "parser-gap",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-skd-false-low:skd:24:vyomavargaH:gagana",
+          "passA": "prose-present",
+          "passB": "parser-gap",
+          "stratum": "skd-false-low"
+        },
+        {
+          "reviewId": "h4-vcp-high-coverage:vcp:13:avyayavargaH:muhus",
+          "passA": "thin-entry",
+          "passB": "true-covered",
+          "stratum": "vcp-high-coverage"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:05:viSezyaniGnavargaH:mahASaya",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:07:viSezyaniGnavargaH:mahotsAha",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:08:viSezyaniGnavargaH:suhfdaya",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:11:SUdravargaH:avaravarRa",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:14:avyayavargaH:cirarAtrAya",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:16:vyomavargaH:suravartman",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:17:vESyavargaH:BUmispfS",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:19:siMhAdivargaH:paYcAsya",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-ap-ap90-delta:ap:20:kzatriyavargaH:mUrDABizikta",
+          "passA": "edition-delta",
+          "passB": "parser-gap",
+          "stratum": "ap-ap90-delta"
+        },
+        {
+          "reviewId": "h4-specialized-baseline:fri:02:vyomavargaH:div",
+          "passA": "scope-match",
+          "passB": "incidental-match",
+          "stratum": "specialized-baseline"
+        },
+        {
+          "reviewId": "h4-specialized-baseline:bhs:06:DIvargaH:mati",
+          "passA": "scope-match",
+          "passB": "incidental-match",
+          "stratum": "specialized-baseline"
+        },
+        {
+          "reviewId": "h4-index-reverse-control:ieg:05:vyomavargaH:aBra",
+          "passA": "index-artifact",
+          "passB": "direction-artifact",
+          "stratum": "index-reverse-control"
+        },
+        {
+          "reviewId": "h4-index-reverse-control:ieg:10:vyomavargaH:vyoman",
+          "passA": "index-artifact",
+          "passB": "direction-artifact",
+          "stratum": "index-reverse-control"
+        },
+        {
+          "reviewId": "h4-index-reverse-control:ieg:15:vyomavargaH:puzkara",
+          "passA": "index-artifact",
+          "passB": "direction-artifact",
+          "stratum": "index-reverse-control"
+        },
+        {
+          "reviewId": "h4-index-reverse-control:ieg:20:vyomavargaH:ambara",
+          "passA": "index-artifact",
+          "passB": "direction-artifact",
+          "stratum": "index-reverse-control"
+        }
+      ],
+      "limitations": [
+        "Cross-model inter-annotator agreement, not human-validated reliability: two models agreeing shows the codebook is executable and the labels are stable, nothing more (protocol §3).",
+        "No human × model figure is reported: the agenda's Wave-2 61-row human residue was checked and is an outstanding human ask (docs/H1684_B2_ADJUDICATION.md § 'The remaining human ask — 61 rows'), not a set of human labels, and it belongs to a different packet. The human anchor stays a GTD @WAITING residual."
+      ]
+    }
+  ],
   "limitations": [
     "No pooled alpha across packets is reported: R2, H4, and xref use different label spaces, so a single combined number would be meaningless (design §9 honesty rule 2).",
     "R2 and H4 prior decisions are public in this repo; the student guide forbids consulting them but nothing enforces it. Measurable-looking agreement could be agreement with a copied answer, not independent judgment (design §9 honesty rule 4 / §11 risk 2)."
   ],
   "warnings": [],
-  "generatedAt": "2026-09-24T23:59:33.688Z"
+  "generatedAt": "2026-11-18T07:57:16.649Z"
 }
