@@ -20,7 +20,7 @@ function deal(annotators) {
   const realOut = path.join(root, "data/review/pool_assignment.json");
   const hadReal = (() => { try { return readFileSync(realOut, "utf8"); } catch { return null; } })();
   try {
-    execFileSync("node", [path.join(root, "scripts/build-review-pool-assignment.mjs"),
+    execFileSync(process.execPath, [path.join(root, "scripts/build-review-pool-assignment.mjs"),
       "--annotators", annotators.join(",")], { cwd: root });
     const manifest = JSON.parse(readFileSync(realOut, "utf8"));
     return manifest;
