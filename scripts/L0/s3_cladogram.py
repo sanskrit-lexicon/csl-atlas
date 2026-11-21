@@ -465,6 +465,11 @@ def main():
             "majority-consensus UPGMA; full MCMC deferred (design §9)."),
         ],
     }
+    # licence envelope must be generator-owned: the licence validator REDs any
+    # data JSON that declares no licence key (H137 regen, 21-11-2026).
+    report = {"license": "CC-BY-SA-4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              **report}
     with open("data/L0/validation_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
