@@ -162,7 +162,7 @@ the three-algorithm agreement on the strong edges is the rigor warrant (design �
 
 ## 7. Remaining / next
 
-1. **LRV, FRI** — not in Patel's 36; dims 1,3,5,6,7 still `gate`. Annotate from source (the `patel_fillin.csv` evidence sheet covers them) or accept partial.
+1. **LRV, FRI** — **RESOLVED 21-11-2026 (H137, PR #723)**: MG's Patel annotation applied via the committed overlay `data/L0/manual_annotations.csv` (source `mg-annot`). Assigned — LRV: 3.1+3.4, 6.2, 7.1; FRI: 1.2, 3.1+3.4, 6.1, 7.1. Deferred pending the s2c recount (internal-vs-compound-final split for dim 1; root-bucket fix for dim 5): LRV 1, LRV 5, FRI 5. Post-annotation placements — **LRV → AE(0.47)/YAT(0.49)/ACC(0.50)/BOR(0.55)**, **FRI → BOP(0.49)/SHS(0.50)/KRM(0.54)** (`distances/B_whamming.csv`), matching the loose §4 clustering. Regeneration-safety: pipeline order `s2 → s2b → s2d → apply_lrv_fri_annotation.py → s3 → s5` — never run `s2d` without re-applying the overlay.
 2. **KNA, KOW, AMAR** — no local source; fetch from Cologne to add the Russian-tradition + Amarakośa dicts.
 3. **Patel's open conventions** (`tकारान्त` `mahat`-type; ṛ-nipātita; sकारान्त; रेफान्त) → candidate dims 31+ (see `refs/fingerprint_conventions.md` §A note).
 4. **Dashboard page** `/lexicography/conventions.md` (design §7.2); **Paper M §4.1.5 / Paper H §5** paragraphs (esp. the convention-vs-content-lineage finding, §3 above).
