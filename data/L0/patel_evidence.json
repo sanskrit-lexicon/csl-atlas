@@ -1,22 +1,32 @@
 {
-  "license": "CC-BY-SA-4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "WIL": {
     "1": {
-      "anusvara_share": 0.007,
-      "n_anusvara": 14,
-      "n_homorganic": 1914,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.001,
+      "anusvara_share_compound": 0.127,
+      "n_anu_i": 1,
+      "n_anu_c": 13,
+      "n_homo_i": 1825,
+      "n_homo_c": 89,
+      "ex_anu_i": [
+        "idaMkAryyA"
+      ],
+      "ex_anu_c": [
         "antaHsaMjYA",
         "arGasaMKyApana",
         "arTasaMgraha",
-        "idaMkAryyA"
+        "uttamasaMgraha"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "aMhriskanDa",
         "akaRwaka",
         "akampita",
         "akARqa"
+      ],
+      "ex_homo_c": [
+        "agnisamBava",
+        "agrasanDAnI",
+        "atiprasaNga",
+        "atisaYcaya"
       ]
     },
     "3": {
@@ -43,24 +53,17 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 94,
-      "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "oM"
-      ],
-      "ex_nasal_root": [
-        "agni",
-        "aGna",
-        "atnu",
-        "ana"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 80,
       "n_nomA": 201,
-      "n_ar": 1,
+      "n_ar": 0,
+      "n_R": 0,
       "ex_stem_f": [
         "aMSayitf",
         "aMSuBartf",
@@ -73,13 +76,14 @@
         "akzamatA",
         "akzayatA"
       ],
-      "ex_ar": [
-        "antar"
-      ]
+      "ex_ar": [],
+      "ex_R": []
     },
     "7": {
       "n_vas": 6,
       "n_yas": 9,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "anASvas",
         "avidvas",
@@ -91,26 +95,43 @@
         "ayas",
         "arTagarIyas",
         "alpavayas"
-      ]
+      ],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "YAT": {
     "1": {
-      "anusvara_share": 0.026,
-      "n_anusvara": 51,
-      "n_homorganic": 1913,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.017,
+      "anusvara_share_compound": 0.177,
+      "n_anu_i": 31,
+      "n_anu_c": 20,
+      "n_homo_i": 1820,
+      "n_homo_c": 93,
+      "ex_anu_i": [
         "atimaMgalya",
         "anaBizvaMga",
         "anahaMkAra",
         "anahaMkfta"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "antaHsaMjYA",
+        "arkeMndusaMgama",
+        "arGasaMKyApana",
+        "arTasaMgraha"
+      ],
+      "ex_homo_i": [
         "aMhriskanDa",
         "akaRwaka",
         "akampita",
         "akARqa"
+      ],
+      "ex_homo_c": [
+        "agnisamBava",
+        "agrasanDAnI",
+        "atisaYcaya",
+        "atisanDAna"
       ]
     },
     "3": {
@@ -137,24 +158,22 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 106,
-      "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "AM"
-      ],
+      "n_roots": 4,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 4,
+      "ex_anusvara_root": [],
       "ex_nasal_root": [
-        "agni",
-        "aGna",
-        "aGnA",
-        "atnu"
+        "amb",
+        "inD",
+        "fmP",
+        "kunT"
       ]
     },
     "6": {
       "n_f_stem": 79,
       "n_nomA": 161,
-      "n_ar": 2,
+      "n_ar": 1,
+      "n_R": 8,
       "ex_stem_f": [
         "aMSayitf",
         "aMSuBarttf",
@@ -168,13 +187,20 @@
         "akzayatA"
       ],
       "ex_ar": [
-        "antar",
         "kmar"
+      ],
+      "ex_R": [
+        "kaR",
+        "kuR",
+        "kUR",
+        "kvaR"
       ]
     },
     "7": {
       "n_vas": 7,
       "n_yas": 11,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "anASvas",
         "azwaSravas",
@@ -186,23 +212,35 @@
         "ayas",
         "arTagarIyas",
         "alpavayas"
-      ]
+      ],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "GST": {
     "1": {
-      "anusvara_share": 0.001,
-      "n_anusvara": 1,
-      "n_homorganic": 1202,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.0,
+      "anusvara_share_compound": 0.016,
+      "n_anu_i": 0,
+      "n_anu_c": 1,
+      "n_homo_i": 1141,
+      "n_homo_c": 61,
+      "ex_anu_i": [],
+      "ex_anu_c": [
         "anuvAkasaMKyA"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "aMhriskanDa",
         "akaRwaka",
         "akampita",
         "akARqa"
+      ],
+      "ex_homo_c": [
+        "agnisaYcaya",
+        "agnisamBava",
+        "agrasanDAnI",
+        "agrasanDyA"
       ]
     },
     "3": {
@@ -229,24 +267,26 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 50,
+      "n_roots": 10,
+      "n_anusvara_root": 3,
+      "n_nasal_root": 7,
       "ex_anusvara_root": [
         "aMS",
-        "aMSa",
-        "aMSu",
-        "aMs"
+        "aMs",
+        "aMh"
       ],
       "ex_nasal_root": [
-        "akna",
-        "agni",
-        "ajma",
-        "atna"
+        "aNk",
+        "aNK",
+        "aNg",
+        "aNG"
       ]
     },
     "6": {
       "n_f_stem": 71,
       "n_nomA": 118,
-      "n_ar": 4,
+      "n_ar": 2,
+      "n_R": 0,
       "ex_stem_f": [
         "aMSuBartf",
         "agnihotf",
@@ -260,15 +300,16 @@
         "akzayatA"
       ],
       "ex_ar": [
-        "antar",
-        "apunar",
         "aBiprAtar",
         "aBisvar"
-      ]
+      ],
+      "ex_R": []
     },
     "7": {
       "n_vas": 12,
       "n_yas": 8,
+      "n_vams": 0,
+      "n_van": 1,
       "ex_vas": [
         "atravas",
         "adASvas",
@@ -280,32 +321,51 @@
         "atavyas",
         "advayas",
         "anukanIyas"
+      ],
+      "ex_vams": [],
+      "ex_van": [
+        "atitvAn"
       ]
     },
     "_n_headwords": 6780
   },
   "BEN": {
     "1": {
-      "anusvara_share": 0.068,
-      "n_anusvara": 120,
-      "n_homorganic": 1642,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.042,
+      "anusvara_share_compound": 0.757,
+      "n_anu_i": 78,
+      "n_anu_c": 28,
+      "n_homo_i": 1758,
+      "n_homo_c": 9,
+      "ex_anu_i": [
         "akiMcitkara",
-        "anusaMDAna",
         "anoMkfta",
-        "aparasparasaMBUta"
+        "ariMdama",
+        "aruMtuda"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "anusaMDAna",
+        "aparasparasaMBUta",
+        "aBisaMdeha",
+        "aBisaMDaka"
+      ],
+      "ex_homo_i": [
         "aMSumant",
-        "agnimant",
-        "aNk",
-        "aNka"
+        "puRqarIkAkza",
+        "mandAkza",
+        "paYcAgni"
+      ],
+      "ex_homo_c": [
+        "AsaNga",
+        "uttarAsaNga",
+        "utsaNga",
+        "utsaNgin"
       ]
     },
     "3": {
-      "n_at": 12,
-      "n_vat": 23,
-      "n_mat": 1,
+      "n_at": 17,
+      "n_vat": 11,
+      "n_mat": 0,
       "ex_at": [
         "at",
         "Izat",
@@ -318,29 +378,30 @@
         "aSrutavat",
         "ASrayASavat"
       ],
-      "ex_mat": [
-        "mat"
-      ]
+      "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 590,
+      "n_roots": 90,
+      "n_anusvara_root": 19,
+      "n_nasal_root": 71,
       "ex_anusvara_root": [
         "aMS",
-        "aMSa",
-        "aMSu",
-        "aMs"
+        "aMs",
+        "aMh",
+        "kaMs"
       ],
       "ex_nasal_root": [
-        "agni",
-        "an",
-        "ana",
-        "anas"
+        "aNk",
+        "aNK",
+        "aNg",
+        "aNG"
       ]
     },
     "6": {
-      "n_f_stem": 210,
-      "n_nomA": 369,
-      "n_ar": 11,
+      "n_f_stem": 166,
+      "n_nomA": 320,
+      "n_ar": 7,
+      "n_R": 31,
       "ex_stem_f": [
         "attf",
         "aDigoptf",
@@ -354,43 +415,68 @@
         "agrasaratA"
       ],
       "ex_ar": [
-        "antar",
         "usar",
         "kmar",
-        "kzar"
+        "kzar",
+        "car"
+      ],
+      "ex_R": [
+        "kaR",
+        "karR",
+        "kuR",
+        "kUR"
       ]
     },
     "7": {
-      "n_vas": 9,
-      "n_yas": 9,
+      "n_vas": 8,
+      "n_yas": 7,
+      "n_vams": 11,
+      "n_van": 0,
       "ex_vas": [
         "avas",
         "kftvas",
         "javas",
-        "tavas"
+        "sujavas"
       ],
       "ex_yas": [
         "ayas",
         "kfzRAyas",
         "trayas",
         "payas"
-      ]
+      ],
+      "ex_vams": [
+        "ayAs",
+        "kanIyaMs",
+        "jyAyaMs",
+        "tapIyaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "MW72": {
     "1": {
-      "anusvara_share": 0.001,
-      "n_anusvara": 1,
-      "n_homorganic": 1248,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.0,
+      "anusvara_share_compound": 0.006,
+      "n_anu_i": 0,
+      "n_anu_c": 1,
+      "n_homo_i": 1076,
+      "n_homo_c": 172,
+      "ex_anu_i": [],
+      "ex_anu_c": [
         "asaMjYa"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "akaRwaka",
         "akampita",
         "akampya",
         "akARqa"
+      ],
+      "ex_homo_c": [
+        "atisanDA",
+        "atisanDam",
+        "atisanDAna",
+        "atisanDita"
       ]
     },
     "3": {
@@ -417,24 +503,26 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 179,
+      "n_roots": 22,
+      "n_anusvara_root": 3,
+      "n_nasal_root": 19,
       "ex_anusvara_root": [
         "aMS",
-        "aMSa",
-        "aMSu",
-        "aMs"
+        "aMs",
+        "aMh"
       ],
       "ex_nasal_root": [
-        "akna",
-        "agni",
-        "ajma",
-        "atna"
+        "aNk",
+        "aNK",
+        "aNg",
+        "aNG"
       ]
     },
     "6": {
       "n_f_stem": 228,
       "n_nomA": 22,
-      "n_ar": 44,
+      "n_ar": 42,
+      "n_R": 12,
       "ex_stem_f": [
         "aMSayitf",
         "akartf",
@@ -452,11 +540,19 @@
         "aticar",
         "atitvar",
         "aDicar"
+      ],
+      "ex_R": [
+        "aDigaR",
+        "anugaR",
+        "anuprAR",
+        "anuvarR"
       ]
     },
     "7": {
       "n_vas": 34,
       "n_yas": 26,
+      "n_vams": 8,
+      "n_van": 0,
       "ex_vas": [
         "acikitvas",
         "ajaGnivas",
@@ -468,26 +564,48 @@
         "aRIyas",
         "atavyas",
         "atyas"
-      ]
+      ],
+      "ex_vams": [
+        "aDivAs",
+        "aDyAs",
+        "anvAs",
+        "apaDvaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "LRV": {
     "1": {
-      "anusvara_share": 0.565,
-      "n_anusvara": 1137,
-      "n_homorganic": 875,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.556,
+      "anusvara_share_compound": 0.738,
+      "n_anu_i": 1062,
+      "n_anu_c": 76,
+      "n_homo_i": 848,
+      "n_homo_c": 27,
+      "ex_anu_i": [
         "aMhriskaMDa",
         "akiMcana",
         "akiMcanA",
         "akiMcitkara"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "agrasaMDyA",
+        "atiprasaMga",
+        "atisaMDAna",
+        "anizwaprasaMga"
+      ],
+      "ex_homo_i": [
         "akaRwaka",
         "akaRwakA",
+        "akARqa",
+        "akARqA"
+      ],
+      "ex_homo_c": [
         "akalyasanDa",
-        "akARqa"
+        "atisanDam",
+        "anusambadDa",
+        "anusambadDA"
       ]
     },
     "3": {
@@ -514,24 +632,27 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 125,
+      "n_roots": 11,
+      "n_anusvara_root": 7,
+      "n_nasal_root": 4,
       "ex_anusvara_root": [
         "aMS",
-        "aMSa",
-        "aMSu",
-        "aMs"
+        "aMs",
+        "aMh",
+        "aMk"
       ],
       "ex_nasal_root": [
-        "agni",
-        "atnu",
-        "an",
-        "anas"
+        "anD",
+        "amB",
+        "inD",
+        "und"
       ]
     },
     "6": {
       "n_f_stem": 37,
       "n_nomA": 314,
-      "n_ar": 3,
+      "n_ar": 0,
+      "n_R": 4,
       "ex_stem_f": [
         "aMSuBartf",
         "agnidAtf",
@@ -544,15 +665,18 @@
         "akzatA",
         "agnitretA"
       ],
-      "ex_ar": [
-        "antar",
-        "apunar",
-        "kiMpunar"
+      "ex_ar": [],
+      "ex_R": [
+        "kaR",
+        "karR",
+        "kuR"
       ]
     },
     "7": {
       "n_vas": 4,
       "n_yas": 12,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "azwakftvas",
         "azwaSravas",
@@ -564,24 +688,36 @@
         "anukanIyas",
         "aprAptavayas",
         "ayas"
-      ]
+      ],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "AP90": {
     "1": {
-      "anusvara_share": 0.999,
-      "n_anusvara": 1452,
-      "n_homorganic": 1,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.999,
+      "anusvara_share_compound": 1.0,
+      "n_anu_i": 1338,
+      "n_anu_c": 114,
+      "n_homo_i": 1,
+      "n_homo_c": 0,
+      "ex_anu_i": [
         "akaMpana",
         "akaMpita",
         "akAMqa",
         "akAMqe"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "atiprasaMgaH",
+        "atisaMDA",
+        "atisaMDAnaM",
+        "atisaMDyA"
+      ],
+      "ex_homo_i": [
         "aBiyAYcA"
-      ]
+      ],
+      "ex_homo_c": []
     },
     "3": {
       "n_at": 59,
@@ -607,24 +743,25 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 184,
+      "n_roots": 41,
+      "n_anusvara_root": 39,
+      "n_nasal_root": 2,
       "ex_anusvara_root": [
         "aMS",
         "aMs",
         "aMh",
-        "aMhu"
+        "aMk"
       ],
       "ex_nasal_root": [
-        "an",
-        "anaH",
-        "anas",
-        "anA"
+        "inv",
+        "fnP"
       ]
     },
     "6": {
       "n_f_stem": 222,
       "n_nomA": 89,
-      "n_ar": 16,
+      "n_ar": 15,
+      "n_R": 11,
       "ex_stem_f": [
         "aMSayitf",
         "akartf",
@@ -642,11 +779,19 @@
         "aDicar",
         "anucar",
         "anusaMcar"
+      ],
+      "ex_R": [
+        "anuprAR",
+        "avakarR",
+        "avagaR",
+        "avaGUrR"
       ]
     },
     "7": {
       "n_vas": 20,
       "n_yas": 19,
+      "n_vams": 7,
+      "n_van": 0,
       "ex_vas": [
         "acikitvas",
         "ajavas",
@@ -658,26 +803,48 @@
         "atavyas",
         "ativayas",
         "advayas"
-      ]
+      ],
+      "ex_vams": [
+        "aDivAs",
+        "aDyAs",
+        "anuvAs",
+        "anvAs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "CAE": {
     "1": {
-      "anusvara_share": 0.09,
-      "n_anusvara": 172,
-      "n_homorganic": 1730,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.049,
+      "anusvara_share_compound": 0.808,
+      "n_anu_i": 88,
+      "n_anu_c": 84,
+      "n_homo_i": 1710,
+      "n_homo_c": 20,
+      "ex_anu_i": [
         "akiMcana",
         "akiMcitkurvARa",
-        "aNgasaMtApa",
-        "atimaDyaMdina"
+        "atimaDyaMdina",
+        "analaMkfta"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "aNgasaMtApa",
+        "atisaMkawa",
+        "atisaMkrudDa",
+        "atisaMcaya"
+      ],
+      "ex_homo_i": [
         "aMSukAnta",
         "aMSumant",
         "akaRwaka",
         "akandasamutTita"
+      ],
+      "ex_homo_c": [
+        "aditsant",
+        "anAsaNga",
+        "aSAsant",
+        "asaMvasant"
       ]
     },
     "3": {
@@ -703,24 +870,25 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 174,
+      "n_roots": 15,
+      "n_anusvara_root": 2,
+      "n_nasal_root": 13,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "aMh"
+        "aMh",
+        "taMs"
       ],
       "ex_nasal_root": [
-        "agni",
-        "ajma",
-        "an",
-        "ana"
+        "aNg",
+        "iNg",
+        "inv",
+        "INK"
       ]
     },
     "6": {
       "n_f_stem": 173,
       "n_nomA": 102,
-      "n_ar": 10,
+      "n_ar": 9,
+      "n_R": 4,
       "ex_stem_f": [
         "akartf",
         "aGaviGAtakartf",
@@ -734,15 +902,23 @@
         "ajIryatA"
       ],
       "ex_ar": [
-        "antar",
         "aBisvar",
         "ahar",
-        "UDar"
+        "UDar",
+        "kzar"
+      ],
+      "ex_R": [
+        "kUR",
+        "kvaR",
+        "GUrR",
+        "JaR"
       ]
     },
     "7": {
       "n_vas": 14,
       "n_yas": 10,
+      "n_vams": 22,
+      "n_van": 0,
       "ex_vas": [
         "anASvas",
         "aBizwiSavas",
@@ -754,26 +930,48 @@
         "ayas",
         "AtmaSreyas",
         "kfzRAyas"
-      ]
+      ],
+      "ex_vams": [
+        "aMhIyaMs",
+        "aRIyaMs",
+        "abalIyaMs",
+        "abiBIvaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "MD": {
     "1": {
-      "anusvara_share": 0.099,
-      "n_anusvara": 144,
-      "n_homorganic": 1311,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.069,
+      "anusvara_share_compound": 0.873,
+      "n_anu_i": 96,
+      "n_anu_c": 48,
+      "n_homo_i": 1304,
+      "n_homo_c": 7,
+      "ex_anu_i": [
         "akiMcana",
         "akiMcijjYa",
         "akiMcitkara",
-        "akftasaMkalpa"
+        "atisitANgavihaMga"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "akftasaMkalpa",
+        "agrasaMDyA",
+        "atisaMkawa",
+        "atisaMtata"
+      ],
+      "ex_homo_i": [
         "aMSukAnta",
         "akaRwaka",
         "akaRWa",
         "akampita"
+      ],
+      "ex_homo_c": [
+        "atyAsaNga",
+        "asaNga",
+        "AsaNga",
+        "AsaYjana"
       ]
     },
     "3": {
@@ -800,24 +998,27 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 362,
+      "n_roots": 30,
+      "n_anusvara_root": 9,
+      "n_nasal_root": 21,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "jaMh"
+        "jaMh",
+        "taMs",
+        "daMS",
+        "daMs"
       ],
       "ex_nasal_root": [
-        "akna",
-        "agan",
-        "agni",
-        "ajma"
+        "aNg",
+        "iNg",
+        "inD",
+        "inv"
       ]
     },
     "6": {
       "n_f_stem": 227,
       "n_nomA": 76,
-      "n_ar": 15,
+      "n_ar": 13,
+      "n_R": 6,
       "ex_stem_f": [
         "akartf",
         "agnisAtkf",
@@ -832,14 +1033,22 @@
       ],
       "ex_ar": [
         "ajIgar",
-        "antar",
         "ahar",
-        "Avar"
+        "Avar",
+        "AvarIvar"
+      ],
+      "ex_R": [
+        "kUR",
+        "kvaR",
+        "kzaR",
+        "GUrR"
       ]
     },
     "7": {
       "n_vas": 19,
       "n_yas": 24,
+      "n_vams": 2,
+      "n_van": 2,
       "ex_vas": [
         "anASvas",
         "anUzivas",
@@ -851,31 +1060,54 @@
         "aRIyas",
         "atigarIyas",
         "adByas"
+      ],
+      "ex_vams": [
+        "ayAs",
+        "DvaMs"
+      ],
+      "ex_van": [
+        "jakzivAn",
+        "daDfzvAn"
       ]
     },
     "_n_headwords": 12000
   },
   "MW": {
     "1": {
-      "anusvara_share": 0.037,
-      "n_anusvara": 81,
-      "n_homorganic": 2091,
-      "ex_anusvara": [
-        "akAmasaMjYapana",
+      "anusvara_share_internal": 0.01,
+      "anusvara_share_compound": 0.622,
+      "n_anu_i": 20,
+      "n_anu_c": 61,
+      "n_homo_i": 2054,
+      "n_homo_c": 37,
+      "ex_anu_i": [
         "akiMcid",
-        "akzarasaMGAta",
-        "akzisaMtarjana"
+        "agadaMkAra",
+        "atisitANgavihaMga",
+        "anayaMgata"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "akAmasaMjYapana",
+        "akzarasaMGAta",
+        "akzisaMtarjana",
+        "agnisaMkASa"
+      ],
+      "ex_homo_i": [
         "aMhriskanDa",
         "aMholiNga",
         "akaRwaka",
         "akaRWa"
+      ],
+      "ex_homo_c": [
+        "akzasaNgam",
+        "akzarasampad",
+        "agnisamBava",
+        "agrasanDyA"
       ]
     },
     "3": {
       "n_at": 95,
-      "n_vat": 80,
+      "n_vat": 79,
       "n_mat": 17,
       "ex_at": [
         "akarizyat",
@@ -897,24 +1129,26 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 178,
+      "n_roots": 11,
+      "n_anusvara_root": 4,
+      "n_nasal_root": 7,
       "ex_anusvara_root": [
         "aMS",
-        "aMSa",
-        "aMSu",
-        "aMs"
+        "aMs",
+        "aMh"
       ],
       "ex_nasal_root": [
-        "agnA",
-        "agni",
-        "ajma",
-        "atna"
+        "aNk",
+        "aNK",
+        "aNg",
+        "aNG"
       ]
     },
     "6": {
       "n_f_stem": 157,
       "n_nomA": 161,
-      "n_ar": 22,
+      "n_ar": 19,
+      "n_R": 5,
       "ex_stem_f": [
         "aMSIkf",
         "aMSuBartf",
@@ -932,11 +1166,19 @@
         "atikzar",
         "aticar",
         "atitvar"
+      ],
+      "ex_R": [
+        "aDigaR",
+        "anugaR",
+        "anuprAR",
+        "anuvarR"
       ]
     },
     "7": {
       "n_vas": 30,
       "n_yas": 20,
+      "n_vams": 8,
+      "n_van": 0,
       "ex_vas": [
         "acakfvas",
         "acikitvas",
@@ -948,26 +1190,45 @@
         "ajyAyas",
         "aRIyas",
         "atavyas"
-      ]
+      ],
+      "ex_vams": [
+        "atiDvaMs",
+        "aDivAs",
+        "aDyAs",
+        "anuDvaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "SHS": {
     "1": {
-      "anusvara_share": 0.011,
-      "n_anusvara": 21,
-      "n_homorganic": 1911,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.001,
+      "anusvara_share_compound": 0.192,
+      "n_anu_i": 1,
+      "n_anu_c": 20,
+      "n_homo_i": 1828,
+      "n_homo_c": 84,
+      "ex_anu_i": [
+        "idaMkAryyA"
+      ],
+      "ex_anu_c": [
         "antaHsaMjYA",
         "arGasaMKyApana",
         "arTasaMgraha",
         "asaMKya"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "aMhriskanDa",
         "akaRwaka",
         "akampita",
         "akARqa"
+      ],
+      "ex_homo_c": [
+        "agnisamBava",
+        "agrasanDAnI",
+        "atiprasaNga",
+        "atisaYcaya"
       ]
     },
     "3": {
@@ -994,24 +1255,17 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 93,
-      "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "oM"
-      ],
-      "ex_nasal_root": [
-        "agni",
-        "aGna",
-        "atnu",
-        "ana"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 80,
       "n_nomA": 200,
-      "n_ar": 2,
+      "n_ar": 1,
+      "n_R": 0,
       "ex_stem_f": [
         "aMSayitf",
         "aMSuBartf",
@@ -1025,13 +1279,15 @@
         "akzayatA"
       ],
       "ex_ar": [
-        "antar",
         "aharahar"
-      ]
+      ],
+      "ex_R": []
     },
     "7": {
       "n_vas": 6,
       "n_yas": 9,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "anASvas",
         "avidvas",
@@ -1043,32 +1299,49 @@
         "ayas",
         "arTagarIyas",
         "alpavayas"
-      ]
+      ],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "AP": {
     "1": {
-      "anusvara_share": 0.075,
-      "n_anusvara": 147,
-      "n_homorganic": 1806,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.03,
+      "anusvara_share_compound": 0.753,
+      "n_anu_i": 56,
+      "n_anu_c": 67,
+      "n_homo_i": 1817,
+      "n_homo_c": 22,
+      "ex_anu_i": [
         "akiMcana",
         "akiMcanam",
         "akiMcanatA",
         "akiMcaniman"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "agrasaMKyA",
+        "agrasaMDAnI",
+        "aNgulisaMjYA",
+        "aNgulisaMBUta"
+      ],
+      "ex_homo_i": [
         "aMSakuRqalI",
         "aMhriskanDaH",
         "akampana",
         "akampanaH"
+      ],
+      "ex_homo_c": [
+        "agnisamBava",
+        "agnisamBavaH",
+        "agnisamBavam",
+        "agrasanDyA"
       ]
     },
     "3": {
-      "n_at": 50,
-      "n_vat": 43,
-      "n_mat": 15,
+      "n_at": 49,
+      "n_vat": 44,
+      "n_mat": 14,
       "ex_at": [
         "akzipat",
         "akziyat",
@@ -1089,24 +1362,26 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 65,
+      "n_roots": 12,
+      "n_anusvara_root": 3,
+      "n_nasal_root": 9,
       "ex_anusvara_root": [
         "aMS",
         "aMs",
-        "aMsO",
         "aMh"
       ],
       "ex_nasal_root": [
-        "akam",
-        "aGam",
-        "an",
-        "anaH"
+        "aNk",
+        "aNK",
+        "aNg",
+        "aNG"
       ]
     },
     "6": {
-      "n_f_stem": 125,
-      "n_nomA": 115,
-      "n_ar": 11,
+      "n_f_stem": 124,
+      "n_nomA": 117,
+      "n_ar": 9,
+      "n_R": 5,
       "ex_stem_f": [
         "aMSayitf",
         "aMSuBartf",
@@ -1124,11 +1399,19 @@
         "aDicar",
         "anucar",
         "anusaMcar"
+      ],
+      "ex_R": [
+        "anuprAR",
+        "avakarR",
+        "avagaR",
+        "avaGUrR"
       ]
     },
     "7": {
       "n_vas": 17,
       "n_yas": 16,
+      "n_vams": 7,
+      "n_van": 2,
       "ex_vas": [
         "akziSravas",
         "acikitvas",
@@ -1140,21 +1423,41 @@
         "atavyas",
         "ativayas",
         "advayas"
+      ],
+      "ex_vams": [
+        "aDivAs",
+        "aDyAs",
+        "anuvAs",
+        "anvAs"
+      ],
+      "ex_van": [
+        "aDikAravAn",
+        "arTavAn"
       ]
     },
     "_n_headwords": 12000
   },
   "BOR": {
     "1": {
-      "anusvara_share": 0.0,
-      "n_anusvara": 0,
-      "n_homorganic": 1961,
-      "ex_anusvara": [],
-      "ex_homorganic": [
+      "anusvara_share_internal": 0.0,
+      "anusvara_share_compound": 0.0,
+      "n_anu_i": 0,
+      "n_anu_c": 0,
+      "n_homo_i": 1957,
+      "n_homo_c": 4,
+      "ex_anu_i": [],
+      "ex_anu_c": [],
+      "ex_homo_i": [
         "abandon",
         "abandoned",
         "abandonment",
         "abasement"
+      ],
+      "ex_homo_c": [
+        "conversant",
+        "ensample",
+        "incessant",
+        "incessantly"
       ]
     },
     "3": {
@@ -1173,19 +1476,22 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 234,
+      "n_roots": 71,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 71,
       "ex_anusvara_root": [],
       "ex_nasal_root": [
-        "acme",
-        "aim",
-        "akin",
-        "alms"
+        "alms",
+        "and",
+        "ant",
+        "any"
       ]
     },
     "6": {
       "n_f_stem": 94,
       "n_nomA": 0,
       "n_ar": 82,
+      "n_R": 0,
       "ex_stem_f": [
         "account of",
         "acquit oneself",
@@ -1198,29 +1504,44 @@
         "altar",
         "angular",
         "annular"
-      ]
+      ],
+      "ex_R": []
     },
     "7": {
       "n_vas": 1,
       "n_yas": 0,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "canvas"
       ],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "AE": {
     "1": {
-      "anusvara_share": 0.0,
-      "n_anusvara": 0,
-      "n_homorganic": 1633,
-      "ex_anusvara": [],
-      "ex_homorganic": [
+      "anusvara_share_internal": 0.0,
+      "anusvara_share_compound": 0.0,
+      "n_anu_i": 0,
+      "n_anu_c": 0,
+      "n_homo_i": 1620,
+      "n_homo_c": 13,
+      "ex_anu_i": [],
+      "ex_anu_c": [],
+      "ex_homo_i": [
         "abandon",
         "abound",
         "abscond",
         "absent"
+      ],
+      "ex_homo_c": [
+        "incessant",
+        "inconversant",
+        "misanthropy",
+        "multiversant"
       ]
     },
     "3": {
@@ -1242,19 +1563,22 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 536,
+      "n_roots": 118,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 118,
       "ex_anusvara_root": [],
       "ex_nasal_root": [
-        "acme",
-        "aim",
-        "akin",
-        "alms"
+        "alms",
+        "and",
+        "ant",
+        "any"
       ]
     },
     "6": {
       "n_f_stem": 76,
       "n_nomA": 0,
       "n_ar": 125,
+      "n_R": 0,
       "ex_stem_f": [
         "aloof",
         "bailiff",
@@ -1267,34 +1591,50 @@
         "afar",
         "ajar",
         "alar"
-      ]
+      ],
+      "ex_R": []
     },
     "7": {
       "n_vas": 1,
       "n_yas": 0,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "canvas"
       ],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 11359
   },
   "BUR": {
     "1": {
-      "anusvara_share": 0.003,
-      "n_anusvara": 4,
-      "n_homorganic": 1370,
-      "ex_anusvara": [
-        "atisaMDAna",
+      "anusvara_share_internal": 0.001,
+      "anusvara_share_compound": 0.054,
+      "n_anu_i": 2,
+      "n_anu_c": 2,
+      "n_homo_i": 1335,
+      "n_homo_c": 35,
+      "ex_anu_i": [
         "anamitaMpaca",
-        "aBisaMprekze",
         "avaSaMgama"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "atisaMDAna",
+        "aBisaMprekze"
+      ],
+      "ex_homo_i": [
         "akaRwaka",
         "akampita",
         "akiYcana",
         "akrAnta"
+      ],
+      "ex_homo_c": [
+        "anusandaDAmi",
+        "anvakzarasanDi",
+        "apAsaNga",
+        "aBisaNkzipAmi"
       ]
     },
     "3": {
@@ -1321,24 +1661,27 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 441,
+      "n_roots": 94,
+      "n_anusvara_root": 21,
+      "n_nasal_root": 73,
       "ex_anusvara_root": [
         "aMS",
-        "aMSa",
-        "aMSu",
-        "aMs"
+        "aMs",
+        "aMh",
+        "iMv"
       ],
       "ex_nasal_root": [
-        "agni",
-        "atnu",
-        "an",
-        "anas"
+        "aNk",
+        "aNg",
+        "aNG",
+        "anD"
       ]
     },
     "6": {
       "n_f_stem": 78,
       "n_nomA": 21,
-      "n_ar": 9,
+      "n_ar": 7,
+      "n_R": 37,
       "ex_stem_f": [
         "adAtf",
         "astf",
@@ -1352,15 +1695,23 @@
         "iwdevatA"
       ],
       "ex_ar": [
-        "antar",
         "ahar",
         "kmar",
-        "kzar"
+        "kzar",
+        "car"
+      ],
+      "ex_R": [
+        "kaR",
+        "karR",
+        "kuR",
+        "kUR"
       ]
     },
     "7": {
       "n_vas": 19,
       "n_yas": 12,
+      "n_vams": 1,
+      "n_van": 0,
       "ex_vas": [
         "alavas",
         "avidvas",
@@ -1372,26 +1723,45 @@
         "ayas",
         "alpIyas",
         "aSreyas"
-      ]
+      ],
+      "ex_vams": [
+        "DvaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "STC": {
     "1": {
-      "anusvara_share": 0.124,
-      "n_anusvara": 185,
-      "n_homorganic": 1312,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.031,
+      "anusvara_share_compound": 0.847,
+      "n_anu_i": 41,
+      "n_anu_c": 144,
+      "n_homo_i": 1286,
+      "n_homo_c": 26,
+      "ex_anu_i": [
         "akiMcana",
         "akiMcid",
-        "awwasaMGawwa",
-        "atimaDyaMdina"
+        "atimaDyaMdina",
+        "atisitANgavihaMga"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "awwasaMGawwa",
+        "atisaMkawa",
+        "atisaMkalpa",
+        "atisaMkrudDa"
+      ],
+      "ex_homo_i": [
         "aMSumant",
         "akaRwaka",
         "akaRWa",
         "akampa"
+      ],
+      "ex_homo_c": [
+        "atipratyAsaNga",
+        "atiprasaNga",
+        "atyAsaNga",
+        "aditsant"
       ]
     },
     "3": {
@@ -1416,24 +1786,25 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 252,
+      "n_roots": 16,
+      "n_anusvara_root": 2,
+      "n_nasal_root": 14,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "waM"
+        "daMS",
+        "dfMh"
       ],
       "ex_nasal_root": [
-        "agni",
-        "an",
-        "ana",
-        "anas"
+        "iNg",
+        "inD",
+        "umB",
+        "kamp"
       ]
     },
     "6": {
       "n_f_stem": 259,
       "n_nomA": 51,
-      "n_ar": 33,
+      "n_ar": 32,
+      "n_R": 6,
       "ex_stem_f": [
         "akartf",
         "aGrAtf",
@@ -1451,11 +1822,19 @@
         "aticar",
         "atitvar",
         "atisvar"
+      ],
+      "ex_R": [
+        "anuprAR",
+        "aBiprAR",
+        "avaGUrR",
+        "kvaR"
       ]
     },
     "7": {
       "n_vas": 17,
       "n_yas": 10,
+      "n_vams": 23,
+      "n_van": 0,
       "ex_vas": [
         "atiniHSvas",
         "ativiSvas",
@@ -1467,26 +1846,48 @@
         "adByas",
         "apapayas",
         "aByas"
-      ]
+      ],
+      "ex_vams": [
+        "agarIyAMs",
+        "ajajYivAMs",
+        "atigarIyAMs",
+        "atipawIyAMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "PWG": {
     "1": {
-      "anusvara_share": 0.078,
-      "n_anusvara": 160,
-      "n_homorganic": 1893,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.049,
+      "anusvara_share_compound": 0.724,
+      "n_anu_i": 97,
+      "n_anu_c": 63,
+      "n_homo_i": 1869,
+      "n_homo_c": 24,
+      "ex_anu_i": [
         "akiMcana",
         "akiMcanatA",
         "akiMcaniman",
         "agadaMkAra"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "agnisaMkASa",
+        "agnisaMBava",
+        "agrasaMDAnI",
+        "agrasaMDyA"
+      ],
+      "ex_homo_i": [
         "aMSumant",
         "aMhriskanDa",
         "akapIvant",
         "akampita"
+      ],
+      "ex_homo_c": [
+        "atiprasaNga",
+        "aditsant",
+        "apAsaNga",
+        "amftAsaNga"
       ]
     },
     "3": {
@@ -1510,24 +1911,24 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 150,
+      "n_roots": 18,
+      "n_anusvara_root": 2,
+      "n_nasal_root": 16,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
         "aMh"
       ],
       "ex_nasal_root": [
-        "akna",
-        "agni",
-        "ajma",
-        "atna"
+        "aNk",
+        "aNg",
+        "aNG",
+        "ant"
       ]
     },
     "6": {
       "n_f_stem": 0,
       "n_nomA": 114,
-      "n_ar": 134,
+      "n_ar": 132,
+      "n_R": 1,
       "ex_stem_f": [],
       "ex_nomA": [
         "akalkatA",
@@ -1540,11 +1941,16 @@
         "agnihotar",
         "aNgIkar",
         "acalaBrAtar"
+      ],
+      "ex_R": [
+        "arR"
       ]
     },
     "7": {
       "n_vas": 14,
       "n_yas": 9,
+      "n_vams": 24,
+      "n_van": 0,
       "ex_vas": [
         "ajavas",
         "apratiDfzwaSavas",
@@ -1556,26 +1962,48 @@
         "advayas",
         "aBivayas",
         "ayas"
-      ]
+      ],
+      "ex_vams": [
+        "acikitvaMs",
+        "ajaGnivaMs",
+        "aRIyaMs",
+        "atavyaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "GRA": {
     "1": {
-      "anusvara_share": 0.102,
-      "n_anusvara": 74,
-      "n_homorganic": 653,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.052,
+      "anusvara_share_compound": 0.709,
+      "n_anu_i": 35,
+      "n_anu_c": 39,
+      "n_homo_i": 637,
+      "n_homo_c": 16,
+      "ex_anu_i": [
         "aBayaMkara",
         "araMkft",
         "araMkfti",
         "araMgama"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "asaMdita",
+        "asaMdina",
+        "tvezasaMdfS",
+        "piSaNgasaMdfS"
+      ],
+      "ex_homo_i": [
         "agniminDa",
         "aNka",
         "aNkas",
         "aNkasa"
+      ],
+      "ex_homo_c": [
+        "AsaNga",
+        "Dvasanti",
+        "vasanta",
+        "saNkA"
       ]
     },
     "3": {
@@ -1602,24 +2030,27 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 558,
+      "n_roots": 69,
+      "n_anusvara_root": 18,
+      "n_nasal_root": 51,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "aMh"
+        "aMh",
+        "aMS",
+        "taMs",
+        "daMS"
       ],
       "ex_nasal_root": [
-        "agni",
-        "ajma",
-        "an",
-        "ana"
+        "aNK",
+        "aNg",
+        "iNg",
+        "inD"
       ]
     },
     "6": {
       "n_f_stem": 211,
       "n_nomA": 37,
-      "n_ar": 64,
+      "n_ar": 61,
+      "n_R": 7,
       "ex_stem_f": [
         "aKKalIkf",
         "agnihotf",
@@ -1634,14 +2065,22 @@
       ],
       "ex_ar": [
         "aTar",
-        "antar",
-        "apunar",
-        "aBisvar"
+        "aBisvar",
+        "ar",
+        "ahar"
+      ],
+      "ex_R": [
+        "kfpaR",
+        "paR",
+        "pfR",
+        "PaR"
       ]
     },
     "7": {
       "n_vas": 83,
       "n_yas": 81,
+      "n_vams": 5,
+      "n_van": 0,
       "ex_vas": [
         "acikitvas",
         "ajaGanvas",
@@ -1653,26 +2092,48 @@
         "advayas",
         "anugAyas",
         "aBivayas"
-      ]
+      ],
+      "ex_vams": [
+        "ayAs",
+        "DvaMs",
+        "vivAs",
+        "svAs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "PW": {
     "1": {
-      "anusvara_share": 0.083,
-      "n_anusvara": 186,
-      "n_homorganic": 2057,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.044,
+      "anusvara_share_compound": 0.868,
+      "n_anu_i": 94,
+      "n_anu_c": 92,
+      "n_homo_i": 2043,
+      "n_homo_c": 14,
+      "ex_anu_i": [
         "akiMcana",
         "akiMcanatA",
         "akiMcanatva",
         "akiMcitkara"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "akzarasaMpad",
+        "akzisaMtarjana",
+        "agnisaMkASa",
+        "agnisaMdIpana"
+      ],
+      "ex_homo_i": [
         "aMSukAnta",
         "aMSumant",
         "aMhriskanDa",
         "akaRwaka"
+      ],
+      "ex_homo_c": [
+        "atiprasaNga",
+        "atiprasaNgin",
+        "aditsant",
+        "anakzasaNgam"
       ]
     },
     "3": {
@@ -1694,24 +2155,24 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 77,
+      "n_roots": 7,
+      "n_anusvara_root": 1,
+      "n_nasal_root": 6,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSI",
-        "aMSu",
-        "aMsa"
+        "aMh"
       ],
       "ex_nasal_root": [
-        "an",
-        "akna",
-        "agan",
-        "agni"
+        "aNk",
+        "aNg",
+        "aNG",
+        "and"
       ]
     },
     "6": {
       "n_f_stem": 1,
       "n_nomA": 151,
-      "n_ar": 122,
+      "n_ar": 120,
+      "n_R": 1,
       "ex_stem_f": [
         "aBiBartf"
       ],
@@ -1726,11 +2187,16 @@
         "agAtar",
         "agnihotar",
         "agrayAtar"
+      ],
+      "ex_R": [
+        "arR"
       ]
     },
     "7": {
       "n_vas": 9,
       "n_yas": 12,
+      "n_vams": 19,
+      "n_van": 0,
       "ex_vas": [
         "ajavas",
         "antarvidvas",
@@ -1742,26 +2208,48 @@
         "adByas",
         "advayas",
         "aDikavayas"
-      ]
+      ],
+      "ex_vams": [
+        "aMhIyaMs",
+        "acakrivaMs",
+        "acikitvaMs",
+        "aRIyaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "CCS": {
     "1": {
-      "anusvara_share": 0.084,
-      "n_anusvara": 136,
-      "n_homorganic": 1478,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.053,
+      "anusvara_share_compound": 0.844,
+      "n_anu_i": 82,
+      "n_anu_c": 54,
+      "n_homo_i": 1468,
+      "n_homo_c": 10,
+      "ex_anu_i": [
         "akiMcana",
+        "analaMkfta",
+        "anahaMkfta",
+        "apAMpati"
+      ],
+      "ex_anu_c": [
         "akftasaMkalpa",
         "agrasaMDyA",
-        "atisaMkrudDa"
+        "atisaMkrudDa",
+        "atisaMcaya"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "aMSumant",
         "akaRwaka",
         "akampita",
         "akARqa"
+      ],
+      "ex_homo_c": [
+        "aditsant",
+        "aSAsant",
+        "asaNga",
+        "asant"
       ]
     },
     "3": {
@@ -1786,24 +2274,27 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 298,
+      "n_roots": 23,
+      "n_anusvara_root": 6,
+      "n_nasal_root": 17,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "taMs"
+        "taMs",
+        "daMS",
+        "daMs",
+        "dfMh"
       ],
       "ex_nasal_root": [
-        "agan",
-        "agni",
-        "ajma",
-        "an"
+        "aNg",
+        "iNg",
+        "inv",
+        "INK"
       ]
     },
     "6": {
       "n_f_stem": 6,
       "n_nomA": 146,
-      "n_ar": 173,
+      "n_ar": 172,
+      "n_R": 5,
       "ex_stem_f": [
         "f",
         "kf",
@@ -1821,11 +2312,19 @@
         "aGaviGAtakartar",
         "aNgIkar",
         "aRikartar"
+      ],
+      "ex_R": [
+        "kUR",
+        "kvaR",
+        "GUrR",
+        "JaR"
       ]
     },
     "7": {
       "n_vas": 18,
       "n_yas": 8,
+      "n_vams": 26,
+      "n_van": 0,
       "ex_vas": [
         "aBizwiSavas",
         "avas",
@@ -1837,26 +2336,48 @@
         "ayas",
         "kfzRAyas",
         "jyezWavayas"
-      ]
+      ],
+      "ex_vams": [
+        "anASvaMs",
+        "anUzivaMs",
+        "abalIyaMs",
+        "ayAs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "SCH": {
     "1": {
-      "anusvara_share": 0.116,
-      "n_anusvara": 263,
-      "n_homorganic": 2002,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.06,
+      "anusvara_share_compound": 0.866,
+      "n_anu_i": 127,
+      "n_anu_c": 136,
+      "n_homo_i": 1981,
+      "n_homo_c": 21,
+      "ex_anu_i": [
+        "akiMcanIkfta",
+        "akiMcijjYa",
+        "akiMcid",
+        "akiMcinmaya"
+      ],
+      "ex_anu_c": [
         "aMSumadBedasaMgraha",
         "akAmasaMjYapana",
-        "akiMcanIkfta",
-        "akiMcijjYa"
+        "akftasaMjYa",
+        "agastyasaMpAta"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "aMholiNga",
         "akaRWa",
         "akaRqita",
         "akampa"
+      ],
+      "ex_homo_c": [
+        "akzasaNgam",
+        "atipratyAsaNga",
+        "atyAsaNga",
+        "adipsant"
       ]
     },
     "3": {
@@ -1877,22 +2398,21 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 50,
-      "ex_anusvara_root": [
-        "aMSa",
-        "aMSu"
-      ],
+      "n_roots": 3,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 3,
+      "ex_anusvara_root": [],
       "ex_nasal_root": [
-        "agni",
-        "anta",
-        "andU",
-        "anDa"
+        "INK",
+        "kand",
+        "kamp"
       ]
     },
     "6": {
       "n_f_stem": 16,
       "n_nomA": 230,
       "n_ar": 90,
+      "n_R": 2,
       "ex_stem_f": [
         "awIkf",
         "aDarIkf",
@@ -1910,11 +2430,17 @@
         "akzadevitar",
         "agradAtar",
         "acaladuhitar"
+      ],
+      "ex_R": [
+        "kUR",
+        "kvaR"
       ]
     },
     "7": {
       "n_vas": 3,
       "n_yas": 10,
+      "n_vams": 16,
+      "n_van": 0,
       "ex_vas": [
         "aparimitakftvas",
         "ayavas",
@@ -1925,21 +2451,38 @@
         "acCinnapayas",
         "atipawIyas",
         "anugAyas"
-      ]
+      ],
+      "ex_vams": [
+        "ajajYivaMs",
+        "ajyAyaMs",
+        "atadvIryavidvaMs",
+        "atigarIyaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "BOP": {
     "1": {
-      "anusvara_share": 0.0,
-      "n_anusvara": 0,
-      "n_homorganic": 1057,
-      "ex_anusvara": [],
-      "ex_homorganic": [
+      "anusvara_share_internal": 0.0,
+      "anusvara_share_compound": 0.0,
+      "n_anu_i": 0,
+      "n_anu_c": 0,
+      "n_homo_i": 976,
+      "n_homo_c": 81,
+      "ex_anu_i": [],
+      "ex_anu_c": [],
+      "ex_homo_i": [
         "akaRwaka",
         "akzAnti",
         "aKaRqa",
         "aNk"
+      ],
+      "ex_homo_c": [
+        "anusanDAna",
+        "asaNKyeya",
+        "asambadDa",
+        "AsaNga"
       ]
     },
     "3": {
@@ -1966,24 +2509,27 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 654,
+      "n_roots": 178,
+      "n_anusvara_root": 37,
+      "n_nasal_root": 141,
       "ex_anusvara_root": [
         "aMS",
-        "aMSa",
-        "aMSu",
-        "aMs"
+        "aMs",
+        "aMh",
+        "uMh"
       ],
       "ex_nasal_root": [
-        "agni",
-        "an",
-        "ana",
-        "anas"
+        "aNk",
+        "aNg",
+        "aNG",
+        "anD"
       ]
     },
     "6": {
       "n_f_stem": 106,
       "n_nomA": 63,
-      "n_ar": 15,
+      "n_ar": 13,
+      "n_R": 59,
       "ex_stem_f": [
         "aNgIkf",
         "anumantf",
@@ -1997,15 +2543,23 @@
         "arTepsutA"
       ],
       "ex_ar": [
-        "antar",
         "ahar",
         "kmar",
-        "kzar"
+        "kzar",
+        "car"
+      ],
+      "ex_R": [
+        "kaR",
+        "karR",
+        "kuR",
+        "kUR"
       ]
     },
     "7": {
       "n_vas": 14,
       "n_yas": 26,
+      "n_vams": 2,
+      "n_van": 0,
       "ex_vas": [
         "Iyivas",
         "uccEHSravas",
@@ -2017,26 +2571,46 @@
         "aprAptavayas",
         "ayas",
         "alpIyas"
-      ]
+      ],
+      "ex_vams": [
+        "DvaMs",
+        "vAs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 8961
   },
   "VCP": {
     "1": {
-      "anusvara_share": 0.013,
-      "n_anusvara": 24,
-      "n_homorganic": 1845,
-      "ex_anusvara": [
-        "aNgulisaMjYA",
+      "anusvara_share_internal": 0.005,
+      "anusvara_share_compound": 0.127,
+      "n_anu_i": 8,
+      "n_anu_c": 16,
+      "n_homo_i": 1735,
+      "n_homo_c": 110,
+      "ex_anu_i": [
         "atyAhiMta",
         "anahaMkfta",
-        "antaHsaMjYa"
+        "apAMkzaya",
+        "apAMjyotis"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "aNgulisaMjYA",
+        "antaHsaMjYa",
+        "apratisaMKya",
+        "apratisaMKyAniroDa"
+      ],
+      "ex_homo_i": [
         "aMhriskanDa",
         "akampita",
         "akARqa",
         "akiYcana"
+      ],
+      "ex_homo_c": [
+        "agnisaNkASa",
+        "agnisamBava",
+        "agrasanDAnI",
+        "agrasanDyA"
       ]
     },
     "3": {
@@ -2063,24 +2637,17 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 131,
-      "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "aMsa",
-        "aMha"
-      ],
-      "ex_nasal_root": [
-        "agni",
-        "anka",
-        "ancu",
-        "atna"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 96,
       "n_nomA": 61,
-      "n_ar": 6,
+      "n_ar": 4,
+      "n_R": 0,
       "ex_stem_f": [
         "akarttf",
         "agnidAtf",
@@ -2094,15 +2661,18 @@
         "agastyasaMhitA"
       ],
       "ex_ar": [
-        "antar",
-        "apunar",
         "aBiprAtar",
-        "aBisvar"
-      ]
+        "aBisvar",
+        "aBihvar",
+        "kakzaDar"
+      ],
+      "ex_R": []
     },
     "7": {
       "n_vas": 13,
       "n_yas": 15,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "ajavas",
         "anASvas",
@@ -2114,26 +2684,42 @@
         "ativayas",
         "advayas",
         "aBivayas"
-      ]
+      ],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "SKD": {
     "1": {
-      "anusvara_share": 0.007,
-      "n_anusvara": 15,
-      "n_homorganic": 2176,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.001,
+      "anusvara_share_compound": 0.211,
+      "n_anu_i": 3,
+      "n_anu_c": 12,
+      "n_homo_i": 2131,
+      "n_homo_c": 45,
+      "ex_anu_i": [
         "apAMpatiH",
         "apAMpittaM",
-        "asaMKyaH",
-        "asaMKyAtaM"
+        "idaMkAryyA"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "asaMKyaH",
+        "asaMKyAtaM",
+        "uttamasaMgrahaH",
+        "upasaMgrahaH"
+      ],
+      "ex_homo_i": [
         "aMhriskanDaH",
         "akampitaH",
         "akiYcanaH",
         "akiYcanatA"
+      ],
+      "ex_homo_c": [
+        "agnisandIpanaM",
+        "agnisamBavaH",
+        "agrasanDAnI",
+        "anusanDAnaM"
       ]
     },
     "3": {
@@ -2157,24 +2743,17 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 112,
-      "ex_anusvara_root": [
-        "aMSa",
-        "aMSI",
-        "aMsa",
-        "akaM"
-      ],
-      "ex_nasal_root": [
-        "ana",
-        "anaH",
-        "anu",
-        "ano"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 13,
       "n_nomA": 122,
-      "n_ar": 1,
+      "n_ar": 0,
+      "n_R": 1,
       "ex_stem_f": [
         "f",
         "kf",
@@ -2187,36 +2766,60 @@
         "akrAntA",
         "akzatA"
       ],
-      "ex_ar": [
-        "antar"
+      "ex_ar": [],
+      "ex_R": [
+        "karR"
       ]
     },
     "7": {
       "n_vas": 1,
       "n_yas": 0,
+      "n_vams": 0,
+      "n_van": 27,
       "ex_vas": [
         "avas"
       ],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [],
+      "ex_van": [
+        "aGavAn",
+        "atraBavAn",
+        "adfzwavAn",
+        "anaqvAn"
+      ]
     },
     "_n_headwords": 12000
   },
   "INM": {
     "1": {
-      "anusvara_share": 0.028,
-      "n_anusvara": 59,
-      "n_homorganic": 2076,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.028,
+      "anusvara_share_compound": 0.027,
+      "n_anu_i": 56,
+      "n_anu_c": 3,
+      "n_homo_i": 1968,
+      "n_homo_c": 108,
+      "ex_anu_i": [
         "ahaMkAra",
         "apakzakzayaMkara",
         "apAMgarBa",
         "apAMpati"
       ],
-      "ex_homorganic": [
-        "aBagnaparisaNKyAna",
+      "ex_anu_c": [
+        "darvIsaMkramaRa",
+        "saMgraha",
+        "saMkalpa"
+      ],
+      "ex_homo_i": [
         "aBizyanta",
         "acalendra",
-        "AcAryanandana"
+        "AcAryanandana",
+        "acintya"
+      ],
+      "ex_homo_c": [
+        "aBagnaparisaNKyAna",
+        "anilasamBava",
+        "asaNga",
+        "asaYjYa"
       ]
     },
     "3": {
@@ -2243,24 +2846,19 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 193,
+      "n_roots": 1,
+      "n_anusvara_root": 1,
+      "n_nasal_root": 0,
       "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "kiM",
         "puMs"
       ],
-      "ex_nasal_root": [
-        "aSma",
-        "agni",
-        "Ena",
-        "ambA"
-      ]
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 132,
       "n_nomA": 68,
       "n_ar": 4,
+      "n_R": 1,
       "ex_stem_f": [
         "akartf",
         "ambikABartf",
@@ -2276,11 +2874,16 @@
       "ex_ar": [
         "ahar",
         "svar"
+      ],
+      "ex_R": [
+        "vAgmiR"
       ]
     },
     "7": {
       "n_vas": 30,
       "n_yas": 2,
+      "n_vams": 0,
+      "n_van": 1,
       "ex_vas": [
         "BUriSravas",
         "Buvas",
@@ -2290,26 +2893,45 @@
       "ex_yas": [
         "amUrtarayas",
         "Sreyas"
+      ],
+      "ex_vams": [],
+      "ex_van": [
+        "aRIyasAmaRIyAn"
       ]
     },
     "_n_headwords": 12000
   },
   "VEI": {
     "1": {
-      "anusvara_share": 0.072,
-      "n_anusvara": 35,
-      "n_homorganic": 450,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.049,
+      "anusvara_share_compound": 0.6,
+      "n_anu_i": 23,
+      "n_anu_c": 12,
+      "n_homo_i": 442,
+      "n_homo_c": 8,
+      "ex_anu_i": [
         "atyarAtijAnaMtapi",
         "ariMdamasanaSruta",
         "ASuMga",
         "fRaMcaya"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "saMgati",
+        "saMgava",
+        "saMgavinI",
+        "saMgrahItf"
+      ],
+      "ex_homo_i": [
         "aNka",
         "aNga",
         "aNgavErocana",
         "aNgArAvakzayaRa"
+      ],
+      "ex_homo_c": [
+        "AsaNgaplAyogi",
+        "AsandI",
+        "AsandIvant",
+        "DvasandvEtavana"
       ]
     },
     "3": {
@@ -2327,21 +2949,19 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 112,
-      "ex_anusvara_root": [
-        "aMSu"
-      ],
+      "n_roots": 1,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 1,
+      "ex_anusvara_root": [],
       "ex_nasal_root": [
-        "anas",
-        "anAs",
-        "anu",
-        "ahan"
+        "dant"
       ]
     },
     "6": {
       "n_f_stem": 50,
       "n_nomA": 15,
       "n_ar": 3,
+      "n_R": 0,
       "ex_stem_f": [
         "anukzattf",
         "astf",
@@ -2358,11 +2978,14 @@
         "prAtar",
         "vaDar",
         "svar"
-      ]
+      ],
+      "ex_R": []
     },
     "7": {
       "n_vas": 14,
       "n_yas": 7,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [
         "upamaSravas",
         "turaSravas",
@@ -2374,26 +2997,43 @@
         "ayas",
         "udIcyas",
         "payas"
-      ]
+      ],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 3834
   },
   "PUI": {
     "1": {
-      "anusvara_share": 0.087,
-      "n_anusvara": 169,
-      "n_homorganic": 1783,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.081,
+      "anusvara_share_compound": 0.349,
+      "n_anu_i": 154,
+      "n_anu_c": 15,
+      "n_homo_i": 1755,
+      "n_homo_c": 28,
+      "ex_anu_i": [
         "aMkuSA",
         "aMkuSeSvaram",
         "aMkola",
         "aMcoladvicarAH"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "arizwasaMjYA",
+        "arkasaMkrama",
+        "asaMKyeya",
+        "uraHsaMkIrRa"
+      ],
+      "ex_homo_i": [
         "akampana",
         "akArAdikzakArAntavarRamUrti",
         "agastyakuRqam",
         "agnikuRqa"
+      ],
+      "ex_homo_c": [
+        "agnisamBava",
+        "ayonisamBava",
+        "asaNga",
+        "AtmasamBava"
       ]
     },
     "3": {
@@ -2420,24 +3060,17 @@
       ]
     },
     "5": {
-      "n_short_nasal_roots": 454,
-      "ex_anusvara_root": [
-        "aMbA",
-        "aMBa",
-        "aMSa",
-        "aMSu"
-      ],
-      "ex_nasal_root": [
-        "agni",
-        "adma",
-        "anu",
-        "anta"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 10,
       "n_nomA": 99,
       "n_ar": 0,
+      "n_R": 0,
       "ex_stem_f": [
         "unnetf",
         "DAtf",
@@ -2450,37 +3083,62 @@
         "anantA",
         "anutaptA"
       ],
-      "ex_ar": []
+      "ex_ar": [],
+      "ex_R": []
     },
     "7": {
       "n_vas": 10,
       "n_yas": 0,
+      "n_vams": 0,
+      "n_van": 45,
       "ex_vas": [
         "ugraSravas",
         "uruSravas",
         "devaSravas",
         "purUravas"
       ],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [],
+      "ex_van": [
+        "anIkavAn",
+        "amftavAn",
+        "arvarIvAn",
+        "avarIyAn"
+      ]
     },
     "_n_headwords": 12000
   },
   "BHS": {
     "1": {
-      "anusvara_share": 0.123,
-      "n_anusvara": 264,
-      "n_homorganic": 1886,
-      "ex_anusvara": [
-        "acirayAnasaMprasTita",
+      "anusvara_share_internal": 0.063,
+      "anusvara_share_compound": 0.824,
+      "n_anu_i": 124,
+      "n_anu_c": 140,
+      "n_homo_i": 1856,
+      "n_homo_c": 30,
+      "ex_anu_i": [
         "ajitaMjaya",
-        "awavIsaMBavA",
-        "aDyASayasaMcodanasUtra"
+        "anantaraSmiDarmaDAtusamalaMkftaDarmarAja",
+        "aparapuraMjaya",
+        "abalaMkartar"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "acirayAnasaMprasTita",
+        "awavIsaMBavA",
+        "aDyASayasaMcodanasUtra",
+        "anantabalaviGuzwaninAditaSrIsaMBavamati"
+      ],
+      "ex_homo_i": [
         "akaRwaka",
         "akampitasAgara",
         "akampiya",
         "akampya"
+      ],
+      "ex_homo_c": [
+        "aBisaYjanI",
+        "asaNga",
+        "asaNgakAyaraSmitejomati",
+        "asaNgacitta"
       ]
     },
     "3": {
@@ -2500,24 +3158,17 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 106,
-      "ex_anusvara_root": [
-        "aMSa",
-        "aMSu",
-        "eyaM",
-        "naM"
-      ],
-      "ex_nasal_root": [
-        "agni",
-        "atma",
-        "ana",
-        "anu"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 5,
       "n_nomA": 207,
       "n_ar": 37,
+      "n_R": 0,
       "ex_stem_f": [
         "tAdf",
         "duhatf",
@@ -2535,34 +3186,56 @@
         "anuBoktar",
         "aparamAtar",
         "abalaMkartar"
-      ]
+      ],
+      "ex_R": []
     },
     "7": {
       "n_vas": 1,
       "n_yas": 0,
+      "n_vams": 1,
+      "n_van": 0,
       "ex_vas": [
         "trizkftvas"
       ],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [
+        "dutiyAs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "FRI": {
     "1": {
-      "anusvara_share": 0.235,
-      "n_anusvara": 231,
-      "n_homorganic": 751,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.141,
+      "anusvara_share_compound": 0.76,
+      "n_anu_i": 117,
+      "n_anu_c": 114,
+      "n_homo_i": 715,
+      "n_homo_c": 36,
+      "ex_anu_i": [
         "aMk",
-        "atisaMtuzwa",
         "adAMta",
-        "anaMg"
+        "anaMg",
+        "aByalaMkfta"
       ],
-      "ex_homorganic": [
+      "ex_anu_c": [
+        "atisaMtuzwa",
+        "aBisaMDi",
+        "aBisaMBava",
+        "asaMtuzwa"
+      ],
+      "ex_homo_i": [
         "aMSumant",
         "akampa",
         "akuRWita",
         "akurvant"
+      ],
+      "ex_homo_c": [
+        "asant",
+        "utsaNga",
+        "tarasant",
+        "sampat"
       ]
     },
     "3": {
@@ -2584,24 +3257,27 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 428,
+      "n_roots": 77,
+      "n_anusvara_root": 50,
+      "n_nasal_root": 27,
       "ex_anusvara_root": [
         "aMk",
-        "aMSa",
-        "aMsa",
-        "AMg"
+        "AMg",
+        "iMg",
+        "iMD"
       ],
       "ex_nasal_root": [
-        "amSu",
-        "agni",
-        "an",
-        "prAn"
+        "nyas",
+        "iNg",
+        "inD",
+        "und"
       ]
     },
     "6": {
       "n_f_stem": 9,
       "n_nomA": 61,
-      "n_ar": 176,
+      "n_ar": 172,
+      "n_R": 3,
       "ex_stem_f": [
         "f",
         "kf",
@@ -2618,12 +3294,19 @@
         "aNgIkar",
         "attar",
         "adAtar",
-        "antar"
+        "apradAtar"
+      ],
+      "ex_R": [
+        "GUrR",
+        "paR",
+        "BaR"
       ]
     },
     "7": {
       "n_vas": 26,
       "n_yas": 20,
+      "n_vams": 23,
+      "n_van": 0,
       "ex_vas": [
         "avas",
         "citraSravas",
@@ -2635,26 +3318,48 @@
         "aByas",
         "paryas",
         "nyas"
-      ]
+      ],
+      "ex_vams": [
+        "abiBIvaMs",
+        "upajagmivaMs",
+        "kanIyaMs",
+        "garIyaMs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 8155
   },
   "ACC": {
     "1": {
-      "anusvara_share": 0.105,
-      "n_anusvara": 390,
-      "n_homorganic": 3314,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.041,
+      "anusvara_share_compound": 0.976,
+      "n_anu_i": 142,
+      "n_anu_c": 248,
+      "n_homo_i": 3311,
+      "n_homo_c": 6,
+      "ex_anu_i": [
+        "anantapaMqita",
+        "annaMBawwa",
+        "aBirAmavidyAlaMkAra",
+        "arTAlaMkAra"
+      ],
+      "ex_anu_c": [
         "aMSumadBedasaMgraha",
         "agastyasaMpAta",
         "agnizwomIyasaMpradAyapadDati",
         "agnisaMDAnaprayoga"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "akArAdiniGaRwu",
         "akulAgamatantra",
         "akzayASAnti",
         "akzaragumPa"
+      ],
+      "ex_homo_c": [
+        "asaNgAtmaprakaraRa",
+        "ujjvalanIlamaRiprasaNga",
+        "kuSalamataprasaNga",
+        "kfzRapatiSarmanmETilasaNkarAQIvaMSodBUta"
       ]
     },
     "3": {
@@ -2671,19 +3376,17 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 13,
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
       "ex_anusvara_root": [],
-      "ex_nasal_root": [
-        "indu",
-        "gAnI",
-        "jona",
-        "maRi"
-      ]
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 1,
       "n_nomA": 130,
       "n_ar": 0,
+      "n_R": 0,
       "ex_stem_f": [
         "avantiBartf"
       ],
@@ -2693,27 +3396,40 @@
         "agastisaMhitA",
         "agniveSasaMhitA"
       ],
-      "ex_ar": []
+      "ex_ar": [],
+      "ex_R": []
     },
     "7": {
       "n_vas": 0,
       "n_yas": 0,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 12000
   },
   "KRM": {
     "1": {
-      "anusvara_share": 0.0,
-      "n_anusvara": 0,
-      "n_homorganic": 32,
-      "ex_anusvara": [],
-      "ex_homorganic": [
+      "anusvara_share_internal": 0.0,
+      "anusvara_share_compound": 0.0,
+      "n_anu_i": 0,
+      "n_anu_c": 0,
+      "n_homo_i": 30,
+      "n_homo_c": 2,
+      "ex_anu_i": [],
+      "ex_anu_c": [],
+      "ex_homo_i": [
         "aNka",
         "aNga",
         "anDa",
         "inDI"
+      ],
+      "ex_homo_c": [
+        "saNketa",
+        "saNgrAma"
       ]
     },
     "3": {
@@ -2725,21 +3441,17 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 218,
-      "ex_anusvara_root": [
-        "aMsa"
-      ],
-      "ex_nasal_root": [
-        "ana",
-        "ancu",
-        "anjU",
-        "anDa"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 186,
       "n_nomA": 1,
       "n_ar": 0,
+      "n_R": 1,
       "ex_stem_f": [
         "f",
         "ejf",
@@ -2749,32 +3461,54 @@
       "ex_nomA": [
         "SvitA"
       ],
-      "ex_ar": []
+      "ex_ar": [],
+      "ex_R": [
+        "dAR"
+      ]
     },
     "7": {
       "n_vas": 0,
       "n_yas": 0,
+      "n_vams": 0,
+      "n_van": 0,
       "ex_vas": [],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [],
+      "ex_van": []
     },
     "_n_headwords": 2061
   },
   "MCI": {
     "1": {
-      "anusvara_share": 0.066,
-      "n_anusvara": 34,
-      "n_homorganic": 478,
-      "ex_anusvara": [
+      "anusvara_share_internal": 0.027,
+      "anusvara_share_compound": 0.808,
+      "n_anu_i": 13,
+      "n_anu_c": 21,
+      "n_homo_i": 473,
+      "n_homo_c": 5,
+      "ex_anu_i": [
         "DanaMjaya",
+        "kiMkara",
+        "oMkAra",
+        "svAyaMBuva"
+      ],
+      "ex_anu_c": [
         "saMpAti",
         "saMpratipattijYa",
-        "saMpratipattimant"
+        "saMpratipattimant",
+        "akzisaMtarjana"
       ],
-      "ex_homorganic": [
+      "ex_homo_i": [
         "aNgada",
         "aYjana",
         "atizaRqa",
         "ananta"
+      ],
+      "ex_homo_c": [
+        "jarAsanDavaDa",
+        "yAnasanDi",
+        "darvIsaNkramaRa",
+        "AsandI"
       ]
     },
     "3": {
@@ -2790,21 +3524,17 @@
       "ex_mat": []
     },
     "5": {
-      "n_short_nasal_roots": 46,
-      "ex_anusvara_root": [
-        "apAM"
-      ],
-      "ex_nasal_root": [
-        "anDa",
-        "nala",
-        "nIla",
-        "maRi"
-      ]
+      "n_roots": 0,
+      "n_anusvara_root": 0,
+      "n_nasal_root": 0,
+      "ex_anusvara_root": [],
+      "ex_nasal_root": []
     },
     "6": {
       "n_f_stem": 2,
       "n_nomA": 16,
       "n_ar": 0,
+      "n_R": 0,
       "ex_stem_f": [
         "kOravyaduhitf",
         "piRqaBettf"
@@ -2815,16 +3545,25 @@
         "vinatA",
         "SvetA"
       ],
-      "ex_ar": []
+      "ex_ar": [],
+      "ex_R": []
     },
     "7": {
       "n_vas": 2,
       "n_yas": 0,
+      "n_vams": 3,
+      "n_van": 0,
       "ex_vas": [
         "uccEHSravas",
         "pfTuSravas"
       ],
-      "ex_yas": []
+      "ex_yas": [],
+      "ex_vams": [
+        "devyAs",
+        "pfTivyAs",
+        "vfdDakanyAyAs"
+      ],
+      "ex_van": []
     },
     "_n_headwords": 2643
   }

@@ -81,6 +81,7 @@ Notable: **GRA -vat 274** (Rigveda possessives dominate), **BOR/AE -vat ≈ 1** 
 ## After you fill it
 
 - Cells you leave blank stay at `unknown` (the pipeline is missing-aware — partial fills still help).
+- MG ruling 21-11-2026: running `apply_lrv_fri_annotation.py --rerun` is **free** — always run it without asking when LRV/FRI decisions change or this lane is touched (memory: apply-lrv-fri-annotation-free-always).
 - The 3 source-less dicts (KNA, KOW, AMAR) are in the sheet marked *NO LOCAL SOURCE*; they need the Cologne text first, so skip unless you want to annotate from the print/scans.
 - Hand back the CSV; I run `s2b_patel_auto.py` → `s3_cladogram.py` and update [`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/L0_RESULTS.md) with the final validated tree + recovery scores.
 

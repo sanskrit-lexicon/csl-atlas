@@ -1,0 +1,49 @@
+siglum,tier,origin,full_name,year,census_member,rationale
+ACC,D,EUR,Aufrecht's Catalogus Catalogorum,1962,yes,bibliographic catalogue — attestation only, no citation-convention authority
+ACPH,C,IND,Abhidhānacintāmaṇipariśiṣṭa of Hemacandrācārya,1896,no,Hemacandra pariśiṣṭa supplement
+ACSJ,C,IND,Abhidhānacintāmaṇiśiloñcha of Jinadeva,1896,no,minor kośa
+AE,C,IND,Apte Student's English-Sanskrit Dictionary,1920,no,student reverse dictionary
+AMAR,B,IND,Amarakośa,n/a,no,classical Indian kośa (thesaurus tradition)
+AP,B,IND,Practical Sanskrit-English Dictionary (revised edition),1957,yes,major scholarly reference (revised Apte Pune)
+AP90,B,IND,Apte Practical Sanskrit-English Dictionary,1890,yes,major scholarly reference (original Apte)
+APTES,C,IND,Apte Student's English-Sanskrit Dictionary (in github),1920,no,github alias of AE
+ARMH,C,IND,Abhidhānaratnamālā of Halāyudha,1861,no,lesser classical kośa
+BEN,B,EUR,Benfey Sanskrit-English Dictionary,1866,yes,major scholarly reference
+BHS,B,EUR,Edgerton Buddhist Hybrid Sanskrit Dictionary,1953,yes,domain-specialist major scholarship (BHSD)
+BOP,B,EUR,Bopp Glossarium Sanscritum,1847,yes,historically important early Latin glossary
+BOR,C,IND,Borooah English-Sanskrit Dictionary,1877,no,reverse dictionary (Indian author)
+BUR,B,EUR,Burnouf Dictionnaire Sanscrit-Français,1866,yes,major French reference
+CAE,B,EUR,Cappeller Sanskrit-English Dictionary,1891,yes,major scholarly reference
+CCS,B,EUR,Cappeller Sanskrit Wörterbuch,1887,yes,major scholarly German reference
+FRI,C,EUR,Friš Sanskrit Reader Vocabulary,1956,no,Czech reader vocabulary (gate dict)
+GRA,B,EUR,Grassmann Wörterbuch zum Rig Veda,1873,yes,Vedic specialist dictionary
+GST,C,EUR,Goldstücker Sanskrit-English Dictionary,1856,yes,incomplete (letter a- only)
+IEG,D,IND,Indian Epigraphical Glossary,1966,yes,epigraphical meta-glossary — attestation only
+INM,D,EUR,Index to the Names in the Mahabharata,1904,yes,names index (Sørensen) — attestation only
+KCH,B,EUR,Kochergina Sanskrit-Russian Dictionary,1978,no,modern Russian scholarly reference
+KNA,C,EUR,Knauer Sanskrit-Russian Vocabulary,1893,no,Russian vocabulary
+KOW,C,EUR,Kossowich Sanskrit-Russian Dictionary,1854,no,Russian dictionary
+KRM,C,IND,Kṛdantarūpamālā,1965,yes,Kṛdanta reference work (Bhattoji Dīkṣita tradition)
+LAN,C,EUR,Lanman's Sanskrit Reader Vocabulary,1884,no,reader vocabulary
+LRV,C,IND,Vaidya Standard Sanskrit-English Dictionary,1889,no,Indian standard/reader dictionary (gate dict)
+MCI,D,IND,Mahabharata Cultural Index,1993,yes,cultural index partial series (Pusalker) — attestation only
+MD,B,EUR,Macdonell Sanskrit-English Dictionary,1893,yes,major scholarly reference
+MW,B,EUR,Monier-Williams Sanskrit-English Dictionary,1899,yes,canonical English reference (built on PWG)
+MW72,B,EUR,Monier-Williams Sanskrit-English Dictionary (1st edition),1872,yes,MW predecessor (uses early PWG fascicles)
+MWE,C,EUR,Monier-Williams English-Sanskrit Dictionary,1851,no,reverse dictionary
+PD,B,IND,An Encyclopedic Dictionary of Sanskrit on Historical Principles,1976,yes,Deccan College historical-principles dictionary
+PE,C,IND,Puranic Encyclopedia,1975,yes,puranic encyclopedia (Vettam Mani)
+PGN,D,IND,Personal and Geographical Names in the Gupta Inscriptions,1978,yes,onomastic study — attestation only
+PUI,D,IND,The Purana Index,1951,yes,purāṇa index (Vettam Mani) — attestation only
+PW,A,EUR,Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung,1879,yes,Grundlagen: Böhtlingk's own revision of PWG; standard reference for citation form
+PWG,A,EUR,Böhtlingk and Roth Grosses Petersburger Wörterbuch,1855,yes,Grundlagen: foundational scholarly dictionary (MW built on early fascicles)
+PWKVN,A,EUR,Petersburger Wörterbuch (PW) Nachträge und Verbesserungen,n/a,no,sub-portion of PW (Nachträge); never an independent vote; non-census
+SCH,A2,EUR,Schmidt Nachträge zum Sanskrit-Wörterbuch,1928,yes,supplement continuation of PWG/PWK ('PW mit Schmidt's Nachträgen'); rides Tier A not independent
+SHS,B,IND,Shabda-Sagara Sanskrit-English Dictionary,1900,yes,major Indian reference (WIL-derived: WIL⊆SHS 0.953)
+SKD,B,IND,Śabda-kalpadruma,1886,yes,major Sanskrit-Sanskrit kośa (Rādhākānta)
+SNP,D,EUR,Meulenbeld's Sanskrit Names of Plants,1974,yes,plant-names study — attestation only
+STC,B,EUR,Stchoupak Dictionnaire Sanscrit-Français,1932,yes,major French reference
+VCP,B,IND,Vacaspatyam,1873,yes,major Sanskrit-Sanskrit kośa (Tārānātha Tarkavācaspati)
+VEI,D,EUR,The Vedic Index of Names and Subjects,1912,yes,subject index — attestation only
+WIL,C,EUR,Wilson Sanskrit-English Dictionary,1832,yes,oldest English tradition superseded
+YAT,C,EUR,Yates Sanskrit-English Dictionary,1846,yes,derived from WIL (~91% mutual containment)

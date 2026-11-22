@@ -1,6 +1,4 @@
 {
-  "license": "CC-BY-SA-4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "n_dicts": 32,
   "dicts": [
     "WIL",
@@ -80,7 +78,7 @@
   ],
   "canonical_config": "B_whamming",
   "n_bootstrap": 1000,
-  "global_mean_distance": 0.6444,
+  "global_mean_distance": 0.6434,
   "known_edge_recovery": {
     "tierA_n": 11,
     "tierA_recovered": 6,
@@ -283,12 +281,7 @@
     [
       "WIL",
       "SHS",
-      0.806
-    ],
-    [
-      "PWG",
-      "PW",
-      0.806
+      0.802
     ]
   ],
   "lineage_cohesion": {
@@ -298,7 +291,7 @@
         "YAT",
         "SHS"
       ],
-      "mean_within": 0.4408,
+      "mean_within": 0.4443,
       "tighter_than_global": true
     },
     "Petersburg (PWG/PW/SCH/CCS/GRA)": {
@@ -309,7 +302,7 @@
         "CCS",
         "GRA"
       ],
-      "mean_within": 0.5048,
+      "mean_within": 0.5052,
       "tighter_than_global": true
     },
     "Apte (AP90/AP)": {
@@ -317,7 +310,7 @@
         "AP90",
         "AP"
       ],
-      "mean_within": 0.3703,
+      "mean_within": 0.3726,
       "tighter_than_global": true
     },
     "Monier-Williams (MW72/MW)": {
@@ -325,7 +318,7 @@
         "MW72",
         "MW"
       ],
-      "mean_within": 0.4166,
+      "mean_within": 0.4175,
       "tighter_than_global": true
     },
     "Cappeller (CAE/CCS)": {
@@ -333,7 +326,7 @@
         "CAE",
         "CCS"
       ],
-      "mean_within": 0.2702,
+      "mean_within": 0.2632,
       "tighter_than_global": true
     },
     "Indigenous (VCP/SKD)": {
@@ -341,7 +334,7 @@
         "VCP",
         "SKD"
       ],
-      "mean_within": 0.3614,
+      "mean_within": 0.3615,
       "tighter_than_global": true
     }
   },

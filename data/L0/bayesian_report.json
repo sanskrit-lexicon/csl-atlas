@@ -1,6 +1,4 @@
 {
-  "license": "CC-BY-SA-4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "n_taxa": 32,
   "n_characters": 80,
   "mcmc": {
@@ -8,93 +6,93 @@
     "burnin": 25000,
     "thin": 40,
     "samples": 1375,
-    "acceptance_rate": 0.478,
-    "map_loglik": -987.52,
+    "acceptance_rate": 0.479,
+    "map_loglik": -1006.09,
     "model": "Mk (2-state symmetric, Lewis 2001)"
   },
   "nj_bootstrap_replicates": 500,
   "support_metric": "P(pair in a shared clade of ≤ 4 leaves)",
   "robinson_foulds_point_estimates": {
-    "upgma_vs_nj": 0.593,
+    "upgma_vs_nj": 0.695,
     "upgma_vs_bayes": 0.695,
-    "nj_vs_bayes": 0.448
+    "nj_vs_bayes": 0.621
   },
   "edge_support": [
     {
       "parent": "PWG",
       "child": "PW",
       "upgma_support": 0.764,
-      "nj_support": 0.828,
-      "bayes_support": 0.998
+      "nj_support": 0.826,
+      "bayes_support": 0.999
     },
     {
       "parent": "PWG",
       "child": "SCH",
       "upgma_support": 0.75,
-      "nj_support": 0.808,
-      "bayes_support": 0.998
+      "nj_support": 0.8,
+      "bayes_support": 0.999
     },
     {
       "parent": "WIL",
       "child": "SHS",
-      "upgma_support": 0.912,
-      "nj_support": 0.872,
-      "bayes_support": 0.643
+      "upgma_support": 0.91,
+      "nj_support": 0.886,
+      "bayes_support": 0.663
     },
     {
       "parent": "AP90",
       "child": "AP",
-      "upgma_support": 0.518,
-      "nj_support": 0.652,
-      "bayes_support": 0.98
+      "upgma_support": 0.492,
+      "nj_support": 0.634,
+      "bayes_support": 0.996
     },
     {
       "parent": "MW72",
       "child": "BOP",
-      "upgma_support": 0.82,
-      "nj_support": 0.55,
-      "bayes_support": 0.51
+      "upgma_support": 0.826,
+      "nj_support": 0.592,
+      "bayes_support": 0.473
     },
     {
       "parent": "CCS",
       "child": "CAE",
-      "upgma_support": 0.848,
-      "nj_support": 0.588,
-      "bayes_support": 0.097
+      "upgma_support": 0.852,
+      "nj_support": 0.594,
+      "bayes_support": 0.055
     },
     {
       "parent": "PW",
       "child": "CCS",
       "upgma_support": 0.134,
-      "nj_support": 0.238,
-      "bayes_support": 0.743
+      "nj_support": 0.226,
+      "bayes_support": 0.653
     },
     {
       "parent": "BOP",
       "child": "MW",
-      "upgma_support": 0.104,
-      "nj_support": 0.226,
-      "bayes_support": 0.649
+      "upgma_support": 0.102,
+      "nj_support": 0.194,
+      "bayes_support": 0.575
     },
     {
       "parent": "MW72",
       "child": "MW",
-      "upgma_support": 0.086,
-      "nj_support": 0.148,
-      "bayes_support": 0.428
+      "upgma_support": 0.084,
+      "nj_support": 0.124,
+      "bayes_support": 0.307
     },
     {
       "parent": "YAT",
       "child": "SHS",
-      "upgma_support": 0.066,
+      "upgma_support": 0.058,
       "nj_support": 0.012,
       "bayes_support": 0.0
     },
     {
       "parent": "WIL",
       "child": "YAT",
-      "upgma_support": 0.052,
-      "nj_support": 0.014,
+      "upgma_support": 0.044,
+      "nj_support": 0.012,
       "bayes_support": 0.0
     }
   ],

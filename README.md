@@ -166,7 +166,16 @@ npm run validate-review-decisions -- review/csl-atlas-skd-iti_100units_decisions
 npm test         # unit tests for the deterministic libs (node --test)
 npm run dev      # starts dev server on http://localhost:3000
 npm run build    # produces dist/ for GitHub Pages
+npm run verify   # full production acceptance gate
+npm run verify -- --fast --jobs 4  # faster local gate; four parallel checks
 ```
+
+Full verification includes two regeneration passes and the production dependency
+audit. `--fast` skips only the second pass and the audit; tests, validators, one
+regeneration, build, and clean-tree checks still run. `--jobs N` parallelizes
+independent checks but leaves regeneration, build, and audit sequential. Every
+step reports elapsed time; Linux also reports sampled peak child RSS. Use full
+verification before release.
 
 Review sheets and decision exports stay in the gitignored `review/` directory.
 Strict sheets autosave incomplete drafts locally, but final downloads require

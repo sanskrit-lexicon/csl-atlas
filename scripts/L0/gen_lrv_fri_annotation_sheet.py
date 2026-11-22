@@ -33,6 +33,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 DATA = os.path.join(REPO, "data", "L0")
 FILLIN = os.path.join(DATA, "patel_fillin.csv")          # s2c evidence (rates + examples)
 PATEL_GOLD = os.path.join(DATA, "patel2016_assignments.csv")  # option taxonomy per convention
+TIERS = os.path.join(DATA, "dict_authority_tiers.csv")   # authority tier + origin axes (ADR-0001, MG 21-11-2026)
 ITEMS = os.path.join(DATA, "lrv_fri_annotation_items.json")   # emitted for inspection (not an input)
 OUT_DIR = os.path.join(REPO, "review")
 SHEET_ID = "csl-atlas-lrv-fri-patel_l0dictset"
@@ -43,12 +44,14 @@ GATE_DIMS = ("1", "3", "5", "6", "7")
 # Evidence-based suggestions (pre-selected in the sheet; M.G. confirms/overrides).
 # Keyed (dict, dim) -> {options:[patel option ids], rationale, mixed:bool}
 SUGGEST = {
-    ("LRV", 1): {"options": [], "mixed": True,
-                 "rationale": "anusvāra-share 0.565 — genuinely mixed, no dominant form; needs the eye."},
+    ("LRV", 1): {"options": ["1.5"], "mixed": False,
+                 "rationale": "R004 recount: internal 0.556 mixed (M 1062 vs homorg 848 — no 1.1/1.2 claim); "
+                              "compound-final 0.738 anusvāra (saM 76 vs saN 27) → 1.5."},
     ("LRV", 3): {"options": ["3.1", "3.4"], "mixed": False,
                  "rationale": "bare -at (ajahat, adat) → 3.1; bare -vat/-mat (anAtmavat, arcizmat) → 3.4."},
-    ("LRV", 5): {"options": [], "mixed": True,
-                 "rationale": "both M-form and n/m-form roots attested (4+ each) — mixed; needs the eye."},
+    ("LRV", 5): {"options": ["5.2"], "mixed": False,
+                 "rationale": "R004 recount: 11 root-like entries, both spellings (aMS+aMs) and n/m-roots "
+                              "(anD amB inD und); neighbours YAT/SHS 5.2; PWG+PW 5.2 (Patel majority 18) → 5.2."},
     ("LRV", 6): {"options": ["6.3"], "mixed": False,
                  "rationale": "nominative -ā dominant (314) vs ṛ-stem 37 vs -ar/-ṛ 3 → 6.3 (kartā)."},
     ("LRV", 7): {"options": ["7.1"], "mixed": False,
@@ -58,7 +61,8 @@ SUGGEST = {
     ("FRI", 3): {"options": ["3.1", "3.4"], "mixed": False,
                  "rationale": "bare -at (Izat, jagat) → 3.1; bare -vat (aBItavat, tadvat) → 3.4 (no -mat attested)."},
     ("FRI", 5): {"options": [], "mixed": True,
-                 "rationale": "both M-form and n/m-form roots attested (4+ each) — mixed; needs the eye."},
+                 "rationale": "R004 recount: 77 root-like entries — M-form 50 vs n/m-form 27 "
+                              "(aMk AMg iMg vs inD und nyas): genuinely mixed, no coherent single convention; needs the eye."},
     ("FRI", 6): {"options": ["6.1"], "mixed": False,
                  "rationale": "-ar/-ṛ dominant (176) vs nom-ā 61 vs ṛ-stem 9; examples end -ar (attar, adAtar) → 6.1 (kartar)."},
     ("FRI", 7): {"options": ["7.1"], "mixed": False,
@@ -68,6 +72,63 @@ SUGGEST = {
 
 def esc(s):
     return html.escape(str(s), quote=True)
+
+
+# Patel 2016 sub-convention structure: flat majority is computed within these
+# groups only (e.g. śatṛ 3.1 vs 3.2/3.3; vatup/matup 3.4 vs 3.5; compound-final
+# 1.5 vs 1.6). Conventions not listed here are single-group.
+SUBRULE_GROUPS = {
+    "1": (("1.1", "1.2", "1.3", "1.4"), ("1.5", "1.6")),
+    "3": (("3.1", "3.2", "3.3"), ("3.4", "3.5")),
+}
+TIER_ORDER = ("B", "C", "D")
+
+
+def load_tiers():
+    """siglum -> row of dict_authority_tiers.csv (tier, origin, ...)."""
+    import csv
+    tiers = {}
+    with open(TIERS, encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            tiers[r["siglum"].strip()] = r
+    return tiers
+
+
+def tier_a_sigla(tiers):
+    """Census-carrying Tier-A sigla (the Grundlagen: PWG + PW)."""
+    return [s for s, r in sorted(tiers.items())
+            if r["tier"] == "A" and r["census_member"] == "yes"]
+
+
+def tier_badge(members, tiers):
+    """Tiered census badge: [31 · ⭐A: PWG PW +SCH · B:16 · C:4 · D:8 · IND:10/EUR:21].
+
+    Tier A sigla are spelled out (+A2 supplements); small tiers (<=3) list their
+    members; the IND/EUR origin split closes the badge.
+    """
+    a, rest, ind = [], {}, 0
+    for m in members:
+        t = tiers.get(m, {}).get("tier", "?")
+        if t == "A":
+            a.append(m)
+        elif t == "A2":
+            a.append("+" + m)
+        else:
+            rest.setdefault(t, []).append(m)
+        if tiers.get(m, {}).get("origin", "") == "IND":
+            ind += 1
+    seg = [str(len(members))]
+    if a:
+        seg.append("⭐A: " + " ".join(a))
+    for t in TIER_ORDER:
+        if t in rest:
+            names = rest[t]
+            seg.append(f"{t}:{len(names)} ({' '.join(names)})"
+                       if len(names) <= 3 else f"{t}:{len(names)}")
+    if "?" in rest:
+        seg.append("unclassified: " + ",".join(rest["?"]))
+    seg.append(f"IND:{ind}/EUR:{len(members) - ind}")
+    return "[" + " · ".join(seg) + "]"
 
 
 def build_items():
@@ -81,7 +142,8 @@ def build_items():
         for r in csv.DictReader(f):
             opts.setdefault(r["convention"], []).append(
                 {"option": r["option"], "definition": r["definition"],
-                 "n_dicts": len(r["member_dicts"].split())})
+                 "n_dicts": len(r["member_dicts"].split()),
+                 "members": r["member_dicts"].split()})
     ev = {}
     with open(FILLIN, encoding="utf-8") as f:
         for r in csv.DictReader(f):
@@ -99,6 +161,8 @@ def build_items():
 
 def main():
     items = build_items()
+    tiers = load_tiers()
+    a_sigla = tier_a_sigla(tiers)
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(ITEMS, "w", encoding="utf-8") as f:  # emit for inspection only
         json.dump(items, f, ensure_ascii=False, indent=2)
@@ -110,17 +174,40 @@ def main():
         sug = SUGGEST.get((d, dim), {"options": [], "mixed": False, "rationale": ""})
         sug_set = set(sug["options"])
 
+        by_id = {o["option"]: o for o in it["patel_options"]}
+        groups = SUBRULE_GROUPS.get(str(dim)) or (tuple(by_id),)
+        majority = set()
+        for g in groups:
+            top = max(by_id[oid]["n_dicts"] for oid in g)
+            majority |= {oid for oid in g if by_id[oid]["n_dicts"] == top}
+        # flag-never-flip (ADR-0001): PWG+PW back a non-majority option -> warn, never auto-switch
+        a_backed = {oid for oid in by_id if all(s in by_id[oid]["members"] for s in a_sigla)}
+        conflict = sorted(a_backed - majority)
+
         opt_rows = []
         for o in it["patel_options"]:
             oid = o["option"]
             checked = "checked" if oid in sug_set else ""
             sug_tag = ' <span class="sug">◀ suggested</span>' if oid in sug_set else ""
+            a_tag = ' <span class="aflag">⭐ Tier A</span>' if oid in a_backed else ""
             opt_rows.append(
                 f'<label class="opt"><input type="checkbox" data-item="{esc(iid)}" '
                 f'value="{esc(oid)}" {checked}> '
                 f'<b>{esc(oid)}</b> — {esc(o["definition"])} '
-                f'<span class="ndicts">[{o["n_dicts"]} dicts use this]</span>{sug_tag}</label>'
+                f'<span class="ndicts">{tier_badge(o["members"], tiers)}</span>'
+                f'{a_tag}{sug_tag}</label>'
             )
+
+        conflict_banner = ""
+        if conflict:
+            conf = "; ".join(f"{oid} — {by_id[oid]['definition']}" for oid in conflict)
+            maj = "; ".join(f"{oid} — {by_id[oid]['definition']} ({by_id[oid]['n_dicts']})"
+                            for oid in sorted(majority))
+            conflict_banner = (
+                '<div class="mixed">⚠ flag-never-flip (ADR-0001): Tier A ('
+                + esc(" ".join(a_sigla)) + ") support " + esc(conf)
+                + " — flat majority in this sub-rule: " + esc(maj)
+                + ". Own-practice evidence stays the deciding axis.</div>")
 
         mixed_banner = (
             '<div class="mixed">⚠ evidence is mixed — no dominant form. Assign by eye or defer.</div>'
@@ -138,6 +225,7 @@ def main():
   <div class="ex"><b>Examples:</b> <code>{esc(it['examples'])}</code></div>
   {mixed_banner}
   <div class="sugbox"><b>Suggested:</b> {esc(sug['rationale']) or '—'}</div>
+  {conflict_banner}
   <div class="opts">{''.join(opt_rows)}</div>
   <div class="actions">
     <button class="defer" data-item="{esc(iid)}">⏸ defer (leave unknown)</button>
@@ -181,13 +269,17 @@ def main():
  .opt{font-size:.86rem;display:flex;align-items:flex-start;gap:.4rem;cursor:pointer}
  .opt .ndicts{color:#888;font-size:.78rem}
  .sug{color:#1a7f37;font-weight:700;font-size:.78rem}
+ .aflag{color:#9a6700;font-weight:600;font-size:.78rem}
  .actions{display:flex;gap:.6rem;align-items:center;margin-top:.5rem}
  .note{flex:1;padding:.35rem .5rem;border:1px solid #ccc;border-radius:6px;font-size:.83rem}
 </style></head><body>
 <h1>LRV / FRI — Patel convention annotation</h1>
 <div class="sub">Sheet __SHEET__ · __N__ items (2 dicts × dims 1,3,5,6,7) · the last two sourced dicts outside Patel 2016.
 Tick the Patel option(s) that hold for each dict (multiple sub-rules may co-occur), or <b>defer</b> to leave it unknown.
-Green suggestions are pre-ticked from the evidence rates — confirm or override. Votes autosave to this browser.</div>
+Green suggestions are pre-ticked from the evidence rates — confirm or override. Votes autosave to this browser.<br>
+Option badges carry the authority grouping (ADR-0001, MG 21-11-2026): ⭐A = Grundlagen PWG+PW (+SCH supplement) ·
+B = major scholarly references · C = specialized/derived · D = indices — plus IND/EUR origin counts.
+Where the Grundlagen back a non-majority option the card is flagged, never flipped.</div>
 <div class="bar">
   <b><span id="cAssigned">0</span></b>&nbsp;assigned
   <b><span id="cDeferred">0</span></b>&nbsp;deferred
