@@ -1,16 +1,18 @@
 # CLAUDE.md
 
-_Created: 03-07-2026 · Last updated: 05-11-2026 (H7746 orientation backfill: PWG-DCS / NWS / triangulation registration, changelog-queue shape gate, CI paragraph truth-pass)_
+_Created: 03-07-2026 · Last updated: 25-11-2026 (SLA truth-refresh: release state, vendored pin, DOI; prior H7746 orientation backfill)_
 
-Recent state (09-10-2026): `v0.19.11` released; vendored
-`sanskrit-util` re-pinned to **v0.12.0** (#542 — H3975 medial-anusvāra
-`form_key` fold); `ci: paper-priv-guard` blocks manuscript-shape files
-outside the allowlist and the P1–P6 manuscripts were removed
-(STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY, MG 06-10); nightly
-bughunt findings reports are committed (latest #541); the mechanical lint
-sweep took UP031/ISC004/I001 to 0 in scope (#534); the atlas concept DOI
+Recent state (25-11-2026): tagged releases reached `v0.21.8` (package.json
+`0.21.0`); vendored `sanskrit-util` re-pinned 18-10 to the canonical
+`sanskrit-util/js/index.mjs` digest in `src/lib/sanskrit-util.pin.json` (guard
+checked in CI); `ci: paper-priv-guard` blocks manuscript-shape files outside
+the allowlist and the P1–P6 manuscripts were removed
+(STANDING_POLICY_PAPER_WORK_PRIVATE_REPOS_ONLY, MG 06-10); nightly bughunt
+findings reports are committed; the mechanical lint sweep took
+UP031/ISC004/I001 to 0 in scope (#534); the atlas concept DOI
 `10.5281/zenodo.21419691` is pinned in `CITATION.cff`, the README citation
-block, and A50 data-availability (#528).
+block, and A50 data-availability (#528) — version DOIs accumulate per release
+in `CITATION.cff`, never treat one version DOI as current.
 
 `csl-atlas` is the public **dictionary-evidence** microsite for the Cologne
 Digital Sanskrit Dictionaries — a static Observable Framework site for
